@@ -22931,14 +22931,14 @@ John Bradley 2019</text>
 <label x="353.06" y="-287.02" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="R19" gate="G$1" pin="1"/>
-<wire x1="149.86" y1="-147.32" x2="149.86" y2="-149.86" width="0.1524" layer="91"/>
-<label x="149.86" y="-149.86" size="1.778" layer="95" rot="R270" xref="yes"/>
-</segment>
-<segment>
 <pinref part="Z11" gate="B" pin="QA"/>
 <wire x1="299.72" y1="-320.04" x2="304.8" y2="-320.04" width="0.1524" layer="91"/>
 <label x="304.8" y="-320.04" size="1.778" layer="95" rot="R90" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R20" gate="G$1" pin="1"/>
+<wire x1="154.94" y1="-154.94" x2="154.94" y2="-157.48" width="0.1524" layer="91"/>
+<label x="154.94" y="-157.48" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
 <net name="CNT15" class="0">
@@ -22953,11 +22953,6 @@ John Bradley 2019</text>
 <label x="353.06" y="-284.48" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="R18" gate="G$1" pin="1"/>
-<wire x1="144.78" y1="-154.94" x2="144.78" y2="-157.48" width="0.1524" layer="91"/>
-<label x="144.78" y="-157.48" size="1.778" layer="95" rot="R270" xref="yes"/>
-</segment>
-<segment>
 <wire x1="299.72" y1="-304.8" x2="302.26" y2="-304.8" width="0.1524" layer="91"/>
 <pinref part="Z11" gate="A" pin="QD"/>
 <label x="317.5" y="-304.8" size="1.778" layer="95" rot="R270" xref="yes"/>
@@ -22969,17 +22964,17 @@ John Bradley 2019</text>
 <pinref part="Z11" gate="B" pin="A"/>
 <wire x1="271.78" y1="-320.04" x2="274.32" y2="-320.04" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="R19" gate="G$1" pin="1"/>
+<wire x1="149.86" y1="-147.32" x2="149.86" y2="-149.86" width="0.1524" layer="91"/>
+<label x="149.86" y="-149.86" size="1.778" layer="95" rot="R270" xref="yes"/>
+</segment>
 </net>
 <net name="CNT17" class="0">
 <segment>
 <wire x1="83.82" y1="55.88" x2="81.28" y2="55.88" width="0.1524" layer="91"/>
 <label x="81.28" y="55.88" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="Z25" gate="A" pin="I0"/>
-</segment>
-<segment>
-<pinref part="R20" gate="G$1" pin="1"/>
-<wire x1="154.94" y1="-154.94" x2="154.94" y2="-157.48" width="0.1524" layer="91"/>
-<label x="154.94" y="-157.48" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 <segment>
 <pinref part="Z11" gate="B" pin="QB"/>
@@ -23701,6 +23696,11 @@ John Bradley 2019</text>
 <pinref part="Z21" gate="C" pin="I1"/>
 <wire x1="299.72" y1="-254" x2="317.5" y2="-254" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="R15" gate="G$1" pin="1"/>
+<wire x1="129.54" y1="-147.32" x2="129.54" y2="-149.86" width="0.1524" layer="91"/>
+<label x="129.54" y="-149.86" size="1.778" layer="95" rot="R270" xref="yes"/>
+</segment>
 </net>
 <net name="CNT6" class="0">
 <segment>
@@ -24370,41 +24370,41 @@ John Bradley 2019</text>
 </net>
 <net name="CNT14" class="0">
 <segment>
-<pinref part="R17" gate="G$1" pin="1"/>
-<wire x1="139.7" y1="-147.32" x2="139.7" y2="-149.86" width="0.1524" layer="91"/>
-<label x="139.7" y="-149.86" size="1.778" layer="95" rot="R270" xref="yes"/>
-</segment>
-<segment>
 <pinref part="Z11" gate="A" pin="QC"/>
 <label x="314.96" y="-302.26" size="1.778" layer="95" rot="R90" xref="yes"/>
 <pinref part="Z21" gate="A" pin="I2"/>
 <wire x1="299.72" y1="-302.26" x2="320.04" y2="-302.26" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="R18" gate="G$1" pin="1"/>
+<wire x1="144.78" y1="-154.94" x2="144.78" y2="-157.48" width="0.1524" layer="91"/>
+<label x="144.78" y="-157.48" size="1.778" layer="95" rot="R270" xref="yes"/>
+</segment>
 </net>
 <net name="CNT12" class="0">
-<segment>
-<pinref part="R15" gate="G$1" pin="1"/>
-<wire x1="129.54" y1="-147.32" x2="129.54" y2="-149.86" width="0.1524" layer="91"/>
-<label x="129.54" y="-149.86" size="1.778" layer="95" rot="R270" xref="yes"/>
-</segment>
 <segment>
 <pinref part="Z11" gate="A" pin="QA"/>
 <label x="304.8" y="-297.18" size="1.778" layer="95" rot="R90" xref="yes"/>
 <pinref part="Z21" gate="A" pin="I0"/>
 <wire x1="299.72" y1="-297.18" x2="320.04" y2="-297.18" width="0.1524" layer="91"/>
 </segment>
-</net>
-<net name="CNT13" class="0">
 <segment>
 <pinref part="R16" gate="G$1" pin="1"/>
 <wire x1="134.62" y1="-154.94" x2="134.62" y2="-157.48" width="0.1524" layer="91"/>
 <label x="134.62" y="-157.48" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
+</net>
+<net name="CNT13" class="0">
 <segment>
 <pinref part="Z11" gate="A" pin="QB"/>
 <label x="309.88" y="-299.72" size="1.778" layer="95" rot="R90" xref="yes"/>
 <pinref part="Z21" gate="A" pin="I1"/>
 <wire x1="299.72" y1="-299.72" x2="320.04" y2="-299.72" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R17" gate="G$1" pin="1"/>
+<wire x1="139.7" y1="-147.32" x2="139.7" y2="-149.86" width="0.1524" layer="91"/>
+<label x="139.7" y="-149.86" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
 <net name="N$71" class="0">
