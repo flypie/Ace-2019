@@ -22443,8 +22443,8 @@ http://www.idt.com&lt;p&gt;
 <part name="SUPPLY26" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="X1" library="crystal" library_urn="urn:adsk.eagle:library:204" deviceset="CRYSTAL" device="HC49U-V" package3d_urn="urn:adsk.eagle:package:12075/1" value="6.556MHz"/>
 <part name="IC2" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" deviceset="74*04" device="N" package3d_urn="urn:adsk.eagle:package:16407/2" technology="HCT"/>
-<part name="IC3" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" deviceset="74*08" device="N" package3d_urn="urn:adsk.eagle:package:16407/2" technology="HCT"/>
 <part name="T1" library="transistor" library_urn="urn:adsk.eagle:library:402" deviceset="2N2369" device="" package3d_urn="urn:adsk.eagle:package:28526/2"/>
+<part name="IC4" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" deviceset="74*32" device="N" package3d_urn="urn:adsk.eagle:package:16407/2" technology="LS"/>
 </parts>
 <sheets>
 <sheet>
@@ -23294,10 +23294,6 @@ Keep A10 low so always using same half.</text>
 <attribute name="NAME" x="177.8" y="-234.696" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="177.8" y="-231.14" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="IC2" gate="A" x="-134.62" y="-17.78" smashed="yes">
-<attribute name="NAME" x="-132.08" y="-14.605" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-132.08" y="-22.86" size="1.778" layer="96"/>
-</instance>
 <instance part="IC2" gate="B" x="109.22" y="-25.4" smashed="yes">
 <attribute name="NAME" x="111.76" y="-22.225" size="1.778" layer="95"/>
 <attribute name="VALUE" x="111.76" y="-30.48" size="1.778" layer="96"/>
@@ -23318,25 +23314,9 @@ Keep A10 low so always using same half.</text>
 <attribute name="NAME" x="-10.16" y="79.375" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-10.16" y="71.12" size="1.778" layer="96"/>
 </instance>
-<instance part="IC3" gate="A" x="-106.68" y="-20.32" smashed="yes">
-<attribute name="NAME" x="-104.14" y="-17.145" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-104.14" y="-22.86" size="1.778" layer="96"/>
-</instance>
-<instance part="IC3" gate="B" x="-76.2" y="-27.94" smashed="yes">
-<attribute name="NAME" x="-73.66" y="-24.765" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-73.66" y="-33.02" size="1.778" layer="96"/>
-</instance>
-<instance part="IC3" gate="C" x="-53.34" y="76.2" smashed="yes">
-<attribute name="NAME" x="-50.8" y="79.375" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-50.8" y="71.12" size="1.778" layer="96"/>
-</instance>
-<instance part="IC3" gate="D" x="-53.34" y="63.5" smashed="yes">
-<attribute name="NAME" x="-50.8" y="66.675" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-50.8" y="58.42" size="1.778" layer="96"/>
-</instance>
-<instance part="Z19" gate="D" x="-33.02" y="76.2" smashed="yes">
-<attribute name="NAME" x="-30.48" y="79.375" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-30.48" y="71.12" size="1.778" layer="96"/>
+<instance part="Z19" gate="D" x="-38.1" y="76.2" smashed="yes">
+<attribute name="NAME" x="-35.56" y="79.375" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-35.56" y="71.12" size="1.778" layer="96"/>
 </instance>
 <instance part="Z23" gate="A" x="-25.4" y="63.5" smashed="yes">
 <attribute name="NAME" x="-22.86" y="66.675" size="1.778" layer="95"/>
@@ -23349,6 +23329,26 @@ Keep A10 low so always using same half.</text>
 <instance part="T1" gate="G$1" x="-162.56" y="-154.94" smashed="yes">
 <attribute name="NAME" x="-162.56" y="-160.02" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-162.56" y="-152.4" size="1.778" layer="96"/>
+</instance>
+<instance part="IC4" gate="A" x="-106.68" y="-15.24" smashed="yes">
+<attribute name="NAME" x="-104.14" y="-12.065" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-104.14" y="-20.32" size="1.778" layer="96"/>
+</instance>
+<instance part="IC4" gate="B" x="-76.2" y="-27.94" smashed="yes">
+<attribute name="NAME" x="-73.66" y="-24.765" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-73.66" y="-33.02" size="1.778" layer="96"/>
+</instance>
+<instance part="IC4" gate="C" x="-50.8" y="66.04" smashed="yes">
+<attribute name="NAME" x="-48.26" y="69.215" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-48.26" y="60.96" size="1.778" layer="96"/>
+</instance>
+<instance part="IC4" gate="D" x="-50.8" y="53.34" smashed="yes">
+<attribute name="NAME" x="-48.26" y="56.515" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-48.26" y="48.26" size="1.778" layer="96"/>
+</instance>
+<instance part="IC2" gate="A" x="-96.52" y="-25.4" smashed="yes">
+<attribute name="NAME" x="-93.98" y="-22.225" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-93.98" y="-30.48" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -23863,14 +23863,14 @@ Keep A10 low so always using same half.</text>
 <label x="-2.54" y="-165.1" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<label x="-86.36" y="-25.4" size="1.778" layer="95" rot="R180" xref="yes"/>
-<wire x1="-83.82" y1="-25.4" x2="-86.36" y2="-25.4" width="0.1524" layer="91"/>
-<pinref part="IC3" gate="B" pin="I0"/>
-</segment>
-<segment>
-<label x="-147.32" y="-17.78" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="-124.46" y1="-12.7" x2="-119.38" y2="-12.7" width="0.1524" layer="91"/>
+<pinref part="IC4" gate="A" pin="I0"/>
+<label x="-124.46" y="-12.7" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="-119.38" y1="-12.7" x2="-114.3" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="-119.38" y1="-12.7" x2="-119.38" y2="-25.4" width="0.1524" layer="91"/>
+<junction x="-119.38" y="-12.7"/>
 <pinref part="IC2" gate="A" pin="I"/>
-<wire x1="-144.78" y1="-17.78" x2="-147.32" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="-119.38" y1="-25.4" x2="-106.68" y2="-25.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="ADDRESS13" class="0">
@@ -24336,8 +24336,8 @@ Keep A10 low so always using same half.</text>
 <pinref part="Z26" gate="A" pin="I1"/>
 <wire x1="-99.06" y1="-7.62" x2="-91.44" y2="-7.62" width="0.1524" layer="91"/>
 <junction x="-99.06" y="-7.62"/>
-<pinref part="IC3" gate="A" pin="O"/>
-<wire x1="-99.06" y1="-20.32" x2="-99.06" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="-99.06" y1="-15.24" x2="-99.06" y2="-7.62" width="0.1524" layer="91"/>
+<pinref part="IC4" gate="A" pin="O"/>
 </segment>
 </net>
 <net name="VIDEN" class="0">
@@ -26610,13 +26610,6 @@ Keep A10 low so always using same half.</text>
 <wire x1="302.26" y1="-83.82" x2="320.04" y2="-83.82" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$30" class="0">
-<segment>
-<pinref part="IC3" gate="A" pin="I0"/>
-<pinref part="IC2" gate="A" pin="O"/>
-<wire x1="-124.46" y1="-17.78" x2="-114.3" y2="-17.78" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$1" class="0">
 <segment>
 <wire x1="-71.12" y1="-48.26" x2="-63.5" y2="-48.26" width="0.1524" layer="91"/>
@@ -26647,22 +26640,22 @@ Keep A10 low so always using same half.</text>
 <net name="N$6" class="0">
 <segment>
 <wire x1="-114.3" y1="-30.48" x2="-83.82" y2="-30.48" width="0.1524" layer="91"/>
-<pinref part="IC3" gate="B" pin="I1"/>
 <pinref part="Z29" gate="A" pin="Y1"/>
 <wire x1="-116.84" y1="-38.1" x2="-114.3" y2="-38.1" width="0.1524" layer="91"/>
 <wire x1="-114.3" y1="-38.1" x2="-114.3" y2="-30.48" width="0.1524" layer="91"/>
-<pinref part="IC3" gate="A" pin="I1"/>
-<wire x1="-114.3" y1="-30.48" x2="-114.3" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="-114.3" y1="-30.48" x2="-114.3" y2="-17.78" width="0.1524" layer="91"/>
 <junction x="-114.3" y="-30.48"/>
+<pinref part="IC4" gate="A" pin="I1"/>
+<pinref part="IC4" gate="B" pin="I1"/>
 </segment>
 </net>
 <net name="N$7" class="0">
 <segment>
-<pinref part="IC3" gate="B" pin="O"/>
 <wire x1="-68.58" y1="-27.94" x2="-66.04" y2="-27.94" width="0.1524" layer="91"/>
 <wire x1="-66.04" y1="-27.94" x2="-66.04" y2="-40.64" width="0.1524" layer="91"/>
 <pinref part="Z50" gate="A" pin="I0"/>
 <wire x1="-66.04" y1="-40.64" x2="-63.5" y2="-40.64" width="0.1524" layer="91"/>
+<pinref part="IC4" gate="B" pin="O"/>
 </segment>
 </net>
 <net name="N$23" class="0">
@@ -26690,6 +26683,18 @@ Keep A10 low so always using same half.</text>
 <wire x1="-111.76" y1="-53.34" x2="-111.76" y2="-55.88" width="0.1524" layer="91"/>
 <pinref part="Z22" gate="C" pin="I2"/>
 <wire x1="-111.76" y1="-55.88" x2="-104.14" y2="-55.88" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$30" class="0">
+<segment>
+<pinref part="IC4" gate="B" pin="I0"/>
+<wire x1="-83.82" y1="-25.4" x2="-86.36" y2="-25.4" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="A" pin="O"/>
+</segment>
+</net>
+<net name="N$72" class="0">
+<segment>
+<wire x1="-170.18" y1="0" x2="-172.72" y2="0" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
