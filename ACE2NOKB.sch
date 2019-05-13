@@ -22371,7 +22371,7 @@ John Bradley 2019</text>
 <label x="-162.56" y="-220.98" size="1.778" layer="95"/>
 </segment>
 </bus>
-<bus name="CNT1">
+<bus name="CNT:CNT0,CNT1,CNT2,CNT3,CNT4,CNT5,CNT6,CNT7,CNT8,CNT9,CNT10,CNT11,CNT12,CNT13,CNT14,CNT15,CNT16,CNT17">
 <segment>
 <wire x1="-162.56" y1="-238.76" x2="-149.86" y2="-238.76" width="0.762" layer="92"/>
 <label x="-162.56" y="-236.22" size="1.778" layer="95"/>

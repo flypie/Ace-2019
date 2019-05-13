@@ -9,6 +9,8 @@
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
@@ -21796,7 +21798,7 @@ For more details see &lt;a href="http://www.jupiter-ace.co.uk/hardware_pinouts.h
 <parts>
 <part name="Z0" library="zilog" library_urn="urn:adsk.eagle:library:419" deviceset="Z80CPU" device="" package3d_urn="urn:adsk.eagle:package:19651/1"/>
 <part name="Z19" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" deviceset="74*00" device="N" package3d_urn="urn:adsk.eagle:package:16407/2" technology="LS"/>
-<part name="Z29" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" deviceset="74*138" device="N" package3d_urn="urn:adsk.eagle:package:922/2" technology="LS"/>
+<part name="Z13" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" deviceset="74*138" device="N" package3d_urn="urn:adsk.eagle:package:922/2" technology="LS"/>
 <part name="Z26" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" deviceset="74*32" device="N" package3d_urn="urn:adsk.eagle:package:16407/2" technology="LS"/>
 <part name="C8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="025-024X044" package3d_urn="urn:adsk.eagle:package:23630/1" value="2N2"/>
 <part name="R26" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/2" value="330R"/>
@@ -21811,7 +21813,6 @@ For more details see &lt;a href="http://www.jupiter-ace.co.uk/hardware_pinouts.h
 <part name="Z5" library="memory" library_urn="urn:adsk.eagle:library:279" deviceset="2114" device="" package3d_urn="urn:adsk.eagle:package:16424/2"/>
 <part name="Z6" library="memory" library_urn="urn:adsk.eagle:library:279" deviceset="2114" device="" package3d_urn="urn:adsk.eagle:package:16424/2"/>
 <part name="Z25" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" deviceset="74*02" device="N" package3d_urn="urn:adsk.eagle:package:16407/2" technology="LS"/>
-<part name="Z14" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" deviceset="74*367" device="D" package3d_urn="urn:adsk.eagle:package:2010/1" technology="LS"/>
 <part name="Z15" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" deviceset="74*367" device="N" package3d_urn="urn:adsk.eagle:package:922/2" value="74367N"/>
 <part name="Z16" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" deviceset="74*367" device="N" package3d_urn="urn:adsk.eagle:package:922/2" value="74367N"/>
 <part name="JP2" library="con-lumberg" library_urn="urn:adsk.eagle:library:163" deviceset="1503_02" device="" package3d_urn="urn:adsk.eagle:package:8557/1"/>
@@ -21827,7 +21828,7 @@ For more details see &lt;a href="http://www.jupiter-ace.co.uk/hardware_pinouts.h
 <part name="Z21" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" deviceset="74*11" device="N" package3d_urn="urn:adsk.eagle:package:16407/2" technology="LS"/>
 <part name="Z23" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" deviceset="74*86" device="N" package3d_urn="urn:adsk.eagle:package:16407/2" technology="LS"/>
 <part name="Z27" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" deviceset="74*74" device="N" package3d_urn="urn:adsk.eagle:package:16407/2" technology="LS"/>
-<part name="Z28" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" deviceset="74*166" device="N" package3d_urn="urn:adsk.eagle:package:922/2" technology="LS"/>
+<part name="Z12" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" deviceset="74*166" device="N" package3d_urn="urn:adsk.eagle:package:922/2" technology="LS"/>
 <part name="Z9" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" deviceset="74*393" device="N" package3d_urn="urn:adsk.eagle:package:16407/2" technology="LS"/>
 <part name="Z10" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" deviceset="74*393" device="N" package3d_urn="urn:adsk.eagle:package:16407/2" technology="LS"/>
 <part name="Z11" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" deviceset="74*393" device="N" package3d_urn="urn:adsk.eagle:package:16407/2" technology="LS"/>
@@ -21983,6 +21984,7 @@ For more details see &lt;a href="http://www.jupiter-ace.co.uk/hardware_pinouts.h
 <part name="SUPPLY25" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="P+23" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="X1" library="crystal" library_urn="urn:adsk.eagle:library:204" deviceset="CRYSTAL" device="HC49U-V" package3d_urn="urn:adsk.eagle:package:12075/1" value="6.556MHz"/>
+<part name="Z14" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" deviceset="74*367" device="N" package3d_urn="urn:adsk.eagle:package:922/2"/>
 </parts>
 <sheets>
 <sheet>
@@ -22012,7 +22014,7 @@ John Bradley 2019</text>
 <attribute name="NAME" x="391.16" y="-286.385" size="1.778" layer="95"/>
 <attribute name="VALUE" x="391.16" y="-294.64" size="1.778" layer="96"/>
 </instance>
-<instance part="Z29" gate="A" x="-121.92" y="-30.48" smashed="yes">
+<instance part="Z13" gate="A" x="-121.92" y="-30.48" smashed="yes">
 <attribute name="NAME" x="-132.08" y="-19.685" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-132.08" y="-45.72" size="1.778" layer="96"/>
 </instance>
@@ -22114,10 +22116,6 @@ John Bradley 2019</text>
 <attribute name="NAME" x="353.06" y="-233.045" size="1.778" layer="95"/>
 <attribute name="VALUE" x="353.06" y="-241.3" size="1.778" layer="96"/>
 </instance>
-<instance part="Z14" gate="A" x="-78.74" y="-236.22" smashed="yes" rot="R90">
-<attribute name="NAME" x="-92.075" y="-243.84" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="-60.96" y="-243.84" size="1.778" layer="96" rot="R90"/>
-</instance>
 <instance part="Z15" gate="A" x="76.2" y="-78.74" smashed="yes">
 <attribute name="NAME" x="68.58" y="-65.405" size="1.778" layer="95"/>
 <attribute name="VALUE" x="68.58" y="-96.52" size="1.778" layer="96"/>
@@ -22211,7 +22209,7 @@ John Bradley 2019</text>
 <attribute name="NAME" x="208.28" y="53.975" size="1.778" layer="95"/>
 <attribute name="VALUE" x="208.28" y="35.56" size="1.778" layer="96"/>
 </instance>
-<instance part="Z28" gate="A" x="320.04" y="-15.24" smashed="yes" rot="R90">
+<instance part="Z12" gate="A" x="320.04" y="-15.24" smashed="yes" rot="R90">
 <attribute name="NAME" x="301.625" y="-22.86" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="342.9" y="-22.86" size="1.778" layer="96" rot="R90"/>
 </instance>
@@ -22854,6 +22852,10 @@ John Bradley 2019</text>
 <attribute name="NAME" x="215.9" y="-257.556" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="215.9" y="-254" size="1.778" layer="96" rot="R180"/>
 </instance>
+<instance part="Z14" gate="A" x="-78.74" y="-236.22" smashed="yes" rot="R90">
+<attribute name="NAME" x="-92.075" y="-243.84" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="-60.96" y="-243.84" size="1.778" layer="96" rot="R90"/>
+</instance>
 </instances>
 <busses>
 <bus name="ADDRESS:ADDRESS0,ADDRESS5,ADDRESS6,ADDRESS7,ADDRESS8,ADDRESS9,ADDRESS10,ADDRESS12,ADDRESS13,ADDRESS14,ADDRESS15">
@@ -22868,7 +22870,7 @@ John Bradley 2019</text>
 <label x="-162.56" y="-220.98" size="1.778" layer="95"/>
 </segment>
 </bus>
-<bus name="CNT1">
+<bus name="CNT:CNT0,CNT1,CNT2,CNT3,CNT4,CNT5,CNT6,CNT7,CNT8,CNT9,CNT10,CNT11,CNT12,CNT13,CNT14,CNT15,CNT16,CNT17">
 <segment>
 <wire x1="-162.56" y1="-238.76" x2="-149.86" y2="-238.76" width="0.762" layer="92"/>
 <label x="-162.56" y="-236.22" size="1.778" layer="95"/>
@@ -23384,7 +23386,7 @@ John Bradley 2019</text>
 <segment>
 <wire x1="-137.16" y1="-22.86" x2="-139.7" y2="-22.86" width="0.1524" layer="91"/>
 <label x="-139.7" y="-22.86" size="1.778" layer="95" rot="R180" xref="yes"/>
-<pinref part="Z29" gate="A" pin="A"/>
+<pinref part="Z13" gate="A" pin="A"/>
 </segment>
 <segment>
 <wire x1="-10.16" y1="-276.86" x2="0" y2="-276.86" width="0.1524" layer="91"/>
@@ -23406,7 +23408,7 @@ John Bradley 2019</text>
 <segment>
 <wire x1="-137.16" y1="-25.4" x2="-139.7" y2="-25.4" width="0.1524" layer="91"/>
 <label x="-139.7" y="-25.4" size="1.778" layer="95" rot="R180" xref="yes"/>
-<pinref part="Z29" gate="A" pin="B"/>
+<pinref part="Z13" gate="A" pin="B"/>
 </segment>
 <segment>
 <wire x1="-10.16" y1="-289.56" x2="0" y2="-289.56" width="0.1524" layer="91"/>
@@ -23428,7 +23430,7 @@ John Bradley 2019</text>
 <segment>
 <wire x1="-137.16" y1="-38.1" x2="-139.7" y2="-38.1" width="0.1524" layer="91"/>
 <label x="-139.7" y="-38.1" size="1.778" layer="95" rot="R180" xref="yes"/>
-<pinref part="Z29" gate="A" pin="G2A"/>
+<pinref part="Z13" gate="A" pin="G2A"/>
 </segment>
 <segment>
 <wire x1="-10.16" y1="-302.26" x2="0" y2="-302.26" width="0.1524" layer="91"/>
@@ -23450,7 +23452,7 @@ John Bradley 2019</text>
 <segment>
 <wire x1="-137.16" y1="-40.64" x2="-139.7" y2="-40.64" width="0.1524" layer="91"/>
 <label x="-139.7" y="-40.64" size="1.778" layer="95" rot="R180" xref="yes"/>
-<pinref part="Z29" gate="A" pin="G2B"/>
+<pinref part="Z13" gate="A" pin="G2B"/>
 </segment>
 <segment>
 <wire x1="-10.16" y1="-314.96" x2="0" y2="-314.96" width="0.1524" layer="91"/>
@@ -23658,9 +23660,9 @@ John Bradley 2019</text>
 <pinref part="Z2" gate="A" pin="O4"/>
 </segment>
 <segment>
-<pinref part="Z14" gate="A" pin="2Y1"/>
 <wire x1="-76.2" y1="-223.52" x2="-76.2" y2="-220.98" width="0.1524" layer="91"/>
 <label x="-76.2" y="-220.98" size="1.778" layer="95" rot="R90" xref="yes"/>
+<pinref part="Z14" gate="A" pin="2Y1"/>
 </segment>
 <segment>
 <wire x1="246.38" y1="-162.56" x2="246.38" y2="-165.1" width="0.1524" layer="91"/>
@@ -23710,9 +23712,9 @@ John Bradley 2019</text>
 <pinref part="RN2" gate="F" pin="1"/>
 </segment>
 <segment>
-<pinref part="Z14" gate="A" pin="2Y2"/>
 <wire x1="-73.66" y1="-223.52" x2="-73.66" y2="-220.98" width="0.1524" layer="91"/>
 <label x="-73.66" y="-220.98" size="1.778" layer="95" rot="R90" xref="yes"/>
+<pinref part="Z14" gate="A" pin="2Y2"/>
 </segment>
 <segment>
 <wire x1="-210.82" y1="-233.68" x2="-208.28" y2="-233.68" width="0.1524" layer="91"/>
@@ -23834,7 +23836,7 @@ John Bradley 2019</text>
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="Z29" gate="A" pin="Y2"/>
+<pinref part="Z13" gate="A" pin="Y2"/>
 <wire x1="-109.22" y1="-27.94" x2="-96.52" y2="-27.94" width="0.1524" layer="91"/>
 <wire x1="-96.52" y1="-27.94" x2="-96.52" y2="-7.62" width="0.1524" layer="91"/>
 <pinref part="R26" gate="G$1" pin="1"/>
@@ -23867,7 +23869,7 @@ John Bradley 2019</text>
 <segment>
 <wire x1="-137.16" y1="-27.94" x2="-139.7" y2="-27.94" width="0.1524" layer="91"/>
 <label x="-139.7" y="-27.94" size="1.778" layer="95" rot="R180" xref="yes"/>
-<pinref part="Z29" gate="A" pin="C"/>
+<pinref part="Z13" gate="A" pin="C"/>
 </segment>
 <segment>
 <wire x1="-144.78" y1="-71.12" x2="-147.32" y2="-71.12" width="0.1524" layer="91"/>
@@ -23882,7 +23884,7 @@ John Bradley 2019</text>
 </net>
 <net name="VCC" class="0">
 <segment>
-<pinref part="Z29" gate="A" pin="G1"/>
+<pinref part="Z13" gate="A" pin="G1"/>
 <pinref part="P+1" gate="VCC" pin="VCC"/>
 <wire x1="-137.16" y1="-35.56" x2="-144.78" y2="-35.56" width="0.1524" layer="91"/>
 </segment>
@@ -23907,7 +23909,7 @@ John Bradley 2019</text>
 <wire x1="175.26" y1="17.78" x2="177.8" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="Z28" gate="A" pin="CLR"/>
+<pinref part="Z12" gate="A" pin="CLR"/>
 <wire x1="337.82" y1="-27.94" x2="342.9" y2="-27.94" width="0.1524" layer="91"/>
 <pinref part="P+7" gate="VCC" pin="VCC"/>
 </segment>
@@ -24035,7 +24037,7 @@ John Bradley 2019</text>
 </net>
 <net name="N$1" class="0">
 <segment>
-<pinref part="Z29" gate="A" pin="Y0"/>
+<pinref part="Z13" gate="A" pin="Y0"/>
 <wire x1="-109.22" y1="-22.86" x2="-83.82" y2="-22.86" width="0.1524" layer="91"/>
 <pinref part="Z22" gate="C" pin="I0"/>
 <wire x1="-83.82" y1="-22.86" x2="-40.64" y2="-22.86" width="0.1524" layer="91"/>
@@ -24135,7 +24137,7 @@ John Bradley 2019</text>
 </net>
 <net name="N$3" class="0">
 <segment>
-<pinref part="Z29" gate="A" pin="Y1"/>
+<pinref part="Z13" gate="A" pin="Y1"/>
 <pinref part="Z22" gate="C" pin="I1"/>
 <wire x1="-109.22" y1="-25.4" x2="-88.9" y2="-25.4" width="0.1524" layer="91"/>
 <pinref part="Z2" gate="A" pin="!CE"/>
@@ -24298,7 +24300,7 @@ John Bradley 2019</text>
 <pinref part="SUPPLY5" gate="GND" pin="GND"/>
 </segment>
 <segment>
-<pinref part="Z28" gate="A" pin="INH"/>
+<pinref part="Z12" gate="A" pin="INH"/>
 <pinref part="SUPPLY6" gate="GND" pin="GND"/>
 <wire x1="332.74" y1="-27.94" x2="332.74" y2="-30.48" width="0.1524" layer="91"/>
 </segment>
@@ -24366,7 +24368,7 @@ John Bradley 2019</text>
 <wire x1="104.14" y1="-236.22" x2="104.14" y2="-238.76" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="Z28" gate="A" pin="SER"/>
+<pinref part="Z12" gate="A" pin="SER"/>
 <wire x1="325.12" y1="-27.94" x2="325.12" y2="-30.48" width="0.1524" layer="91"/>
 <pinref part="SUPPLY20" gate="GND" pin="GND"/>
 </segment>
@@ -24527,7 +24529,7 @@ John Bradley 2019</text>
 <pinref part="Z23" gate="D" pin="I1"/>
 <wire x1="307.34" y1="35.56" x2="231.14" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="231.14" y1="35.56" x2="231.14" y2="45.72" width="0.1524" layer="91"/>
-<pinref part="Z28" gate="A" pin="QH"/>
+<pinref part="Z12" gate="A" pin="QH"/>
 <wire x1="307.34" y1="35.56" x2="307.34" y2="-2.54" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -24580,7 +24582,7 @@ John Bradley 2019</text>
 <wire x1="193.04" y1="76.2" x2="350.52" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="350.52" y1="76.2" x2="350.52" y2="-33.02" width="0.1524" layer="91"/>
 <wire x1="350.52" y1="-33.02" x2="335.28" y2="-33.02" width="0.1524" layer="91"/>
-<pinref part="Z28" gate="A" pin="SH/!LD"/>
+<pinref part="Z12" gate="A" pin="SH/!LD"/>
 <wire x1="335.28" y1="-33.02" x2="335.28" y2="-27.94" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -24669,7 +24671,7 @@ John Bradley 2019</text>
 <pinref part="Z4" gate="A" pin="!CS"/>
 <wire x1="0" y1="-137.16" x2="-22.86" y2="-137.16" width="0.1524" layer="91"/>
 <junction x="-22.86" y="-137.16"/>
-<pinref part="Z29" gate="A" pin="Y3"/>
+<pinref part="Z13" gate="A" pin="Y3"/>
 <wire x1="-109.22" y1="-30.48" x2="-71.12" y2="-30.48" width="0.1524" layer="91"/>
 <wire x1="-71.12" y1="-30.48" x2="-71.12" y2="-35.56" width="0.1524" layer="91"/>
 <wire x1="-71.12" y1="-35.56" x2="-22.86" y2="-35.56" width="0.1524" layer="91"/>
@@ -24677,10 +24679,10 @@ John Bradley 2019</text>
 </net>
 <net name="EAR" class="0">
 <segment>
-<pinref part="Z14" gate="A" pin="2A2"/>
 <wire x1="-73.66" y1="-251.46" x2="-73.66" y2="-248.92" width="0.1524" layer="91"/>
 <wire x1="-73.66" y1="-251.46" x2="-71.12" y2="-251.46" width="0.1524" layer="91"/>
 <label x="-71.12" y="-251.46" size="1.778" layer="95" xref="yes"/>
+<pinref part="Z14" gate="A" pin="2A2"/>
 </segment>
 <segment>
 <pinref part="Z17" gate="A" pin="2Y2"/>
@@ -25019,10 +25021,10 @@ John Bradley 2019</text>
 <junction x="-20.32" y="-274.32"/>
 <wire x1="-134.62" y1="-254" x2="-88.9" y2="-254" width="0.1524" layer="91"/>
 <junction x="-20.32" y="-254"/>
-<pinref part="Z14" gate="A" pin="1A1"/>
 <wire x1="-88.9" y1="-254" x2="-20.32" y2="-254" width="0.1524" layer="91"/>
 <wire x1="-88.9" y1="-248.92" x2="-88.9" y2="-254" width="0.1524" layer="91"/>
 <junction x="-88.9" y="-254"/>
+<pinref part="Z14" gate="A" pin="1A1"/>
 </segment>
 </net>
 <net name="N$57" class="0">
@@ -25131,10 +25133,10 @@ John Bradley 2019</text>
 <wire x1="-121.92" y1="-256.54" x2="-86.36" y2="-256.54" width="0.1524" layer="91"/>
 <junction x="-121.92" y="-256.54"/>
 <junction x="-33.02" y="-256.54"/>
-<pinref part="Z14" gate="A" pin="1A2"/>
 <wire x1="-86.36" y1="-256.54" x2="-33.02" y2="-256.54" width="0.1524" layer="91"/>
 <wire x1="-86.36" y1="-248.92" x2="-86.36" y2="-256.54" width="0.1524" layer="91"/>
 <junction x="-86.36" y="-256.54"/>
+<pinref part="Z14" gate="A" pin="1A2"/>
 </segment>
 </net>
 <net name="N$61" class="0">
@@ -25164,10 +25166,10 @@ John Bradley 2019</text>
 <wire x1="-109.22" y1="-259.08" x2="-83.82" y2="-259.08" width="0.1524" layer="91"/>
 <junction x="-109.22" y="-259.08"/>
 <junction x="-45.72" y="-259.08"/>
-<pinref part="Z14" gate="A" pin="1A3"/>
 <wire x1="-83.82" y1="-259.08" x2="-45.72" y2="-259.08" width="0.1524" layer="91"/>
 <wire x1="-83.82" y1="-248.92" x2="-83.82" y2="-259.08" width="0.1524" layer="91"/>
 <junction x="-83.82" y="-259.08"/>
+<pinref part="Z14" gate="A" pin="1A3"/>
 </segment>
 </net>
 <net name="N$62" class="0">
@@ -25197,10 +25199,10 @@ John Bradley 2019</text>
 <wire x1="-96.52" y1="-261.62" x2="-81.28" y2="-261.62" width="0.1524" layer="91"/>
 <junction x="-96.52" y="-261.62"/>
 <junction x="-58.42" y="-261.62"/>
-<pinref part="Z14" gate="A" pin="1A4"/>
 <wire x1="-81.28" y1="-261.62" x2="-58.42" y2="-261.62" width="0.1524" layer="91"/>
 <wire x1="-81.28" y1="-248.92" x2="-81.28" y2="-261.62" width="0.1524" layer="91"/>
 <junction x="-81.28" y="-261.62"/>
+<pinref part="Z14" gate="A" pin="1A4"/>
 </segment>
 </net>
 <net name="N$64" class="0">
@@ -25230,9 +25232,9 @@ John Bradley 2019</text>
 <pinref part="S36" gate="1" pin="S"/>
 <wire x1="-71.12" y1="-299.72" x2="-71.12" y2="-312.42" width="0.1524" layer="91"/>
 <junction x="-71.12" y="-299.72"/>
-<pinref part="Z14" gate="A" pin="2A1"/>
 <wire x1="-76.2" y1="-248.92" x2="-76.2" y2="-264.16" width="0.1524" layer="91"/>
 <junction x="-76.2" y="-264.16"/>
+<pinref part="Z14" gate="A" pin="2A1"/>
 </segment>
 </net>
 <net name="N$77" class="0">
@@ -25356,10 +25358,7 @@ John Bradley 2019</text>
 <wire x1="15.24" y1="-236.22" x2="15.24" y2="-248.92" width="0.1524" layer="91"/>
 <junction x="15.24" y="-236.22"/>
 <wire x1="15.24" y1="-248.92" x2="-66.04" y2="-248.92" width="0.1524" layer="91"/>
-<pinref part="Z14" gate="A" pin="1G"/>
 <pinref part="Z14" gate="A" pin="2G"/>
-<wire x1="-66.04" y1="-248.92" x2="-68.58" y2="-248.92" width="0.1524" layer="91"/>
-<junction x="-66.04" y="-248.92"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -25878,7 +25877,7 @@ John Bradley 2019</text>
 <segment>
 <pinref part="RN2" gate="H" pin="2"/>
 <wire x1="322.58" y1="-144.78" x2="327.66" y2="-152.4" width="0.1524" layer="91"/>
-<pinref part="Z28" gate="A" pin="H"/>
+<pinref part="Z12" gate="A" pin="H"/>
 <wire x1="322.58" y1="-27.94" x2="322.58" y2="-116.84" width="0.1524" layer="91"/>
 <pinref part="Z8" gate="A" pin="D3"/>
 <wire x1="322.58" y1="-116.84" x2="322.58" y2="-144.78" width="0.1524" layer="91"/>
@@ -25890,7 +25889,7 @@ John Bradley 2019</text>
 <segment>
 <pinref part="RN2" gate="A" pin="2"/>
 <wire x1="304.8" y1="-139.7" x2="292.1" y2="-152.4" width="0.1524" layer="91"/>
-<pinref part="Z28" gate="A" pin="A"/>
+<pinref part="Z12" gate="A" pin="A"/>
 <wire x1="304.8" y1="-27.94" x2="304.8" y2="-68.58" width="0.1524" layer="91"/>
 <pinref part="Z7" gate="A" pin="D0"/>
 <wire x1="304.8" y1="-68.58" x2="304.8" y2="-139.7" width="0.1524" layer="91"/>
@@ -25903,7 +25902,7 @@ John Bradley 2019</text>
 <pinref part="RN2" gate="B" pin="2"/>
 <wire x1="307.34" y1="-139.7" x2="297.18" y2="-149.86" width="0.1524" layer="91"/>
 <wire x1="297.18" y1="-149.86" x2="297.18" y2="-152.4" width="0.1524" layer="91"/>
-<pinref part="Z28" gate="A" pin="B"/>
+<pinref part="Z12" gate="A" pin="B"/>
 <wire x1="307.34" y1="-27.94" x2="307.34" y2="-71.12" width="0.1524" layer="91"/>
 <pinref part="Z7" gate="A" pin="D1"/>
 <wire x1="307.34" y1="-71.12" x2="307.34" y2="-139.7" width="0.1524" layer="91"/>
@@ -25916,7 +25915,7 @@ John Bradley 2019</text>
 <pinref part="RN2" gate="C" pin="2"/>
 <wire x1="309.88" y1="-139.7" x2="302.26" y2="-147.32" width="0.1524" layer="91"/>
 <wire x1="302.26" y1="-147.32" x2="302.26" y2="-152.4" width="0.1524" layer="91"/>
-<pinref part="Z28" gate="A" pin="C"/>
+<pinref part="Z12" gate="A" pin="C"/>
 <wire x1="309.88" y1="-27.94" x2="309.88" y2="-73.66" width="0.1524" layer="91"/>
 <pinref part="Z7" gate="A" pin="D2"/>
 <wire x1="309.88" y1="-73.66" x2="309.88" y2="-139.7" width="0.1524" layer="91"/>
@@ -25929,7 +25928,7 @@ John Bradley 2019</text>
 <pinref part="RN2" gate="D" pin="2"/>
 <wire x1="312.42" y1="-139.7" x2="307.34" y2="-144.78" width="0.1524" layer="91"/>
 <wire x1="307.34" y1="-144.78" x2="307.34" y2="-152.4" width="0.1524" layer="91"/>
-<pinref part="Z28" gate="A" pin="D"/>
+<pinref part="Z12" gate="A" pin="D"/>
 <wire x1="312.42" y1="-27.94" x2="312.42" y2="-76.2" width="0.1524" layer="91"/>
 <pinref part="Z7" gate="A" pin="D3"/>
 <wire x1="312.42" y1="-76.2" x2="312.42" y2="-139.7" width="0.1524" layer="91"/>
@@ -25942,7 +25941,7 @@ John Bradley 2019</text>
 <pinref part="RN2" gate="E" pin="2"/>
 <wire x1="314.96" y1="-139.7" x2="312.42" y2="-142.24" width="0.1524" layer="91"/>
 <wire x1="312.42" y1="-142.24" x2="312.42" y2="-152.4" width="0.1524" layer="91"/>
-<pinref part="Z28" gate="A" pin="E"/>
+<pinref part="Z12" gate="A" pin="E"/>
 <wire x1="314.96" y1="-27.94" x2="314.96" y2="-109.22" width="0.1524" layer="91"/>
 <pinref part="Z8" gate="A" pin="D0"/>
 <wire x1="314.96" y1="-109.22" x2="314.96" y2="-139.7" width="0.1524" layer="91"/>
@@ -25953,7 +25952,7 @@ John Bradley 2019</text>
 <net name="N$96" class="0">
 <segment>
 <pinref part="RN2" gate="F" pin="2"/>
-<pinref part="Z28" gate="A" pin="F"/>
+<pinref part="Z12" gate="A" pin="F"/>
 <wire x1="317.5" y1="-27.94" x2="317.5" y2="-111.76" width="0.1524" layer="91"/>
 <pinref part="Z8" gate="A" pin="D1"/>
 <wire x1="317.5" y1="-111.76" x2="317.5" y2="-152.4" width="0.1524" layer="91"/>
@@ -25965,7 +25964,7 @@ John Bradley 2019</text>
 <segment>
 <pinref part="RN2" gate="G" pin="2"/>
 <wire x1="320.04" y1="-149.86" x2="322.58" y2="-152.4" width="0.1524" layer="91"/>
-<pinref part="Z28" gate="A" pin="G"/>
+<pinref part="Z12" gate="A" pin="G"/>
 <wire x1="320.04" y1="-27.94" x2="320.04" y2="-114.3" width="0.1524" layer="91"/>
 <pinref part="Z8" gate="A" pin="D2"/>
 <wire x1="320.04" y1="-114.3" x2="320.04" y2="-149.86" width="0.1524" layer="91"/>
@@ -26136,7 +26135,7 @@ John Bradley 2019</text>
 <label x="175.26" y="55.88" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="Z28" gate="A" pin="CLK"/>
+<pinref part="Z12" gate="A" pin="CLK"/>
 <wire x1="330.2" y1="-27.94" x2="330.2" y2="-30.48" width="0.1524" layer="91"/>
 <label x="330.2" y="-30.48" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
@@ -26183,6 +26182,12 @@ John Bradley 2019</text>
 <wire x1="246.38" y1="-142.24" x2="246.38" y2="-152.4" width="0.1524" layer="91"/>
 <wire x1="274.32" y1="-86.36" x2="248.92" y2="-86.36" width="0.1524" layer="91"/>
 <junction x="248.92" y="-86.36"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<wire x1="-68.58" y1="-248.92" x2="-68.58" y2="-248.92" width="0.1524" layer="91"/>
+<pinref part="Z14" gate="A" pin="1G"/>
 </segment>
 </net>
 </nets>
