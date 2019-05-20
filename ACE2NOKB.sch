@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.4.0">
+<eagle version="9.4.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -21609,10 +21609,10 @@ include  Type MT6; con-amp-mt6.lbr&lt;p&gt;
 <part name="D18" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="1N4148" device="DO35-7" package3d_urn="urn:adsk.eagle:package:43339/2"/>
 <part name="D19" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="1N4148" device="DO35-7" package3d_urn="urn:adsk.eagle:package:43339/2"/>
 <part name="SP2" library="buzzer" library_urn="urn:adsk.eagle:library:113" deviceset="AL11P" device="" package3d_urn="urn:adsk.eagle:package:5308/1"/>
-<part name="SV1" library="con-amp-mt" library_urn="urn:adsk.eagle:library:123" deviceset="L02P" device="" package3d_urn="urn:adsk.eagle:package:5777/1"/>
-<part name="SV2" library="con-amp-mt" library_urn="urn:adsk.eagle:library:123" deviceset="L02P" device="" package3d_urn="urn:adsk.eagle:package:5777/1"/>
-<part name="SV3" library="con-amp-mt" library_urn="urn:adsk.eagle:library:123" deviceset="L02P" device="" package3d_urn="urn:adsk.eagle:package:5777/1"/>
-<part name="SV4" library="con-amp-mt" library_urn="urn:adsk.eagle:library:123" deviceset="L02P" device="" package3d_urn="urn:adsk.eagle:package:5777/1"/>
+<part name="AUDIO-IN" library="con-amp-mt" library_urn="urn:adsk.eagle:library:123" deviceset="L02P" device="" package3d_urn="urn:adsk.eagle:package:5777/1"/>
+<part name="AUDIO-OUT" library="con-amp-mt" library_urn="urn:adsk.eagle:library:123" deviceset="L02P" device="" package3d_urn="urn:adsk.eagle:package:5777/1"/>
+<part name="COMPOSITE-OUT" library="con-amp-mt" library_urn="urn:adsk.eagle:library:123" deviceset="L02P" device="" package3d_urn="urn:adsk.eagle:package:5777/1"/>
+<part name="POWER-IN" library="con-amp-mt" library_urn="urn:adsk.eagle:library:123" deviceset="L02P" device="" package3d_urn="urn:adsk.eagle:package:5777/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -22325,35 +22325,35 @@ John Bradley 2019</text>
 <attribute name="NAME" x="133.35" y="-199.39" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="123.825" y="-199.39" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="SV1" gate="-1" x="144.78" y="0" smashed="yes">
+<instance part="AUDIO-IN" gate="-1" x="144.78" y="0" smashed="yes">
 <attribute name="NAME" x="144.272" y="1.016" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="145.034" y="-2.413" size="1.778" layer="96"/>
 </instance>
-<instance part="SV1" gate="-2" x="144.78" y="-5.08" smashed="yes">
+<instance part="AUDIO-IN" gate="-2" x="144.78" y="-5.08" smashed="yes">
 <attribute name="NAME" x="144.272" y="-4.064" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="145.034" y="-7.493" size="1.778" layer="96"/>
 </instance>
-<instance part="SV2" gate="-1" x="129.54" y="-185.42" smashed="yes" rot="R180">
+<instance part="AUDIO-OUT" gate="-1" x="129.54" y="-185.42" smashed="yes" rot="R180">
 <attribute name="NAME" x="130.048" y="-186.436" size="1.778" layer="95"/>
 <attribute name="VALUE" x="129.286" y="-183.007" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="SV2" gate="-2" x="129.54" y="-180.34" smashed="yes" rot="R180">
+<instance part="AUDIO-OUT" gate="-2" x="129.54" y="-180.34" smashed="yes" rot="R180">
 <attribute name="NAME" x="130.048" y="-181.356" size="1.778" layer="95"/>
 <attribute name="VALUE" x="129.286" y="-177.927" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="SV3" gate="-1" x="289.56" y="48.26" smashed="yes" rot="R180">
+<instance part="COMPOSITE-OUT" gate="-1" x="289.56" y="48.26" smashed="yes" rot="R180">
 <attribute name="NAME" x="290.068" y="47.244" size="1.778" layer="95"/>
 <attribute name="VALUE" x="289.306" y="50.673" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="SV3" gate="-2" x="289.56" y="53.34" smashed="yes" rot="R180">
+<instance part="COMPOSITE-OUT" gate="-2" x="289.56" y="53.34" smashed="yes" rot="R180">
 <attribute name="NAME" x="290.068" y="52.324" size="1.778" layer="95"/>
 <attribute name="VALUE" x="289.306" y="55.753" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="SV4" gate="-1" x="35.56" y="-302.26" smashed="yes">
+<instance part="POWER-IN" gate="-1" x="35.56" y="-302.26" smashed="yes">
 <attribute name="NAME" x="35.052" y="-301.244" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="35.814" y="-304.673" size="1.778" layer="96"/>
 </instance>
-<instance part="SV4" gate="-2" x="35.56" y="-307.34" smashed="yes">
+<instance part="POWER-IN" gate="-2" x="35.56" y="-307.34" smashed="yes">
 <attribute name="NAME" x="35.052" y="-306.324" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="35.814" y="-309.753" size="1.778" layer="96"/>
 </instance>
@@ -23620,14 +23620,14 @@ John Bradley 2019</text>
 <pinref part="R6" gate="G$1" pin="2"/>
 <wire x1="160.02" y1="2.54" x2="162.56" y2="2.54" width="0.1524" layer="91"/>
 <junction x="160.02" y="2.54"/>
-<pinref part="SV1" gate="-1" pin="S"/>
+<pinref part="AUDIO-IN" gate="-1" pin="S"/>
 </segment>
 </net>
 <net name="GND" class="0">
 <segment>
 <wire x1="152.4" y1="-5.08" x2="149.86" y2="-5.08" width="0.1524" layer="91"/>
 <pinref part="SUPPLY1" gate="GND" pin="GND"/>
-<pinref part="SV1" gate="-2" pin="S"/>
+<pinref part="AUDIO-IN" gate="-2" pin="S"/>
 </segment>
 <segment>
 <pinref part="SUPPLY2" gate="GND" pin="GND"/>
@@ -23640,7 +23640,7 @@ John Bradley 2019</text>
 <segment>
 <wire x1="284.48" y1="53.34" x2="281.94" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="SUPPLY4" gate="GND" pin="GND"/>
-<pinref part="SV3" gate="-2" pin="S"/>
+<pinref part="COMPOSITE-OUT" gate="-2" pin="S"/>
 </segment>
 <segment>
 <pinref part="Z17" gate="A" pin="2G"/>
@@ -23701,14 +23701,14 @@ John Bradley 2019</text>
 <wire x1="40.64" y1="-307.34" x2="43.18" y2="-307.34" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="-307.34" x2="43.18" y2="-309.88" width="0.1524" layer="91"/>
 <pinref part="SUPPLY16" gate="GND" pin="GND"/>
-<pinref part="SV4" gate="-2" pin="S"/>
+<pinref part="POWER-IN" gate="-2" pin="S"/>
 </segment>
 <segment>
 <wire x1="124.46" y1="-180.34" x2="116.84" y2="-180.34" width="0.1524" layer="91"/>
 <pinref part="SUPPLY18" gate="GND" pin="GND"/>
 <wire x1="116.84" y1="-180.34" x2="114.3" y2="-180.34" width="0.1524" layer="91"/>
 <junction x="116.84" y="-180.34"/>
-<pinref part="SV2" gate="-2" pin="S"/>
+<pinref part="AUDIO-OUT" gate="-2" pin="S"/>
 </segment>
 <segment>
 <pinref part="Q3" gate="G$1" pin="E"/>
@@ -23874,7 +23874,7 @@ John Bradley 2019</text>
 <wire x1="266.7" y1="45.72" x2="266.7" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="266.7" y1="48.26" x2="284.48" y2="48.26" width="0.1524" layer="91"/>
 <label x="279.4" y="48.26" size="1.778" layer="95" rot="R90" xref="yes"/>
-<pinref part="SV3" gate="-1" pin="S"/>
+<pinref part="COMPOSITE-OUT" gate="-1" pin="S"/>
 </segment>
 </net>
 <net name="N$21" class="0">
@@ -24082,7 +24082,7 @@ John Bradley 2019</text>
 <pinref part="C2" gate="G$1" pin="2"/>
 <wire x1="104.14" y1="-185.42" x2="104.14" y2="-200.66" width="0.1524" layer="91"/>
 <junction x="104.14" y="-185.42"/>
-<pinref part="SV2" gate="-1" pin="S"/>
+<pinref part="AUDIO-OUT" gate="-1" pin="S"/>
 </segment>
 </net>
 <net name="N$44" class="0">
@@ -24281,7 +24281,7 @@ John Bradley 2019</text>
 <pinref part="C10" gate="G$1" pin="2"/>
 <wire x1="60.96" y1="-302.26" x2="71.12" y2="-302.26" width="0.1524" layer="91"/>
 <junction x="60.96" y="-302.26"/>
-<pinref part="SV4" gate="-1" pin="S"/>
+<pinref part="POWER-IN" gate="-1" pin="S"/>
 </segment>
 </net>
 <net name="N$4" class="0">

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.4.0">
+<eagle version="9.4.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -45,6 +45,7 @@
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
 <layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
 <layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
@@ -18420,194 +18421,6 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="con-lumberg" urn="urn:adsk.eagle:library:163">
-<description>&lt;b&gt;Lumberg Connectors&lt;/b&gt;&lt;p&gt;
-include con-mfs.lbr - 2001.03.22&lt;br&gt;
-Jack connectors - 2005.11.23&lt;p&gt;
-http://www.lumberg.de&lt;p&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-<package name="WBTOR1" urn="urn:adsk.eagle:footprint:8494/1" library_version="1">
-<description>&lt;b&gt;RCA connectors according to JEITA RC-5231&lt;/b&gt; Cinch&lt;p&gt;
-RCA-Einbaukupplung nach JEITA RC-5231, abgewinkelte Ausführung&lt;br&gt;
-Source: http://www.lumberg.de/Produkte/PDFs/WBTOR1.pdf</description>
-<wire x1="-4.9" y1="-0.1" x2="4.9" y2="-0.1" width="0.2032" layer="21"/>
-<wire x1="4.9" y1="-0.1" x2="4.9" y2="-13.9" width="0.2032" layer="51"/>
-<wire x1="-4.9" y1="-0.1" x2="-4.9" y2="-13.9" width="0.2032" layer="21"/>
-<wire x1="-4.05" y1="0" x2="-4.05" y2="8.4" width="0.2032" layer="21"/>
-<wire x1="-4.05" y1="8.4" x2="-3.55" y2="8.9" width="0.2032" layer="21" curve="-90"/>
-<wire x1="-3.55" y1="8.9" x2="3.55" y2="8.9" width="0.2032" layer="21"/>
-<wire x1="3.55" y1="8.9" x2="4.05" y2="8.4" width="0.2032" layer="21" curve="-90"/>
-<wire x1="4.05" y1="8.4" x2="4.05" y2="0" width="0.2032" layer="21"/>
-<wire x1="-4.9" y1="-13.9" x2="4.9" y2="-13.9" width="0.2032" layer="51"/>
-<wire x1="-4.9" y1="-13.9" x2="3.9" y2="-13.9" width="0.2032" layer="21"/>
-<wire x1="4.9" y1="-0.1" x2="4.9" y2="-9.4" width="0.2032" layer="21"/>
-<wire x1="-1.1" y1="-4" x2="-0.4" y2="-3.3" width="0" layer="46" curve="-90"/>
-<wire x1="-0.4" y1="-3.3" x2="0.4" y2="-3.3" width="0" layer="46"/>
-<wire x1="0.4" y1="-3.3" x2="1.1" y2="-4" width="0" layer="46" curve="-90"/>
-<wire x1="1.1" y1="-4" x2="0.4" y2="-4.7" width="0" layer="46" curve="-90"/>
-<wire x1="0.4" y1="-4.7" x2="-0.4" y2="-4.7" width="0" layer="46"/>
-<wire x1="-0.4" y1="-4.7" x2="-1.1" y2="-4" width="0" layer="46" curve="-90"/>
-<wire x1="5.3" y1="-13.1" x2="4.8" y2="-12.6" width="0" layer="46" curve="-90"/>
-<wire x1="4.8" y1="-12.6" x2="4.8" y2="-11.4" width="0" layer="46"/>
-<wire x1="4.8" y1="-11.4" x2="5.3" y2="-10.9" width="0" layer="46" curve="-90"/>
-<wire x1="5.3" y1="-10.9" x2="5.8" y2="-11.4" width="0" layer="46" curve="-90"/>
-<wire x1="5.8" y1="-11.4" x2="5.8" y2="-12.6" width="0" layer="46"/>
-<wire x1="5.8" y1="-12.6" x2="5.3" y2="-13.1" width="0" layer="46" curve="-90"/>
-<pad name="S" x="0" y="-4" drill="1.4" diameter="2.2" shape="long"/>
-<pad name="T" x="5.3" y="-12" drill="1" diameter="2.2" shape="long" rot="R90"/>
-<text x="-5.715" y="-13.97" size="1.27" layer="25" rot="R90">&gt;NAME</text>
-<text x="8.255" y="-13.97" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
-<hole x="-3.75" y="-4" drill="1.4"/>
-<hole x="3.75" y="-4" drill="1.4"/>
-<hole x="0" y="-10.5" drill="1.5"/>
-</package>
-<package name="1503_04" urn="urn:adsk.eagle:footprint:8481/1" library_version="1">
-<description>&lt;b&gt;Jack connectors according to JISC 6560, 3.5 mm, IP 57&lt;/b&gt;&lt;p&gt;
-Klinkensteckverbinder nach JISC 6560, 3,5 mm, IP 57&lt;br&gt;
-Source: http://www.lumberg.com/Produkte/PDFs/1503_04.pdf</description>
-<wire x1="0.25" y1="-9.65" x2="0.65" y2="-9.25" width="0" layer="46" curve="-90"/>
-<wire x1="0.65" y1="-9.25" x2="1.05" y2="-9.65" width="0" layer="46" curve="-90"/>
-<wire x1="1.05" y1="-9.65" x2="1.05" y2="-10.85" width="0" layer="46"/>
-<wire x1="1.05" y1="-10.85" x2="0.65" y2="-11.25" width="0" layer="46" curve="-90"/>
-<wire x1="0.65" y1="-11.25" x2="0.25" y2="-10.85" width="0" layer="46" curve="-90"/>
-<wire x1="0.25" y1="-10.85" x2="0.25" y2="-9.65" width="0" layer="46"/>
-<wire x1="-3.4" y1="-10.15" x2="-3.4" y2="2.9" width="0.2032" layer="21"/>
-<wire x1="-3.4" y1="2.9" x2="4.9" y2="2.9" width="0.2032" layer="21"/>
-<wire x1="4.9" y1="2.9" x2="4.9" y2="-10.15" width="0.2032" layer="21"/>
-<wire x1="4.9" y1="-10.15" x2="3.1" y2="-10.15" width="0.2032" layer="51"/>
-<wire x1="3.1" y1="-10.15" x2="1.45" y2="-10.15" width="0.2032" layer="21"/>
-<wire x1="1.45" y1="-10.15" x2="-3.1" y2="-10.15" width="0.2032" layer="51"/>
-<wire x1="-3.1" y1="-10.15" x2="-3.4" y2="-10.15" width="0.2032" layer="21"/>
-<wire x1="-2.9" y1="3" x2="-2.9" y2="5.9" width="0.2032" layer="21"/>
-<wire x1="-2.9" y1="5.9" x2="2.9" y2="5.9" width="0.2032" layer="21"/>
-<wire x1="2.9" y1="5.9" x2="2.9" y2="3" width="0.2032" layer="21"/>
-<wire x1="-2.8" y1="-9.75" x2="-2.3" y2="-9.25" width="0" layer="46" curve="-90"/>
-<wire x1="-2.3" y1="-9.25" x2="-1.8" y2="-9.75" width="0" layer="46" curve="-90"/>
-<wire x1="-1.8" y1="-9.75" x2="-1.8" y2="-10.75" width="0" layer="46"/>
-<wire x1="-1.8" y1="-10.75" x2="-2.3" y2="-11.25" width="0" layer="46" curve="-90"/>
-<wire x1="-2.3" y1="-11.25" x2="-2.8" y2="-10.75" width="0" layer="46" curve="-90"/>
-<wire x1="-2.8" y1="-10.75" x2="-2.8" y2="-9.75" width="0" layer="46"/>
-<wire x1="3.5" y1="-9.65" x2="3.9" y2="-9.25" width="0" layer="46" curve="-90"/>
-<wire x1="3.9" y1="-9.25" x2="4.3" y2="-9.65" width="0" layer="46" curve="-90"/>
-<wire x1="4.3" y1="-9.65" x2="4.3" y2="-10.85" width="0" layer="46"/>
-<wire x1="4.3" y1="-10.85" x2="3.9" y2="-11.25" width="0" layer="46" curve="-90"/>
-<wire x1="3.9" y1="-11.25" x2="3.5" y2="-10.85" width="0" layer="46" curve="-90"/>
-<wire x1="3.5" y1="-10.85" x2="3.5" y2="-9.65" width="0" layer="46"/>
-<pad name="1" x="3.9" y="-10.25" drill="0.8" diameter="1.2" shape="long" rot="R90"/>
-<pad name="2" x="0.65" y="-10.25" drill="0.8" diameter="1.2" shape="long" rot="R90"/>
-<pad name="3" x="-2.3" y="-10.25" drill="1" diameter="1.2" shape="long" rot="R90"/>
-<text x="-3.81" y="-10.16" size="1.27" layer="25" rot="R90">&gt;NAME</text>
-<text x="6.985" y="-10.16" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
-<hole x="0" y="0" drill="1.6"/>
-</package>
-</packages>
-<packages3d>
-<package3d name="WBTOR1" urn="urn:adsk.eagle:package:8560/1" type="box" library_version="1">
-<description>RCA connectors according to JEITA RC-5231 Cinch
-RCA-Einbaukupplung nach JEITA RC-5231, abgewinkelte Ausführung
-Source: http://www.lumberg.de/Produkte/PDFs/WBTOR1.pdf</description>
-<packageinstances>
-<packageinstance name="WBTOR1"/>
-</packageinstances>
-</package3d>
-<package3d name="1503_04" urn="urn:adsk.eagle:package:8553/1" type="box" library_version="1">
-<description>Jack connectors according to JISC 6560, 3.5 mm, IP 57
-Klinkensteckverbinder nach JISC 6560, 3,5 mm, IP 57
-Source: http://www.lumberg.com/Produkte/PDFs/1503_04.pdf</description>
-<packageinstances>
-<packageinstance name="1503_04"/>
-</packageinstances>
-</package3d>
-</packages3d>
-<symbols>
-<symbol name="CINCH" urn="urn:adsk.eagle:symbol:8493/1" library_version="1">
-<wire x1="0" y1="-2.54" x2="3.556" y2="-2.54" width="0.1524" layer="94"/>
-<wire x1="0" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
-<wire x1="1.27" y1="0" x2="2.286" y2="-1.016" width="0.1524" layer="94"/>
-<wire x1="2.286" y1="-1.016" x2="2.794" y2="-0.508" width="0.1524" layer="94"/>
-<text x="0" y="1.27" size="1.778" layer="95">&gt;NAME</text>
-<text x="0" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
-<rectangle x1="3.429" y1="-2.667" x2="4.191" y2="0.127" layer="94"/>
-<pin name="T" x="-2.54" y="0" visible="pad" length="short" direction="pas"/>
-<pin name="S" x="-2.54" y="-2.54" visible="pad" length="short" direction="pas"/>
-</symbol>
-<symbol name="STEREO-JACK3" urn="urn:adsk.eagle:symbol:8469/1" library_version="1">
-<wire x1="-2.54" y1="2.54" x2="-1.524" y2="2.54" width="0.1524" layer="94"/>
-<wire x1="-1.524" y1="2.54" x2="0" y2="1.016" width="0.1524" layer="94"/>
-<wire x1="0" y1="1.016" x2="0.508" y2="1.524" width="0.1524" layer="94"/>
-<wire x1="-2.54" y1="-5.08" x2="0.508" y2="-5.08" width="0.1524" layer="94"/>
-<wire x1="0.508" y1="-5.08" x2="4.318" y2="-1.27" width="0.1524" layer="94"/>
-<wire x1="4.318" y1="-1.27" x2="4.826" y2="-1.778" width="0.1524" layer="94"/>
-<wire x1="-2.54" y1="-2.54" x2="0.762" y2="-2.54" width="0.1524" layer="94"/>
-<wire x1="0.762" y1="-2.54" x2="2.54" y2="-0.762" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="-0.762" x2="3.048" y2="-1.27" width="0.1524" layer="94"/>
-<text x="-2.54" y="4.064" size="1.778" layer="95">&gt;NAME</text>
-<text x="-2.54" y="-7.366" size="1.778" layer="96">&gt;VALUE</text>
-<rectangle x1="5.207" y1="-2.667" x2="6.604" y2="2.667" layer="94"/>
-<pin name="1" x="-5.08" y="-5.08" visible="pad" length="short" direction="pas"/>
-<pin name="2" x="-5.08" y="2.54" visible="pad" length="short" direction="pas"/>
-<pin name="3" x="-5.08" y="-2.54" visible="pad" length="short" direction="pas"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="WBTOR1" urn="urn:adsk.eagle:component:8619/1" prefix="X" library_version="1">
-<description>&lt;b&gt;RCA connectors according to JEITA RC-5231&lt;/b&gt; Cinch&lt;p&gt;
-RCA-Einbaukupplung nach JEITA RC-5231, abgewinkelte Ausführung&lt;br&gt;
-Source: http://www.lumberg.de/Produkte/PDFs/WBTOR1.pdf</description>
-<gates>
-<gate name="G$1" symbol="CINCH" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="WBTOR1">
-<connects>
-<connect gate="G$1" pin="S" pad="S"/>
-<connect gate="G$1" pin="T" pad="T"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8560/1"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="MF" value="" constant="no"/>
-<attribute name="MPN" value="WBTOR 1 BLACK" constant="no"/>
-<attribute name="OC_FARNELL" value="1200146" constant="no"/>
-<attribute name="OC_NEWARK" value="98K2588" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="1503_04" urn="urn:adsk.eagle:component:8608/1" prefix="X" library_version="1">
-<description>&lt;b&gt;Jack connectors according to JISC 6560, 3.5 mm, IP 57&lt;/b&gt;&lt;p&gt;
-Klinkensteckverbinder nach JISC 6560, 3,5 mm, IP 57&lt;br&gt;
-Source: http://www.lumberg.com/Produkte/PDFs/1503_04.pdf</description>
-<gates>
-<gate name="G$1" symbol="STEREO-JACK3" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="1503_04">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="3"/>
-<connect gate="G$1" pin="3" pad="2"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:8553/1"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="MF" value="" constant="no"/>
-<attribute name="MPN" value="" constant="no"/>
-<attribute name="OC_FARNELL" value="1216981" constant="no"/>
-<attribute name="OC_NEWARK" value="unknown" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="supply2" urn="urn:adsk.eagle:library:372">
 <description>&lt;b&gt;Supply Symbols&lt;/b&gt;&lt;p&gt;
 GND, VCC, 0V, +5V, -5V, etc.&lt;p&gt;
@@ -22218,6 +22031,93 @@ http://www.idt.com&lt;p&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="con-amp-mt" urn="urn:adsk.eagle:library:123">
+<description>&lt;b&gt;AMP Connectors, Type MT&lt;/b&gt;&lt;p&gt;
+include  Type MT6; con-amp-mt6.lbr&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="L02P" urn="urn:adsk.eagle:footprint:5718/1" library_version="1">
+<description>&lt;b&gt;AMP MT CONNECTOR&lt;/b&gt;</description>
+<wire x1="2.418" y1="-4.345" x2="-2.331" y2="-4.345" width="0.1524" layer="21"/>
+<wire x1="2.418" y1="6.45" x2="2.926" y2="7.339" width="0.1524" layer="21"/>
+<wire x1="2.418" y1="-3.456" x2="-2.331" y2="-3.456" width="0.1524" layer="21"/>
+<wire x1="2.418" y1="-3.456" x2="2.418" y2="-4.345" width="0.1524" layer="21"/>
+<wire x1="2.418" y1="6.45" x2="2.418" y2="5.815" width="0.1524" layer="21"/>
+<wire x1="2.418" y1="5.815" x2="2.418" y2="-3.456" width="0.1524" layer="21"/>
+<wire x1="2.418" y1="5.815" x2="-2.331" y2="5.815" width="0.1524" layer="21"/>
+<wire x1="-2.331" y1="-3.456" x2="-2.331" y2="-4.345" width="0.1524" layer="21"/>
+<wire x1="-2.331" y1="5.815" x2="-2.331" y2="-3.456" width="0.1524" layer="21"/>
+<wire x1="-4.871" y1="-5.869" x2="-4.871" y2="7.339" width="0.1524" layer="21"/>
+<wire x1="-4.871" y1="7.339" x2="-2.839" y2="7.339" width="0.1524" layer="21"/>
+<wire x1="-2.839" y1="7.339" x2="-2.331" y2="6.45" width="0.1524" layer="21"/>
+<wire x1="-2.331" y1="6.45" x2="-2.331" y2="5.815" width="0.1524" layer="21"/>
+<wire x1="4.933" y1="-5.869" x2="4.933" y2="7.339" width="0.1524" layer="21"/>
+<wire x1="4.933" y1="7.339" x2="2.926" y2="7.339" width="0.1524" layer="21"/>
+<wire x1="1.25" y1="3.529" x2="1.25" y2="3.021" width="0.6604" layer="21"/>
+<wire x1="4.933" y1="-5.869" x2="2.241" y2="-5.869" width="0.1524" layer="21"/>
+<wire x1="0.259" y1="-5.869" x2="2.241" y2="-5.869" width="0.1524" layer="51"/>
+<wire x1="0.259" y1="-5.869" x2="-0.249" y2="-5.869" width="0.1524" layer="21"/>
+<wire x1="-2.23" y1="-5.869" x2="-0.249" y2="-5.869" width="0.1524" layer="51"/>
+<wire x1="-2.23" y1="-5.869" x2="-4.871" y2="-5.869" width="0.1524" layer="21"/>
+<wire x1="-1.25" y1="3.529" x2="-1.25" y2="3.021" width="0.6604" layer="21"/>
+<pad name="2" x="-1.25" y="-6.25" drill="1.016" shape="long" rot="R90"/>
+<pad name="1" x="1.25" y="-6.25" drill="1.016" shape="long" rot="R90"/>
+<text x="-4.7698" y="-8.79" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-3.195" y="-1.17" size="1.27" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
+<text x="4.3742" y="-4.345" size="1.27" layer="21" ratio="10" rot="R90">1</text>
+<text x="-2.7886" y="-4.472" size="1.27" layer="21" ratio="10" rot="R90">2</text>
+<rectangle x1="0.9452" y1="-3.456" x2="1.5548" y2="3.148" layer="21"/>
+<rectangle x1="0.9452" y1="-6.504" x2="1.5548" y2="-5.869" layer="51"/>
+<rectangle x1="-1.544" y1="-3.456" x2="-0.9344" y2="3.148" layer="21"/>
+<rectangle x1="-1.544" y1="-6.504" x2="-0.9344" y2="-5.869" layer="51"/>
+</package>
+</packages>
+<packages3d>
+<package3d name="L02P" urn="urn:adsk.eagle:package:5777/1" type="box" library_version="1">
+<description>AMP MT CONNECTOR</description>
+<packageinstances>
+<packageinstance name="L02P"/>
+</packageinstances>
+</package3d>
+</packages3d>
+<symbols>
+<symbol name="M" urn="urn:adsk.eagle:symbol:5716/1" library_version="1">
+<wire x1="1.27" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="1.27" y2="0" width="0.6096" layer="94"/>
+<text x="-0.508" y="1.016" size="1.778" layer="95" rot="R180">&gt;NAME</text>
+<text x="0.254" y="-2.413" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="S" x="5.08" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="L02P" urn="urn:adsk.eagle:component:5826/1" prefix="SV" uservalue="yes" library_version="1">
+<description>&lt;b&gt;AMP MT CONNECTOR&lt;/b&gt;</description>
+<gates>
+<gate name="-1" symbol="M" x="0" y="2.54" addlevel="always"/>
+<gate name="-2" symbol="M" x="0" y="-2.54" addlevel="always"/>
+</gates>
+<devices>
+<device name="" package="L02P">
+<connects>
+<connect gate="-1" pin="S" pad="1"/>
+<connect gate="-2" pin="S" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:5777/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -22407,15 +22307,15 @@ http://www.idt.com&lt;p&gt;
 <part name="IC2" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" deviceset="74*04" device="N" package3d_urn="urn:adsk.eagle:package:16407/2" technology="HCT"/>
 <part name="T1" library="transistor" library_urn="urn:adsk.eagle:library:402" deviceset="2N2369" device="" package3d_urn="urn:adsk.eagle:package:28526/2"/>
 <part name="IC4" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" deviceset="74*32" device="N" package3d_urn="urn:adsk.eagle:package:16407/2" technology="LS"/>
-<part name="VIDEO-OUT" library="con-lumberg" library_urn="urn:adsk.eagle:library:163" deviceset="WBTOR1" device="" package3d_urn="urn:adsk.eagle:package:8560/1"/>
-<part name="AUDIO-IN" library="con-lumberg" library_urn="urn:adsk.eagle:library:163" deviceset="1503_04" device="" package3d_urn="urn:adsk.eagle:package:8553/1"/>
-<part name="AUDIO-OUT" library="con-lumberg" library_urn="urn:adsk.eagle:library:163" deviceset="1503_04" device="" package3d_urn="urn:adsk.eagle:package:8553/1"/>
-<part name="POWER-9V-DC-IN" library="con-lumberg" library_urn="urn:adsk.eagle:library:163" deviceset="1503_04" device="" package3d_urn="urn:adsk.eagle:package:8553/1"/>
 <part name="Z14" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" deviceset="74*367" device="N" package3d_urn="urn:adsk.eagle:package:922/2" technology="HCT"/>
 <part name="Z15" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" deviceset="74*367" device="N" package3d_urn="urn:adsk.eagle:package:922/2" technology="HCT"/>
 <part name="Z16" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" deviceset="74*367" device="N" package3d_urn="urn:adsk.eagle:package:922/2" technology="HCT"/>
 <part name="Z17" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" deviceset="74*367" device="N" package3d_urn="urn:adsk.eagle:package:922/2" technology="HCT"/>
 <part name="Z18" library="74xx-eu" library_urn="urn:adsk.eagle:library:85" deviceset="74*367" device="N" package3d_urn="urn:adsk.eagle:package:922/2" technology="HCT"/>
+<part name="AUDIO-OUT" library="con-amp-mt" library_urn="urn:adsk.eagle:library:123" deviceset="L02P" device="" package3d_urn="urn:adsk.eagle:package:5777/1"/>
+<part name="COMPOSITE-OUT" library="con-amp-mt" library_urn="urn:adsk.eagle:library:123" deviceset="L02P" device="" package3d_urn="urn:adsk.eagle:package:5777/1"/>
+<part name="POWER-IN-9V-DC" library="con-amp-mt" library_urn="urn:adsk.eagle:library:123" deviceset="L02P" device="" package3d_urn="urn:adsk.eagle:package:5777/1"/>
+<part name="AUDIO-IN" library="con-amp-mt" library_urn="urn:adsk.eagle:library:123" deviceset="L02P" device="" package3d_urn="urn:adsk.eagle:package:5777/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -22454,10 +22354,6 @@ Keep A10 low so always using same half.</text>
 <attribute name="NAME" x="12.7" y="-210.185" size="1.778" layer="95"/>
 <attribute name="VALUE" x="12.7" y="-218.44" size="1.778" layer="96"/>
 </instance>
-<instance part="Z26" gate="C" x="43.18" y="-228.6" smashed="yes">
-<attribute name="NAME" x="45.72" y="-225.425" size="1.778" layer="95"/>
-<attribute name="VALUE" x="45.72" y="-233.68" size="1.778" layer="96"/>
-</instance>
 <instance part="Z26" gate="D" x="-22.86" y="15.24" smashed="yes">
 <attribute name="NAME" x="-20.32" y="18.415" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-20.32" y="10.16" size="1.778" layer="96"/>
@@ -22472,14 +22368,6 @@ Keep A10 low so always using same half.</text>
 </instance>
 <instance part="P+1" gate="VCC" x="-154.94" y="-48.26" smashed="yes" rot="R90">
 <attribute name="VALUE" x="-154.94" y="-45.72" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="Z24" gate="A" x="7.62" y="22.86" smashed="yes">
-<attribute name="NAME" x="10.16" y="26.035" size="1.778" layer="95"/>
-<attribute name="VALUE" x="10.16" y="17.78" size="1.778" layer="96"/>
-</instance>
-<instance part="Z24" gate="B" x="-22.86" y="33.02" smashed="yes">
-<attribute name="NAME" x="-20.32" y="36.195" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-20.32" y="27.94" size="1.778" layer="96"/>
 </instance>
 <instance part="Z24" gate="C" x="96.52" y="-205.74" smashed="yes">
 <attribute name="NAME" x="99.06" y="-202.565" size="1.778" layer="95"/>
@@ -22509,10 +22397,6 @@ Keep A10 low so always using same half.</text>
 <attribute name="NAME" x="347.98" y="-243.205" size="1.778" layer="95"/>
 <attribute name="VALUE" x="347.98" y="-251.46" size="1.778" layer="96"/>
 </instance>
-<instance part="Z25" gate="C" x="43.18" y="-203.2" smashed="yes">
-<attribute name="NAME" x="45.72" y="-200.025" size="1.778" layer="95"/>
-<attribute name="VALUE" x="45.72" y="-208.28" size="1.778" layer="96"/>
-</instance>
 <instance part="Z25" gate="D" x="307.34" y="-215.9" smashed="yes">
 <attribute name="NAME" x="309.88" y="-212.725" size="1.778" layer="95"/>
 <attribute name="VALUE" x="309.88" y="-220.98" size="1.778" layer="96"/>
@@ -22525,8 +22409,8 @@ Keep A10 low so always using same half.</text>
 <attribute name="NAME" x="171.2214" y="-6.35" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="176.022" y="-6.35" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="SUPPLY1" gate="GND" x="152.4" y="-7.62" smashed="yes">
-<attribute name="VALUE" x="150.495" y="-10.795" size="1.778" layer="96"/>
+<instance part="SUPPLY1" gate="GND" x="152.4" y="-5.08" smashed="yes">
+<attribute name="VALUE" x="150.495" y="-8.255" size="1.778" layer="96"/>
 </instance>
 <instance part="C3" gate="G$1" x="165.1" y="2.54" smashed="yes" rot="R90">
 <attribute name="NAME" x="164.719" y="4.064" size="1.778" layer="95" rot="R90"/>
@@ -22631,8 +22515,8 @@ Keep A10 low so always using same half.</text>
 <instance part="P+5" gate="VCC" x="266.7" y="66.04" smashed="yes">
 <attribute name="VALUE" x="264.16" y="63.5" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="SUPPLY4" gate="GND" x="279.4" y="45.72" smashed="yes" rot="R270">
-<attribute name="VALUE" x="276.225" y="47.625" size="1.778" layer="96" rot="R270"/>
+<instance part="SUPPLY4" gate="GND" x="279.4" y="53.34" smashed="yes" rot="R270">
+<attribute name="VALUE" x="276.225" y="55.245" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="SUPPLY5" gate="GND" x="185.42" y="-2.54" smashed="yes" rot="R270">
 <attribute name="VALUE" x="182.245" y="-0.635" size="1.778" layer="96" rot="R270"/>
@@ -23027,8 +22911,8 @@ Keep A10 low so always using same half.</text>
 <instance part="P+18" gate="VCC" x="162.56" y="-269.24" smashed="yes">
 <attribute name="VALUE" x="160.02" y="-271.78" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="SUPPLY18" gate="GND" x="162.56" y="-175.26" smashed="yes" rot="R270">
-<attribute name="VALUE" x="159.385" y="-173.355" size="1.778" layer="96" rot="R270"/>
+<instance part="SUPPLY18" gate="GND" x="167.64" y="-175.26" smashed="yes" rot="R270">
+<attribute name="VALUE" x="164.465" y="-173.355" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="SUPPLY19" gate="GND" x="152.4" y="-236.22" smashed="yes">
 <attribute name="VALUE" x="150.495" y="-239.395" size="1.778" layer="96"/>
@@ -23233,9 +23117,9 @@ Keep A10 low so always using same half.</text>
 <attribute name="NAME" x="111.76" y="-22.225" size="1.778" layer="95"/>
 <attribute name="VALUE" x="111.76" y="-30.48" size="1.778" layer="96"/>
 </instance>
-<instance part="IC2" gate="C" x="66.04" y="-228.6" smashed="yes">
-<attribute name="NAME" x="68.58" y="-225.425" size="1.778" layer="95"/>
-<attribute name="VALUE" x="68.58" y="-233.68" size="1.778" layer="96"/>
+<instance part="IC2" gate="C" x="66.04" y="-238.76" smashed="yes" rot="R270">
+<attribute name="NAME" x="69.215" y="-241.3" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="60.96" y="-241.3" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="IC2" gate="D" x="345.44" y="-271.78" smashed="yes">
 <attribute name="NAME" x="347.98" y="-268.605" size="1.778" layer="95"/>
@@ -23245,9 +23129,9 @@ Keep A10 low so always using same half.</text>
 <attribute name="NAME" x="177.8" y="26.035" size="1.778" layer="95"/>
 <attribute name="VALUE" x="177.8" y="17.78" size="1.778" layer="96"/>
 </instance>
-<instance part="IC2" gate="F" x="-12.7" y="76.2" smashed="yes">
-<attribute name="NAME" x="-10.16" y="79.375" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-10.16" y="71.12" size="1.778" layer="96"/>
+<instance part="IC2" gate="F" x="30.48" y="22.86" smashed="yes">
+<attribute name="NAME" x="33.02" y="26.035" size="1.778" layer="95"/>
+<attribute name="VALUE" x="33.02" y="17.78" size="1.778" layer="96"/>
 </instance>
 <instance part="Z19" gate="D" x="-38.1" y="76.2" smashed="yes">
 <attribute name="NAME" x="-35.56" y="79.375" size="1.778" layer="95"/>
@@ -23273,10 +23157,6 @@ Keep A10 low so always using same half.</text>
 <attribute name="NAME" x="-73.66" y="-24.765" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-73.66" y="-33.02" size="1.778" layer="96"/>
 </instance>
-<instance part="IC4" gate="C" x="-50.8" y="66.04" smashed="yes">
-<attribute name="NAME" x="-48.26" y="69.215" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-48.26" y="60.96" size="1.778" layer="96"/>
-</instance>
 <instance part="IC4" gate="D" x="-50.8" y="53.34" smashed="yes">
 <attribute name="NAME" x="-48.26" y="56.515" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-48.26" y="48.26" size="1.778" layer="96"/>
@@ -23284,22 +23164,6 @@ Keep A10 low so always using same half.</text>
 <instance part="IC2" gate="A" x="-96.52" y="-25.4" smashed="yes">
 <attribute name="NAME" x="-93.98" y="-22.225" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-93.98" y="-30.48" size="1.778" layer="96"/>
-</instance>
-<instance part="VIDEO-OUT" gate="G$1" x="287.02" y="48.26" smashed="yes">
-<attribute name="NAME" x="287.02" y="49.53" size="1.778" layer="95"/>
-<attribute name="VALUE" x="287.02" y="43.18" size="1.778" layer="96"/>
-</instance>
-<instance part="AUDIO-IN" gate="G$1" x="144.78" y="-2.54" smashed="yes" rot="R180">
-<attribute name="NAME" x="147.32" y="-6.604" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="147.32" y="4.826" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="AUDIO-OUT" gate="G$1" x="177.8" y="-177.8" smashed="yes">
-<attribute name="NAME" x="175.26" y="-173.736" size="1.778" layer="95"/>
-<attribute name="VALUE" x="175.26" y="-185.166" size="1.778" layer="96"/>
-</instance>
-<instance part="POWER-9V-DC-IN" gate="G$1" x="63.5" y="-276.86" smashed="yes" rot="R180">
-<attribute name="NAME" x="66.04" y="-280.924" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="66.04" y="-269.494" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="Z14" gate="A" x="-50.8" y="-231.14" smashed="yes" rot="R90">
 <attribute name="NAME" x="-64.135" y="-238.76" size="1.778" layer="95" rot="R90"/>
@@ -23320,6 +23184,58 @@ Keep A10 low so always using same half.</text>
 <instance part="Z18" gate="A" x="246.38" y="-15.24" smashed="yes" rot="R270">
 <attribute name="NAME" x="259.715" y="-7.62" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="228.6" y="-7.62" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="Z24" gate="A" x="43.18" y="-203.2" smashed="yes">
+<attribute name="NAME" x="45.72" y="-200.025" size="1.778" layer="95"/>
+<attribute name="VALUE" x="45.72" y="-208.28" size="1.778" layer="96"/>
+</instance>
+<instance part="Z24" gate="B" x="43.18" y="-228.6" smashed="yes">
+<attribute name="NAME" x="45.72" y="-225.425" size="1.778" layer="95"/>
+<attribute name="VALUE" x="45.72" y="-233.68" size="1.778" layer="96"/>
+</instance>
+<instance part="Z25" gate="C" x="-22.86" y="33.02" smashed="yes">
+<attribute name="NAME" x="-20.32" y="36.195" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-20.32" y="27.94" size="1.778" layer="96"/>
+</instance>
+<instance part="Z26" gate="C" x="7.62" y="22.86" smashed="yes">
+<attribute name="NAME" x="10.16" y="26.035" size="1.778" layer="95"/>
+<attribute name="VALUE" x="10.16" y="17.78" size="1.778" layer="96"/>
+</instance>
+<instance part="IC4" gate="C" x="-48.26" y="66.04" smashed="yes">
+<attribute name="NAME" x="-45.72" y="69.215" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-45.72" y="60.96" size="1.778" layer="96"/>
+</instance>
+<instance part="AUDIO-OUT" gate="-1" x="177.8" y="-180.34" smashed="yes" rot="R180">
+<attribute name="NAME" x="178.308" y="-181.356" size="1.778" layer="95"/>
+<attribute name="VALUE" x="177.546" y="-177.927" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="AUDIO-OUT" gate="-2" x="177.8" y="-175.26" smashed="yes" rot="R180">
+<attribute name="NAME" x="178.308" y="-176.276" size="1.778" layer="95"/>
+<attribute name="VALUE" x="177.546" y="-172.847" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="COMPOSITE-OUT" gate="-1" x="289.56" y="48.26" smashed="yes" rot="R180">
+<attribute name="NAME" x="290.068" y="47.244" size="1.778" layer="95"/>
+<attribute name="VALUE" x="289.306" y="50.673" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="COMPOSITE-OUT" gate="-2" x="289.56" y="53.34" smashed="yes" rot="R180">
+<attribute name="NAME" x="290.068" y="52.324" size="1.778" layer="95"/>
+<attribute name="VALUE" x="289.306" y="55.753" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="POWER-IN-9V-DC" gate="-1" x="63.5" y="-274.32" smashed="yes">
+<attribute name="NAME" x="62.992" y="-273.304" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="63.754" y="-276.733" size="1.778" layer="96"/>
+</instance>
+<instance part="POWER-IN-9V-DC" gate="-2" x="63.5" y="-279.4" smashed="yes">
+<attribute name="NAME" x="62.992" y="-278.384" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="63.754" y="-281.813" size="1.778" layer="96"/>
+</instance>
+<instance part="AUDIO-IN" gate="-1" x="144.78" y="2.54" smashed="yes">
+<attribute name="NAME" x="144.272" y="3.556" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="145.034" y="0.127" size="1.778" layer="96"/>
+</instance>
+<instance part="AUDIO-IN" gate="-2" x="144.78" y="-2.54" smashed="yes">
+<attribute name="NAME" x="144.272" y="-1.524" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="145.034" y="-4.953" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -23772,9 +23688,9 @@ Keep A10 low so always using same half.</text>
 <pinref part="Z0" gate="1" pin="A11"/>
 </segment>
 <segment>
-<pinref part="Z24" gate="B" pin="I1"/>
 <wire x1="-30.48" y1="30.48" x2="-33.02" y2="30.48" width="0.1524" layer="91"/>
 <label x="-33.02" y="30.48" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="Z25" gate="C" pin="I1"/>
 </segment>
 <segment>
 <wire x1="-63.5" y1="-96.52" x2="-66.04" y2="-96.52" width="0.1524" layer="91"/>
@@ -24468,7 +24384,6 @@ Keep A10 low so always using same half.</text>
 <pinref part="C20" gate="G$1" pin="2"/>
 <wire x1="208.28" y1="-274.32" x2="215.9" y2="-274.32" width="0.1524" layer="91"/>
 <junction x="208.28" y="-274.32"/>
-<wire x1="147.32" y1="-274.32" x2="147.32" y2="-271.78" width="0.1524" layer="91"/>
 <pinref part="P+18" gate="VCC" pin="VCC"/>
 <wire x1="162.56" y1="-271.78" x2="162.56" y2="-274.32" width="0.1524" layer="91"/>
 </segment>
@@ -24495,8 +24410,7 @@ Keep A10 low so always using same half.</text>
 </net>
 <net name="CSB4KV" class="0">
 <segment>
-<pinref part="Z24" gate="A" pin="O"/>
-<wire x1="15.24" y1="22.86" x2="134.62" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="22.86" x2="134.62" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="134.62" y1="22.86" x2="165.1" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="134.62" y1="22.86" x2="134.62" y2="-38.1" width="0.1524" layer="91"/>
 <junction x="134.62" y="22.86"/>
@@ -24506,6 +24420,7 @@ Keep A10 low so always using same half.</text>
 <label x="63.5" y="22.86" size="1.778" layer="95" rot="R270" xref="yes"/>
 <pinref part="Z5-6" gate="G$1" pin="!CS"/>
 <pinref part="IC2" gate="E" pin="I"/>
+<pinref part="IC2" gate="F" pin="O"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -24538,9 +24453,9 @@ Keep A10 low so always using same half.</text>
 <label x="-33.02" y="17.78" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="Z25" gate="C" pin="I1"/>
 <wire x1="35.56" y1="-205.74" x2="33.02" y2="-205.74" width="0.1524" layer="91"/>
 <label x="33.02" y="-205.74" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="Z24" gate="A" pin="I1"/>
 </segment>
 <segment>
 <wire x1="-134.62" y1="-243.84" x2="-132.08" y2="-243.84" width="0.1524" layer="91"/>
@@ -24688,23 +24603,19 @@ Keep A10 low so always using same half.</text>
 <net name="N$12" class="0">
 <segment>
 <wire x1="149.86" y1="2.54" x2="152.4" y2="2.54" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="0" x2="152.4" y2="0" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="0" x2="152.4" y2="2.54" width="0.1524" layer="91"/>
-<junction x="152.4" y="2.54"/>
 <wire x1="152.4" y1="2.54" x2="160.02" y2="2.54" width="0.1524" layer="91"/>
 <pinref part="C3" gate="G$1" pin="1"/>
 <pinref part="R6" gate="G$1" pin="2"/>
 <wire x1="160.02" y1="2.54" x2="162.56" y2="2.54" width="0.1524" layer="91"/>
 <junction x="160.02" y="2.54"/>
-<pinref part="AUDIO-IN" gate="G$1" pin="1"/>
-<pinref part="AUDIO-IN" gate="G$1" pin="3"/>
+<pinref part="AUDIO-IN" gate="-1" pin="S"/>
 </segment>
 </net>
 <net name="GND" class="0">
 <segment>
-<wire x1="152.4" y1="-5.08" x2="149.86" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="-2.54" x2="149.86" y2="-2.54" width="0.1524" layer="91"/>
 <pinref part="SUPPLY1" gate="GND" pin="GND"/>
-<pinref part="AUDIO-IN" gate="G$1" pin="2"/>
+<pinref part="AUDIO-IN" gate="-2" pin="S"/>
 </segment>
 <segment>
 <pinref part="SUPPLY2" gate="GND" pin="GND"/>
@@ -24715,9 +24626,9 @@ Keep A10 low so always using same half.</text>
 <pinref part="R5" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<wire x1="284.48" y1="45.72" x2="281.94" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="284.48" y1="53.34" x2="281.94" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="SUPPLY4" gate="GND" pin="GND"/>
-<pinref part="VIDEO-OUT" gate="G$1" pin="S"/>
+<pinref part="COMPOSITE-OUT" gate="-2" pin="S"/>
 </segment>
 <segment>
 <wire x1="195.58" y1="-2.54" x2="187.96" y2="-2.54" width="0.1524" layer="91"/>
@@ -24778,14 +24689,12 @@ Keep A10 low so always using same half.</text>
 <wire x1="68.58" y1="-279.4" x2="71.12" y2="-279.4" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="-279.4" x2="71.12" y2="-281.94" width="0.1524" layer="91"/>
 <pinref part="SUPPLY16" gate="GND" pin="GND"/>
-<pinref part="POWER-9V-DC-IN" gate="G$1" pin="2"/>
+<pinref part="POWER-IN-9V-DC" gate="-2" pin="S"/>
 </segment>
 <segment>
-<wire x1="172.72" y1="-175.26" x2="165.1" y2="-175.26" width="0.1524" layer="91"/>
+<wire x1="172.72" y1="-175.26" x2="170.18" y2="-175.26" width="0.1524" layer="91"/>
 <pinref part="SUPPLY18" gate="GND" pin="GND"/>
-<wire x1="165.1" y1="-175.26" x2="162.56" y2="-175.26" width="0.1524" layer="91"/>
-<junction x="165.1" y="-175.26"/>
-<pinref part="AUDIO-OUT" gate="G$1" pin="2"/>
+<pinref part="AUDIO-OUT" gate="-2" pin="S"/>
 </segment>
 <segment>
 <pinref part="Q3" gate="G$1" pin="E"/>
@@ -24987,8 +24896,8 @@ Keep A10 low so always using same half.</text>
 <pinref part="D1" gate="G$1" pin="A"/>
 <wire x1="266.7" y1="45.72" x2="266.7" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="266.7" y1="48.26" x2="284.48" y2="48.26" width="0.1524" layer="91"/>
-<label x="279.4" y="48.26" size="1.778" layer="95" rot="R90" xref="yes"/>
-<pinref part="VIDEO-OUT" gate="G$1" pin="T"/>
+<label x="274.32" y="48.26" size="1.778" layer="95" rot="R90" xref="yes"/>
+<pinref part="COMPOSITE-OUT" gate="-1" pin="S"/>
 </segment>
 <segment>
 <pinref part="E2" gate="G$1" pin="VIDEO"/>
@@ -25042,9 +24951,9 @@ Keep A10 low so always using same half.</text>
 </net>
 <net name="/RD" class="0">
 <segment>
-<pinref part="Z26" gate="C" pin="I1"/>
 <wire x1="35.56" y1="-231.14" x2="33.02" y2="-231.14" width="0.1524" layer="91"/>
 <label x="33.02" y="-231.14" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="Z24" gate="B" pin="I1"/>
 </segment>
 <segment>
 <wire x1="-134.62" y1="-241.3" x2="-132.08" y2="-241.3" width="0.1524" layer="91"/>
@@ -25133,20 +25042,19 @@ Keep A10 low so always using same half.</text>
 </net>
 <net name="N$31" class="0">
 <segment>
-<pinref part="Z25" gate="C" pin="I0"/>
 <wire x1="35.56" y1="-200.66" x2="22.86" y2="-200.66" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="-200.66" x2="22.86" y2="-213.36" width="0.1524" layer="91"/>
-<pinref part="Z26" gate="C" pin="I0"/>
 <wire x1="22.86" y1="-213.36" x2="22.86" y2="-226.06" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="-226.06" x2="35.56" y2="-226.06" width="0.1524" layer="91"/>
 <pinref part="Z26" gate="B" pin="O"/>
 <wire x1="17.78" y1="-213.36" x2="22.86" y2="-213.36" width="0.1524" layer="91"/>
 <junction x="22.86" y="-213.36"/>
+<pinref part="Z24" gate="A" pin="I0"/>
+<pinref part="Z24" gate="B" pin="I0"/>
 </segment>
 </net>
 <net name="N$35" class="0">
 <segment>
-<pinref part="Z25" gate="C" pin="O"/>
 <wire x1="50.8" y1="-203.2" x2="81.28" y2="-203.2" width="0.1524" layer="91"/>
 <pinref part="Z24" gate="C" pin="I0"/>
 <wire x1="81.28" y1="-203.2" x2="88.9" y2="-203.2" width="0.1524" layer="91"/>
@@ -25154,6 +25062,7 @@ Keep A10 low so always using same half.</text>
 <junction x="81.28" y="-203.2"/>
 <pinref part="Z27" gate="A" pin="CLK"/>
 <wire x1="81.28" y1="-187.96" x2="96.52" y2="-187.96" width="0.1524" layer="91"/>
+<pinref part="Z24" gate="A" pin="O"/>
 </segment>
 </net>
 <net name="N$34" class="0">
@@ -25179,13 +25088,6 @@ Keep A10 low so always using same half.</text>
 <pinref part="R2" gate="G$1" pin="2"/>
 <wire x1="109.22" y1="-226.06" x2="127" y2="-226.06" width="0.1524" layer="91"/>
 <junction x="109.22" y="-226.06"/>
-</segment>
-</net>
-<net name="N$39" class="0">
-<segment>
-<pinref part="Z24" gate="D" pin="I1"/>
-<wire x1="76.2" y1="-228.6" x2="88.9" y2="-228.6" width="0.1524" layer="91"/>
-<pinref part="IC2" gate="C" pin="O"/>
 </segment>
 </net>
 <net name="N$40" class="0">
@@ -25214,13 +25116,10 @@ Keep A10 low so always using same half.</text>
 <pinref part="C6" gate="G$1" pin="2"/>
 <wire x1="144.78" y1="-180.34" x2="152.4" y2="-180.34" width="0.1524" layer="91"/>
 <wire x1="152.4" y1="-180.34" x2="172.72" y2="-180.34" width="0.1524" layer="91"/>
-<wire x1="172.72" y1="-182.88" x2="172.72" y2="-180.34" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="2"/>
 <wire x1="152.4" y1="-180.34" x2="152.4" y2="-195.58" width="0.1524" layer="91"/>
 <junction x="152.4" y="-180.34"/>
-<pinref part="AUDIO-OUT" gate="G$1" pin="1"/>
-<pinref part="AUDIO-OUT" gate="G$1" pin="3"/>
-<junction x="172.72" y="-180.34"/>
+<pinref part="AUDIO-OUT" gate="-1" pin="S"/>
 </segment>
 </net>
 <net name="N$44" class="0">
@@ -25772,30 +25671,26 @@ Keep A10 low so always using same half.</text>
 </net>
 <net name="N$65" class="0">
 <segment>
-<wire x1="68.58" y1="-274.32" x2="78.74" y2="-274.32" width="0.1524" layer="91"/>
 <pinref part="C9" gate="G$1" pin="+"/>
 <wire x1="78.74" y1="-274.32" x2="88.9" y2="-274.32" width="0.1524" layer="91"/>
-<junction x="78.74" y="-274.32"/>
 <pinref part="L1" gate="G$1" pin="1"/>
 <pinref part="C10" gate="G$1" pin="2"/>
 <wire x1="88.9" y1="-274.32" x2="99.06" y2="-274.32" width="0.1524" layer="91"/>
 <junction x="88.9" y="-274.32"/>
-<pinref part="POWER-9V-DC-IN" gate="G$1" pin="3"/>
-<pinref part="POWER-9V-DC-IN" gate="G$1" pin="1"/>
-<wire x1="68.58" y1="-274.32" x2="68.58" y2="-271.78" width="0.1524" layer="91"/>
-<junction x="68.58" y="-274.32"/>
+<pinref part="POWER-IN-9V-DC" gate="-1" pin="S"/>
+<wire x1="78.74" y1="-274.32" x2="68.58" y2="-274.32" width="0.1524" layer="91"/>
+<junction x="78.74" y="-274.32"/>
 </segment>
 </net>
 <net name="N$29" class="0">
 <segment>
-<pinref part="Z26" gate="C" pin="O"/>
-<wire x1="50.8" y1="-228.6" x2="53.34" y2="-228.6" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="-228.6" x2="55.88" y2="-228.6" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="-228.6" x2="53.34" y2="-243.84" width="0.1524" layer="91"/>
-<junction x="53.34" y="-228.6"/>
-<pinref part="IC2" gate="C" pin="I"/>
 <wire x1="53.34" y1="-243.84" x2="-38.1" y2="-243.84" width="0.1524" layer="91"/>
 <pinref part="Z14" gate="A" pin="2G"/>
+<pinref part="IC2" gate="C" pin="O"/>
+<wire x1="66.04" y1="-248.92" x2="58.42" y2="-248.92" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="-248.92" x2="55.88" y2="-248.92" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="-248.92" x2="55.88" y2="-243.84" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="-243.84" x2="53.34" y2="-243.84" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -26219,7 +26114,6 @@ Keep A10 low so always using same half.</text>
 </net>
 <net name="CST4KV" class="0">
 <segment>
-<pinref part="Z24" gate="A" pin="I1"/>
 <wire x1="-12.7" y1="30.48" x2="266.7" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="-12.7" y1="30.48" x2="-12.7" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="-12.7" y1="20.32" x2="0" y2="20.32" width="0.1524" layer="91"/>
@@ -26227,10 +26121,11 @@ Keep A10 low so always using same half.</text>
 <wire x1="266.7" y1="-104.14" x2="276.86" y2="-104.14" width="0.1524" layer="91"/>
 <wire x1="-12.7" y1="30.48" x2="-12.7" y2="33.02" width="0.1524" layer="91"/>
 <junction x="-12.7" y="30.48"/>
-<pinref part="Z24" gate="B" pin="O"/>
 <wire x1="-12.7" y1="33.02" x2="-15.24" y2="33.02" width="0.1524" layer="91"/>
 <label x="63.5" y="30.48" size="1.778" layer="95" rot="R90" xref="yes"/>
 <pinref part="Z7-8" gate="G$1" pin="!CS"/>
+<pinref part="Z25" gate="C" pin="O"/>
+<pinref part="Z26" gate="C" pin="I1"/>
 </segment>
 </net>
 <net name="N$90" class="0">
@@ -26333,7 +26228,6 @@ Keep A10 low so always using same half.</text>
 <junction x="-55.88" y="25.4"/>
 <wire x1="-55.88" y1="25.4" x2="-55.88" y2="12.7" width="0.1524" layer="91"/>
 <wire x1="-55.88" y1="35.56" x2="-55.88" y2="25.4" width="0.1524" layer="91"/>
-<pinref part="Z24" gate="B" pin="I0"/>
 <wire x1="-30.48" y1="35.56" x2="-55.88" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="-55.88" y1="7.62" x2="40.64" y2="7.62" width="0.1524" layer="91"/>
 <pinref part="D11" gate="G$1" pin="C"/>
@@ -26353,12 +26247,13 @@ Keep A10 low so always using same half.</text>
 <wire x1="63.5" y1="-88.9" x2="60.96" y2="-88.9" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="7.62" x2="40.64" y2="-88.9" width="0.1524" layer="91"/>
 <junction x="40.64" y="-88.9"/>
-<pinref part="Z24" gate="A" pin="I0"/>
 <wire x1="-55.88" y1="25.4" x2="0" y2="25.4" width="0.1524" layer="91"/>
 <pinref part="Z15" gate="A" pin="1G"/>
 <pinref part="Z15" gate="A" pin="2G"/>
 <pinref part="Z16" gate="A" pin="1G"/>
 <pinref part="Z16" gate="A" pin="2A2"/>
+<pinref part="Z25" gate="C" pin="I0"/>
+<pinref part="Z26" gate="C" pin="I0"/>
 </segment>
 </net>
 <net name="/BUSRQ" class="0">
@@ -26416,8 +26311,6 @@ Keep A10 low so always using same half.</text>
 <wire x1="116.84" y1="-274.32" x2="124.46" y2="-274.32" width="0.1524" layer="91"/>
 <junction x="116.84" y="-274.32"/>
 <pinref part="IC1" gate="A1" pin="VI"/>
-<wire x1="124.46" y1="-274.32" x2="127" y2="-274.32" width="0.1524" layer="91"/>
-<junction x="124.46" y="-274.32"/>
 <wire x1="116.84" y1="-274.32" x2="116.84" y2="-271.78" width="0.1524" layer="91"/>
 <label x="116.84" y="-271.78" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
@@ -26536,7 +26429,6 @@ Keep A10 low so always using same half.</text>
 </net>
 <net name="N$9" class="0">
 <segment>
-<wire x1="116.84" y1="-25.4" x2="119.38" y2="-25.4" width="0.1524" layer="91"/>
 <wire x1="119.38" y1="-25.4" x2="129.54" y2="-25.4" width="0.1524" layer="91"/>
 <wire x1="129.54" y1="-25.4" x2="129.54" y2="-43.18" width="0.1524" layer="91"/>
 <wire x1="129.54" y1="-43.18" x2="154.94" y2="-43.18" width="0.1524" layer="91"/>
@@ -26549,7 +26441,6 @@ Keep A10 low so always using same half.</text>
 <wire x1="276.86" y1="-99.06" x2="269.24" y2="-99.06" width="0.1524" layer="91"/>
 <wire x1="269.24" y1="-99.06" x2="269.24" y2="-43.18" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="B" pin="O"/>
-<junction x="119.38" y="-25.4"/>
 </segment>
 </net>
 <net name="N$16" class="0">
@@ -26660,9 +26551,23 @@ Keep A10 low so always using same half.</text>
 <pinref part="IC2" gate="A" pin="O"/>
 </segment>
 </net>
-<net name="N$72" class="0">
+<net name="N$39" class="0">
 <segment>
-<wire x1="-170.18" y1="0" x2="-172.72" y2="0" width="0.1524" layer="91"/>
+<pinref part="Z24" gate="B" pin="O"/>
+<wire x1="50.8" y1="-228.6" x2="53.34" y2="-228.6" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="C" pin="I"/>
+<wire x1="53.34" y1="-228.6" x2="66.04" y2="-228.6" width="0.1524" layer="91"/>
+<pinref part="Z24" gate="D" pin="I1"/>
+<wire x1="88.9" y1="-228.6" x2="66.04" y2="-228.6" width="0.1524" layer="91"/>
+<junction x="66.04" y="-228.6"/>
+</segment>
+</net>
+<net name="N$83" class="0">
+<segment>
+<wire x1="15.24" y1="22.86" x2="17.78" y2="22.86" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="F" pin="I"/>
+<wire x1="17.78" y1="22.86" x2="20.32" y2="22.86" width="0.1524" layer="91"/>
+<pinref part="Z26" gate="C" pin="O"/>
 </segment>
 </net>
 </nets>
