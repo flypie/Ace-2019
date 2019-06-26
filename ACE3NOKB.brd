@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.4.1">
+<eagle version="9.4.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2862,7 +2862,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="148.209" y="74.803" size="1.27" layer="25" ratio="10"/>
 <attribute name="VALUE" x="148.209" y="71.247" size="1.27" layer="27" ratio="10"/>
 </element>
-<element name="Z3-1" library="AS6C1008-55PCN" package="DIP254P1524X393-32" value="AS6C1008-55PCN" x="46.99" y="57.15" smashed="yes">
+<element name="Z3-4" library="AS6C1008-55PCN" package="DIP254P1524X393-32" value="AS6C1008-55PCN" x="46.99" y="57.15" smashed="yes">
 <attribute name="DESCRIPTION" value="CMOS SRAM" x="22.86" y="97.79" size="1.778" layer="27" display="off"/>
 <attribute name="HEIGHT" value="mm" x="22.86" y="97.79" size="1.778" layer="27" display="off"/>
 <attribute name="MANUFACTURER_NAME" value="Alliance Memory" x="22.86" y="97.79" size="1.778" layer="27" display="off"/>
@@ -3046,7 +3046,7 @@ design rules under a new name.</description>
 <contactref element="COMPOSITE" pad="2"/>
 <contactref element="AUDIO-IN" pad="2"/>
 <contactref element="AUDIO-OUT" pad="1"/>
-<contactref element="Z3-1" pad="2"/>
+<contactref element="Z3-4" pad="2"/>
 <wire x1="142.24" y1="88.9" x2="145.78" y2="96.52" width="0" layer="19" extent="1-1"/>
 <wire x1="134.89" y1="96.52" x2="142.24" y2="88.9" width="0" layer="19" extent="1-1"/>
 <wire x1="124.46" y1="95.25" x2="134.89" y2="96.52" width="0" layer="19" extent="1-1"/>
@@ -3179,7 +3179,7 @@ design rules under a new name.</description>
 <contactref element="Z0" pad="22"/>
 <contactref element="BUSOUT" pad="30"/>
 <contactref element="BUSOUT" pad="1"/>
-<contactref element="Z3-1" pad="29"/>
+<contactref element="Z3-4" pad="29"/>
 <wire x1="46.99" y1="87.63" x2="73.66" y2="77.47" width="0" layer="19" extent="1-1"/>
 <wire x1="58.42" y1="53.34" x2="73.66" y2="77.47" width="0" layer="19" extent="1-1"/>
 <wire x1="27.94" y1="50.8" x2="58.42" y2="53.34" width="0" layer="19" extent="1-1"/>
@@ -3317,7 +3317,7 @@ design rules under a new name.</description>
 <contactref element="Z24" pad="6"/>
 <contactref element="Z0" pad="21"/>
 <contactref element="BUSOUT" pad="32"/>
-<contactref element="Z3-1" pad="24"/>
+<contactref element="Z3-4" pad="24"/>
 <wire x1="46.99" y1="74.93" x2="81.28" y2="77.47" width="0" layer="19" extent="1-1"/>
 <wire x1="27.94" y1="48.26" x2="46.99" y2="74.93" width="0" layer="19" extent="1-1"/>
 <wire x1="5.08" y1="55.88" x2="27.94" y2="48.26" width="0" layer="19" extent="1-1"/>
@@ -3508,6 +3508,8 @@ design rules under a new name.</description>
 <signal name="N$29">
 <contactref element="Z14" pad="15"/>
 <contactref element="IC2" pad="6"/>
+<contactref element="Z14" pad="1"/>
+<wire x1="104.14" y1="21.59" x2="106.68" y2="29.21" width="0" layer="19" extent="1-1"/>
 <wire x1="111.76" y1="10.16" x2="104.14" y2="21.59" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$4">
@@ -4307,79 +4309,79 @@ design rules under a new name.</description>
 <wire x1="12.7" y1="78.74" x2="2.54" y2="68.58" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="ADDRESS0">
-<contactref element="Z3-1" pad="12"/>
+<contactref element="Z3-4" pad="12"/>
 </signal>
 <signal name="ADDRESS1">
-<contactref element="Z3-1" pad="11"/>
+<contactref element="Z3-4" pad="11"/>
 </signal>
 <signal name="ADDRESS2">
-<contactref element="Z3-1" pad="10"/>
+<contactref element="Z3-4" pad="10"/>
 </signal>
 <signal name="ADDRESS3">
-<contactref element="Z3-1" pad="9"/>
+<contactref element="Z3-4" pad="9"/>
 </signal>
 <signal name="ADDRESS4">
-<contactref element="Z3-1" pad="8"/>
+<contactref element="Z3-4" pad="8"/>
 </signal>
 <signal name="ADDRESS5">
-<contactref element="Z3-1" pad="7"/>
+<contactref element="Z3-4" pad="7"/>
 </signal>
 <signal name="ADDRESS6">
-<contactref element="Z3-1" pad="6"/>
+<contactref element="Z3-4" pad="6"/>
 </signal>
 <signal name="ADDRESS7">
-<contactref element="Z3-1" pad="5"/>
+<contactref element="Z3-4" pad="5"/>
 </signal>
 <signal name="ADDRESS8">
-<contactref element="Z3-1" pad="27"/>
+<contactref element="Z3-4" pad="27"/>
 </signal>
 <signal name="ADDRESS9">
-<contactref element="Z3-1" pad="26"/>
+<contactref element="Z3-4" pad="26"/>
 </signal>
 <signal name="ADDRESS10">
-<contactref element="Z3-1" pad="23"/>
+<contactref element="Z3-4" pad="23"/>
 </signal>
 <signal name="ADDRESS11">
-<contactref element="Z3-1" pad="25"/>
+<contactref element="Z3-4" pad="25"/>
 </signal>
 <signal name="ADDRESS12">
-<contactref element="Z3-1" pad="4"/>
+<contactref element="Z3-4" pad="4"/>
 </signal>
 <signal name="ADDRESS13">
-<contactref element="Z3-1" pad="28"/>
+<contactref element="Z3-4" pad="28"/>
 </signal>
 <signal name="ADDRESS14">
-<contactref element="Z3-1" pad="3"/>
+<contactref element="Z3-4" pad="3"/>
 </signal>
 <signal name="ADDRESS15">
-<contactref element="Z3-1" pad="31"/>
+<contactref element="Z3-4" pad="31"/>
 </signal>
 <signal name="DATA0">
-<contactref element="Z3-1" pad="13"/>
+<contactref element="Z3-4" pad="13"/>
 </signal>
 <signal name="DATA1">
-<contactref element="Z3-1" pad="14"/>
+<contactref element="Z3-4" pad="14"/>
 </signal>
 <signal name="DATA2">
-<contactref element="Z3-1" pad="15"/>
+<contactref element="Z3-4" pad="15"/>
 </signal>
 <signal name="DATA3">
-<contactref element="Z3-1" pad="17"/>
+<contactref element="Z3-4" pad="17"/>
 </signal>
 <signal name="DATA4">
-<contactref element="Z3-1" pad="18"/>
+<contactref element="Z3-4" pad="18"/>
 </signal>
 <signal name="DATA5">
-<contactref element="Z3-1" pad="19"/>
+<contactref element="Z3-4" pad="19"/>
 </signal>
 <signal name="DATA6">
-<contactref element="Z3-1" pad="20"/>
+<contactref element="Z3-4" pad="20"/>
 </signal>
 <signal name="DATA7">
-<contactref element="Z3-1" pad="21"/>
+<contactref element="Z3-4" pad="21"/>
 </signal>
 <signal name="N$87">
-<contactref element="Z3-1" pad="22"/>
+<contactref element="Z3-4" pad="22"/>
 <contactref element="Z50" pad="8"/>
 <contactref element="Z19" pad="12"/>
 <contactref element="Z19" pad="13"/>
@@ -4388,7 +4390,7 @@ design rules under a new name.</description>
 <wire x1="26.67" y1="29.21" x2="55.88" y2="25.4" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$88">
-<contactref element="Z3-1" pad="30"/>
+<contactref element="Z3-4" pad="30"/>
 <contactref element="Z19" pad="11"/>
 <wire x1="60.96" y1="25.4" x2="46.99" y2="90.17" width="0" layer="19" extent="1-1"/>
 </signal>

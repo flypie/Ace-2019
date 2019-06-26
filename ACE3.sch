@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.4.1">
+<eagle version="9.4.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -28187,6 +28187,9 @@ Keep A10 low so always using same half.</text>
 <wire x1="58.42" y1="-248.92" x2="55.88" y2="-248.92" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="-248.92" x2="55.88" y2="-243.84" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="-243.84" x2="53.34" y2="-243.84" width="0.1524" layer="91"/>
+<pinref part="Z14" gate="A" pin="1G"/>
+<wire x1="-40.64" y1="-243.84" x2="-38.1" y2="-243.84" width="0.1524" layer="91"/>
+<junction x="-38.1" y="-243.84"/>
 </segment>
 </net>
 <net name="N$4" class="0">
