@@ -1112,6 +1112,41 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# Diode_BAT54W
+#
+DEF Diode_BAT54W D 0 40 Y N 1 F N
+F0 "D" 0 100 50 H V C CNN
+F1 "Diode_BAT54W" 0 -100 50 H V C CNN
+F2 "Package_TO_SOT_SMD:SOT-323_SC-70" 0 -175 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ SOT?323*
+$ENDFPLIST
+DRAW
+P 2 0 1 0 50 0 -50 0 N
+P 4 0 1 8 50 50 50 -50 -50 0 50 50 N
+P 6 0 1 8 -75 25 -75 50 -50 50 -50 -50 -25 -50 -25 -25 N
+X A 1 150 0 100 L 50 50 1 1 P
+X NC 2 0 0 100 U 50 50 1 1 N N
+X K 3 -150 0 100 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Mechanical_MountingHole
+#
+DEF Mechanical_MountingHole H 0 40 Y Y 1 F N
+F0 "H" 0 200 50 H V C CNN
+F1 "Mechanical_MountingHole" 0 125 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ MountingHole*
+$ENDFPLIST
+DRAW
+C 0 0 50 0 1 50 N
+ENDDRAW
+ENDDEF
+#
 # Memory_EPROM_27C512PLCC
 #
 DEF Memory_EPROM_27C512PLCC U 0 20 Y Y 1 F N
@@ -1203,6 +1238,40 @@ X A6 6 -500 300 100 R 50 50 1 1 I
 X A5 7 -500 400 100 R 50 50 1 1 I
 X A4 8 -500 500 100 R 50 50 1 1 I
 X A3 9 -500 600 100 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# PJ-036C_PJ-036C
+#
+DEF PJ-036C_PJ-036C J 0 40 Y N 1 F N
+F0 "J" -300 200 50 H V L BNN
+F1 "PJ-036C_PJ-036C" -300 -200 50 H V L BNN
+F2 "CUI_PJ-036C:CUI_PJ-036C" 400 400 50 H I L BNN
+F3 "" 300 550 50 H I L BNN
+F4 "https://www.digikey.co.uk/product-detail/en/cui-inc/PJ-036C/CP-036C-ND/1644541?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol" -200 700 50 H I L BNN
+F5 "CUI Inc." 550 0 50 H I L BNN
+F6 "PJ-036C" 550 0 50 H I L BNN
+F7 "1.0 x 3.8 mm, 2.0 A, Horizontal, Through Hole, Dc Power Jack Connector" -200 700 50 H I L BNN
+F8 "CP-036C-ND" 400 400 50 H I L BNN
+F9 "https://www.cui.com/product/interconnect/connectors/dc-power-connectors/jacks/pj-036c?utm_source=snapeda.com&utm_medium=referral&utm_campaign=snapedaBOM" -200 700 50 H I L BNN
+DRAW
+A -225 100 50 899 -900 0 0 6 N -225 50 -225 150
+P 2 0 0 6 -225 150 -50 150 N
+P 2 0 0 6 -150 -50 -175 -100 N
+P 2 0 0 6 -125 -100 -150 -50 N
+P 2 0 0 6 -50 25 0 25 N
+P 2 0 0 6 -50 50 -225 50 N
+P 2 0 0 6 -50 50 -50 25 N
+P 2 0 0 6 -50 150 -50 50 N
+P 2 0 0 6 -50 175 -50 150 N
+P 2 0 0 6 0 -100 -125 -100 N
+P 2 0 0 6 0 0 0 -100 N
+P 2 0 0 6 0 25 0 175 N
+P 2 0 0 6 0 175 -50 175 N
+P 3 0 0 6 0 -100 -20 -50 20 -50 F
+X 1 1 200 100 200 L 40 40 0 0 P
+X 2 2 200 -100 200 L 40 40 0 0 P
+X 3 3 200 0 200 L 40 40 0 0 P
 ENDDRAW
 ENDDEF
 #
