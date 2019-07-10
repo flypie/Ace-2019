@@ -1,0 +1,11 @@
+*.bak
+*.kicad_pcb-bak
+*.ses
+*.dsn
+*.bin
+*.rules
+fp-info-cache
+gui_defaults.par
+*.sch-bak
+
+
