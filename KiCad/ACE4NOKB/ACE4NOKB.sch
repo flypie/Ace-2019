@@ -774,241 +774,10 @@ Wire Wire Line
 	4690 14205 4790 14205
 Wire Wire Line
 	4790 14105 4690 14105
-$Comp
-L Connector_Generic:Conn_02x08_Odd_Even KEYBOARD1
-U 1 1 5E446247
-P 4990 14405
-F 0 "KEYBOARD1" H 5050 14960 50  0000 C CNN
-F 1 "Conn_02x08_Odd_Even" H 5050 14860 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical" H 4990 14405 50  0001 C CNN
-F 3 "~" H 4990 14405 50  0001 C CNN
-	1    4990 14405
-	1    0    0    -1  
-$EndComp
-$Comp
-L Diode:1N4148 D3
-U 1 1 5D5FB160
-P 4540 14805
-F 0 "D3" V 4460 14755 50  0000 L CNN
-F 1 "1N4148" V 4540 14890 50  0001 L CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 4540 14630 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4540 14805 50  0001 C CNN
-	1    4540 14805
-	1    0    0    -1  
-$EndComp
-$Comp
-L Diode:1N4148 D4
-U 1 1 5DC720AB
-P 4540 14705
-F 0 "D4" V 4460 14655 50  0000 L CNN
-F 1 "1N4148" V 4540 14790 50  0001 L CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 4540 14530 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4540 14705 50  0001 C CNN
-	1    4540 14705
-	1    0    0    -1  
-$EndComp
-$Comp
-L Diode:1N4148 D5
-U 1 1 5DC77A9B
-P 4540 14605
-F 0 "D5" V 4460 14555 50  0000 L CNN
-F 1 "1N4148" V 4540 14690 50  0001 L CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 4540 14430 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4540 14605 50  0001 C CNN
-	1    4540 14605
-	1    0    0    -1  
-$EndComp
-$Comp
-L Diode:1N4148 D6
-U 1 1 5DC7D8C5
-P 4540 14505
-F 0 "D6" V 4460 14455 50  0000 L CNN
-F 1 "1N4148" V 4540 14590 50  0001 L CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 4540 14330 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4540 14505 50  0001 C CNN
-	1    4540 14505
-	1    0    0    -1  
-$EndComp
-$Comp
-L Diode:1N4148 D7
-U 1 1 5DC85D2A
-P 4540 14405
-F 0 "D7" V 4460 14355 50  0000 L CNN
-F 1 "1N4148" V 4540 14490 50  0001 L CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 4540 14230 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4540 14405 50  0001 C CNN
-	1    4540 14405
-	1    0    0    -1  
-$EndComp
-$Comp
-L Diode:1N4148 D8
-U 1 1 5DC8B9CE
-P 4540 14305
-F 0 "D8" V 4460 14255 50  0000 L CNN
-F 1 "1N4148" V 4540 14390 50  0001 L CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 4540 14130 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4540 14305 50  0001 C CNN
-	1    4540 14305
-	1    0    0    -1  
-$EndComp
-$Comp
-L Diode:1N4148 D9
-U 1 1 5DC916E7
-P 4540 14205
-F 0 "D9" V 4460 14155 50  0000 L CNN
-F 1 "1N4148" V 4540 14290 50  0001 L CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 4540 14030 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4540 14205 50  0001 C CNN
-	1    4540 14205
-	1    0    0    -1  
-$EndComp
-$Comp
-L Diode:1N4148 D10
-U 1 1 5DC974AA
-P 4540 14105
-F 0 "D10" V 4460 14055 50  0000 L CNN
-F 1 "1N4148" V 4540 14190 50  0001 L CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 4540 13930 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4540 14105 50  0001 C CNN
-	1    4540 14105
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R3
-U 1 1 64FC636C
-P 18050 2000
-F 0 "R3" H 17900 2059 59  0000 L BNN
-F 1 "1K5" H 17900 1870 59  0000 L BNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 18050 2000 50  0001 C CNN
-F 3 "" H 18050 2000 50  0001 C CNN
-	1    18050 2000
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R4
-U 1 1 7E68E8B0
-P 18500 1745
-F 0 "R4" H 18350 1804 59  0000 L BNN
-F 1 "1K5" H 18350 1615 59  0000 L BNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 18500 1745 50  0001 C CNN
-F 3 "" H 18500 1745 50  0001 C CNN
-	1    18500 1745
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R25
-U 1 1 E4DB1434
-P 1100 7850
-F 0 "R25" H 950 7909 59  0000 L BNN
-F 1 "220k" H 950 7720 59  0000 L BNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 1100 7850 50  0001 C CNN
-F 3 "" H 1100 7850 50  0001 C CNN
-	1    1100 7850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R8
-U 1 1 87952652
-P 1700 9350
-F 0 "R8" H 1550 9409 59  0000 L BNN
-F 1 "270R" H 1550 9220 59  0000 L BNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 1700 9350 50  0001 C CNN
-F 3 "" H 1700 9350 50  0001 C CNN
-	1    1700 9350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R7
-U 1 1 D7606CCB
-P 1250 10000
-F 0 "R7" H 1100 10059 59  0000 L BNN
-F 1 "1k0" H 1100 9870 59  0000 L BNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" H 1250 10000 50  0001 C CNN
-F 3 "" H 1250 10000 50  0001 C CNN
-	1    1250 10000
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:C C4
-U 1 1 72465CF6
-P 1250 9700
-F 0 "C4" H 1310 9815 59  0000 L BNN
-F 1 "42p" H 1310 9515 59  0000 L BNN
-F 2 "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm" H 1250 9700 50  0001 C CNN
-F 3 "" H 1250 9700 50  0001 C CNN
-	1    1250 9700
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R10
-U 1 1 C0B20218
-P 13810 10990
-F 0 "R10" H 13660 11049 59  0000 L BNN
-F 1 "10k" H 13660 10860 59  0000 L BNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 13810 10990 50  0001 C CNN
-F 3 "" H 13810 10990 50  0001 C CNN
-	1    13810 10990
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R2
-U 1 1 C32E0CEB
-P 13810 12790
-F 0 "R2" H 13660 12849 59  0000 L BNN
-F 1 "12k" H 13660 12660 59  0000 L BNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 13810 12790 50  0001 C CNN
-F 3 "" H 13810 12790 50  0001 C CNN
-	1    13810 12790
-	0    1    1    0   
-$EndComp
-$Comp
-L Diode:1N4148 D2
-U 1 1 5DDACDE3
-P 14960 11740
-F 0 "D2" V 14880 11690 50  0000 L CNN
-F 1 "1N4148" V 14960 11825 50  0001 L CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 14960 11565 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 14960 11740 50  0001 C CNN
-	1    14960 11740
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:CP C9
-U 1 1 5EDD7FFE
-P 4860 16020
-F 0 "C9" H 4735 15955 50  0000 R CNN
-F 1 "100uf" H 4735 16055 50  0000 R CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 4898 15870 50  0001 C CNN
-F 3 "~" H 4860 16020 50  0001 C CNN
-	1    4860 16020
-	1    0    0    1   
-$EndComp
-$Comp
-L Device:CP C7
-U 1 1 5F101BF8
-P 1100 8355
-F 0 "C7" H 950 8410 50  0000 R CNN
-F 1 "1uf" H 950 8310 50  0000 R CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 1138 8205 50  0001 C CNN
-F 3 "~" H 1100 8355 50  0001 C CNN
-	1    1100 8355
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5290 14105 5600 14105
 Wire Wire Line
 	5290 14405 5900 14405
-$Comp
-L Connector_Generic:Conn_02x25_Odd_Even Z80CPUOUT1
-U 1 1 612D2D50
-P 1875 12840
-F 0 "Z80CPUOUT1" H 1950 14280 50  0000 C CNN
-F 1 "Conn_02x25_Odd_Even" H 1950 14180 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x25_P2.54mm_Vertical" H 1875 12840 50  0001 C CNN
-F 3 "~" H 1875 12840 50  0001 C CNN
-	1    1875 12840
-	1    0    0    -1  
-$EndComp
 Text Label 2275 11840 0    70   ~ 0
 DA0
 Wire Wire Line
@@ -1091,74 +860,8 @@ Text Label 2275 12840 0    70   ~ 0
 /WAIT
 Wire Wire Line
 	2175 12840 2275 12840
-$Comp
-L 74xx:74LS02 Z24
-U 2 1 620E3DB8
-P 10360 12890
-F 0 "Z24" H 10360 13240 50  0000 C CNN
-F 1 "74HCT02" H 10360 13140 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 10360 12890 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 10360 12890 50  0001 C CNN
-	2    10360 12890
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS02 Z24
-U 3 1 620EA48A
-P 12460 11990
-F 0 "Z24" H 12460 12340 50  0000 C CNN
-F 1 "74HCT02" H 12460 12240 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 12460 11990 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 12460 11990 50  0001 C CNN
-	3    12460 11990
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS02 Z24
-U 4 1 620F1165
-P 12460 12790
-F 0 "Z24" H 12460 13140 50  0000 C CNN
-F 1 "74HCT02" H 12460 13040 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 12460 12790 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 12460 12790 50  0001 C CNN
-	4    12460 12790
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	10060 11990 9960 11990
-$Comp
-L 74xx:74LS02 Z24
-U 1 1 620DC700
-P 10360 11890
-F 0 "Z24" H 10360 12240 50  0000 C CNN
-F 1 "74HCT02" H 10360 12140 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 10360 11890 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 10360 11890 50  0001 C CNN
-	1    10360 11890
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS21 Z101
-U 1 1 637166EE
-P 5600 5650
-F 0 "Z101" H 5620 6040 50  0000 C CNN
-F 1 "74HCT21" H 5620 5940 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 5600 5650 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS21" H 5600 5650 50  0001 C CNN
-	1    5600 5650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Transistor_BJT:2N3904 Q1
-U 1 1 5D24EA39
-P 19865 9265
-F 0 "Q1" H 19670 9175 50  0000 L CNN
-F 1 "2N3904" H 19655 9410 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 20065 9190 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 19865 9265 50  0001 L CNN
-	1    19865 9265
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	19165 9065 19165 9265
 Wire Wire Line
@@ -1289,83 +992,6 @@ Text Label 6530 9780 0    70   ~ 0
 DA6
 Wire Wire Line
 	6430 9780 6530 9780
-$Comp
-L 74xx:74LS393 Z9
-U 1 1 5E377223
-P 17600 11200
-F 0 "Z9" H 17635 11625 50  0000 C CNN
-F 1 "74HCT393" H 17635 11525 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 17600 11200 50  0001 C CNN
-F 3 "74xx\\74LS393.pdf" H 17600 11200 50  0001 C CNN
-	1    17600 11200
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS393 Z9
-U 3 1 5E382F4F
-P 12945 15995
-F 0 "Z9" H 13175 16085 50  0000 L CNN
-F 1 "74HCT393" H 13175 15985 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 12945 15995 50  0001 C CNN
-F 3 "74xx\\74LS393.pdf" H 12945 15995 50  0001 C CNN
-	3    12945 15995
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS393 Z10
-U 1 1 5D197891
-P 17600 13000
-F 0 "Z10" H 17635 13425 50  0000 C CNN
-F 1 "74HCT393" H 17635 13325 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 17600 13000 50  0001 C CNN
-F 3 "74xx\\74LS393.pdf" H 17600 13000 50  0001 C CNN
-	1    17600 13000
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS393 Z10
-U 2 1 5D19789B
-P 17600 14000
-F 0 "Z10" H 17630 14385 50  0000 C CNN
-F 1 "74HCT393" H 17630 14285 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 17600 14000 50  0001 C CNN
-F 3 "74xx\\74LS393.pdf" H 17600 14000 50  0001 C CNN
-	2    17600 14000
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS393 Z11
-U 1 1 5D273697
-P 17600 15000
-F 0 "Z11" H 17635 15425 50  0000 C CNN
-F 1 "74HCT393" H 17635 15325 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 17600 15000 50  0001 C CNN
-F 3 "74xx\\74LS393.pdf" H 17600 15000 50  0001 C CNN
-	1    17600 15000
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS393 Z11
-U 2 1 5D2736A1
-P 17600 15900
-F 0 "Z11" H 17630 16285 50  0000 C CNN
-F 1 "74HCT393" H 17630 16185 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 17600 15900 50  0001 C CNN
-F 3 "74xx\\74LS393.pdf" H 17600 15900 50  0001 C CNN
-	2    17600 15900
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS393 Z11
-U 3 1 5D2736AB
-P 13815 15995
-F 0 "Z11" H 14045 16085 50  0000 L CNN
-F 1 "74HCT393" H 14045 15985 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 13815 15995 50  0001 C CNN
-F 3 "74xx\\74LS393.pdf" H 13815 15995 50  0001 C CNN
-	3    13815 15995
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	18200 11700 17000 11700
 Connection ~ 12945 15495
@@ -1374,17 +1000,6 @@ Wire Wire Line
 	12945 15495 13375 15495
 Wire Wire Line
 	12945 16495 13375 16495
-$Comp
-L 74xx:74LS393 Z10
-U 3 1 5D1978A5
-P 13375 15995
-F 0 "Z10" H 13605 16085 50  0000 L CNN
-F 1 "74HCT393" H 13605 15985 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 13375 15995 50  0001 C CNN
-F 3 "74xx\\74LS393.pdf" H 13375 15995 50  0001 C CNN
-	3    13375 15995
-	1    0    0    -1  
-$EndComp
 Connection ~ 13375 15495
 Wire Wire Line
 	13375 15495 13815 15495
@@ -1393,67 +1008,13 @@ Wire Wire Line
 	13375 16495 13815 16495
 Connection ~ 13815 15495
 Connection ~ 13815 16495
-$Comp
-L SamacSys_Parts:K104K10X7RF53H5 C10
-U 1 1 5E828036
-P 5295 15765
-F 0 "C10" V 5535 15905 50  0000 L CNN
-F 1 "100nf" V 5550 15915 50  0001 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 5645 15815 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 5645 15715 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 5645 15615 50  0001 L CNN "Description"
-F 5 "3" H 5645 15515 50  0001 L CNN "Height"
-F 6 "8523267" H 5645 15415 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 5645 15315 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 5645 15215 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 5645 15115 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 5645 15015 50  0001 L CNN "Allied_Number"
-	1    5295 15765
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	5295 15765 5295 15630
 Connection ~ 5295 15630
 Wire Wire Line
 	5920 16265 5920 16365
-$Comp
-L SamacSys_Parts:K104K10X7RF53H5 C11
-U 1 1 5F75CDD3
-P 5920 15765
-F 0 "C11" V 6085 15915 50  0000 L CNN
-F 1 "100nf" V 6185 15915 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 6270 15815 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 6270 15715 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 6270 15615 50  0001 L CNN "Description"
-F 5 "3" H 6270 15515 50  0001 L CNN "Height"
-F 6 "8523267" H 6270 15415 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 6270 15315 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 6270 15215 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 6270 15115 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 6270 15015 50  0001 L CNN "Allied_Number"
-	1    5920 15765
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	7215 16265 7215 16365
-$Comp
-L SamacSys_Parts:K104K10X7RF53H5 C13
-U 1 1 5FC78850
-P 7215 15765
-F 0 "C13" V 7380 15930 50  0000 L CNN
-F 1 "100nf" V 7480 15930 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 7565 15815 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 7565 15715 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 7565 15615 50  0001 L CNN "Description"
-F 5 "3" H 7565 15515 50  0001 L CNN "Height"
-F 6 "8523267" H 7565 15415 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 7565 15315 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 7565 15215 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 7565 15115 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 7565 15015 50  0001 L CNN "Allied_Number"
-	1    7215 15765
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	7215 15765 7215 15630
 Connection ~ 7215 15630
@@ -1474,17 +1035,6 @@ Wire Wire Line
 Connection ~ 6935 15630
 Wire Wire Line
 	6935 15630 7080 15630
-$Comp
-L Device:CP C12
-U 1 1 5F0A734F
-P 6935 16015
-F 0 "C12" H 6785 15920 50  0000 R CNN
-F 1 "100uf" H 6785 16020 50  0000 R CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 6973 15865 50  0001 C CNN
-F 3 "~" H 6935 16015 50  0001 C CNN
-	1    6935 16015
-	1    0    0    1   
-$EndComp
 Wire Wire Line
 	6430 15930 6430 16365
 Wire Wire Line
@@ -1495,24 +1045,6 @@ Wire Wire Line
 Wire Wire Line
 	6935 16165 6935 16365
 Connection ~ 6935 16365
-$Comp
-L SamacSys_Parts:K104K10X7RF53H5 C21
-U 1 1 618E9BE1
-P 9110 15770
-F 0 "C21" V 9275 15920 50  0000 L CNN
-F 1 "100nf" V 9375 15920 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 9460 15820 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 9460 15720 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 9460 15620 50  0001 L CNN "Description"
-F 5 "3" H 9460 15520 50  0001 L CNN "Height"
-F 6 "8523267" H 9460 15420 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 9460 15320 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 9460 15220 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 9460 15120 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 9460 15020 50  0001 L CNN "Allied_Number"
-	1    9110 15770
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	7215 16365 7455 16365
 Wire Wire Line
@@ -1521,28 +1053,6 @@ Connection ~ 7085 16365
 Wire Wire Line
 	7085 16365 7215 16365
 Connection ~ 4860 15630
-$Comp
-L Transistor_BJT:BC237 Q3
-U 1 1 6252DD48
-P 14560 12790
-F 0 "Q3" H 14760 12840 50  0000 L CNN
-F 1 "BC237" H 14760 12790 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 14760 12715 50  0001 L CIN
-F 3 "http://www.onsemi.com/pub_link/Collateral/BC237-D.PDF" H 14560 12790 50  0001 L CNN
-	1    14560 12790
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS74 Z27
-U 2 1 62A19C05
-P 16600 2000
-F 0 "Z27" H 16810 2350 50  0000 C CNN
-F 1 "74HCT74" H 16825 2255 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 16600 2000 50  0001 C CNN
-F 3 "74xx/74hc_hct74.pdf" H 16600 2000 50  0001 C CNN
-	2    16600 2000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	12865 11090 11960 11090
 Wire Wire Line
@@ -1552,28 +1062,6 @@ Wire Wire Line
 Connection ~ 11960 11890
 Wire Wire Line
 	11960 11890 12160 11890
-$Comp
-L 74xx:74LS74 Z27
-U 1 1 62A1631E
-P 13165 11090
-F 0 "Z27" H 13375 11350 50  0000 C CNN
-F 1 "74HCT74" H 12935 11340 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 13165 11090 50  0001 C CNN
-F 3 "74xx/74hc_hct74.pdf" H 13165 11090 50  0001 C CNN
-	1    13165 11090
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS74 Z27
-U 3 1 62A1CDDB
-P 14250 16000
-F 0 "Z27" H 14485 16080 50  0000 L CNN
-F 1 "74HCT74" H 14485 15980 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 14250 16000 50  0001 C CNN
-F 3 "74xx/74hc_hct74.pdf" H 14250 16000 50  0001 C CNN
-	3    14250 16000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	14250 16400 14250 16495
 Wire Wire Line
@@ -1586,41 +1074,8 @@ Wire Wire Line
 Wire Wire Line
 	16300 2000 15700 2000
 NoConn ~ 16900 2100
-$Comp
-L Diode:1N4148 D1
-U 1 1 5DE721C7
-P 18500 2200
-F 0 "D1" V 18420 2150 50  0000 L CNN
-F 1 "1N4148" V 18500 2285 50  0001 L CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 18500 2025 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 18500 2200 50  0001 C CNN
-	1    18500 2200
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	18500 2350 18500 2400
-$Comp
-L 74xx:74LS04 Z102
-U 4 1 64E6F857
-P 21700 14600
-F 0 "Z102" H 21700 14950 50  0000 C CNN
-F 1 "74HCT04" H 21700 14850 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 21700 14600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 21700 14600 50  0001 C CNN
-	4    21700 14600
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS04 Z102
-U 7 1 64E78705
-P 14710 15995
-F 0 "Z102" H 14955 16070 50  0000 L CNN
-F 1 "74HCT04" H 14955 15970 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 14710 15995 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 14710 15995 50  0001 C CNN
-	7    14710 15995
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	10660 12890 11260 12890
 Wire Wire Line
@@ -1635,225 +1090,16 @@ Wire Wire Line
 	21200 14600 21400 14600
 Wire Wire Line
 	14250 16495 14710 16495
-$Comp
-L 74xx:74LS00 Z19
-U 1 1 668F994D
-P 11600 1200
-F 0 "Z19" H 11605 1570 50  0000 C CNN
-F 1 "74HCT00" H 11605 1470 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 11600 1200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 11600 1200 50  0001 C CNN
-	1    11600 1200
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS00 Z19
-U 2 1 668FCEF0
-P 15300 900
-F 0 "Z19" H 15335 1270 50  0000 C CNN
-F 1 "74HCT00" H 15335 1170 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 15300 900 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 15300 900 50  0001 C CNN
-	2    15300 900 
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS02 Z25
-U 1 1 67CE859F
-P 11600 1800
-F 0 "Z25" H 11600 2150 50  0000 C CNN
-F 1 "74HCT02" H 11600 2050 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 11600 1800 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 11600 1800 50  0001 C CNN
-	1    11600 1800
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS02 Z25
-U 2 1 67CEAAFE
-P 21600 13600
-F 0 "Z25" H 21605 13960 50  0000 C CNN
-F 1 "74HCT02" H 21605 13860 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 21600 13600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 21600 13600 50  0001 C CNN
-	2    21600 13600
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS02 Z25
-U 4 1 67CF2BFC
-P 20100 12400
-F 0 "Z25" H 20140 12785 50  0000 C CNN
-F 1 "74HCT02" H 20140 12685 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 20100 12400 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 20100 12400 50  0001 C CNN
-	4    20100 12400
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS02 Z25
-U 5 1 67CF6A6D
-P 11180 15995
-F 0 "Z25" H 11450 16090 50  0000 L CNN
-F 1 "74HCT02" H 11450 15990 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 11180 15995 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 11180 15995 50  0001 C CNN
-	5    11180 15995
-	1    0    0    -1  
-$EndComp
 Connection ~ 11180 15495
 Wire Wire Line
 	11180 16495 10755 16495
 Connection ~ 11180 16495
 Wire Wire Line
 	15600 1600 15700 1600
-$Comp
-L 74xx:74LS08 Z20
-U 1 1 68B8CAFF
-P 20000 15100
-F 0 "Z20" H 20025 15455 50  0000 C CNN
-F 1 "74HCT08" H 20025 15355 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 20000 15100 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 20000 15100 50  0001 C CNN
-	1    20000 15100
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS08 Z20
-U 2 1 68B918AB
-P 12800 1500
-F 0 "Z20" H 12825 1855 50  0000 C CNN
-F 1 "74HCT08" H 12825 1755 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 12800 1500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 12800 1500 50  0001 C CNN
-	2    12800 1500
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS08 Z20
-U 3 1 68B9636E
-P 15300 1600
-F 0 "Z20" H 15315 1950 50  0000 C CNN
-F 1 "74HCT08" H 15315 1850 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 15300 1600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 15300 1600 50  0001 C CNN
-	3    15300 1600
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS08 Z20
-U 4 1 68B9A332
-P 13600 2000
-F 0 "Z20" H 13620 2360 50  0000 C CNN
-F 1 "74HCT08" H 13620 2260 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 13600 2000 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 13600 2000 50  0001 C CNN
-	4    13600 2000
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS08 Z20
-U 5 1 68B9DD2C
-P 10755 15995
-F 0 "Z20" H 11015 16070 50  0000 L CNN
-F 1 "74HCT08" H 11015 15970 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 10755 15995 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 10755 15995 50  0001 C CNN
-	5    10755 15995
-	1    0    0    -1  
-$EndComp
 Connection ~ 10755 15495
 Wire Wire Line
 	10755 15495 11180 15495
 Connection ~ 10755 16495
-$Comp
-L 74xx:74LS11 Z22
-U 1 1 6988D687
-P 20800 12400
-F 0 "Z22" H 20805 12780 50  0000 C CNN
-F 1 "74HCT11" H 20805 12680 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 20800 12400 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 20800 12400 50  0001 C CNN
-	1    20800 12400
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS11 Z22
-U 2 1 6988F36D
-P 14000 1500
-F 0 "Z22" H 14000 1880 50  0000 C CNN
-F 1 "74HCT11" H 14000 1780 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 14000 1500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 14000 1500 50  0001 C CNN
-	2    14000 1500
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS11 Z21
-U 1 1 69DD588D
-P 19200 15000
-F 0 "Z21" H 19200 15340 50  0000 C CNN
-F 1 "74HCT11" H 19200 15240 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 19200 15000 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 19200 15000 50  0001 C CNN
-	1    19200 15000
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS11 Z21
-U 2 1 69DD9196
-P 20800 14600
-F 0 "Z21" H 20820 14970 50  0000 C CNN
-F 1 "74HCT11" H 20820 14870 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 20800 14600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 20800 14600 50  0001 C CNN
-	2    20800 14600
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS11 Z21
-U 3 1 69DDCF8B
-P 19100 13100
-F 0 "Z21" H 19110 13465 50  0000 C CNN
-F 1 "74HCT11" H 19110 13365 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 19100 13100 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 19100 13100 50  0001 C CNN
-	3    19100 13100
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS11 Z21
-U 4 1 69DE0CE8
-P 9880 16000
-F 0 "Z21" H 10110 16090 50  0000 L CNN
-F 1 "74HCT11" H 10110 15990 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 9880 16000 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 9880 16000 50  0001 C CNN
-	4    9880 16000
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS86 Z23
-U 3 1 6A75883C
-P 20565 9165
-F 0 "Z23" H 20565 9515 50  0000 C CNN
-F 1 "74HCT86" H 20565 9415 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 20565 9165 50  0001 C CNN
-F 3 "74xx/74ls86.pdf" H 20565 9165 50  0001 C CNN
-	3    20565 9165
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS86 Z23
-U 4 1 6A75C654
-P 17400 2000
-F 0 "Z23" H 17440 2340 50  0000 C CNN
-F 1 "74HCT86" H 17440 2240 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 17400 2000 50  0001 C CNN
-F 3 "74xx/74ls86.pdf" H 17400 2000 50  0001 C CNN
-	4    17400 2000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	22095 900  22095 4175
 Wire Wire Line
@@ -1866,28 +1112,6 @@ Wire Wire Line
 	10320 15495 10755 15495
 Wire Wire Line
 	10755 16495 10320 16495
-$Comp
-L 74xx:74LS11 Z22
-U 4 1 6989826C
-P 10320 15995
-F 0 "Z22" H 10560 16050 50  0000 L CNN
-F 1 "74HCT11" H 10560 15950 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 10320 15995 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 10320 15995 50  0001 C CNN
-	4    10320 15995
-	1    0    0    -1  
-$EndComp
-$Comp
-L Memory_RAM:AS6C4008-55PCN Z3-4
-U 1 1 5D17A78F
-P 5930 10080
-F 0 "Z3-4" H 5940 11385 50  0000 C CNN
-F 1 "AS6C4008-55PCN" H 5940 11285 50  0000 C CNN
-F 2 "Package_DIP:DIP-32_W15.24mm" H 5930 10180 50  0001 C CNN
-F 3 "https://www.alliancememory.com/wp-content/uploads/pdf/AS6C4008.pdf" H 5930 10180 50  0001 C CNN
-	1    5930 10080
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5700 12400 5700 12300
 Text Label 5700 12300 1    70   ~ 0
@@ -1906,134 +1130,26 @@ Text Label 5900 12300 1    70   ~ 0
 DA3
 Wire Wire Line
 	7680 16265 7680 16365
-$Comp
-L SamacSys_Parts:K104K10X7RF53H5 C15
-U 1 1 5D42C6C3
-P 7680 15765
-F 0 "C15" V 7845 15930 50  0000 L CNN
-F 1 "100nf" V 7945 15930 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8030 15815 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 8030 15715 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 8030 15615 50  0001 L CNN "Description"
-F 5 "3" H 8030 15515 50  0001 L CNN "Height"
-F 6 "8523267" H 8030 15415 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 8030 15315 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 8030 15215 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 8030 15115 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 8030 15015 50  0001 L CNN "Allied_Number"
-	1    7680 15765
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	7680 15765 7680 15630
 Wire Wire Line
 	7905 16265 7905 16365
-$Comp
-L SamacSys_Parts:K104K10X7RF53H5 C16
-U 1 1 5D506FED
-P 7905 15765
-F 0 "C16" V 8070 15930 50  0000 L CNN
-F 1 "100nf" V 8170 15930 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8255 15815 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 8255 15715 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 8255 15615 50  0001 L CNN "Description"
-F 5 "3" H 8255 15515 50  0001 L CNN "Height"
-F 6 "8523267" H 8255 15415 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 8255 15315 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 8255 15215 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 8255 15115 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 8255 15015 50  0001 L CNN "Allied_Number"
-	1    7905 15765
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	7905 15765 7905 15630
 Wire Wire Line
 	8125 16265 8125 16365
-$Comp
-L SamacSys_Parts:K104K10X7RF53H5 C17
-U 1 1 5D5E2433
-P 8125 15765
-F 0 "C17" V 8290 15930 50  0000 L CNN
-F 1 "100nf" V 8390 15930 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8475 15815 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 8475 15715 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 8475 15615 50  0001 L CNN "Description"
-F 5 "3" H 8475 15515 50  0001 L CNN "Height"
-F 6 "8523267" H 8475 15415 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 8475 15315 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 8475 15215 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 8475 15115 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 8475 15015 50  0001 L CNN "Allied_Number"
-	1    8125 15765
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	8125 15765 8125 15630
 Wire Wire Line
 	8350 16265 8350 16365
-$Comp
-L SamacSys_Parts:K104K10X7RF53H5 C18
-U 1 1 5D6BE2CF
-P 8350 15765
-F 0 "C18" V 8515 15930 50  0000 L CNN
-F 1 "100nf" V 8615 15930 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8700 15815 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 8700 15715 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 8700 15615 50  0001 L CNN "Description"
-F 5 "3" H 8700 15515 50  0001 L CNN "Height"
-F 6 "8523267" H 8700 15415 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 8700 15315 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 8700 15215 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 8700 15115 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 8700 15015 50  0001 L CNN "Allied_Number"
-	1    8350 15765
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	8350 15765 8350 15630
 Wire Wire Line
 	8855 16265 8855 16365
-$Comp
-L SamacSys_Parts:K104K10X7RF53H5 C20
-U 1 1 5D878331
-P 8855 15765
-F 0 "C20" V 9020 15930 50  0000 L CNN
-F 1 "100nf" V 9120 15930 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 9205 15815 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 9205 15715 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 9205 15615 50  0001 L CNN "Description"
-F 5 "3" H 9205 15515 50  0001 L CNN "Height"
-F 6 "8523267" H 9205 15415 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 9205 15315 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 9205 15215 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 9205 15115 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 9205 15015 50  0001 L CNN "Allied_Number"
-	1    8855 15765
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	8855 15765 8855 15630
 Wire Wire Line
 	7455 16265 7455 16365
-$Comp
-L SamacSys_Parts:K104K10X7RF53H5 C14
-U 1 1 5D956C31
-P 7455 15765
-F 0 "C14" V 7620 15930 50  0000 L CNN
-F 1 "100nf" V 7720 15930 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 7805 15815 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 7805 15715 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 7805 15615 50  0001 L CNN "Description"
-F 5 "3" H 7805 15515 50  0001 L CNN "Height"
-F 6 "8523267" H 7805 15415 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 7805 15315 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 7805 15215 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 7805 15115 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 7805 15015 50  0001 L CNN "Allied_Number"
-	1    7455 15765
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	7455 15765 7455 15630
 Connection ~ 7455 15630
@@ -2066,24 +1182,6 @@ Wire Wire Line
 	8350 15630 8595 15630
 Wire Wire Line
 	8595 16265 8595 16365
-$Comp
-L SamacSys_Parts:K104K10X7RF53H5 C19
-U 1 1 5D79AD57
-P 8595 15765
-F 0 "C19" V 8760 15930 50  0000 L CNN
-F 1 "100nf" V 8860 15930 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8945 15815 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 8945 15715 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 8945 15615 50  0001 L CNN "Description"
-F 5 "3" H 8945 15515 50  0001 L CNN "Height"
-F 6 "8523267" H 8945 15415 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 8945 15315 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 8945 15215 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 8945 15115 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 8945 15015 50  0001 L CNN "Allied_Number"
-	1    8595 15765
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	8595 15765 8595 15630
 Connection ~ 8595 15630
@@ -2109,43 +1207,10 @@ Wire Wire Line
 	21695 3475 21695 3375
 Wire Wire Line
 	19695 3475 19695 3375
-$Comp
-L 74xx:74LS86 Z23
-U 2 1 6A75490B
-P 9830 -15
-F 0 "Z23" H 9865 330 50  0000 C CNN
-F 1 "74HCT86" H 9865 230 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 9830 -15 50  0001 C CNN
-F 3 "74xx/74ls86.pdf" H 9830 -15 50  0001 C CNN
-	2    9830 -15 
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS86 Z23
-U 1 1 6A7508F4
-P 18205 9195
-F 0 "Z23" H 18230 9545 50  0000 C CNN
-F 1 "74HCT86" H 18230 9445 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 18205 9195 50  0001 C CNN
-F 3 "74xx/74ls86.pdf" H 18205 9195 50  0001 C CNN
-	1    18205 9195
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5900 8605 5900 8600
 Wire Wire Line
 	5900 8605 6000 8605
-$Comp
-L Memory_EPROM:27C256-PLCC Z1-2
-U 1 1 5D757EDC
-P 5900 7500
-F 0 "Z1-2" H 5900 8800 50  0000 C CNN
-F 1 "27C256" H 5900 8700 50  0000 C CNN
-F 2 "Package_LCC:PLCC-32_THT_Socket_11.4x14.0mm_P1.27mm" H 5900 7500 50  0001 C CNN
-F 3 "http://datasheet.octopart.com/D27256-2-Intel-datasheet-17852618.pdf" H 5900 7500 50  0001 C CNN
-	1    5900 7500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8855 15630 9110 15630
 Wire Wire Line
@@ -2229,20 +1294,6 @@ Connection ~ 18500 2000
 Wire Wire Line
 	18500 2000 19200 2000
 NoConn ~ 10060 -660
-NoConn ~ 10130 -15 
-NoConn ~ 9530 85  
-NoConn ~ 9530 -115
-$Comp
-L 74xx:74LS00 Z19
-U 5 1 66907DE2
-P 15150 15995
-F 0 "Z19" H 15420 16080 50  0000 L CNN
-F 1 "74HCT00" H 15420 15980 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 15150 15995 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 15150 15995 50  0001 C CNN
-	5    15150 15995
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR0105
 U 1 1 63AB1104
@@ -2306,33 +1357,11 @@ F 3 "" H 15160 11090 50  0001 C CNN
 	1    15160 11090
 	0    1    1    0   
 $EndComp
-$Comp
-L 74xx:74LS393 Z9
-U 2 1 5E382AB8
-P 17600 12100
-F 0 "Z9" H 17630 12485 50  0000 C CNN
-F 1 "74HCT393" H 17630 12385 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 17600 12100 50  0001 C CNN
-F 3 "74xx\\74LS393.pdf" H 17600 12100 50  0001 C CNN
-	2    17600 12100
-	1    0    0    -1  
-$EndComp
 Connection ~ 9435 15500
 Wire Wire Line
 	9435 15500 9110 15500
 Wire Wire Line
 	9435 15500 9880 15500
-$Comp
-L 74xx:74LS86 Z23
-U 5 1 6A760723
-P 9435 16000
-F 0 "Z23" H 9695 16075 50  0000 L CNN
-F 1 "74HCT86" H 9695 15975 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 9435 16000 50  0001 C CNN
-F 3 "74xx/74ls86.pdf" H 9435 16000 50  0001 C CNN
-	5    9435 16000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9880 16500 9435 16500
 Connection ~ 9880 16500
@@ -2524,17 +1553,6 @@ F 3 "" H 2070 9000 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L 74xx:74LS166 Z12
-U 1 1 6FFDAE7B
-P 20695 3475
-F 0 "Z12" V 21420 3470 50  0000 C CNN
-F 1 "74HCT166" V 21320 3470 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm" H 20695 3475 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS166" H 20695 3475 50  0001 C CNN
-	1    20695 3475
-	0    -1   -1   0   
-$EndComp
-$Comp
 L power:GND #PWR0113
 U 1 1 690A98BA
 P 21695 3375
@@ -2612,17 +1630,6 @@ F 3 "" H 16600 2400 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R R24
-U 1 1 710310B2
-P 1850 8300
-F 0 "R24" H 1700 8359 59  0000 L BNN
-F 1 "10k" H 1700 8170 59  0000 L BNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 1850 8300 50  0001 C CNN
-F 3 "" H 1850 8300 50  0001 C CNN
-	1    1850 8300
-	0    -1   -1   0   
-$EndComp
-$Comp
 L power:VCC #PWR0142
 U 1 1 6A27D940
 P 1600 8300
@@ -2675,17 +1682,6 @@ F 1 "VCC" V 1530 8055 50  0000 L CNN
 F 2 "" H 1500 7900 50  0001 C CNN
 F 3 "" H 1500 7900 50  0001 C CNN
 	1    1500 7900
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:VCC #PWR0150
-U 1 1 6AA5DB27
-P 5800 6400
-F 0 "#PWR0150" H 5800 6250 50  0001 C CNN
-F 1 "VCC" V 5820 6545 50  0000 L CNN
-F 2 "" H 5800 6400 50  0001 C CNN
-F 3 "" H 5800 6400 50  0001 C CNN
-	1    5800 6400
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -2749,17 +1745,6 @@ Wire Wire Line
 Connection ~ 6400 13700
 Wire Wire Line
 	6300 13700 6400 13700
-$Comp
-L 74xx:74LS367 Z14
-U 1 1 70940791
-P 6000 12900
-F 0 "Z14" V 5830 12360 50  0000 R CNN
-F 1 "74HCT367" V 6350 12695 50  0000 R CNN
-F 2 "Package_DIP:DIP-16_W7.62mm" H 6000 12900 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS367" H 6000 12900 50  0001 C CNN
-	1    6000 12900
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	6300 13400 6300 13700
 Wire Wire Line
@@ -2786,70 +1771,15 @@ F 3 "" H 4485 15630 50  0001 C CNN
 	1    4485 15630
 	0    -1   -1   0   
 $EndComp
-$Comp
-L Regulator_Linear:LM7805_TO220 IC1
-U 1 1 735D1281
-P 6430 15630
-F 0 "IC1" H 6455 15905 50  0000 C CNN
-F 1 "LM7805_TO220" H 6455 15805 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 6430 15855 50  0001 C CIN
-F 3 "http://www.fairchildsemi.com/ds/LM/LM7805.pdf" H 6430 15580 50  0001 C CNN
-	1    6430 15630
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6730 15630 6935 15630
 Wire Wire Line
 	5920 15630 6130 15630
-$Comp
-L Device:C_Small C5
-U 1 1 5D3DDD66
-P 19720 8765
-F 0 "C5" V 19470 8810 50  0000 C CNN
-F 1 "47nF" V 19570 8810 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 19720 8765 50  0001 C CNN
-F 3 "~" H 19720 8765 50  0001 C CNN
-	1    19720 8765
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	19820 8765 19965 8765
-$Comp
-L Device:R R9
-U 1 1 5D7CD5A8
-P 19965 8515
-F 0 "R9" H 20040 8565 50  0000 L CNN
-F 1 "47k" H 20040 8515 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 19895 8515 50  0001 C CNN
-F 3 "~" H 19965 8515 50  0001 C CNN
-	1    19965 8515
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	19965 8665 19965 8765
 Connection ~ 19965 8765
-$Comp
-L Device:R R1
-U 1 1 5DAB7AD2
-P 19415 9065
-F 0 "R1" V 19265 9065 50  0000 C CNN
-F 1 "47k" V 19165 9065 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 19345 9065 50  0001 C CNN
-F 3 "~" H 19415 9065 50  0001 C CNN
-	1    19415 9065
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:C_Small C1
-U 1 1 5DE97B8D
-P 19165 9470
-F 0 "C1" H 19265 9525 50  0000 L CNN
-F 1 "47nF" H 19265 9425 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 19165 9470 50  0001 C CNN
-F 3 "~" H 19165 9470 50  0001 C CNN
-	1    19165 9470
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR0106
 U 1 1 63D850DD
@@ -2865,28 +1795,6 @@ Wire Wire Line
 	19165 9670 19165 9570
 Wire Wire Line
 	19565 9065 19965 9065
-$Comp
-L Device:C_Small C2
-U 1 1 5E5189FF
-P 14660 11790
-F 0 "C2" H 14560 11840 50  0000 R CNN
-F 1 "47nF" H 14560 11790 50  0000 R CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 14660 11790 50  0001 C CNN
-F 3 "~" H 14660 11790 50  0001 C CNN
-	1    14660 11790
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C6
-U 1 1 5E9F8ADD
-P 14260 10990
-F 0 "C6" V 14010 10990 50  0000 C CNN
-F 1 "47nF" V 14110 10990 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 14260 10990 50  0001 C CNN
-F 3 "~" H 14260 10990 50  0001 C CNN
-	1    14260 10990
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	13960 10990 14160 10990
 Text Label 18400 14100 0    70   ~ 0
@@ -3273,30 +2181,8 @@ Wire Wire Line
 	3395 5800 5300 5800
 Wire Wire Line
 	4290 5165 6845 5165
-$Comp
-L 74xx:74LS138 Z100
-U 1 1 60E79DD4
-P 7345 4765
-F 0 "Z100" H 7365 5605 50  0000 C CNN
-F 1 "74HCT138" H 7365 5505 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm" H 7345 4765 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS138" H 7345 4765 50  0001 C CNN
-	1    7345 4765
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2295 6000 2395 6000
-$Comp
-L 74xx:74LS138 Z13
-U 1 1 7397220B
-P 2895 5600
-F 0 "Z13" H 2900 6400 50  0000 C CNN
-F 1 "74HCT138" H 2900 6300 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm" H 2895 5600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS138" H 2895 5600 50  0001 C CNN
-	1    2895 5600
-	1    0    0    -1  
-$EndComp
 Text Label 2295 6000 2    70   ~ 0
 /MREQ
 Wire Wire Line
@@ -3377,28 +2263,6 @@ Wire Wire Line
 	7835 5900 6740 5900
 Wire Wire Line
 	7835 5900 7835 10180
-$Comp
-L 74xx:74LS11 Z22
-U 3 1 69893729
-P 6440 5900
-F 0 "Z22" H 6480 6265 50  0000 C CNN
-F 1 "74HCT11" H 6480 6165 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 6440 5900 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 6440 5900 50  0001 C CNN
-	3    6440 5900
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS21 Z101
-U 2 1 6372EB23
-P 4485 4660
-F 0 "Z101" H 4530 5050 50  0000 C CNN
-F 1 "74HCT21" H 4530 4950 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 4485 4660 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS21" H 4485 4660 50  0001 C CNN
-	2    4485 4660
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4185 4810 4035 4810
 Wire Wire Line
@@ -3444,17 +2308,6 @@ Wire Wire Line
 Wire Wire Line
 	17605 9095 17605 8795
 Connection ~ 17605 9095
-$Comp
-L Transistor_BJT:2N3904 Q100
-U 1 1 63493097
-P 17505 9295
-F 0 "Q100" H 17310 9205 50  0000 L CNN
-F 1 "2N3904" H 17295 9440 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 17705 9220 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 17505 9295 50  0001 L CNN
-	1    17505 9295
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	16805 9095 16805 9295
 Wire Wire Line
@@ -3482,66 +2335,11 @@ F 3 "" H 17605 8295 50  0001 C CNN
 	1    17605 8295
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:Crystal X2
-U 1 1 634930B3
-P 17055 8795
-F 0 "X2" H 17055 8995 59  0000 C CNN
-F 1 "CRYSTALHC49U-V 6.556MHz" H 17065 8955 59  0001 C CNN
-F 2 "Crystal:Crystal_HC49-U_Vertical" H 17055 8795 50  0001 C CNN
-F 3 "" H 17055 8795 50  0001 C CNN
-	1    17055 8795
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C102
-U 1 1 634930B9
-P 17360 8795
-F 0 "C102" V 17110 8840 50  0000 C CNN
-F 1 "47nF" V 17210 8840 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 17360 8795 50  0001 C CNN
-F 3 "~" H 17360 8795 50  0001 C CNN
-	1    17360 8795
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	17460 8795 17605 8795
-$Comp
-L Device:R R105
-U 1 1 634930C1
-P 17605 8545
-F 0 "R105" H 17680 8595 50  0000 L CNN
-F 1 "47k" H 17680 8545 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 17535 8545 50  0001 C CNN
-F 3 "~" H 17605 8545 50  0001 C CNN
-	1    17605 8545
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	17605 8695 17605 8795
 Connection ~ 17605 8795
-$Comp
-L Device:R R104
-U 1 1 634930C9
-P 17055 9095
-F 0 "R104" V 16900 9050 50  0000 C CNN
-F 1 "47k" V 16800 9050 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 16985 9095 50  0001 C CNN
-F 3 "~" H 17055 9095 50  0001 C CNN
-	1    17055 9095
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:C_Small C100
-U 1 1 634930CF
-P 16805 9500
-F 0 "C100" H 16905 9555 50  0000 L CNN
-F 1 "47N" H 16905 9455 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 16805 9500 50  0001 C CNN
-F 3 "~" H 16805 9500 50  0001 C CNN
-	1    16805 9500
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR0149
 U 1 1 634930D5
@@ -3803,61 +2601,6 @@ Wire Wire Line
 	7255 12090 7555 12090
 Wire Wire Line
 	8890 6750 9990 6750
-$Comp
-L 74xx:74LS30 Z104
-U 1 1 63D63D16
-P 7855 12290
-F 0 "Z104" H 7900 12830 50  0000 C CNN
-F 1 "74HCT30" H 7900 12730 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 7855 12290 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS30" H 7855 12290 50  0001 C CNN
-	1    7855 12290
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS04 Z102
-U 2 1 642C5250
-P 7955 12990
-F 0 "Z102" H 8000 13330 50  0000 C CNN
-F 1 "74HCT04" H 8000 13230 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 7955 12990 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 7955 12990 50  0001 C CNN
-	2    7955 12990
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS04 Z102
-U 3 1 642C5FDD
-P 7055 11990
-F 0 "Z102" H 7100 12330 50  0000 C CNN
-F 1 "74HCT04" H 7100 12230 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 7055 11990 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 7055 11990 50  0001 C CNN
-	3    7055 11990
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS02 Z103
-U 1 1 646C2C2C
-P 8655 12890
-F 0 "Z103" H 8700 13250 50  0000 C CNN
-F 1 "74HCT02" H 8700 13150 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 8655 12890 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 8655 12890 50  0001 C CNN
-	1    8655 12890
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS02 Z103
-U 2 1 646C7790
-P 8655 11790
-F 0 "Z103" H 8675 12155 50  0000 C CNN
-F 1 "74HCT02" H 8675 12055 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 8655 11790 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 8655 11790 50  0001 C CNN
-	2    8655 11790
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8955 11790 9560 11790
 Connection ~ 9560 11790
@@ -3884,28 +2627,6 @@ Wire Wire Line
 	11260 13700 11260 13585
 Wire Wire Line
 	6400 13700 11260 13700
-$Comp
-L 74xx:74LS365 Z106
-U 1 1 6567AE36
-P 12185 7750
-F 0 "Z106" H 12200 8650 50  0000 C CNN
-F 1 "74HCT365" H 12200 8550 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm" H 12185 7750 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS365" H 12185 7750 50  0001 C CNN
-	1    12185 7750
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS04 Z102
-U 1 1 659CE7DB
-P 10685 8150
-F 0 "Z102" H 10700 8500 50  0000 C CNN
-F 1 "74HCT04" H 10700 8400 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 10685 8150 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 10685 8150 50  0001 C CNN
-	1    10685 8150
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	10985 8150 11685 8150
 Wire Wire Line
@@ -3959,17 +2680,6 @@ F 3 "" H 11365 5545 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	11365 5545 12185 5545
-$Comp
-L 74xx:74LS04 Z102
-U 5 1 66816516
-P 11260 13285
-F 0 "Z102" V 11175 13475 50  0000 L CNN
-F 1 "74HCT04" V 11275 13475 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 11260 13285 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 11260 13285 50  0001 C CNN
-	5    11260 13285
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	14360 10990 14660 10990
 Wire Wire Line
@@ -3984,17 +2694,6 @@ Wire Wire Line
 	11270 7410 11270 6650
 Wire Wire Line
 	11270 6650 11685 6650
-$Comp
-L 74xx:74LS365 Z105
-U 1 1 656774FB
-P 12185 6250
-F 0 "Z105" H 12200 7150 50  0000 C CNN
-F 1 "74HCT365" H 12200 7050 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm" H 12185 6250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS365" H 12185 6250 50  0001 C CNN
-	1    12185 6250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9985 7410 11270 7410
 Wire Wire Line
@@ -4077,17 +2776,6 @@ Wire Wire Line
 Wire Wire Line
 	10985 6250 10990 6250
 Connection ~ 10990 6250
-$Comp
-L 74xx:74LS273 Z107
-U 1 1 6551D9F2
-P 10490 6350
-F 0 "Z107" H 10505 7345 50  0000 C CNN
-F 1 "74HCT273" H 10505 7245 50  0000 C CNN
-F 2 "Package_DIP:DIP-20_W7.62mm" H 10490 6350 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS273" H 10490 6350 50  0001 C CNN
-	1    10490 6350
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	11365 5545 10490 5545
 Wire Wire Line
@@ -4144,39 +2832,6 @@ Wire Wire Line
 	12385 13600 13485 13600
 Wire Wire Line
 	13485 13600 13485 14200
-$Comp
-L Device:R R6
-U 1 1 5D203660
-P 15185 13955
-F 0 "R6" H 15035 14014 59  0000 L BNN
-F 1 "1K" H 15035 13825 59  0000 L BNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" H 15185 13955 50  0001 C CNN
-F 3 "" H 15185 13955 50  0001 C CNN
-	1    15185 13955
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R5
-U 1 1 5D203666
-P 14685 13950
-F 0 "R5" H 14535 14009 59  0000 L BNN
-F 1 "12k" H 14535 13820 59  0000 L BNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" H 14685 13950 50  0001 C CNN
-F 3 "" H 14685 13950 50  0001 C CNN
-	1    14685 13950
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C3
-U 1 1 5D20366C
-P 14935 14200
-F 0 "C3" H 14995 14215 59  0000 L BNN
-F 1 "47nF" H 14995 14015 59  0000 L BNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 14935 14200 50  0001 C CNN
-F 3 "" H 14935 14200 50  0001 C CNN
-	1    14935 14200
-	0    1    1    0   
-$EndComp
 NoConn ~ 12485 14900
 NoConn ~ 12685 14900
 NoConn ~ 12785 14900
@@ -4188,17 +2843,6 @@ Wire Wire Line
 	12385 14900 6100 14900
 Wire Wire Line
 	6100 13400 6100 14900
-$Comp
-L 74xx:74LS367 Z15
-U 1 1 68C1909B
-P 12485 14400
-F 0 "Z15" V 12435 15165 50  0000 L CNN
-F 1 "74HCT367" V 12485 15165 50  0000 L CNN
-F 2 "Package_DIP:DIP-16_W7.62mm" H 12485 14400 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS367" H 12485 14400 50  0001 C CNN
-	1    12485 14400
-	0    1    1    0   
-$EndComp
 NoConn ~ 12585 14900
 Wire Wire Line
 	13185 14400 13285 14400
@@ -4209,17 +2853,6 @@ Text Label 16545 5430 0    50   ~ 0
 INVERTCHAR
 Connection ~ 12050 16495
 Connection ~ 12050 15495
-$Comp
-L 74xx:74LS02 Z24
-U 5 1 629F3A79
-P 12050 15995
-F 0 "Z24" H 12315 16060 50  0000 L CNN
-F 1 "74HCT02" H 12315 15960 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 12050 15995 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 12050 15995 50  0001 C CNN
-	5    12050 15995
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	11180 15495 11615 15495
 Wire Wire Line
@@ -4252,17 +2885,6 @@ Wire Wire Line
 	15085 14200 15185 14200
 Wire Wire Line
 	13485 14200 14685 14200
-$Comp
-L Device:Speaker SP1
-U 1 1 5D362C49
-P 15760 11640
-F 0 "SP1" H 15950 11680 50  0000 L CNN
-F 1 "Speaker" H 15950 11580 50  0000 L CNN
-F 2 "Buzzer_Beeper:MagneticBuzzer_ProSignal_ABI-009-RC" H 15760 11440 50  0001 C CNN
-F 3 "~" H 15750 11590 50  0001 C CNN
-	1    15760 11640
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	15560 11740 15560 11990
 Wire Wire Line
@@ -4365,39 +2987,6 @@ Wire Wire Line
 Connection ~ 14685 14200
 Wire Wire Line
 	14685 14200 14785 14200
-$Comp
-L Connector_Generic:Conn_01x02 AUDIO-OUT1
-U 1 1 5EC3A046
-P 15785 14200
-F 0 "AUDIO-OUT1" H 15900 14200 50  0000 L CNN
-F 1 "Conn_01x02" H 15900 14100 50  0000 L CNN
-F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 15785 14200 50  0001 C CNN
-F 3 "~" H 15785 14200 50  0001 C CNN
-	1    15785 14200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x02 AUDIO-IN1
-U 1 1 5F0EE95E
-P 15660 10990
-F 0 "AUDIO-IN1" H 15750 11030 50  0000 L CNN
-F 1 "Conn_01x02" H 15750 10930 50  0000 L CNN
-F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 15660 10990 50  0001 C CNN
-F 3 "~" H 15660 10990 50  0001 C CNN
-	1    15660 10990
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x02 COMPOSITE1
-U 1 1 5F41E7FB
-P 19400 2000
-F 0 "COMPOSITE1" H 19500 2000 50  0000 L CNN
-F 1 "Conn_01x02" H 19500 1900 50  0000 L CNN
-F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 19400 2000 50  0001 C CNN
-F 3 "~" H 19400 2000 50  0001 C CNN
-	1    19400 2000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	17700 2000 17900 2000
 Wire Wire Line
@@ -4428,17 +3017,6 @@ Connection ~ 1000 10000
 Wire Wire Line
 	1000 10000 1000 10200
 $Comp
-L Connector_Generic:Conn_01x02 POWER-9V-DC1
-U 1 1 613486B0
-P 3760 15950
-F 0 "POWER-9V-DC1" H 3955 15740 50  0000 C CNN
-F 1 "Conn_01x02" H 3905 16065 50  0000 C CNN
-F 2 "cuipj:CUI_PJ-036C" H 3760 15950 50  0001 C CNN
-F 3 "~" H 3760 15950 50  0001 C CNN
-	1    3760 15950
-	-1   0    0    -1  
-$EndComp
-$Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 61D709E9
 P 4155 16050
@@ -4448,17 +3026,6 @@ F 2 "" H 4155 16050 50  0001 C CNN
 F 3 "~" H 4155 16050 50  0001 C CNN
 	1    4155 16050
 	-1   0    0    1   
-$EndComp
-$Comp
-L 74xx:74LS02 Z103
-U 5 1 5D2AB2EA
-P 11615 15995
-F 0 "Z103" H 11885 16090 50  0000 L CNN
-F 1 "74HCT02" H 11885 15990 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 11615 15995 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 11615 15995 50  0001 C CNN
-	5    11615 15995
-	1    0    0    -1  
 $EndComp
 Connection ~ 11615 15495
 Wire Wire Line
@@ -4499,79 +3066,13 @@ F 3 "" H 17605 9595 50  0001 C CNN
 	1    17605 9595
 	1    0    0    -1  
 $EndComp
-$Comp
-L SamacSys_Parts:2N2369A Q2
-U 1 1 5D2BC8AD
-P 1600 10000
-F 0 "Q2" H 2150 10050 50  0000 L CNN
-F 1 "2N2369A" H 2150 10000 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-18-3" H 2150 9850 50  0001 L CNN
-F 3 "https://my.centralsemi.com/get_document.php?cmp=1&mergetype=pd&mergepath=pd&pdf_id=2N2369A.PDF" H 2150 9750 50  0001 L CNN
-F 4 "Bipolar Transistors - BJT NPN Fast SW SS" H 2150 9650 50  0001 L CNN "Description"
-F 5 "Central Semiconductor" H 2150 9250 50  0001 L CNN "Manufacturer_Name"
-F 6 "2N2369A" H 2150 9150 50  0001 L CNN "Manufacturer_Part_Number"
-	1    1600 10000
-	1    0    0    -1  
-$EndComp
 Connection ~ 2000 9700
-$Comp
-L SamacSys_Parts:7132LA100PDG Z5-6
-U 1 1 5D5FDF41
-P 15160 3930
-F 0 "Z5-6" H 16165 4080 50  0000 C CNN
-F 1 "7132LA100PDG" H 15465 4075 50  0000 C CNN
-F 2 "Package_LCC:PLCC-52_THT-Socket" H 16310 4030 50  0001 L CNN
-F 3 "https://www.mouser.co.uk/datasheet/2/464/IDT_7132_DST_20180703-881829.pdf" H 12460 4230 50  0001 L CNN
-F 4 "SRAM 2K x 8 Dual-Port RAM Memory & Logic/ Master" H 12460 4130 50  0001 L CNN "Description"
-F 5 "3.8" H 15310 1230 50  0001 L CNN "Height"
-F 6 "IDT (Integrated Device Technology)" H 12460 4030 50  0001 L CNN "Manufacturer_Name"
-F 7 "7132LA100PDG" H 14010 3230 50  0001 L CNN "Manufacturer_Part_Number"
-	1    15160 3930
-	1    0    0    -1  
-$EndComp
-$Comp
-L SamacSys_Parts:7132LA100PDG Z7-8
-U 1 1 5D7935C1
-P 17750 3330
-F 0 "Z7-8" H 18755 3485 50  0000 C CNN
-F 1 "7132LA100PDG" H 18040 3490 50  0000 C CNN
-F 2 "Package_LCC:PLCC-52_THT-Socket" H 18900 3430 50  0001 L CNN
-F 3 "https://www.mouser.co.uk/datasheet/2/464/IDT_7132_DST_20180703-881829.pdf" H 15050 3630 50  0001 L CNN
-F 4 "SRAM 2K x 8 Dual-Port RAM Memory & Logic/ Master" H 15050 3530 50  0001 L CNN "Description"
-F 5 "3.8" H 17900 630 50  0001 L CNN "Height"
-F 6 "IDT (Integrated Device Technology)" H 15050 3430 50  0001 L CNN "Manufacturer_Name"
-F 7 "7132LA100PDG" H 16600 2630 50  0001 L CNN "Manufacturer_Part_Number"
-	1    17750 3330
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	15810 6980 15810 7130
 Wire Wire Line
 	18400 6380 18400 7130
 Text Label 15600 900  1    50   ~ 0
 SH#LD
-$Comp
-L Device:R R100
-U 1 1 5E21BE61
-P 16680 6630
-F 0 "R100" V 16450 6650 50  0000 C CNN
-F 1 "R" V 16550 6650 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 16610 6630 50  0001 C CNN
-F 3 "~" H 16680 6630 50  0001 C CNN
-	1    16680 6630
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R101
-U 1 1 5E2E9AC6
-P 16680 6730
-F 0 "R101" V 16450 6750 50  0000 C CNN
-F 1 "R" V 16550 6750 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 16610 6730 50  0001 C CNN
-F 3 "~" H 16680 6730 50  0001 C CNN
-	1    16680 6730
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	16460 6630 16530 6630
 Wire Wire Line
@@ -4591,17 +3092,6 @@ F 2 "" H 16830 6830 50  0001 C CNN
 F 3 "" H 16830 6830 50  0001 C CNN
 	1    16830 6830
 	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R103
-U 1 1 5E6F857E
-P 19270 6130
-F 0 "R103" V 19040 6160 50  0000 C CNN
-F 1 "R" V 19140 6160 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 19200 6130 50  0001 C CNN
-F 3 "~" H 19270 6130 50  0001 C CNN
-	1    19270 6130
-	0    1    1    0   
 $EndComp
 Wire Wire Line
 	19050 6030 19120 6030
@@ -4623,32 +3113,10 @@ F 3 "" H 19420 6230 50  0001 C CNN
 	1    19420 6230
 	-1   0    0    1   
 $EndComp
-$Comp
-L Device:R R102
-U 1 1 5E6F8578
-P 19270 6030
-F 0 "R102" V 19040 6060 50  0000 C CNN
-F 1 "R" V 19140 6060 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 19200 6030 50  0001 C CNN
-F 3 "~" H 19270 6030 50  0001 C CNN
-	1    19270 6030
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	5295 15630 5425 15630
 Wire Wire Line
 	5725 15630 5920 15630
-$Comp
-L z80cpu:Z80CPU_LCC Z0
-U 1 1 5D1F3CD6
-P 2800 7850
-F 0 "Z0" H 2395 10460 59  0000 C CNN
-F 1 "Z80CPU" H 1605 10465 59  0000 C CNN
-F 2 "Package_LCC:PLCC-44_THT-Socket" H 1950 9200 50  0001 C CNN
-F 3 "" H 1950 9200 50  0001 C CNN
-	1    2800 7850
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1100 8000 1100 8100
 Text GLabel 1100 8100 0    50   Input ~ 0
@@ -4711,39 +3179,43 @@ Connection ~ 5920 16365
 Connection ~ 5295 16365
 Wire Wire Line
 	19620 8765 19565 8765
-$Comp
-L Device:Crystal X1
-U 1 1 5D1D7B86
-P 19415 8765
-F 0 "X1" H 19415 8965 59  0000 C CNN
-F 1 "CRYSTALHC49U-V 6.556MHz" H 19425 8925 59  0001 C CNN
-F 2 "Crystal:Crystal_HC49-U_Vertical" H 19415 8765 50  0001 C CNN
-F 3 "" H 19415 8765 50  0001 C CNN
-	1    19415 8765
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	19165 8765 19265 8765
+Wire Wire Line
+	12050 15495 12945 15495
+Wire Wire Line
+	12050 16495 12945 16495
 $Comp
-L Mechanical:MountingHole HTL1
-U 1 1 5D2F2BFA
-P 4130 17900
-F 0 "HTL1" H 4270 17995 50  0000 L CNN
-F 1 "MountingHole" H 4270 17895 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.5mm" H 4130 17900 50  0001 C CNN
-F 3 "~" H 4130 17900 50  0001 C CNN
-	1    4130 17900
-	1    0    0    -1  
+L power:VCC #PWR0150
+U 1 1 6AA5DB27
+P 5800 6400
+F 0 "#PWR0150" H 5800 6250 50  0001 C CNN
+F 1 "VCC" V 5820 6545 50  0000 L CNN
+F 2 "" H 5800 6400 50  0001 C CNN
+F 3 "" H 5800 6400 50  0001 C CNN
+	1    5800 6400
+	0    -1   -1   0   
 $EndComp
 $Comp
-L Mechanical:MountingHole HTR1
-U 1 1 5D3BD959
-P 5005 17900
-F 0 "HTR1" H 5120 17995 50  0000 L CNN
-F 1 "MountingHole" H 5120 17895 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.5mm" H 5005 17900 50  0001 C CNN
-F 3 "~" H 5005 17900 50  0001 C CNN
-	1    5005 17900
+L Device:L L1
+U 1 1 5EA75086
+P 5575 15630
+F 0 "L1" V 5800 15600 50  0000 C CNN
+F 1 "100 nH" V 5700 15600 50  0000 C CNN
+F 2 "Inductor_THT:L_Axial_L13.0mm_D4.5mm_P5.08mm_Vertical_Fastron_HCCC" H 5575 15630 50  0001 C CNN
+F 3 "~" H 5575 15630 50  0001 C CNN
+	1    5575 15630
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Mechanical:MountingHole HBR1
+U 1 1 5D4864A2
+P 4985 18350
+F 0 "HBR1" H 5120 18445 50  0000 L CNN
+F 1 "MountingHole" H 5120 18345 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.5mm" H 4985 18350 50  0001 C CNN
+F 3 "~" H 4985 18350 50  0001 C CNN
+	1    4985 18350
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -4758,29 +3230,1557 @@ F 3 "~" H 4110 18350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole HBR1
-U 1 1 5D4864A2
-P 4985 18350
-F 0 "HBR1" H 5120 18445 50  0000 L CNN
-F 1 "MountingHole" H 5120 18345 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.5mm" H 4985 18350 50  0001 C CNN
-F 3 "~" H 4985 18350 50  0001 C CNN
-	1    4985 18350
+L Mechanical:MountingHole HTR1
+U 1 1 5D3BD959
+P 5005 17900
+F 0 "HTR1" H 5120 17995 50  0000 L CNN
+F 1 "MountingHole" H 5120 17895 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.5mm" H 5005 17900 50  0001 C CNN
+F 3 "~" H 5005 17900 50  0001 C CNN
+	1    5005 17900
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	12050 15495 12945 15495
-Wire Wire Line
-	12050 16495 12945 16495
 $Comp
-L Device:L L1
-U 1 1 5EA75086
-P 5575 15630
-F 0 "L1" V 5800 15600 50  0000 C CNN
-F 1 "100 nH" V 5700 15600 50  0000 C CNN
-F 2 "Inductor_THT:L_Axial_L13.0mm_D4.5mm_P5.08mm_Vertical_Fastron_HCCC" H 5575 15630 50  0001 C CNN
-F 3 "~" H 5575 15630 50  0001 C CNN
-	1    5575 15630
+L Mechanical:MountingHole HTL1
+U 1 1 5D2F2BFA
+P 4130 17900
+F 0 "HTL1" H 4270 17995 50  0000 L CNN
+F 1 "MountingHole" H 4270 17895 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.5mm" H 4130 17900 50  0001 C CNN
+F 3 "~" H 4130 17900 50  0001 C CNN
+	1    4130 17900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Crystal X1
+U 1 1 5D1D7B86
+P 19415 8765
+F 0 "X1" H 19415 8965 59  0000 C CNN
+F 1 "CRYSTALHC49U-V 6.556MHz" H 19425 8925 59  0001 C CNN
+F 2 "Crystal:Crystal_HC49-U_Vertical" H 19415 8765 50  0001 C CNN
+F 3 "" H 19415 8765 50  0001 C CNN
+	1    19415 8765
+	1    0    0    -1  
+$EndComp
+$Comp
+L z80cpu:Z80CPU_LCC Z0
+U 1 1 5D1F3CD6
+P 2800 7850
+F 0 "Z0" H 2395 10460 59  0000 C CNN
+F 1 "Z80CPU" H 1605 10465 59  0000 C CNN
+F 2 "Package_LCC:PLCC-44_THT-Socket" H 1950 9200 50  0001 C CNN
+F 3 "" H 1950 9200 50  0001 C CNN
+	1    2800 7850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R102
+U 1 1 5E6F8578
+P 19270 6030
+F 0 "R102" V 19040 6060 50  0000 C CNN
+F 1 "R" V 19140 6060 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 19200 6030 50  0001 C CNN
+F 3 "~" H 19270 6030 50  0001 C CNN
+	1    19270 6030
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R103
+U 1 1 5E6F857E
+P 19270 6130
+F 0 "R103" V 19040 6160 50  0000 C CNN
+F 1 "R" V 19140 6160 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 19200 6130 50  0001 C CNN
+F 3 "~" H 19270 6130 50  0001 C CNN
+	1    19270 6130
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R101
+U 1 1 5E2E9AC6
+P 16680 6730
+F 0 "R101" V 16450 6750 50  0000 C CNN
+F 1 "R" V 16550 6750 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 16610 6730 50  0001 C CNN
+F 3 "~" H 16680 6730 50  0001 C CNN
+	1    16680 6730
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R100
+U 1 1 5E21BE61
+P 16680 6630
+F 0 "R100" V 16450 6650 50  0000 C CNN
+F 1 "R" V 16550 6650 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 16610 6630 50  0001 C CNN
+F 3 "~" H 16680 6630 50  0001 C CNN
+	1    16680 6630
+	0    1    1    0   
+$EndComp
+$Comp
+L SamacSys_Parts:71321SA55JG8 Z7-8
+U 1 1 5D7935C1
+P 17750 3480
+F 0 "Z7-8" H 18400 4160 50  0000 C CNN
+F 1 "7132LA100PDG" H 18400 4060 50  0000 C CNN
+F 2 "Package_LCC:PLCC-52_THT-Socket" H 18900 3580 50  0001 L CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/464/IDT_7132_DST_20180703-881829.pdf" H 15050 3780 50  0001 L CNN
+F 4 "SRAM 2K x 8 Dual-Port RAM Memory & Logic/ Master" H 15050 3680 50  0001 L CNN "Description"
+F 5 "3.8" H 17900 780 50  0001 L CNN "Height"
+F 6 "IDT (Integrated Device Technology)" H 15050 3580 50  0001 L CNN "Manufacturer_Name"
+F 7 "7132LA100PDG" H 16600 2780 50  0001 L CNN "Manufacturer_Part_Number"
+	1    17750 3480
+	1    0    0    -1  
+$EndComp
+$Comp
+L SamacSys_Parts:71321SA55JG8 Z5-6
+U 1 1 5D5FDF41
+P 15160 4080
+F 0 "Z5-6" H 15850 4760 50  0000 C CNN
+F 1 "7132LA100PDG" H 15850 4660 50  0000 C CNN
+F 2 "Package_LCC:PLCC-52_THT-Socket" H 16310 4180 50  0001 L CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/464/IDT_7132_DST_20180703-881829.pdf" H 12460 4380 50  0001 L CNN
+F 4 "SRAM 2K x 8 Dual-Port RAM Memory & Logic/ Master" H 12460 4280 50  0001 L CNN "Description"
+F 5 "3.8" H 15310 1380 50  0001 L CNN "Height"
+F 6 "IDT (Integrated Device Technology)" H 12460 4180 50  0001 L CNN "Manufacturer_Name"
+F 7 "7132LA100PDG" H 14010 3380 50  0001 L CNN "Manufacturer_Part_Number"
+	1    15160 4080
+	1    0    0    -1  
+$EndComp
+$Comp
+L SamacSys_Parts:2N2369A Q2
+U 1 1 5D2BC8AD
+P 1600 10000
+F 0 "Q2" H 2150 10050 50  0000 L CNN
+F 1 "2N2369A" H 2150 10000 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-18-3" H 2150 9850 50  0001 L CNN
+F 3 "https://my.centralsemi.com/get_document.php?cmp=1&mergetype=pd&mergepath=pd&pdf_id=2N2369A.PDF" H 2150 9750 50  0001 L CNN
+F 4 "Bipolar Transistors - BJT NPN Fast SW SS" H 2150 9650 50  0001 L CNN "Description"
+F 5 "Central Semiconductor" H 2150 9250 50  0001 L CNN "Manufacturer_Name"
+F 6 "2N2369A" H 2150 9150 50  0001 L CNN "Manufacturer_Part_Number"
+	1    1600 10000
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS02 Z103
+U 5 1 5D2AB2EA
+P 11615 15995
+F 0 "Z103" H 11885 16090 50  0000 L CNN
+F 1 "74HCT02" H 11885 15990 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 11615 15995 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 11615 15995 50  0001 C CNN
+	5    11615 15995
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 POWER-9V-DC1
+U 1 1 613486B0
+P 3760 15950
+F 0 "POWER-9V-DC1" H 3955 15740 50  0000 C CNN
+F 1 "Conn_01x02" H 3905 16065 50  0000 C CNN
+F 2 "cuipj:CUI_PJ-036C" H 3760 15950 50  0001 C CNN
+F 3 "~" H 3760 15950 50  0001 C CNN
+	1    3760 15950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 COMPOSITE1
+U 1 1 5F41E7FB
+P 19400 2000
+F 0 "COMPOSITE1" H 19500 2000 50  0000 L CNN
+F 1 "Conn_01x02" H 19500 1900 50  0000 L CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 19400 2000 50  0001 C CNN
+F 3 "~" H 19400 2000 50  0001 C CNN
+	1    19400 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 AUDIO-IN1
+U 1 1 5F0EE95E
+P 15660 10990
+F 0 "AUDIO-IN1" H 15750 11030 50  0000 L CNN
+F 1 "Conn_01x02" H 15750 10930 50  0000 L CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 15660 10990 50  0001 C CNN
+F 3 "~" H 15660 10990 50  0001 C CNN
+	1    15660 10990
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 AUDIO-OUT1
+U 1 1 5EC3A046
+P 15785 14200
+F 0 "AUDIO-OUT1" H 15900 14200 50  0000 L CNN
+F 1 "Conn_01x02" H 15900 14100 50  0000 L CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 15785 14200 50  0001 C CNN
+F 3 "~" H 15785 14200 50  0001 C CNN
+	1    15785 14200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Speaker SP1
+U 1 1 5D362C49
+P 15760 11640
+F 0 "SP1" H 15950 11680 50  0000 L CNN
+F 1 "Speaker" H 15950 11580 50  0000 L CNN
+F 2 "Buzzer_Beeper:MagneticBuzzer_ProSignal_ABI-009-RC" H 15760 11440 50  0001 C CNN
+F 3 "~" H 15750 11590 50  0001 C CNN
+	1    15760 11640
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS02 Z24
+U 5 1 629F3A79
+P 12050 15995
+F 0 "Z24" H 12315 16060 50  0000 L CNN
+F 1 "74HCT02" H 12315 15960 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 12050 15995 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 12050 15995 50  0001 C CNN
+	5    12050 15995
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS367 Z15
+U 1 1 68C1909B
+P 12485 14400
+F 0 "Z15" V 12435 15165 50  0000 L CNN
+F 1 "74HCT367" V 12485 15165 50  0000 L CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 12485 14400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS367" H 12485 14400 50  0001 C CNN
+	1    12485 14400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5D20366C
+P 14935 14200
+F 0 "C3" H 14995 14215 59  0000 L BNN
+F 1 "47nF" H 14995 14015 59  0000 L BNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 14935 14200 50  0001 C CNN
+F 3 "" H 14935 14200 50  0001 C CNN
+	1    14935 14200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5D203666
+P 14685 13950
+F 0 "R5" H 14535 14009 59  0000 L BNN
+F 1 "12k" H 14535 13820 59  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" H 14685 13950 50  0001 C CNN
+F 3 "" H 14685 13950 50  0001 C CNN
+	1    14685 13950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5D203660
+P 15185 13955
+F 0 "R6" H 15035 14014 59  0000 L BNN
+F 1 "1K" H 15035 13825 59  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" H 15185 13955 50  0001 C CNN
+F 3 "" H 15185 13955 50  0001 C CNN
+	1    15185 13955
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS273 Z107
+U 1 1 6551D9F2
+P 10490 6350
+F 0 "Z107" H 10505 7345 50  0000 C CNN
+F 1 "74HCT273" H 10505 7245 50  0000 C CNN
+F 2 "Package_DIP:DIP-20_W7.62mm" H 10490 6350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS273" H 10490 6350 50  0001 C CNN
+	1    10490 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS365 Z105
+U 1 1 656774FB
+P 12185 6250
+F 0 "Z105" H 12200 7150 50  0000 C CNN
+F 1 "74HCT365" H 12200 7050 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 12185 6250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS365" H 12185 6250 50  0001 C CNN
+	1    12185 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS04 Z102
+U 5 1 66816516
+P 11260 13285
+F 0 "Z102" V 11175 13475 50  0000 L CNN
+F 1 "74HCT04" V 11275 13475 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 11260 13285 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 11260 13285 50  0001 C CNN
+	5    11260 13285
+	0    1    1    0   
+$EndComp
+$Comp
+L 74xx:74LS04 Z102
+U 1 1 659CE7DB
+P 10685 8150
+F 0 "Z102" H 10700 8500 50  0000 C CNN
+F 1 "74HCT04" H 10700 8400 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 10685 8150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 10685 8150 50  0001 C CNN
+	1    10685 8150
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS365 Z106
+U 1 1 6567AE36
+P 12185 7750
+F 0 "Z106" H 12200 8650 50  0000 C CNN
+F 1 "74HCT365" H 12200 8550 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 12185 7750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS365" H 12185 7750 50  0001 C CNN
+	1    12185 7750
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS02 Z103
+U 2 1 646C7790
+P 8655 11790
+F 0 "Z103" H 8675 12155 50  0000 C CNN
+F 1 "74HCT02" H 8675 12055 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 8655 11790 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 8655 11790 50  0001 C CNN
+	2    8655 11790
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS02 Z103
+U 1 1 646C2C2C
+P 8655 12890
+F 0 "Z103" H 8700 13250 50  0000 C CNN
+F 1 "74HCT02" H 8700 13150 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 8655 12890 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 8655 12890 50  0001 C CNN
+	1    8655 12890
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS04 Z102
+U 3 1 642C5FDD
+P 7055 11990
+F 0 "Z102" H 7100 12330 50  0000 C CNN
+F 1 "74HCT04" H 7100 12230 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 7055 11990 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 7055 11990 50  0001 C CNN
+	3    7055 11990
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS04 Z102
+U 2 1 642C5250
+P 7955 12990
+F 0 "Z102" H 8000 13330 50  0000 C CNN
+F 1 "74HCT04" H 8000 13230 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 7955 12990 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 7955 12990 50  0001 C CNN
+	2    7955 12990
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS30 Z104
+U 1 1 63D63D16
+P 7855 12290
+F 0 "Z104" H 7900 12830 50  0000 C CNN
+F 1 "74HCT30" H 7900 12730 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 7855 12290 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS30" H 7855 12290 50  0001 C CNN
+	1    7855 12290
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C100
+U 1 1 634930CF
+P 16805 9500
+F 0 "C100" H 16905 9555 50  0000 L CNN
+F 1 "47N" H 16905 9455 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 16805 9500 50  0001 C CNN
+F 3 "~" H 16805 9500 50  0001 C CNN
+	1    16805 9500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R104
+U 1 1 634930C9
+P 17055 9095
+F 0 "R104" V 16900 9050 50  0000 C CNN
+F 1 "47k" V 16800 9050 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 16985 9095 50  0001 C CNN
+F 3 "~" H 17055 9095 50  0001 C CNN
+	1    17055 9095
 	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R105
+U 1 1 634930C1
+P 17605 8545
+F 0 "R105" H 17680 8595 50  0000 L CNN
+F 1 "47k" H 17680 8545 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 17535 8545 50  0001 C CNN
+F 3 "~" H 17605 8545 50  0001 C CNN
+	1    17605 8545
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C102
+U 1 1 634930B9
+P 17360 8795
+F 0 "C102" V 17110 8840 50  0000 C CNN
+F 1 "47nF" V 17210 8840 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 17360 8795 50  0001 C CNN
+F 3 "~" H 17360 8795 50  0001 C CNN
+	1    17360 8795
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Crystal X2
+U 1 1 634930B3
+P 17055 8795
+F 0 "X2" H 17055 8995 59  0000 C CNN
+F 1 "CRYSTALHC49U-V 6.556MHz" H 17065 8955 59  0001 C CNN
+F 2 "Crystal:Crystal_HC49-U_Vertical" H 17055 8795 50  0001 C CNN
+F 3 "" H 17055 8795 50  0001 C CNN
+	1    17055 8795
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:2N3904 Q100
+U 1 1 63493097
+P 17505 9295
+F 0 "Q100" H 17310 9205 50  0000 L CNN
+F 1 "2N3904" H 17295 9440 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 17705 9220 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 17505 9295 50  0001 L CNN
+	1    17505 9295
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS21 Z101
+U 2 1 6372EB23
+P 4485 4660
+F 0 "Z101" H 4530 5050 50  0000 C CNN
+F 1 "74HCT21" H 4530 4950 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 4485 4660 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS21" H 4485 4660 50  0001 C CNN
+	2    4485 4660
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS11 Z22
+U 3 1 69893729
+P 6440 5900
+F 0 "Z22" H 6480 6265 50  0000 C CNN
+F 1 "74HCT11" H 6480 6165 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 6440 5900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 6440 5900 50  0001 C CNN
+	3    6440 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS138 Z13
+U 1 1 7397220B
+P 2895 5600
+F 0 "Z13" H 2900 6400 50  0000 C CNN
+F 1 "74HCT138" H 2900 6300 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 2895 5600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS138" H 2895 5600 50  0001 C CNN
+	1    2895 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS138 Z100
+U 1 1 60E79DD4
+P 7345 4765
+F 0 "Z100" H 7365 5605 50  0000 C CNN
+F 1 "74HCT138" H 7365 5505 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 7345 4765 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS138" H 7345 4765 50  0001 C CNN
+	1    7345 4765
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C6
+U 1 1 5E9F8ADD
+P 14260 10990
+F 0 "C6" V 14010 10990 50  0000 C CNN
+F 1 "47nF" V 14110 10990 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 14260 10990 50  0001 C CNN
+F 3 "~" H 14260 10990 50  0001 C CNN
+	1    14260 10990
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5E5189FF
+P 14660 11790
+F 0 "C2" H 14560 11840 50  0000 R CNN
+F 1 "47nF" H 14560 11790 50  0000 R CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 14660 11790 50  0001 C CNN
+F 3 "~" H 14660 11790 50  0001 C CNN
+	1    14660 11790
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 5DE97B8D
+P 19165 9470
+F 0 "C1" H 19265 9525 50  0000 L CNN
+F 1 "47nF" H 19265 9425 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 19165 9470 50  0001 C CNN
+F 3 "~" H 19165 9470 50  0001 C CNN
+	1    19165 9470
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5DAB7AD2
+P 19415 9065
+F 0 "R1" V 19265 9065 50  0000 C CNN
+F 1 "47k" V 19165 9065 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 19345 9065 50  0001 C CNN
+F 3 "~" H 19415 9065 50  0001 C CNN
+	1    19415 9065
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 5D7CD5A8
+P 19965 8515
+F 0 "R9" H 20040 8565 50  0000 L CNN
+F 1 "47k" H 20040 8515 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 19895 8515 50  0001 C CNN
+F 3 "~" H 19965 8515 50  0001 C CNN
+	1    19965 8515
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C5
+U 1 1 5D3DDD66
+P 19720 8765
+F 0 "C5" V 19470 8810 50  0000 C CNN
+F 1 "47nF" V 19570 8810 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 19720 8765 50  0001 C CNN
+F 3 "~" H 19720 8765 50  0001 C CNN
+	1    19720 8765
+	0    1    1    0   
+$EndComp
+$Comp
+L Regulator_Linear:LM7805_TO220 IC1
+U 1 1 735D1281
+P 6430 15630
+F 0 "IC1" H 6455 15905 50  0000 C CNN
+F 1 "LM7805_TO220" H 6455 15805 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 6430 15855 50  0001 C CIN
+F 3 "http://www.fairchildsemi.com/ds/LM/LM7805.pdf" H 6430 15580 50  0001 C CNN
+	1    6430 15630
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS367 Z14
+U 1 1 70940791
+P 6000 12900
+F 0 "Z14" V 5830 12360 50  0000 R CNN
+F 1 "74HCT367" V 6350 12695 50  0000 R CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 6000 12900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS367" H 6000 12900 50  0001 C CNN
+	1    6000 12900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R24
+U 1 1 710310B2
+P 1850 8300
+F 0 "R24" H 1700 8359 59  0000 L BNN
+F 1 "10k" H 1700 8170 59  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 1850 8300 50  0001 C CNN
+F 3 "" H 1850 8300 50  0001 C CNN
+	1    1850 8300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L 74xx:74LS166 Z12
+U 1 1 6FFDAE7B
+P 20695 3475
+F 0 "Z12" V 21420 3470 50  0000 C CNN
+F 1 "74HCT166" V 21320 3470 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 20695 3475 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS166" H 20695 3475 50  0001 C CNN
+	1    20695 3475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L 74xx:74LS86 Z23
+U 5 1 6A760723
+P 9435 16000
+F 0 "Z23" H 9695 16075 50  0000 L CNN
+F 1 "74HCT86" H 9695 15975 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 9435 16000 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 9435 16000 50  0001 C CNN
+	5    9435 16000
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS393 Z9
+U 2 1 5E382AB8
+P 17600 12100
+F 0 "Z9" H 17630 12485 50  0000 C CNN
+F 1 "74HCT393" H 17630 12385 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 17600 12100 50  0001 C CNN
+F 3 "74xx\\74LS393.pdf" H 17600 12100 50  0001 C CNN
+	2    17600 12100
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS00 Z19
+U 5 1 66907DE2
+P 15150 15995
+F 0 "Z19" H 15420 16080 50  0000 L CNN
+F 1 "74HCT00" H 15420 15980 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 15150 15995 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 15150 15995 50  0001 C CNN
+	5    15150 15995
+	1    0    0    -1  
+$EndComp
+$Comp
+L Memory_EPROM:27C256-PLCC Z1-2
+U 1 1 5D757EDC
+P 5900 7500
+F 0 "Z1-2" H 5900 8800 50  0000 C CNN
+F 1 "27C256" H 5900 8700 50  0000 C CNN
+F 2 "Package_LCC:PLCC-32_THT_Socket_11.4x14.0mm_P1.27mm" H 5900 7500 50  0001 C CNN
+F 3 "http://datasheet.octopart.com/D27256-2-Intel-datasheet-17852618.pdf" H 5900 7500 50  0001 C CNN
+	1    5900 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 Z23
+U 1 1 6A7508F4
+P 18205 9195
+F 0 "Z23" H 18230 9545 50  0000 C CNN
+F 1 "74HCT86" H 18230 9445 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 18205 9195 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 18205 9195 50  0001 C CNN
+	1    18205 9195
+	1    0    0    -1  
+$EndComp
+$Comp
+L SamacSys_Parts:K104K10X7RF53H5 C19
+U 1 1 5D79AD57
+P 8595 15765
+F 0 "C19" V 8760 15930 50  0000 L CNN
+F 1 "100nf" V 8860 15930 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8945 15815 50  0001 L CNN
+F 3 "http://uk.rs-online.com/web/p/products/8523267" H 8945 15715 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 8945 15615 50  0001 L CNN "Description"
+F 5 "3" H 8945 15515 50  0001 L CNN "Height"
+F 6 "8523267" H 8945 15415 50  0001 L CNN "RS Part Number"
+F 7 "http://uk.rs-online.com/web/p/products/8523267" H 8945 15315 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 8945 15215 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 8945 15115 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 8945 15015 50  0001 L CNN "Allied_Number"
+	1    8595 15765
+	0    1    1    0   
+$EndComp
+$Comp
+L SamacSys_Parts:K104K10X7RF53H5 C14
+U 1 1 5D956C31
+P 7455 15765
+F 0 "C14" V 7620 15930 50  0000 L CNN
+F 1 "100nf" V 7720 15930 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 7805 15815 50  0001 L CNN
+F 3 "http://uk.rs-online.com/web/p/products/8523267" H 7805 15715 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 7805 15615 50  0001 L CNN "Description"
+F 5 "3" H 7805 15515 50  0001 L CNN "Height"
+F 6 "8523267" H 7805 15415 50  0001 L CNN "RS Part Number"
+F 7 "http://uk.rs-online.com/web/p/products/8523267" H 7805 15315 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 7805 15215 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 7805 15115 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 7805 15015 50  0001 L CNN "Allied_Number"
+	1    7455 15765
+	0    1    1    0   
+$EndComp
+$Comp
+L SamacSys_Parts:K104K10X7RF53H5 C20
+U 1 1 5D878331
+P 8855 15765
+F 0 "C20" V 9020 15930 50  0000 L CNN
+F 1 "100nf" V 9120 15930 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 9205 15815 50  0001 L CNN
+F 3 "http://uk.rs-online.com/web/p/products/8523267" H 9205 15715 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 9205 15615 50  0001 L CNN "Description"
+F 5 "3" H 9205 15515 50  0001 L CNN "Height"
+F 6 "8523267" H 9205 15415 50  0001 L CNN "RS Part Number"
+F 7 "http://uk.rs-online.com/web/p/products/8523267" H 9205 15315 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 9205 15215 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 9205 15115 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 9205 15015 50  0001 L CNN "Allied_Number"
+	1    8855 15765
+	0    1    1    0   
+$EndComp
+$Comp
+L SamacSys_Parts:K104K10X7RF53H5 C18
+U 1 1 5D6BE2CF
+P 8350 15765
+F 0 "C18" V 8515 15930 50  0000 L CNN
+F 1 "100nf" V 8615 15930 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8700 15815 50  0001 L CNN
+F 3 "http://uk.rs-online.com/web/p/products/8523267" H 8700 15715 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 8700 15615 50  0001 L CNN "Description"
+F 5 "3" H 8700 15515 50  0001 L CNN "Height"
+F 6 "8523267" H 8700 15415 50  0001 L CNN "RS Part Number"
+F 7 "http://uk.rs-online.com/web/p/products/8523267" H 8700 15315 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 8700 15215 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 8700 15115 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 8700 15015 50  0001 L CNN "Allied_Number"
+	1    8350 15765
+	0    1    1    0   
+$EndComp
+$Comp
+L SamacSys_Parts:K104K10X7RF53H5 C17
+U 1 1 5D5E2433
+P 8125 15765
+F 0 "C17" V 8290 15930 50  0000 L CNN
+F 1 "100nf" V 8390 15930 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8475 15815 50  0001 L CNN
+F 3 "http://uk.rs-online.com/web/p/products/8523267" H 8475 15715 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 8475 15615 50  0001 L CNN "Description"
+F 5 "3" H 8475 15515 50  0001 L CNN "Height"
+F 6 "8523267" H 8475 15415 50  0001 L CNN "RS Part Number"
+F 7 "http://uk.rs-online.com/web/p/products/8523267" H 8475 15315 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 8475 15215 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 8475 15115 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 8475 15015 50  0001 L CNN "Allied_Number"
+	1    8125 15765
+	0    1    1    0   
+$EndComp
+$Comp
+L SamacSys_Parts:K104K10X7RF53H5 C16
+U 1 1 5D506FED
+P 7905 15765
+F 0 "C16" V 8070 15930 50  0000 L CNN
+F 1 "100nf" V 8170 15930 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8255 15815 50  0001 L CNN
+F 3 "http://uk.rs-online.com/web/p/products/8523267" H 8255 15715 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 8255 15615 50  0001 L CNN "Description"
+F 5 "3" H 8255 15515 50  0001 L CNN "Height"
+F 6 "8523267" H 8255 15415 50  0001 L CNN "RS Part Number"
+F 7 "http://uk.rs-online.com/web/p/products/8523267" H 8255 15315 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 8255 15215 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 8255 15115 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 8255 15015 50  0001 L CNN "Allied_Number"
+	1    7905 15765
+	0    1    1    0   
+$EndComp
+$Comp
+L SamacSys_Parts:K104K10X7RF53H5 C15
+U 1 1 5D42C6C3
+P 7680 15765
+F 0 "C15" V 7845 15930 50  0000 L CNN
+F 1 "100nf" V 7945 15930 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8030 15815 50  0001 L CNN
+F 3 "http://uk.rs-online.com/web/p/products/8523267" H 8030 15715 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 8030 15615 50  0001 L CNN "Description"
+F 5 "3" H 8030 15515 50  0001 L CNN "Height"
+F 6 "8523267" H 8030 15415 50  0001 L CNN "RS Part Number"
+F 7 "http://uk.rs-online.com/web/p/products/8523267" H 8030 15315 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 8030 15215 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 8030 15115 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 8030 15015 50  0001 L CNN "Allied_Number"
+	1    7680 15765
+	0    1    1    0   
+$EndComp
+$Comp
+L Memory_RAM:AS6C4008-55PCN Z3-4
+U 1 1 5D17A78F
+P 5930 10080
+F 0 "Z3-4" H 5940 11385 50  0000 C CNN
+F 1 "AS6C4008-55PCN" H 5940 11285 50  0000 C CNN
+F 2 "Package_DIP:DIP-32_W15.24mm" H 5930 10180 50  0001 C CNN
+F 3 "https://www.alliancememory.com/wp-content/uploads/pdf/AS6C4008.pdf" H 5930 10180 50  0001 C CNN
+	1    5930 10080
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS11 Z22
+U 4 1 6989826C
+P 10320 15995
+F 0 "Z22" H 10560 16050 50  0000 L CNN
+F 1 "74HCT11" H 10560 15950 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 10320 15995 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 10320 15995 50  0001 C CNN
+	4    10320 15995
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 Z23
+U 4 1 6A75C654
+P 17400 2000
+F 0 "Z23" H 17440 2340 50  0000 C CNN
+F 1 "74HCT86" H 17440 2240 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 17400 2000 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 17400 2000 50  0001 C CNN
+	4    17400 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 Z23
+U 3 1 6A75883C
+P 20565 9165
+F 0 "Z23" H 20565 9515 50  0000 C CNN
+F 1 "74HCT86" H 20565 9415 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 20565 9165 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 20565 9165 50  0001 C CNN
+	3    20565 9165
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS11 Z21
+U 4 1 69DE0CE8
+P 9880 16000
+F 0 "Z21" H 10110 16090 50  0000 L CNN
+F 1 "74HCT11" H 10110 15990 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 9880 16000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 9880 16000 50  0001 C CNN
+	4    9880 16000
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS11 Z21
+U 3 1 69DDCF8B
+P 19100 13100
+F 0 "Z21" H 19110 13465 50  0000 C CNN
+F 1 "74HCT11" H 19110 13365 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 19100 13100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 19100 13100 50  0001 C CNN
+	3    19100 13100
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS11 Z21
+U 2 1 69DD9196
+P 20800 14600
+F 0 "Z21" H 20820 14970 50  0000 C CNN
+F 1 "74HCT11" H 20820 14870 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 20800 14600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 20800 14600 50  0001 C CNN
+	2    20800 14600
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS11 Z21
+U 1 1 69DD588D
+P 19200 15000
+F 0 "Z21" H 19200 15340 50  0000 C CNN
+F 1 "74HCT11" H 19200 15240 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 19200 15000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 19200 15000 50  0001 C CNN
+	1    19200 15000
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS11 Z22
+U 2 1 6988F36D
+P 14000 1500
+F 0 "Z22" H 14000 1880 50  0000 C CNN
+F 1 "74HCT11" H 14000 1780 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 14000 1500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 14000 1500 50  0001 C CNN
+	2    14000 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS11 Z22
+U 1 1 6988D687
+P 20800 12400
+F 0 "Z22" H 20805 12780 50  0000 C CNN
+F 1 "74HCT11" H 20805 12680 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 20800 12400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 20800 12400 50  0001 C CNN
+	1    20800 12400
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 Z20
+U 5 1 68B9DD2C
+P 10755 15995
+F 0 "Z20" H 11015 16070 50  0000 L CNN
+F 1 "74HCT08" H 11015 15970 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 10755 15995 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 10755 15995 50  0001 C CNN
+	5    10755 15995
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 Z20
+U 4 1 68B9A332
+P 13600 2000
+F 0 "Z20" H 13620 2360 50  0000 C CNN
+F 1 "74HCT08" H 13620 2260 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 13600 2000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 13600 2000 50  0001 C CNN
+	4    13600 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 Z20
+U 3 1 68B9636E
+P 15300 1600
+F 0 "Z20" H 15315 1950 50  0000 C CNN
+F 1 "74HCT08" H 15315 1850 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 15300 1600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 15300 1600 50  0001 C CNN
+	3    15300 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 Z20
+U 2 1 68B918AB
+P 12800 1500
+F 0 "Z20" H 12825 1855 50  0000 C CNN
+F 1 "74HCT08" H 12825 1755 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 12800 1500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 12800 1500 50  0001 C CNN
+	2    12800 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 Z20
+U 1 1 68B8CAFF
+P 20000 15100
+F 0 "Z20" H 20025 15455 50  0000 C CNN
+F 1 "74HCT08" H 20025 15355 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 20000 15100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 20000 15100 50  0001 C CNN
+	1    20000 15100
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS02 Z25
+U 5 1 67CF6A6D
+P 11180 15995
+F 0 "Z25" H 11450 16090 50  0000 L CNN
+F 1 "74HCT02" H 11450 15990 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 11180 15995 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 11180 15995 50  0001 C CNN
+	5    11180 15995
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS02 Z25
+U 4 1 67CF2BFC
+P 20100 12400
+F 0 "Z25" H 20140 12785 50  0000 C CNN
+F 1 "74HCT02" H 20140 12685 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 20100 12400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 20100 12400 50  0001 C CNN
+	4    20100 12400
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS02 Z25
+U 2 1 67CEAAFE
+P 21600 13600
+F 0 "Z25" H 21605 13960 50  0000 C CNN
+F 1 "74HCT02" H 21605 13860 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 21600 13600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 21600 13600 50  0001 C CNN
+	2    21600 13600
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS02 Z25
+U 1 1 67CE859F
+P 11600 1800
+F 0 "Z25" H 11600 2150 50  0000 C CNN
+F 1 "74HCT02" H 11600 2050 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 11600 1800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 11600 1800 50  0001 C CNN
+	1    11600 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS00 Z19
+U 2 1 668FCEF0
+P 15300 900
+F 0 "Z19" H 15335 1270 50  0000 C CNN
+F 1 "74HCT00" H 15335 1170 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 15300 900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 15300 900 50  0001 C CNN
+	2    15300 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS00 Z19
+U 1 1 668F994D
+P 11600 1200
+F 0 "Z19" H 11605 1570 50  0000 C CNN
+F 1 "74HCT00" H 11605 1470 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 11600 1200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 11600 1200 50  0001 C CNN
+	1    11600 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS04 Z102
+U 7 1 64E78705
+P 14710 15995
+F 0 "Z102" H 14955 16070 50  0000 L CNN
+F 1 "74HCT04" H 14955 15970 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 14710 15995 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 14710 15995 50  0001 C CNN
+	7    14710 15995
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS04 Z102
+U 4 1 64E6F857
+P 21700 14600
+F 0 "Z102" H 21700 14950 50  0000 C CNN
+F 1 "74HCT04" H 21700 14850 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 21700 14600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 21700 14600 50  0001 C CNN
+	4    21700 14600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4148 D1
+U 1 1 5DE721C7
+P 18500 2200
+F 0 "D1" V 18420 2150 50  0000 L CNN
+F 1 "1N4148" V 18500 2285 50  0001 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 18500 2025 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 18500 2200 50  0001 C CNN
+	1    18500 2200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L 74xx:74LS74 Z27
+U 3 1 62A1CDDB
+P 14250 16000
+F 0 "Z27" H 14485 16080 50  0000 L CNN
+F 1 "74HCT74" H 14485 15980 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 14250 16000 50  0001 C CNN
+F 3 "74xx/74hc_hct74.pdf" H 14250 16000 50  0001 C CNN
+	3    14250 16000
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS74 Z27
+U 1 1 62A1631E
+P 13165 11090
+F 0 "Z27" H 13375 11350 50  0000 C CNN
+F 1 "74HCT74" H 12935 11340 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 13165 11090 50  0001 C CNN
+F 3 "74xx/74hc_hct74.pdf" H 13165 11090 50  0001 C CNN
+	1    13165 11090
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS74 Z27
+U 2 1 62A19C05
+P 16600 2000
+F 0 "Z27" H 16810 2350 50  0000 C CNN
+F 1 "74HCT74" H 16825 2255 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 16600 2000 50  0001 C CNN
+F 3 "74xx/74hc_hct74.pdf" H 16600 2000 50  0001 C CNN
+	2    16600 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC237 Q3
+U 1 1 6252DD48
+P 14560 12790
+F 0 "Q3" H 14760 12840 50  0000 L CNN
+F 1 "BC237" H 14760 12790 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 14760 12715 50  0001 L CIN
+F 3 "http://www.onsemi.com/pub_link/Collateral/BC237-D.PDF" H 14560 12790 50  0001 L CNN
+	1    14560 12790
+	1    0    0    -1  
+$EndComp
+$Comp
+L SamacSys_Parts:K104K10X7RF53H5 C21
+U 1 1 618E9BE1
+P 9110 15770
+F 0 "C21" V 9275 15920 50  0000 L CNN
+F 1 "100nf" V 9375 15920 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 9460 15820 50  0001 L CNN
+F 3 "http://uk.rs-online.com/web/p/products/8523267" H 9460 15720 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 9460 15620 50  0001 L CNN "Description"
+F 5 "3" H 9460 15520 50  0001 L CNN "Height"
+F 6 "8523267" H 9460 15420 50  0001 L CNN "RS Part Number"
+F 7 "http://uk.rs-online.com/web/p/products/8523267" H 9460 15320 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 9460 15220 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 9460 15120 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 9460 15020 50  0001 L CNN "Allied_Number"
+	1    9110 15770
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:CP C12
+U 1 1 5F0A734F
+P 6935 16015
+F 0 "C12" H 6785 15920 50  0000 R CNN
+F 1 "100uf" H 6785 16020 50  0000 R CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 6973 15865 50  0001 C CNN
+F 3 "~" H 6935 16015 50  0001 C CNN
+	1    6935 16015
+	1    0    0    1   
+$EndComp
+$Comp
+L SamacSys_Parts:K104K10X7RF53H5 C13
+U 1 1 5FC78850
+P 7215 15765
+F 0 "C13" V 7380 15930 50  0000 L CNN
+F 1 "100nf" V 7480 15930 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 7565 15815 50  0001 L CNN
+F 3 "http://uk.rs-online.com/web/p/products/8523267" H 7565 15715 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 7565 15615 50  0001 L CNN "Description"
+F 5 "3" H 7565 15515 50  0001 L CNN "Height"
+F 6 "8523267" H 7565 15415 50  0001 L CNN "RS Part Number"
+F 7 "http://uk.rs-online.com/web/p/products/8523267" H 7565 15315 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 7565 15215 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 7565 15115 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 7565 15015 50  0001 L CNN "Allied_Number"
+	1    7215 15765
+	0    1    1    0   
+$EndComp
+$Comp
+L SamacSys_Parts:K104K10X7RF53H5 C11
+U 1 1 5F75CDD3
+P 5920 15765
+F 0 "C11" V 6085 15915 50  0000 L CNN
+F 1 "100nf" V 6185 15915 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 6270 15815 50  0001 L CNN
+F 3 "http://uk.rs-online.com/web/p/products/8523267" H 6270 15715 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 6270 15615 50  0001 L CNN "Description"
+F 5 "3" H 6270 15515 50  0001 L CNN "Height"
+F 6 "8523267" H 6270 15415 50  0001 L CNN "RS Part Number"
+F 7 "http://uk.rs-online.com/web/p/products/8523267" H 6270 15315 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 6270 15215 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 6270 15115 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 6270 15015 50  0001 L CNN "Allied_Number"
+	1    5920 15765
+	0    1    1    0   
+$EndComp
+$Comp
+L SamacSys_Parts:K104K10X7RF53H5 C10
+U 1 1 5E828036
+P 5295 15765
+F 0 "C10" V 5535 15905 50  0000 L CNN
+F 1 "100nf" V 5550 15915 50  0001 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 5645 15815 50  0001 L CNN
+F 3 "http://uk.rs-online.com/web/p/products/8523267" H 5645 15715 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 5645 15615 50  0001 L CNN "Description"
+F 5 "3" H 5645 15515 50  0001 L CNN "Height"
+F 6 "8523267" H 5645 15415 50  0001 L CNN "RS Part Number"
+F 7 "http://uk.rs-online.com/web/p/products/8523267" H 5645 15315 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 5645 15215 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 5645 15115 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 5645 15015 50  0001 L CNN "Allied_Number"
+	1    5295 15765
+	0    1    1    0   
+$EndComp
+$Comp
+L 74xx:74LS393 Z10
+U 3 1 5D1978A5
+P 13375 15995
+F 0 "Z10" H 13605 16085 50  0000 L CNN
+F 1 "74HCT393" H 13605 15985 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 13375 15995 50  0001 C CNN
+F 3 "74xx\\74LS393.pdf" H 13375 15995 50  0001 C CNN
+	3    13375 15995
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS393 Z11
+U 3 1 5D2736AB
+P 13815 15995
+F 0 "Z11" H 14045 16085 50  0000 L CNN
+F 1 "74HCT393" H 14045 15985 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 13815 15995 50  0001 C CNN
+F 3 "74xx\\74LS393.pdf" H 13815 15995 50  0001 C CNN
+	3    13815 15995
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS393 Z11
+U 2 1 5D2736A1
+P 17600 15900
+F 0 "Z11" H 17630 16285 50  0000 C CNN
+F 1 "74HCT393" H 17630 16185 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 17600 15900 50  0001 C CNN
+F 3 "74xx\\74LS393.pdf" H 17600 15900 50  0001 C CNN
+	2    17600 15900
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS393 Z11
+U 1 1 5D273697
+P 17600 15000
+F 0 "Z11" H 17635 15425 50  0000 C CNN
+F 1 "74HCT393" H 17635 15325 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 17600 15000 50  0001 C CNN
+F 3 "74xx\\74LS393.pdf" H 17600 15000 50  0001 C CNN
+	1    17600 15000
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS393 Z10
+U 2 1 5D19789B
+P 17600 14000
+F 0 "Z10" H 17630 14385 50  0000 C CNN
+F 1 "74HCT393" H 17630 14285 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 17600 14000 50  0001 C CNN
+F 3 "74xx\\74LS393.pdf" H 17600 14000 50  0001 C CNN
+	2    17600 14000
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS393 Z10
+U 1 1 5D197891
+P 17600 13000
+F 0 "Z10" H 17635 13425 50  0000 C CNN
+F 1 "74HCT393" H 17635 13325 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 17600 13000 50  0001 C CNN
+F 3 "74xx\\74LS393.pdf" H 17600 13000 50  0001 C CNN
+	1    17600 13000
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS393 Z9
+U 3 1 5E382F4F
+P 12945 15995
+F 0 "Z9" H 13175 16085 50  0000 L CNN
+F 1 "74HCT393" H 13175 15985 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 12945 15995 50  0001 C CNN
+F 3 "74xx\\74LS393.pdf" H 12945 15995 50  0001 C CNN
+	3    12945 15995
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS393 Z9
+U 1 1 5E377223
+P 17600 11200
+F 0 "Z9" H 17635 11625 50  0000 C CNN
+F 1 "74HCT393" H 17635 11525 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 17600 11200 50  0001 C CNN
+F 3 "74xx\\74LS393.pdf" H 17600 11200 50  0001 C CNN
+	1    17600 11200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:2N3904 Q1
+U 1 1 5D24EA39
+P 19865 9265
+F 0 "Q1" H 19670 9175 50  0000 L CNN
+F 1 "2N3904" H 19655 9410 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 20065 9190 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 19865 9265 50  0001 L CNN
+	1    19865 9265
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS21 Z101
+U 1 1 637166EE
+P 5600 5650
+F 0 "Z101" H 5620 6040 50  0000 C CNN
+F 1 "74HCT21" H 5620 5940 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 5600 5650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS21" H 5600 5650 50  0001 C CNN
+	1    5600 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS02 Z24
+U 1 1 620DC700
+P 10360 11890
+F 0 "Z24" H 10360 12240 50  0000 C CNN
+F 1 "74HCT02" H 10360 12140 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 10360 11890 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 10360 11890 50  0001 C CNN
+	1    10360 11890
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS02 Z24
+U 4 1 620F1165
+P 12460 12790
+F 0 "Z24" H 12460 13140 50  0000 C CNN
+F 1 "74HCT02" H 12460 13040 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 12460 12790 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 12460 12790 50  0001 C CNN
+	4    12460 12790
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS02 Z24
+U 3 1 620EA48A
+P 12460 11990
+F 0 "Z24" H 12460 12340 50  0000 C CNN
+F 1 "74HCT02" H 12460 12240 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 12460 11990 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 12460 11990 50  0001 C CNN
+	3    12460 11990
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS02 Z24
+U 2 1 620E3DB8
+P 10360 12890
+F 0 "Z24" H 10360 13240 50  0000 C CNN
+F 1 "74HCT02" H 10360 13140 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 10360 12890 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 10360 12890 50  0001 C CNN
+	2    10360 12890
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x25_Odd_Even Z80CPUOUT1
+U 1 1 612D2D50
+P 1875 12840
+F 0 "Z80CPUOUT1" H 1950 14280 50  0000 C CNN
+F 1 "Conn_02x25_Odd_Even" H 1950 14180 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x25_P2.54mm_Vertical" H 1875 12840 50  0001 C CNN
+F 3 "~" H 1875 12840 50  0001 C CNN
+	1    1875 12840
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C7
+U 1 1 5F101BF8
+P 1100 8355
+F 0 "C7" H 950 8410 50  0000 R CNN
+F 1 "1uf" H 950 8310 50  0000 R CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 1138 8205 50  0001 C CNN
+F 3 "~" H 1100 8355 50  0001 C CNN
+	1    1100 8355
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C9
+U 1 1 5EDD7FFE
+P 4860 16020
+F 0 "C9" H 4735 15955 50  0000 R CNN
+F 1 "100uf" H 4735 16055 50  0000 R CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 4898 15870 50  0001 C CNN
+F 3 "~" H 4860 16020 50  0001 C CNN
+	1    4860 16020
+	1    0    0    1   
+$EndComp
+$Comp
+L Diode:1N4148 D2
+U 1 1 5DDACDE3
+P 14960 11740
+F 0 "D2" V 14880 11690 50  0000 L CNN
+F 1 "1N4148" V 14960 11825 50  0001 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 14960 11565 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 14960 11740 50  0001 C CNN
+	1    14960 11740
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 C32E0CEB
+P 13810 12790
+F 0 "R2" H 13660 12849 59  0000 L BNN
+F 1 "12k" H 13660 12660 59  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 13810 12790 50  0001 C CNN
+F 3 "" H 13810 12790 50  0001 C CNN
+	1    13810 12790
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 C0B20218
+P 13810 10990
+F 0 "R10" H 13660 11049 59  0000 L BNN
+F 1 "10k" H 13660 10860 59  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 13810 10990 50  0001 C CNN
+F 3 "" H 13810 10990 50  0001 C CNN
+	1    13810 10990
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 72465CF6
+P 1250 9700
+F 0 "C4" H 1310 9815 59  0000 L BNN
+F 1 "42p" H 1310 9515 59  0000 L BNN
+F 2 "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm" H 1250 9700 50  0001 C CNN
+F 3 "" H 1250 9700 50  0001 C CNN
+	1    1250 9700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 D7606CCB
+P 1250 10000
+F 0 "R7" H 1100 10059 59  0000 L BNN
+F 1 "1k0" H 1100 9870 59  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" H 1250 10000 50  0001 C CNN
+F 3 "" H 1250 10000 50  0001 C CNN
+	1    1250 10000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 87952652
+P 1700 9350
+F 0 "R8" H 1550 9409 59  0000 L BNN
+F 1 "270R" H 1550 9220 59  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 1700 9350 50  0001 C CNN
+F 3 "" H 1700 9350 50  0001 C CNN
+	1    1700 9350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R25
+U 1 1 E4DB1434
+P 1100 7850
+F 0 "R25" H 950 7909 59  0000 L BNN
+F 1 "220k" H 950 7720 59  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 1100 7850 50  0001 C CNN
+F 3 "" H 1100 7850 50  0001 C CNN
+	1    1100 7850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 7E68E8B0
+P 18500 1745
+F 0 "R4" H 18350 1804 59  0000 L BNN
+F 1 "1K5" H 18350 1615 59  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 18500 1745 50  0001 C CNN
+F 3 "" H 18500 1745 50  0001 C CNN
+	1    18500 1745
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 64FC636C
+P 18050 2000
+F 0 "R3" H 17900 2059 59  0000 L BNN
+F 1 "1K5" H 17900 1870 59  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 18050 2000 50  0001 C CNN
+F 3 "" H 18050 2000 50  0001 C CNN
+	1    18050 2000
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D9
+U 1 1 5DC916E7
+P 4540 14205
+F 0 "D9" V 4460 14155 50  0000 L CNN
+F 1 "1N4148" V 4540 14290 50  0001 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 4540 14030 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4540 14205 50  0001 C CNN
+	1    4540 14205
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4148 D8
+U 1 1 5DC8B9CE
+P 4540 14305
+F 0 "D8" V 4460 14255 50  0000 L CNN
+F 1 "1N4148" V 4540 14390 50  0001 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 4540 14130 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4540 14305 50  0001 C CNN
+	1    4540 14305
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4148 D7
+U 1 1 5DC85D2A
+P 4540 14405
+F 0 "D7" V 4460 14355 50  0000 L CNN
+F 1 "1N4148" V 4540 14490 50  0001 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 4540 14230 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4540 14405 50  0001 C CNN
+	1    4540 14405
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4148 D6
+U 1 1 5DC7D8C5
+P 4540 14505
+F 0 "D6" V 4460 14455 50  0000 L CNN
+F 1 "1N4148" V 4540 14590 50  0001 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 4540 14330 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4540 14505 50  0001 C CNN
+	1    4540 14505
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4148 D5
+U 1 1 5DC77A9B
+P 4540 14605
+F 0 "D5" V 4460 14555 50  0000 L CNN
+F 1 "1N4148" V 4540 14690 50  0001 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 4540 14430 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4540 14605 50  0001 C CNN
+	1    4540 14605
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4148 D4
+U 1 1 5DC720AB
+P 4540 14705
+F 0 "D4" V 4460 14655 50  0000 L CNN
+F 1 "1N4148" V 4540 14790 50  0001 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 4540 14530 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4540 14705 50  0001 C CNN
+	1    4540 14705
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4148 D3
+U 1 1 5D5FB160
+P 4540 14805
+F 0 "D3" V 4460 14755 50  0000 L CNN
+F 1 "1N4148" V 4540 14890 50  0001 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 4540 14630 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4540 14805 50  0001 C CNN
+	1    4540 14805
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x08_Odd_Even KEYBOARD1
+U 1 1 5E446247
+P 4990 14405
+F 0 "KEYBOARD1" H 5050 14960 50  0000 C CNN
+F 1 "Conn_02x08_Odd_Even" H 5050 14860 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical" H 4990 14405 50  0001 C CNN
+F 3 "~" H 4990 14405 50  0001 C CNN
+	1    4990 14405
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4148 D10
+U 1 1 5DC974AA
+P 4540 14105
+F 0 "D10" V 4460 14055 50  0000 L CNN
+F 1 "1N4148" V 4540 14190 50  0001 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 4540 13930 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4540 14105 50  0001 C CNN
+	1    4540 14105
+	1    0    0    -1  
+$EndComp
+NoConn ~ 9530 -115
+NoConn ~ 9530 85  
+NoConn ~ 10130 -15 
+$Comp
+L 74xx:74LS86 Z23
+U 2 1 6A75490B
+P 9830 -15
+F 0 "Z23" H 9865 330 50  0000 C CNN
+F 1 "74HCT86" H 9865 230 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 9830 -15 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 9830 -15 50  0001 C CNN
+	2    9830 -15 
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
