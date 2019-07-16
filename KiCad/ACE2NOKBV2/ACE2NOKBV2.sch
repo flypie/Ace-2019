@@ -1,0 +1,4940 @@
+EESchema Schematic File Version 4
+LIBS:ACE2NOKBV2-cache
+EELAYER 29 0
+EELAYER END
+$Descr User 27639 18687
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Bus Line
+	2910 12145 3410 12145
+Text Label 2910 12145 0    70   ~ 0
+A:ADDRESS0,ADDRESS5,ADDRESS6,ADDRESS7,ADDRESS8,ADDRESS9,ADDRESS10,ADDRESS12,ADDRESS13,ADDRESS14
+Wire Bus Line
+	2910 11845 3410 11845
+Text Label 2935 11845 0    70   ~ 0
+DA:DATA1,DATA3,DATA4,DATA5,DATA6,DATA7
+Wire Bus Line
+	2910 12445 3410 12445
+Text Label 2935 12445 0    70   ~ 0
+CNT:CNT0,CNT1,CNT2,CNT3,CNT4,CNT5,CNT6,CNT7,CNT8,CNT9,CNT10,CNT11,CNT12,CNT13,CNT14,CNT15,CNT16,CNT17
+Wire Wire Line
+	6300 7400 6400 7400
+Text Label 6400 7400 0    70   ~ 0
+A0
+Wire Wire Line
+	10600 7400 10500 7400
+Text Label 10500 7400 2    70   ~ 0
+A0
+Wire Wire Line
+	10600 9000 10500 9000
+Text Label 10500 9000 2    70   ~ 0
+A0
+Wire Wire Line
+	13100 7400 13000 7400
+Text Label 13000 7400 2    70   ~ 0
+A0
+Wire Wire Line
+	18700 4800 18700 4700
+Text Label 18700 4700 1    70   ~ 0
+A0
+Wire Wire Line
+	8100 7400 8000 7400
+Text Label 8000 7400 2    70   ~ 0
+A0
+Wire Wire Line
+	8100 9200 8000 9200
+Text Label 8000 9200 2    70   ~ 0
+A0
+Wire Wire Line
+	9100 13700 9000 13700
+Text Label 9000 13700 2    70   ~ 0
+A0
+Wire Wire Line
+	6300 7500 6400 7500
+Text Label 6400 7500 0    70   ~ 0
+A1
+Wire Wire Line
+	10600 7500 10500 7500
+Text Label 10500 7500 2    70   ~ 0
+A1
+Wire Wire Line
+	10600 9100 10500 9100
+Text Label 10500 9100 2    70   ~ 0
+A1
+Wire Wire Line
+	13100 7500 13000 7500
+Text Label 13000 7500 2    70   ~ 0
+A1
+Wire Wire Line
+	18800 4800 18800 4700
+Text Label 18800 4700 1    70   ~ 0
+A1
+Wire Wire Line
+	8100 7500 8000 7500
+Text Label 8000 7500 2    70   ~ 0
+A1
+Wire Wire Line
+	8100 9300 8000 9300
+Text Label 8000 9300 2    70   ~ 0
+A1
+Wire Wire Line
+	6300 7600 6400 7600
+Text Label 6400 7600 0    70   ~ 0
+A2
+Wire Wire Line
+	10600 7600 10500 7600
+Text Label 10500 7600 2    70   ~ 0
+A2
+Wire Wire Line
+	10600 9200 10500 9200
+Text Label 10500 9200 2    70   ~ 0
+A2
+Wire Wire Line
+	13100 7600 13000 7600
+Text Label 13000 7600 2    70   ~ 0
+A2
+Wire Wire Line
+	18900 4800 18900 4700
+Text Label 18900 4700 1    70   ~ 0
+A2
+Wire Wire Line
+	8100 7600 8000 7600
+Text Label 8000 7600 2    70   ~ 0
+A2
+Wire Wire Line
+	8100 9400 8000 9400
+Text Label 8000 9400 2    70   ~ 0
+A2
+Wire Wire Line
+	6300 7700 6400 7700
+Text Label 6400 7700 0    70   ~ 0
+A3
+Wire Wire Line
+	10600 7700 10500 7700
+Text Label 10500 7700 2    70   ~ 0
+A3
+Wire Wire Line
+	10600 9300 10500 9300
+Text Label 10500 9300 2    70   ~ 0
+A3
+Wire Wire Line
+	13100 7700 13000 7700
+Text Label 13000 7700 2    70   ~ 0
+A3
+Wire Wire Line
+	19000 4800 19000 4700
+Text Label 19000 4700 1    70   ~ 0
+A3
+Wire Wire Line
+	8100 7700 8000 7700
+Text Label 8000 7700 2    70   ~ 0
+A3
+Wire Wire Line
+	8100 9500 8000 9500
+Text Label 8000 9500 2    70   ~ 0
+A3
+Wire Wire Line
+	6300 7800 6400 7800
+Text Label 6400 7800 0    70   ~ 0
+A4
+Wire Wire Line
+	10600 7800 10500 7800
+Text Label 10500 7800 2    70   ~ 0
+A4
+Wire Wire Line
+	10600 9400 10500 9400
+Text Label 10500 9400 2    70   ~ 0
+A4
+Wire Wire Line
+	13100 7800 13000 7800
+Text Label 13000 7800 2    70   ~ 0
+A4
+Text Label 20100 4700 1    70   ~ 0
+A4
+Wire Wire Line
+	8100 7800 8000 7800
+Text Label 8000 7800 2    70   ~ 0
+A4
+Wire Wire Line
+	8100 9600 8000 9600
+Text Label 8000 9600 2    70   ~ 0
+A4
+Wire Wire Line
+	6300 7900 6400 7900
+Text Label 6400 7900 0    70   ~ 0
+A5
+Wire Wire Line
+	10600 7900 10500 7900
+Text Label 10500 7900 2    70   ~ 0
+A5
+Wire Wire Line
+	10600 9500 10500 9500
+Text Label 10500 9500 2    70   ~ 0
+A5
+Wire Wire Line
+	13100 7900 13000 7900
+Text Label 13000 7900 2    70   ~ 0
+A5
+Text Label 20200 4700 1    70   ~ 0
+A5
+Wire Wire Line
+	8100 7900 8000 7900
+Text Label 8000 7900 2    70   ~ 0
+A5
+Wire Wire Line
+	8100 9700 8000 9700
+Text Label 8000 9700 2    70   ~ 0
+A5
+Wire Wire Line
+	6300 8000 6400 8000
+Text Label 6400 8000 0    70   ~ 0
+A6
+Wire Wire Line
+	10600 8000 10500 8000
+Text Label 10500 8000 2    70   ~ 0
+A6
+Wire Wire Line
+	10600 9600 10500 9600
+Text Label 10500 9600 2    70   ~ 0
+A6
+Text Label 20300 4700 1    70   ~ 0
+A6
+Wire Wire Line
+	8100 8000 8000 8000
+Text Label 8000 8000 2    70   ~ 0
+A6
+Wire Wire Line
+	8100 9800 8000 9800
+Text Label 8000 9800 2    70   ~ 0
+A6
+Wire Wire Line
+	13100 9000 13000 9000
+Text Label 13000 9000 2    70   ~ 0
+A6
+Wire Wire Line
+	6300 8100 6400 8100
+Text Label 6400 8100 0    70   ~ 0
+A7
+Wire Wire Line
+	10600 8100 10500 8100
+Text Label 10500 8100 2    70   ~ 0
+A7
+Wire Wire Line
+	10600 9700 10500 9700
+Text Label 10500 9700 2    70   ~ 0
+A7
+Text Label 20400 4700 1    70   ~ 0
+A7
+Wire Wire Line
+	8100 8100 8000 8100
+Text Label 8000 8100 2    70   ~ 0
+A7
+Wire Wire Line
+	8100 9900 8000 9900
+Text Label 8000 9900 2    70   ~ 0
+A7
+Wire Wire Line
+	13100 9100 13000 9100
+Text Label 13000 9100 2    70   ~ 0
+A7
+Wire Wire Line
+	6300 8200 6400 8200
+Text Label 6400 8200 0    70   ~ 0
+A8
+Wire Wire Line
+	10600 8200 10500 8200
+Text Label 10500 8200 2    70   ~ 0
+A8
+Wire Wire Line
+	10600 9800 10500 9800
+Text Label 10500 9800 2    70   ~ 0
+A8
+Text Label 20500 4700 1    70   ~ 0
+A8
+Wire Wire Line
+	8100 8200 8000 8200
+Text Label 8000 8200 2    70   ~ 0
+A8
+Wire Wire Line
+	8100 10000 8000 10000
+Text Label 8000 10000 2    70   ~ 0
+A8
+Wire Wire Line
+	13100 9200 13000 9200
+Text Label 13000 9200 2    70   ~ 0
+A8
+Text Label 8900 15350 0    70   ~ 0
+A8
+Wire Wire Line
+	6300 8300 6400 8300
+Text Label 6400 8300 0    70   ~ 0
+A9
+Wire Wire Line
+	10600 8300 10500 8300
+Text Label 10500 8300 2    70   ~ 0
+A9
+Wire Wire Line
+	10600 9900 10500 9900
+Text Label 10500 9900 2    70   ~ 0
+A9
+Text Label 20600 4700 1    70   ~ 0
+A9
+Wire Wire Line
+	8100 8300 8000 8300
+Text Label 8000 8300 2    70   ~ 0
+A9
+Wire Wire Line
+	8100 10100 8000 10100
+Text Label 8000 10100 2    70   ~ 0
+A9
+Wire Wire Line
+	13100 9300 13000 9300
+Text Label 13000 9300 2    70   ~ 0
+A9
+Text Label 9000 15450 0    70   ~ 0
+A9
+Wire Wire Line
+	6300 8400 6400 8400
+Text Label 6400 8400 0    70   ~ 0
+A10
+Wire Wire Line
+	5800 4700 5700 4700
+Text Label 5700 4700 2    70   ~ 0
+A10
+Wire Wire Line
+	8100 8400 8000 8400
+Text Label 8000 8400 2    70   ~ 0
+A10
+Wire Wire Line
+	8100 10200 8000 10200
+Text Label 8000 10200 2    70   ~ 0
+A10
+Text Label 8950 15550 0    70   ~ 0
+A10
+Wire Wire Line
+	6300 8500 6400 8500
+Text Label 6400 8500 0    70   ~ 0
+A11
+Wire Wire Line
+	9400 3500 9300 3500
+Text Label 9300 3500 2    70   ~ 0
+A11
+Wire Wire Line
+	8100 8500 8000 8500
+Text Label 8000 8500 2    70   ~ 0
+A11
+Wire Wire Line
+	8100 10300 8000 10300
+Text Label 8000 10300 2    70   ~ 0
+A11
+Text Label 9000 15650 0    70   ~ 0
+A11
+Wire Wire Line
+	6300 8600 6400 8600
+Text Label 6400 8600 0    70   ~ 0
+A12
+Wire Wire Line
+	5300 5600 5200 5600
+Text Label 5200 5600 2    70   ~ 0
+A12
+Text Label 8900 15750 0    70   ~ 0
+A12
+Wire Wire Line
+	6300 8700 6400 8700
+Text Label 6400 8700 0    70   ~ 0
+A13
+Wire Wire Line
+	5300 5700 5200 5700
+Text Label 5200 5700 2    70   ~ 0
+A13
+Text Label 9000 15850 0    70   ~ 0
+A13
+Wire Wire Line
+	6300 8800 6400 8800
+Text Label 6400 8800 0    70   ~ 0
+A14
+Wire Wire Line
+	5300 6200 5200 6200
+Text Label 5250 6200 2    70   ~ 0
+A14
+Text Label 8950 15950 0    70   ~ 0
+A14
+Wire Wire Line
+	6300 8900 6400 8900
+Text Label 6400 8900 0    70   ~ 0
+A15
+Wire Wire Line
+	5300 6300 5200 6300
+Text Label 5200 6300 2    70   ~ 0
+A15
+Text Label 9000 16050 0    70   ~ 0
+A15
+Wire Wire Line
+	6300 9100 6400 9100
+Text Label 6400 9100 0    70   ~ 0
+DA0
+Wire Wire Line
+	11600 7400 11700 7400
+Text Label 11700 7400 0    70   ~ 0
+DA0
+Wire Wire Line
+	9100 9200 9200 9200
+Text Label 9200 9200 0    70   ~ 0
+DA0
+Wire Wire Line
+	9100 7400 9200 7400
+Text Label 9200 7400 0    70   ~ 0
+DA0
+Wire Wire Line
+	7100 13500 7100 13400
+Text Label 7100 13400 1    70   ~ 0
+DA0
+Wire Wire Line
+	12700 12000 12200 12000
+Text Label 12200 12000 2    70   ~ 0
+DA0
+Wire Wire Line
+	20000 11100 20000 11200
+Text Label 20000 11200 3    70   ~ 0
+DA0
+Wire Wire Line
+	22600 11100 22600 11200
+Text Label 22600 11200 3    70   ~ 0
+DA0
+Wire Wire Line
+	6300 9200 6400 9200
+Text Label 6400 9200 0    70   ~ 0
+DA1
+Wire Wire Line
+	11600 7500 11700 7500
+Text Label 11700 7500 0    70   ~ 0
+DA1
+Wire Wire Line
+	9100 9300 9200 9300
+Text Label 9200 9300 0    70   ~ 0
+DA1
+Wire Wire Line
+	9100 7500 9200 7500
+Text Label 9200 7500 0    70   ~ 0
+DA1
+Wire Wire Line
+	7200 13500 7200 13400
+Text Label 7200 13400 1    70   ~ 0
+DA1
+Wire Wire Line
+	20100 11100 20100 11200
+Text Label 20100 11200 3    70   ~ 0
+DA1
+Wire Wire Line
+	22700 11100 22700 11200
+Text Label 22700 11200 3    70   ~ 0
+DA1
+Wire Wire Line
+	6300 9300 6400 9300
+Text Label 6400 9300 0    70   ~ 0
+DA2
+Wire Wire Line
+	11600 7600 11700 7600
+Text Label 11700 7600 0    70   ~ 0
+DA2
+Wire Wire Line
+	9100 9400 9200 9400
+Text Label 9200 9400 0    70   ~ 0
+DA2
+Wire Wire Line
+	9100 7600 9200 7600
+Text Label 9200 7600 0    70   ~ 0
+DA2
+Wire Wire Line
+	7300 13500 7300 13400
+Text Label 7300 13400 1    70   ~ 0
+DA2
+Wire Wire Line
+	20200 11100 20200 11200
+Text Label 20200 11200 3    70   ~ 0
+DA2
+Wire Wire Line
+	22800 11100 22800 11200
+Text Label 22800 11200 3    70   ~ 0
+DA2
+Wire Wire Line
+	6300 9400 6400 9400
+Text Label 6400 9400 0    70   ~ 0
+DA3
+Wire Wire Line
+	11600 7700 11700 7700
+Text Label 11700 7700 0    70   ~ 0
+DA3
+Wire Wire Line
+	9100 9500 9200 9500
+Text Label 9200 9500 0    70   ~ 0
+DA3
+Wire Wire Line
+	9100 7700 9200 7700
+Text Label 9200 7700 0    70   ~ 0
+DA3
+Wire Wire Line
+	7400 13500 7400 13400
+Text Label 7400 13400 1    70   ~ 0
+DA3
+Wire Wire Line
+	20300 11100 20300 11200
+Text Label 20300 11200 3    70   ~ 0
+DA3
+Wire Wire Line
+	22900 11100 22900 11200
+Text Label 22900 11200 3    70   ~ 0
+DA3
+Wire Wire Line
+	6300 9500 6400 9500
+Text Label 6400 9500 0    70   ~ 0
+DA4
+Wire Wire Line
+	11600 9000 11700 9000
+Text Label 11700 9000 0    70   ~ 0
+DA4
+Wire Wire Line
+	9100 7800 9200 7800
+Text Label 9200 7800 0    70   ~ 0
+DA4
+Wire Wire Line
+	9100 9600 9200 9600
+Text Label 9200 9600 0    70   ~ 0
+DA4
+Wire Wire Line
+	7500 13500 7500 13400
+Text Label 7500 13400 1    70   ~ 0
+DA4
+Wire Wire Line
+	20400 11100 20400 11200
+Text Label 20400 11200 3    70   ~ 0
+DA4
+Wire Wire Line
+	23000 11100 23000 11200
+Text Label 23000 11200 3    70   ~ 0
+DA4
+Wire Wire Line
+	6300 9600 6400 9600
+Text Label 6400 9600 0    70   ~ 0
+DA5
+Wire Wire Line
+	11600 9100 11700 9100
+Text Label 11700 9100 0    70   ~ 0
+DA5
+Wire Wire Line
+	9100 7900 9200 7900
+Text Label 9200 7900 0    70   ~ 0
+DA5
+Wire Wire Line
+	9100 9700 9200 9700
+Text Label 9200 9700 0    70   ~ 0
+DA5
+Wire Wire Line
+	20500 11100 20500 11200
+Text Label 20500 11200 3    70   ~ 0
+DA5
+Wire Wire Line
+	23100 11100 23100 11200
+Text Label 23100 11200 3    70   ~ 0
+DA5
+Wire Wire Line
+	7600 13500 7600 13400
+Text Label 7600 13400 1    70   ~ 0
+DA5
+Wire Wire Line
+	6300 9700 6400 9700
+Text Label 6400 9700 0    70   ~ 0
+DA6
+Wire Wire Line
+	11600 9200 11700 9200
+Text Label 11700 9200 0    70   ~ 0
+DA6
+Wire Wire Line
+	9100 8000 9200 8000
+Text Label 9200 8000 0    70   ~ 0
+DA6
+Wire Wire Line
+	9100 9800 9200 9800
+Text Label 9200 9800 0    70   ~ 0
+DA6
+Wire Wire Line
+	20600 11100 20600 11200
+Text Label 20600 11200 3    70   ~ 0
+DA6
+Wire Wire Line
+	23200 11100 23200 11200
+Text Label 23200 11200 3    70   ~ 0
+DA6
+Wire Wire Line
+	6300 9800 6400 9800
+Text Label 6400 9800 0    70   ~ 0
+DA7
+Wire Wire Line
+	11600 9300 11700 9300
+Text Label 11700 9300 0    70   ~ 0
+DA7
+Wire Wire Line
+	9100 8100 9200 8100
+Text Label 9200 8100 0    70   ~ 0
+DA7
+Wire Wire Line
+	9100 9900 9200 9900
+Text Label 9200 9900 0    70   ~ 0
+DA7
+Wire Wire Line
+	20700 11100 20700 11200
+Text Label 20700 11200 3    70   ~ 0
+DA7
+Wire Wire Line
+	23300 11100 23300 11200
+Text Label 23300 11200 3    70   ~ 0
+DA7
+Wire Wire Line
+	4900 8400 4800 8400
+Text Label 4800 8400 2    70   ~ 0
+/WAIT
+Wire Wire Line
+	8100 4900 8400 4900
+Wire Wire Line
+	8400 4900 8400 5000
+Wire Wire Line
+	8400 4900 8800 4900
+Connection ~ 8400 4900
+Text Label 8800 4900 0    70   ~ 0
+/WAIT
+Wire Wire Line
+	6400 4800 7300 4800
+Wire Wire Line
+	7300 4800 7500 4800
+Wire Wire Line
+	7300 4800 7300 4400
+Wire Wire Line
+	7300 4400 7600 4400
+Connection ~ 7300 4800
+Text Label 7600 4400 0    70   ~ 0
+/VHOLD
+Wire Wire Line
+	13100 9800 13000 9800
+Text Label 13000 9800 2    70   ~ 0
+/VHOLD
+Wire Wire Line
+	6300 5800 6800 5800
+Wire Wire Line
+	6800 5800 6800 5000
+Wire Wire Line
+	6800 5000 6800 3700
+Wire Wire Line
+	6800 5000 7500 5000
+Connection ~ 6800 5000
+Wire Wire Line
+	5800 4900 5700 4900
+Text Label 5700 4900 2    70   ~ 0
+VIDEN
+Wire Wire Line
+	16900 2300 17100 2300
+Wire Wire Line
+	17100 2300 17600 2300
+Wire Wire Line
+	17100 2300 17100 1600
+Wire Wire Line
+	17100 1600 17600 1600
+Connection ~ 17100 2300
+Text Label 17100 1600 2    70   ~ 0
+VIDEN
+Wire Wire Line
+	5300 5800 5200 5800
+Text Label 5200 5800 2    70   ~ 0
+/MREQ
+Wire Wire Line
+	4900 7500 4800 7500
+Text Label 4800 7500 2    70   ~ 0
+/MREQ
+Wire Wire Line
+	5300 6100 5000 6100
+Wire Wire Line
+	9000 5800 8900 5800
+Wire Wire Line
+	19100 2600 19000 2600
+Wire Wire Line
+	19100 3200 19000 3200
+Wire Wire Line
+	17500 4000 17600 4000
+Wire Wire Line
+	3900 8500 3900 8400
+Wire Wire Line
+	4500 10100 4500 10000
+Wire Wire Line
+	4500 9100 4300 9100
+Wire Wire Line
+	13000 11800 13000 11700
+Wire Wire Line
+	13000 12400 13000 12500
+Wire Wire Line
+	12800 9400 13100 9400
+Wire Wire Line
+	15000 12500 15300 12500
+Wire Wire Line
+	15300 12500 15600 12500
+Wire Wire Line
+	15000 12600 15000 12500
+Wire Wire Line
+	15300 12500 15300 12300
+Connection ~ 15300 12500
+Text Label 15000 12500 0    10   ~ 0
+VCC
+Wire Wire Line
+	4900 8700 4300 8700
+Wire Wire Line
+	11500 13800 11400 13800
+Wire Wire Line
+	11400 13800 11400 13600
+Wire Wire Line
+	18600 4800 18600 4700
+Wire Wire Line
+	14850 15550 14850 15650
+Connection ~ 14250 15650
+Connection ~ 14850 15650
+Wire Wire Line
+	6300 5600 7300 5600
+Wire Wire Line
+	7300 5600 9000 5600
+Wire Wire Line
+	7300 5600 7300 8700
+Wire Wire Line
+	7300 8700 7900 8700
+Wire Wire Line
+	7900 8700 8100 8700
+Wire Wire Line
+	7900 8700 7900 8800
+Wire Wire Line
+	7900 8800 8100 8800
+Connection ~ 7300 5600
+Connection ~ 7900 8700
+Wire Wire Line
+	11200 3800 15900 3800
+Wire Wire Line
+	15900 3800 17600 3800
+Wire Wire Line
+	15900 3800 15900 6200
+Wire Wire Line
+	15900 6200 16900 6200
+Wire Wire Line
+	16900 6200 16900 8500
+Wire Wire Line
+	16900 8500 16900 10100
+Wire Wire Line
+	16900 10100 17000 10100
+Wire Wire Line
+	16900 8500 17000 8500
+Connection ~ 15900 3800
+Connection ~ 16900 8500
+Wire Wire Line
+	10000 4100 12400 4100
+Wire Wire Line
+	12400 4100 12400 3600
+Wire Wire Line
+	12400 3600 15800 3600
+Wire Wire Line
+	15800 3600 15800 6300
+Wire Wire Line
+	15800 6300 16800 6300
+Wire Wire Line
+	16800 6300 16800 8600
+Wire Wire Line
+	16800 8600 16800 10200
+Wire Wire Line
+	16800 10200 17000 10200
+Wire Wire Line
+	16800 8600 17000 8600
+Wire Wire Line
+	21000 10200 21400 10200
+Connection ~ 15800 3600
+Connection ~ 16800 8600
+Wire Wire Line
+	9400 4000 9300 4000
+Text Label 9300 4000 2    70   ~ 0
+/WR
+Wire Wire Line
+	10600 8600 10500 8600
+Text Label 10500 8600 2    70   ~ 0
+/WR
+Wire Wire Line
+	10600 10200 10500 10200
+Text Label 10500 10200 2    70   ~ 0
+/WR
+Wire Wire Line
+	10500 13000 10400 13000
+Text Label 10400 13000 2    70   ~ 0
+/WR
+Wire Wire Line
+	4900 7800 4800 7800
+Text Label 4800 7800 2    70   ~ 0
+/WR
+Wire Wire Line
+	9600 5700 9700 5700
+Text Label 9700 5700 0    70   ~ 0
+2764
+Wire Wire Line
+	6300 5700 7100 5700
+Wire Wire Line
+	7100 5700 9000 5700
+Wire Wire Line
+	8000 10600 8100 10600
+Wire Wire Line
+	7100 10500 8000 10500
+Wire Wire Line
+	8000 10500 8000 10600
+Wire Wire Line
+	8000 10500 8100 10500
+Wire Wire Line
+	7100 5700 7100 10500
+Connection ~ 8000 10500
+Connection ~ 7100 5700
+Wire Wire Line
+	13900 1900 13800 1900
+Text Label 13800 1900 2    70   ~ 0
+CNT16
+Wire Wire Line
+	24600 16000 24500 16000
+Text Label 24500 16000 2    70   ~ 0
+CNT16
+Wire Wire Line
+	22400 17300 22600 17300
+Text Label 22600 17300 1    70   ~ 0
+CNT16
+Wire Wire Line
+	16700 10700 16700 10800
+Text Label 16700 10800 3    70   ~ 0
+CNT16
+Wire Wire Line
+	13900 2100 13800 2100
+Text Label 13800 2100 2    70   ~ 0
+CNT15
+Wire Wire Line
+	24600 15900 24500 15900
+Text Label 24500 15900 2    70   ~ 0
+CNT15
+Wire Wire Line
+	22400 16700 22500 16700
+Wire Wire Line
+	22500 16700 23100 16700
+Wire Wire Line
+	22500 16700 22500 17000
+Wire Wire Line
+	22500 17000 21300 17000
+Wire Wire Line
+	21300 17000 21300 17300
+Wire Wire Line
+	21300 17300 21400 17300
+Text Label 23100 16700 3    70   ~ 0
+CNT15
+Connection ~ 22500 16700
+Wire Wire Line
+	16500 10400 16500 10500
+Text Label 16500 10500 3    70   ~ 0
+CNT15
+Wire Wire Line
+	13900 2500 13800 2500
+Text Label 13800 2500 2    70   ~ 0
+CNT17
+Wire Wire Line
+	22400 17400 23900 17400
+Wire Wire Line
+	23900 17400 23900 16700
+Wire Wire Line
+	23900 16700 24000 16700
+Text Label 22800 17400 1    70   ~ 0
+CNT17
+Wire Wire Line
+	13900 2700 13800 2700
+Text Label 13800 2700 2    70   ~ 0
+CNT8
+Wire Wire Line
+	24800 14100 24800 14500
+Text Label 24800 14500 3    70   ~ 0
+CNT8
+Wire Wire Line
+	22400 14800 22500 14800
+Wire Wire Line
+	22500 14800 22500 15200
+Wire Wire Line
+	22500 15200 21300 15200
+Wire Wire Line
+	21300 15200 21300 15500
+Wire Wire Line
+	21300 15500 21400 15500
+Wire Wire Line
+	22500 14800 23100 14800
+Text Label 23000 14800 3    70   ~ 0
+CNT8
+Connection ~ 22500 14800
+Wire Wire Line
+	14500 2000 15100 2000
+Wire Wire Line
+	14500 2600 15100 2600
+Wire Wire Line
+	15100 2600 15100 2400
+Wire Wire Line
+	16600 4700 16700 4700
+Wire Wire Line
+	16700 4700 16700 4600
+Wire Wire Line
+	16700 4800 16600 4800
+Wire Wire Line
+	21800 2700 21700 2700
+Wire Wire Line
+	23700 5800 23700 5900
+Wire Wire Line
+	4500 11000 4500 11100
+Wire Wire Line
+	8400 5300 8400 5400
+Wire Wire Line
+	3900 9300 3900 9400
+Wire Wire Line
+	19800 15500 19800 15600
+Wire Wire Line
+	19000 15850 19000 15750
+Wire Wire Line
+	20000 15300 20100 15300
+Wire Wire Line
+	21400 13000 21300 13000
+Wire Wire Line
+	21400 13900 21300 13900
+Wire Wire Line
+	21400 15800 21300 15800
+Wire Wire Line
+	14700 14000 14700 14100
+Wire Wire Line
+	23400 5800 23400 5900
+Wire Wire Line
+	11550 15950 11550 16050
+Wire Wire Line
+	11550 16050 11950 16050
+Wire Wire Line
+	11950 16050 13050 16050
+Wire Wire Line
+	13050 16050 13750 16050
+Wire Wire Line
+	13750 16050 14250 16050
+Wire Wire Line
+	14250 16050 14550 16050
+Wire Wire Line
+	14550 16050 14850 16050
+Wire Wire Line
+	14850 16050 15150 16050
+Wire Wire Line
+	15150 16050 15450 16050
+Wire Wire Line
+	11950 15950 11950 16050
+Wire Wire Line
+	13050 15950 13050 16050
+Wire Wire Line
+	13750 15950 13750 16050
+Wire Wire Line
+	15450 15950 15450 16050
+Wire Wire Line
+	15750 15950 15750 16050
+Wire Wire Line
+	15450 16050 15750 16050
+Wire Wire Line
+	16950 15950 16950 16050
+Wire Wire Line
+	15750 16050 16050 16050
+Wire Wire Line
+	16050 16050 16350 16050
+Wire Wire Line
+	16350 16050 16650 16050
+Wire Wire Line
+	16650 16050 16950 16050
+Wire Wire Line
+	16050 15950 16050 16050
+Wire Wire Line
+	16350 15950 16350 16050
+Wire Wire Line
+	16650 15950 16650 16050
+Wire Wire Line
+	15150 15950 15150 16050
+Wire Wire Line
+	14850 15950 14850 16050
+Wire Wire Line
+	14550 15950 14550 16050
+Wire Wire Line
+	14250 15950 14250 16050
+Wire Wire Line
+	14850 16150 14850 16050
+Connection ~ 11950 16050
+Connection ~ 13050 16050
+Connection ~ 13750 16050
+Connection ~ 15450 16050
+Connection ~ 15750 16050
+Connection ~ 16050 16050
+Connection ~ 16350 16050
+Connection ~ 16650 16050
+Connection ~ 15150 16050
+Connection ~ 14850 16050
+Connection ~ 14550 16050
+Connection ~ 14250 16050
+Wire Wire Line
+	22400 12800 22700 12800
+Text Label 22700 12800 0    70   ~ 0
+CNT1
+Wire Wire Line
+	16200 2300 16300 2300
+Text Label 16200 2300 2    70   ~ 0
+CNT1
+Wire Wire Line
+	16300 2200 16200 2200
+Text Label 16200 2200 2    70   ~ 0
+CNT2
+Wire Wire Line
+	22400 12900 22700 12900
+Text Label 22700 12900 0    70   ~ 0
+CNT2
+Wire Wire Line
+	16300 2400 16200 2400
+Text Label 16200 2400 2    70   ~ 0
+CNT0
+Wire Wire Line
+	3900 10500 3800 10500
+Text Label 3800 11000 3    70   ~ 0
+CNT0
+Text Label 3800 11000 3    70   ~ 0
+CNT0
+Wire Wire Line
+	22400 12700 22700 12700
+Text Label 22700 12700 0    70   ~ 0
+CNT0
+Wire Wire Line
+	18500 2900 18800 2900
+Wire Wire Line
+	19700 3300 19700 2900
+Wire Wire Line
+	21100 2800 21800 2800
+Connection ~ 21100 2800
+Text Label 21465 2800 1    70   ~ 0
+VIDEO
+Wire Wire Line
+	18300 3900 18300 4800
+Wire Wire Line
+	18200 1700 24400 1700
+Wire Wire Line
+	24400 1700 24400 6000
+Wire Wire Line
+	24400 6000 23800 6000
+Wire Wire Line
+	23800 6000 23800 5800
+Wire Wire Line
+	4900 7600 4800 7600
+Text Label 4800 7600 2    70   ~ 0
+/IOREQ
+Wire Wire Line
+	9100 13500 9000 13500
+Text Label 9000 13500 2    70   ~ 0
+/IOREQ
+Wire Wire Line
+	10500 14100 10400 14100
+Text Label 10400 14100 2    70   ~ 0
+/RD
+Wire Wire Line
+	4900 7700 4800 7700
+Text Label 4800 7700 2    70   ~ 0
+/RD
+Wire Wire Line
+	4900 8600 4800 8600
+Text Label 4800 8600 2    70   ~ 0
+/INT
+Wire Wire Line
+	26200 16100 26600 16100
+Text Label 26600 16100 0    70   ~ 0
+/INT
+Wire Wire Line
+	4900 9400 4800 9400
+Wire Wire Line
+	4800 9400 4800 10500
+Wire Wire Line
+	4800 10500 4500 10500
+Wire Wire Line
+	4500 10400 4500 10500
+Wire Wire Line
+	4500 10600 4500 10500
+Connection ~ 4500 10500
+Wire Wire Line
+	4200 10800 4300 10800
+Wire Wire Line
+	4300 10800 4300 10500
+Wire Wire Line
+	4300 10500 4200 10500
+Wire Wire Line
+	9700 6100 9700 8500
+Wire Wire Line
+	9700 8500 9700 10100
+Wire Wire Line
+	10600 8500 9700 8500
+Wire Wire Line
+	10600 10100 9700 10100
+Wire Wire Line
+	6300 5900 7800 5900
+Wire Wire Line
+	7800 5900 7800 6100
+Wire Wire Line
+	7800 6100 9700 6100
+Connection ~ 9700 8500
+Wire Wire Line
+	7600 14600 7600 14500
+Wire Wire Line
+	7600 14600 7700 14600
+Text Label 7650 14600 0    70   ~ 0
+EAR
+Wire Wire Line
+	18500 5800 18500 5900
+Wire Wire Line
+	18500 5900 17500 5900
+Text Label 17500 5900 2    70   ~ 0
+EAR
+Wire Wire Line
+	10500 12800 10000 12800
+Wire Wire Line
+	10000 12800 10000 13600
+Wire Wire Line
+	10000 13600 10000 13900
+Wire Wire Line
+	10000 13900 10500 13900
+Wire Wire Line
+	9700 13600 10000 13600
+Connection ~ 10000 13600
+Wire Wire Line
+	11100 12900 11900 12900
+Wire Wire Line
+	11900 12900 12200 12900
+Connection ~ 11900 12900
+Wire Wire Line
+	12800 13000 13000 13000
+Wire Wire Line
+	13000 13000 13000 13300
+Wire Wire Line
+	13000 13300 12100 13500
+Wire Wire Line
+	12100 13500 12100 13700
+Wire Wire Line
+	12100 13700 12200 13700
+Wire Wire Line
+	12800 13800 13000 13800
+Wire Wire Line
+	13000 13500 12100 13300
+Wire Wire Line
+	12100 13300 12100 13100
+Wire Wire Line
+	12100 13100 12200 13100
+Wire Wire Line
+	13000 13500 13000 13800
+Wire Wire Line
+	13000 13800 13700 13800
+Connection ~ 13000 13800
+Wire Wire Line
+	12100 13900 12200 13900
+Wire Wire Line
+	14400 12000 14700 12000
+Wire Wire Line
+	14700 12000 15500 12000
+Wire Wire Line
+	14700 12000 14700 12600
+Connection ~ 14700 12000
+Wire Wire Line
+	14700 12900 14700 13000
+Wire Wire Line
+	14700 13000 14700 13600
+Connection ~ 14700 13000
+Wire Wire Line
+	19000 15100 19100 15100
+Wire Wire Line
+	19000 14800 19000 15100
+Connection ~ 19000 15100
+Wire Wire Line
+	19800 15100 20100 15100
+Wire Wire Line
+	19800 15100 19800 14800
+Wire Wire Line
+	19700 14800 19800 14800
+Connection ~ 19800 15100
+Wire Wire Line
+	23700 14700 23900 14700
+Wire Wire Line
+	23900 14700 23900 15100
+Wire Wire Line
+	21400 14800 21300 14800
+Wire Wire Line
+	21300 14800 21300 15100
+Wire Wire Line
+	23900 15100 21300 15100
+Wire Wire Line
+	21400 16700 21100 16700
+Wire Wire Line
+	21100 16700 21100 17600
+Wire Wire Line
+	21100 17600 21400 17600
+Wire Wire Line
+	21100 17600 21100 17900
+Wire Wire Line
+	21100 17900 24800 17900
+Wire Wire Line
+	24600 16600 24800 16600
+Wire Wire Line
+	24800 16600 24800 17900
+Connection ~ 21100 17600
+Wire Wire Line
+	23800 16500 23900 16500
+Wire Wire Line
+	23900 16500 24000 16500
+Wire Wire Line
+	23900 16500 23900 16100
+Wire Wire Line
+	23900 16100 24600 16100
+Connection ~ 23900 16500
+Wire Wire Line
+	25200 16000 25500 16000
+Wire Wire Line
+	25500 16000 25600 16000
+Wire Wire Line
+	25500 16000 25500 15300
+Wire Wire Line
+	25500 15300 25600 15300
+Connection ~ 25500 16000
+Wire Wire Line
+	24700 14000 24800 14000
+Wire Wire Line
+	24100 13900 24000 13900
+Text Label 24000 13900 2    70   ~ 0
+CNT5
+Wire Wire Line
+	15300 10400 15300 10500
+Text Label 15300 10450 3    70   ~ 0
+CNT5
+Wire Wire Line
+	22400 14500 23000 14500
+Wire Wire Line
+	23000 14500 23000 14600
+Wire Wire Line
+	23000 14600 23100 14600
+Text Label 22500 14500 1    70   ~ 0
+CNT5
+Wire Wire Line
+	24100 14100 24000 14100
+Text Label 24000 14100 2    70   ~ 0
+CNT7
+Wire Wire Line
+	22400 14700 23100 14700
+Text Label 22900 14700 1    70   ~ 0
+CNT7
+Wire Wire Line
+	15700 10400 15700 10500
+Text Label 15700 10500 3    70   ~ 0
+CNT7
+Wire Wire Line
+	24800 13900 24800 13500
+Text Label 24800 13500 1    70   ~ 0
+CNT6
+Wire Wire Line
+	15500 10700 15500 10800
+Text Label 15500 10750 3    70   ~ 0
+CNT6
+Wire Wire Line
+	22400 14600 22700 14600
+Text Label 22700 14600 1    70   ~ 0
+CNT6
+Wire Wire Line
+	25400 14000 25500 14000
+Wire Wire Line
+	25500 14000 25500 15100
+Wire Wire Line
+	25500 15100 25600 15100
+Wire Wire Line
+	26200 15200 26400 15200
+Wire Wire Line
+	26400 15200 26400 3200
+Wire Wire Line
+	26400 3200 21100 3200
+Wire Wire Line
+	18500 4800 18500 4600
+Wire Wire Line
+	14100 7400 14900 7400
+Wire Wire Line
+	14900 7400 17000 7400
+Wire Wire Line
+	14900 10100 14900 9000
+Wire Wire Line
+	14900 9000 14900 7400
+Wire Wire Line
+	14900 9000 17000 9000
+Connection ~ 14900 7400
+Connection ~ 14900 9000
+Wire Wire Line
+	14100 7500 15100 7500
+Wire Wire Line
+	15100 7500 17000 7500
+Wire Wire Line
+	17000 9100 15100 9100
+Connection ~ 15100 7500
+Wire Wire Line
+	17000 7600 15300 7600
+Wire Wire Line
+	15300 7600 14100 7600
+Wire Wire Line
+	15300 10100 15300 9200
+Wire Wire Line
+	15300 9200 15300 7600
+Wire Wire Line
+	17000 9200 15300 9200
+Connection ~ 15300 7600
+Connection ~ 15300 9200
+Wire Wire Line
+	15500 7700 17000 7700
+Wire Wire Line
+	17000 9300 15500 9300
+Wire Wire Line
+	15700 7800 17000 7800
+Wire Wire Line
+	15700 10100 15700 9400
+Wire Wire Line
+	15700 9400 15700 7800
+Wire Wire Line
+	17000 9400 15700 9400
+Connection ~ 15700 9400
+Wire Wire Line
+	15900 7900 17000 7900
+Wire Wire Line
+	17000 9500 15900 9500
+Connection ~ 15900 7900
+Wire Wire Line
+	14100 9000 14400 9000
+Wire Wire Line
+	14400 9000 14400 8000
+Wire Wire Line
+	14400 8000 16100 8000
+Wire Wire Line
+	16100 8000 17000 8000
+Wire Wire Line
+	16100 10100 16100 9600
+Wire Wire Line
+	16100 9600 16100 8000
+Wire Wire Line
+	17000 9600 16100 9600
+Connection ~ 16100 8000
+Connection ~ 16100 9600
+Wire Wire Line
+	14100 9100 14500 9100
+Wire Wire Line
+	14500 9100 14500 8100
+Wire Wire Line
+	14500 8100 16300 8100
+Wire Wire Line
+	16300 8100 17000 8100
+Wire Wire Line
+	17000 9700 16300 9700
+Connection ~ 16300 8100
+Wire Wire Line
+	14100 9200 14600 9200
+Wire Wire Line
+	14600 9200 14600 8200
+Wire Wire Line
+	14600 8200 16500 8200
+Wire Wire Line
+	16500 8200 17000 8200
+Wire Wire Line
+	16500 10100 16500 9800
+Wire Wire Line
+	16500 9800 16500 8200
+Wire Wire Line
+	17000 9800 16500 9800
+Connection ~ 16500 8200
+Connection ~ 16500 9800
+Wire Wire Line
+	14100 9300 14700 9300
+Wire Wire Line
+	14700 9300 14700 8300
+Wire Wire Line
+	14700 8300 16700 8300
+Wire Wire Line
+	16700 8300 17000 8300
+Wire Wire Line
+	17000 9900 16700 9900
+Connection ~ 16700 8300
+Wire Wire Line
+	15900 2900 15900 3400
+Wire Wire Line
+	20900 10000 20700 10000
+Wire Wire Line
+	20700 10000 18100 10000
+Wire Wire Line
+	18100 10000 18100 9300
+Wire Wire Line
+	18100 9300 18000 9300
+Connection ~ 20700 10000
+Wire Wire Line
+	14900 10400 14900 10500
+Text Label 14900 10450 3    70   ~ 0
+CNT3
+Wire Wire Line
+	22400 13000 22500 13000
+Wire Wire Line
+	22500 13000 22700 13000
+Wire Wire Line
+	22500 13000 22500 13300
+Wire Wire Line
+	22500 13300 21300 13300
+Wire Wire Line
+	21300 13300 21300 13600
+Wire Wire Line
+	21300 13600 21400 13600
+Text Label 22700 13000 0    70   ~ 0
+CNT3
+Connection ~ 22500 13000
+Wire Wire Line
+	15100 10700 15100 10800
+Text Label 15100 10750 3    70   ~ 0
+CNT4
+Wire Wire Line
+	22400 13600 22500 13600
+Wire Wire Line
+	22500 13600 22700 13600
+Wire Wire Line
+	22500 13600 22500 14100
+Wire Wire Line
+	22500 14100 21300 14100
+Wire Wire Line
+	21300 14100 21300 14500
+Wire Wire Line
+	21300 14500 21400 14500
+Text Label 22700 13600 0    70   ~ 0
+CNT4
+Connection ~ 22500 13600
+Wire Wire Line
+	22400 16600 23200 16600
+Text Label 23000 16600 1    70   ~ 0
+CNT14
+Wire Wire Line
+	16300 10700 16300 10800
+Text Label 16300 10800 3    70   ~ 0
+CNT14
+Wire Wire Line
+	22400 16400 23200 16400
+Text Label 22600 16400 1    70   ~ 0
+CNT12
+Wire Wire Line
+	15900 10700 15900 10800
+Text Label 15900 10800 3    70   ~ 0
+CNT12
+Wire Wire Line
+	22400 16500 23200 16500
+Text Label 22800 16500 1    70   ~ 0
+CNT13
+Wire Wire Line
+	16100 10400 16100 10500
+Text Label 16100 10500 3    70   ~ 0
+CNT13
+Wire Wire Line
+	18700 5800 18700 7400
+Wire Wire Line
+	18700 7400 18700 9000
+Wire Wire Line
+	21400 7400 18700 7400
+Wire Wire Line
+	18700 9000 21400 9000
+Wire Wire Line
+	18700 10200 18700 9000
+Connection ~ 18700 7400
+Connection ~ 18700 9000
+Wire Wire Line
+	18900 10500 18900 10300
+Wire Wire Line
+	18900 10300 18800 10300
+Wire Wire Line
+	18800 10300 18800 9100
+Wire Wire Line
+	18800 9100 18800 7500
+Wire Wire Line
+	18800 7500 18800 5800
+Wire Wire Line
+	21400 7500 18800 7500
+Wire Wire Line
+	21400 9100 18800 9100
+Connection ~ 18800 7500
+Connection ~ 18800 9100
+Wire Wire Line
+	19100 10200 18900 10200
+Wire Wire Line
+	18900 10200 18900 9200
+Wire Wire Line
+	18900 9200 18900 7600
+Wire Wire Line
+	18900 7600 18900 5800
+Wire Wire Line
+	21400 7600 18900 7600
+Wire Wire Line
+	21400 9200 18900 9200
+Connection ~ 18900 7600
+Connection ~ 18900 9200
+Wire Wire Line
+	18700 10500 18700 10600
+Text Label 18700 10600 3    70   ~ 0
+CNT9
+Wire Wire Line
+	22400 15500 22700 15500
+Text Label 22700 15500 0    70   ~ 0
+CNT9
+Wire Wire Line
+	18900 10800 18900 10900
+Text Label 18900 10900 3    70   ~ 0
+CNT10
+Wire Wire Line
+	22400 15600 22700 15600
+Text Label 22700 15600 0    70   ~ 0
+CNT10
+Wire Wire Line
+	19100 10500 19100 10600
+Text Label 19100 10550 3    70   ~ 0
+CNT11
+Wire Wire Line
+	22400 15700 22500 15700
+Wire Wire Line
+	22500 15700 22700 15700
+Wire Wire Line
+	22500 15700 22500 16100
+Wire Wire Line
+	22500 16100 21300 16100
+Wire Wire Line
+	21300 16100 21300 16400
+Wire Wire Line
+	21300 16400 21400 16400
+Text Label 22700 15700 0    70   ~ 0
+CNT11
+Connection ~ 22500 15700
+Wire Wire Line
+	19000 5800 19000 7700
+Wire Wire Line
+	19000 7700 19000 9300
+Wire Wire Line
+	19000 9300 19000 10100
+Wire Wire Line
+	19000 10100 20000 10100
+Wire Wire Line
+	21400 7700 19000 7700
+Wire Wire Line
+	21400 9300 19000 9300
+Wire Wire Line
+	19000 7700 18600 7700
+Wire Wire Line
+	18600 7700 18600 7400
+Wire Wire Line
+	18600 7400 18000 7400
+Connection ~ 19000 7700
+Connection ~ 19000 9300
+Wire Wire Line
+	20100 7800 20100 9400
+Wire Wire Line
+	21400 9400 20100 9400
+Wire Wire Line
+	18000 7500 18500 7500
+Wire Wire Line
+	18500 7500 18500 7800
+Wire Wire Line
+	18500 7800 20100 7800
+Wire Wire Line
+	20100 7800 21400 7800
+Connection ~ 20100 9400
+Connection ~ 20100 7800
+Wire Wire Line
+	20200 7900 20200 9500
+Wire Wire Line
+	21400 9500 20200 9500
+Wire Wire Line
+	21400 7900 20200 7900
+Wire Wire Line
+	20200 7900 18400 7900
+Wire Wire Line
+	18400 7900 18400 7600
+Wire Wire Line
+	18400 7600 18000 7600
+Connection ~ 20200 9500
+Connection ~ 20200 7900
+Wire Wire Line
+	20300 8000 20300 9600
+Wire Wire Line
+	21400 9600 20300 9600
+Wire Wire Line
+	18000 7700 18300 7700
+Wire Wire Line
+	18300 7700 18300 8000
+Wire Wire Line
+	18300 8000 20300 8000
+Wire Wire Line
+	20300 8000 21400 8000
+Connection ~ 20300 9600
+Connection ~ 20300 8000
+Wire Wire Line
+	20500 8200 20500 9800
+Wire Wire Line
+	21400 9800 20500 9800
+Wire Wire Line
+	20500 9800 18300 9800
+Wire Wire Line
+	18300 9800 18300 9100
+Wire Wire Line
+	18300 9100 18000 9100
+Wire Wire Line
+	21400 8200 20500 8200
+Connection ~ 20500 9800
+Connection ~ 20500 8200
+Wire Wire Line
+	20600 8300 20600 9900
+Wire Wire Line
+	21400 9900 20600 9900
+Wire Wire Line
+	20600 9900 18200 9900
+Wire Wire Line
+	18200 9900 18200 9200
+Wire Wire Line
+	18200 9200 18000 9200
+Wire Wire Line
+	21400 8300 20600 8300
+Connection ~ 20600 9900
+Connection ~ 20600 8300
+Wire Wire Line
+	10000 3400 10100 3500
+Wire Wire Line
+	10100 3500 21100 3500
+Wire Wire Line
+	10100 3500 10100 3900
+Wire Wire Line
+	10100 3900 10600 3900
+Wire Wire Line
+	21100 3500 21100 8500
+Wire Wire Line
+	21100 8500 21400 8500
+Wire Wire Line
+	21100 8500 21100 10100
+Wire Wire Line
+	21100 10100 21400 10100
+Connection ~ 10100 3500
+Connection ~ 21100 8500
+Wire Wire Line
+	23300 5800 23300 9300
+Wire Wire Line
+	22400 9300 23300 9300
+Connection ~ 23300 9300
+Wire Wire Line
+	22600 5800 22600 7400
+Wire Wire Line
+	22400 7400 22600 7400
+Connection ~ 22600 7400
+Wire Wire Line
+	22700 5800 22700 7500
+Wire Wire Line
+	22400 7500 22700 7500
+Connection ~ 22700 7500
+Wire Wire Line
+	22800 5800 22800 7600
+Wire Wire Line
+	22400 7600 22800 7600
+Connection ~ 22800 7600
+Wire Wire Line
+	22900 5800 22900 7700
+Wire Wire Line
+	22400 7700 22900 7700
+Connection ~ 22900 7700
+Wire Wire Line
+	23000 5800 23000 9000
+Wire Wire Line
+	22400 9000 23000 9000
+Connection ~ 23000 9000
+Wire Wire Line
+	23100 5800 23100 9100
+Wire Wire Line
+	23100 9100 23100 10700
+Wire Wire Line
+	22400 9100 23100 9100
+Connection ~ 23100 9100
+Wire Wire Line
+	23200 5800 23200 9200
+Wire Wire Line
+	22400 9200 23200 9200
+Connection ~ 23200 9200
+Wire Wire Line
+	8400 4200 9400 4200
+Wire Wire Line
+	8400 4200 8400 4400
+Wire Wire Line
+	8000 3700 8400 3700
+Wire Wire Line
+	8400 3700 10600 3700
+Wire Wire Line
+	8400 3700 8400 4200
+Wire Wire Line
+	8400 3300 8400 3700
+Wire Wire Line
+	9400 3300 8400 3300
+Wire Wire Line
+	8400 4400 12200 4400
+Wire Wire Line
+	13000 9500 13100 9500
+Wire Wire Line
+	13000 9700 13100 9700
+Wire Wire Line
+	13000 9700 13000 9500
+Wire Wire Line
+	12200 9700 13000 9700
+Wire Wire Line
+	13000 8100 12200 8100
+Wire Wire Line
+	13100 8200 13000 8200
+Wire Wire Line
+	13000 8200 13000 8100
+Wire Wire Line
+	13100 8100 13000 8100
+Wire Wire Line
+	12200 4400 12200 8100
+Connection ~ 8400 4200
+Connection ~ 8400 3700
+Connection ~ 13000 9700
+Connection ~ 13000 8100
+Wire Wire Line
+	4800 9100 4900 9100
+Text Label 4800 9100 1    70   ~ 0
+/BUSRQ
+Wire Wire Line
+	3900 8800 3900 8900
+Wire Wire Line
+	3900 8900 3900 9000
+Wire Wire Line
+	3900 8900 4900 8900
+Connection ~ 3900 8900
+Wire Wire Line
+	4900 7400 4800 7400
+Text Label 4800 7400 2    70   ~ 0
+/M1
+Wire Wire Line
+	4900 8200 4800 8200
+Text Label 4800 8200 2    70   ~ 0
+/HALT
+Wire Wire Line
+	4900 9200 4700 9200
+Wire Wire Line
+	4700 9200 4700 9300
+Text Label 4700 9250 2    70   ~ 0
+/BUSAK
+Wire Wire Line
+	4800 8000 4900 8000
+Text Label 4800 8000 2    70   ~ 0
+/REFSH
+Wire Wire Line
+	17600 2500 17500 2500
+Text Label 17500 2500 2    70   ~ 0
+#CPUCLK
+Wire Wire Line
+	23600 5800 23600 5900
+Text Label 23600 5900 3    70   ~ 0
+#CPUCLK
+Wire Wire Line
+	20700 15200 20900 15200
+Wire Wire Line
+	20900 15200 20900 12700
+Wire Wire Line
+	20900 12700 21400 12700
+Wire Wire Line
+	15800 2700 15900 2700
+Wire Wire Line
+	15800 2300 15800 2700
+Wire Wire Line
+	15700 2300 15800 2300
+Wire Wire Line
+	15800 2300 15800 1800
+Wire Wire Line
+	15800 1800 17600 1800
+Connection ~ 15800 2300
+Wire Wire Line
+	20400 8100 20400 9700
+Wire Wire Line
+	21400 9700 20400 9700
+Wire Wire Line
+	20400 9700 18400 9700
+Wire Wire Line
+	18400 9700 18400 9000
+Wire Wire Line
+	18000 9000 18400 9000
+Wire Wire Line
+	21400 8100 20400 8100
+Connection ~ 20400 9700
+Connection ~ 20400 8100
+Wire Wire Line
+	11100 14000 11200 14000
+Wire Wire Line
+	11200 14000 11500 14000
+Wire Wire Line
+	11200 14000 11200 14500
+Connection ~ 11200 14000
+$Comp
+L ACE2NOKBV2-rescue:74HCT00-74xx Z19
+U 1 1 F9D3EEEE
+P 14200 2000
+F 0 "Z19" H 14300 2125 59  0000 L BNN
+F 1 "7400N" H 14300 1800 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 14200 2000 50  0001 C CNN
+F 3 "" H 14200 2000 50  0001 C CNN
+	1    14200 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74HCT00-74xx Z19
+U 2 1 F9D3EEE2
+P 17900 1700
+F 0 "Z19" H 18000 1825 59  0000 L BNN
+F 1 "7400N" H 17500 1500 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 17900 1700 50  0001 C CNN
+F 3 "" H 17900 1700 50  0001 C CNN
+	2    17900 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74HCT00-74xx Z19
+U 3 1 F9D3EEE6
+P 6100 4800
+F 0 "Z19" H 6200 4925 59  0000 L BNN
+F 1 "7400N" H 6200 4600 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 6100 4800 50  0001 C CNN
+F 3 "" H 6100 4800 50  0001 C CNN
+	3    6100 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74HCT00-74xx Z19
+U 4 1 F9D3EEFA
+P 25900 16100
+F 0 "Z19" H 26000 16225 59  0000 L BNN
+F 1 "7400N" H 26000 15900 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 25900 16100 50  0001 C CNN
+F 3 "" H 25900 16100 50  0001 C CNN
+	4    25900 16100
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS138-74xx Z29
+U 1 1 BA0E4783
+P 5800 5900
+F 0 "Z29" H 5400 6325 59  0000 L BNN
+F 1 "74138N" H 5400 5300 59  0001 L BNN
+F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 5800 5900 50  0001 C CNN
+F 3 "" H 5800 5900 50  0001 C CNN
+	1    5800 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS32-74xx Z26
+U 1 1 1BA768AD
+P 7800 4900
+F 0 "Z26" H 7900 5025 59  0000 L BNN
+F 1 "7432N" H 7900 4700 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 7800 4900 50  0001 C CNN
+F 3 "" H 7800 4900 50  0001 C CNN
+	1    7800 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS32-74xx Z26
+U 2 1 1BA768A1
+P 9400 13600
+F 0 "Z26" H 9500 13725 59  0000 L BNN
+F 1 "7432N" H 9500 13400 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 9400 13600 50  0001 C CNN
+F 3 "" H 9400 13600 50  0001 C CNN
+	2    9400 13600
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS32-74xx Z26
+U 3 1 1BA768A5
+P 10800 14000
+F 0 "Z26" H 10900 14125 59  0000 L BNN
+F 1 "7432N" H 10900 13800 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 10800 14000 50  0001 C CNN
+F 3 "" H 10800 14000 50  0001 C CNN
+	3    10800 14000
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS32-74xx Z26
+U 4 1 1BA768B9
+P 9700 4100
+F 0 "Z26" H 9800 4225 59  0000 L BNN
+F 1 "7432N" H 9800 3900 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 9700 4100 50  0001 C CNN
+F 3 "" H 9700 4100 50  0001 C CNN
+	4    9700 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:C-Device C8
+U 1 1 39DFD2A9
+P 8400 5150
+F 0 "C8" H 8550 5250 59  0000 L CNN
+F 1 "2N2" H 8550 5100 59  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8400 5150 50  0001 C CNN
+F 3 "" H 8400 5150 50  0001 C CNN
+	1    8400 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #P+01
+U 1 1 6A081B6E
+P 5000 6100
+F 0 "#P+01" H 5000 6100 50  0001 C CNN
+F 1 "VCC" V 5100 6100 59  0000 L BNN
+F 2 "" H 5000 6100 50  0001 C CNN
+F 3 "" H 5000 6100 50  0001 C CNN
+	1    5000 6100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74HCT02-74xx Z24
+U 1 1 368D621B
+P 10900 3800
+F 0 "Z24" H 11000 3925 59  0000 L BNN
+F 1 "7402N" H 11000 3600 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 10900 3800 50  0001 C CNN
+F 3 "" H 10900 3800 50  0001 C CNN
+	1    10900 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74HCT02-74xx Z25
+U 3 1 368D6217
+P 9700 3400
+F 0 "Z25" H 9800 3525 59  0000 L BNN
+F 1 "7402N" H 9800 3200 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 9700 3400 50  0001 C CNN
+F 3 "" H 9700 3400 50  0001 C CNN
+	3    9700 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74HCT02-74xx Z24
+U 3 1 368D6213
+P 12500 13000
+F 0 "Z24" H 12500 13300 59  0000 C CNN
+F 1 "7402N" H 12600 12800 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 12500 13000 50  0001 C CNN
+F 3 "" H 12500 13000 50  0001 C CNN
+	3    12500 13000
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74HCT02-74xx Z24
+U 4 1 368D620F
+P 12500 13800
+F 0 "Z24" H 12600 13925 59  0000 L BNN
+F 1 "7402N" H 12600 13600 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 12500 13800 50  0001 C CNN
+F 3 "" H 12500 13800 50  0001 C CNN
+	4    12500 13800
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS11-74xx Z22
+U 1 1 45E0784D
+P 25100 14000
+F 0 "Z22" H 25200 14125 59  0000 L BNN
+F 1 "7411N" H 25200 13800 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 25100 14000 50  0001 C CNN
+F 3 "" H 25100 14000 50  0001 C CNN
+	1    25100 14000
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS11-74xx Z22
+U 2 1 45E07841
+P 24900 16000
+F 0 "Z22" H 25000 16125 59  0000 L BNN
+F 1 "7411N" H 25000 15800 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 24900 16000 50  0001 C CNN
+F 3 "" H 24900 16000 50  0001 C CNN
+	2    24900 16000
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS11-74xx Z22
+U 3 1 45E07845
+P 9300 5700
+F 0 "Z22" H 9400 5825 59  0000 L BNN
+F 1 "7411N" H 9400 5500 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 9300 5700 50  0001 C CNN
+F 3 "" H 9300 5700 50  0001 C CNN
+	3    9300 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #P+02
+U 1 1 637B3A6A
+P 8900 5800
+F 0 "#P+02" H 8900 5800 50  0001 C CNN
+F 1 "VCC" V 8900 5800 59  0000 L BNN
+F 2 "" H 8900 5800 50  0001 C CNN
+F 3 "" H 8900 5800 50  0001 C CNN
+	1    8900 5800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:2114-Memory_RAM Z7
+U 1 1 3B27C4BC
+P 21900 8000
+F 0 "Z7" H 21600 8725 59  0000 L BNN
+F 1 "2114" H 21600 7200 59  0001 L BNN
+F 2 "Package_DIP:DIP-18_W7.62mm_LongPads" H 21900 8000 50  0001 C CNN
+F 3 "" H 21900 8000 50  0001 C CNN
+	1    21900 8000
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:2114-Memory_RAM Z8
+U 1 1 91960D46
+P 21900 9600
+F 0 "Z8" H 21600 10325 59  0000 L BNN
+F 1 "2114" H 21600 8800 59  0001 L BNN
+F 2 "Package_DIP:DIP-18_W7.62mm_LongPads" H 21900 9600 50  0001 C CNN
+F 3 "" H 21900 9600 50  0001 C CNN
+	1    21900 9600
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:2114-Memory_RAM Z3
+U 1 1 C3D5F592
+P 11100 8000
+F 0 "Z3" H 10800 8725 59  0000 L BNN
+F 1 "2114" H 10800 7200 59  0001 L BNN
+F 2 "Package_DIP:DIP-18_W7.62mm_LongPads" H 11100 8000 50  0001 C CNN
+F 3 "" H 11100 8000 50  0001 C CNN
+	1    11100 8000
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:2114-Memory_RAM Z4
+U 1 1 6F575D5F
+P 11100 9600
+F 0 "Z4" H 10800 10325 59  0000 L BNN
+F 1 "2114" H 10800 8800 59  0001 L BNN
+F 2 "Package_DIP:DIP-18_W7.62mm_LongPads" H 11100 9600 50  0001 C CNN
+F 3 "" H 11100 9600 50  0001 C CNN
+	1    11100 9600
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:2114-Memory_RAM Z5
+U 1 1 614D798D
+P 17500 8000
+F 0 "Z5" H 17200 8725 59  0000 L BNN
+F 1 "2114" H 17200 7200 59  0001 L BNN
+F 2 "Package_DIP:DIP-18_W7.62mm_LongPads" H 17500 8000 50  0001 C CNN
+F 3 "" H 17500 8000 50  0001 C CNN
+	1    17500 8000
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:2114-Memory_RAM Z6
+U 1 1 23B8CEDF
+P 17500 9600
+F 0 "Z6" H 17200 10325 59  0000 L BNN
+F 1 "2114" H 17200 8800 59  0001 L BNN
+F 2 "Package_DIP:DIP-18_W7.62mm_LongPads" H 17500 9600 50  0001 C CNN
+F 3 "" H 17500 9600 50  0001 C CNN
+	1    17500 9600
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74HCT02-74xx Z25
+U 1 1 E55BDED2
+P 14200 2600
+F 0 "Z25" H 14300 2725 59  0000 L BNN
+F 1 "7402N" H 14300 2400 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 14200 2600 50  0001 C CNN
+F 3 "" H 14200 2600 50  0001 C CNN
+	1    14200 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74HCT02-74xx Z25
+U 2 1 E55BDEDE
+P 25900 15200
+F 0 "Z25" H 26000 15325 59  0000 L BNN
+F 1 "7402N" H 26000 15000 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 25900 15200 50  0001 C CNN
+F 3 "" H 25900 15200 50  0001 C CNN
+	2    25900 15200
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74HCT02-74xx Z24
+U 2 1 E55BDEDA
+P 10800 12900
+F 0 "Z24" H 10900 13025 59  0000 L BNN
+F 1 "7402N" H 10900 12700 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 10800 12900 50  0001 C CNN
+F 3 "" H 10800 12900 50  0001 C CNN
+	2    10800 12900
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74HCT02-74xx Z25
+U 4 1 E55BDEC6
+P 24400 14000
+F 0 "Z25" H 24500 14125 59  0000 L BNN
+F 1 "7402N" H 24500 13800 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 24400 14000 50  0001 C CNN
+F 3 "" H 24400 14000 50  0001 C CNN
+	4    24400 14000
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS367-74xx Z15
+U 1 1 3744AF2D
+P 13600 7800
+F 0 "Z15" H 13300 8325 59  0000 L BNN
+F 1 "74367N" H 13300 7100 59  0001 L BNN
+F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 13600 7800 50  0001 C CNN
+F 3 "" H 13600 7800 50  0001 C CNN
+	1    13600 7800
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS367-74xx Z16
+U 1 1 56C2DFF9
+P 13600 9400
+F 0 "Z16" H 13300 9925 59  0000 L BNN
+F 1 "74367N" H 13300 8700 59  0001 L BNN
+F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 13600 9400 50  0001 C CNN
+F 3 "" H 13600 9400 50  0001 C CNN
+	1    13600 9400
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:R-Device R6
+U 1 1 64D54441
+P 17000 4800
+F 0 "R6" H 16850 4859 59  0000 L BNN
+F 1 "1K" H 16850 4670 59  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 17000 4800 50  0001 C CNN
+F 3 "" H 17000 4800 50  0001 C CNN
+	1    17000 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:R-Device R5
+U 1 1 8C955809
+P 17500 4800
+F 0 "R5" H 17350 4859 59  0000 L BNN
+F 1 "12k" H 17350 4670 59  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 17500 4800 50  0001 C CNN
+F 3 "" H 17500 4800 50  0001 C CNN
+	1    17500 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:GND-power #SUPPLY01
+U 1 1 F54A36B8
+P 16700 4800
+F 0 "#SUPPLY01" H 16700 4800 50  0001 C CNN
+F 1 "GND" H 16625 4675 59  0000 L BNN
+F 2 "" H 16700 4800 50  0001 C CNN
+F 3 "" H 16700 4800 50  0001 C CNN
+	1    16700 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:C-Device C3
+U 1 1 2D83036D
+P 17250 4600
+F 0 "C3" H 17310 4615 59  0000 L BNN
+F 1 "47N" H 17310 4415 59  0000 L BNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 17250 4600 50  0001 C CNN
+F 3 "" H 17250 4600 50  0001 C CNN
+	1    17250 4600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:GND-power #SUPPLY02
+U 1 1 19032892
+P 17000 5100
+F 0 "#SUPPLY02" H 17000 5100 50  0001 C CNN
+F 1 "GND" H 16925 4975 59  0000 L BNN
+F 2 "" H 17000 5100 50  0001 C CNN
+F 3 "" H 17000 5100 50  0001 C CNN
+	1    17000 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:GND-power #SUPPLY03
+U 1 1 4F8E092B
+P 17500 5100
+F 0 "#SUPPLY03" H 17500 5100 50  0001 C CNN
+F 1 "GND" H 17425 4975 59  0000 L BNN
+F 2 "" H 17500 5100 50  0001 C CNN
+F 3 "" H 17500 5100 50  0001 C CNN
+	1    17500 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS08-74xx Z20
+U 1 1 6C32A9E0
+P 24300 16600
+F 0 "Z20" H 24400 16725 59  0000 L BNN
+F 1 "7408N" H 24400 16400 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 24300 16600 50  0001 C CNN
+F 3 "" H 24300 16600 50  0001 C CNN
+	1    24300 16600
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS08-74xx Z20
+U 2 1 6C32A9EC
+P 15400 2300
+F 0 "Z20" H 15500 2425 59  0000 L BNN
+F 1 "7408N" H 15500 2100 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 15400 2300 50  0001 C CNN
+F 3 "" H 15400 2300 50  0001 C CNN
+	2    15400 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS08-74xx Z20
+U 3 1 6C32A9E8
+P 17900 2400
+F 0 "Z20" H 18000 2525 59  0000 L BNN
+F 1 "7408N" H 18000 2200 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 17900 2400 50  0001 C CNN
+F 3 "" H 17900 2400 50  0001 C CNN
+	3    17900 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS08-74xx Z20
+U 4 1 6C32A9F4
+P 16200 2800
+F 0 "Z20" H 16300 2925 59  0000 L BNN
+F 1 "7408N" H 16300 2600 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 16200 2800 50  0001 C CNN
+F 3 "" H 16200 2800 50  0001 C CNN
+	4    16200 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS11-74xx Z21
+U 1 1 89912F08
+P 23500 16500
+F 0 "Z21" H 23600 16625 59  0000 L BNN
+F 1 "7411N" H 23400 16200 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 23500 16500 50  0001 C CNN
+F 3 "" H 23500 16500 50  0001 C CNN
+	1    23500 16500
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS11-74xx Z21
+U 2 1 89912F04
+P 16600 2300
+F 0 "Z21" H 16700 2425 59  0000 L BNN
+F 1 "7411N" H 16700 2100 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 16600 2300 50  0001 C CNN
+F 3 "" H 16600 2300 50  0001 C CNN
+	2    16600 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS11-74xx Z21
+U 3 1 89912F00
+P 23400 14700
+F 0 "Z21" H 23500 14825 59  0000 L BNN
+F 1 "7411N" H 23500 14500 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 23400 14700 50  0001 C CNN
+F 3 "" H 23400 14700 50  0001 C CNN
+	3    23400 14700
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS86-74xx Z23
+U 1 1 B2997325
+P 11800 13900
+F 0 "Z23" H 11900 14025 59  0000 L BNN
+F 1 "7486N" H 11900 13700 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 11800 13900 50  0001 C CNN
+F 3 "" H 11800 13900 50  0001 C CNN
+	1    11800 13900
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS86-74xx Z23
+U 2 1 B2997329
+P 17900 3900
+F 0 "Z23" H 18000 4025 59  0000 L BNN
+F 1 "7486N" H 18000 3700 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 17900 3900 50  0001 C CNN
+F 3 "" H 17900 3900 50  0001 C CNN
+	2    17900 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS86-74xx Z23
+U 3 1 B299732D
+P 20400 15200
+F 0 "Z23" H 20500 15325 59  0000 L BNN
+F 1 "7486N" H 20500 15000 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 20400 15200 50  0001 C CNN
+F 3 "" H 20400 15200 50  0001 C CNN
+	3    20400 15200
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS86-74xx Z23
+U 4 1 B2997331
+P 20000 2800
+F 0 "Z23" H 20100 2925 59  0000 L BNN
+F 1 "7486N" H 20100 2600 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 20000 2800 50  0001 C CNN
+F 3 "" H 20000 2800 50  0001 C CNN
+	4    20000 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS74-74xx Z27
+U 1 1 B0E076CA
+P 13000 12100
+F 0 "Z27" H 12700 12425 59  0000 L BNN
+F 1 "7474N" H 12700 11700 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 13000 12100 50  0001 C CNN
+F 3 "" H 13000 12100 50  0001 C CNN
+	1    13000 12100
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS74-74xx Z27
+U 2 1 B0E076C6
+P 19100 2900
+F 0 "Z27" H 19100 3300 59  0000 C CNN
+F 1 "7474N" H 18800 2500 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 19100 2900 50  0001 C CNN
+F 3 "" H 19100 2900 50  0001 C CNN
+	2    19100 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS166-74xx Z28
+U 1 1 05BD260C
+P 23300 5300
+F 0 "Z28" V 23950 5300 59  0000 C CNN
+F 1 "74166N" H 23000 4400 59  0001 L BNN
+F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 23300 5300 50  0001 C CNN
+F 3 "" H 23300 5300 50  0001 C CNN
+	1    23300 5300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS393-74xx Z9
+U 1 1 D8FA6A58
+P 21900 12800
+F 0 "Z9" H 21600 13025 59  0000 L BNN
+F 1 "74393N" H 21600 12400 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 21900 12800 50  0001 C CNN
+F 3 "" H 21900 12800 50  0001 C CNN
+	1    21900 12800
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS393-74xx Z10
+U 1 1 8DB63E7D
+P 21900 14600
+F 0 "Z10" H 21600 14825 59  0000 L BNN
+F 1 "74393N" H 21600 14200 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 21900 14600 50  0001 C CNN
+F 3 "" H 21900 14600 50  0001 C CNN
+	1    21900 14600
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS393-74xx Z10
+U 2 1 8DB63E71
+P 21900 15600
+F 0 "Z10" H 21600 15825 59  0000 L BNN
+F 1 "74393N" H 21600 15200 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 21900 15600 50  0001 C CNN
+F 3 "" H 21900 15600 50  0001 C CNN
+	2    21900 15600
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS393-74xx Z11
+U 1 1 E061FECA
+P 21900 16500
+F 0 "Z11" H 21600 16725 59  0000 L BNN
+F 1 "74393N" H 21600 16100 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 21900 16500 50  0001 C CNN
+F 3 "" H 21900 16500 50  0001 C CNN
+	1    21900 16500
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS393-74xx Z11
+U 2 1 E061FEC6
+P 21900 17400
+F 0 "Z11" H 21600 17625 59  0000 L BNN
+F 1 "74393N" H 21600 17000 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 21900 17400 50  0001 C CNN
+F 3 "" H 21900 17400 50  0001 C CNN
+	2    21900 17400
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #P+03
+U 1 1 48C2C5DB
+P 19000 2600
+F 0 "#P+03" H 19000 2600 50  0001 C CNN
+F 1 "VCC" V 18900 2500 59  0000 L BNN
+F 2 "" H 19000 2600 50  0001 C CNN
+F 3 "" H 19000 2600 50  0001 C CNN
+	1    19000 2600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #P+04
+U 1 1 459FCD94
+P 19000 3200
+F 0 "#P+04" H 19000 3200 50  0001 C CNN
+F 1 "VCC" V 18900 3100 59  0000 L BNN
+F 2 "" H 19000 3200 50  0001 C CNN
+F 3 "" H 19000 3200 50  0001 C CNN
+	1    19000 3200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:R-Device R3
+U 1 1 64FC636C
+P 20600 2800
+F 0 "R3" H 20450 2859 59  0000 L BNN
+F 1 "1K5" H 20450 2670 59  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 20600 2800 50  0001 C CNN
+F 3 "" H 20600 2800 50  0001 C CNN
+	1    20600 2800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:R-Device R4
+U 1 1 7E68E8B0
+P 21100 2500
+F 0 "R4" H 20950 2559 59  0000 L BNN
+F 1 "1K5" H 20950 2370 59  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 21100 2500 50  0001 C CNN
+F 3 "" H 21100 2500 50  0001 C CNN
+	1    21100 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:1N4148-Diode D1
+U 1 1 C78C3FBD
+P 21100 3050
+F 0 "D1" H 21200 3069 59  0000 L BNN
+F 1 "1N4148DO35-7" H 21200 2959 59  0000 L BNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 21100 3050 50  0001 C CNN
+F 3 "" H 21100 3050 50  0001 C CNN
+	1    21100 3050
+	0    1    1    0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #P+05
+U 1 1 57F4DC09
+P 21100 2100
+F 0 "#P+05" H 21100 2100 50  0001 C CNN
+F 1 "VCC" V 21000 2000 59  0000 L BNN
+F 2 "" H 21100 2100 50  0001 C CNN
+F 3 "" H 21100 2100 50  0001 C CNN
+	1    21100 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:GND-power #SUPPLY04
+U 1 1 1C9152C2
+P 21700 2700
+F 0 "#SUPPLY04" H 21700 2700 50  0001 C CNN
+F 1 "GND" H 21625 2575 59  0000 L BNN
+F 2 "" H 21700 2700 50  0001 C CNN
+F 3 "" H 21700 2700 50  0001 C CNN
+	1    21700 2700
+	0    1    1    0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #P+06
+U 1 1 4B6CF0C8
+P 17500 4000
+F 0 "#P+06" H 17500 4000 50  0001 C CNN
+F 1 "VCC" V 17400 3900 59  0000 L BNN
+F 2 "" H 17500 4000 50  0001 C CNN
+F 3 "" H 17500 4000 50  0001 C CNN
+	1    17500 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:GND-power #SUPPLY05
+U 1 1 20B1DDDE
+P 18000 4800
+F 0 "#SUPPLY05" H 18000 4800 50  0001 C CNN
+F 1 "GND" H 17925 4675 59  0000 L BNN
+F 2 "" H 18000 4800 50  0001 C CNN
+F 3 "" H 18000 4800 50  0001 C CNN
+	1    18000 4800
+	0    1    1    0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #P+07
+U 1 1 FAFE20BD
+P 24100 5800
+F 0 "#P+07" H 24100 5800 50  0001 C CNN
+F 1 "VCC" V 24000 5700 59  0000 L BNN
+F 2 "" H 24100 5800 50  0001 C CNN
+F 3 "" H 24100 5800 50  0001 C CNN
+	1    24100 5800
+	0    1    1    0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:GND-power #SUPPLY06
+U 1 1 A7CD5EB6
+P 23700 5900
+F 0 "#SUPPLY06" H 23700 5900 50  0001 C CNN
+F 1 "GND" H 23725 5775 59  0000 L BNN
+F 2 "" H 23700 5900 50  0001 C CNN
+F 3 "" H 23700 5900 50  0001 C CNN
+	1    23700 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:2732-Memory_EPROM Z2
+U 1 1 534C89F4
+P 8700 9900
+F 0 "Z2" H 8300 10725 59  0000 L BNN
+F 1 "2732" H 8300 9000 59  0001 L BNN
+F 2 "Package_DIP:DIP-24_W15.24mm_LongPads" H 8700 9900 50  0001 C CNN
+F 3 "" H 8700 9900 50  0001 C CNN
+	1    8700 9900
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:CP-Device C7
+U 1 1 4D550C40
+P 3900 9150
+F 0 "C7" H 3945 9169 59  0000 L BNN
+F 1 "1U" H 3745 9169 59  0000 L BNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 3900 9150 50  0001 C CNN
+F 3 "" H 3900 9150 50  0001 C CNN
+	1    3900 9150
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:R-Device R25
+U 1 1 E4DB1434
+P 3900 8650
+F 0 "R25" H 3800 8750 59  0000 R CNN
+F 1 "220k" H 3800 8600 59  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 3900 8650 50  0001 C CNN
+F 3 "" H 3900 8650 50  0001 C CNN
+	1    3900 8650
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #P+010
+U 1 1 6665561A
+P 4500 10000
+F 0 "#P+010" H 4500 10000 50  0001 C CNN
+F 1 "VCC" V 4500 10000 59  0000 L BNN
+F 2 "" H 4500 10000 50  0001 C CNN
+F 3 "" H 4500 10000 50  0001 C CNN
+	1    4500 10000
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:2N3904-Transistor_BJT Q2
+U 1 1 FC4D4FCD
+P 4400 10800
+F 0 "Q2" H 4700 10900 59  0000 L BNN
+F 1 "2N3904" H 4700 10800 59  0000 L BNN
+F 2 "Package_TO_SOT_THT:TO-92L_HandSolder" H 4400 10800 50  0001 C CNN
+F 3 "" H 4400 10800 50  0001 C CNN
+	1    4400 10800
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:R-Device R7
+U 1 1 D7606CCB
+P 4050 10800
+F 0 "R7" H 3900 10859 59  0000 L BNN
+F 1 "1k0" H 3900 10670 59  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 4050 10800 50  0001 C CNN
+F 3 "" H 4050 10800 50  0001 C CNN
+	1    4050 10800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:C-Device C4
+U 1 1 72465CF6
+P 4050 10500
+F 0 "C4" H 4110 10515 59  0000 L BNN
+F 1 "42p" H 4110 10315 59  0000 L BNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 4050 10500 50  0001 C CNN
+F 3 "" H 4050 10500 50  0001 C CNN
+	1    4050 10500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:R-Device R24
+U 1 1 710310B2
+P 4650 9100
+F 0 "R24" H 4500 9159 59  0000 L BNN
+F 1 "10k" H 4500 8970 59  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 4650 9100 50  0001 C CNN
+F 3 "" H 4650 9100 50  0001 C CNN
+	1    4650 9100
+	0    1    1    0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #P+011
+U 1 1 4D46F757
+P 4300 9100
+F 0 "#P+011" H 4300 9100 50  0001 C CNN
+F 1 "VCC" V 4255 9085 59  0000 L BNN
+F 2 "" H 4300 9100 50  0001 C CNN
+F 3 "" H 4300 9100 50  0001 C CNN
+	1    4300 9100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #P+012
+U 1 1 BC83E68F
+P 12800 9400
+F 0 "#P+012" H 12800 9400 50  0001 C CNN
+F 1 "VCC" V 12800 9400 59  0000 L BNN
+F 2 "" H 12800 9400 50  0001 C CNN
+F 3 "" H 12800 9400 50  0001 C CNN
+	1    12800 9400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:R-Device R10
+U 1 1 C0B20218
+P 13850 12000
+F 0 "R10" H 13700 12059 59  0000 L BNN
+F 1 "10k" H 13700 11870 59  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 13850 12000 50  0001 C CNN
+F 3 "" H 13850 12000 50  0001 C CNN
+	1    13850 12000
+	0    1    1    0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:R-Device R2
+U 1 1 C32E0CEB
+P 13850 13800
+F 0 "R2" H 13700 13859 59  0000 L BNN
+F 1 "12k" H 13700 13670 59  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 13850 13800 50  0001 C CNN
+F 3 "" H 13850 13800 50  0001 C CNN
+	1    13850 13800
+	0    1    1    0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:C-Device C6
+U 1 1 21B55AC2
+P 14250 12000
+F 0 "C6" H 14310 12015 59  0000 L BNN
+F 1 "47N" H 14310 11815 59  0000 L BNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 14250 12000 50  0001 C CNN
+F 3 "" H 14250 12000 50  0001 C CNN
+	1    14250 12000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:C-Device C2
+U 1 1 6D398A75
+P 14700 12750
+F 0 "C2" H 14760 12765 59  0000 L BNN
+F 1 "47N" H 14760 12565 59  0000 L BNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 14700 12750 50  0001 C CNN
+F 3 "" H 14700 12750 50  0001 C CNN
+	1    14700 12750
+	-1   0    0    1   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:1N4148-Diode D2
+U 1 1 0CADE672
+P 15000 12750
+F 0 "D2" V 15100 12769 59  0000 L BNN
+F 1 "1N4148DO35-7" H 14800 12659 59  0000 L BNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 15000 12750 50  0001 C CNN
+F 3 "" H 15000 12750 50  0001 C CNN
+	1    15000 12750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #P+013
+U 1 1 1A067FB7
+P 15300 12300
+F 0 "#P+013" H 15300 12300 50  0001 C CNN
+F 1 "VCC" V 15300 12300 59  0000 L BNN
+F 2 "" H 15300 12300 50  0001 C CNN
+F 3 "" H 15300 12300 50  0001 C CNN
+	1    15300 12300
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:BC237-Transistor_BJT Q3
+U 1 1 9A1C1EBA
+P 14600 13800
+F 0 "Q3" H 14200 14100 59  0000 L BNN
+F 1 "BC237" H 14200 14000 59  0000 L BNN
+F 2 "Package_TO_SOT_THT:TO-92L_HandSolder" H 14600 13800 50  0001 C CNN
+F 3 "" H 14600 13800 50  0001 C CNN
+	1    14600 13800
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #P+014
+U 1 1 C5FBB535
+P 13000 11700
+F 0 "#P+014" H 13000 11700 50  0001 C CNN
+F 1 "VCC" V 13000 11700 59  0000 L BNN
+F 2 "" H 13000 11700 50  0001 C CNN
+F 3 "" H 13000 11700 50  0001 C CNN
+	1    13000 11700
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #P+015
+U 1 1 836A5F30
+P 13000 12500
+F 0 "#P+015" H 13000 12500 50  0001 C CNN
+F 1 "VCC" V 13000 12500 59  0000 L BNN
+F 2 "" H 13000 12500 50  0001 C CNN
+F 3 "" H 13000 12500 50  0001 C CNN
+	1    13000 12500
+	-1   0    0    1   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:GND-power #SUPPLY07
+U 1 1 2907E397
+P 4500 11100
+F 0 "#SUPPLY07" H 4500 11100 50  0001 C CNN
+F 1 "GND" H 4425 10975 59  0000 L BNN
+F 2 "" H 4500 11100 50  0001 C CNN
+F 3 "" H 4500 11100 50  0001 C CNN
+	1    4500 11100
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:GND-power #SUPPLY08
+U 1 1 39566F8A
+P 8400 5400
+F 0 "#SUPPLY08" H 8400 5400 50  0001 C CNN
+F 1 "GND" H 8325 5275 59  0000 L BNN
+F 2 "" H 8400 5400 50  0001 C CNN
+F 3 "" H 8400 5400 50  0001 C CNN
+	1    8400 5400
+	0    1    1    0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:GND-power #SUPPLY09
+U 1 1 B8640D54
+P 3900 9400
+F 0 "#SUPPLY09" H 3900 9400 50  0001 C CNN
+F 1 "GND" H 3825 9275 59  0000 L BNN
+F 2 "" H 3900 9400 50  0001 C CNN
+F 3 "" H 3900 9400 50  0001 C CNN
+	1    3900 9400
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:C-Device C1
+U 1 1 09BD38C5
+P 19000 15600
+F 0 "C1" H 19060 15615 59  0000 L BNN
+F 1 "47N" H 19060 15415 59  0000 L BNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 19000 15600 50  0001 C CNN
+F 3 "" H 19000 15600 50  0001 C CNN
+	1    19000 15600
+	-1   0    0    1   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:C-Device C5
+U 1 1 8E140230
+P 19550 14800
+F 0 "C5" V 19900 14800 59  0000 C CNN
+F 1 "47N" V 19750 14800 59  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 19550 14800 50  0001 C CNN
+F 3 "" H 19550 14800 50  0001 C CNN
+	1    19550 14800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:R-Device R1
+U 1 1 8BB82814
+P 19250 15100
+F 0 "R1" H 19100 15159 59  0000 L BNN
+F 1 "47k" H 19100 14970 59  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 19250 15100 50  0001 C CNN
+F 3 "" H 19250 15100 50  0001 C CNN
+	1    19250 15100
+	0    1    1    0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:2N3904-Transistor_BJT Q1
+U 1 1 22BC07EB
+P 19700 15300
+F 0 "Q1" H 19500 15300 59  0000 L BNN
+F 1 "2N3904" H 19300 15200 59  0000 L BNN
+F 2 "Package_TO_SOT_THT:TO-92L_HandSolder" H 19700 15300 50  0001 C CNN
+F 3 "" H 19700 15300 50  0001 C CNN
+	1    19700 15300
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:R-Device R9
+U 1 1 F6801DE1
+P 19800 14650
+F 0 "R9" H 19650 14709 59  0000 L BNN
+F 1 "47k" H 19650 14520 59  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 19800 14650 50  0001 C CNN
+F 3 "" H 19800 14650 50  0001 C CNN
+	1    19800 14650
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #P+016
+U 1 1 DA826A5A
+P 19800 14400
+F 0 "#P+016" H 19800 14400 50  0001 C CNN
+F 1 "VCC" V 19800 14400 59  0000 L BNN
+F 2 "" H 19800 14400 50  0001 C CNN
+F 3 "" H 19800 14400 50  0001 C CNN
+	1    19800 14400
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:GND-power #SUPPLY010
+U 1 1 28999800
+P 19800 15600
+F 0 "#SUPPLY010" H 19800 15600 50  0001 C CNN
+F 1 "GND" H 19710 15410 59  0000 L BNN
+F 2 "" H 19800 15600 50  0001 C CNN
+F 3 "" H 19800 15600 50  0001 C CNN
+	1    19800 15600
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:GND-power #SUPPLY011
+U 1 1 E0B04C0E
+P 19000 15850
+F 0 "#SUPPLY011" H 19000 15850 50  0001 C CNN
+F 1 "GND" H 18905 15665 59  0000 L BNN
+F 2 "" H 19000 15850 50  0001 C CNN
+F 3 "" H 19000 15850 50  0001 C CNN
+	1    19000 15850
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:GND-power #SUPPLY012
+U 1 1 31C2C8A5
+P 20000 15300
+F 0 "#SUPPLY012" H 20000 15300 50  0001 C CNN
+F 1 "GND" V 20125 15375 59  0000 L BNN
+F 2 "" H 20000 15300 50  0001 C CNN
+F 3 "" H 20000 15300 50  0001 C CNN
+	1    20000 15300
+	0    1    1    0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:GND-power #SUPPLY013
+U 1 1 8D803956
+P 21300 13000
+F 0 "#SUPPLY013" H 21300 13000 50  0001 C CNN
+F 1 "GND" H 21205 12810 59  0000 L BNN
+F 2 "" H 21300 13000 50  0001 C CNN
+F 3 "" H 21300 13000 50  0001 C CNN
+	1    21300 13000
+	0    1    1    0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:GND-power #SUPPLY014
+U 1 1 C4643C99
+P 21300 13900
+F 0 "#SUPPLY014" H 21300 13900 50  0001 C CNN
+F 1 "GND" H 21205 13720 59  0000 L BNN
+F 2 "" H 21300 13900 50  0001 C CNN
+F 3 "" H 21300 13900 50  0001 C CNN
+	1    21300 13900
+	0    1    1    0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:GND-power #SUPPLY015
+U 1 1 2739B52F
+P 21300 15800
+F 0 "#SUPPLY015" H 21300 15800 50  0001 C CNN
+F 1 "GND" H 21225 15675 59  0000 L BNN
+F 2 "" H 21300 15800 50  0001 C CNN
+F 3 "" H 21300 15800 50  0001 C CNN
+	1    21300 15800
+	0    1    1    0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #P+017
+U 1 1 C06B3C1E
+P 25600 16400
+F 0 "#P+017" H 25600 16400 50  0001 C CNN
+F 1 "VCC" V 25600 16400 59  0000 L BNN
+F 2 "" H 25600 16400 50  0001 C CNN
+F 3 "" H 25600 16400 50  0001 C CNN
+	1    25600 16400
+	-1   0    0    1   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:GND-power #SUPPLY016
+U 1 1 86F85EE9
+P 11550 16050
+F 0 "#SUPPLY016" H 11550 16050 50  0001 C CNN
+F 1 "GND" H 11475 15925 59  0000 L BNN
+F 2 "" H 11550 16050 50  0001 C CNN
+F 3 "" H 11550 16050 50  0001 C CNN
+	1    11550 16050
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:CP-Device C9
+U 1 1 FF98D322
+P 11550 15800
+F 0 "C9" H 11595 15819 59  0000 L BNN
+F 1 "100u" H 11595 15619 59  0000 L BNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 11550 15800 50  0001 C CNN
+F 3 "" H 11550 15800 50  0001 C CNN
+	1    11550 15800
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:CP-Device C11
+U 1 1 5EF628C7
+P 13050 15800
+F 0 "C11" H 13095 15819 59  0000 L BNN
+F 1 "100u" H 13095 15619 59  0000 L BNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 13050 15800 50  0001 C CNN
+F 3 "" H 13050 15800 50  0001 C CNN
+	1    13050 15800
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:C-Device C10
+U 1 1 AF81476B
+P 11950 15800
+F 0 "C10" H 11710 15615 59  0000 L BNN
+F 1 "100N" H 11710 15815 59  0000 L BNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 11950 15800 50  0001 C CNN
+F 3 "" H 11950 15800 50  0001 C CNN
+	1    11950 15800
+	-1   0    0    1   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:L-Device L1
+U 1 1 FF1B59BB
+P 12500 15650
+F 0 "L1" V 12750 15650 59  0000 C CNN
+F 1 "Z?CCW14_40" V 12650 15650 59  0000 C CNN
+F 2 "Inductor_THT:L_Axial_L5.3mm_D2.2mm_P2.54mm_Vertical_Vishay_IM-1" H 12500 15650 50  0001 C CNN
+F 3 "" H 12500 15650 50  0001 C CNN
+	1    12500 15650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:L7805-Regulator_Linear IC1
+U 1 1 22F7723E
+P 13750 15650
+F 0 "IC1" H 13450 15875 59  0000 L BNN
+F 1 "78T" H 13450 15775 59  0000 L BNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 13750 15650 50  0001 C CNN
+F 3 "" H 13750 15650 50  0001 C CNN
+	1    13750 15650
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:CP-Device C12
+U 1 1 4B2F8341
+P 14250 15800
+F 0 "C12" H 14295 15819 59  0000 L BNN
+F 1 "100u" H 14295 15619 59  0000 L BNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 14250 15800 50  0001 C CNN
+F 3 "" H 14250 15800 50  0001 C CNN
+	1    14250 15800
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:C-Device C13
+U 1 1 A8CAE9D9
+P 14550 15800
+F 0 "C13" H 14310 15615 59  0000 L BNN
+F 1 "100N" H 14310 15815 59  0000 L BNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 14550 15800 50  0001 C CNN
+F 3 "" H 14550 15800 50  0001 C CNN
+	1    14550 15800
+	-1   0    0    1   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:C-Device C14
+U 1 1 D4CF67E9
+P 14850 15800
+F 0 "C14" H 14610 15615 59  0000 L BNN
+F 1 "100N" H 14610 15815 59  0000 L BNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 14850 15800 50  0001 C CNN
+F 3 "" H 14850 15800 50  0001 C CNN
+	1    14850 15800
+	-1   0    0    1   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:C-Device C15
+U 1 1 073161B7
+P 15150 15800
+F 0 "C15" H 14910 15615 59  0000 L BNN
+F 1 "100N" H 14910 15815 59  0000 L BNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 15150 15800 50  0001 C CNN
+F 3 "" H 15150 15800 50  0001 C CNN
+	1    15150 15800
+	-1   0    0    1   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:C-Device C16
+U 1 1 9C83CA57
+P 15450 15800
+F 0 "C16" H 15210 15615 59  0000 L BNN
+F 1 "100N" H 15210 15815 59  0000 L BNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 15450 15800 50  0001 C CNN
+F 3 "" H 15450 15800 50  0001 C CNN
+	1    15450 15800
+	-1   0    0    1   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:C-Device C17
+U 1 1 878092E4
+P 15750 15800
+F 0 "C17" H 15510 15615 59  0000 L BNN
+F 1 "100N" H 15510 15815 59  0000 L BNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 15750 15800 50  0001 C CNN
+F 3 "" H 15750 15800 50  0001 C CNN
+	1    15750 15800
+	-1   0    0    1   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:C-Device C18
+U 1 1 5C3EF8C4
+P 16050 15800
+F 0 "C18" H 15810 15615 59  0000 L BNN
+F 1 "100N" H 15810 15815 59  0000 L BNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 16050 15800 50  0001 C CNN
+F 3 "" H 16050 15800 50  0001 C CNN
+	1    16050 15800
+	-1   0    0    1   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:C-Device C19
+U 1 1 F7628D51
+P 16350 15800
+F 0 "C19" H 16110 15615 59  0000 L BNN
+F 1 "100N" H 16110 15815 59  0000 L BNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 16350 15800 50  0001 C CNN
+F 3 "" H 16350 15800 50  0001 C CNN
+	1    16350 15800
+	-1   0    0    1   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:C-Device C20
+U 1 1 B5CFC4AD
+P 16650 15800
+F 0 "C20" H 16410 15615 59  0000 L BNN
+F 1 "100N" H 16410 15815 59  0000 L BNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 16650 15800 50  0001 C CNN
+F 3 "" H 16650 15800 50  0001 C CNN
+	1    16650 15800
+	-1   0    0    1   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:C-Device C21
+U 1 1 E9FAABCB
+P 16950 15800
+F 0 "C21" H 16710 15615 59  0000 L BNN
+F 1 "100N" H 16710 15815 59  0000 L BNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 16950 15800 50  0001 C CNN
+F 3 "" H 16950 15800 50  0001 C CNN
+	1    16950 15800
+	-1   0    0    1   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:GND-power #SUPPLY017
+U 1 1 26B7FE90
+P 14850 16150
+F 0 "#SUPPLY017" H 14850 16150 50  0001 C CNN
+F 1 "GND" H 14775 16025 59  0000 L BNN
+F 2 "" H 14850 16150 50  0001 C CNN
+F 3 "" H 14850 16150 50  0001 C CNN
+	1    14850 16150
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #P+018
+U 1 1 4FF0227B
+P 14850 15550
+F 0 "#P+018" H 14850 15550 50  0001 C CNN
+F 1 "VCC" H 14800 15650 59  0000 L BNN
+F 2 "" H 14850 15550 50  0001 C CNN
+F 3 "" H 14850 15550 50  0001 C CNN
+	1    14850 15550
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:GND-power #SUPPLY018
+U 1 1 C00D883A
+P 15100 11900
+F 0 "#SUPPLY018" H 15100 11900 50  0001 C CNN
+F 1 "GND" H 15025 11775 59  0000 L BNN
+F 2 "" H 15100 11900 50  0001 C CNN
+F 3 "" H 15100 11900 50  0001 C CNN
+	1    15100 11900
+	0    1    1    0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:GND-power #SUPPLY019
+U 1 1 9765D681
+P 14700 14100
+F 0 "#SUPPLY019" H 14700 14100 50  0001 C CNN
+F 1 "GND" H 14605 13885 59  0000 L BNN
+F 2 "" H 14700 14100 50  0001 C CNN
+F 3 "" H 14700 14100 50  0001 C CNN
+	1    14700 14100
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:1N4148-Diode D11
+U 1 1 AB7A9E27
+P 13600 10300
+F 0 "D11" H 13800 10419 59  0000 R TNN
+F 1 "1N4148DO35-7" H 13400 10209 59  0000 L BNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 13600 10300 50  0001 C CNN
+F 3 "" H 13600 10300 50  0001 C CNN
+	1    13600 10300
+	-1   0    0    1   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:R-Device R11
+U 1 1 B4AB49B7
+P 14900 10250
+F 0 "R11" H 14800 10350 59  0000 R CNN
+F 1 "1k" H 14800 10200 59  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 14900 10250 50  0001 C CNN
+F 3 "" H 14900 10250 50  0001 C CNN
+	1    14900 10250
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:R-Device R12
+U 1 1 7BF552FC
+P 15100 10550
+F 0 "R12" H 15200 10650 59  0000 L CNN
+F 1 "1k" H 15200 10500 59  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 15100 10550 50  0001 C CNN
+F 3 "" H 15100 10550 50  0001 C CNN
+	1    15100 10550
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:R-Device R13
+U 1 1 D4B20DCE
+P 15300 10250
+F 0 "R13" H 15400 10350 59  0000 L CNN
+F 1 "1k" H 15400 10200 59  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 15300 10250 50  0001 C CNN
+F 3 "" H 15300 10250 50  0001 C CNN
+	1    15300 10250
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:R-Device R14
+U 1 1 DB22EEEA
+P 15500 10550
+F 0 "R14" H 15600 10650 59  0000 L CNN
+F 1 "1k" H 15600 10500 59  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 15500 10550 50  0001 C CNN
+F 3 "" H 15500 10550 50  0001 C CNN
+	1    15500 10550
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:R-Device R15
+U 1 1 6F379528
+P 15700 10250
+F 0 "R15" H 15800 10350 59  0000 L CNN
+F 1 "1k" H 15800 10200 59  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 15700 10250 50  0001 C CNN
+F 3 "" H 15700 10250 50  0001 C CNN
+	1    15700 10250
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:R-Device R16
+U 1 1 14476A70
+P 15900 10550
+F 0 "R16" H 16000 10650 59  0000 L CNN
+F 1 "1k" H 16000 10500 59  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 15900 10550 50  0001 C CNN
+F 3 "" H 15900 10550 50  0001 C CNN
+	1    15900 10550
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:R-Device R18
+U 1 1 BF19A598
+P 16300 10550
+F 0 "R18" H 16400 10650 59  0000 L CNN
+F 1 "1k" H 16400 10500 59  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 16300 10550 50  0001 C CNN
+F 3 "" H 16300 10550 50  0001 C CNN
+	1    16300 10550
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:R-Device R19
+U 1 1 F6755933
+P 16500 10250
+F 0 "R19" H 16600 10350 59  0000 L CNN
+F 1 "1k" H 16600 10200 59  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 16500 10250 50  0001 C CNN
+F 3 "" H 16500 10250 50  0001 C CNN
+	1    16500 10250
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:R-Device R20
+U 1 1 E84D22D6
+P 16700 10550
+F 0 "R20" H 16800 10650 59  0000 L CNN
+F 1 "1k" H 16800 10500 59  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 16700 10550 50  0001 C CNN
+F 3 "" H 16700 10550 50  0001 C CNN
+	1    16700 10550
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:R-Device R21
+U 1 1 8FE8240F
+P 18700 10350
+F 0 "R21" H 18600 10450 59  0000 R CNN
+F 1 "1k" H 18600 10300 59  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 18700 10350 50  0001 C CNN
+F 3 "" H 18700 10350 50  0001 C CNN
+	1    18700 10350
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:R_Pack08-Device RN1
+U 1 1 F87FF9A9
+P 20300 10900
+F 0 "RN1" H 19800 10800 59  0000 R CNN
+F 1 "1K0" H 19800 10950 59  0000 R CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 20300 10900 50  0001 C CNN
+F 3 "" H 20300 10900 50  0001 C CNN
+	1    20300 10900
+	-1   0    0    1   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:GND-power #SUPPLY020
+U 1 1 74256EE2
+P 23400 5900
+F 0 "#SUPPLY020" H 23400 5900 50  0001 C CNN
+F 1 "GND" H 23325 5775 59  0000 L BNN
+F 2 "" H 23400 5900 50  0001 C CNN
+F 3 "" H 23400 5900 50  0001 C CNN
+	1    23400 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #P+08
+U 1 1 E32DC4A8
+P 4300 8700
+F 0 "#P+08" H 4300 8700 50  0001 C CNN
+F 1 "VCC" V 4300 8700 59  0000 L BNN
+F 2 "" H 4300 8700 50  0001 C CNN
+F 3 "" H 4300 8700 50  0001 C CNN
+	1    4300 8700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #P+020
+U 1 1 9D43D020
+P 11400 13600
+F 0 "#P+020" H 11400 13600 50  0001 C CNN
+F 1 "VCC" V 11300 13500 59  0000 L BNN
+F 2 "" H 11400 13600 50  0001 C CNN
+F 3 "" H 11400 13600 50  0001 C CNN
+	1    11400 13600
+	0    1    1    0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #P+021
+U 1 1 091B6EC0
+P 18600 4700
+F 0 "#P+021" H 18600 4700 50  0001 C CNN
+F 1 "VCC" V 18600 4700 59  0000 L BNN
+F 2 "" H 18600 4700 50  0001 C CNN
+F 3 "" H 18600 4700 50  0001 C CNN
+	1    18600 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:Crystal-Device X1
+U 1 1 6EE8774F
+P 19150 14800
+F 0 "X1" H 19250 14840 59  0000 L BNN
+F 1 "6.556MHz" H 19250 14700 59  0000 L BNN
+F 2 "Crystal:Crystal_HC49-U_Vertical" H 19150 14800 50  0001 C CNN
+F 3 "" H 19150 14800 50  0001 C CNN
+	1    19150 14800
+	-1   0    0    1   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:1N4148-Diode D12
+U 1 1 B603868B
+P 8700 16050
+F 0 "D12" H 8800 16069 59  0000 L BNN
+F 1 "1N4148DO35-7" H 8800 15959 59  0001 L BNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 16050 50  0001 C CNN
+F 3 "" H 8700 16050 50  0001 C CNN
+	1    8700 16050
+	1    0    0    1   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:1N4148-Diode D13
+U 1 1 E5DD51DD
+P 8700 15950
+F 0 "D13" H 8800 15969 59  0000 L BNN
+F 1 "1N4148DO35-7" H 8800 15859 59  0001 L BNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 15950 50  0001 C CNN
+F 3 "" H 8700 15950 50  0001 C CNN
+	1    8700 15950
+	1    0    0    1   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:1N4148-Diode D14
+U 1 1 2984713A
+P 8700 15850
+F 0 "D14" H 8800 15869 59  0000 L BNN
+F 1 "1N4148DO35-7" H 8800 15759 59  0001 L BNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 15850 50  0001 C CNN
+F 3 "" H 8700 15850 50  0001 C CNN
+	1    8700 15850
+	1    0    0    1   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:1N4148-Diode D15
+U 1 1 093B9CD1
+P 8700 15750
+F 0 "D15" H 8800 15769 59  0000 L BNN
+F 1 "1N4148DO35-7" H 8800 15659 59  0001 L BNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 15750 50  0001 C CNN
+F 3 "" H 8700 15750 50  0001 C CNN
+	1    8700 15750
+	1    0    0    1   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:1N4148-Diode D16
+U 1 1 4AB03EFC
+P 8700 15650
+F 0 "D16" H 8800 15669 59  0000 L BNN
+F 1 "1N4148DO35-7" H 8800 15559 59  0001 L BNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 15650 50  0001 C CNN
+F 3 "" H 8700 15650 50  0001 C CNN
+	1    8700 15650
+	1    0    0    1   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:1N4148-Diode D17
+U 1 1 545FE2A8
+P 8700 15550
+F 0 "D17" H 8800 15569 59  0000 L BNN
+F 1 "1N4148DO35-7" H 8800 15459 59  0001 L BNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 15550 50  0001 C CNN
+F 3 "" H 8700 15550 50  0001 C CNN
+	1    8700 15550
+	1    0    0    1   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:1N4148-Diode D18
+U 1 1 6C4F5204
+P 8700 15450
+F 0 "D18" H 8800 15469 59  0000 L BNN
+F 1 "1N4148DO35-7" H 8800 15359 59  0001 L BNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 15450 50  0001 C CNN
+F 3 "" H 8700 15450 50  0001 C CNN
+	1    8700 15450
+	1    0    0    1   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:1N4148-Diode D19
+U 1 1 4E22A259
+P 8700 15350
+F 0 "D19" H 8800 15369 59  0000 L BNN
+F 1 "1N4148DO35-7" H 8800 15259 59  0001 L BNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 15350 50  0001 C CNN
+F 3 "" H 8700 15350 50  0001 C CNN
+	1    8700 15350
+	1    0    0    1   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:Speaker-Device SP2
+U 1 1 AD83C578
+P 15800 12650
+F 0 "SP2" H 16000 12700 59  0000 L CNN
+F 1 "AL11P" H 16000 12550 59  0000 L CNN
+F 2 "Buzzer_Beeper:Buzzer_15x7.5RM7.6" H 15800 12650 50  0001 C CNN
+F 3 "" H 15800 12650 50  0001 C CNN
+	1    15800 12650
+	1    0    0    -1  
+$EndComp
+Text Notes 700  1600 0    170  ~ 0
+Jupiter Ace Schematic  from Bodo Wenzels images.\nChecked against other sources. With edge connectors from https://jupiter-ace.co.uk/hardware_pcb_eagle.html.\nJohn Bradley 2019
+$Comp
+L ACE2NOKBV2-rescue:2732-Memory_EPROM Z1
+U 2 1 FF52241A
+P 2150 13600
+AR Path="/FF52241A" Ref="Z1"  Part="2" 
+AR Path="/" Ref="Z1"  Part="2" 
+F 0 "Z1" H 1900 13600 59  0000 R CNN
+F 1 "2732" H 1750 12700 59  0001 L BNN
+F 2 "Package_DIP:DIP-24_W15.24mm_LongPads" H 2150 13600 50  0001 C CNN
+F 3 "" H 2150 13600 50  0001 C CNN
+	2    2150 13600
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS393-74xx Z11
+U 3 1 51B42C54
+P 2150 14700
+AR Path="/51B42C54" Ref="Z11"  Part="3" 
+AR Path="/" Ref="Z11"  Part="3" 
+F 0 "Z11" H 1850 14925 59  0000 L BNN
+F 1 "74393N" H 1850 14300 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 2150 14700 50  0001 C CNN
+F 3 "" H 2150 14700 50  0001 C CNN
+	3    2150 14700
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74HCT00-74xx Z19
+U 5 1 A4643C78
+P 5800 14700
+AR Path="/A4643C78" Ref="Z19"  Part="5" 
+AR Path="/" Ref="Z19"  Part="5" 
+F 0 "Z19" H 5526 14734 59  0000 R CNN
+F 1 "7400N" H 5900 14500 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 5800 14700 50  0001 C CNN
+F 3 "" H 5800 14700 50  0001 C CNN
+	5    5800 14700
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:2732-Memory_EPROM Z2
+U 2 1 7E4C597A
+P 2650 13600
+AR Path="/7E4C597A" Ref="Z2"  Part="2" 
+AR Path="/" Ref="Z2"  Part="2" 
+F 0 "Z2" H 2900 13600 59  0000 L CNN
+F 1 "2732" H 2250 12700 59  0001 L BNN
+F 2 "Package_DIP:DIP-24_W15.24mm_LongPads" H 2650 13600 50  0001 C CNN
+F 3 "" H 2650 13600 50  0001 C CNN
+	2    2650 13600
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS08-74xx Z20
+U 5 1 F14DA402
+P 6250 14700
+AR Path="/F14DA402" Ref="Z20"  Part="5" 
+AR Path="/" Ref="Z20"  Part="5" 
+F 0 "Z20" H 6507 14739 59  0000 L CNN
+F 1 "7408N" H 6350 14500 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 6250 14700 50  0001 C CNN
+F 3 "" H 6250 14700 50  0001 C CNN
+	5    6250 14700
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS11-74xx Z21
+U 4 1 6389C046
+P 2150 15850
+AR Path="/6389C046" Ref="Z21"  Part="4" 
+AR Path="/" Ref="Z21"  Part="4" 
+F 0 "Z21" H 2401 15886 59  0000 L CNN
+F 1 "7411N" H 2050 15550 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 2150 15850 50  0001 C CNN
+F 3 "" H 2150 15850 50  0001 C CNN
+	4    2150 15850
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS11-74xx Z22
+U 4 1 AFF89703
+P 2600 15850
+AR Path="/AFF89703" Ref="Z22"  Part="4" 
+AR Path="/" Ref="Z22"  Part="4" 
+F 0 "Z22" H 2700 15975 59  0000 L BNN
+F 1 "7411N" H 2700 15650 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 2600 15850 50  0001 C CNN
+F 3 "" H 2600 15850 50  0001 C CNN
+	4    2600 15850
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS86-74xx Z23
+U 5 1 FF102AB3
+P 3050 15850
+AR Path="/FF102AB3" Ref="Z23"  Part="5" 
+AR Path="/" Ref="Z23"  Part="5" 
+F 0 "Z23" H 3150 15975 59  0000 L BNN
+F 1 "7486N" H 3150 15650 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 3050 15850 50  0001 C CNN
+F 3 "" H 3050 15850 50  0001 C CNN
+	5    3050 15850
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74HCT02-74xx Z24
+U 5 1 88C7990F
+P 3500 15850
+AR Path="/88C7990F" Ref="Z24"  Part="5" 
+AR Path="/" Ref="Z24"  Part="5" 
+F 0 "Z24" H 3600 15975 59  0000 L BNN
+F 1 "7402N" H 3600 15650 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 3500 15850 50  0001 C CNN
+F 3 "" H 3500 15850 50  0001 C CNN
+	5    3500 15850
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:2114-Memory_RAM Z3
+U 2 1 718D92F2
+P 3100 13600
+AR Path="/718D92F2" Ref="Z3"  Part="2" 
+AR Path="/" Ref="Z3"  Part="2" 
+F 0 "Z3" H 2800 14325 59  0000 L BNN
+F 1 "2114" H 2800 12800 59  0001 L BNN
+F 2 "Package_DIP:DIP-18_W7.62mm_LongPads" H 3100 13600 50  0001 C CNN
+F 3 "" H 3100 13600 50  0001 C CNN
+	2    3100 13600
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:2114-Memory_RAM Z4
+U 2 1 DD0F3A3F
+P 3550 13600
+AR Path="/DD0F3A3F" Ref="Z4"  Part="2" 
+AR Path="/" Ref="Z4"  Part="2" 
+F 0 "Z4" H 3250 14325 59  0000 L BNN
+F 1 "2114" H 3250 12800 59  0001 L BNN
+F 2 "Package_DIP:DIP-18_W7.62mm_LongPads" H 3550 13600 50  0001 C CNN
+F 3 "" H 3550 13600 50  0001 C CNN
+	2    3550 13600
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:2114-Memory_RAM Z5
+U 2 1 D3151EED
+P 4000 13600
+AR Path="/D3151EED" Ref="Z5"  Part="2" 
+AR Path="/" Ref="Z5"  Part="2" 
+F 0 "Z5" H 3700 14325 59  0000 L BNN
+F 1 "2114" H 3700 12800 59  0001 L BNN
+F 2 "Package_DIP:DIP-18_W7.62mm_LongPads" H 4000 13600 50  0001 C CNN
+F 3 "" H 4000 13600 50  0001 C CNN
+	2    4000 13600
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:2114-Memory_RAM Z6
+U 2 1 91E0A9BF
+P 4450 13600
+AR Path="/91E0A9BF" Ref="Z6"  Part="2" 
+AR Path="/" Ref="Z6"  Part="2" 
+F 0 "Z6" H 4150 14325 59  0000 L BNN
+F 1 "2114" H 4150 12800 59  0001 L BNN
+F 2 "Package_DIP:DIP-18_W7.62mm_LongPads" H 4450 13600 50  0001 C CNN
+F 3 "" H 4450 13600 50  0001 C CNN
+	2    4450 13600
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:2114-Memory_RAM Z7
+U 2 1 897FA3DC
+P 4900 13600
+AR Path="/897FA3DC" Ref="Z7"  Part="2" 
+AR Path="/" Ref="Z7"  Part="2" 
+F 0 "Z7" H 4600 14325 59  0000 L BNN
+F 1 "2114" H 4600 12800 59  0001 L BNN
+F 2 "Package_DIP:DIP-18_W7.62mm_LongPads" H 4900 13600 50  0001 C CNN
+F 3 "" H 4900 13600 50  0001 C CNN
+	2    4900 13600
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:2114-Memory_RAM Z8
+U 2 1 23CE6A26
+P 5350 13600
+AR Path="/23CE6A26" Ref="Z8"  Part="2" 
+AR Path="/" Ref="Z8"  Part="2" 
+F 0 "Z8" H 5050 14325 59  0000 L BNN
+F 1 "2114" H 5050 12800 59  0001 L BNN
+F 2 "Package_DIP:DIP-18_W7.62mm_LongPads" H 5350 13600 50  0001 C CNN
+F 3 "" H 5350 13600 50  0001 C CNN
+	2    5350 13600
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS393-74xx Z9
+U 3 1 692FB8C6
+P 5800 13600
+AR Path="/692FB8C6" Ref="Z9"  Part="3" 
+AR Path="/" Ref="Z9"  Part="3" 
+F 0 "Z9" H 6050 13600 59  0000 L CNN
+F 1 "74393N" H 5500 13200 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 5800 13600 50  0001 C CNN
+F 3 "" H 5800 13600 50  0001 C CNN
+	3    5800 13600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15100 2000 15100 2200
+$Comp
+L ACE2NOKBV2-rescue:MountingHole-Mechanical HBR1
+U 1 1 5D8DB243
+P 9355 18020
+F 0 "HBR1" H 9455 18090 50  0000 L CNN
+F 1 "MountingHole" H 9455 17990 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.5mm" H 9355 18020 50  0001 C CNN
+F 3 "~" H 9355 18020 50  0001 C CNN
+	1    9355 18020
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:MountingHole-Mechanical HBL1
+U 1 1 5D7D0C19
+P 8485 18060
+F 0 "HBL1" H 8605 18120 50  0000 L CNN
+F 1 "MountingHole" H 8605 18020 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.5mm" H 8485 18060 50  0001 C CNN
+F 3 "~" H 8485 18060 50  0001 C CNN
+	1    8485 18060
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:MountingHole-Mechanical HTR1
+U 1 1 5D6C673B
+P 9310 17580
+F 0 "HTR1" H 9455 17660 50  0000 L CNN
+F 1 "MountingHole" H 9455 17560 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.5mm" H 9310 17580 50  0001 C CNN
+F 3 "~" H 9310 17580 50  0001 C CNN
+	1    9310 17580
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:MountingHole-Mechanical HTL1
+U 1 1 5D6C35F5
+P 8485 17590
+F 0 "HTL1" H 8605 17680 50  0000 L CNN
+F 1 "MountingHole" H 8605 17580 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.5mm" H 8485 17590 50  0001 C CNN
+F 3 "~" H 8485 17590 50  0001 C CNN
+	1    8485 17590
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:GND-power #PWR0101
+U 1 1 6AF59896
+P 530 14540
+F 0 "#PWR0101" H 530 14290 50  0001 C CNN
+F 1 "GND" V 535 14385 50  0000 R CNN
+F 2 "" H 530 14540 50  0001 C CNN
+F 3 "" H 530 14540 50  0001 C CNN
+	1    530  14540
+	0    -1   -1   0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:GND-power #PWR0102
+U 1 1 6AE57219
+P -170 14540
+F 0 "#PWR0102" H -170 14290 50  0001 C CNN
+F 1 "GND" V -210 14365 50  0000 R CNN
+F 2 "" H -170 14540 50  0001 C CNN
+F 3 "" H -170 14540 50  0001 C CNN
+	1    -170 14540
+	0    1    1    0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:GND-power #PWR0103
+U 1 1 6AE53E6F
+P -170 14440
+F 0 "#PWR0103" H -170 14190 50  0001 C CNN
+F 1 "GND" V -210 14265 50  0000 R CNN
+F 2 "" H -170 14440 50  0001 C CNN
+F 3 "" H -170 14440 50  0001 C CNN
+	1    -170 14440
+	0    1    1    0   
+$EndComp
+Text GLabel -170 14340 0    50   Input ~ 0
++9V
+Text GLabel -170 14240 0    50   Input ~ 0
++5V
+Text GLabel -170 14140 0    50   Input ~ 0
+#CPUCLK
+Text GLabel 530  13440 2    50   Input ~ 0
+#RESET
+Text GLabel 530  14340 2    50   Input ~ 0
+#NMI
+NoConn ~ 430  14840
+NoConn ~ 430  14740
+NoConn ~ 430  14640
+NoConn ~ -70  14640
+NoConn ~ -70  14740
+NoConn ~ -70  14840
+Wire Wire Line
+	430  13640 530  13640
+Text Label 530  13640 0    70   ~ 0
+/WAIT
+Wire Wire Line
+	430  14140 530  14140
+Text Label 530  14140 0    70   ~ 0
+/MREQ
+Wire Wire Line
+	430  13840 530  13840
+Text Label 530  13840 0    70   ~ 0
+/WR
+Wire Wire Line
+	430  14540 530  14540
+Wire Wire Line
+	430  14040 530  14040
+Text Label 530  14040 0    70   ~ 0
+/IOREQ
+Wire Wire Line
+	430  13940 530  13940
+Text Label 530  13940 0    70   ~ 0
+/RD
+Wire Wire Line
+	430  14440 530  14440
+Text Label 530  14440 0    70   ~ 0
+/INT
+Wire Wire Line
+	430  13540 530  13540
+Text Label 530  13540 0    70   ~ 0
+/BUSRQ
+Wire Wire Line
+	430  13440 530  13440
+Wire Wire Line
+	430  13340 530  13340
+Text Label 530  13340 0    70   ~ 0
+/M1
+Wire Wire Line
+	430  14240 530  14240
+Text Label 530  14240 0    70   ~ 0
+/HALT
+Wire Wire Line
+	430  13740 530  13740
+Text Label 530  13740 0    70   ~ 0
+/BUSAK
+Wire Wire Line
+	430  13240 530  13240
+Text Label 530  13240 0    70   ~ 0
+/REFSH
+Wire Wire Line
+	430  12740 530  12740
+Text Label 530  12740 0    70   ~ 0
+A1
+Wire Wire Line
+	430  12840 530  12840
+Text Label 530  12840 0    70   ~ 0
+A3
+Wire Wire Line
+	430  13140 530  13140
+Text Label 530  13140 0    70   ~ 0
+A6
+Wire Wire Line
+	430  12940 530  12940
+Text Label 530  12940 0    70   ~ 0
+A4
+Wire Wire Line
+	430  13040 530  13040
+Text Label 530  13040 0    70   ~ 0
+A5
+Wire Wire Line
+	530  14340 430  14340
+Wire Wire Line
+	430  12440 530  12440
+Text Label 530  12440 0    70   ~ 0
+DA7
+Wire Wire Line
+	430  12540 530  12540
+Text Label 530  12540 0    70   ~ 0
+DA2
+Wire Wire Line
+	430  12640 530  12640
+Text Label 530  12640 0    70   ~ 0
+DA0
+$Comp
+L ACE2NOKBV2-rescue:Conn_02x25_Odd_Even-Connector_Generic Z80CPUOUT1
+U 1 1 612D2D50
+P 130 13640
+F 0 "Z80CPUOUT1" H 205 15080 50  0000 C CNN
+F 1 "Conn_02x25_Odd_Even" H 205 14980 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x25_P2.54mm_Vertical" H 130 13640 50  0001 C CNN
+F 3 "~" H 130 13640 50  0001 C CNN
+	1    130  13640
+	1    0    0    -1  
+$EndComp
+Text Label -170 13440 2    70   ~ 0
+DA3
+Wire Wire Line
+	-70  13440 -170 13440
+Text Label -170 13340 2    70   ~ 0
+DA5
+Wire Wire Line
+	-70  13340 -170 13340
+Text Label -170 12640 2    70   ~ 0
+DA1
+Wire Wire Line
+	-70  12640 -170 12640
+Text Label -170 13540 2    70   ~ 0
+DA4
+Wire Wire Line
+	-70  13540 -170 13540
+Wire Wire Line
+	-70  14340 -170 14340
+Wire Wire Line
+	-70  14240 -170 14240
+Text Label -170 13040 2    70   ~ 0
+A9
+Wire Wire Line
+	-70  13040 -170 13040
+Wire Wire Line
+	-70  14140 -170 14140
+Text Label -170 12540 2    70   ~ 0
+DA6
+Wire Wire Line
+	-70  12540 -170 12540
+Text Label -170 13640 2    70   ~ 0
+A15
+Wire Wire Line
+	-70  13640 -170 13640
+Text Label -170 13740 2    70   ~ 0
+A14
+Wire Wire Line
+	-70  13740 -170 13740
+Text Label -170 13840 2    70   ~ 0
+A13
+Wire Wire Line
+	-70  13840 -170 13840
+Text Label -170 13940 2    70   ~ 0
+A12
+Wire Wire Line
+	-70  13940 -170 13940
+Text Label -170 14040 2    70   ~ 0
+A11
+Wire Wire Line
+	-70  14040 -170 14040
+Text Label -170 13140 2    70   ~ 0
+A10
+Wire Wire Line
+	-70  13140 -170 13140
+Text Label -170 12940 2    70   ~ 0
+A8
+Wire Wire Line
+	-70  12940 -170 12940
+Text Label -170 12840 2    70   ~ 0
+A7
+Wire Wire Line
+	-70  12840 -170 12840
+Text Label -170 13240 2    70   ~ 0
+A2
+Wire Wire Line
+	-70  13240 -170 13240
+Text Label -170 12740 2    70   ~ 0
+A0
+Wire Wire Line
+	-70  12740 -170 12740
+Wire Wire Line
+	-70  14540 -170 14540
+Wire Wire Line
+	-170 14440 -70  14440
+Text Label -170 12440 2    70   ~ 0
+/WR
+Wire Wire Line
+	-70  12440 -170 12440
+Wire Wire Line
+	19300 14800 19400 14800
+Wire Wire Line
+	8850 15350 8900 15350
+Wire Wire Line
+	7900 14500 11200 14500
+Wire Wire Line
+	17400 4600 17500 4600
+Wire Wire Line
+	3800 10500 3800 10800
+Wire Wire Line
+	15100 11900 15500 11900
+Wire Wire Line
+	16700 4600 17000 4600
+Wire Wire Line
+	14250 15650 14550 15650
+Wire Wire Line
+	14850 15650 15150 15650
+$Comp
+L ACE2NOKBV2-rescue:R-Device R8
+U 1 1 87952652
+P 4500 10250
+F 0 "R8" H 4350 10309 59  0000 L BNN
+F 1 "270R" H 4350 10120 59  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 4500 10250 50  0001 C CNN
+F 3 "" H 4500 10250 50  0001 C CNN
+	1    4500 10250
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #P+09
+U 1 1 DD8F0AB4
+P 3900 8400
+F 0 "#P+09" H 3900 8400 50  0001 C CNN
+F 1 "VCC" V 3900 8400 59  0000 L BNN
+F 2 "" H 3900 8400 50  0001 C CNN
+F 3 "" H 3900 8400 50  0001 C CNN
+	1    3900 8400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 10800 3800 10800
+Connection ~ 3800 10800
+Wire Wire Line
+	3800 10800 3800 11000
+Wire Wire Line
+	14000 12000 14100 12000
+Connection ~ 14550 15650
+Wire Wire Line
+	14550 15650 14850 15650
+Connection ~ 15150 15650
+Wire Wire Line
+	15150 15650 15450 15650
+Connection ~ 15450 15650
+Wire Wire Line
+	15450 15650 15750 15650
+Connection ~ 15750 15650
+Wire Wire Line
+	15750 15650 16050 15650
+Connection ~ 16050 15650
+Wire Wire Line
+	16050 15650 16350 15650
+Connection ~ 16350 15650
+Wire Wire Line
+	16350 15650 16650 15650
+Connection ~ 16650 15650
+Wire Wire Line
+	16650 15650 16950 15650
+Wire Wire Line
+	11550 15650 11950 15650
+Connection ~ 11950 15650
+Connection ~ 19800 14800
+$Comp
+L ACE2NOKBV2-rescue:74LS393-74xx Z9
+U 2 1 D8FA6A54
+P 21900 13700
+F 0 "Z9" H 21600 13925 59  0000 L BNN
+F 1 "74393N" H 21600 13300 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 21900 13700 50  0001 C CNN
+F 3 "" H 21900 13700 50  0001 C CNN
+	2    21900 13700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	19400 15100 19800 15100
+Wire Wire Line
+	14400 13800 14000 13800
+Wire Wire Line
+	25600 16200 25600 16400
+Wire Wire Line
+	20300 2800 20450 2800
+Wire Wire Line
+	20750 2800 21100 2800
+Wire Wire Line
+	21100 2900 21100 2800
+Wire Wire Line
+	21100 2650 21100 2800
+Wire Wire Line
+	21100 2100 21100 2350
+$Comp
+L ACE2NOKBV2-rescue:74HCT02-74xx Z25
+U 5 1 5B1125C6
+P 3950 15850
+AR Path="/5B1125C6" Ref="Z25"  Part="5" 
+AR Path="/" Ref="Z25"  Part="5" 
+F 0 "Z25" H 4050 15975 59  0000 L BNN
+F 1 "7402N" H 4050 15650 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 3950 15850 50  0001 C CNN
+F 3 "" H 3950 15850 50  0001 C CNN
+	5    3950 15850
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:74LS32-74xx Z26
+U 5 1 C7D721D9
+P 4400 15850
+AR Path="/C7D721D9" Ref="Z26"  Part="5" 
+AR Path="/" Ref="Z26"  Part="5" 
+F 0 "Z26" H 4500 15975 59  0000 L BNN
+F 1 "7432N" H 4500 15650 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 4400 15850 50  0001 C CNN
+F 3 "" H 4400 15850 50  0001 C CNN
+	5    4400 15850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 13100 2650 13100
+$Comp
+L ACE2NOKBV2-rescue:74LS393-74xx Z10
+U 3 1 62B26DFD
+P 6250 13600
+AR Path="/62B26DFD" Ref="Z10"  Part="3" 
+AR Path="/" Ref="Z?"  Part="3" 
+F 0 "Z10" H 6500 13600 59  0000 L CNN
+F 1 "74393N" H 5950 13200 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 6250 13600 50  0001 C CNN
+F 3 "" H 6250 13600 50  0001 C CNN
+	3    6250 13600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 13100 5800 13100
+Connection ~ 2650 13100
+Wire Wire Line
+	2650 13100 3100 13100
+Connection ~ 3100 13100
+Wire Wire Line
+	3100 13100 3550 13100
+Connection ~ 5800 13100
+Connection ~ 3550 13100
+Wire Wire Line
+	3550 13100 4000 13100
+Connection ~ 4000 13100
+Wire Wire Line
+	4000 13100 4450 13100
+Connection ~ 4450 13100
+Wire Wire Line
+	4450 13100 4900 13100
+Connection ~ 4900 13100
+Wire Wire Line
+	4900 13100 5350 13100
+Connection ~ 5350 13100
+Wire Wire Line
+	5350 13100 5800 13100
+Wire Wire Line
+	6250 14100 5800 14100
+Connection ~ 2650 14100
+Wire Wire Line
+	2650 14100 2150 14100
+Connection ~ 3100 14100
+Wire Wire Line
+	3100 14100 2650 14100
+Connection ~ 3550 14100
+Wire Wire Line
+	3550 14100 3100 14100
+Connection ~ 4000 14100
+Wire Wire Line
+	4000 14100 3550 14100
+Connection ~ 4450 14100
+Wire Wire Line
+	4450 14100 4000 14100
+Connection ~ 4900 14100
+Wire Wire Line
+	4900 14100 4450 14100
+Connection ~ 5350 14100
+Wire Wire Line
+	5350 14100 4900 14100
+Connection ~ 5800 14100
+Wire Wire Line
+	5800 14100 5350 14100
+Connection ~ 2600 15350
+Wire Wire Line
+	2600 15350 2150 15350
+Wire Wire Line
+	2600 15350 3050 15350
+Connection ~ 3050 15350
+Wire Wire Line
+	3050 15350 3500 15350
+Connection ~ 3500 15350
+$Comp
+L ACE2NOKBV2-rescue:74LS74-74xx Z27
+U 3 1 FFDA3A44
+P 4850 15850
+AR Path="/FFDA3A44" Ref="Z27"  Part="3" 
+AR Path="/" Ref="Z27"  Part="3" 
+F 0 "Z27" H 4550 16175 59  0000 L BNN
+F 1 "7474N" H 4550 15450 59  0001 L BNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 4850 15850 50  0001 C CNN
+F 3 "" H 4850 15850 50  0001 C CNN
+	3    4850 15850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 15350 3950 15350
+Connection ~ 4400 15350
+Connection ~ 3950 15350
+Wire Wire Line
+	3950 15350 4400 15350
+Wire Wire Line
+	4400 15350 4850 15350
+Wire Wire Line
+	6250 14200 5800 14200
+Connection ~ 5800 14200
+Wire Wire Line
+	5800 14200 2150 14200
+Wire Wire Line
+	2150 15200 5800 15200
+Connection ~ 5800 15200
+Wire Wire Line
+	5800 15200 6250 15200
+Wire Wire Line
+	4850 16350 4400 16350
+Connection ~ 2600 16350
+Wire Wire Line
+	2600 16350 2150 16350
+Connection ~ 3050 16350
+Wire Wire Line
+	3050 16350 2600 16350
+Connection ~ 3500 16350
+Wire Wire Line
+	3500 16350 3050 16350
+Connection ~ 3950 16350
+Wire Wire Line
+	3950 16350 3500 16350
+Connection ~ 4400 16350
+Wire Wire Line
+	4400 16350 3950 16350
+$Comp
+L ACE2NOKBV2-rescue:Conn_02x08_Odd_Even-Connector_Generic KEYBOARD1
+U 1 1 64115543
+P 8150 15650
+F 0 "KEYBOARD1" H 8200 16200 50  0000 C CNN
+F 1 "Conn_02x08_Odd_Even" H 8200 16100 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical" H 8150 15650 50  0001 C CNN
+F 3 "~" H 8150 15650 50  0001 C CNN
+	1    8150 15650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8850 15450 9000 15450
+Wire Wire Line
+	8850 15650 9000 15650
+Wire Wire Line
+	8850 15750 8900 15750
+Wire Wire Line
+	8850 15850 9000 15850
+Wire Wire Line
+	8850 16050 9000 16050
+Wire Wire Line
+	8950 15550 8850 15550
+Wire Wire Line
+	8950 15950 8850 15950
+Wire Wire Line
+	8550 15350 8450 15350
+Wire Wire Line
+	8550 15450 8450 15450
+Wire Wire Line
+	8450 15550 8550 15550
+Wire Wire Line
+	8550 15650 8450 15650
+Wire Wire Line
+	8450 15750 8550 15750
+Wire Wire Line
+	8550 15850 8450 15850
+Wire Wire Line
+	8450 15950 8550 15950
+Wire Wire Line
+	8550 16050 8450 16050
+Wire Wire Line
+	7950 15350 7600 15350
+Wire Wire Line
+	7600 15350 7600 14700
+Wire Wire Line
+	7950 15450 7500 15450
+Wire Wire Line
+	7500 15450 7500 14800
+Wire Wire Line
+	7950 15550 7400 15550
+Wire Wire Line
+	7950 15650 7300 15650
+Wire Wire Line
+	7950 15750 7200 15750
+$Comp
+L ACE2NOKBV2-rescue:Conn_01x02-Connector_Generic POWER-IN1
+U 1 1 66037FE7
+P 10450 15650
+F 0 "POWER-IN1" H 10550 15650 50  0000 L CNN
+F 1 "Conn_01x02" H 10550 15550 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10450 15650 50  0001 C CNN
+F 3 "~" H 10450 15650 50  0001 C CNN
+	1    10450 15650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:PWR_FLAG-power #FLG0101
+U 1 1 668ACE1B
+P 11050 15650
+F 0 "#FLG0101" H 11050 15725 50  0001 C CNN
+F 1 "PWR_FLAG" H 11200 15800 50  0000 C CNN
+F 2 "" H 11050 15650 50  0001 C CNN
+F 3 "~" H 11050 15650 50  0001 C CNN
+	1    11050 15650
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:PWR_FLAG-power #FLG0102
+U 1 1 668AD2BA
+P 11050 15750
+F 0 "#FLG0102" H 11050 15825 50  0001 C CNN
+F 1 "PWR_FLAG" H 11050 15950 50  0000 C CNN
+F 2 "" H 11050 15750 50  0001 C CNN
+F 3 "~" H 11050 15750 50  0001 C CNN
+	1    11050 15750
+	-1   0    0    1   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #PWR0104
+U 1 1 66989E35
+P 2150 13100
+F 0 "#PWR0104" H 2150 12950 50  0001 C CNN
+F 1 "VCC" V 2200 13250 50  0000 L CNN
+F 2 "" H 2150 13100 50  0001 C CNN
+F 3 "" H 2150 13100 50  0001 C CNN
+	1    2150 13100
+	0    -1   -1   0   
+$EndComp
+Connection ~ 2150 13100
+Connection ~ 2150 14200
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #PWR0105
+U 1 1 66B4834E
+P 2150 15350
+F 0 "#PWR0105" H 2150 15200 50  0001 C CNN
+F 1 "VCC" V 2200 15500 50  0000 L CNN
+F 2 "" H 2150 15350 50  0001 C CNN
+F 3 "" H 2150 15350 50  0001 C CNN
+	1    2150 15350
+	0    -1   -1   0   
+$EndComp
+Connection ~ 2150 15350
+$Comp
+L ACE2NOKBV2-rescue:GND-power #PWR0106
+U 1 1 66B48AF7
+P 2150 16350
+F 0 "#PWR0106" H 2150 16100 50  0001 C CNN
+F 1 "GND" V 2150 16250 50  0000 R CNN
+F 2 "" H 2150 16350 50  0001 C CNN
+F 3 "" H 2150 16350 50  0001 C CNN
+	1    2150 16350
+	0    1    1    0   
+$EndComp
+Connection ~ 2150 16350
+$Comp
+L ACE2NOKBV2-rescue:GND-power #PWR0107
+U 1 1 66B4EA21
+P 2150 15200
+F 0 "#PWR0107" H 2150 14950 50  0001 C CNN
+F 1 "GND" V 2150 15050 50  0000 R CNN
+F 2 "" H 2150 15200 50  0001 C CNN
+F 3 "" H 2150 15200 50  0001 C CNN
+	1    2150 15200
+	0    1    1    0   
+$EndComp
+Connection ~ 2150 15200
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #PWR0108
+U 1 1 6698CD8D
+P 2150 14200
+F 0 "#PWR0108" H 2150 14050 50  0001 C CNN
+F 1 "VCC" V 2200 14350 50  0000 L CNN
+F 2 "" H 2150 14200 50  0001 C CNN
+F 3 "" H 2150 14200 50  0001 C CNN
+	1    2150 14200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:GND-power #PWR0109
+U 1 1 66C27439
+P 2150 14100
+F 0 "#PWR0109" H 2150 13850 50  0001 C CNN
+F 1 "GND" V 2150 13950 50  0000 R CNN
+F 2 "" H 2150 14100 50  0001 C CNN
+F 3 "" H 2150 14100 50  0001 C CNN
+	1    2150 14100
+	0    1    1    0   
+$EndComp
+Connection ~ 2150 14100
+$Comp
+L ACE2NOKBV2-rescue:R-Device R17
+U 1 1 2E08AF73
+P 16100 10250
+F 0 "R17" H 16200 10350 59  0000 L CNN
+F 1 "1k" H 16200 10200 59  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 16100 10250 50  0001 C CNN
+F 3 "" H 16100 10250 50  0001 C CNN
+	1    16100 10250
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:R-Device R23
+U 1 1 DB0DC8AE
+P 19100 10350
+F 0 "R23" H 19200 10450 59  0000 L CNN
+F 1 "1k" H 19200 10300 59  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 19100 10350 50  0001 C CNN
+F 3 "" H 19100 10350 50  0001 C CNN
+	1    19100 10350
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:R-Device R22
+U 1 1 25604EB7
+P 18900 10650
+F 0 "R22" H 19000 10750 59  0000 L CNN
+F 1 "1k" H 19000 10600 59  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 18900 10650 50  0001 C CNN
+F 3 "" H 18900 10650 50  0001 C CNN
+	1    18900 10650
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:R_Pack08-Device RN2
+U 1 1 C196CD5F
+P 23000 10900
+F 0 "RN2" H 23400 11000 59  0000 L CNN
+F 1 "1K0" H 23400 10850 59  0000 L CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 23000 10900 50  0001 C CNN
+F 3 "" H 23000 10900 50  0001 C CNN
+	1    23000 10900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	22800 7600 22800 10700
+Wire Wire Line
+	22600 7400 22600 10700
+Wire Wire Line
+	23300 9300 23300 10700
+Wire Wire Line
+	23200 9200 23200 10700
+Wire Wire Line
+	23000 9000 23000 10700
+Wire Wire Line
+	22900 7700 22900 10700
+Wire Wire Line
+	22700 7500 22700 10700
+Wire Wire Line
+	16700 8300 16700 9900
+Wire Wire Line
+	16300 8100 16300 9700
+Wire Wire Line
+	15900 7900 15900 9500
+Wire Wire Line
+	15500 7700 15500 9300
+Wire Wire Line
+	15100 7500 15100 9100
+Wire Wire Line
+	16700 9900 16700 10400
+Connection ~ 16700 9900
+Wire Wire Line
+	16300 9700 16300 10400
+Connection ~ 16300 9700
+Wire Wire Line
+	15900 9500 15900 10400
+Connection ~ 15900 9500
+Wire Wire Line
+	15500 9300 15500 10400
+Connection ~ 15500 9300
+Wire Wire Line
+	15100 9100 15100 10400
+Connection ~ 15100 9100
+Wire Wire Line
+	20500 9800 20500 10700
+Wire Wire Line
+	20200 9500 20200 10700
+Wire Wire Line
+	20100 9400 20100 10700
+Wire Wire Line
+	20400 9700 20400 10700
+Wire Wire Line
+	20300 9600 20300 10700
+Wire Wire Line
+	20700 10000 20700 10700
+Wire Wire Line
+	20600 9900 20600 10700
+Wire Wire Line
+	20000 10100 20000 10700
+Wire Wire Line
+	14700 13000 15000 13000
+Wire Wire Line
+	15000 12900 15000 13000
+Connection ~ 15000 13000
+Wire Wire Line
+	15000 13000 15600 13000
+NoConn ~ 6300 6300
+NoConn ~ 6300 6200
+NoConn ~ 6300 6100
+NoConn ~ 6300 6000
+$Comp
+L ACE2NOKBV2-rescue:R-Device R26
+U 1 1 6E1DACEE
+P 7850 3700
+F 0 "R26" H 7700 3759 59  0000 L BNN
+F 1 "330R" H 7700 3570 59  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 7850 3700 50  0001 C CNN
+F 3 "" H 7850 3700 50  0001 C CNN
+	1    7850 3700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6800 3700 7700 3700
+$Comp
+L ACE2NOKBV2-rescue:Conn_01x02-Connector_Generic COMPOSITE-OUT1
+U 1 1 6CBDE3B9
+P 22000 2800
+F 0 "COMPOSITE-OUT1" H 21950 2550 50  0000 C CNN
+F 1 "COMPOSITE-OUT1" H 21950 2550 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 22000 2800 50  0001 C CNN
+F 3 "~" H 22000 2800 50  0001 C CNN
+	1    22000 2800
+	1    0    0    1   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:Conn_01x02-Connector_Generic AUDIO-OUT1
+U 1 1 6CF3FE04
+P 15700 12000
+F 0 "AUDIO-OUT1" H 15650 11750 50  0000 C CNN
+F 1 "Conn_01x02" H 15800 11900 50  0001 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 15700 12000 50  0001 C CNN
+F 3 "~" H 15700 12000 50  0001 C CNN
+	1    15700 12000
+	1    0    0    1   
+$EndComp
+$Comp
+L ACE2NOKBV2-rescue:Conn_01x02-Connector_Generic AUDIO-IN1
+U 1 1 6D380DC4
+P 16400 4700
+F 0 "AUDIO-IN1" H 16300 4850 50  0000 C CNN
+F 1 "Conn_01x02" H 16500 4600 50  0001 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 16400 4700 50  0001 C CNN
+F 3 "~" H 16400 4700 50  0001 C CNN
+	1    16400 4700
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	17000 4650 17000 4600
+Connection ~ 17000 4600
+Wire Wire Line
+	17000 4600 17100 4600
+Wire Wire Line
+	17000 4950 17000 5100
+Wire Wire Line
+	17500 5100 17500 4950
+Wire Wire Line
+	17500 4650 17500 4600
+Connection ~ 17500 4600
+$Comp
+L ACE2NOKBV2-rescue:74LS367-74xx Z17
+U 1 1 527FC48B
+P 18600 5300
+F 0 "Z17" H 18300 5825 59  0000 L BNN
+F 1 "74367N" H 18300 4600 59  0001 L BNN
+F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 18600 5300 50  0001 C CNN
+F 3 "" H 18600 5300 50  0001 C CNN
+	1    18600 5300
+	0    1    1    0   
+$EndComp
+NoConn ~ 7950 16050
+NoConn ~ 7950 15950
+NoConn ~ 7950 15850
+$Comp
+L z80cpu:Z80CPU_DIP Z0
+U 1 1 09F6B21C
+P 5600 8650
+F 0 "Z0" H 5600 10200 59  0000 C CNN
+F 1 "Z80CPU" H 5600 10100 59  0000 C CNN
+F 2 "Package_DIP:DIP-40_W15.24mm" H 5600 8650 50  0001 C CNN
+F 3 "" H 5600 8650 50  0001 C CNN
+	1    5600 8650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15600 12750 15600 13000
+Wire Wire Line
+	15600 12650 15600 12500
+Wire Wire Line
+	14050 15650 14250 15650
+Wire Wire Line
+	24000 5800 24100 5800
+Wire Wire Line
+	22600 4800 22600 3300
+Wire Wire Line
+	22600 3300 19700 3300
+Wire Wire Line
+	19800 4700 19900 4700
+Connection ~ 19900 4700
+Wire Wire Line
+	19900 4700 19900 3900
+Wire Wire Line
+	18200 3900 18300 3900
+Wire Wire Line
+	20300 5800 20300 8000
+Wire Wire Line
+	20400 5800 20400 8100
+Wire Wire Line
+	20400 4800 20400 4700
+Wire Wire Line
+	20500 5800 20500 8200
+Wire Wire Line
+	20500 4800 20500 4700
+Wire Wire Line
+	20600 5800 20600 8300
+Wire Wire Line
+	20600 4800 20600 4700
+Wire Wire Line
+	19800 4700 19800 4800
+Wire Wire Line
+	20100 4800 20100 4700
+Wire Wire Line
+	20100 5800 20100 7800
+Wire Wire Line
+	20200 4800 20200 4700
+Wire Wire Line
+	20200 5800 20200 7900
+Wire Wire Line
+	20300 4800 20300 4700
+Wire Wire Line
+	19900 4800 19900 4700
+$Comp
+L ACE2NOKBV2-rescue:74LS367-74xx Z18
+U 1 1 9B296254
+P 20200 5300
+F 0 "Z18" H 19900 5825 59  0000 L BNN
+F 1 "74367N" H 19900 4600 59  0001 L BNN
+F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 20200 5300 50  0001 C CNN
+F 3 "" H 20200 5300 50  0001 C CNN
+	1    20200 5300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	21000 3600 21000 8600
+Wire Wire Line
+	21400 8600 21000 8600
+Connection ~ 21000 8600
+Wire Wire Line
+	21000 8600 21000 10200
+Wire Wire Line
+	15800 3600 21000 3600
+Wire Wire Line
+	21300 5900 20900 5900
+Wire Wire Line
+	21300 3400 21300 5900
+Wire Wire Line
+	20900 5900 20900 10000
+Wire Wire Line
+	15900 3400 21300 3400
+Wire Wire Line
+	17500 4600 18500 4600
+Connection ~ 18300 3900
+Wire Wire Line
+	18300 3900 19900 3900
+Wire Wire Line
+	18000 4800 18200 4800
+Connection ~ 15700 7800
+Connection ~ 15500 7700
+Wire Wire Line
+	14100 7700 15500 7700
+Wire Wire Line
+	14100 7800 15700 7800
+Wire Wire Line
+	14100 7900 15900 7900
+Connection ~ 12200 8100
+Wire Wire Line
+	12200 8100 12200 9700
+Connection ~ 12200 9700
+Wire Wire Line
+	12200 9700 12200 10300
+Wire Wire Line
+	14100 9500 14200 9500
+Wire Wire Line
+	14200 9500 14200 10300
+Wire Wire Line
+	14200 10300 13750 10300
+Wire Wire Line
+	13450 10300 12200 10300
+Wire Wire Line
+	13300 12000 13700 12000
+Wire Wire Line
+	12700 12100 11900 12100
+Wire Wire Line
+	11900 12100 11900 12900
+Wire Wire Line
+	7200 15750 7200 15100
+Wire Wire Line
+	7300 15650 7300 15000
+Wire Wire Line
+	7400 15550 7400 14900
+Wire Wire Line
+	7200 15000 7200 14500
+Wire Wire Line
+	7300 15000 7200 15000
+Wire Wire Line
+	7100 15100 7100 14500
+Wire Wire Line
+	7200 15100 7100 15100
+Wire Wire Line
+	7300 14900 7300 14500
+Wire Wire Line
+	7400 14900 7300 14900
+Wire Wire Line
+	7400 14500 7400 14800
+Wire Wire Line
+	7400 14800 7500 14800
+Wire Wire Line
+	7500 14500 7500 14700
+Wire Wire Line
+	7500 14700 7600 14700
+$Comp
+L ACE2NOKBV2-rescue:74LS367-74xx IC2
+U 1 1 BC34DC86
+P 7500 14000
+F 0 "IC2" H 7200 14525 59  0000 L BNN
+F 1 "74367N" H 7200 13300 59  0001 L BNN
+F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 7500 14000 50  0001 C CNN
+F 3 "" H 7500 14000 50  0001 C CNN
+	1    7500 14000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7800 14500 7900 14500
+Connection ~ 7900 14500
+Wire Wire Line
+	19800 14500 19800 14400
+Wire Wire Line
+	19000 15100 19000 15300
+Wire Wire Line
+	19500 15300 19000 15300
+Connection ~ 19000 15300
+Wire Wire Line
+	19000 15300 19000 15450
+NoConn ~ 14100 9400
+Wire Wire Line
+	18500 2900 18500 2400
+Wire Wire Line
+	18200 2400 18500 2400
+Wire Wire Line
+	16500 2800 18800 2800
+Wire Wire Line
+	19400 2800 19500 2800
+Wire Wire Line
+	19500 2800 19500 2700
+Wire Wire Line
+	19500 2700 19700 2700
+NoConn ~ 19400 3000
+NoConn ~ 22400 13900
+NoConn ~ 22400 13800
+NoConn ~ 22400 13700
+Wire Wire Line
+	14250 15650 14250 15550
+Text GLabel 20900 12700 0    70   Input ~ 0
+#CPUCLK
+NoConn ~ 22400 17600
+NoConn ~ 22400 17500
+Text GLabel 3900 8900 0    70   Input ~ 0
+#RESET
+Text GLabel 4350 8700 1    50   Input ~ 0
+#NMI
+Text GLabel 13250 15550 1    50   Input ~ 0
++9V
+Text GLabel 14250 15550 1    50   Input ~ 0
++5V
+Connection ~ 11550 16050
+$Comp
+L ACE2NOKBV2-rescue:+9V-power #PWR0110
+U 1 1 754DA2CC
+P 11550 15650
+F 0 "#PWR0110" H 11550 15500 50  0001 C CNN
+F 1 "+9V" H 11600 15850 50  0000 C CNN
+F 2 "" H 11550 15650 50  0001 C CNN
+F 3 "" H 11550 15650 50  0001 C CNN
+	1    11550 15650
+	1    0    0    -1  
+$EndComp
+Connection ~ 11550 15650
+Wire Wire Line
+	13450 15650 13250 15650
+Connection ~ 13050 15650
+Wire Wire Line
+	11550 15650 11050 15650
+Connection ~ 11050 15650
+Wire Wire Line
+	10650 15650 11050 15650
+Wire Wire Line
+	10650 15750 11050 15750
+Wire Wire Line
+	11050 15750 11350 15750
+Wire Wire Line
+	11350 15750 11350 16050
+Wire Wire Line
+	11350 16050 11550 16050
+Connection ~ 11050 15750
+Connection ~ 13250 15650
+Wire Wire Line
+	13250 15650 13050 15650
+Wire Wire Line
+	13250 15650 13250 15550
+Wire Wire Line
+	12650 15650 13050 15650
+Wire Wire Line
+	11950 15650 12350 15650
+$Comp
+L ACE2NOKBV2-rescue:2732-Memory_EPROM Z1
+U 1 1 D252F494
+P 8700 8100
+F 0 "Z1" H 8300 8925 59  0000 L BNN
+F 1 "2732" H 8300 7200 59  0001 L BNN
+F 2 "Package_DIP:DIP-24_W15.24mm_LongPads" H 8700 8100 50  0001 C CNN
+F 3 "" H 8700 8100 50  0001 C CNN
+	1    8700 8100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13600 8700 13500 8700
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #P+0101
+U 1 1 5D9FCA0C
+P 13500 8700
+F 0 "#P+0101" H 13500 8700 50  0001 C CNN
+F 1 "VCC" V 13500 8700 59  0000 L BNN
+F 2 "" H 13500 8700 50  0001 C CNN
+F 3 "" H 13500 8700 50  0001 C CNN
+	1    13500 8700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	13600 7100 13500 7100
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #P+0102
+U 1 1 5DAD64A8
+P 13500 7100
+F 0 "#P+0102" H 13500 7100 50  0001 C CNN
+F 1 "VCC" V 13500 7100 59  0000 L BNN
+F 2 "" H 13500 7100 50  0001 C CNN
+F 3 "" H 13500 7100 50  0001 C CNN
+	1    13500 7100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	22300 5300 22200 5300
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #P+0103
+U 1 1 5DBB0702
+P 22200 5300
+F 0 "#P+0103" H 22200 5300 50  0001 C CNN
+F 1 "VCC" V 22200 5300 59  0000 L BNN
+F 2 "" H 22200 5300 50  0001 C CNN
+F 3 "" H 22200 5300 50  0001 C CNN
+	1    22200 5300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4900 9800 4900 9900
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #P+0104
+U 1 1 5DC88CED
+P 4900 9900
+F 0 "#P+0104" H 4900 9900 50  0001 C CNN
+F 1 "VCC" V 4900 9900 59  0000 L BNN
+F 2 "" H 4900 9900 50  0001 C CNN
+F 3 "" H 4900 9900 50  0001 C CNN
+	1    4900 9900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	20900 5300 20900 5400
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #P+0105
+U 1 1 5DD617FF
+P 20900 5400
+F 0 "#P+0105" H 20900 5400 50  0001 C CNN
+F 1 "VCC" V 20900 5400 59  0000 L BNN
+F 2 "" H 20900 5400 50  0001 C CNN
+F 3 "" H 20900 5400 50  0001 C CNN
+	1    20900 5400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	19300 5300 19300 5400
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #P+0106
+U 1 1 5DE3CDEF
+P 19300 5400
+F 0 "#P+0106" H 19300 5400 50  0001 C CNN
+F 1 "VCC" V 19300 5400 59  0000 L BNN
+F 2 "" H 19300 5400 50  0001 C CNN
+F 3 "" H 19300 5400 50  0001 C CNN
+	1    19300 5400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6800 14000 6800 14100
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #P+0107
+U 1 1 5DF16199
+P 6800 14100
+F 0 "#P+0107" H 6800 14100 50  0001 C CNN
+F 1 "VCC" V 6800 14100 59  0000 L BNN
+F 2 "" H 6800 14100 50  0001 C CNN
+F 3 "" H 6800 14100 50  0001 C CNN
+	1    6800 14100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5800 5300 5900 5300
+$Comp
+L ACE2NOKBV2-rescue:VCC-power #P+0108
+U 1 1 5DFEFE45
+P 5900 5300
+F 0 "#P+0108" H 5900 5300 50  0001 C CNN
+F 1 "VCC" V 5900 5300 59  0000 L BNN
+F 2 "" H 5900 5300 50  0001 C CNN
+F 3 "" H 5900 5300 50  0001 C CNN
+	1    5900 5300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	13600 10100 13700 10100
+$Comp
+L ACE2NOKBV2-rescue:GND-power #SUPPLY0101
+U 1 1 5E0CA727
+P 13700 10100
+F 0 "#SUPPLY0101" H 13700 10100 50  0001 C CNN
+F 1 "GND" H 13610 9910 59  0000 L BNN
+F 2 "" H 13700 10100 50  0001 C CNN
+F 3 "" H 13700 10100 50  0001 C CNN
+	1    13700 10100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	13600 8500 13700 8500
+$Comp
+L ACE2NOKBV2-rescue:GND-power #SUPPLY0102
+U 1 1 5E1A7D9F
+P 13700 8500
+F 0 "#SUPPLY0102" H 13700 8500 50  0001 C CNN
+F 1 "GND" H 13610 8310 59  0000 L BNN
+F 2 "" H 13700 8500 50  0001 C CNN
+F 3 "" H 13700 8500 50  0001 C CNN
+	1    13700 8500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	24300 5300 24300 5200
+$Comp
+L ACE2NOKBV2-rescue:GND-power #SUPPLY0103
+U 1 1 5E286172
+P 24300 5200
+F 0 "#SUPPLY0103" H 24300 5200 50  0001 C CNN
+F 1 "GND" H 24210 5010 59  0000 L BNN
+F 2 "" H 24300 5200 50  0001 C CNN
+F 3 "" H 24300 5200 50  0001 C CNN
+	1    24300 5200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	19500 5300 19500 5200
+$Comp
+L ACE2NOKBV2-rescue:GND-power #SUPPLY0104
+U 1 1 5E364448
+P 19500 5200
+F 0 "#SUPPLY0104" H 19500 5200 50  0001 C CNN
+F 1 "GND" H 19410 5010 59  0000 L BNN
+F 2 "" H 19500 5200 50  0001 C CNN
+F 3 "" H 19500 5200 50  0001 C CNN
+	1    19500 5200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4900 9600 4900 9700
+$Comp
+L ACE2NOKBV2-rescue:GND-power #SUPPLY0105
+U 1 1 5E51FF4B
+P 4900 9700
+F 0 "#SUPPLY0105" H 4900 9700 50  0001 C CNN
+F 1 "GND" H 4810 9510 59  0000 L BNN
+F 2 "" H 4900 9700 50  0001 C CNN
+F 3 "" H 4900 9700 50  0001 C CNN
+	1    4900 9700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	17900 5300 17900 5400
+$Comp
+L ACE2NOKBV2-rescue:GND-power #SUPPLY0106
+U 1 1 5E5FED31
+P 17900 5400
+F 0 "#SUPPLY0106" H 17900 5400 50  0001 C CNN
+F 1 "GND" H 17810 5210 59  0000 L BNN
+F 2 "" H 17900 5400 50  0001 C CNN
+F 3 "" H 17900 5400 50  0001 C CNN
+	1    17900 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 6600 5800 6700
+$Comp
+L ACE2NOKBV2-rescue:GND-power #SUPPLY0107
+U 1 1 5E6DBA15
+P 5800 6700
+F 0 "#SUPPLY0107" H 5800 6700 50  0001 C CNN
+F 1 "GND" H 5710 6510 59  0000 L BNN
+F 2 "" H 5800 6700 50  0001 C CNN
+F 3 "" H 5800 6700 50  0001 C CNN
+	1    5800 6700
+	1    0    0    -1  
+$EndComp
+NoConn ~ 13300 12200
+NoConn ~ 22400 15800
+NoConn ~ 18600 5800
+NoConn ~ 8400 13900
+Wire Wire Line
+	8200 14000 8300 14000
+$Comp
+L ACE2NOKBV2-rescue:GND-power #SUPPLY0108
+U 1 1 5EC16311
+P 8300 14000
+F 0 "#SUPPLY0108" H 8300 14000 50  0001 C CNN
+F 1 "GND" H 8210 13810 59  0000 L BNN
+F 2 "" H 8300 14000 50  0001 C CNN
+F 3 "" H 8300 14000 50  0001 C CNN
+	1    8300 14000
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 9700 5700
+$EndSCHEMATC
