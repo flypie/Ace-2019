@@ -6,7 +6,7 @@
     (tracks 5197)
     (zones 0)
     (modules 99)
-    (nets 264)
+    (nets 265)
   )
 
   (page A4)
@@ -358,6 +358,7 @@
   (net 261 "Net-(R105-Pad2)")
   (net 262 "Net-(R106-Pad2)")
   (net 263 "Net-(R107-Pad2)")
+  (net 264 /#WE)
 
   (net_class Default "This is the default net class."
     (clearance 0.1524)
@@ -374,6 +375,7 @@
     (add_net +5V)
     (add_net +9V)
     (add_net /#PAGED8K)
+    (add_net /#WE)
     (add_net //BUSAK)
     (add_net //BUSRQ)
     (add_net //HALT)
@@ -2892,7 +2894,7 @@
     (pad 2 thru_hole oval (at 2.54 0) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 25 /DA7))
     (pad 1 thru_hole rect (at 0 0) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
-      (net 18 //WR))
+      (net 264 /#WE))
     (model ${KISYS3DMOD}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_2x25_P2.54mm_Vertical.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))

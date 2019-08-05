@@ -262,7 +262,7 @@ Text Label 13250 13200 2    70   ~ 0
 Wire Wire Line
 	4975 12850 4875 12850
 Text Label 4875 12850 2    70   ~ 0
-/WR
+#WE
 Wire Wire Line
 	9675 11500 9775 11500
 Text Label 9775 11500 0    70   ~ 0
@@ -1135,38 +1135,38 @@ Wire Wire Line
 	8875 11250 8775 11250
 Text Label 8775 11250 2    70   ~ 0
 A9
-Text Label 9875 10650 0    70   ~ 0
+Text Label 9775 10650 0    70   ~ 0
 DA3
 Wire Wire Line
-	9775 10650 9875 10650
-Text Label 9875 10850 0    70   ~ 0
+	9675 10650 9775 10650
+Text Label 9775 10850 0    70   ~ 0
 DA5
 Wire Wire Line
-	9775 10850 9875 10850
-Text Label 9875 10350 0    70   ~ 0
+	9675 10850 9775 10850
+Text Label 9775 10350 0    70   ~ 0
 DA0
 Wire Wire Line
-	9775 10350 9875 10350
-Text Label 9875 10550 0    70   ~ 0
+	9675 10350 9775 10350
+Text Label 9775 10550 0    70   ~ 0
 DA2
 Wire Wire Line
-	9775 10550 9875 10550
-Text Label 9875 11050 0    70   ~ 0
+	9675 10550 9775 10550
+Text Label 9775 11050 0    70   ~ 0
 DA7
 Wire Wire Line
-	9775 11050 9875 11050
-Text Label 9875 10450 0    70   ~ 0
+	9675 11050 9775 11050
+Text Label 9775 10450 0    70   ~ 0
 DA1
 Wire Wire Line
-	9775 10450 9875 10450
-Text Label 9875 10750 0    70   ~ 0
+	9675 10450 9775 10450
+Text Label 9775 10750 0    70   ~ 0
 DA4
 Wire Wire Line
-	9775 10750 9875 10750
-Text Label 9875 10950 0    70   ~ 0
+	9675 10750 9775 10750
+Text Label 9775 10950 0    70   ~ 0
 DA6
 Wire Wire Line
-	9775 10950 9875 10950
+	9675 10950 9775 10950
 $Comp
 L 74xx:74LS393 Z9
 U 1 1 5E377223

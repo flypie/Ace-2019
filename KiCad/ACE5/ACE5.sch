@@ -3796,7 +3796,7 @@ SCREENY4
 Wire Wire Line
 	14350 1275 14250 1275
 Text Label 5675 11150 2    70   ~ 0
-/WR
+#WE
 Wire Wire Line
 	5775 11150 5675 11150
 Wire Wire Line
