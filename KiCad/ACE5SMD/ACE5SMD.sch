@@ -718,7 +718,7 @@ Text Label 7575 15300 2    70   ~ 0
 A8
 Wire Wire Line
 	7675 15500 7575 15500
-Text Label 7625 15500 2    70   ~ 0
+Text Label 7575 15500 2    70   ~ 0
 A10
 Wire Wire Line
 	7675 15600 7475 15600
@@ -726,7 +726,7 @@ Text Label 7475 15600 2    70   ~ 0
 A11
 Wire Wire Line
 	7675 15700 7575 15700
-Text Label 7625 15700 2    70   ~ 0
+Text Label 7575 15700 2    70   ~ 0
 A12
 Wire Wire Line
 	7675 15800 7475 15800
@@ -734,7 +734,7 @@ Text Label 7475 15800 2    70   ~ 0
 A13
 Wire Wire Line
 	7675 15900 7575 15900
-Text Label 7625 15900 2    70   ~ 0
+Text Label 7575 15900 2    70   ~ 0
 A14
 Wire Wire Line
 	7675 15400 7475 15400
