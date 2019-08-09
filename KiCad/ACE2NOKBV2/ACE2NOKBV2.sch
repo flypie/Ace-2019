@@ -4934,11 +4934,27 @@ F 3 "" H 16350 15800 50  0001 C CNN
 	1    16350 15800
 	-1   0    0    1   
 $EndComp
-Text Label 10000 4100 0    50   ~ 0
-#WE
 Wire Wire Line
 	10000 3400 10100 3400
 Wire Wire Line
 	10100 3400 10100 3500
 Connection ~ 10100 3500
+Wire Wire Line
+	12400 4100 12500 4100
+Connection ~ 12400 4100
+$Comp
+L Device:R R32
+U 1 1 5D665B3C
+P 12650 4100
+F 0 "R32" V 12400 4100 50  0000 C CNN
+F 1 "1K0" V 12500 4100 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 12580 4100 50  0001 C CNN
+F 3 "~" H 12650 4100 50  0001 C CNN
+	1    12650 4100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	12800 4100 12900 4100
+Text Label 12900 4100 0    50   ~ 0
+#WE
 $EndSCHEMATC

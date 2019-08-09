@@ -1,6 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:Edgeboard-cache
-LIBS:dave-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268

@@ -4909,4 +4909,20 @@ Wire Wire Line
 	6325 10125 7825 10125
 Wire Wire Line
 	7825 10125 7825 5900
+$Comp
+L Device:R R32
+U 1 1 5DE23231
+P 7975 5900
+F 0 "R32" V 7725 5925 50  0000 C CNN
+F 1 "1k0" V 7825 5925 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 7905 5900 50  0001 C CNN
+F 3 "~" H 7975 5900 50  0001 C CNN
+	1    7975 5900
+	0    1    1    0   
+$EndComp
+Connection ~ 7825 5900
+Wire Wire Line
+	8125 5900 8200 5900
+Text Label 8200 5900 0    50   ~ 0
+#WE
 $EndSCHEMATC
