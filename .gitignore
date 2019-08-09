@@ -3,6 +3,7 @@
 *.ses
 *.dsn
 *.bin
+!jupiter*.bin
 *.rules
 fp-info-cache
 gui_defaults.par
@@ -11,7 +12,7 @@ gui_defaults.par
 *.gbr
 *.drl
 *.zip
-
+sdreader/
 
 
 
