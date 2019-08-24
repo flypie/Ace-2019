@@ -19,7 +19,7 @@ L Device:R R106
 U 1 1 5D669A6C
 P 19275 5575
 F 0 "R106" V 19045 5595 50  0000 C CNN
-F 1 "R" V 19145 5595 50  0000 C CNN
+F 1 "270" V 19145 5595 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 19205 5575 50  0001 C CNN
 F 3 "~" H 19275 5575 50  0001 C CNN
 	1    19275 5575
@@ -30,7 +30,7 @@ L Device:R R107
 U 1 1 5D669A66
 P 19275 5675
 F 0 "R107" V 19045 5695 50  0000 C CNN
-F 1 "R" V 19145 5695 50  0000 C CNN
+F 1 "270" V 19145 5695 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 19205 5675 50  0001 C CNN
 F 3 "~" H 19275 5675 50  0001 C CNN
 	1    19275 5675
@@ -41,7 +41,7 @@ L Device:R R104
 U 1 1 5D4D6572
 P 16675 6175
 F 0 "R104" V 16445 6195 50  0000 C CNN
-F 1 "R" V 16545 6195 50  0000 C CNN
+F 1 "270" V 16545 6195 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 16605 6175 50  0001 C CNN
 F 3 "~" H 16675 6175 50  0001 C CNN
 	1    16675 6175
@@ -52,7 +52,7 @@ L Device:R R105
 U 1 1 5D4D656C
 P 16675 6275
 F 0 "R105" V 16445 6295 50  0000 C CNN
-F 1 "R" V 16545 6295 50  0000 C CNN
+F 1 "270" V 16545 6295 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 16605 6275 50  0001 C CNN
 F 3 "~" H 16675 6275 50  0001 C CNN
 	1    16675 6275
@@ -220,7 +220,7 @@ L Device:R R8
 U 1 1 87952652
 P 1700 9350
 F 0 "R8" H 1550 9409 59  0000 L BNN
-F 1 "270R" H 1550 9220 59  0000 L BNN
+F 1 "270" H 1550 9220 59  0000 L BNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 1700 9350 50  0001 C CNN
 F 3 "" H 1700 9350 50  0001 C CNN
 	1    1700 9350
@@ -474,7 +474,7 @@ U 1 1 5E828036
 P 5300 15775
 F 0 "C10" V 5540 15915 50  0000 L CNN
 F 1 "100nf" V 5555 15925 50  0001 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 5650 15825 50  0001 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 5650 15825 50  0001 L CNN
 F 3 "http://uk.rs-online.com/web/p/products/8523267" H 5650 15725 50  0001 L CNN
 F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 5650 15625 50  0001 L CNN "Description"
 F 5 "3" H 5650 15525 50  0001 L CNN "Height"
@@ -490,8 +490,8 @@ $Comp
 L Device:CP C11
 U 1 1 5F75CDD3
 P 5925 16025
-F 0 "C11" V 6090 16175 50  0000 L CNN
-F 1 "100uf" V 6190 16175 50  0000 L CNN
+F 0 "C11" H 6050 16100 50  0000 L CNN
+F 1 "100uf" H 6050 16000 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D4.0mm_P1.50mm" H 6275 16075 50  0001 L CNN
 F 3 "http://uk.rs-online.com/web/p/products/8523267" H 6275 15975 50  0001 L CNN
 F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 6275 15875 50  0001 L CNN "Description"
@@ -873,7 +873,7 @@ U 1 1 5D3DDD66
 P 19720 8765
 F 0 "C5" V 19470 8810 50  0000 C CNN
 F 1 "47nF" V 19570 8810 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 19720 8765 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 19720 8765 50  0001 C CNN
 F 3 "~" H 19720 8765 50  0001 C CNN
 	1    19720 8765
 	0    1    1    0   
@@ -906,7 +906,7 @@ U 1 1 5DE97B8D
 P 19165 9470
 F 0 "C1" H 19265 9525 50  0000 L CNN
 F 1 "47nF" H 19265 9425 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 19165 9470 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 19165 9470 50  0001 C CNN
 F 3 "~" H 19165 9470 50  0001 C CNN
 	1    19165 9470
 	1    0    0    -1  
@@ -917,7 +917,7 @@ U 1 1 5E5189FF
 P 14650 11800
 F 0 "C2" H 14550 11850 50  0000 R CNN
 F 1 "47nF" H 14550 11800 50  0000 R CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 14650 11800 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 14650 11800 50  0001 C CNN
 F 3 "~" H 14650 11800 50  0001 C CNN
 	1    14650 11800
 	1    0    0    -1  
@@ -928,7 +928,7 @@ U 1 1 5E9F8ADD
 P 14250 11000
 F 0 "C6" V 14000 11000 50  0000 C CNN
 F 1 "47nF" V 14100 11000 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 14250 11000 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 14250 11000 50  0001 C CNN
 F 3 "~" H 14250 11000 50  0001 C CNN
 	1    14250 11000
 	0    1    1    0   
@@ -994,7 +994,7 @@ U 1 1 634930B9
 P 17360 8795
 F 0 "C102" V 17110 8840 50  0000 C CNN
 F 1 "47nF" V 17210 8840 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 17360 8795 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 17360 8795 50  0001 C CNN
 F 3 "~" H 17360 8795 50  0001 C CNN
 	1    17360 8795
 	0    1    1    0   
@@ -1027,7 +1027,7 @@ U 1 1 634930CF
 P 16805 9500
 F 0 "C100" H 16905 9555 50  0000 L CNN
 F 1 "47N" H 16905 9455 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 16805 9500 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 16805 9500 50  0001 C CNN
 F 3 "~" H 16805 9500 50  0001 C CNN
 	1    16805 9500
 	1    0    0    -1  
@@ -1137,7 +1137,7 @@ U 1 1 5D20366C
 P 14925 14200
 F 0 "C3" H 14985 14215 59  0000 L BNN
 F 1 "47nF" H 14985 14015 59  0000 L BNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 14925 14200 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 14925 14200 50  0001 C CNN
 F 3 "" H 14925 14200 50  0001 C CNN
 	1    14925 14200
 	0    1    1    0   
@@ -1187,17 +1187,6 @@ F 3 "~" H 15650 11000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 COMPOSITE1
-U 1 1 5F41E7FB
-P 19400 2000
-F 0 "COMPOSITE1" H 19500 2000 50  0000 L CNN
-F 1 "Conn_01x02" H 19500 1900 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 19400 2000 50  0001 C CNN
-F 3 "~" H 19400 2000 50  0001 C CNN
-	1    19400 2000
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector_Generic:Conn_01x02 POWER-9V-DC1
 U 1 1 613486B0
 P 3750 15950
@@ -1236,31 +1225,31 @@ $EndComp
 $Comp
 L SamacSys_Parts:71321SA55JG8 Z5-6
 U 1 1 5D5FDF41
-P 15150 4075
-F 0 "Z5-6" H 15840 4755 50  0000 C CNN
-F 1 "71321SA55JG " H 15840 4655 50  0000 C CNN
-F 2 "Package_LCC:PLCC-52_THT-Socket" H 16300 4175 50  0001 L CNN
-F 3 "https://www.mouser.co.uk/datasheet/2/464/IDT_7132_DST_20180703-881829.pdf" H 12450 4375 50  0001 L CNN
-F 4 "SRAM 2K x 8 Dual-Port RAM Memory & Logic/ Master" H 12450 4275 50  0001 L CNN "Description"
-F 5 "3.8" H 15300 1375 50  0001 L CNN "Height"
-F 6 "IDT (Integrated Device Technology)" H 12450 4175 50  0001 L CNN "Manufacturer_Name"
-F 7 "7132LA100PDG" H 14000 3375 50  0001 L CNN "Manufacturer_Part_Number"
-	1    15150 4075
+P 15150 3925
+F 0 "Z5-6" H 15840 4605 50  0000 C CNN
+F 1 "71321SA55JG " H 15840 4505 50  0000 C CNN
+F 2 "Package_LCC:PLCC-52_THT-Socket" H 16300 4025 50  0001 L CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/464/IDT_7132_DST_20180703-881829.pdf" H 12450 4225 50  0001 L CNN
+F 4 "SRAM 2K x 8 Dual-Port RAM Memory & Logic/ Master" H 12450 4125 50  0001 L CNN "Description"
+F 5 "3.8" H 15300 1225 50  0001 L CNN "Height"
+F 6 "IDT (Integrated Device Technology)" H 12450 4025 50  0001 L CNN "Manufacturer_Name"
+F 7 "7132LA100PDG" H 14000 3225 50  0001 L CNN "Manufacturer_Part_Number"
+	1    15150 3925
 	1    0    0    -1  
 $EndComp
 $Comp
 L SamacSys_Parts:71321SA55JG8 Z7-8
 U 1 1 5D7935C1
-P 17750 3475
-F 0 "Z7-8" H 18400 4155 50  0000 C CNN
-F 1 "71321SA55JG " H 18400 4055 50  0000 C CNN
-F 2 "Package_LCC:PLCC-52_THT-Socket" H 18900 3575 50  0001 L CNN
-F 3 "https://www.mouser.co.uk/datasheet/2/464/IDT_7132_DST_20180703-881829.pdf" H 15050 3775 50  0001 L CNN
-F 4 "SRAM 2K x 8 Dual-Port RAM Memory & Logic/ Master" H 15050 3675 50  0001 L CNN "Description"
-F 5 "3.8" H 17900 775 50  0001 L CNN "Height"
-F 6 "IDT (Integrated Device Technology)" H 15050 3575 50  0001 L CNN "Manufacturer_Name"
-F 7 "7132LA100PDG" H 16600 2775 50  0001 L CNN "Manufacturer_Part_Number"
-	1    17750 3475
+P 17750 3325
+F 0 "Z7-8" H 18400 4005 50  0000 C CNN
+F 1 "71321SA55JG " H 18400 3905 50  0000 C CNN
+F 2 "Package_LCC:PLCC-52_THT-Socket" H 18900 3425 50  0001 L CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/464/IDT_7132_DST_20180703-881829.pdf" H 15050 3625 50  0001 L CNN
+F 4 "SRAM 2K x 8 Dual-Port RAM Memory & Logic/ Master" H 15050 3525 50  0001 L CNN "Description"
+F 5 "3.8" H 17900 625 50  0001 L CNN "Height"
+F 6 "IDT (Integrated Device Technology)" H 15050 3425 50  0001 L CNN "Manufacturer_Name"
+F 7 "7132LA100PDG" H 16600 2625 50  0001 L CNN "Manufacturer_Part_Number"
+	1    17750 3325
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1268,7 +1257,7 @@ L Device:R R100
 U 1 1 5E21BE61
 P 16675 6625
 F 0 "R100" V 16445 6645 50  0000 C CNN
-F 1 "R" V 16545 6645 50  0000 C CNN
+F 1 "270" V 16545 6645 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 16605 6625 50  0001 C CNN
 F 3 "~" H 16675 6625 50  0001 C CNN
 	1    16675 6625
@@ -1279,7 +1268,7 @@ L Device:R R101
 U 1 1 5E2E9AC6
 P 16675 6725
 F 0 "R101" V 16445 6745 50  0000 C CNN
-F 1 "R" V 16545 6745 50  0000 C CNN
+F 1 "270" V 16545 6745 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 16605 6725 50  0001 C CNN
 F 3 "~" H 16675 6725 50  0001 C CNN
 	1    16675 6725
@@ -1289,8 +1278,8 @@ $Comp
 L Device:R R103
 U 1 1 5E6F857E
 P 19275 6125
-F 0 "R103" V 19045 6155 50  0000 C CNN
-F 1 "R" V 19145 6155 50  0000 C CNN
+F 0 "R103" V 19050 6150 50  0000 C CNN
+F 1 "270" V 19150 6150 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 19205 6125 50  0001 C CNN
 F 3 "~" H 19275 6125 50  0001 C CNN
 	1    19275 6125
@@ -1300,23 +1289,12 @@ $Comp
 L Device:R R102
 U 1 1 5E6F8578
 P 19275 6025
-F 0 "R102" V 19045 6055 50  0000 C CNN
-F 1 "R" V 19145 6055 50  0000 C CNN
+F 0 "R102" V 19050 6050 50  0000 C CNN
+F 1 "270" V 19150 6050 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 19205 6025 50  0001 C CNN
 F 3 "~" H 19275 6025 50  0001 C CNN
 	1    19275 6025
 	0    1    1    0   
-$EndComp
-$Comp
-L z80cpu:Z80CPU_LCC Z0
-U 1 1 5D1F3CD6
-P 2800 7850
-F 0 "Z0" H 2800 6550 59  0000 C CNN
-F 1 "Z80CPU" H 2800 6450 59  0000 C CNN
-F 2 "Package_LCC:PLCC-44_THT-Socket" H 1950 9200 50  0001 C CNN
-F 3 "" H 1950 9200 50  0001 C CNN
-	1    2800 7850
-	1    0    0    -1  
 $EndComp
 $Comp
 L Device:Crystal X1
@@ -2416,17 +2394,6 @@ F 3 "" H 1575 13640 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:VCC #PWR0147
-U 1 1 6A7647B5
-P 1500 7900
-F 0 "#PWR0147" H 1500 7750 50  0001 C CNN
-F 1 "VCC" V 1530 8055 50  0000 L CNN
-F 2 "" H 1500 7900 50  0001 C CNN
-F 3 "" H 1500 7900 50  0001 C CNN
-	1    1500 7900
-	0    -1   -1   0   
-$EndComp
-$Comp
 L power:VCC #PWR0146
 U 1 1 6A667C7A
 P 1700 9100
@@ -2502,17 +2469,6 @@ F 2 "" H 6025 11175 50  0001 C CNN
 F 3 "" H 6025 11175 50  0001 C CNN
 	1    6025 11175
 	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR0138
-U 1 1 69F76E6E
-P 19100 2100
-F 0 "#PWR0138" H 19100 1850 50  0001 C CNN
-F 1 "GND" V 19085 1970 50  0000 R CNN
-F 2 "" H 19100 2100 50  0001 C CNN
-F 3 "" H 19100 2100 50  0001 C CNN
-	1    19100 2100
-	0    1    1    0   
 $EndComp
 $Comp
 L power:GND #PWR0121
@@ -2691,12 +2647,10 @@ F 3 "" H 1100 7500 50  0001 C CNN
 	1    1100 7500
 	1    0    0    -1  
 $EndComp
-Text GLabel 7575 15500 1    50   Input ~ 0
-+5V
 Text GLabel 5925 15525 1    50   Input ~ 0
-+9V
++9Vsm
 Text GLabel 1575 13540 0    50   Input ~ 0
-+9V
++9Vsm
 Text GLabel 1575 13440 0    50   Input ~ 0
 +5V
 Text GLabel 1575 13340 0    50   Input ~ 0
@@ -2704,8 +2658,6 @@ Text GLabel 1575 13340 0    50   Input ~ 0
 Text GLabel 2275 12640 2    50   Input ~ 0
 #RESET
 Text GLabel 2275 13540 2    50   Input ~ 0
-#NMI
-Text GLabel 1635 7900 1    50   Input ~ 0
 #NMI
 $Comp
 L power:GND #PWR0117
@@ -2764,8 +2716,6 @@ F 3 "" H 2000 10400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 10060 -660
-Wire Wire Line
-	18500 2000 19200 2000
 Connection ~ 18500 2000
 Wire Wire Line
 	18500 2050 18500 2000
@@ -2839,8 +2789,6 @@ Wire Wire Line
 	5700 12400 5700 12300
 Wire Wire Line
 	20000 2500 17100 2500
-Wire Wire Line
-	15600 900  22095 900 
 Wire Wire Line
 	22095 900  22095 4175
 Wire Wire Line
@@ -3415,8 +3363,6 @@ Wire Wire Line
 Connection ~ 1100 8100
 Wire Wire Line
 	1100 8100 2100 8100
-Text Label 2000 8300 1    70   ~ 0
-/BUSRQ
 Wire Wire Line
 	2000 8300 2100 8300
 Wire Wire Line
@@ -3615,10 +3561,6 @@ Text Label 22100 14600 0    70   ~ 0
 /INT
 Wire Wire Line
 	22000 14600 22100 14600
-Text Label 2000 7800 2    70   ~ 0
-/INT
-Wire Wire Line
-	2100 7800 2000 7800
 Text Label 6425 10225 0    70   ~ 0
 /RD
 Wire Wire Line
@@ -3691,8 +3633,6 @@ Wire Wire Line
 	19965 9465 19965 9565
 Wire Wire Line
 	2000 10300 2000 10400
-Wire Wire Line
-	19200 2100 19100 2100
 Wire Wire Line
 	12500 1800 12500 1600
 Wire Wire Line
@@ -3779,8 +3719,6 @@ Wire Wire Line
 	2100 7000 2000 7000
 Text Label 9955 12000 2    70   ~ 0
 /WR
-Wire Wire Line
-	2100 7900 1500 7900
 Wire Wire Line
 	18500 1595 18500 1495
 Wire Wire Line
@@ -4358,7 +4296,7 @@ U 1 1 5D506FED
 P 7900 15750
 F 0 "C16" V 8065 15915 50  0000 L CNN
 F 1 "100nf" V 8165 15915 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8250 15800 50  0001 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 8250 15800 50  0001 L CNN
 F 3 "http://uk.rs-online.com/web/p/products/8523267" H 8250 15700 50  0001 L CNN
 F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 8250 15600 50  0001 L CNN "Description"
 F 5 "3" H 8250 15500 50  0001 L CNN "Height"
@@ -4376,7 +4314,7 @@ U 1 1 5D42C6C3
 P 7675 15750
 F 0 "C15" V 7840 15915 50  0000 L CNN
 F 1 "100nf" V 7940 15915 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8025 15800 50  0001 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 8025 15800 50  0001 L CNN
 F 3 "http://uk.rs-online.com/web/p/products/8523267" H 8025 15700 50  0001 L CNN
 F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 8025 15600 50  0001 L CNN "Description"
 F 5 "3" H 8025 15500 50  0001 L CNN "Height"
@@ -4388,15 +4326,13 @@ F 10 "70122995" H 8025 15000 50  0001 L CNN "Allied_Number"
 	1    7675 15750
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	6725 15625 6925 15625
 $Comp
 L SamacSys_Parts:K104K10X7RF53H5 C14
 U 1 1 5D956C31
 P 7450 15750
 F 0 "C14" V 7615 15915 50  0000 L CNN
 F 1 "100nf" V 7715 15915 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 7800 15800 50  0001 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 7800 15800 50  0001 L CNN
 F 3 "http://uk.rs-online.com/web/p/products/8523267" H 7800 15700 50  0001 L CNN
 F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 7800 15600 50  0001 L CNN "Description"
 F 5 "3" H 7800 15500 50  0001 L CNN "Height"
@@ -4414,7 +4350,7 @@ U 1 1 5D79AD57
 P 8600 15750
 F 0 "C19" V 8765 15915 50  0000 L CNN
 F 1 "100nf" V 8865 15915 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8950 15800 50  0001 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 8950 15800 50  0001 L CNN
 F 3 "http://uk.rs-online.com/web/p/products/8523267" H 8950 15700 50  0001 L CNN
 F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 8950 15600 50  0001 L CNN "Description"
 F 5 "3" H 8950 15500 50  0001 L CNN "Height"
@@ -4432,7 +4368,7 @@ U 1 1 618E9BE1
 P 9100 15750
 F 0 "C21" V 9265 15900 50  0000 L CNN
 F 1 "100nf" V 9365 15900 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 9450 15800 50  0001 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 9450 15800 50  0001 L CNN
 F 3 "http://uk.rs-online.com/web/p/products/8523267" H 9450 15700 50  0001 L CNN
 F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 9450 15600 50  0001 L CNN "Description"
 F 5 "3" H 9450 15500 50  0001 L CNN "Height"
@@ -4450,7 +4386,7 @@ U 1 1 5D5E2433
 P 8125 15750
 F 0 "C17" V 8290 15915 50  0000 L CNN
 F 1 "100nf" V 8390 15915 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8475 15800 50  0001 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 8475 15800 50  0001 L CNN
 F 3 "http://uk.rs-online.com/web/p/products/8523267" H 8475 15700 50  0001 L CNN
 F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 8475 15600 50  0001 L CNN "Description"
 F 5 "3" H 8475 15500 50  0001 L CNN "Height"
@@ -4468,7 +4404,7 @@ U 1 1 5D6BE2CF
 P 8350 15750
 F 0 "C18" V 8515 15915 50  0000 L CNN
 F 1 "100nf" V 8615 15915 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8700 15800 50  0001 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 8700 15800 50  0001 L CNN
 F 3 "http://uk.rs-online.com/web/p/products/8523267" H 8700 15700 50  0001 L CNN
 F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 8700 15600 50  0001 L CNN "Description"
 F 5 "3" H 8700 15500 50  0001 L CNN "Height"
@@ -4486,7 +4422,7 @@ U 1 1 5D878331
 P 8850 15750
 F 0 "C20" V 9015 15915 50  0000 L CNN
 F 1 "100nf" V 9115 15915 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 9200 15800 50  0001 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 9200 15800 50  0001 L CNN
 F 3 "http://uk.rs-online.com/web/p/products/8523267" H 9200 15700 50  0001 L CNN
 F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 9200 15600 50  0001 L CNN "Description"
 F 5 "3" H 9200 15500 50  0001 L CNN "Height"
@@ -4515,7 +4451,7 @@ U 1 1 5FC78850
 P 7200 15750
 F 0 "C13" V 7365 15915 50  0000 L CNN
 F 1 "100nf" V 7465 15915 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 7550 15800 50  0001 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 7550 15800 50  0001 L CNN
 F 3 "http://uk.rs-online.com/web/p/products/8523267" H 7550 15700 50  0001 L CNN
 F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 7550 15600 50  0001 L CNN "Description"
 F 5 "3" H 7550 15500 50  0001 L CNN "Height"
@@ -4762,9 +4698,6 @@ Wire Wire Line
 Connection ~ 4850 15625
 Wire Wire Line
 	6925 15850 6925 15625
-Connection ~ 6925 15625
-Wire Wire Line
-	6925 15625 7075 15625
 Wire Wire Line
 	7075 15525 7075 15625
 Wire Wire Line
@@ -4788,34 +4721,14 @@ Wire Wire Line
 Connection ~ 14950 11000
 Wire Wire Line
 	14950 11000 14650 11000
-Wire Wire Line
-	15550 11650 15475 11650
-Wire Wire Line
-	15475 11575 14950 11575
-Wire Wire Line
-	15475 11575 15475 11650
 Connection ~ 14950 11575
 Wire Wire Line
 	14950 11575 14950 11000
-$Comp
-L Device:Speaker SP1
-U 1 1 5D362C49
-P 15750 11650
-F 0 "SP1" H 15940 11690 50  0000 L CNN
-F 1 "Speaker" H 15940 11590 50  0000 L CNN
-F 2 "Buzzer_Beeper:MagneticBuzzer_ProSignal_ABI-009-RC" H 15750 11450 50  0001 C CNN
-F 3 "~" H 15740 11600 50  0001 C CNN
-	1    15750 11650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	15550 11975 14950 11975
 Connection ~ 14650 11975
 Wire Wire Line
 	14650 11975 14650 12600
 Wire Wire Line
 	14950 11900 14950 11975
-Connection ~ 14950 11975
 Wire Wire Line
 	14950 11975 14650 11975
 Wire Wire Line
@@ -4925,4 +4838,181 @@ Wire Wire Line
 	8125 5900 8200 5900
 Text Label 8200 5900 0    50   ~ 0
 #WE
+Text GLabel 7575 15500 1    50   Input ~ 0
++5V
+Wire Wire Line
+	6925 15625 7075 15625
+Wire Wire Line
+	6925 15625 6725 15625
+Connection ~ 6925 15625
+Wire Wire Line
+	1650 7900 1550 7900
+$Comp
+L power:VCC #PWR0147
+U 1 1 5E976105
+P 1550 7900
+F 0 "#PWR0147" H 1550 7750 50  0001 C CNN
+F 1 "VCC" V 1580 8075 50  0000 L CNN
+F 2 "" H 1550 7900 50  0001 C CNN
+F 3 "" H 1550 7900 50  0001 C CNN
+	1    1550 7900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R110
+U 1 1 5E9760FF
+P 1800 7900
+F 0 "R110" H 1650 7959 59  0000 L BNN
+F 1 "270" H 1650 7770 59  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 1800 7900 50  0001 C CNN
+F 3 "" H 1800 7900 50  0001 C CNN
+	1    1800 7900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1950 7900 2100 7900
+Wire Wire Line
+	2100 7800 2000 7800
+Text Label 2000 7800 2    70   ~ 0
+/INT
+Text Label 2000 8300 2    70   ~ 0
+/BUSRQ
+$Comp
+L Zilog_z80:Z80CPU-LCC Z0
+U 1 1 5D1F3CD6
+P 2300 6500
+F 0 "Z0" H 2300 5200 59  0000 C CNN
+F 1 "Z80CPU" H 2300 5100 59  0000 C CNN
+F 2 "Package_LCC:PLCC-44_THT-Socket" H 1450 7850 50  0001 C CNN
+F 3 "" H 1450 7850 50  0001 C CNN
+	1    2300 6500
+	1    0    0    -1  
+$EndComp
+Text GLabel 1950 7900 3    50   Input ~ 0
+#NMI
+$Comp
+L power:VCC #P+0102
+U 1 1 5D703F77
+P 20200 1750
+F 0 "#P+0102" H 20200 1750 50  0001 C CNN
+F 1 "VCC" H 20250 1975 59  0000 C CNN
+F 2 "" H 20200 1750 50  0001 C CNN
+F 3 "" H 20200 1750 50  0001 C CNN
+	1    20200 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	20200 1800 20200 1750
+$Comp
+L Connector_Generic:Conn_01x02 COMPOSITE1
+U 1 1 5F41E7FB
+P 21025 2250
+F 0 "COMPOSITE1" H 21125 2250 50  0000 L CNN
+F 1 "Conn_01x02" H 21125 2150 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 21025 2250 50  0001 C CNN
+F 3 "~" H 21025 2250 50  0001 C CNN
+	1    21025 2250
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	15600 900  22095 900 
+Wire Wire Line
+	20825 2250 20750 2250
+$Comp
+L Device:R R111
+U 1 1 5D703F87
+P 20600 2250
+F 0 "R111" V 20350 2250 50  0000 C CNN
+F 1 "18" V 20450 2250 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 20530 2250 50  0001 C CNN
+F 3 "~" H 20600 2250 50  0001 C CNN
+	1    20600 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R113
+U 1 1 5D703F80
+P 20050 2250
+F 0 "R113" V 20150 2250 50  0000 C CNN
+F 1 "100" V 20250 2250 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 19980 2250 50  0001 C CNN
+F 3 "~" H 20050 2250 50  0001 C CNN
+	1    20050 2250
+	0    1    1    0   
+$EndComp
+Connection ~ 20200 2250
+Wire Wire Line
+	20200 2250 20450 2250
+Wire Wire Line
+	20200 2200 20200 2250
+$Comp
+L power:GND #SUPPLY0101
+U 1 1 5D703F71
+P 19800 2250
+F 0 "#SUPPLY0101" H 19800 2250 50  0001 C CNN
+F 1 "GND" H 19725 2125 59  0000 L BNN
+F 2 "" H 19800 2250 50  0001 C CNN
+F 3 "" H 19800 2250 50  0001 C CNN
+	1    19800 2250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	19900 2250 19800 2250
+$Comp
+L Transistor_BJT:2N3904 Q4
+U 1 1 5D703F6A
+P 20100 2000
+F 0 "Q4" H 19900 2000 59  0000 L BNN
+F 1 "2N3904" H 19700 1900 59  0000 L BNN
+F 2 "Package_TO_SOT_THT:TO-92L_HandSolder" H 20100 2000 50  0001 C CNN
+F 3 "" H 20100 2000 50  0001 C CNN
+	1    20100 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #SUPPLY0105
+U 1 1 5D703F5E
+P 20825 2050
+F 0 "#SUPPLY0105" H 20825 2050 50  0001 C CNN
+F 1 "GND" H 20750 1925 59  0000 L BNN
+F 2 "" H 20825 2050 50  0001 C CNN
+F 3 "" H 20825 2050 50  0001 C CNN
+	1    20825 2050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	20825 2150 20825 2050
+Wire Wire Line
+	18500 2000 19900 2000
+$Comp
+L Connector_Generic:Conn_01x02 SPK1
+U 1 1 5E1B7B2D
+P 15750 11750
+F 0 "SPK1" H 15850 11750 50  0000 L CNN
+F 1 "Conn_01x02" H 15850 11650 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 15750 11750 50  0001 C CNN
+F 3 "~" H 15750 11750 50  0001 C CNN
+	1    15750 11750
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	15550 11575 15550 11650
+Wire Wire Line
+	14950 11575 15550 11575
+Connection ~ 14950 11975
+$Comp
+L Device:R R112
+U 1 1 5E8BD983
+P 15250 11975
+F 0 "R112" V 14975 11975 59  0000 C CNN
+F 1 "200" V 15075 11975 59  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 15250 11975 50  0001 C CNN
+F 3 "" H 15250 11975 50  0001 C CNN
+	1    15250 11975
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	15400 11975 15550 11975
+Wire Wire Line
+	14950 11975 15100 11975
 $EndSCHEMATC
