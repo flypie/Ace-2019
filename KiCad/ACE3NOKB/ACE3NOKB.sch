@@ -111,7 +111,7 @@ L Connector_Generic:Conn_01x02 AUDIO-IN1
 U 1 1 10A0DA0D
 P 19720 5675
 F 0 "AUDIO-IN1" H 19840 5700 51  0000 L CNN
-F 1 "332-02" H 19840 5600 59  0000 L CNN
+F 1 "332-02" H 19840 5600 50  0000 L CNN
 F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 19720 5675 50  0001 C CNN
 F 3 "" H 19720 5675 50  0001 C CNN
 	1    19720 5675
@@ -123,7 +123,7 @@ Wire Wire Line
 	22750 6975 22750 7675
 Wire Wire Line
 	23675 11275 23675 11375
-Text Label 23675 11375 3    70   ~ 0
+Text Label 23675 11375 3    50   ~ 0
 DA6
 $Comp
 L Device:R_Pack08 RN1
@@ -136,31 +136,31 @@ F 3 "https://www.bourns.com/pdfs/4100R.pdf" H 23475 11075 50  0001 C CNN
 	1    23475 11075
 	1    0    0    -1  
 $EndComp
-Text Label 23375 11375 3    70   ~ 0
+Text Label 23375 11375 3    50   ~ 0
 DA3
 Wire Wire Line
 	23375 11275 23375 11375
-Text Label 23575 11375 3    70   ~ 0
+Text Label 23575 11375 3    50   ~ 0
 DA5
 Wire Wire Line
 	23575 11275 23575 11375
-Text Label 23075 11375 3    70   ~ 0
+Text Label 23075 11375 3    50   ~ 0
 DA0
 Wire Wire Line
 	23075 11275 23075 11375
-Text Label 23275 11375 3    70   ~ 0
+Text Label 23275 11375 3    50   ~ 0
 DA2
 Wire Wire Line
 	23275 11275 23275 11375
-Text Label 23775 11375 3    70   ~ 0
+Text Label 23775 11375 3    50   ~ 0
 DA7
 Wire Wire Line
 	23775 11275 23775 11375
-Text Label 23175 11375 3    70   ~ 0
+Text Label 23175 11375 3    50   ~ 0
 DA1
 Wire Wire Line
 	23175 11275 23175 11375
-Text Label 23475 11375 3    70   ~ 0
+Text Label 23475 11375 3    50   ~ 0
 DA4
 Wire Wire Line
 	23475 11275 23475 11375
@@ -191,21 +191,21 @@ Wire Wire Line
 	26150 11300 26150 11400
 Wire Wire Line
 	26250 11300 26250 11400
-Text Label 25850 11400 3    70   ~ 0
+Text Label 25850 11400 3    50   ~ 0
 DA3
-Text Label 26050 11400 3    70   ~ 0
+Text Label 26050 11400 3    50   ~ 0
 DA5
-Text Label 25550 11400 3    70   ~ 0
+Text Label 25550 11400 3    50   ~ 0
 DA0
-Text Label 25750 11400 3    70   ~ 0
+Text Label 25750 11400 3    50   ~ 0
 DA2
-Text Label 26250 11400 3    70   ~ 0
+Text Label 26250 11400 3    50   ~ 0
 DA7
-Text Label 25650 11400 3    70   ~ 0
+Text Label 25650 11400 3    50   ~ 0
 DA1
-Text Label 25950 11400 3    70   ~ 0
+Text Label 25950 11400 3    50   ~ 0
 DA4
-Text Label 26150 11400 3    70   ~ 0
+Text Label 26150 11400 3    50   ~ 0
 DA6
 $Comp
 L Device:C_Small C6
@@ -283,8 +283,8 @@ $Comp
 L Device:Crystal X1
 U 1 1 5D1D7B86
 P 20700 15500
-F 0 "X1" H 20700 15700 59  0000 C CNN
-F 1 "CRYSTALHC49U-V 6.556MHz" H 20710 15660 59  0001 C CNN
+F 0 "X1" H 20700 15700 50  0000 C CNN
+F 1 "CRYSTALHC49U-V 6.556MHz" H 20710 15660 50  0001 C CNN
 F 2 "Crystal:Crystal_HC49-U_Vertical" H 20700 15500 50  0001 C CNN
 F 3 "" H 20700 15500 50  0001 C CNN
 	1    20700 15500
@@ -346,8 +346,6 @@ F 3 "~" H 9325 18700 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	15175 9675 15975 9675
-Wire Wire Line
 	11550 15800 11550 16875
 Wire Wire Line
 	11850 15800 11850 16100
@@ -379,8 +377,6 @@ Wire Wire Line
 	11250 15800 11250 16575
 Wire Wire Line
 	11150 15800 11150 16475
-Wire Wire Line
-	15975 9775 15175 9775
 $Comp
 L power:VCC ~PWR0143
 U 1 1 6EE1F51B
@@ -1010,25 +1006,25 @@ F 10 "70122995" H 13410 17250 50  0001 L CNN "Allied_Number"
 $EndComp
 Wire Wire Line
 	14175 5375 14475 5375
-Text Label 11450 14700 1    70   ~ 0
+Text Label 11450 14700 1    50   ~ 0
 DA3
 Wire Wire Line
 	11450 14800 11450 14700
-Text Label 11150 14700 1    70   ~ 0
+Text Label 11150 14700 1    50   ~ 0
 DA0
 Wire Wire Line
 	11150 14800 11150 14700
-Text Label 11350 14700 1    70   ~ 0
+Text Label 11350 14700 1    50   ~ 0
 DA2
 Wire Wire Line
 	11350 14800 11350 14700
-Text Label 11250 14700 1    70   ~ 0
+Text Label 11250 14700 1    50   ~ 0
 DA1
 Wire Wire Line
 	11250 14800 11250 14700
 Wire Wire Line
 	11100 12950 11000 12950
-Text Label 11000 12950 2    70   ~ 0
+Text Label 11000 12950 2    50   ~ 0
 A14
 $Comp
 L 74xx:74LS11 Z22
@@ -1078,13 +1074,13 @@ Wire Wire Line
 	25550 4900 22675 4900
 Wire Wire Line
 	21175 3275 27645 3275
-Text Label 15880 10575 2    70   ~ 0
+Text Label 15880 10575 2    50   ~ 0
 A6
-Text Label 15880 10675 2    70   ~ 0
+Text Label 15880 10675 2    50   ~ 0
 A7
-Text Label 15880 10775 2    70   ~ 0
+Text Label 15880 10775 2    50   ~ 0
 A8
-Text Label 15880 10875 2    70   ~ 0
+Text Label 15880 10875 2    50   ~ 0
 A9
 Wire Wire Line
 	15975 10575 15880 10575
@@ -1096,7 +1092,7 @@ Wire Wire Line
 	15975 10875 15880 10875
 Wire Wire Line
 	15975 11375 15875 11375
-Text Label 15875 11375 2    70   ~ 0
+Text Label 15875 11375 2    50   ~ 0
 ~VHOLD
 $Comp
 L 74xx:74LS00 Z19
@@ -1588,89 +1584,89 @@ F 3 "74xx\\74LS393.pdf" H 23150 13600 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	11900 12150 12000 12150
-Text Label 12000 12150 0    70   ~ 0
+Text Label 12000 12150 0    50   ~ 0
 DA6
 Wire Wire Line
 	11900 11950 12000 11950
-Text Label 12000 11950 0    70   ~ 0
+Text Label 12000 11950 0    50   ~ 0
 DA4
 Wire Wire Line
 	11900 11650 12000 11650
-Text Label 12000 11650 0    70   ~ 0
+Text Label 12000 11650 0    50   ~ 0
 DA1
 Wire Wire Line
 	11900 12250 12000 12250
-Text Label 12000 12250 0    70   ~ 0
+Text Label 12000 12250 0    50   ~ 0
 DA7
 Wire Wire Line
 	11900 11750 12000 11750
-Text Label 12000 11750 0    70   ~ 0
+Text Label 12000 11750 0    50   ~ 0
 DA2
 Wire Wire Line
 	11900 11550 12000 11550
-Text Label 12000 11550 0    70   ~ 0
+Text Label 12000 11550 0    50   ~ 0
 DA0
 Wire Wire Line
 	11900 12050 12000 12050
-Text Label 12000 12050 0    70   ~ 0
+Text Label 12000 12050 0    50   ~ 0
 DA5
 Wire Wire Line
 	11900 11850 12000 11850
-Text Label 12000 11850 0    70   ~ 0
+Text Label 12000 11850 0    50   ~ 0
 DA3
-Text Label 11000 12450 2    70   ~ 0
+Text Label 11000 12450 2    50   ~ 0
 A9
 Wire Wire Line
 	11100 12450 11000 12450
-Text Label 11000 12050 2    70   ~ 0
+Text Label 11000 12050 2    50   ~ 0
 A5
 Wire Wire Line
 	11100 12050 11000 12050
-Text Label 11000 11950 2    70   ~ 0
+Text Label 11000 11950 2    50   ~ 0
 A4
 Wire Wire Line
 	11100 11950 11000 11950
-Text Label 11000 12850 2    70   ~ 0
+Text Label 11000 12850 2    50   ~ 0
 A13
 Wire Wire Line
 	11100 12850 11000 12850
-Text Label 11000 12750 2    70   ~ 0
+Text Label 11000 12750 2    50   ~ 0
 A12
 Wire Wire Line
 	11100 12750 11000 12750
-Text Label 11000 12650 2    70   ~ 0
+Text Label 11000 12650 2    50   ~ 0
 A11
 Wire Wire Line
 	11100 12650 11000 12650
-Text Label 11000 12550 2    70   ~ 0
+Text Label 11000 12550 2    50   ~ 0
 A10
 Wire Wire Line
 	11100 12550 11000 12550
-Text Label 11000 12350 2    70   ~ 0
+Text Label 11000 12350 2    50   ~ 0
 A8
 Wire Wire Line
 	11100 12350 11000 12350
-Text Label 11000 12250 2    70   ~ 0
+Text Label 11000 12250 2    50   ~ 0
 A7
 Wire Wire Line
 	11100 12250 11000 12250
-Text Label 11000 12150 2    70   ~ 0
+Text Label 11000 12150 2    50   ~ 0
 A6
 Wire Wire Line
 	11100 12150 11000 12150
-Text Label 11000 11850 2    70   ~ 0
+Text Label 11000 11850 2    50   ~ 0
 A3
 Wire Wire Line
 	11100 11850 11000 11850
-Text Label 11000 11750 2    70   ~ 0
+Text Label 11000 11750 2    50   ~ 0
 A2
 Wire Wire Line
 	11100 11750 11000 11750
-Text Label 11000 11650 2    70   ~ 0
+Text Label 11000 11650 2    50   ~ 0
 A1
 Wire Wire Line
 	11100 11650 11000 11650
-Text Label 11000 11550 2    70   ~ 0
+Text Label 11000 11550 2    50   ~ 0
 A0
 Wire Wire Line
 	11100 11550 11000 11550
@@ -1679,35 +1675,35 @@ NoConn ~ 23650 14600
 NoConn ~ 23650 14500
 Wire Wire Line
 	11850 9600 11950 9600
-Text Label 11950 9600 0    70   ~ 0
+Text Label 11950 9600 0    50   ~ 0
 DA6
 Wire Wire Line
 	11850 9400 11950 9400
-Text Label 11950 9400 0    70   ~ 0
+Text Label 11950 9400 0    50   ~ 0
 DA4
 Wire Wire Line
 	11850 9100 11950 9100
-Text Label 11950 9100 0    70   ~ 0
+Text Label 11950 9100 0    50   ~ 0
 DA1
 Wire Wire Line
 	11850 9700 11950 9700
-Text Label 11950 9700 0    70   ~ 0
+Text Label 11950 9700 0    50   ~ 0
 DA7
 Wire Wire Line
 	11850 9200 11950 9200
-Text Label 11950 9200 0    70   ~ 0
+Text Label 11950 9200 0    50   ~ 0
 DA2
 Wire Wire Line
 	11850 9000 11950 9000
-Text Label 11950 9000 0    70   ~ 0
+Text Label 11950 9000 0    50   ~ 0
 DA0
 Wire Wire Line
 	11850 9500 11950 9500
-Text Label 11950 9500 0    70   ~ 0
+Text Label 11950 9500 0    50   ~ 0
 DA5
 Wire Wire Line
 	11850 9300 11950 9300
-Text Label 11950 9300 0    70   ~ 0
+Text Label 11950 9300 0    50   ~ 0
 DA3
 Wire Wire Line
 	20450 16000 20450 16100
@@ -1738,7 +1734,7 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS21" H 18600 18375 50  0001 C CNN
 	3    18600 18375
 	1    0    0    -1  
 $EndComp
-Text Label 16070 5380 3    70   ~ 0
+Text Label 16070 5380 3    50   ~ 0
 CSB4KV
 $Comp
 L 74xx:74LS32 Z26
@@ -1836,83 +1832,83 @@ F 3 "~" V 10900 18040 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7750 15200 7850 15200
-Text Label 7850 15200 0    70   ~ 0
+Text Label 7850 15200 0    50   ~ 0
 ~WAIT
 Wire Wire Line
 	7750 15700 7850 15700
-Text Label 7850 15700 0    70   ~ 0
+Text Label 7850 15700 0    50   ~ 0
 ~MREQ
 Wire Wire Line
 	7750 15400 7850 15400
-Text Label 7850 15400 0    70   ~ 0
+Text Label 7850 15400 0    50   ~ 0
 ~WR
 Wire Wire Line
 	7750 16100 7850 16100
 Wire Wire Line
 	7750 15600 7850 15600
-Text Label 7850 15600 0    70   ~ 0
+Text Label 7850 15600 0    50   ~ 0
 ~IOREQ
 Wire Wire Line
 	7750 15500 7850 15500
-Text Label 7850 15500 0    70   ~ 0
+Text Label 7850 15500 0    50   ~ 0
 ~RD
 Wire Wire Line
 	7750 16000 7850 16000
 Wire Wire Line
 	7750 15100 7850 15100
-Text Label 7850 15100 0    70   ~ 0
+Text Label 7850 15100 0    50   ~ 0
 ~BUSRQ
 Wire Wire Line
 	7750 15000 7850 15000
 Wire Wire Line
 	7750 14900 7850 14900
-Text Label 7850 14900 0    70   ~ 0
+Text Label 7850 14900 0    50   ~ 0
 ~M1
 Wire Wire Line
 	7750 15800 7850 15800
-Text Label 7850 15800 0    70   ~ 0
+Text Label 7850 15800 0    50   ~ 0
 ~HALT
 Wire Wire Line
 	7750 15300 7850 15300
-Text Label 7850 15300 0    70   ~ 0
+Text Label 7850 15300 0    50   ~ 0
 ~BUSAK
 Wire Wire Line
 	7750 14800 7850 14800
-Text Label 7850 14800 0    70   ~ 0
+Text Label 7850 14800 0    50   ~ 0
 ~REFSH
 Wire Wire Line
 	7750 14300 7850 14300
-Text Label 7850 14300 0    70   ~ 0
+Text Label 7850 14300 0    50   ~ 0
 A1
 Wire Wire Line
 	7750 14400 7850 14400
-Text Label 7850 14400 0    70   ~ 0
+Text Label 7850 14400 0    50   ~ 0
 A3
 Wire Wire Line
 	7750 14700 7850 14700
-Text Label 7850 14700 0    70   ~ 0
+Text Label 7850 14700 0    50   ~ 0
 A6
 Wire Wire Line
 	7750 14500 7850 14500
-Text Label 7850 14500 0    70   ~ 0
+Text Label 7850 14500 0    50   ~ 0
 A4
 Wire Wire Line
 	7750 14600 7850 14600
-Text Label 7850 14600 0    70   ~ 0
+Text Label 7850 14600 0    50   ~ 0
 A5
 Wire Wire Line
 	7850 15900 7750 15900
 Wire Wire Line
 	7750 14000 7850 14000
-Text Label 7850 14000 0    70   ~ 0
+Text Label 7850 14000 0    50   ~ 0
 DA7
 Wire Wire Line
 	7750 14100 7850 14100
-Text Label 7850 14100 0    70   ~ 0
+Text Label 7850 14100 0    50   ~ 0
 DA2
 Wire Wire Line
 	7750 14200 7850 14200
-Text Label 7850 14200 0    70   ~ 0
+Text Label 7850 14200 0    50   ~ 0
 DA0
 $Comp
 L Connector_Generic:Conn_02x25_Odd_Even Z80CPUOUT1
@@ -1963,7 +1959,7 @@ L Connector_Generic:Conn_01x02 AUDIO-OUT1
 U 1 1 C18BD510
 P 20550 13300
 F 0 "AUDIO-OUT1" H 20650 13350 51  0000 L CNN
-F 1 "332-02" H 20650 13200 59  0000 L CNN
+F 1 "332-02" H 20650 13200 50  0000 L CNN
 F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 20550 13300 50  0001 C CNN
 F 3 "" H 20550 13300 50  0001 C CNN
 	1    20550 13300
@@ -1974,7 +1970,7 @@ L Connector_Generic:Conn_01x02 COMPOSITE1
 U 1 1 99A2F76B
 P 25900 4625
 F 0 "COMPOSITE1" H 26000 4595 51  0000 L BNN
-F 1 "332-02" H 25870 4680 59  0000 L BNN
+F 1 "332-02" H 25870 4680 50  0000 L BNN
 F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 25900 4625 50  0001 C CNN
 F 3 "" H 25900 4625 50  0001 C CNN
 	1    25900 4625
@@ -1984,8 +1980,8 @@ $Comp
 L 6116p:6116P Z5-6
 U 1 1 0AE95C9F
 P 20475 9675
-F 0 "Z5-6" H 20500 10900 59  0000 C CNN
-F 1 "6116SA20TPGI" H 20500 10800 59  0000 C CNN
+F 0 "Z5-6" H 20500 10900 50  0000 C CNN
+F 1 "6116SA20TPGI" H 20500 10800 50  0000 C CNN
 F 2 "Package_DIP:DIP-24_W7.62mm" H 20475 9675 50  0001 C CNN
 F 3 "" H 20475 9675 50  0001 C CNN
 	1    20475 9675
@@ -1995,8 +1991,8 @@ $Comp
 L Device:R R23
 U 1 1 DB0DC8AE
 P 22275 11075
-F 0 "R23" H 22175 10970 59  0000 R CNN
-F 1 "1k" H 22175 11120 59  0000 R CNN
+F 0 "R23" H 22175 10970 50  0000 R CNN
+F 1 "1k" H 22175 11120 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 22275 11075 50  0001 C CNN
 F 3 "" H 22275 11075 50  0001 C CNN
 	1    22275 11075
@@ -2006,8 +2002,8 @@ $Comp
 L Device:R R22
 U 1 1 25604EB7
 P 22075 11375
-F 0 "R22" H 21925 11434 59  0000 L BNN
-F 1 "1k" H 22025 11245 59  0000 L BNN
+F 0 "R22" H 21925 11434 50  0000 L BNN
+F 1 "1k" H 22025 11245 50  0000 L BNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 22075 11375 50  0001 C CNN
 F 3 "" H 22075 11375 50  0001 C CNN
 	1    22075 11375
@@ -2017,8 +2013,8 @@ $Comp
 L Device:R R2
 U 1 1 C32E0CEB
 P 18700 15200
-F 0 "R2" V 18450 15200 59  0000 C CNN
-F 1 "12k" V 18550 15200 59  0000 C CNN
+F 0 "R2" V 18450 15200 50  0000 C CNN
+F 1 "12k" V 18550 15200 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 18700 15200 50  0001 C CNN
 F 3 "" H 18700 15200 50  0001 C CNN
 	1    18700 15200
@@ -2028,8 +2024,8 @@ $Comp
 L Device:R R10
 U 1 1 C0B20218
 P 18650 13400
-F 0 "R10" V 18900 13400 59  0000 C CNN
-F 1 "10k" V 18800 13400 59  0000 C CNN
+F 0 "R10" V 18900 13400 50  0000 C CNN
+F 1 "10k" V 18800 13400 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 18650 13400 50  0001 C CNN
 F 3 "" H 18650 13400 50  0001 C CNN
 	1    18650 13400
@@ -2039,8 +2035,8 @@ $Comp
 L Device:R R4
 U 1 1 7E68E8B0
 P 24075 4125
-F 0 "R4" H 23925 4184 59  0000 L BNN
-F 1 "1K5" H 23925 3995 59  0000 L BNN
+F 0 "R4" H 23925 4184 50  0000 L BNN
+F 1 "1K5" H 23925 3995 50  0000 L BNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 24075 4125 50  0001 C CNN
 F 3 "" H 24075 4125 50  0001 C CNN
 	1    24075 4125
@@ -2050,8 +2046,8 @@ $Comp
 L Device:R R3
 U 1 1 64FC636C
 P 23525 4375
-F 0 "R3" H 23375 4434 59  0000 L BNN
-F 1 "1K5" H 23375 4245 59  0000 L BNN
+F 0 "R3" H 23375 4434 50  0000 L BNN
+F 1 "1K5" H 23375 4245 50  0000 L BNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 23525 4375 50  0001 C CNN
 F 3 "" H 23525 4375 50  0001 C CNN
 	1    23525 4375
@@ -2061,8 +2057,8 @@ $Comp
 L Device:C C3
 U 1 1 2D83036D
 P 20475 5675
-F 0 "C3" V 20700 5650 59  0000 C CNN
-F 1 "47nF" V 20600 5650 59  0000 C CNN
+F 0 "C3" V 20700 5650 50  0000 C CNN
+F 1 "47nF" V 20600 5650 50  0000 C CNN
 F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 20475 5675 50  0001 C CNN
 F 3 "" H 20475 5675 50  0001 C CNN
 	1    20475 5675
@@ -2072,8 +2068,8 @@ $Comp
 L Device:R R5
 U 1 1 8C955809
 P 20775 5925
-F 0 "R5" H 20700 5850 59  0000 R CNN
-F 1 "12k" H 20700 5950 59  0000 R CNN
+F 0 "R5" H 20700 5850 50  0000 R CNN
+F 1 "12k" H 20700 5950 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 20775 5925 50  0001 C CNN
 F 3 "" H 20775 5925 50  0001 C CNN
 	1    20775 5925
@@ -2083,8 +2079,8 @@ $Comp
 L Device:R R6
 U 1 1 64D54441
 P 20275 5925
-F 0 "R6" H 20200 5850 59  0000 R CNN
-F 1 "1K" H 20200 5950 59  0000 R CNN
+F 0 "R6" H 20200 5850 50  0000 R CNN
+F 1 "1K" H 20200 5950 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 20275 5925 50  0001 C CNN
 F 3 "" H 20275 5925 50  0001 C CNN
 	1    20275 5925
@@ -2094,8 +2090,8 @@ $Comp
 L Device:R R26
 U 1 1 6E1DACEE
 P 10725 5275
-F 0 "R26" H 10575 5334 59  0000 L BNN
-F 1 "330R" H 10575 5145 59  0000 L BNN
+F 0 "R26" H 10575 5334 50  0000 L BNN
+F 1 "330R" H 10575 5145 50  0000 L BNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" H 10725 5275 50  0001 C CNN
 F 3 "" H 10725 5275 50  0001 C CNN
 	1    10725 5275
@@ -2180,7 +2176,7 @@ F 3 "~" H 10550 16775 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	11650 16300 11750 16300
-Text Label 11750 16300 0    70   ~ 0
+Text Label 11750 16300 0    50   ~ 0
 EAR
 Wire Wire Line
 	10350 16475 10250 16475
@@ -2200,29 +2196,29 @@ Wire Wire Line
 	10250 17175 10350 17175
 Wire Wire Line
 	9950 17175 9750 17175
-Text Label 9750 16575 2    70   ~ 0
+Text Label 9750 16575 2    50   ~ 0
 A9
 Wire Wire Line
 	9950 16575 9750 16575
-Text Label 9900 17075 2    70   ~ 0
+Text Label 9900 17075 2    50   ~ 0
 A14
 Wire Wire Line
 	9950 17075 9850 17075
-Text Label 9750 16975 2    70   ~ 0
+Text Label 9750 16975 2    50   ~ 0
 A13
 Wire Wire Line
 	9950 16975 9750 16975
-Text Label 9900 16875 2    70   ~ 0
+Text Label 9900 16875 2    50   ~ 0
 A12
 Wire Wire Line
 	9950 16875 9850 16875
-Text Label 9750 16775 2    70   ~ 0
+Text Label 9750 16775 2    50   ~ 0
 A11
 Wire Wire Line
 	9950 16775 9750 16775
-Text Label 9900 16675 2    70   ~ 0
+Text Label 9900 16675 2    50   ~ 0
 A10
-Text Label 9850 16475 2    70   ~ 0
+Text Label 9850 16475 2    50   ~ 0
 A8
 Wire Wire Line
 	9950 16475 9850 16475
@@ -2238,33 +2234,33 @@ Wire Wire Line
 	25750 16900 26050 16900
 Wire Wire Line
 	25750 17000 26050 17000
-Text Notes 16970 8380 0    59   ~ 0
+Text Notes 16970 8380 0    50   ~ 0
 These chips are twice the size of orginal.\nKeep A10 low so always using same half.
-Text Notes 16975 7675 0    59   ~ 0
+Text Notes 16975 7675 0    50   ~ 0
 Produce an OE by inverting WR
-Text Label 7150 15000 2    70   ~ 0
+Text Label 7150 15000 2    50   ~ 0
 DA3
 Wire Wire Line
 	7250 15000 7150 15000
-Text Label 11650 14700 1    70   ~ 0
+Text Label 11650 14700 1    50   ~ 0
 DA5
 Wire Wire Line
 	11650 14800 11650 14700
-Text Label 7150 14900 2    70   ~ 0
+Text Label 7150 14900 2    50   ~ 0
 DA5
 Wire Wire Line
 	7250 14900 7150 14900
-Text Label 16895 13400 2    70   ~ 0
+Text Label 16895 13400 2    50   ~ 0
 DA0
-Text Label 7150 14200 2    70   ~ 0
+Text Label 7150 14200 2    50   ~ 0
 DA1
 Wire Wire Line
 	7250 14200 7150 14200
-Text Label 11550 14700 1    70   ~ 0
+Text Label 11550 14700 1    50   ~ 0
 DA4
 Wire Wire Line
 	11550 14800 11550 14700
-Text Label 7150 15100 2    70   ~ 0
+Text Label 7150 15100 2    50   ~ 0
 DA4
 Wire Wire Line
 	7250 15100 7150 15100
@@ -2272,159 +2268,159 @@ Wire Wire Line
 	7250 15900 7150 15900
 Wire Wire Line
 	7250 15800 7150 15800
-Text Label 10950 9900 2    70   ~ 0
+Text Label 10950 9900 2    50   ~ 0
 A9
 Wire Wire Line
 	11050 9900 10950 9900
-Text Label 23550 5745 1    70   ~ 0
+Text Label 23550 5745 1    50   ~ 0
 A9
 Wire Wire Line
 	23550 5875 23550 5745
-Text Label 7150 14600 2    70   ~ 0
+Text Label 7150 14600 2    50   ~ 0
 A9
 Wire Wire Line
 	7250 14600 7150 14600
-Text Label 10950 9500 2    70   ~ 0
+Text Label 10950 9500 2    50   ~ 0
 A5
 Wire Wire Line
 	11050 9500 10950 9500
-Text Label 22850 5745 1    70   ~ 0
+Text Label 22850 5745 1    50   ~ 0
 A5
 Wire Wire Line
 	22850 5875 22850 5745
-Text Label 10950 9400 2    70   ~ 0
+Text Label 10950 9400 2    50   ~ 0
 A4
 Wire Wire Line
 	11050 9400 10950 9400
-Text Label 22750 5745 1    70   ~ 0
+Text Label 22750 5745 1    50   ~ 0
 A4
 Wire Wire Line
 	22750 5875 22750 5745
 Wire Wire Line
 	7250 15700 7150 15700
-Text Label 7150 14100 2    70   ~ 0
+Text Label 7150 14100 2    50   ~ 0
 DA6
 Wire Wire Line
 	7250 14100 7150 14100
-Text Label 7850 7900 2    70   ~ 0
+Text Label 7850 7900 2    50   ~ 0
 A15
-Text Label 7150 15200 2    70   ~ 0
+Text Label 7150 15200 2    50   ~ 0
 A15
 Wire Wire Line
 	7250 15200 7150 15200
-Text Label 10950 10400 2    70   ~ 0
+Text Label 10950 10400 2    50   ~ 0
 A14
 Wire Wire Line
 	11050 10400 10950 10400
-Text Label 7850 7800 2    70   ~ 0
+Text Label 7850 7800 2    50   ~ 0
 A14
-Text Label 7150 15300 2    70   ~ 0
+Text Label 7150 15300 2    50   ~ 0
 A14
 Wire Wire Line
 	7250 15300 7150 15300
-Text Label 10950 10300 2    70   ~ 0
+Text Label 10950 10300 2    50   ~ 0
 A13
 Wire Wire Line
 	11050 10300 10950 10300
-Text Label 7850 7700 2    70   ~ 0
+Text Label 7850 7700 2    50   ~ 0
 A13
-Text Label 7150 15400 2    70   ~ 0
+Text Label 7150 15400 2    50   ~ 0
 A13
 Wire Wire Line
 	7250 15400 7150 15400
-Text Label 10950 10200 2    70   ~ 0
+Text Label 10950 10200 2    50   ~ 0
 A12
 Wire Wire Line
 	11050 10200 10950 10200
-Text Label 7150 15500 2    70   ~ 0
+Text Label 7150 15500 2    50   ~ 0
 A12
 Wire Wire Line
 	7250 15500 7150 15500
-Text Label 10950 10100 2    70   ~ 0
+Text Label 10950 10100 2    50   ~ 0
 A11
 Wire Wire Line
 	11050 10100 10950 10100
-Text Label 7150 15600 2    70   ~ 0
+Text Label 7150 15600 2    50   ~ 0
 A11
 Wire Wire Line
 	7250 15600 7150 15600
-Text Label 10950 10000 2    70   ~ 0
+Text Label 10950 10000 2    50   ~ 0
 A10
 Wire Wire Line
 	11050 10000 10950 10000
-Text Label 8650 6300 2    70   ~ 0
+Text Label 8650 6300 2    50   ~ 0
 A10
 Wire Wire Line
 	8750 6300 8650 6300
-Text Label 7150 14700 2    70   ~ 0
+Text Label 7150 14700 2    50   ~ 0
 A10
 Wire Wire Line
 	7250 14700 7150 14700
-Text Label 10950 9800 2    70   ~ 0
+Text Label 10950 9800 2    50   ~ 0
 A8
 Wire Wire Line
 	11050 9800 10950 9800
-Text Label 23450 5745 1    70   ~ 0
+Text Label 23450 5745 1    50   ~ 0
 A8
 Wire Wire Line
 	23450 5875 23450 5745
-Text Label 7150 14500 2    70   ~ 0
+Text Label 7150 14500 2    50   ~ 0
 A8
 Wire Wire Line
 	7250 14500 7150 14500
-Text Label 10950 9700 2    70   ~ 0
+Text Label 10950 9700 2    50   ~ 0
 A7
 Wire Wire Line
 	11050 9700 10950 9700
-Text Label 23350 5745 1    70   ~ 0
+Text Label 23350 5745 1    50   ~ 0
 A7
 Wire Wire Line
 	23350 5875 23350 5745
-Text Label 7150 14400 2    70   ~ 0
+Text Label 7150 14400 2    50   ~ 0
 A7
 Wire Wire Line
 	7250 14400 7150 14400
-Text Label 10950 9600 2    70   ~ 0
+Text Label 10950 9600 2    50   ~ 0
 A6
 Wire Wire Line
 	11050 9600 10950 9600
-Text Label 23250 5745 1    70   ~ 0
+Text Label 23250 5745 1    50   ~ 0
 A6
 Wire Wire Line
 	23250 5875 23250 5745
-Text Label 10950 9300 2    70   ~ 0
+Text Label 10950 9300 2    50   ~ 0
 A3
 Wire Wire Line
 	11050 9300 10950 9300
-Text Label 22175 5775 1    70   ~ 0
+Text Label 22175 5775 1    50   ~ 0
 A3
-Text Label 10950 9200 2    70   ~ 0
+Text Label 10950 9200 2    50   ~ 0
 A2
 Wire Wire Line
 	11050 9200 10950 9200
-Text Label 22075 5775 1    70   ~ 0
+Text Label 22075 5775 1    50   ~ 0
 A2
-Text Label 7150 14800 2    70   ~ 0
+Text Label 7150 14800 2    50   ~ 0
 A2
 Wire Wire Line
 	7250 14800 7150 14800
-Text Label 10950 9100 2    70   ~ 0
+Text Label 10950 9100 2    50   ~ 0
 A1
 Wire Wire Line
 	11050 9100 10950 9100
-Text Label 21975 5775 1    70   ~ 0
+Text Label 21975 5775 1    50   ~ 0
 A1
-Text Label 13550 14800 2    70   ~ 0
+Text Label 13550 14800 2    50   ~ 0
 A0
 Wire Wire Line
 	13650 14800 13550 14800
-Text Label 10950 9000 2    70   ~ 0
+Text Label 10950 9000 2    50   ~ 0
 A0
 Wire Wire Line
 	11050 9000 10950 9000
-Text Label 21875 5775 1    70   ~ 0
+Text Label 21875 5775 1    50   ~ 0
 A0
-Text Label 7150 14300 2    70   ~ 0
+Text Label 7150 14300 2    50   ~ 0
 A0
 Wire Wire Line
 	7250 14300 7150 14300
@@ -2451,7 +2447,7 @@ Wire Wire Line
 	18775 4275 18875 4275
 Wire Wire Line
 	20575 4075 20475 4075
-Text Label 16070 5080 1    70   ~ 0
+Text Label 16070 5080 1    50   ~ 0
 CST4KV
 Wire Wire Line
 	13075 4975 12975 4975
@@ -2510,20 +2506,20 @@ Wire Wire Line
 	22075 7675 22275 7675
 Wire Wire Line
 	21975 7775 22075 7775
-Text Label 24050 17400 1    70   ~ 0
+Text Label 24050 17400 1    50   ~ 0
 CNT13
 Wire Wire Line
 	23650 17400 24450 17400
-Text Label 23850 17300 1    70   ~ 0
+Text Label 23850 17300 1    50   ~ 0
 CNT12
 Wire Wire Line
 	23650 17300 24450 17300
-Text Label 24250 17500 1    70   ~ 0
+Text Label 24250 17500 1    50   ~ 0
 CNT14
 Wire Wire Line
 	23650 17500 24450 17500
 Connection ~ 23750 14400
-Text Label 23950 14400 0    70   ~ 0
+Text Label 23950 14400 0    50   ~ 0
 CNT4
 Wire Wire Line
 	22550 15300 22650 15300
@@ -2560,23 +2556,23 @@ Wire Wire Line
 	18875 4475 18875 4975
 Wire Wire Line
 	26650 14800 26750 14800
-Text Label 23950 15400 1    70   ~ 0
+Text Label 23950 15400 1    50   ~ 0
 CNT6
 Wire Wire Line
 	23650 15400 23950 15400
-Text Label 26050 14300 1    70   ~ 0
+Text Label 26050 14300 1    50   ~ 0
 CNT6
 Wire Wire Line
 	26050 14700 26050 14300
-Text Label 24150 15500 1    70   ~ 0
+Text Label 24150 15500 1    50   ~ 0
 CNT7
 Wire Wire Line
 	23650 15500 24350 15500
-Text Label 25250 14900 2    70   ~ 0
+Text Label 25250 14900 2    50   ~ 0
 CNT7
 Wire Wire Line
 	25350 14900 25250 14900
-Text Label 23750 15300 1    70   ~ 0
+Text Label 23750 15300 1    50   ~ 0
 CNT5
 Wire Wire Line
 	24250 15400 24350 15400
@@ -2584,7 +2580,7 @@ Wire Wire Line
 	24250 15300 24250 15400
 Wire Wire Line
 	23650 15300 24250 15300
-Text Label 25250 14700 2    70   ~ 0
+Text Label 25250 14700 2    50   ~ 0
 CNT5
 Wire Wire Line
 	25350 14700 25250 14700
@@ -2663,23 +2659,23 @@ Wire Wire Line
 	21375 7575 20175 7575
 Wire Wire Line
 	21375 6975 21375 7575
-Text Label 27650 17000 0    70   ~ 0
+Text Label 27650 17000 0    50   ~ 0
 ~INT
 Wire Wire Line
 	27550 17000 27650 17000
-Text Label 12000 12600 0    70   ~ 0
+Text Label 12000 12600 0    50   ~ 0
 ~RD
 Wire Wire Line
 	11900 12600 12000 12600
-Text Label 14900 15400 2    70   ~ 0
+Text Label 14900 15400 2    50   ~ 0
 ~RD
 Wire Wire Line
 	14950 15400 14850 15400
-Text Label 13550 14600 2    70   ~ 0
+Text Label 13550 14600 2    50   ~ 0
 ~IOREQ
 Wire Wire Line
 	13650 14600 13550 14600
-Text Label 24350 4370 1    70   ~ 0
+Text Label 24350 4370 1    50   ~ 0
 VIDEO
 Wire Wire Line
 	24075 4275 24075 4375
@@ -2689,23 +2685,23 @@ Wire Wire Line
 	19475 4375 21005 4375
 Wire Wire Line
 	21275 3975 21275 4375
-Text Label 23950 13500 0    70   ~ 0
+Text Label 23950 13500 0    50   ~ 0
 CNT0
 Wire Wire Line
 	23650 13500 23950 13500
-Text Label 19175 3975 2    70   ~ 0
+Text Label 19175 3975 2    50   ~ 0
 CNT0
 Wire Wire Line
 	19275 3975 19175 3975
-Text Label 23950 13700 0    70   ~ 0
+Text Label 23950 13700 0    50   ~ 0
 CNT2
 Wire Wire Line
 	23650 13700 23950 13700
-Text Label 19175 3775 2    70   ~ 0
+Text Label 19175 3775 2    50   ~ 0
 CNT2
 Wire Wire Line
 	19275 3775 19175 3775
-Text Label 19175 3875 2    70   ~ 0
+Text Label 19175 3875 2    50   ~ 0
 CNT1
 Wire Wire Line
 	19175 3875 19275 3875
@@ -2754,22 +2750,22 @@ Wire Wire Line
 	23750 15600 23750 16000
 Wire Wire Line
 	23650 15600 23750 15600
-Text Label 16775 4275 2    70   ~ 0
+Text Label 16775 4275 2    50   ~ 0
 CNT8
 Wire Wire Line
 	16875 4275 16775 4275
-Text Label 24050 18300 1    70   ~ 0
+Text Label 24050 18300 1    50   ~ 0
 CNT17
 Wire Wire Line
 	25150 18300 25150 17600
 Wire Wire Line
 	23650 18300 25150 18300
-Text Label 16775 4075 2    70   ~ 0
+Text Label 16775 4075 2    50   ~ 0
 CNT17
 Wire Wire Line
 	16875 4075 16775 4075
 Connection ~ 23750 17600
-Text Label 24370 17580 3    70   ~ 0
+Text Label 24370 17580 3    50   ~ 0
 CNT15
 Wire Wire Line
 	22550 18200 22650 18200
@@ -2783,31 +2779,31 @@ Wire Wire Line
 	23750 17600 24350 17600
 Wire Wire Line
 	23650 17600 23750 17600
-Text Label 25750 16900 2    70   ~ 0
+Text Label 25750 16900 2    50   ~ 0
 CNT15
-Text Label 16775 3675 2    70   ~ 0
+Text Label 16775 3675 2    50   ~ 0
 CNT15
 Wire Wire Line
 	16875 3675 16775 3675
-Text Label 23850 18200 1    70   ~ 0
+Text Label 23850 18200 1    50   ~ 0
 CNT16
 Wire Wire Line
 	23650 18200 23850 18200
-Text Label 25750 17000 2    70   ~ 0
+Text Label 25750 17000 2    50   ~ 0
 CNT16
-Text Label 16775 3475 2    70   ~ 0
+Text Label 16775 3475 2    50   ~ 0
 CNT16
 Wire Wire Line
 	16875 3475 16775 3475
-Text Label 12000 12700 0    70   ~ 0
+Text Label 12000 12700 0    50   ~ 0
 ~WR
 Wire Wire Line
 	11900 12700 12000 12700
-Text Label 7150 14000 2    70   ~ 0
+Text Label 7150 14000 2    50   ~ 0
 ~WE
 Wire Wire Line
 	7250 14000 7150 14000
-Text Label 14850 14400 2    70   ~ 0
+Text Label 14850 14400 2    50   ~ 0
 ~WR
 Wire Wire Line
 	15375 5675 15375 5175
@@ -2826,11 +2822,11 @@ Wire Wire Line
 	18100 13200 18100 13100
 Wire Wire Line
 	22175 4675 22175 4775
-Text Label 7900 8400 2    70   ~ 0
+Text Label 7900 8400 2    50   ~ 0
 ~MREQ
-Text Label 7850 8300 2    70   ~ 0
+Text Label 7850 8300 2    50   ~ 0
 ~MREQ
-Text Label 20075 3175 2    70   ~ 0
+Text Label 20075 3175 2    50   ~ 0
 VIDEN
 Connection ~ 20075 3875
 Wire Wire Line
@@ -2841,23 +2837,23 @@ Wire Wire Line
 	20075 3875 20575 3875
 Wire Wire Line
 	19875 3875 20075 3875
-Text Label 8650 6500 2    70   ~ 0
+Text Label 8650 6500 2    50   ~ 0
 VIDEN
 Wire Wire Line
 	8750 6500 8650 6500
-Text Label 10150 6000 0    70   ~ 0
+Text Label 10150 6000 0    50   ~ 0
 ~VHOLD
 Wire Wire Line
 	9850 6000 10150 6000
-Text Label 9495 4510 0    70   ~ 0
+Text Label 9495 4510 0    50   ~ 0
 CNT:CNT0,CNT1,CNT2,CNT3,CNT4,CNT5,CNT6,CNT7,CNT8,CNT9,CNT10,CNT11,CNT12,CNT13,CNT14,CNT15,CNT16,CNT17
 Wire Bus Line
 	9480 4520 9980 4520
-Text Label 9480 3920 0    70   ~ 0
+Text Label 9480 3920 0    50   ~ 0
 DATA:DATA0,DATA1,DATA2,DATA3,DATA4,DATA5,DATA6,DATA7
 Wire Bus Line
 	9480 3920 9980 3920
-Text Label 9480 4220 0    70   ~ 0
+Text Label 9480 4220 0    50   ~ 0
 ADDRESS:A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15
 Wire Bus Line
 	9480 4220 9980 4220
@@ -2876,8 +2872,8 @@ $Comp
 L Connector:Barrel_Jack POWER-9V-DC1
 U 1 1 3CE93F70
 P 9025 18350
-F 0 "POWER-9V-DC1" H 8750 18450 59  0000 R CNN
-F 1 "cuipj:CUI_PJ-036C" H 8750 18300 59  0000 R CNN
+F 0 "POWER-9V-DC1" H 8750 18450 50  0000 R CNN
+F 1 "cuipj:CUI_PJ-036C" H 8750 18300 50  0000 R CNN
 F 2 "cuipj:CUI_PJ-036C" H 9025 18350 50  0001 C CNN
 F 3 "" H 9025 18350 50  0001 C CNN
 	1    9025 18350
@@ -2964,137 +2960,137 @@ Wire Wire Line
 	7650 10000 7550 10000
 Wire Wire Line
 	7650 9100 7550 9100
-Text Label 7600 9100 2    70   ~ 0
+Text Label 7600 9100 2    50   ~ 0
 ~MREQ
 Wire Wire Line
 	7650 9400 7550 9400
-Text Label 7600 9400 2    70   ~ 0
+Text Label 7600 9400 2    50   ~ 0
 ~WR
 Wire Wire Line
 	7650 9200 7550 9200
-Text Label 7600 9200 2    70   ~ 0
+Text Label 7600 9200 2    50   ~ 0
 ~IOREQ
 Wire Wire Line
 	7650 9300 7550 9300
-Text Label 7600 9300 2    70   ~ 0
+Text Label 7600 9300 2    50   ~ 0
 ~RD
 Wire Wire Line
 	7650 10200 7550 10200
-Text Label 7550 10200 2    70   ~ 0
+Text Label 7550 10200 2    50   ~ 0
 ~INT
 Wire Wire Line
 	7650 11000 7550 11000
 Wire Wire Line
 	7550 11000 7550 12050
-Text Label 7650 10500 2    70   ~ 0
+Text Label 7650 10500 2    50   ~ 0
 ~BUSRQ
 Wire Wire Line
 	6650 10500 7650 10500
 Wire Wire Line
 	7650 9000 7550 9000
-Text Label 7600 9000 2    70   ~ 0
+Text Label 7600 9000 2    50   ~ 0
 ~M1
 Wire Wire Line
 	7650 9800 7550 9800
-Text Label 7600 9800 2    70   ~ 0
+Text Label 7600 9800 2    50   ~ 0
 ~HALT
 Wire Wire Line
 	7650 10800 7450 10800
 Wire Wire Line
 	7450 10800 7450 10900
-Text Label 7450 10900 2    70   ~ 0
+Text Label 7450 10900 2    50   ~ 0
 ~BUSAK
 Wire Wire Line
 	7550 9600 7650 9600
-Text Label 7575 9600 2    70   ~ 0
+Text Label 7575 9600 2    50   ~ 0
 ~REFSH
 Wire Wire Line
 	9050 9000 9150 9000
-Text Label 9150 9000 0    70   ~ 0
+Text Label 9150 9000 0    50   ~ 0
 A0
 Wire Wire Line
 	9050 9100 9150 9100
-Text Label 9150 9100 0    70   ~ 0
+Text Label 9150 9100 0    50   ~ 0
 A1
 Wire Wire Line
 	9050 9200 9150 9200
-Text Label 9100 9200 0    70   ~ 0
+Text Label 9100 9200 0    50   ~ 0
 A2
 Wire Wire Line
 	9050 9300 9150 9300
-Text Label 9100 9300 0    70   ~ 0
+Text Label 9100 9300 0    50   ~ 0
 A3
 Wire Wire Line
 	9050 9600 9150 9600
-Text Label 9100 9600 0    70   ~ 0
+Text Label 9100 9600 0    50   ~ 0
 A6
 Wire Wire Line
 	9050 9700 9150 9700
-Text Label 9100 9700 0    70   ~ 0
+Text Label 9100 9700 0    50   ~ 0
 A7
 Wire Wire Line
 	9050 9800 9150 9800
-Text Label 9100 9800 0    70   ~ 0
+Text Label 9100 9800 0    50   ~ 0
 A8
 Wire Wire Line
 	9050 10000 9150 10000
-Text Label 9150 10000 0    70   ~ 0
+Text Label 9150 10000 0    50   ~ 0
 A10
 Wire Wire Line
 	9050 10100 9150 10100
-Text Label 9150 10100 0    70   ~ 0
+Text Label 9150 10100 0    50   ~ 0
 A11
 Wire Wire Line
 	9050 10200 9150 10200
-Text Label 9150 10200 0    70   ~ 0
+Text Label 9150 10200 0    50   ~ 0
 A12
 Wire Wire Line
 	9050 10300 9150 10300
-Text Label 9150 10300 0    70   ~ 0
+Text Label 9150 10300 0    50   ~ 0
 A13
 Wire Wire Line
 	9050 10400 9150 10400
-Text Label 9150 10400 0    70   ~ 0
+Text Label 9150 10400 0    50   ~ 0
 A14
 Wire Wire Line
 	9050 10500 9150 10500
-Text Label 9150 10500 0    70   ~ 0
+Text Label 9150 10500 0    50   ~ 0
 A15
 Wire Wire Line
 	9050 9400 9150 9400
-Text Label 9100 9400 0    70   ~ 0
+Text Label 9100 9400 0    50   ~ 0
 A4
 Wire Wire Line
 	9050 9500 9150 9500
-Text Label 9100 9500 0    70   ~ 0
+Text Label 9100 9500 0    50   ~ 0
 A5
 Wire Wire Line
 	9050 9900 9150 9900
-Text Label 9100 9900 0    70   ~ 0
+Text Label 9100 9900 0    50   ~ 0
 A9
 Wire Wire Line
 	9050 11100 9150 11100
-Text Label 9150 11100 0    70   ~ 0
+Text Label 9150 11100 0    50   ~ 0
 DA4
 Wire Wire Line
 	9050 10800 9150 10800
-Text Label 9150 10800 0    70   ~ 0
+Text Label 9150 10800 0    50   ~ 0
 DA1
 Wire Wire Line
 	9050 10900 9150 10900
-Text Label 9150 10900 0    70   ~ 0
+Text Label 9150 10900 0    50   ~ 0
 DA2
 Wire Wire Line
 	9050 10700 9150 10700
-Text Label 9150 10700 0    70   ~ 0
+Text Label 9150 10700 0    50   ~ 0
 DA0
 Wire Wire Line
 	9050 11200 9150 11200
-Text Label 9150 11200 0    70   ~ 0
+Text Label 9150 11200 0    50   ~ 0
 DA5
 Wire Wire Line
 	9050 11000 9150 11000
-Text Label 9150 11000 0    70   ~ 0
+Text Label 9150 11000 0    50   ~ 0
 DA3
 Wire Wire Line
 	6650 10605 6650 10600
@@ -3103,8 +3099,8 @@ $Comp
 L Device:R R25
 U 1 1 E4DB1434
 P 6650 10200
-F 0 "R25" H 6500 10259 59  0000 L BNN
-F 1 "220k" H 6520 10070 59  0000 L BNN
+F 0 "R25" H 6500 10259 50  0000 L BNN
+F 1 "220k" H 6520 10070 50  0000 L BNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 6650 10200 50  0001 C CNN
 F 3 "" H 6650 10200 50  0001 C CNN
 	1    6650 10200
@@ -3114,8 +3110,8 @@ $Comp
 L Device:R R8
 U 1 1 87952652
 P 7275 11725
-F 0 "R8" H 7125 11784 59  0000 L BNN
-F 1 "270R" H 7125 11595 59  0000 L BNN
+F 0 "R8" H 7125 11784 50  0000 L BNN
+F 1 "270R" H 7125 11595 50  0000 L BNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 7275 11725 50  0001 C CNN
 F 3 "" H 7275 11725 50  0001 C CNN
 	1    7275 11725
@@ -3125,8 +3121,8 @@ $Comp
 L Device:R R7
 U 1 1 D7606CCB
 P 6800 12400
-F 0 "R7" H 6650 12459 59  0000 L BNN
-F 1 "1k0" H 6650 12270 59  0000 L BNN
+F 0 "R7" H 6650 12459 50  0000 L BNN
+F 1 "1k0" H 6650 12270 50  0000 L BNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" H 6800 12400 50  0001 C CNN
 F 3 "" H 6800 12400 50  0001 C CNN
 	1    6800 12400
@@ -3136,8 +3132,8 @@ $Comp
 L Device:C C4
 U 1 1 72465CF6
 P 6800 12100
-F 0 "C4" H 6860 12215 59  0000 L BNN
-F 1 "42pF" H 6860 11915 59  0000 L BNN
+F 0 "C4" H 6860 12215 50  0000 L BNN
+F 1 "42pF" H 6860 11915 50  0000 L BNN
 F 2 "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm" H 6800 12100 50  0001 C CNN
 F 3 "" H 6800 12100 50  0001 C CNN
 	1    6800 12100
@@ -3215,8 +3211,8 @@ $Comp
 L Device:R R24
 U 1 1 710310B2
 P 7350 10700
-F 0 "R24" H 7200 10759 59  0000 L BNN
-F 1 "10k" H 7200 10570 59  0000 L BNN
+F 0 "R24" H 7200 10759 50  0000 L BNN
+F 1 "10k" H 7200 10570 50  0000 L BNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 7350 10700 50  0001 C CNN
 F 3 "" H 7350 10700 50  0001 C CNN
 	1    7350 10700
@@ -3295,7 +3291,7 @@ L power:GND ~SUPPLY08
 U 1 1 39566F8A
 P 10950 7000
 F 0 "~SUPPLY08" H 10950 7000 50  0001 C CNN
-F 1 "GND" H 10850 7000 59  0000 R CNN
+F 1 "GND" H 10850 7000 50  0000 R CNN
 F 2 "" H 10950 7000 50  0001 C CNN
 F 3 "" H 10950 7000 50  0001 C CNN
 	1    10950 7000
@@ -3343,11 +3339,11 @@ $EndComp
 Connection ~ 10150 10700
 Wire Wire Line
 	10150 10700 10145 10700
-Text Label 9150 11400 0    70   ~ 0
+Text Label 9150 11400 0    50   ~ 0
 DA7
 Wire Wire Line
 	9050 11400 9150 11400
-Text Label 9150 11300 0    70   ~ 0
+Text Label 9150 11300 0    50   ~ 0
 DA6
 Wire Wire Line
 	9050 11300 9150 11300
@@ -3355,8 +3351,8 @@ $Comp
 L Zilog_z80:Z80CPU-LCC Z0
 U 1 1 09F6B21C
 P 7850 8900
-F 0 "Z0" H 8350 6250 59  0000 C CNN
-F 1 "Z80CPU_LCC" H 8350 6150 59  0000 C CNN
+F 0 "Z0" H 8350 6250 50  0000 C CNN
+F 1 "Z80CPU_LCC" H 8350 6150 50  0000 C CNN
 F 2 "Package_LCC:PLCC-44_THT-Socket" H 7750 10400 50  0001 C CNN
 F 3 "" H 7850 9050 50  0001 C CNN
 	1    7850 8900
@@ -3503,7 +3499,7 @@ Wire Wire Line
 	9675 6900 9675 6600
 Wire Wire Line
 	9675 5275 10575 5275
-Text Label 11350 6500 0    70   ~ 0
+Text Label 11350 6500 0    50   ~ 0
 ~WAIT
 Wire Wire Line
 	10550 6500 10950 6500
@@ -3570,15 +3566,15 @@ Wire Wire Line
 	19475 7875 19475 10275
 Wire Wire Line
 	19475 10275 19975 10275
-Text Label 18775 11325 3    70   ~ 0
+Text Label 18775 11325 3    50   ~ 0
 CNT16
-Text Label 18675 11625 3    70   ~ 0
+Text Label 18675 11625 3    50   ~ 0
 CNT15
-Text Label 18075 11410 3    70   ~ 0
+Text Label 18075 11410 3    50   ~ 0
 CNT5
-Text Label 18275 11410 3    70   ~ 0
+Text Label 18275 11410 3    50   ~ 0
 CNT7
-Text Label 18175 11410 3    70   ~ 0
+Text Label 18175 11410 3    50   ~ 0
 CNT6
 Wire Wire Line
 	17875 8975 19975 8975
@@ -3608,15 +3604,15 @@ Wire Wire Line
 Wire Wire Line
 	18775 9875 19975 9875
 Connection ~ 18775 9875
-Text Label 17875 11410 3    70   ~ 0
+Text Label 17875 11410 3    50   ~ 0
 CNT3
-Text Label 17975 11410 3    70   ~ 0
+Text Label 17975 11410 3    50   ~ 0
 CNT4
-Text Label 18575 11410 3    70   ~ 0
+Text Label 18575 11410 3    50   ~ 0
 CNT14
-Text Label 18375 11410 3    70   ~ 0
+Text Label 18375 11410 3    50   ~ 0
 CNT12
-Text Label 18475 11410 3    70   ~ 0
+Text Label 18475 11410 3    50   ~ 0
 CNT13
 Wire Wire Line
 	19675 7975 19675 10175
@@ -3632,8 +3628,8 @@ $Comp
 L Device:R R19
 U 1 1 F6755933
 P 18675 11375
-F 0 "R19" H 18600 11300 59  0000 R CNN
-F 1 "1k" H 18600 11400 59  0000 R CNN
+F 0 "R19" H 18600 11300 50  0000 R CNN
+F 1 "1k" H 18600 11400 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 18675 11375 50  0001 C CNN
 F 3 "" H 18675 11375 50  0001 C CNN
 	1    18675 11375
@@ -3643,8 +3639,8 @@ $Comp
 L Device:R R20
 U 1 1 E84D22D6
 P 18775 11025
-F 0 "R20" H 18700 10950 59  0000 R CNN
-F 1 "1k" H 18700 11050 59  0000 R CNN
+F 0 "R20" H 18700 10950 50  0000 R CNN
+F 1 "1k" H 18700 11050 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 18775 11025 50  0001 C CNN
 F 3 "" H 18775 11025 50  0001 C CNN
 	1    18775 11025
@@ -3652,14 +3648,6 @@ F 3 "" H 18775 11025 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	17975 9075 19975 9075
-Wire Wire Line
-	15975 9275 15890 9275
-Wire Wire Line
-	15975 9175 15890 9175
-Wire Wire Line
-	15975 9075 15890 9075
-Wire Wire Line
-	15975 8975 15890 8975
 Text Label 15890 8975 2    50   ~ 0
 A0
 Text Label 15890 9075 2    50   ~ 0
@@ -3668,25 +3656,10 @@ Text Label 15890 9175 2    50   ~ 0
 A2
 Text Label 15890 9275 2    50   ~ 0
 A3
-Wire Wire Line
-	15975 9475 15875 9475
-Wire Wire Line
-	15975 9375 15875 9375
 Text Label 15875 9375 2    50   ~ 0
 A4
 Text Label 15875 9475 2    50   ~ 0
 A5
-$Comp
-L 74xx:74LS367 Z15
-U 1 1 6B749667
-P 16475 9375
-F 0 "Z15" H 16200 10100 50  0000 C CNN
-F 1 "74LS367" H 16790 10015 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm" H 16475 9375 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS367" H 16475 9375 50  0001 C CNN
-	1    16475 9375
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	15915 11075 15915 11275
 $Comp
@@ -3699,17 +3672,6 @@ F 2 "" H 16350 11675 50  0001 C CNN
 F 3 "" H 16350 11675 50  0001 C CNN
 	1    16350 11675
 	0    1    1    0   
-$EndComp
-$Comp
-L 74xx:74LS367 Z16
-U 1 1 6C9C54CC
-P 16475 10975
-F 0 "Z16" H 16665 11575 50  0000 C CNN
-F 1 "74LS367" H 16175 11555 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm" H 16475 10975 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS367" H 16475 10975 50  0001 C CNN
-	1    16475 10975
-	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	16475 11675 16350 11675
@@ -3761,7 +3723,7 @@ Wire Wire Line
 Connection ~ 15175 11275
 Wire Wire Line
 	12375 5575 12275 5575
-Text Label 12275 5575 2    70   ~ 0
+Text Label 12275 5575 2    50   ~ 0
 ~WR
 Wire Wire Line
 	11375 5775 12375 5775
@@ -3777,7 +3739,7 @@ Connection ~ 11375 5775
 Connection ~ 11375 5275
 Wire Wire Line
 	12375 5075 12275 5075
-Text Label 12275 5075 2    70   ~ 0
+Text Label 12275 5075 2    50   ~ 0
 A11
 Wire Wire Line
 	11375 5275 13575 5275
@@ -4002,8 +3964,8 @@ $Comp
 L Device:R R21
 U 1 1 8FE8240F
 P 21875 11075
-F 0 "R21" H 21775 11180 59  0000 R CNN
-F 1 "1k" H 21775 11030 59  0000 R CNN
+F 0 "R21" H 21775 11180 50  0000 R CNN
+F 1 "1k" H 21775 11030 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 21875 11075 50  0001 C CNN
 F 3 "" H 21875 11075 50  0001 C CNN
 	1    21875 11075
@@ -4117,8 +4079,8 @@ $Comp
 L 6116p:6116P Z7-8
 U 1 1 2887BC21
 P 25000 9675
-F 0 "Z7-8" H 25000 10900 59  0000 C CNN
-F 1 "6116SA20TPGI" H 25000 10800 59  0000 C CNN
+F 0 "Z7-8" H 25000 10900 50  0000 C CNN
+F 1 "6116SA20TPGI" H 25000 10800 50  0000 C CNN
 F 2 "Package_DIP:DIP-24_W7.62mm" H 25000 9675 50  0001 C CNN
 F 3 "" H 25000 9675 50  0001 C CNN
 	1    25000 9675
@@ -4739,7 +4701,7 @@ F 3 "~" H 7400 10300 50  0001 C CNN
 	1    7400 10300
 	0    -1   -1   0   
 $EndComp
-Text Label 7850 16000 0    70   ~ 0
+Text Label 7850 16000 0    50   ~ 0
 ~INT
 Wire Wire Line
 	7650 10300 7550 10300
@@ -4788,7 +4750,7 @@ L power:VCC ~P+0101
 U 1 1 5D703F77
 P 25075 4125
 F 0 "~P+0101" H 25075 4125 50  0001 C CNN
-F 1 "VCC" H 25125 4350 59  0000 C CNN
+F 1 "VCC" H 25125 4350 50  0000 C CNN
 F 2 "" H 25075 4125 50  0001 C CNN
 F 3 "" H 25075 4125 50  0001 C CNN
 	1    25075 4125
@@ -4799,7 +4761,7 @@ L power:GND ~SUPPLY0101
 U 1 1 5D703F71
 P 24675 4625
 F 0 "~SUPPLY0101" H 24675 4625 50  0001 C CNN
-F 1 "GND" H 24600 4500 59  0000 L BNN
+F 1 "GND" H 24600 4500 50  0000 L BNN
 F 2 "" H 24675 4625 50  0001 C CNN
 F 3 "" H 24675 4625 50  0001 C CNN
 	1    24675 4625
@@ -4811,8 +4773,8 @@ $Comp
 L Transistor_BJT:2N3904 Q101
 U 1 1 5D703F6A
 P 24975 4375
-F 0 "Q101" H 25200 4450 59  0000 L CNN
-F 1 "2N3904" H 25200 4350 59  0000 L CNN
+F 0 "Q101" H 25200 4450 50  0000 L CNN
+F 1 "2N3904" H 25200 4350 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92L_HandSolder" H 24975 4375 50  0001 C CNN
 F 3 "" H 24975 4375 50  0001 C CNN
 	1    24975 4375
@@ -4823,7 +4785,7 @@ L power:GND ~SUPPLY0102
 U 1 1 5D703F5E
 P 25700 4425
 F 0 "~SUPPLY0102" H 25700 4425 50  0001 C CNN
-F 1 "GND" H 25625 4300 59  0000 L BNN
+F 1 "GND" H 25625 4300 50  0000 L BNN
 F 2 "" H 25700 4425 50  0001 C CNN
 F 3 "" H 25700 4425 50  0001 C CNN
 	1    25700 4425
@@ -4838,7 +4800,7 @@ L Connector_Generic:Conn_01x02 SPK1
 U 1 1 5DD9F9BA
 P 20650 14175
 F 0 "SPK1" H 20750 14145 51  0000 L BNN
-F 1 "SPk1" H 20620 14230 59  0000 L BNN
+F 1 "SPk1" H 20620 14230 50  0000 L BNN
 F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 20650 14175 50  0001 C CNN
 F 3 "" H 20650 14175 50  0001 C CNN
 	1    20650 14175
@@ -4852,8 +4814,8 @@ $Comp
 L Device:R R102
 U 1 1 5E75336D
 P 20125 14400
-F 0 "R102" V 19975 14375 59  0000 C CNN
-F 1 "200" V 19875 14375 59  0000 C CNN
+F 0 "R102" V 19975 14375 50  0000 C CNN
+F 1 "200" V 19875 14375 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" H 20125 14400 50  0001 C CNN
 F 3 "" H 20125 14400 50  0001 C CNN
 	1    20125 14400
@@ -4882,4 +4844,42 @@ Wire Wire Line
 	9325 18700 9325 18750
 Text Label 7550 10000 2    50   ~ 0
 ~WAIT
+$Comp
+L 74xx:74LS367 Z16
+U 1 1 6C9C54CC
+P 16475 10975
+F 0 "Z16" H 16665 11575 50  0000 C CNN
+F 1 "74LS367" H 16175 11555 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 16475 10975 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS367" H 16475 10975 50  0001 C CNN
+	1    16475 10975
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15975 9775 15175 9775
+Wire Wire Line
+	15175 9675 15975 9675
+Wire Wire Line
+	15975 9475 15875 9475
+Wire Wire Line
+	15975 9375 15875 9375
+Wire Wire Line
+	15975 9275 15890 9275
+Wire Wire Line
+	15975 9175 15890 9175
+Wire Wire Line
+	15975 9075 15890 9075
+Wire Wire Line
+	15975 8975 15890 8975
+$Comp
+L 74xx:74LS367 Z15
+U 1 1 6B749667
+P 16475 9375
+F 0 "Z15" H 16250 9925 50  0000 C CNN
+F 1 "74LS367" H 16675 9925 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 16475 9375 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS367" H 16475 9375 50  0001 C CNN
+	1    16475 9375
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
