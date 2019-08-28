@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.4.1">
+<eagle version="9.4.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -8,20 +8,20 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
-<layer number="20" name="Dimension" color="24" fill="1" visible="no" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
+<layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -30,8 +30,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -39,12 +39,12 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
 <layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
@@ -18474,12 +18474,39 @@ high speed (Philips)</description>
 <text x="-2.159" y="0" size="1.27" layer="51" ratio="10">3</text>
 <text x="1.143" y="0" size="1.27" layer="51" ratio="10">1</text>
 </package>
+<package name="TO18" urn="urn:adsk.eagle:footprint:28463/1" library_version="5">
+<description>&lt;b&gt;TO 18&lt;/b&gt;</description>
+<wire x1="0.9289" y1="2.227" x2="2.227" y2="0.9289" width="0.0508" layer="51" curve="-44.7172"/>
+<wire x1="0.9289" y1="-2.227" x2="2.227" y2="-0.9289" width="0.0508" layer="51" curve="44.7172"/>
+<wire x1="-3.937" y1="-0.508" x2="-3.937" y2="0.508" width="0.127" layer="21"/>
+<wire x1="-2.227" y1="-0.9289" x2="0.929" y2="2.2271" width="0.0508" layer="21" curve="-135.281"/>
+<wire x1="-2.227" y1="-0.9289" x2="-0.9289" y2="-2.227" width="0.0508" layer="51" curve="44.7172"/>
+<wire x1="-3.937" y1="-0.508" x2="-2.8765" y2="-0.508" width="0.127" layer="21"/>
+<wire x1="-0.9289" y1="-2.227" x2="0.9289" y2="-2.227" width="0.0508" layer="21" curve="45.2828"/>
+<wire x1="-3.937" y1="0.508" x2="-2.8765" y2="0.508" width="0.127" layer="21"/>
+<wire x1="2.227" y1="-0.9289" x2="2.227" y2="0.9289" width="0.0508" layer="21" curve="45.2828"/>
+<circle x="0" y="0" radius="2.921" width="0.127" layer="21"/>
+<pad name="1" x="-1.27" y="-1.27" drill="0.8128" shape="octagon"/>
+<pad name="2" x="1.27" y="-1.27" drill="0.8128" shape="octagon"/>
+<pad name="3" x="1.27" y="1.27" drill="0.8128" shape="octagon"/>
+<text x="3.175" y="0" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="3.175" y="-1.905" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<text x="-1.905" y="-1.27" size="1.27" layer="51" ratio="10">1</text>
+<text x="0.635" y="-1.27" size="1.27" layer="51" ratio="10">2</text>
+<text x="0" y="0.635" size="1.27" layer="51" ratio="10">3</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="TO92" urn="urn:adsk.eagle:package:28523/2" type="model" library_version="5">
 <description>TO 92</description>
 <packageinstances>
 <packageinstance name="TO92"/>
+</packageinstances>
+</package3d>
+<package3d name="TO18" urn="urn:adsk.eagle:package:28526/2" type="model" library_version="5">
+<description>TO 18</description>
+<packageinstances>
+<packageinstance name="TO18"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -18539,6 +18566,27 @@ high speed (Philips)</description>
 </connects>
 <package3dinstances>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:28523/2"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="2N2369" urn="urn:adsk.eagle:component:30033/4" prefix="T" library_version="5">
+<description>&lt;b&gt;NPN TRANSISTOR&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="NPN" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TO18">
+<connects>
+<connect gate="G$1" pin="B" pad="2"/>
+<connect gate="G$1" pin="C" pad="3"/>
+<connect gate="G$1" pin="E" pad="1"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:28526/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -21524,7 +21572,6 @@ include  Type MT6; con-amp-mt6.lbr&lt;p&gt;
 <part name="P+9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="R8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="0207/2V" package3d_urn="urn:adsk.eagle:package:23490/1" value="270R"/>
 <part name="P+10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
-<part name="Q2" library="transistor" library_urn="urn:adsk.eagle:library:402" deviceset="2N3904" device="" package3d_urn="urn:adsk.eagle:package:28523/2"/>
 <part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="0204/7" package3d_urn="urn:adsk.eagle:package:23498/2" value="1k0"/>
 <part name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="025-024X044" package3d_urn="urn:adsk.eagle:package:23630/1" value="42p"/>
 <part name="R24" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="0207/2V" package3d_urn="urn:adsk.eagle:package:23490/1" value="10k"/>
@@ -21613,6 +21660,7 @@ include  Type MT6; con-amp-mt6.lbr&lt;p&gt;
 <part name="AUDIO-OUT" library="con-amp-mt" library_urn="urn:adsk.eagle:library:123" deviceset="L02P" device="" package3d_urn="urn:adsk.eagle:package:5777/1"/>
 <part name="COMPOSITE-OUT" library="con-amp-mt" library_urn="urn:adsk.eagle:library:123" deviceset="L02P" device="" package3d_urn="urn:adsk.eagle:package:5777/1"/>
 <part name="POWER-IN" library="con-amp-mt" library_urn="urn:adsk.eagle:library:123" deviceset="L02P" device="" package3d_urn="urn:adsk.eagle:package:5777/1"/>
+<part name="Q2" library="transistor" library_urn="urn:adsk.eagle:library:402" deviceset="2N2369" device="" package3d_urn="urn:adsk.eagle:package:28526/2"/>
 </parts>
 <sheets>
 <sheet>
@@ -21922,10 +21970,6 @@ John Bradley 2019</text>
 </instance>
 <instance part="P+10" gate="VCC" x="-154.94" y="-129.54" smashed="yes">
 <attribute name="VALUE" x="-154.94" y="-129.54" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="Q2" gate="G1" x="-157.48" y="-154.94" smashed="yes">
-<attribute name="NAME" x="-149.86" y="-152.4" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-149.86" y="-154.94" size="1.778" layer="96"/>
 </instance>
 <instance part="R7" gate="G$1" x="-167.64" y="-154.94" smashed="yes">
 <attribute name="NAME" x="-171.45" y="-153.4414" size="1.778" layer="95"/>
@@ -22356,6 +22400,10 @@ John Bradley 2019</text>
 <instance part="POWER-IN" gate="-2" x="35.56" y="-307.34" smashed="yes">
 <attribute name="NAME" x="35.052" y="-306.324" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="35.814" y="-309.753" size="1.778" layer="96"/>
+</instance>
+<instance part="Q2" gate="G$1" x="-157.48" y="-154.94" smashed="yes">
+<attribute name="NAME" x="-152.4" y="-154.94" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-149.86" y="-157.48" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -23653,9 +23701,9 @@ John Bradley 2019</text>
 <wire x1="332.74" y1="-27.94" x2="332.74" y2="-30.48" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="Q2" gate="G1" pin="E"/>
 <wire x1="-154.94" y1="-160.02" x2="-154.94" y2="-162.56" width="0.1524" layer="91"/>
 <pinref part="SUPPLY7" gate="GND" pin="GND"/>
+<pinref part="Q2" gate="G$1" pin="E"/>
 </segment>
 <segment>
 <pinref part="C8" gate="G$1" pin="2"/>
@@ -23950,18 +23998,18 @@ John Bradley 2019</text>
 <wire x1="-154.94" y1="-149.86" x2="-154.94" y2="-147.32" width="0.1524" layer="91"/>
 <junction x="-154.94" y="-147.32"/>
 <pinref part="R8" gate="G$1" pin="2"/>
-<pinref part="Q2" gate="G1" pin="C"/>
+<pinref part="Q2" gate="G$1" pin="C"/>
 </segment>
 </net>
 <net name="N$26" class="0">
 <segment>
 <pinref part="R7" gate="G$1" pin="2"/>
 <wire x1="-162.56" y1="-154.94" x2="-160.02" y2="-154.94" width="0.1524" layer="91"/>
-<pinref part="Q2" gate="G1" pin="B"/>
-<junction x="-160.02" y="-154.94"/>
 <wire x1="-160.02" y1="-154.94" x2="-160.02" y2="-147.32" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="2"/>
 <wire x1="-160.02" y1="-147.32" x2="-162.56" y2="-147.32" width="0.1524" layer="91"/>
+<pinref part="Q2" gate="G$1" pin="B"/>
+<junction x="-160.02" y="-154.94"/>
 </segment>
 </net>
 <net name="N$28" class="0">
@@ -24049,15 +24097,6 @@ John Bradley 2019</text>
 <pinref part="Z23" gate="A" pin="O"/>
 <pinref part="Z24" gate="D" pin="I1"/>
 <wire x1="38.1" y1="-233.68" x2="40.64" y2="-233.68" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$40" class="0">
-<segment>
-<pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="88.9" y1="-231.14" x2="99.06" y2="-231.14" width="0.1524" layer="91"/>
-<pinref part="Q3" gate="G$1" pin="B"/>
-<wire x1="99.06" y1="-231.14" x2="101.6" y2="-231.14" width="0.1524" layer="91"/>
-<junction x="99.06" y="-231.14"/>
 </segment>
 </net>
 <net name="N$41" class="0">
@@ -25172,6 +25211,13 @@ John Bradley 2019</text>
 <pinref part="X8" gate="-8" pin="KL"/>
 <pinref part="D19" gate="G$1" pin="A"/>
 <wire x1="-93.98" y1="-289.56" x2="-93.98" y2="-287.02" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$40" class="0">
+<segment>
+<pinref part="R2" gate="G$1" pin="1"/>
+<pinref part="Q3" gate="G$1" pin="B"/>
+<wire x1="88.9" y1="-231.14" x2="99.06" y2="-231.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
