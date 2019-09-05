@@ -34,7 +34,7 @@
   )
 
   (setup
-    (last_trace_width 0.25)
+    (last_trace_width 0.2)
     (trace_clearance 0.1524)
     (zone_clearance 0.508)
     (zone_45_only no)
@@ -288,7 +288,7 @@
 
   (net_class Default "This is the default net class."
     (clearance 0.1524)
-    (trace_width 0.25)
+    (trace_width 0.2)
     (via_dia 0.8)
     (via_drill 0.4)
     (uvia_dia 0.3)
@@ -296,9 +296,6 @@
     (add_net "#CPUCLK")
     (add_net "#NMI")
     (add_net "#RESET")
-    (add_net +5V)
-    (add_net +9V)
-    (add_net +9Vsm)
     (add_net /#WE)
     (add_net /A0)
     (add_net /A1)
@@ -355,7 +352,6 @@
     (add_net /~VHOLD)
     (add_net /~WAIT)
     (add_net /~WR)
-    (add_net GND)
     (add_net "Net-(AUDIO-IN1-Pad1)")
     (add_net "Net-(AUDIO-OUT1-Pad2)")
     (add_net "Net-(C1-Pad1)")
@@ -487,6 +483,19 @@
     (add_net "Net-(Z9-Pad10)")
     (add_net "Net-(Z9-Pad8)")
     (add_net "Net-(Z9-Pad9)")
+  )
+
+  (net_class Power ""
+    (clearance 0.1524)
+    (trace_width 0.4)
+    (via_dia 0.8)
+    (via_drill 0.4)
+    (uvia_dia 0.3)
+    (uvia_drill 0.1)
+    (add_net +5V)
+    (add_net +9V)
+    (add_net +9Vsm)
+    (add_net GND)
   )
 
   (module Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical (layer Top) (tedit 5AE5139B) (tstamp 5D618327)

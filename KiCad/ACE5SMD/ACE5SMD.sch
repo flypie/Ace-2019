@@ -21,7 +21,7 @@ P 13121 1186
 F 0 "Z23" H 13156 1531 50  0000 C CNN
 F 1 "74HCT86" H 13156 1431 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 13121 1186 50  0001 C CNN
-F 3 "74xx/74ls86.pdf" H 13121 1186 50  0001 C CNN
+F 3 "74xx~74ls86.pdf" H 13121 1186 50  0001 C CNN
 	2    13121 1186
 	1    0    0    -1  
 $EndComp
@@ -36,7 +36,7 @@ P 14900 2400
 F 0 "Z19" H 14905 2770 50  0000 C CNN
 F 1 "74HCT00" H 14905 2670 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 14900 2400 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 14900 2400 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74ls00" H 14900 2400 50  0001 C CNN
 	1    14900 2400
 	1    0    0    -1  
 $EndComp
@@ -47,7 +47,7 @@ P 14900 3000
 F 0 "Z25" H 14900 3350 50  0000 C CNN
 F 1 "74HCT02" H 14900 3250 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 14900 3000 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 14900 3000 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74ls02" H 14900 3000 50  0001 C CNN
 	1    14900 3000
 	1    0    0    -1  
 $EndComp
@@ -58,7 +58,7 @@ P 16100 2700
 F 0 "Z20" H 16125 3055 50  0000 C CNN
 F 1 "74HCT08" H 16125 2955 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 16100 2700 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 16100 2700 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS08" H 16100 2700 50  0001 C CNN
 	2    16100 2700
 	1    0    0    -1  
 $EndComp
@@ -69,7 +69,7 @@ P 16900 3200
 F 0 "Z20" H 16900 2950 50  0000 C CNN
 F 1 "74HCT08" H 16900 2850 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 16900 3200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 16900 3200 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS08" H 16900 3200 50  0001 C CNN
 	4    16900 3200
 	1    0    0    -1  
 $EndComp
@@ -80,7 +80,7 @@ P 17300 2700
 F 0 "Z22" H 17300 3050 50  0000 C CNN
 F 1 "74HCT11" H 17300 2950 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 17300 2700 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 17300 2700 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS11" H 17300 2700 50  0001 C CNN
 	2    17300 2700
 	1    0    0    -1  
 $EndComp
@@ -91,7 +91,7 @@ P 18600 2100
 F 0 "Z19" H 18635 2470 50  0000 C CNN
 F 1 "74HCT00" H 18635 2370 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 18600 2100 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 18600 2100 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74ls00" H 18600 2100 50  0001 C CNN
 	2    18600 2100
 	1    0    0    -1  
 $EndComp
@@ -102,7 +102,7 @@ P 18600 2800
 F 0 "Z20" H 18615 3150 50  0000 C CNN
 F 1 "74HCT08" H 18615 3050 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 18600 2800 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 18600 2800 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS08" H 18600 2800 50  0001 C CNN
 	3    18600 2800
 	1    0    0    -1  
 $EndComp
@@ -113,7 +113,7 @@ P 19900 3200
 F 0 "Z27" H 20110 3550 50  0000 C CNN
 F 1 "74HCT74" H 20125 3455 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 19900 3200 50  0001 C CNN
-F 3 "74xx/74hc_hct74.pdf" H 19900 3200 50  0001 C CNN
+F 3 "74xx~74hc_hct74.pdf" H 19900 3200 50  0001 C CNN
 	2    19900 3200
 	1    0    0    -1  
 $EndComp
@@ -215,11 +215,11 @@ P 9225 17225
 F 0 "C11" H 9375 17275 50  0000 L CNN
 F 1 "100uf" H 9375 17225 50  0000 L CNN
 F 2 "Capacitor_SMD:CP_Elec_3x5.3" H 9575 17275 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 9575 17175 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 9575 17075 50  0001 L CNN "Description"
+F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 9575 17175 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 9575 17075 50  0001 L CNN "Description"
 F 5 "3" H 9575 16975 50  0001 L CNN "Height"
 F 6 "8523267" H 9575 16875 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 9575 16775 50  0001 L CNN "RS Price/Stock"
+F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 9575 16775 50  0001 L CNN "RS Price/Stock"
 F 8 "Vishay" H 9575 16675 50  0001 L CNN "Manufacturer_Name"
 F 9 "K104K10X7RF53H5" H 9575 16575 50  0001 L CNN "Manufacturer_Part_Number"
 F 10 "70122995" H 9575 16475 50  0001 L CNN "Allied_Number"
@@ -246,7 +246,7 @@ Connection ~ 17800 2700
 Text Label 17800 2000 2    50   ~ 0
 VIDEN
 Text Label 5575 7100 2    50   ~ 0
-/MREQ
+~MREQ
 Wire Wire Line
 	19900 2900 19900 2800
 Wire Wire Line
@@ -256,15 +256,15 @@ Wire Wire Line
 Wire Wire Line
 	21800 2800 21800 2700
 Text Label 13250 13200 2    50   ~ 0
-/WR
+~WR
 Wire Wire Line
 	4975 12850 4875 12850
 Text Label 4875 12850 2    50   ~ 0
-#WE
+~WE
 Wire Wire Line
 	9675 11500 9775 11500
 Text Label 9775 11500 0    50   ~ 0
-/WR
+~WR
 Wire Wire Line
 	14600 2300 14500 2300
 Text Label 14500 2300 2    50   ~ 0
@@ -390,13 +390,13 @@ Wire Wire Line
 Wire Wire Line
 	13350 14200 13250 14200
 Text Label 13300 14200 2    50   ~ 0
-/RD
+~RD
 Wire Wire Line
 	9675 11400 9775 11400
 Text Label 9775 11400 0    50   ~ 0
-/RD
+~RD
 Text Label 25900 15800 0    50   ~ 0
-/INT
+~INT
 Wire Wire Line
 	12850 14000 13350 14000
 Wire Wire Line
@@ -776,7 +776,7 @@ P 7825 16000
 F 0 "D3" V 7745 15950 50  0000 L CNN
 F 1 "1N4148" V 7825 16085 50  0001 L CNN
 F 2 "Diode_SMD:D_SOD-323" H 7825 15825 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7825 16000 50  0001 C CNN
+F 3 "https:~/assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7825 16000 50  0001 C CNN
 	1    7825 16000
 	1    0    0    -1  
 $EndComp
@@ -787,7 +787,7 @@ P 7825 15900
 F 0 "D4" V 7745 15850 50  0000 L CNN
 F 1 "1N4148" V 7825 15985 50  0001 L CNN
 F 2 "Diode_SMD:D_SOD-323" H 7825 15725 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7825 15900 50  0001 C CNN
+F 3 "https:~/assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7825 15900 50  0001 C CNN
 	1    7825 15900
 	1    0    0    -1  
 $EndComp
@@ -798,7 +798,7 @@ P 7825 15800
 F 0 "D5" V 7745 15750 50  0000 L CNN
 F 1 "1N4148" V 7825 15885 50  0001 L CNN
 F 2 "Diode_SMD:D_SOD-323" H 7825 15625 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7825 15800 50  0001 C CNN
+F 3 "https:~/assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7825 15800 50  0001 C CNN
 	1    7825 15800
 	1    0    0    -1  
 $EndComp
@@ -809,7 +809,7 @@ P 7825 15700
 F 0 "D6" V 7745 15650 50  0000 L CNN
 F 1 "1N4148" V 7825 15785 50  0001 L CNN
 F 2 "Diode_SMD:D_SOD-323" H 7825 15525 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7825 15700 50  0001 C CNN
+F 3 "https:~/assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7825 15700 50  0001 C CNN
 	1    7825 15700
 	1    0    0    -1  
 $EndComp
@@ -820,7 +820,7 @@ P 7825 15600
 F 0 "D7" V 7745 15550 50  0000 L CNN
 F 1 "1N4148" V 7825 15685 50  0001 L CNN
 F 2 "Diode_SMD:D_SOD-323" H 7825 15425 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7825 15600 50  0001 C CNN
+F 3 "https:~/assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7825 15600 50  0001 C CNN
 	1    7825 15600
 	1    0    0    -1  
 $EndComp
@@ -831,7 +831,7 @@ P 7825 15500
 F 0 "D8" V 7745 15450 50  0000 L CNN
 F 1 "1N4148" V 7825 15585 50  0001 L CNN
 F 2 "Diode_SMD:D_SOD-323" H 7825 15325 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7825 15500 50  0001 C CNN
+F 3 "https:~/assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7825 15500 50  0001 C CNN
 	1    7825 15500
 	1    0    0    -1  
 $EndComp
@@ -842,7 +842,7 @@ P 7825 15400
 F 0 "D9" V 7745 15350 50  0000 L CNN
 F 1 "1N4148" V 7825 15485 50  0001 L CNN
 F 2 "Diode_SMD:D_SOD-323" H 7825 15225 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7825 15400 50  0001 C CNN
+F 3 "https:~/assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7825 15400 50  0001 C CNN
 	1    7825 15400
 	1    0    0    -1  
 $EndComp
@@ -853,7 +853,7 @@ P 7825 15300
 F 0 "D10" V 7745 15250 50  0000 L CNN
 F 1 "1N4148" V 7825 15385 50  0001 L CNN
 F 2 "Diode_SMD:D_SOD-323" H 7825 15125 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7825 15300 50  0001 C CNN
+F 3 "https:~/assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 7825 15300 50  0001 C CNN
 	1    7825 15300
 	1    0    0    -1  
 $EndComp
@@ -886,7 +886,7 @@ P 18250 12950
 F 0 "D2" V 18170 12900 50  0000 L CNN
 F 1 "1N4148" V 18250 13035 50  0001 L CNN
 F 2 "Diode_SMD:D_SOD-323" H 18250 12775 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 18250 12950 50  0001 C CNN
+F 3 "https:~/assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 18250 12950 50  0001 C CNN
 	1    18250 12950
 	0    1    1    0   
 $EndComp
@@ -949,51 +949,51 @@ A1
 Wire Wire Line
 	5475 13150 5575 13150
 Text Label 5575 13650 0    50   ~ 0
-/REFSH
+~REFSH
 Wire Wire Line
 	5475 13650 5575 13650
 Text Label 5575 14150 0    50   ~ 0
-/BUSAK
+~BUSAK
 Wire Wire Line
 	5475 14150 5575 14150
 Text Label 5575 14650 0    50   ~ 0
-/HALT
+~HALT
 Wire Wire Line
 	5475 14650 5575 14650
 Text Label 5575 13750 0    50   ~ 0
-/M1
+~M1
 Wire Wire Line
 	5475 13750 5575 13750
 Wire Wire Line
 	5475 13850 5575 13850
 Text Label 5575 13950 0    50   ~ 0
-/BUSRQ
+~BUSRQ
 Wire Wire Line
 	5475 13950 5575 13950
 Text Label 5575 14850 0    50   ~ 0
-/INT
+~INT
 Wire Wire Line
 	5475 14850 5575 14850
 Text Label 5575 14350 0    50   ~ 0
-/RD
+~RD
 Wire Wire Line
 	5475 14350 5575 14350
 Text Label 5575 14450 0    50   ~ 0
-/IOREQ
+~IOREQ
 Wire Wire Line
 	5475 14450 5575 14450
 Wire Wire Line
 	5475 14950 5575 14950
 Text Label 5575 14250 0    50   ~ 0
-/WR
+~WR
 Wire Wire Line
 	5475 14250 5575 14250
 Text Label 5575 14550 0    50   ~ 0
-/MREQ
+~MREQ
 Wire Wire Line
 	5475 14550 5575 14550
 Text Label 5575 14050 0    50   ~ 0
-/WAIT
+~WAIT
 Wire Wire Line
 	5475 14050 5575 14050
 $Comp
@@ -1003,7 +1003,7 @@ P 13650 14100
 F 0 "Z24" H 13650 14450 50  0000 C CNN
 F 1 "74HCT02" H 13650 14350 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 13650 14100 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 13650 14100 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74ls02" H 13650 14100 50  0001 C CNN
 	2    13650 14100
 	1    0    0    -1  
 $EndComp
@@ -1014,7 +1014,7 @@ P 15750 13200
 F 0 "Z24" H 15750 13550 50  0000 C CNN
 F 1 "74HCT02" H 15750 13450 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 15750 13200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 15750 13200 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74ls02" H 15750 13200 50  0001 C CNN
 	3    15750 13200
 	1    0    0    -1  
 $EndComp
@@ -1025,7 +1025,7 @@ P 15750 14000
 F 0 "Z24" H 15750 14350 50  0000 C CNN
 F 1 "74HCT02" H 15750 14250 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 15750 14000 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 15750 14000 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74ls02" H 15750 14000 50  0001 C CNN
 	4    15750 14000
 	1    0    0    -1  
 $EndComp
@@ -1038,7 +1038,7 @@ P 13650 13100
 F 0 "Z24" H 13650 13450 50  0000 C CNN
 F 1 "74HCT02" H 13650 13350 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 13650 13100 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 13650 13100 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74ls02" H 13650 13100 50  0001 C CNN
 	1    13650 13100
 	1    0    0    -1  
 $EndComp
@@ -1214,11 +1214,11 @@ P 8575 16975
 F 0 "C10" V 8815 17115 50  0000 L CNN
 F 1 "100nf" V 8830 17125 50  0001 L CNN
 F 2 "Capacitor_SMD:C_0201_0603Metric" H 8925 17025 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 8925 16925 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 8925 16825 50  0001 L CNN "Description"
+F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 8925 16925 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 8925 16825 50  0001 L CNN "Description"
 F 5 "3" H 8925 16725 50  0001 L CNN "Height"
 F 6 "8523267" H 8925 16625 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 8925 16525 50  0001 L CNN "RS Price/Stock"
+F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 8925 16525 50  0001 L CNN "RS Price/Stock"
 F 8 "Vishay" H 8925 16425 50  0001 L CNN "Manufacturer_Name"
 F 9 "K104K10X7RF53H5" H 8925 16325 50  0001 L CNN "Manufacturer_Part_Number"
 F 10 "70122995" H 8925 16225 50  0001 L CNN "Allied_Number"
@@ -1232,11 +1232,11 @@ P 10500 16975
 F 0 "C13" V 10665 17140 50  0000 L CNN
 F 1 "100nf" V 10765 17140 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0201_0603Metric" H 10850 17025 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 10850 16925 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 10850 16825 50  0001 L CNN "Description"
+F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 10850 16925 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 10850 16825 50  0001 L CNN "Description"
 F 5 "3" H 10850 16725 50  0001 L CNN "Height"
 F 6 "8523267" H 10850 16625 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 10850 16525 50  0001 L CNN "RS Price/Stock"
+F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 10850 16525 50  0001 L CNN "RS Price/Stock"
 F 8 "Vishay" H 10850 16425 50  0001 L CNN "Manufacturer_Name"
 F 9 "K104K10X7RF53H5" H 10850 16325 50  0001 L CNN "Manufacturer_Part_Number"
 F 10 "70122995" H 10850 16225 50  0001 L CNN "Allied_Number"
@@ -1261,11 +1261,11 @@ P 12400 16975
 F 0 "C21" V 12565 17125 50  0000 L CNN
 F 1 "100nf" V 12665 17125 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0201_0603Metric" H 12750 17025 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 12750 16925 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 12750 16825 50  0001 L CNN "Description"
+F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 12750 16925 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 12750 16825 50  0001 L CNN "Description"
 F 5 "3" H 12750 16725 50  0001 L CNN "Height"
 F 6 "8523267" H 12750 16625 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 12750 16525 50  0001 L CNN "RS Price/Stock"
+F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 12750 16525 50  0001 L CNN "RS Price/Stock"
 F 8 "Vishay" H 12750 16425 50  0001 L CNN "Manufacturer_Name"
 F 9 "K104K10X7RF53H5" H 12750 16325 50  0001 L CNN "Manufacturer_Part_Number"
 F 10 "70122995" H 12750 16225 50  0001 L CNN "Allied_Number"
@@ -1286,7 +1286,7 @@ P 16450 12300
 F 0 "Z27" H 16660 12560 50  0000 C CNN
 F 1 "74HCT74" H 16220 12550 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 16450 12300 50  0001 C CNN
-F 3 "74xx/74hc_hct74.pdf" H 16450 12300 50  0001 C CNN
+F 3 "74xx~74hc_hct74.pdf" H 16450 12300 50  0001 C CNN
 	1    16450 12300
 	1    0    0    -1  
 $EndComp
@@ -1303,7 +1303,7 @@ P 21800 3400
 F 0 "D1" V 21720 3350 50  0000 L CNN
 F 1 "1N4148" V 21800 3485 50  0001 L CNN
 F 2 "Diode_SMD:D_SOD-323" H 21800 3225 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 21800 3400 50  0001 C CNN
+F 3 "https:~/assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 21800 3400 50  0001 C CNN
 	1    21800 3400
 	0    -1   -1   0   
 $EndComp
@@ -1316,7 +1316,7 @@ P 25025 15800
 F 0 "Z102" H 25025 16150 50  0000 C CNN
 F 1 "74HCT04" H 25025 16050 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 25025 15800 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 25025 15800 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS04" H 25025 15800 50  0001 C CNN
 	4    25025 15800
 	1    0    0    -1  
 $EndComp
@@ -1332,7 +1332,7 @@ P 24900 14800
 F 0 "Z25" H 24905 15160 50  0000 C CNN
 F 1 "74HCT02" H 24905 15060 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 24900 14800 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 24900 14800 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74ls02" H 24900 14800 50  0001 C CNN
 	2    24900 14800
 	1    0    0    -1  
 $EndComp
@@ -1343,7 +1343,7 @@ P 23400 13600
 F 0 "Z25" H 23440 13985 50  0000 C CNN
 F 1 "74HCT02" H 23440 13885 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 23400 13600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 23400 13600 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74ls02" H 23400 13600 50  0001 C CNN
 	4    23400 13600
 	1    0    0    -1  
 $EndComp
@@ -1356,7 +1356,7 @@ P 23300 16300
 F 0 "Z20" H 23325 16655 50  0000 C CNN
 F 1 "74HCT08" H 23325 16555 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 23300 16300 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 23300 16300 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS08" H 23300 16300 50  0001 C CNN
 	1    23300 16300
 	1    0    0    -1  
 $EndComp
@@ -1367,7 +1367,7 @@ P 24100 13600
 F 0 "Z22" H 24105 13980 50  0000 C CNN
 F 1 "74HCT11" H 24105 13880 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 24100 13600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 24100 13600 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS11" H 24100 13600 50  0001 C CNN
 	1    24100 13600
 	1    0    0    -1  
 $EndComp
@@ -1378,7 +1378,7 @@ P 22500 16200
 F 0 "Z21" H 22500 16540 50  0000 C CNN
 F 1 "74HCT11" H 22500 16440 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 22500 16200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 22500 16200 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS11" H 22500 16200 50  0001 C CNN
 	1    22500 16200
 	1    0    0    -1  
 $EndComp
@@ -1389,7 +1389,7 @@ P 24100 15800
 F 0 "Z21" H 24120 16170 50  0000 C CNN
 F 1 "74HCT11" H 24120 16070 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 24100 15800 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 24100 15800 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS11" H 24100 15800 50  0001 C CNN
 	2    24100 15800
 	1    0    0    -1  
 $EndComp
@@ -1400,7 +1400,7 @@ P 22400 14300
 F 0 "Z21" H 22410 14665 50  0000 C CNN
 F 1 "74HCT11" H 22410 14565 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 22400 14300 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 22400 14300 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS11" H 22400 14300 50  0001 C CNN
 	3    22400 14300
 	1    0    0    -1  
 $EndComp
@@ -1411,7 +1411,7 @@ P 23850 10375
 F 0 "Z23" H 23850 10725 50  0000 C CNN
 F 1 "74HCT86" H 23850 10625 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 23850 10375 50  0001 C CNN
-F 3 "74xx/74ls86.pdf" H 23850 10375 50  0001 C CNN
+F 3 "74xx~74ls86.pdf" H 23850 10375 50  0001 C CNN
 	3    23850 10375
 	1    0    0    -1  
 $EndComp
@@ -1438,11 +1438,11 @@ P 10975 16975
 F 0 "C15" V 11140 17140 50  0000 L CNN
 F 1 "100nf" V 11240 17140 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0201_0603Metric" H 11325 17025 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 11325 16925 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 11325 16825 50  0001 L CNN "Description"
+F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 11325 16925 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 11325 16825 50  0001 L CNN "Description"
 F 5 "3" H 11325 16725 50  0001 L CNN "Height"
 F 6 "8523267" H 11325 16625 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 11325 16525 50  0001 L CNN "RS Price/Stock"
+F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 11325 16525 50  0001 L CNN "RS Price/Stock"
 F 8 "Vishay" H 11325 16425 50  0001 L CNN "Manufacturer_Name"
 F 9 "K104K10X7RF53H5" H 11325 16325 50  0001 L CNN "Manufacturer_Part_Number"
 F 10 "70122995" H 11325 16225 50  0001 L CNN "Allied_Number"
@@ -1456,11 +1456,11 @@ P 11425 16975
 F 0 "C17" V 11590 17140 50  0000 L CNN
 F 1 "100nf" V 11690 17140 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0201_0603Metric" H 11775 17025 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 11775 16925 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 11775 16825 50  0001 L CNN "Description"
+F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 11775 16925 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 11775 16825 50  0001 L CNN "Description"
 F 5 "3" H 11775 16725 50  0001 L CNN "Height"
 F 6 "8523267" H 11775 16625 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 11775 16525 50  0001 L CNN "RS Price/Stock"
+F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 11775 16525 50  0001 L CNN "RS Price/Stock"
 F 8 "Vishay" H 11775 16425 50  0001 L CNN "Manufacturer_Name"
 F 9 "K104K10X7RF53H5" H 11775 16325 50  0001 L CNN "Manufacturer_Part_Number"
 F 10 "70122995" H 11775 16225 50  0001 L CNN "Allied_Number"
@@ -1474,11 +1474,11 @@ P 11650 16975
 F 0 "C18" V 11815 17140 50  0000 L CNN
 F 1 "100nf" V 11915 17140 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0201_0603Metric" H 12000 17025 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 12000 16925 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 12000 16825 50  0001 L CNN "Description"
+F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 12000 16925 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 12000 16825 50  0001 L CNN "Description"
 F 5 "3" H 12000 16725 50  0001 L CNN "Height"
 F 6 "8523267" H 12000 16625 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 12000 16525 50  0001 L CNN "RS Price/Stock"
+F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 12000 16525 50  0001 L CNN "RS Price/Stock"
 F 8 "Vishay" H 12000 16425 50  0001 L CNN "Manufacturer_Name"
 F 9 "K104K10X7RF53H5" H 12000 16325 50  0001 L CNN "Manufacturer_Part_Number"
 F 10 "70122995" H 12000 16225 50  0001 L CNN "Allied_Number"
@@ -1492,11 +1492,11 @@ P 12150 16975
 F 0 "C20" V 12315 17140 50  0000 L CNN
 F 1 "100nf" V 12415 17140 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0201_0603Metric" H 12500 17025 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 12500 16925 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 12500 16825 50  0001 L CNN "Description"
+F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 12500 16925 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 12500 16825 50  0001 L CNN "Description"
 F 5 "3" H 12500 16725 50  0001 L CNN "Height"
 F 6 "8523267" H 12500 16625 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 12500 16525 50  0001 L CNN "RS Price/Stock"
+F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 12500 16525 50  0001 L CNN "RS Price/Stock"
 F 8 "Vishay" H 12500 16425 50  0001 L CNN "Manufacturer_Name"
 F 9 "K104K10X7RF53H5" H 12500 16325 50  0001 L CNN "Manufacturer_Part_Number"
 F 10 "70122995" H 12500 16225 50  0001 L CNN "Allied_Number"
@@ -1510,11 +1510,11 @@ P 10750 16975
 F 0 "C14" V 10915 17140 50  0000 L CNN
 F 1 "100nf" V 11015 17140 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0201_0603Metric" H 11100 17025 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 11100 16925 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 11100 16825 50  0001 L CNN "Description"
+F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 11100 16925 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 11100 16825 50  0001 L CNN "Description"
 F 5 "3" H 11100 16725 50  0001 L CNN "Height"
 F 6 "8523267" H 11100 16625 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 11100 16525 50  0001 L CNN "RS Price/Stock"
+F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 11100 16525 50  0001 L CNN "RS Price/Stock"
 F 8 "Vishay" H 11100 16425 50  0001 L CNN "Manufacturer_Name"
 F 9 "K104K10X7RF53H5" H 11100 16325 50  0001 L CNN "Manufacturer_Part_Number"
 F 10 "70122995" H 11100 16225 50  0001 L CNN "Allied_Number"
@@ -1528,11 +1528,11 @@ P 11875 16975
 F 0 "C19" V 12040 17140 50  0000 L CNN
 F 1 "100nf" V 12140 17140 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0201_0603Metric" H 12225 17025 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 12225 16925 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 12225 16825 50  0001 L CNN "Description"
+F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 12225 16925 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 12225 16825 50  0001 L CNN "Description"
 F 5 "3" H 12225 16725 50  0001 L CNN "Height"
 F 6 "8523267" H 12225 16625 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 12225 16525 50  0001 L CNN "RS Price/Stock"
+F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 12225 16525 50  0001 L CNN "RS Price/Stock"
 F 8 "Vishay" H 12225 16425 50  0001 L CNN "Manufacturer_Name"
 F 9 "K104K10X7RF53H5" H 12225 16325 50  0001 L CNN "Manufacturer_Part_Number"
 F 10 "70122995" H 12225 16225 50  0001 L CNN "Allied_Number"
@@ -1540,10 +1540,10 @@ F 10 "70122995" H 12225 16225 50  0001 L CNN "Allied_Number"
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR0102
+L power:GND ~PWR0102
 U 1 1 5FF89C59
 P 10375 17650
-F 0 "#PWR0102" H 10375 17400 50  0001 C CNN
+F 0 "~PWR0102" H 10375 17400 50  0001 C CNN
 F 1 "GND" H 10385 17445 50  0000 C CNN
 F 2 "" H 10375 17650 50  0001 C CNN
 F 3 "" H 10375 17650 50  0001 C CNN
@@ -1551,10 +1551,10 @@ F 3 "" H 10375 17650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR0103
+L power:VCC ~PWR0103
 U 1 1 60266FFD
 P 10375 16750
-F 0 "#PWR0103" H 10375 16600 50  0001 C CNN
+F 0 "~PWR0103" H 10375 16600 50  0001 C CNN
 F 1 "VCC" H 10400 16970 50  0000 C CNN
 F 2 "" H 10375 16750 50  0001 C CNN
 F 3 "" H 10375 16750 50  0001 C CNN
@@ -1562,10 +1562,10 @@ F 3 "" H 10375 16750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR0104
+L power:VCC ~PWR0104
 U 1 1 60368F85
 P 6050 6150
-F 0 "#PWR0104" H 6050 6000 50  0001 C CNN
+F 0 "~PWR0104" H 6050 6000 50  0001 C CNN
 F 1 "VCC" V 6100 6295 50  0000 L CNN
 F 2 "" H 6050 6150 50  0001 C CNN
 F 3 "" H 6050 6150 50  0001 C CNN
@@ -1588,10 +1588,10 @@ Wire Wire Line
 Wire Wire Line
 	8750 9600 8750 9500
 $Comp
-L power:GND #PWR0115
+L power:GND ~PWR0115
 U 1 1 661C71D5
 P 6075 7550
-F 0 "#PWR0115" H 6075 7300 50  0001 C CNN
+F 0 "~PWR0115" H 6075 7300 50  0001 C CNN
 F 1 "GND" V 6060 7410 50  0000 R CNN
 F 2 "" H 6075 7550 50  0001 C CNN
 F 3 "" H 6075 7550 50  0001 C CNN
@@ -1599,10 +1599,10 @@ F 3 "" H 6075 7550 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR0116
+L power:GND ~PWR0116
 U 1 1 662E691E
 P 23450 10550
-F 0 "#PWR0116" H 23450 10300 50  0001 C CNN
+F 0 "~PWR0116" H 23450 10300 50  0001 C CNN
 F 1 "GND" H 23460 10370 50  0000 C CNN
 F 2 "" H 23450 10550 50  0001 C CNN
 F 3 "" H 23450 10550 50  0001 C CNN
@@ -1610,10 +1610,10 @@ F 3 "" H 23450 10550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0117
+L power:GND ~PWR0117
 U 1 1 665CA8F3
 P 18450 12300
-F 0 "#PWR0117" H 18450 12050 50  0001 C CNN
+F 0 "~PWR0117" H 18450 12050 50  0001 C CNN
 F 1 "GND" V 18455 12150 50  0000 R CNN
 F 2 "" H 18450 12300 50  0001 C CNN
 F 3 "" H 18450 12300 50  0001 C CNN
@@ -1632,11 +1632,11 @@ F 3 "74xx\\74LS393.pdf" H 20900 13300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 5575 14750 2    50   Input ~ 0
-#NMI
+~NMI
 Text GLabel 5575 13850 2    50   Input ~ 0
-#RESET
+~RESET
 Text GLabel 4875 14550 0    50   Input ~ 0
-#CPUCLK
+~CPUCLK
 Text GLabel 4875 14650 0    50   Input ~ 0
 +5V
 Text GLabel 4875 14750 0    50   Input ~ 0
@@ -1646,16 +1646,16 @@ Text GLabel 9225 16725 1    50   Input ~ 0
 Text GLabel 10850 16725 1    50   Input ~ 0
 +5V
 Text GLabel 19900 12300 1    50   Input ~ 0
-#VIDEOCLK
+~VIDEOCLK
 Text GLabel 18200 2900 0    50   Input ~ 0
-#VIDEOCLK
+~VIDEOCLK
 Text GLabel 24275 5275 3    50   Input ~ 0
-#CPUCLK
+~CPUCLK
 $Comp
-L power:VCC #PWR0122
+L power:VCC ~PWR0122
 U 1 1 67A4410D
 P 16450 11900
-F 0 "#PWR0122" H 16450 11750 50  0001 C CNN
+F 0 "~PWR0122" H 16450 11750 50  0001 C CNN
 F 1 "VCC" H 16510 12105 50  0000 C CNN
 F 2 "" H 16450 11900 50  0001 C CNN
 F 3 "" H 16450 11900 50  0001 C CNN
@@ -1663,10 +1663,10 @@ F 3 "" H 16450 11900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0126
+L power:GND ~PWR0126
 U 1 1 68217D27
 P 24075 5275
-F 0 "#PWR0126" H 24075 5025 50  0001 C CNN
+F 0 "~PWR0126" H 24075 5025 50  0001 C CNN
 F 1 "GND" H 24095 5080 50  0000 C CNN
 F 2 "" H 24075 5275 50  0001 C CNN
 F 3 "" H 24075 5275 50  0001 C CNN
@@ -1674,10 +1674,10 @@ F 3 "" H 24075 5275 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0127
+L power:GND ~PWR0127
 U 1 1 68218186
 P 24375 5275
-F 0 "#PWR0127" H 24375 5025 50  0001 C CNN
+F 0 "~PWR0127" H 24375 5025 50  0001 C CNN
 F 1 "GND" H 24425 5055 50  0000 C CNN
 F 2 "" H 24375 5275 50  0001 C CNN
 F 3 "" H 24375 5275 50  0001 C CNN
@@ -1685,10 +1685,10 @@ F 3 "" H 24375 5275 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR0128
+L power:VCC ~PWR0128
 U 1 1 6830EF88
 P 9175 10150
-F 0 "#PWR0128" H 9175 10000 50  0001 C CNN
+F 0 "~PWR0128" H 9175 10000 50  0001 C CNN
 F 1 "VCC" V 9210 10290 50  0000 L CNN
 F 2 "" H 9175 10150 50  0001 C CNN
 F 3 "" H 9175 10150 50  0001 C CNN
@@ -1696,10 +1696,10 @@ F 3 "" H 9175 10150 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR0110
+L power:GND ~PWR0110
 U 1 1 684059F2
 P 20300 13500
-F 0 "#PWR0110" H 20300 13250 50  0001 C CNN
+F 0 "~PWR0110" H 20300 13250 50  0001 C CNN
 F 1 "GND" V 20265 13340 50  0000 R CNN
 F 2 "" H 20300 13500 50  0001 C CNN
 F 3 "" H 20300 13500 50  0001 C CNN
@@ -1707,10 +1707,10 @@ F 3 "" H 20300 13500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR0129
+L power:GND ~PWR0129
 U 1 1 689CA75E
 P 9200 9950
-F 0 "#PWR0129" H 9200 9700 50  0001 C CNN
+F 0 "~PWR0129" H 9200 9700 50  0001 C CNN
 F 1 "GND" V 9235 9815 50  0000 R CNN
 F 2 "" H 9200 9950 50  0001 C CNN
 F 3 "" H 9200 9950 50  0001 C CNN
@@ -1718,10 +1718,10 @@ F 3 "" H 9200 9950 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:VCC #PWR0111
+L power:VCC ~PWR0111
 U 1 1 68CB052C
 P 22925 4575
-F 0 "#PWR0111" H 22925 4425 50  0001 C CNN
+F 0 "~PWR0111" H 22925 4425 50  0001 C CNN
 F 1 "VCC" H 22970 4790 50  0000 C CNN
 F 2 "" H 22925 4575 50  0001 C CNN
 F 3 "" H 22925 4575 50  0001 C CNN
@@ -1729,10 +1729,10 @@ F 3 "" H 22925 4575 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0130
+L power:GND ~PWR0130
 U 1 1 68DA6DF7
 P 20300 12600
-F 0 "#PWR0130" H 20300 12350 50  0001 C CNN
+F 0 "~PWR0130" H 20300 12350 50  0001 C CNN
 F 1 "GND" V 20300 12470 50  0000 R CNN
 F 2 "" H 20300 12600 50  0001 C CNN
 F 3 "" H 20300 12600 50  0001 C CNN
@@ -1740,10 +1740,10 @@ F 3 "" H 20300 12600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR0113
+L power:GND ~PWR0113
 U 1 1 690A98BA
 P 25025 4575
-F 0 "#PWR0113" H 25025 4325 50  0001 C CNN
+F 0 "~PWR0113" H 25025 4325 50  0001 C CNN
 F 1 "GND" H 24995 4355 50  0000 C CNN
 F 2 "" H 25025 4575 50  0001 C CNN
 F 3 "" H 25025 4575 50  0001 C CNN
@@ -1751,10 +1751,10 @@ F 3 "" H 25025 4575 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:VCC #PWR0139
+L power:VCC ~PWR0139
 U 1 1 6A07A24C
 P 5375 7000
-F 0 "#PWR0139" H 5375 6850 50  0001 C CNN
+F 0 "~PWR0139" H 5375 6850 50  0001 C CNN
 F 1 "VCC" V 5435 7130 50  0000 L CNN
 F 2 "" H 5375 7000 50  0001 C CNN
 F 3 "" H 5375 7000 50  0001 C CNN
@@ -1762,10 +1762,10 @@ F 3 "" H 5375 7000 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:VCC #PWR0140
+L power:VCC ~PWR0140
 U 1 1 6A17A276
 P 19900 2800
-F 0 "#PWR0140" H 19900 2650 50  0001 C CNN
+F 0 "~PWR0140" H 19900 2650 50  0001 C CNN
 F 1 "VCC" H 19965 3000 50  0000 C CNN
 F 2 "" H 19900 2800 50  0001 C CNN
 F 3 "" H 19900 2800 50  0001 C CNN
@@ -1773,10 +1773,10 @@ F 3 "" H 19900 2800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR0141
+L power:VCC ~PWR0141
 U 1 1 6A274078
 P 19900 3600
-F 0 "#PWR0141" H 19900 3450 50  0001 C CNN
+F 0 "~PWR0141" H 19900 3450 50  0001 C CNN
 F 1 "VCC" H 19900 3805 50  0000 C CNN
 F 2 "" H 19900 3600 50  0001 C CNN
 F 3 "" H 19900 3600 50  0001 C CNN
@@ -1784,10 +1784,10 @@ F 3 "" H 19900 3600 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:VCC #PWR0144
+L power:VCC ~PWR0144
 U 1 1 6A37DB64
 P 23250 9475
-F 0 "#PWR0144" H 23250 9325 50  0001 C CNN
+F 0 "~PWR0144" H 23250 9325 50  0001 C CNN
 F 1 "VCC" H 23290 9690 50  0000 C CNN
 F 2 "" H 23250 9475 50  0001 C CNN
 F 3 "" H 23250 9475 50  0001 C CNN
@@ -1795,10 +1795,10 @@ F 3 "" H 23250 9475 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR0145
+L power:VCC ~PWR0145
 U 1 1 6A571091
 P 21800 2700
-F 0 "#PWR0145" H 21800 2550 50  0001 C CNN
+F 0 "~PWR0145" H 21800 2550 50  0001 C CNN
 F 1 "VCC" H 21825 2885 50  0000 C CNN
 F 2 "" H 21800 2700 50  0001 C CNN
 F 3 "" H 21800 2700 50  0001 C CNN
@@ -1806,10 +1806,10 @@ F 3 "" H 21800 2700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR0150
+L power:VCC ~PWR0150
 U 1 1 6AA5DB27
 P 9075 7550
-F 0 "#PWR0150" H 9075 7400 50  0001 C CNN
+F 0 "~PWR0150" H 9075 7400 50  0001 C CNN
 F 1 "VCC" V 9095 7695 50  0000 L CNN
 F 2 "" H 9075 7550 50  0001 C CNN
 F 3 "" H 9075 7550 50  0001 C CNN
@@ -1817,10 +1817,10 @@ F 3 "" H 9075 7550 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR0153
+L power:GND ~PWR0153
 U 1 1 6AE53E6F
 P 4875 14850
-F 0 "#PWR0153" H 4875 14600 50  0001 C CNN
+F 0 "~PWR0153" H 4875 14600 50  0001 C CNN
 F 1 "GND" V 4835 14675 50  0000 R CNN
 F 2 "" H 4875 14850 50  0001 C CNN
 F 3 "" H 4875 14850 50  0001 C CNN
@@ -1828,10 +1828,10 @@ F 3 "" H 4875 14850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR0154
+L power:GND ~PWR0154
 U 1 1 6AE57219
 P 4875 14950
-F 0 "#PWR0154" H 4875 14700 50  0001 C CNN
+F 0 "~PWR0154" H 4875 14700 50  0001 C CNN
 F 1 "GND" V 4835 14775 50  0000 R CNN
 F 2 "" H 4875 14950 50  0001 C CNN
 F 3 "" H 4875 14950 50  0001 C CNN
@@ -1839,10 +1839,10 @@ F 3 "" H 4875 14950 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR0155
+L power:GND ~PWR0155
 U 1 1 6AF59896
 P 5575 14950
-F 0 "#PWR0155" H 5575 14700 50  0001 C CNN
+F 0 "~PWR0155" H 5575 14700 50  0001 C CNN
 F 1 "GND" V 5580 14795 50  0000 R CNN
 F 2 "" H 5575 14950 50  0001 C CNN
 F 3 "" H 5575 14950 50  0001 C CNN
@@ -1850,10 +1850,10 @@ F 3 "" H 5575 14950 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:VCC #PWR0156
+L power:VCC ~PWR0156
 U 1 1 6B547B93
 P 8475 14075
-F 0 "#PWR0156" H 8475 13925 50  0001 C CNN
+F 0 "~PWR0156" H 8475 13925 50  0001 C CNN
 F 1 "VCC" V 8515 14240 50  0000 L CNN
 F 2 "" H 8475 14075 50  0001 C CNN
 F 3 "" H 8475 14075 50  0001 C CNN
@@ -1867,15 +1867,15 @@ P 9275 14075
 F 0 "Z14" V 9105 13535 50  0000 R CNN
 F 1 "74HCT367" V 9625 13870 50  0000 R CNN
 F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 9275 14075 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS367" H 9275 14075 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS367" H 9275 14075 50  0001 C CNN
 	1    9275 14075
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR0161
+L power:GND ~PWR0161
 U 1 1 731E2B46
 P 7750 17550
-F 0 "#PWR0161" H 7750 17300 50  0001 C CNN
+F 0 "~PWR0161" H 7750 17300 50  0001 C CNN
 F 1 "GND" V 7740 17400 50  0000 R CNN
 F 2 "" H 7750 17550 50  0001 C CNN
 F 3 "" H 7750 17550 50  0001 C CNN
@@ -1883,10 +1883,10 @@ F 3 "" H 7750 17550 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:+9V #PWR0162
+L power:+9V ~PWR0162
 U 1 1 732DA8FB
 P 7775 16825
-F 0 "#PWR0162" H 7775 16675 50  0001 C CNN
+F 0 "~PWR0162" H 7775 16675 50  0001 C CNN
 F 1 "+9V" V 7800 16975 50  0000 L CNN
 F 2 "" H 7775 16825 50  0001 C CNN
 F 3 "" H 7775 16825 50  0001 C CNN
@@ -1900,7 +1900,7 @@ P 9725 16825
 F 0 "IC1" H 9750 17100 50  0000 C CNN
 F 1 "LM7805_TO220" H 9750 17000 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 9725 17050 50  0001 C CIN
-F 3 "http://www.fairchildsemi.com/ds/LM/LM7805.pdf" H 9725 16775 50  0001 C CNN
+F 3 "http:~/www.fairchildsemi.com/ds/LM/LM7805.pdf" H 9725 16775 50  0001 C CNN
 	1    9725 16825
 	1    0    0    -1  
 $EndComp
@@ -1938,10 +1938,10 @@ F 3 "~" H 22450 10675 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0106
+L power:GND ~PWR0106
 U 1 1 63D850DD
 P 22450 10875
-F 0 "#PWR0106" H 22450 10625 50  0001 C CNN
+F 0 "~PWR0106" H 22450 10625 50  0001 C CNN
 F 1 "GND" H 22455 10655 50  0000 C CNN
 F 2 "" H 22450 10875 50  0001 C CNN
 F 3 "" H 22450 10875 50  0001 C CNN
@@ -2133,28 +2133,28 @@ Wire Wire Line
 Wire Wire Line
 	18450 7425 18350 7425
 Text Label 18350 7425 2    50   ~ 0
-/WR
+~WR
 Wire Wire Line
 	18450 7625 18350 7625
 Text Label 18350 7625 2    50   ~ 0
-/RD
+~RD
 Wire Wire Line
 	18250 12700 18850 12700
 Wire Wire Line
 	18450 7825 18345 7825
 Text Label 18345 7825 2    50   ~ 0
-SH#LD
+SH~LD
 Wire Wire Line
 	18450 7925 18345 7925
 Text Label 18345 7925 2    50   ~ 0
-SH#LD
+SH~LD
 Wire Wire Line
 	18450 7725 18345 7725
 $Comp
-L power:VCC #PWR0112
+L power:VCC ~PWR0112
 U 1 1 5E680C8B
 P 18345 7725
-F 0 "#PWR0112" H 18345 7575 50  0001 C CNN
+F 0 "~PWR0112" H 18345 7575 50  0001 C CNN
 F 1 "VCC" V 18375 7880 50  0000 L CNN
 F 2 "" H 18345 7725 50  0001 C CNN
 F 3 "" H 18345 7725 50  0001 C CNN
@@ -2164,26 +2164,26 @@ $EndComp
 Wire Wire Line
 	21050 6825 20950 6825
 Text Label 20950 6825 2    50   ~ 0
-/WR
+~WR
 Wire Wire Line
 	21050 7025 20950 7025
 Text Label 20950 7025 2    50   ~ 0
-/RD
+~RD
 Wire Wire Line
 	21050 7225 20945 7225
 Text Label 20945 7225 2    50   ~ 0
-SH#LD
+SH~LD
 Wire Wire Line
 	21050 7325 20945 7325
 Text Label 20945 7325 2    50   ~ 0
-SH#LD
+SH~LD
 Wire Wire Line
 	21050 7125 20945 7125
 $Comp
-L power:VCC #PWR0124
+L power:VCC ~PWR0124
 U 1 1 5E688D32
 P 20945 7125
-F 0 "#PWR0124" H 20945 6975 50  0001 C CNN
+F 0 "~PWR0124" H 20945 6975 50  0001 C CNN
 F 1 "VCC" V 20995 7275 50  0000 L CNN
 F 2 "" H 20945 7125 50  0001 C CNN
 F 3 "" H 20945 7125 50  0001 C CNN
@@ -2194,10 +2194,10 @@ Wire Wire Line
 	17835 8325 19100 8325
 Connection ~ 19100 8325
 $Comp
-L power:GND #PWR0133
+L power:GND ~PWR0133
 U 1 1 5F0E7CAA
 P 20725 7775
-F 0 "#PWR0133" H 20725 7525 50  0001 C CNN
+F 0 "~PWR0133" H 20725 7525 50  0001 C CNN
 F 1 "GND" V 20770 7645 50  0000 R CNN
 F 2 "" H 20725 7775 50  0001 C CNN
 F 3 "" H 20725 7775 50  0001 C CNN
@@ -2271,7 +2271,7 @@ P 10625 5975
 F 0 "Z100" H 10645 6815 50  0000 C CNN
 F 1 "74HCT138" H 10645 6715 50  0000 C CNN
 F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 10625 5975 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS138" H 10625 5975 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS138" H 10625 5975 50  0001 C CNN
 	1    10625 5975
 	1    0    0    -1  
 $EndComp
@@ -2284,16 +2284,16 @@ P 6175 6800
 F 0 "Z13" H 6200 7600 50  0000 C CNN
 F 1 "74HCT138" H 6200 7500 50  0000 C CNN
 F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 6175 6800 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS138" H 6175 6800 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS138" H 6175 6800 50  0001 C CNN
 	1    6175 6800
 	1    0    0    -1  
 $EndComp
 Text Label 5575 7200 2    50   ~ 0
-/MREQ
+~MREQ
 Wire Wire Line
 	10025 6275 10125 6275
 Text Label 10025 6275 2    50   ~ 0
-/MREQ
+~MREQ
 Wire Wire Line
 	10125 5675 10025 5675
 Text Label 10025 5675 2    50   ~ 0
@@ -2303,10 +2303,10 @@ Wire Wire Line
 Text Label 10025 5775 2    50   ~ 0
 A12
 $Comp
-L power:GND #PWR0136
+L power:GND ~PWR0136
 U 1 1 614A7E6B
 P 10025 5875
-F 0 "#PWR0136" H 10025 5625 50  0001 C CNN
+F 0 "~PWR0136" H 10025 5625 50  0001 C CNN
 F 1 "GND" V 10000 5700 50  0000 R CNN
 F 2 "" H 10025 5875 50  0001 C CNN
 F 3 "" H 10025 5875 50  0001 C CNN
@@ -2314,10 +2314,10 @@ F 3 "" H 10025 5875 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:VCC #PWR0137
+L power:VCC ~PWR0137
 U 1 1 614AAB0F
 P 10020 6175
-F 0 "#PWR0137" H 10020 6025 50  0001 C CNN
+F 0 "~PWR0137" H 10020 6025 50  0001 C CNN
 F 1 "VCC" V 10065 6320 50  0000 L CNN
 F 2 "" H 10020 6175 50  0001 C CNN
 F 3 "" H 10020 6175 50  0001 C CNN
@@ -2341,7 +2341,7 @@ P 9725 7100
 F 0 "Z22" H 9765 7465 50  0000 C CNN
 F 1 "74HCT11" H 9765 7365 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 9725 7100 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 9725 7100 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS11" H 9725 7100 50  0001 C CNN
 	3    9725 7100
 	1    0    0    -1  
 $EndComp
@@ -2352,7 +2352,7 @@ P 7775 5850
 F 0 "Z101" H 7820 6240 50  0000 C CNN
 F 1 "74HCT21" H 7820 6140 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 7775 5850 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS21" H 7775 5850 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS21" H 7775 5850 50  0001 C CNN
 	2    7775 5850
 	1    0    0    -1  
 $EndComp
@@ -2373,7 +2373,7 @@ FONTCHAR2
 Wire Wire Line
 	24150 10375 24225 10375
 Text GLabel 24225 10375 2    50   Input ~ 0
-#VIDEOCLK
+~VIDEOCLK
 Wire Wire Line
 	22450 10475 22450 10575
 Wire Wire Line
@@ -2415,11 +2415,11 @@ DA7
 Wire Wire Line
 	14875 9375 14975 9375
 Text Label 14875 9375 2    50   ~ 0
-/MREQ
+~MREQ
 Wire Wire Line
 	14875 7750 14975 7750
 Text Label 14875 7750 2    50   ~ 0
-/MREQ
+~MREQ
 Wire Wire Line
 	14975 8975 14875 8975
 Text Label 14976 8976 0    10   ~ 0
@@ -2556,13 +2556,13 @@ Wire Wire Line
 Wire Wire Line
 	13275 9475 13675 9475
 Text Label 12775 8875 1    50   ~ 0
-#PAGED8K
+~PAGED8K
 Connection ~ 13275 8875
 $Comp
-L power:VCC #P+0101
+L power:VCC ~P+0101
 U 1 1 2342D0ED
 P 13175 8050
-F 0 "#P+0101" H 13175 8050 50  0001 C CNN
+F 0 "~P+0101" H 13175 8050 50  0001 C CNN
 F 1 "VCC" V 13075 7950 50  0000 L BNN
 F 2 "" H 13175 8050 50  0001 C CNN
 F 3 "" H 13175 8050 50  0001 C CNN
@@ -2570,10 +2570,10 @@ F 3 "" H 13175 8050 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #SUPPLY0102
+L power:GND ~SUPPLY0102
 U 1 1 31C2C8A5
 P 14875 8975
-F 0 "#SUPPLY0102" H 14875 8975 50  0001 C CNN
+F 0 "~SUPPLY0102" H 14875 8975 50  0001 C CNN
 F 1 "GND" H 14800 8850 50  0000 L BNN
 F 2 "" H 14875 8975 50  0001 C CNN
 F 3 "" H 14875 8975 50  0001 C CNN
@@ -2581,10 +2581,10 @@ F 3 "" H 14875 8975 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #SUPPLY0103
+L power:GND ~SUPPLY0103
 U 1 1 5F7BB948
 P 14875 9075
-F 0 "#SUPPLY0103" H 14875 9075 50  0001 C CNN
+F 0 "~SUPPLY0103" H 14875 9075 50  0001 C CNN
 F 1 "GND" H 14800 8950 50  0000 L BNN
 F 2 "" H 14875 9075 50  0001 C CNN
 F 3 "" H 14875 9075 50  0001 C CNN
@@ -2592,10 +2592,10 @@ F 3 "" H 14875 9075 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #SUPPLY0104
+L power:GND ~SUPPLY0104
 U 1 1 15C4ECC7
 P 14875 9175
-F 0 "#SUPPLY0104" H 14875 9175 50  0001 C CNN
+F 0 "~SUPPLY0104" H 14875 9175 50  0001 C CNN
 F 1 "GND" H 14800 9050 50  0000 L BNN
 F 2 "" H 14875 9175 50  0001 C CNN
 F 3 "" H 14875 9175 50  0001 C CNN
@@ -2611,7 +2611,7 @@ P 11150 13500
 F 0 "Z104" H 11195 14040 50  0000 C CNN
 F 1 "74HCT30" H 11195 13940 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 11150 13500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS30" H 11150 13500 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS30" H 11150 13500 50  0001 C CNN
 	1    11150 13500
 	1    0    0    -1  
 $EndComp
@@ -2622,7 +2622,7 @@ P 11250 14200
 F 0 "Z102" H 11295 14540 50  0000 C CNN
 F 1 "74HCT04" H 11295 14440 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 11250 14200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 11250 14200 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS04" H 11250 14200 50  0001 C CNN
 	2    11250 14200
 	1    0    0    -1  
 $EndComp
@@ -2633,7 +2633,7 @@ P 11950 14100
 F 0 "Z25" H 11995 14460 50  0000 C CNN
 F 1 "74HCT02" H 11995 14360 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 11950 14100 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 11950 14100 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74ls02" H 11950 14100 50  0001 C CNN
 	3    11950 14100
 	1    0    0    -1  
 $EndComp
@@ -2644,7 +2644,7 @@ P 11950 13000
 F 0 "Z103" H 11970 13365 50  0000 C CNN
 F 1 "74HCT02" H 11970 13265 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 11950 13000 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 11950 13000 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74ls02" H 11950 13000 50  0001 C CNN
 	2    11950 13000
 	1    0    0    -1  
 $EndComp
@@ -2654,12 +2654,12 @@ Wire Wire Line
 Wire Wire Line
 	12850 13000 12850 14000
 Text Label 9950 13200 2    50   ~ 0
-/IOREQ
+~IOREQ
 $Comp
-L power:GND #PWR0114
+L power:GND ~PWR0114
 U 1 1 6526C7AB
 P 10075 14075
-F 0 "#PWR0114" H 10075 13825 50  0001 C CNN
+F 0 "~PWR0114" H 10075 13825 50  0001 C CNN
 F 1 "GND" H 10080 13855 50  0000 C CNN
 F 2 "" H 10075 14075 50  0001 C CNN
 F 3 "" H 10075 14075 50  0001 C CNN
@@ -2675,7 +2675,7 @@ P 13975 9475
 F 0 "Z102" H 13990 9825 50  0000 C CNN
 F 1 "74HCT04" H 13990 9725 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 13975 9475 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 13975 9475 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS04" H 13975 9475 50  0001 C CNN
 	1    13975 9475
 	1    0    0    -1  
 $EndComp
@@ -2684,10 +2684,10 @@ Wire Wire Line
 Wire Wire Line
 	15475 9775 15475 9870
 $Comp
-L power:GND #PWR0119
+L power:GND ~PWR0119
 U 1 1 65F42A2D
 P 15475 9870
-F 0 "#PWR0119" H 15475 9620 50  0001 C CNN
+F 0 "~PWR0119" H 15475 9620 50  0001 C CNN
 F 1 "GND" H 15500 9670 50  0000 C CNN
 F 2 "" H 15475 9870 50  0001 C CNN
 F 3 "" H 15475 9870 50  0001 C CNN
@@ -2695,10 +2695,10 @@ F 3 "" H 15475 9870 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR0151
+L power:VCC ~PWR0151
 U 1 1 65F45603
 P 15625 8325
-F 0 "#PWR0151" H 15625 8175 50  0001 C CNN
+F 0 "~PWR0151" H 15625 8175 50  0001 C CNN
 F 1 "VCC" V 15600 8465 50  0000 L CNN
 F 2 "" H 15625 8325 50  0001 C CNN
 F 3 "" H 15625 8325 50  0001 C CNN
@@ -2712,7 +2712,7 @@ P 14550 14475
 F 0 "Z102" V 14465 14665 50  0000 L CNN
 F 1 "74HCT04" V 14565 14665 50  0000 L CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 14550 14475 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 14550 14475 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS04" H 14550 14475 50  0001 C CNN
 	5    14550 14475
 	0    1    1    0   
 $EndComp
@@ -2727,14 +2727,14 @@ Connection ~ 17950 12200
 Wire Wire Line
 	17950 12200 18250 12200
 Text Label 6675 7200 0    50   ~ 0
-#PAGED8K
+~PAGED8K
 Wire Wire Line
 	10625 5375 10625 5310
 $Comp
-L power:VCC #PWR0164
+L power:VCC ~PWR0164
 U 1 1 6783B2CA
 P 10625 5310
-F 0 "#PWR0164" H 10625 5160 50  0001 C CNN
+F 0 "~PWR0164" H 10625 5160 50  0001 C CNN
 F 1 "VCC" V 10680 5480 50  0000 L CNN
 F 2 "" H 10625 5310 50  0001 C CNN
 F 3 "" H 10625 5310 50  0001 C CNN
@@ -2744,10 +2744,10 @@ $EndComp
 Wire Wire Line
 	10625 6675 10625 6810
 $Comp
-L power:GND #PWR0165
+L power:GND ~PWR0165
 U 1 1 678FD44E
 P 10625 6810
-F 0 "#PWR0165" H 10625 6560 50  0001 C CNN
+F 0 "~PWR0165" H 10625 6560 50  0001 C CNN
 F 1 "GND" H 10665 6600 50  0000 C CNN
 F 2 "" H 10625 6810 50  0001 C CNN
 F 3 "" H 10625 6810 50  0001 C CNN
@@ -2811,10 +2811,10 @@ $Comp
 L 74xx:74LS367 Z15
 U 1 1 68C1909B
 P 15775 15600
-F 0 "Z15" V 15725 16365 50  0000 L CNN
-F 1 "74HCT367" V 15775 16365 50  0000 L CNN
+F 0 "Z15" V 15725 16375 50  0000 L CNN
+F 1 "74HCT367" V 15775 16375 50  0000 L CNN
 F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 15775 15600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS367" H 15775 15600 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS367" H 15775 15600 50  0001 C CNN
 	1    15775 15600
 	0    1    1    0   
 $EndComp
@@ -2849,10 +2849,10 @@ Wire Wire Line
 Text Label 8775 12150 2    50   ~ 0
 MA18
 $Comp
-L power:VCC #PWR0108
+L power:VCC ~PWR0108
 U 1 1 5D829722
 P 16575 15600
-F 0 "#PWR0108" H 16575 15450 50  0001 C CNN
+F 0 "~PWR0108" H 16575 15450 50  0001 C CNN
 F 1 "VCC" V 16590 15740 50  0000 L CNN
 F 2 "" H 16575 15600 50  0001 C CNN
 F 3 "" H 16575 15600 50  0001 C CNN
@@ -2860,10 +2860,10 @@ F 3 "" H 16575 15600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR0109
+L power:GND ~PWR0109
 U 1 1 5DCC9FE1
 P 14975 15600
-F 0 "#PWR0109" H 14975 15350 50  0001 C CNN
+F 0 "~PWR0109" H 14975 15350 50  0001 C CNN
 F 1 "GND" V 14980 15425 50  0000 R CNN
 F 2 "" H 14975 15600 50  0001 C CNN
 F 3 "" H 14975 15600 50  0001 C CNN
@@ -2871,10 +2871,10 @@ F 3 "" H 14975 15600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR0157
+L power:GND ~PWR0157
 U 1 1 5DCCCD2D
 P 14875 15025
-F 0 "#PWR0157" H 14875 14775 50  0001 C CNN
+F 0 "~PWR0157" H 14875 14775 50  0001 C CNN
 F 1 "GND" V 14880 14850 50  0000 R CNN
 F 2 "" H 14875 15025 50  0001 C CNN
 F 3 "" H 14875 15025 50  0001 C CNN
@@ -2882,10 +2882,10 @@ F 3 "" H 14875 15025 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:VCC #PWR0166
+L power:VCC ~PWR0166
 U 1 1 5DF19480
 P 15475 15000
-F 0 "#PWR0166" H 15475 14850 50  0001 C CNN
+F 0 "~PWR0166" H 15475 14850 50  0001 C CNN
 F 1 "VCC" V 15490 15140 50  0000 L CNN
 F 2 "" H 15475 15000 50  0001 C CNN
 F 3 "" H 15475 15000 50  0001 C CNN
@@ -2893,10 +2893,10 @@ F 3 "" H 15475 15000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR0167
+L power:VCC ~PWR0167
 U 1 1 5DFDD78E
 P 15775 15000
-F 0 "#PWR0167" H 15775 14850 50  0001 C CNN
+F 0 "~PWR0167" H 15775 14850 50  0001 C CNN
 F 1 "VCC" V 15790 15140 50  0000 L CNN
 F 2 "" H 15775 15000 50  0001 C CNN
 F 3 "" H 15775 15000 50  0001 C CNN
@@ -2904,10 +2904,10 @@ F 3 "" H 15775 15000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR0168
+L power:GND ~PWR0168
 U 1 1 5E3B8AEF
 P 17975 14900
-F 0 "#PWR0168" H 17975 14650 50  0001 C CNN
+F 0 "~PWR0168" H 17975 14650 50  0001 C CNN
 F 1 "GND" V 17980 14725 50  0000 R CNN
 F 2 "" H 17975 14900 50  0001 C CNN
 F 3 "" H 17975 14900 50  0001 C CNN
@@ -2915,10 +2915,10 @@ F 3 "" H 17975 14900 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR0169
+L power:GND ~PWR0169
 U 1 1 5E609E69
 P 18475 14900
-F 0 "#PWR0169" H 18475 14650 50  0001 C CNN
+F 0 "~PWR0169" H 18475 14650 50  0001 C CNN
 F 1 "GND" V 18480 14725 50  0000 R CNN
 F 2 "" H 18475 14900 50  0001 C CNN
 F 3 "" H 18475 14900 50  0001 C CNN
@@ -2926,10 +2926,10 @@ F 3 "" H 18475 14900 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR0170
+L power:GND ~PWR0170
 U 1 1 5E7997F2
 P 18775 15500
-F 0 "#PWR0170" H 18775 15250 50  0001 C CNN
+F 0 "~PWR0170" H 18775 15250 50  0001 C CNN
 F 1 "GND" V 18780 15325 50  0000 R CNN
 F 2 "" H 18775 15500 50  0001 C CNN
 F 3 "" H 18775 15500 50  0001 C CNN
@@ -2961,10 +2961,10 @@ $EndComp
 Wire Wire Line
 	16450 11900 16450 12000
 $Comp
-L power:PWR_FLAG #FLG0101
+L power:PWR_FLAG ~FLG0101
 U 1 1 61D709E9
 P 7450 17250
-F 0 "#FLG0101" H 7450 17325 50  0001 C CNN
+F 0 "~FLG0101" H 7450 17325 50  0001 C CNN
 F 1 "PWR_FLAG" H 7265 17385 50  0000 C CNN
 F 2 "" H 7450 17250 50  0001 C CNN
 F 3 "~" H 7450 17250 50  0001 C CNN
@@ -2972,10 +2972,10 @@ F 3 "~" H 7450 17250 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR0107
+L power:GND ~PWR0107
 U 1 1 5D2B12BF
 P 20300 15400
-F 0 "#PWR0107" H 20300 15150 50  0001 C CNN
+F 0 "~PWR0107" H 20300 15150 50  0001 C CNN
 F 1 "GND" V 20305 15225 50  0000 R CNN
 F 2 "" H 20300 15400 50  0001 C CNN
 F 3 "" H 20300 15400 50  0001 C CNN
@@ -2983,10 +2983,10 @@ F 3 "" H 20300 15400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR0158
+L power:GND ~PWR0158
 U 1 1 5D444F7D
 P 23250 10775
-F 0 "#PWR0158" H 23250 10525 50  0001 C CNN
+F 0 "~PWR0158" H 23250 10525 50  0001 C CNN
 F 1 "GND" V 23255 10600 50  0000 R CNN
 F 2 "" H 23250 10775 50  0001 C CNN
 F 3 "" H 23250 10775 50  0001 C CNN
@@ -2998,7 +2998,7 @@ Wire Wire Line
 Wire Wire Line
 	21700 7575 21700 8325
 Text Label 19050 2100 1    50   ~ 0
-SH#LD
+SH~LD
 $Comp
 L Device:R R100
 U 1 1 5E21BE61
@@ -3031,10 +3031,10 @@ Connection ~ 20120 7925
 Wire Wire Line
 	20120 7925 20120 8025
 $Comp
-L power:VCC #PWR0160
+L power:VCC ~PWR0160
 U 1 1 5E6EBB57
 P 20120 8025
-F 0 "#PWR0160" H 20120 7875 50  0001 C CNN
+F 0 "~PWR0160" H 20120 7875 50  0001 C CNN
 F 1 "VCC" H 20100 8205 50  0000 C CNN
 F 2 "" H 20120 8025 50  0001 C CNN
 F 3 "" H 20120 8025 50  0001 C CNN
@@ -3053,10 +3053,10 @@ F 3 "~" H 8875 16825 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR0172
+L power:GND ~PWR0172
 U 1 1 5D5DB79D
 P 7325 17250
-F 0 "#PWR0172" H 7325 17000 50  0001 C CNN
+F 0 "~PWR0172" H 7325 17000 50  0001 C CNN
 F 1 "GND" H 7325 17110 50  0000 C CNN
 F 2 "" H 7325 17250 50  0001 C CNN
 F 3 "" H 7325 17250 50  0001 C CNN
@@ -3064,10 +3064,10 @@ F 3 "" H 7325 17250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+9V #PWR0173
+L power:+9V ~PWR0173
 U 1 1 5DDE8D86
 P 7325 17150
-F 0 "#PWR0173" H 7325 17000 50  0001 C CNN
+F 0 "~PWR0173" H 7325 17000 50  0001 C CNN
 F 1 "+9V" V 7350 17300 50  0000 L CNN
 F 2 "" H 7325 17150 50  0001 C CNN
 F 3 "" H 7325 17150 50  0001 C CNN
@@ -3075,10 +3075,10 @@ F 3 "" H 7325 17150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:PWR_FLAG #FLG0102
+L power:PWR_FLAG ~FLG0102
 U 1 1 5E04BD41
 P 7450 17150
-F 0 "#FLG0102" H 7450 17225 50  0001 C CNN
+F 0 "~FLG0102" H 7450 17225 50  0001 C CNN
 F 1 "PWR_FLAG" H 7615 17290 50  0000 C CNN
 F 2 "" H 7450 17150 50  0001 C CNN
 F 3 "~" H 7450 17150 50  0001 C CNN
@@ -3164,15 +3164,15 @@ DA7
 Wire Wire Line
 	6125 8950 6225 8950
 Text Label 6225 8950 0    50   ~ 0
-/WAIT
+~WAIT
 Wire Wire Line
 	2000 3450 2100 3450
 Text Label 2100 3450 0    50   ~ 0
-/MREQ
+~MREQ
 Wire Wire Line
 	2000 3750 2100 3750
 Text Label 2100 3750 0    50   ~ 0
-/WR
+~WR
 Wire Wire Line
 	3725 9350 3725 9450
 Wire Wire Line
@@ -3180,35 +3180,35 @@ Wire Wire Line
 Wire Wire Line
 	2000 3550 2100 3550
 Text Label 2100 3550 0    50   ~ 0
-/IOREQ
+~IOREQ
 Wire Wire Line
 	2000 3650 2100 3650
 Text Label 2100 3650 0    50   ~ 0
-/RD
+~RD
 Wire Wire Line
 	6125 9350 6625 9350
 Text Label 6625 9350 0    50   ~ 0
-/INT
+~INT
 Wire Wire Line
 	6925 9850 6125 9850
 Text Label 6125 9850 0    50   ~ 0
-/BUSRQ
+~BUSRQ
 Wire Wire Line
 	6125 8850 6225 8850
 Text Label 6225 8850 0    50   ~ 0
-/M1
+~M1
 Wire Wire Line
 	6125 9050 6225 9050
 Text Label 6225 9050 0    50   ~ 0
-/HALT
+~HALT
 Wire Wire Line
 	6125 9950 6225 9950
 Text Label 6225 9950 0    50   ~ 0
-/BUSAK
+~BUSAK
 Wire Wire Line
 	6225 10150 6125 10150
 Text Label 6225 10150 0    50   ~ 0
-/REFSH
+~REFSH
 Wire Wire Line
 	4725 9050 4725 9150
 Wire Wire Line
@@ -3317,10 +3317,10 @@ Wire Wire Line
 Wire Wire Line
 	2125 13725 2125 13625
 $Comp
-L power:GND #SUPPLY0101
+L power:GND ~SUPPLY0101
 U 1 1 B8640D54
 P 3825 8350
-F 0 "#SUPPLY0101" H 3825 8350 50  0001 C CNN
+F 0 "~SUPPLY0101" H 3825 8350 50  0001 C CNN
 F 1 "GND" H 3750 8225 50  0000 L BNN
 F 2 "" H 3825 8350 50  0001 C CNN
 F 3 "" H 3825 8350 50  0001 C CNN
@@ -3339,10 +3339,10 @@ F 3 "" H 4025 7700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #P+0103
+L power:VCC ~P+0103
 U 1 1 E32DC4A8
 P 4025 7150
-F 0 "#P+0103" H 4025 7150 50  0001 C CNN
+F 0 "~P+0103" H 4025 7150 50  0001 C CNN
 F 1 "VCC" V 4025 7150 50  0000 L BNN
 F 2 "" H 4025 7150 50  0001 C CNN
 F 3 "" H 4025 7150 50  0001 C CNN
@@ -3361,10 +3361,10 @@ F 3 "" H 3025 8650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #P+0104
+L power:VCC ~P+0104
 U 1 1 6665561A
 P 4725 9650
-F 0 "#P+0104" H 4725 9650 50  0001 C CNN
+F 0 "~P+0104" H 4725 9650 50  0001 C CNN
 F 1 "VCC" V 4755 9765 50  0000 L BNN
 F 2 "" H 4725 9650 50  0001 C CNN
 F 3 "" H 4725 9650 50  0001 C CNN
@@ -3372,10 +3372,10 @@ F 3 "" H 4725 9650 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:VCC #P+0105
+L power:VCC ~P+0105
 U 1 1 0D6E2306
 P 4725 9750
-F 0 "#P+0105" H 4725 9750 50  0001 C CNN
+F 0 "~P+0105" H 4725 9750 50  0001 C CNN
 F 1 "VCC" V 4755 9855 50  0000 L BNN
 F 2 "" H 4725 9750 50  0001 C CNN
 F 3 "" H 4725 9750 50  0001 C CNN
@@ -3383,10 +3383,10 @@ F 3 "" H 4725 9750 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #SUPPLY0105
+L power:GND ~SUPPLY0105
 U 1 1 2907E397
 P 4725 10150
-F 0 "#SUPPLY0105" H 4725 10150 50  0001 C CNN
+F 0 "~SUPPLY0105" H 4725 10150 50  0001 C CNN
 F 1 "GND" V 4755 9870 50  0000 L BNN
 F 2 "" H 4725 10150 50  0001 C CNN
 F 3 "" H 4725 10150 50  0001 C CNN
@@ -3394,10 +3394,10 @@ F 3 "" H 4725 10150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #SUPPLY0106
+L power:GND ~SUPPLY0106
 U 1 1 E0B04C0E
 P 4725 10050
-F 0 "#SUPPLY0106" H 4725 10050 50  0001 C CNN
+F 0 "~SUPPLY0106" H 4725 10050 50  0001 C CNN
 F 1 "GND" V 4750 9770 50  0000 L BNN
 F 2 "" H 4725 10050 50  0001 C CNN
 F 3 "" H 4725 10050 50  0001 C CNN
@@ -3416,10 +3416,10 @@ F 3 "" H 3725 9200 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #SUPPLY0107
+L power:GND ~SUPPLY0107
 U 1 1 28999800
 P 3725 9450
-F 0 "#SUPPLY0107" H 3725 9450 50  0001 C CNN
+F 0 "~SUPPLY0107" H 3725 9450 50  0001 C CNN
 F 1 "GND" H 3630 9275 50  0000 L BNN
 F 2 "" H 3725 9450 50  0001 C CNN
 F 3 "" H 3725 9450 50  0001 C CNN
@@ -3427,10 +3427,10 @@ F 3 "" H 3725 9450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #SUPPLY0109
+L power:GND ~SUPPLY0109
 U 1 1 5D1DF426
 P 4725 9350
-F 0 "#SUPPLY0109" H 4725 9350 50  0001 C CNN
+F 0 "~SUPPLY0109" H 4725 9350 50  0001 C CNN
 F 1 "GND" V 4750 9065 50  0000 L BNN
 F 2 "" H 4725 9350 50  0001 C CNN
 F 3 "" H 4725 9350 50  0001 C CNN
@@ -3438,10 +3438,10 @@ F 3 "" H 4725 9350 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:VCC #P+0106
+L power:VCC ~P+0106
 U 1 1 DD8F0AB4
 P 6225 9550
-F 0 "#P+0106" H 6225 9550 50  0001 C CNN
+F 0 "~P+0106" H 6225 9550 50  0001 C CNN
 F 1 "VCC" V 6225 9550 50  0000 L BNN
 F 2 "" H 6225 9550 50  0001 C CNN
 F 3 "" H 6225 9550 50  0001 C CNN
@@ -3566,11 +3566,11 @@ Wire Wire Line
 Wire Wire Line
 	6125 9250 6295 9250
 Text GLabel 6295 9250 2    50   Input ~ 0
-#NMI
+~NMI
 Text GLabel 4025 7950 0    50   Input ~ 0
-#RESET
+~RESET
 Text GLabel 4625 9150 0    50   Input ~ 0
-#CPUCLK
+~CPUCLK
 Wire Wire Line
 	2025 13425 3425 13425
 Wire Wire Line
@@ -3615,10 +3615,10 @@ Wire Wire Line
 Wire Wire Line
 	2125 11950 3425 11950
 $Comp
-L power:GND #SUPPLY0108
+L power:GND ~SUPPLY0108
 U 1 1 C39E5E7F
 P 4025 9550
-F 0 "#SUPPLY0108" H 4025 9550 50  0001 C CNN
+F 0 "~SUPPLY0108" H 4025 9550 50  0001 C CNN
 F 1 "GND" H 3935 9385 50  0000 L BNN
 F 2 "" H 4025 9550 50  0001 C CNN
 F 3 "" H 4025 9550 50  0001 C CNN
@@ -3632,7 +3632,7 @@ P 18450 5125
 F 0 "Z5-6" H 19100 5800 50  0000 C CNN
 F 1 "71321SA55JG8" H 19100 5700 50  0000 C CNN
 F 2 "Package_LCC:PLCC-52" H 19250 5775 50  0001 L CNN
-F 3 "https://www.idt.com/document/dst/71321421-datasheet" H 19250 5675 50  0001 L CNN
+F 3 "https:~/www.idt.com/document/dst/71321421-datasheet" H 19250 5675 50  0001 L CNN
 F 4 "IC SRAM 16K PARALLEL 52PLCC" H 19250 5875 50  0001 L CNN "Description"
 F 5 "3.63" H 19650 5075 50  0001 L CNN "Height"
 F 6 "IDT, Integrated Device Technology Inc" H 19250 5975 50  0001 L CNN "Manufacturer_Name"
@@ -3641,10 +3641,10 @@ F 7 "71321SA55JG8" H 19650 4675 50  0001 L CNN "Manufacturer_Part_Number"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR0105
+L power:VCC ~PWR0105
 U 1 1 5D70DB99
 P 19100 4765
-F 0 "#PWR0105" H 19100 4615 50  0001 C CNN
+F 0 "~PWR0105" H 19100 4615 50  0001 C CNN
 F 1 "VCC" H 19165 4960 50  0000 C CNN
 F 2 "" H 19100 4765 50  0001 C CNN
 F 3 "" H 19100 4765 50  0001 C CNN
@@ -3672,15 +3672,15 @@ P 9275 11250
 F 0 "Z3-4" H 9300 12650 50  0000 C CNN
 F 1 "AS6C4008" H 9300 12550 50  0000 C CNN
 F 2 "Package_SO:SSOP-32_11.305x20.495mm_P1.27mm" H 9275 11350 50  0001 C CNN
-F 3 "https://www.alliancememory.com/wp-content/uploads/pdf/AS6C4008.pdf" H 9275 11350 50  0001 C CNN
+F 3 "https:~/www.alliancememory.com/wp-content/uploads/pdf/AS6C4008.pdf" H 9275 11350 50  0001 C CNN
 	1    9275 11250
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0118
+L power:GND ~PWR0118
 U 1 1 6A070911
 P 9450 12375
-F 0 "#PWR0118" H 9450 12125 50  0001 C CNN
+F 0 "~PWR0118" H 9450 12125 50  0001 C CNN
 F 1 "GND" H 9480 12170 50  0000 C CNN
 F 2 "" H 9450 12375 50  0001 C CNN
 F 3 "" H 9450 12375 50  0001 C CNN
@@ -3694,7 +3694,7 @@ P 26200 4875
 F 0 "Z101" V 25810 4885 50  0000 C CNN
 F 1 "74HCT21" V 25910 4885 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 26200 4875 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS21" H 26200 4875 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS21" H 26200 4875 50  0001 C CNN
 	3    26200 4875
 	0    1    1    0   
 $EndComp
@@ -3738,7 +3738,7 @@ P 27750 10125
 F 0 "Z27" V 28040 10130 50  0000 C CNN
 F 1 "74HCT74" V 28140 10130 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 27750 10125 50  0001 C CNN
-F 3 "74xx/74hc_hct74.pdf" H 27750 10125 50  0001 C CNN
+F 3 "74xx~74hc_hct74.pdf" H 27750 10125 50  0001 C CNN
 	3    27750 10125
 	0    1    1    0   
 $EndComp
@@ -3749,7 +3749,7 @@ P 26200 4200
 F 0 "Z102" V 25800 4220 50  0000 C CNN
 F 1 "74HCT04" V 25900 4220 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 26200 4200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 26200 4200 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS04" H 26200 4200 50  0001 C CNN
 	7    26200 4200
 	0    1    1    0   
 $EndComp
@@ -3760,7 +3760,7 @@ P 27750 8875
 F 0 "Z24" V 27330 8895 50  0000 C CNN
 F 1 "74HCT02" V 27430 8895 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 27750 8875 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 27750 8875 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74ls02" H 27750 8875 50  0001 C CNN
 	5    27750 8875
 	0    1    1    0   
 $EndComp
@@ -3771,7 +3771,7 @@ P 27750 6225
 F 0 "Z20" V 27330 6265 50  0000 C CNN
 F 1 "74HCT08" V 27430 6265 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 27750 6225 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 27750 6225 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS08" H 27750 6225 50  0001 C CNN
 	5    27750 6225
 	0    1    1    0   
 $EndComp
@@ -3782,7 +3782,7 @@ P 27750 6875
 F 0 "Z21" V 27365 6920 50  0000 C CNN
 F 1 "74HCT11" V 27465 6920 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 27750 6875 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 27750 6875 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS11" H 27750 6875 50  0001 C CNN
 	4    27750 6875
 	0    1    1    0   
 $EndComp
@@ -3793,7 +3793,7 @@ P 27750 7550
 F 0 "Z22" V 27340 7570 50  0000 C CNN
 F 1 "74HCT11" V 27440 7570 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 27750 7550 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 27750 7550 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS11" H 27750 7550 50  0001 C CNN
 	4    27750 7550
 	0    1    1    0   
 $EndComp
@@ -3804,7 +3804,7 @@ P 27750 5550
 F 0 "Z19" V 27345 5560 50  0000 C CNN
 F 1 "74HCT00" V 27445 5560 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 27750 5550 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 27750 5550 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74ls00" H 27750 5550 50  0001 C CNN
 	5    27750 5550
 	0    1    1    0   
 $EndComp
@@ -3815,7 +3815,7 @@ P 27750 9575
 F 0 "Z25" V 27345 9580 50  0000 C CNN
 F 1 "74HCT02" V 27445 9580 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 27750 9575 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 27750 9575 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74ls02" H 27750 9575 50  0001 C CNN
 	5    27750 9575
 	0    1    1    0   
 $EndComp
@@ -3826,15 +3826,15 @@ P 27750 8200
 F 0 "Z23" V 27355 8220 50  0000 C CNN
 F 1 "74HCT86" V 27455 8220 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 27750 8200 50  0001 C CNN
-F 3 "74xx/74ls86.pdf" H 27750 8200 50  0001 C CNN
+F 3 "74xx~74ls86.pdf" H 27750 8200 50  0001 C CNN
 	5    27750 8200
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR0120
+L power:GND ~PWR0120
 U 1 1 601D0A36
 P 25700 9675
-F 0 "#PWR0120" H 25700 9425 50  0001 C CNN
+F 0 "~PWR0120" H 25700 9425 50  0001 C CNN
 F 1 "GND" H 25730 9480 50  0000 C CNN
 F 2 "" H 25700 9675 50  0001 C CNN
 F 3 "" H 25700 9675 50  0001 C CNN
@@ -3842,10 +3842,10 @@ F 3 "" H 25700 9675 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0121
+L power:GND ~PWR0121
 U 1 1 601D184E
 P 27250 10490
-F 0 "#PWR0121" H 27250 10240 50  0001 C CNN
+F 0 "~PWR0121" H 27250 10240 50  0001 C CNN
 F 1 "GND" H 27280 10295 50  0000 C CNN
 F 2 "" H 27250 10490 50  0001 C CNN
 F 3 "" H 27250 10490 50  0001 C CNN
@@ -3853,10 +3853,10 @@ F 3 "" H 27250 10490 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR0131
+L power:VCC ~PWR0131
 U 1 1 602BD69A
 P 26700 9675
-F 0 "#PWR0131" H 26700 9525 50  0001 C CNN
+F 0 "~PWR0131" H 26700 9525 50  0001 C CNN
 F 1 "VCC" H 26715 9885 50  0000 C CNN
 F 2 "" H 26700 9675 50  0001 C CNN
 F 3 "" H 26700 9675 50  0001 C CNN
@@ -3864,10 +3864,10 @@ F 3 "" H 26700 9675 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:VCC #PWR0132
+L power:VCC ~PWR0132
 U 1 1 602C0C6A
 P 28250 10470
-F 0 "#PWR0132" H 28250 10320 50  0001 C CNN
+F 0 "~PWR0132" H 28250 10320 50  0001 C CNN
 F 1 "VCC" H 28265 10680 50  0000 C CNN
 F 2 "" H 28250 10470 50  0001 C CNN
 F 3 "" H 28250 10470 50  0001 C CNN
@@ -3893,7 +3893,7 @@ P 26200 5550
 F 0 "Z103" V 25815 5595 50  0000 C CNN
 F 1 "74HCT02" V 25915 5595 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 26200 5550 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74hct02" H 26200 5550 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74hct02" H 26200 5550 50  0001 C CNN
 	5    26200 5550
 	0    1    1    0   
 $EndComp
@@ -3904,7 +3904,7 @@ P 26200 6200
 F 0 "Z104" V 25810 6200 50  0000 C CNN
 F 1 "74HCT30" V 25910 6200 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 26200 6200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS30" H 26200 6200 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS30" H 26200 6200 50  0001 C CNN
 	2    26200 6200
 	0    1    1    0   
 $EndComp
@@ -3940,10 +3940,10 @@ Connection ~ 20120 7475
 Wire Wire Line
 	20120 7475 20120 7575
 $Comp
-L power:VCC #PWR0134
+L power:VCC ~PWR0134
 U 1 1 5D2B6FED
 P 20120 7575
-F 0 "#PWR0134" H 20120 7425 50  0001 C CNN
+F 0 "~PWR0134" H 20120 7425 50  0001 C CNN
 F 1 "VCC" H 20100 7755 50  0000 C CNN
 F 2 "" H 20120 7575 50  0001 C CNN
 F 3 "" H 20120 7575 50  0001 C CNN
@@ -3982,10 +3982,10 @@ Connection ~ 22720 6875
 Wire Wire Line
 	22720 6875 22720 6975
 $Comp
-L power:VCC #PWR0142
+L power:VCC ~PWR0142
 U 1 1 5D4D29A6
 P 22720 6975
-F 0 "#PWR0142" H 22720 6825 50  0001 C CNN
+F 0 "~PWR0142" H 22720 6825 50  0001 C CNN
 F 1 "VCC" H 22700 7155 50  0000 C CNN
 F 2 "" H 22720 6975 50  0001 C CNN
 F 3 "" H 22720 6975 50  0001 C CNN
@@ -4024,10 +4024,10 @@ Connection ~ 22720 7325
 Wire Wire Line
 	22720 7325 22720 7425
 $Comp
-L power:VCC #PWR0143
+L power:VCC ~PWR0143
 U 1 1 5D5E770A
 P 22720 7425
-F 0 "#PWR0143" H 22720 7275 50  0001 C CNN
+F 0 "~PWR0143" H 22720 7275 50  0001 C CNN
 F 1 "VCC" H 22700 7605 50  0000 C CNN
 F 2 "" H 22720 7425 50  0001 C CNN
 F 3 "" H 22720 7425 50  0001 C CNN
@@ -4041,7 +4041,7 @@ P 25550 15800
 F 0 "D100" H 25570 16080 50  0000 C CNN
 F 1 "BAT54W" H 25570 15980 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 25550 15625 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/BAT54W_SER.pdf" H 25550 15800 50  0001 C CNN
+F 3 "https:~/assets.nexperia.com/documents/data-sheet/BAT54W_SER.pdf" H 25550 15800 50  0001 C CNN
 	1    25550 15800
 	1    0    0    -1  
 $EndComp
@@ -4104,12 +4104,12 @@ F 0 "POWER-9V-DC1" H 6910 17650 50  0000 C CNN
 F 1 "PJ-036C" H 6910 17550 50  0000 C CNN
 F 2 "cuipj:CUI_PJ-036C" H 7275 17650 50  0001 L BNN
 F 3 "" H 7175 17800 50  0001 L BNN
-F 4 "https://www.digikey.co.uk/product-detail/en/cui-inc/PJ-036C/CP-036C-ND/1644541?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol" H 6675 17950 50  0001 L BNN "Field4"
+F 4 "https:~/www.digikey.co.uk/product-detail/en/cui-inc/PJ-036C/CP-036C-ND/1644541?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol" H 6675 17950 50  0001 L BNN "Field4"
 F 5 "CUI Inc." H 7425 17250 50  0001 L BNN "Field5"
 F 6 "PJ-036C" H 7425 17250 50  0001 L BNN "Field6"
 F 7 "1.0 x 3.8 mm, 2.0 A, Horizontal, Through Hole, Dc Power Jack Connector" H 6675 17950 50  0001 L BNN "Field7"
 F 8 "CP-036C-ND" H 7275 17650 50  0001 L BNN "Field8"
-F 9 "https://www.cui.com/product/interconnect/connectors/dc-power-connectors/jacks/pj-036c?utm_source=snapeda.com&utm_medium=referral&utm_campaign=snapedaBOM" H 6675 17950 50  0001 L BNN "Field9"
+F 9 "https:~/www.cui.com/product/interconnect/connectors/dc-power-connectors/jacks/pj-036c?utm_source=snapeda.com&utm_medium=referral&utm_campaign=snapedaBOM" H 6675 17950 50  0001 L BNN "Field9"
 	1    6875 17250
 	1    0    0    -1  
 $EndComp
@@ -4250,7 +4250,7 @@ P 10350 13200
 F 0 "Z102" H 10395 13540 50  0000 C CNN
 F 1 "74HCT04" H 10395 13440 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 10350 13200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 10350 13200 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS04" H 10350 13200 50  0001 C CNN
 	3    10350 13200
 	1    0    0    -1  
 $EndComp
@@ -4261,7 +4261,7 @@ P 8900 6850
 F 0 "Z101" H 8920 7240 50  0000 C CNN
 F 1 "74HCT21" H 8920 7140 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 8900 6850 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS21" H 8900 6850 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS21" H 8900 6850 50  0001 C CNN
 	1    8900 6850
 	1    0    0    -1  
 $EndComp
@@ -4272,7 +4272,7 @@ P 23150 10475
 F 0 "Q1" H 22955 10385 50  0000 L CNN
 F 1 "MMBT3904" H 22940 10620 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 23350 10400 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 23150 10475 50  0001 L CNN
+F 3 "https:~/www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 23150 10475 50  0001 L CNN
 	1    23150 10475
 	1    0    0    -1  
 $EndComp
@@ -4328,15 +4328,15 @@ P 23975 4675
 F 0 "Z12" V 24700 4670 50  0000 C CNN
 F 1 "74HCT166" V 24600 4670 50  0000 C CNN
 F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 23975 4675 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS166" H 23975 4675 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS166" H 23975 4675 50  0001 C CNN
 	1    23975 4675
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:VCC #PWR0125
+L power:VCC ~PWR0125
 U 1 1 682088BB
 P 24800 5225
-F 0 "#PWR0125" H 24800 5075 50  0001 C CNN
+F 0 "~PWR0125" H 24800 5075 50  0001 C CNN
 F 1 "VCC" V 24790 5395 50  0000 L CNN
 F 2 "" H 24800 5225 50  0001 C CNN
 F 3 "" H 24800 5225 50  0001 C CNN
@@ -4376,7 +4376,7 @@ P 20700 3200
 F 0 "Z23" H 20740 3540 50  0000 C CNN
 F 1 "74HCT86" H 20740 3440 50  0000 C CNN
 F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 20700 3200 50  0001 C CNN
-F 3 "74xx/74ls86.pdf" H 20700 3200 50  0001 C CNN
+F 3 "74xx~74ls86.pdf" H 20700 3200 50  0001 C CNN
 	4    20700 3200
 	1    0    0    -1  
 $EndComp
@@ -4422,15 +4422,15 @@ P 13775 7550
 F 0 "Z107" H 13790 8545 50  0000 C CNN
 F 1 "74HCT273" H 13790 8445 50  0000 C CNN
 F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 13775 7550 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS273" H 13775 7550 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS273" H 13775 7550 50  0001 C CNN
 	1    13775 7550
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0163
+L power:GND ~PWR0163
 U 1 1 672E2423
 P 14125 8400
-F 0 "#PWR0163" H 14125 8150 50  0001 C CNN
+F 0 "~PWR0163" H 14125 8150 50  0001 C CNN
 F 1 "GND" H 14150 8185 50  0000 C CNN
 F 2 "" H 14125 8400 50  0001 C CNN
 F 3 "" H 14125 8400 50  0001 C CNN
@@ -4446,7 +4446,7 @@ P 15475 7450
 F 0 "Z105" H 15490 8350 50  0000 C CNN
 F 1 "74HCT365" H 15490 8250 50  0000 C CNN
 F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 15475 7450 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS365" H 15475 7450 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS365" H 15475 7450 50  0001 C CNN
 	1    15475 7450
 	1    0    0    -1  
 $EndComp
@@ -4461,7 +4461,7 @@ P 15475 9075
 F 0 "Z106" H 15500 10000 50  0000 C CNN
 F 1 "74HCT365" H 15500 9900 50  0000 C CNN
 F 2 "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" H 15475 9075 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS365" H 15475 9075 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74LS365" H 15475 9075 50  0001 C CNN
 	1    15475 9075
 	1    0    0    -1  
 $EndComp
@@ -4593,11 +4593,11 @@ P 11200 16975
 F 0 "C16" V 11365 17140 50  0000 L CNN
 F 1 "100nf" V 11465 17140 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0201_0603Metric" H 11550 17025 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 11550 16925 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 11550 16825 50  0001 L CNN "Description"
+F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 11550 16925 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 11550 16825 50  0001 L CNN "Description"
 F 5 "3" H 11550 16725 50  0001 L CNN "Height"
 F 6 "8523267" H 11550 16625 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 11550 16525 50  0001 L CNN "RS Price/Stock"
+F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 11550 16525 50  0001 L CNN "RS Price/Stock"
 F 8 "Vishay" H 11550 16425 50  0001 L CNN "Manufacturer_Name"
 F 9 "K104K10X7RF53H5" H 11550 16325 50  0001 L CNN "Manufacturer_Part_Number"
 F 10 "70122995" H 11550 16225 50  0001 L CNN "Allied_Number"
@@ -4869,7 +4869,7 @@ P 9200 8700
 F 0 "Z1-2" H 9200 10000 50  0000 C CNN
 F 1 "27C256" H 9200 9900 50  0000 C CNN
 F 2 "Package_LCC:PLCC-32_SMD_Socket_11.4x14.0mm_P1.27mm" H 9200 8700 50  0001 C CNN
-F 3 "http://datasheet.octopart.com/D27256-2-Intel-datasheet-17852618.pdf" H 9200 8700 50  0001 C CNN
+F 3 "http:~/datasheet.octopart.com/D27256-2-Intel-datasheet-17852618.pdf" H 9200 8700 50  0001 C CNN
 	1    9200 8700
 	1    0    0    -1  
 $EndComp
@@ -4916,10 +4916,10 @@ Wire Wire Line
 Wire Wire Line
 	25025 4675 25025 4575
 $Comp
-L power:VCC #PWR0135
+L power:VCC ~PWR0135
 U 1 1 5FF2F9BD
 P 21700 4125
-F 0 "#PWR0135" H 21700 3975 50  0001 C CNN
+F 0 "~PWR0135" H 21700 3975 50  0001 C CNN
 F 1 "VCC" H 21765 4320 50  0000 C CNN
 F 2 "" H 21700 4125 50  0001 C CNN
 F 3 "" H 21700 4125 50  0001 C CNN
@@ -4989,10 +4989,10 @@ Wire Wire Line
 NoConn ~ 14275 7650
 NoConn ~ 14275 7750
 $Comp
-L power:VCC #PWR0152
+L power:VCC ~PWR0152
 U 1 1 6671ECD9
 P 14650 6750
-F 0 "#PWR0152" H 14650 6600 50  0001 C CNN
+F 0 "~PWR0152" H 14650 6600 50  0001 C CNN
 F 1 "VCC" H 14690 6960 50  0000 C CNN
 F 2 "" H 14650 6750 50  0001 C CNN
 F 3 "" H 14650 6750 50  0001 C CNN
@@ -5044,7 +5044,7 @@ Connection ~ 11100 7100
 Wire Wire Line
 	11400 7100 11500 7100
 Text Label 11500 7100 0    50   ~ 0
-#WE
+~WE
 $Comp
 L SamacSys_Parts:71321SA55JG8 Z7-8
 U 1 1 5D27DF0C
@@ -5052,7 +5052,7 @@ P 21050 4525
 F 0 "Z7-8" H 22045 4820 50  0000 C CNN
 F 1 "71321SA55JG8" H 21330 4810 50  0000 C CNN
 F 2 "Package_LCC:PLCC-52" H 22300 4625 50  0001 L CNN
-F 3 "https://www.idt.com/document/dst/71321421-datasheet" H 22300 4525 50  0001 L CNN
+F 3 "https:~/www.idt.com/document/dst/71321421-datasheet" H 22300 4525 50  0001 L CNN
 F 4 "IC SRAM 16K PARALLEL 52PLCC" H 22300 4425 50  0001 L CNN "Description"
 F 5 "3.63" H 22300 4325 50  0001 L CNN "Height"
 F 6 "IDT, Integrated Device Technology Inc" H 22300 4025 50  0001 L CNN "Manufacturer_Name"
@@ -5061,29 +5061,29 @@ F 7 "71321SA55JG8" H 22300 3925 50  0001 L CNN "Manufacturer_Part_Number"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	23425 3350 23425 3250
+	23275 3200 23275 3100
 Wire Wire Line
 	21800 3200 22500 3200
 $Comp
-L power:GND #SUPPLY0110
+L power:GND ~SUPPLY0110
 U 1 1 5D703F5E
-P 23425 3250
-F 0 "#SUPPLY0110" H 23425 3250 50  0001 C CNN
-F 1 "GND" H 23350 3125 50  0000 L BNN
-F 2 "" H 23425 3250 50  0001 C CNN
-F 3 "" H 23425 3250 50  0001 C CNN
-	1    23425 3250
+P 23275 3100
+F 0 "~SUPPLY0110" H 23275 3100 50  0001 C CNN
+F 1 "GND" H 23200 2975 50  0000 L BNN
+F 2 "" H 23275 3100 50  0001 C CNN
+F 3 "" H 23275 3100 50  0001 C CNN
+	1    23275 3100
 	-1   0    0    1   
 $EndComp
 $Comp
 L Connector_Generic:Conn_01x02 COMPOSITE-OUT1
 U 1 1 5D703F64
-P 23625 3450
-F 0 "COMPOSITE-OUT1" H 23725 3375 50  0000 L CNN
-F 1 "COMPOSITE-OUT1" H 23575 3200 50  0001 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 23625 3450 50  0001 C CNN
-F 3 "~" H 23625 3450 50  0001 C CNN
-	1    23625 3450
+P 23475 3300
+F 0 "COMPOSITE-OUT1" H 23575 3225 50  0000 L CNN
+F 1 "COMPOSITE-OUT1" H 23425 3050 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 23475 3300 50  0001 C CNN
+F 3 "~" H 23475 3300 50  0001 C CNN
+	1    23475 3300
 	1    0    0    1   
 $EndComp
 $Comp
@@ -5100,10 +5100,10 @@ $EndComp
 Wire Wire Line
 	22500 3450 22400 3450
 $Comp
-L power:GND #SUPPLY0111
+L power:GND ~SUPPLY0111
 U 1 1 5D703F71
 P 22400 3450
-F 0 "#SUPPLY0111" H 22400 3450 50  0001 C CNN
+F 0 "~SUPPLY0111" H 22400 3450 50  0001 C CNN
 F 1 "GND" H 22325 3325 50  0000 L BNN
 F 2 "" H 22400 3450 50  0001 C CNN
 F 3 "" H 22400 3450 50  0001 C CNN
@@ -5111,10 +5111,10 @@ F 3 "" H 22400 3450 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:VCC #P+0102
+L power:VCC ~P+0102
 U 1 1 5D703F77
 P 22800 2950
-F 0 "#P+0102" H 22800 2950 50  0001 C CNN
+F 0 "~P+0102" H 22800 2950 50  0001 C CNN
 F 1 "VCC" H 22850 3175 50  0000 C CNN
 F 2 "" H 22800 2950 50  0001 C CNN
 F 3 "" H 22800 2950 50  0001 C CNN
@@ -5139,19 +5139,8 @@ F 3 "~" H 22650 3450 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	22800 3000 22800 2950
-$Comp
-L Device:R R112
-U 1 1 5D703F87
-P 23200 3450
-F 0 "R112" V 22950 3450 50  0000 C CNN
-F 1 "18" V 23050 3450 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 23130 3450 50  0001 C CNN
-F 3 "~" H 23200 3450 50  0001 C CNN
-	1    23200 3450
-	0    1    1    0   
-$EndComp
 Wire Wire Line
-	23425 3450 23350 3450
+	23275 3300 23200 3300
 $Comp
 L Connector_Generic:Conn_01x02 SPK1
 U 1 1 5E96BAA0
@@ -5185,10 +5174,10 @@ Connection ~ 17950 13200
 Wire Wire Line
 	17250 14000 17700 14000
 $Comp
-L power:GND #PWR0101
+L power:GND ~PWR0101
 U 1 1 6535A473
 P 17950 14380
-F 0 "#PWR0101" H 17950 14130 50  0001 C CNN
+F 0 "~PWR0101" H 17950 14130 50  0001 C CNN
 F 1 "GND" H 17970 14180 50  0000 C CNN
 F 2 "" H 17950 14380 50  0001 C CNN
 F 3 "" H 17950 14380 50  0001 C CNN
@@ -5204,8 +5193,19 @@ P 17800 14000
 F 0 "Q3" V 17750 14250 50  0000 L CNN
 F 1 "BC183" V 17800 14250 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_HandSolder" H 18000 13925 50  0001 L CIN
-F 3 "http://www.onsemi.com/pub_link/Collateral/BC237-D.PDF" H 17800 14000 50  0001 L CNN
+F 3 "http:~/www.onsemi.com/pub_link/Collateral/BC237-D.PDF" H 17800 14000 50  0001 L CNN
 	1    17800 14000
 	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_POT_TRIM RV101
+U 1 1 5F3229CF
+P 23200 3450
+F 0 "RV101" V 23050 3450 50  0000 C CNN
+F 1 "100" V 22950 3450 50  0000 C CNN
+F 2 "Potentiometer_THT:3362H1103LF" H 23200 3450 50  0001 C CNN
+F 3 "~" H 23200 3450 50  0001 C CNN
+	1    23200 3450
+	0    -1   -1   0   
 $EndComp
 $EndSCHEMATC

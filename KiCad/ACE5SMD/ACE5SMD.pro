@@ -1,4 +1,4 @@
-update=02/07/2019 13:29:48
+update=02/09/2019 01:18:46
 version=1
 last_client=kicad
 [general]
@@ -247,9 +247,9 @@ dPairWidth=0.2
 dPairGap=0.25
 dPairViaGap=0.25
 [pcbnew/Netclasses/1]
-Name=SMD
+Name=Power
 Clearance=0.1524
-TrackWidth=0.2
+TrackWidth=0.4
 ViaDiameter=0.8
 ViaDrill=0.4
 uViaDiameter=0.3
