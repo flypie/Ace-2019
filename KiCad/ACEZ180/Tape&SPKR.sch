@@ -642,11 +642,6 @@ Wire Wire Line
 	11575 3100 11375 3100
 NoConn ~ 11375 3300
 NoConn ~ 11075 3500
-Wire Wire Line
-	13675 7550 13750 7550
-Text Label 13750 7550 0    50   ~ 0
-~WE
-NoConn ~ 14800 7475
 $Comp
 L Connector_Generic:Conn_01x02 SPK1
 U 1 1 623AF067

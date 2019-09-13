@@ -87,10 +87,10 @@ F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT02" H 6650 3125 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74LS08 Z301
+L 74xx:74LS08 Z20
 U 2 1 5F80C874
 P 7850 2825
-F 0 "Z301" H 7875 3180 50  0000 C CNN
+F 0 "Z20" H 7875 3180 50  0000 C CNN
 F 1 "SN74AHCT08N" H 7875 3080 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 7850 2825 50  0001 C CNN
 F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT08" H 7850 2825 50  0001 C CNN
@@ -98,10 +98,10 @@ F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT08" H 7850 2825 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74LS08 Z301
+L 74xx:74LS08 Z20
 U 4 1 5F80C880
 P 8650 3325
-F 0 "Z301" H 8670 3685 50  0000 C CNN
+F 0 "Z20" H 8670 3685 50  0000 C CNN
 F 1 "SN74AHCT08N" H 8670 3585 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 8650 3325 50  0001 C CNN
 F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT08" H 8650 3325 50  0001 C CNN
@@ -483,8 +483,6 @@ Wire Wire Line
 Connection ~ 13550 3325
 Wire Wire Line
 	13550 3325 14250 3325
-Text GLabel 15025 5375 3    50   Input ~ 0
-~CPUCLK
 Wire Wire Line
 	15525 5325 15425 5325
 $Comp
@@ -863,10 +861,10 @@ F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT00" H 10350 2225 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74LS08 Z301
+L 74xx:74LS08 Z20
 U 3 1 5F80C87A
 P 10350 2925
-F 0 "Z301" H 10365 3275 50  0000 C CNN
+F 0 "Z20" H 10365 3275 50  0000 C CNN
 F 1 "SN74AHCT08N" H 10365 3175 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 10350 2925 50  0001 C CNN
 F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT08" H 10350 2925 50  0001 C CNN
@@ -998,8 +996,6 @@ Wire Wire Line
 	12150 3800 14025 3800
 Wire Wire Line
 	6550 5125 6650 5125
-Text GLabel 6650 5125 2    50   Input ~ 0
-~INT
 Text Label 730  1625 1    50   ~ 0
 ~VIDEOCLK
 $Comp
@@ -1625,4 +1621,8 @@ F 3 "~" H 14900 3525 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 NoConn ~ 15050 3525
+Text Label 15025 5375 3    50   ~ 0
+~VIDEOCLK
+Text GLabel 6650 5125 2    50   Input ~ 0
+~INT0
 $EndSCHEMATC

@@ -1,4 +1,11 @@
-16086240898176680
+16092525228483155
+aaaafootprints
+28-BSOJ
+
+
+0
+28
+28
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -49140,6 +49147,13 @@ Yellow 5381 Series LED
 2
 2
 Local
+5749180-1
+5749180-1
+Connector
+0
+9
+9
+Local
 DIOM5126X265N
 SMA6T6V7AY
 TVS Diode (Uni-directional)
@@ -49181,6 +49195,13 @@ Integrated Circuit
 0
 100
 100
+Local
+SOIC127P1210X305-28N
+IS62C256AL-45ULI-1
+Integrated Circuit
+0
+28
+28
 localp
 FPS0093003BL
 FPS009-3003-BL-5
@@ -59352,6 +59373,13 @@ X2SON-8 1.4x1mm Pitch0.35mm
 0
 8
 8
+Package_SO_J-Lead
+SOJ-44
+
+
+0
+44
+44
 Package_SO_J-Lead
 TSOC-6_3.76x3.94mm_P1.27mm
 Maxim Integrated TSOC-6 D6+1,https://datasheets.maximintegrated.com/en/ds/DS2401.pdf, https://pdfserv.maximintegrated.com/land_patterns/90-0321.PDF
