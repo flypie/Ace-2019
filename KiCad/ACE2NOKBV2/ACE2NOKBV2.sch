@@ -5036,4 +5036,26 @@ Wire Wire Line
 	22725 2800 22725 2700
 Wire Wire Line
 	22100 3050 22350 3050
+$Comp
+L Graphic:ZilogBack Logo1
+U 1 1 5DA55AA4
+P 1650 4150
+F 0 "Logo1" H 2000 4375 50  0000 C CNN
+F 1 "ZilogBack" H 2000 4275 50  0000 C CNN
+F 2 "Symbol:ZilogInsideBack" H 2100 4400 50  0001 C CNN
+F 3 "" H 1850 4300 50  0001 C CNN
+	1    1650 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Graphic:ZilogFront Logo2
+U 1 1 5DA58383
+P 1675 3075
+F 0 "Logo2" H 2100 3275 50  0000 C CNN
+F 1 "ZilogFront" H 2100 3175 50  0000 C CNN
+F 2 "Symbol:ZilogInsideFront" H 2125 3325 50  0001 C CNN
+F 3 "" H 1675 2975 50  0001 C CNN
+	1    1675 3075
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
