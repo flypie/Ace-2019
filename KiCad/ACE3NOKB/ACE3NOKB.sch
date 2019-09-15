@@ -5747,4 +5747,26 @@ $EndComp
 Wire Wire Line
 	21575 12950 22000 12950
 NoConn ~ -1450 3725
+$Comp
+L Graphic:ZilogBack Logo2
+U 1 1 5D8F145F
+P -1850 5450
+F 0 "Logo2" H -1825 5500 50  0000 L CNN
+F 1 "ZilogBack" H -1825 5450 50  0000 L CNN
+F 2 "Symbol:ZilogInsideBack" H -1800 5650 50  0001 C CNN
+F 3 "" H -1850 5450 50  0001 C CNN
+	1    -1850 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Graphic:ZilogFront Logo1
+U 1 1 5D8FCBB5
+P -1850 5125
+F 0 "Logo1" H -1825 5200 50  0000 L CNN
+F 1 "ZilogFront" H -1825 5100 50  0000 L CNN
+F 2 "Symbol:ZilogInsideFront" H -1800 5325 50  0001 C CNN
+F 3 "" H -1850 5125 50  0001 C CNN
+	1    -1850 5125
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

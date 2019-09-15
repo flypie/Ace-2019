@@ -5,14 +5,14 @@ EELAYER END
 $Descr User 29528 19685
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
-Comment2 ""
-Comment3 ""
-Comment4 ""
+Title "ACE5 SMD"
+Date "2019-09-15"
+Rev "Alpha"
+Comp "Ontobus"
+Comment1 "John Bradlet"
+Comment2 "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+Comment3 "Attribution-NonCommercial-ShareAlike 4.0 International License."
+Comment4 "This work is licensed under a Creative Commons "
 $EndDescr
 $Comp
 L 74xx:74LS86 Z23
@@ -176,7 +176,7 @@ Wire Wire Line
 Wire Wire Line
 	2100 7550 2425 7550
 $Comp
-L Zilog_z80:Z84C15-QFP Z0
+L ACE5SMD-rescue:Z84C15-QFP-Zilog_z80 Z0
 U 1 1 09F6B21C
 P 1300 3350
 F 0 "Z0" H 1300 3500 50  0000 L BNN
@@ -187,7 +187,7 @@ F 3 "" H 1300 3350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Zilog_z80:Z84C15-QFP Z0
+L ACE5SMD-rescue:Z84C15-QFP-Zilog_z80 Z0
 U 3 1 09F6B214
 P 1300 6750
 F 0 "Z0" H 1245 6330 50  0000 R CNN
@@ -3449,7 +3449,7 @@ F 3 "" H 6225 9550 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Zilog_z80:Z84C15-QFP Z0
+L ACE5SMD-rescue:Z84C15-QFP-Zilog_z80 Z0
 U 4 1 09F6B208
 P 1325 8050
 F 0 "Z0" H 1325 8200 50  0000 L BNN
@@ -3460,7 +3460,7 @@ F 3 "" H 1325 8050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Zilog_z80:Z84C15-QFP Z0
+L ACE5SMD-rescue:Z84C15-QFP-Zilog_z80 Z0
 U 5 1 09F6B20C
 P 1325 9550
 F 0 "Z0" H 1325 9700 50  0000 L BNN
@@ -3471,7 +3471,7 @@ F 3 "" H 1325 9550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Zilog_z80:Z84C15-QFP Z0
+L ACE5SMD-rescue:Z84C15-QFP-Zilog_z80 Z0
 U 7 1 09F6B204
 P 1325 12725
 F 0 "Z0" H 1325 12875 50  0000 L BNN
@@ -4064,7 +4064,7 @@ Wire Wire Line
 Wire Wire Line
 	4025 8750 4825 8750
 $Comp
-L Zilog_z80:Z84C15-QFP Z0
+L ACE5SMD-rescue:Z84C15-QFP-Zilog_z80 Z0
 U 2 1 09F6B210
 P 5025 8350
 F 0 "Z0" H 5500 8600 50  0000 C CNN
@@ -4156,7 +4156,7 @@ Wire Wire Line
 Wire Wire Line
 	2325 11150 2025 11150
 $Comp
-L Zilog_z80:Z84C15-QFP Z0
+L ACE5SMD-rescue:Z84C15-QFP-Zilog_z80 Z0
 U 6 1 09F6B200
 P 1325 11050
 F 0 "Z0" H 1325 11200 50  0000 L BNN

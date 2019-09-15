@@ -5,14 +5,14 @@ EELAYER END
 $Descr User 29528 15748
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
-Comment2 ""
-Comment3 ""
-Comment4 ""
+Title "ACE5"
+Date "2019-09-15"
+Rev "Alpha"
+Comp "Ontobus"
+Comment1 "John Bradley"
+Comment2 "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+Comment3 "Attribution-NonCommercial-ShareAlike 4.0 International License."
+Comment4 "This work is licensed under a Creative Commons "
 $EndDescr
 $Comp
 L Memory_EPROM:27C512PLCC Z1-2
