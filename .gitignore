@@ -12,7 +12,16 @@ gui_defaults.par
 *.gbr
 *.drl
 *.zip
+*.bck
+*.dcm
+*fp-info-cache*
 sdreader/
+ExtraFootprints.pretty/
+gerber/
+
+
+
+
 
 
 

@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:acez180-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A3 11693 16535 portrait
 encoding utf-8
@@ -48,7 +47,7 @@ U 1 1 5F80CEC2
 P 2600 5125
 F 0 "C100" H 2525 5225 59  0000 R CNN
 F 1 "22p" H 2525 5075 59  0000 R CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 2600 5125 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 2600 5125 50  0001 C CNN
 F 3 "~" H 2600 5125 50  0001 C CNN
 	1    2600 5125
 	1    0    0    -1  
@@ -112,8 +111,6 @@ Wire Wire Line
 	4800 7475 4900 7475
 Wire Wire Line
 	2600 5375 2600 5275
-Text Label 3700 5875 1    50   ~ 0
-~RFSH
 Text Label 2500 5875 1    50   ~ 0
 ~BUSAK
 Text Label 3800 5875 1    50   ~ 0
@@ -299,23 +296,23 @@ $EndComp
 $Comp
 L power:VCC #~~~PWR0114
 U 1 1 5F80C5C9
-P 7475 5575
-F 0 "#~~~PWR0114" H 7475 5425 50  0001 C CNN
-F 1 "VCC" V 7495 5720 50  0000 L CNN
-F 2 "" H 7475 5575 50  0001 C CNN
-F 3 "" H 7475 5575 50  0001 C CNN
-	1    7475 5575
+P 7475 5525
+F 0 "#~~~PWR0114" H 7475 5375 50  0001 C CNN
+F 1 "VCC" V 7495 5670 50  0000 L CNN
+F 2 "" H 7475 5525 50  0001 C CNN
+F 3 "" H 7475 5525 50  0001 C CNN
+	1    7475 5525
 	0    -1   -1   0   
 $EndComp
 $Comp
 L power:GND #~~~PWR0106
 U 1 1 5F80C599
-P 7675 7875
-F 0 "#~~~PWR0106" H 7675 7625 50  0001 C CNN
-F 1 "GND" V 7710 7740 50  0000 R CNN
-F 2 "" H 7675 7875 50  0001 C CNN
-F 3 "" H 7675 7875 50  0001 C CNN
-	1    7675 7875
+P 7675 7825
+F 0 "#~~~PWR0106" H 7675 7575 50  0001 C CNN
+F 1 "GND" V 7710 7690 50  0000 R CNN
+F 2 "" H 7675 7825 50  0001 C CNN
+F 3 "" H 7675 7825 50  0001 C CNN
+	1    7675 7825
 	0    -1   -1   0   
 $EndComp
 Text GLabel 9800 3175 0    50   Input ~ 0
@@ -328,8 +325,6 @@ Text GLabel 10500 2275 2    50   Input ~ 0
 ~RESET
 Text GLabel 10500 3175 2    50   Input ~ 0
 ~NMI
-Wire Wire Line
-	7125 7475 6575 7475
 Wire Wire Line
 	7125 7575 7125 7475
 Wire Wire Line
@@ -379,8 +374,6 @@ Wire Wire Line
 	10400 2275 10500 2275
 Wire Wire Line
 	10400 2175 10500 2175
-Text Label 10500 2175 0    50   ~ 0
-~M1
 Wire Wire Line
 	10400 3075 10500 3075
 Text Label 10500 3075 0    50   ~ 0
@@ -391,8 +384,6 @@ Text Label 10500 2575 0    50   ~ 0
 ~BUSAK
 Wire Wire Line
 	10400 2075 10500 2075
-Text Label 10500 2075 0    50   ~ 0
-~REFSH
 Wire Wire Line
 	10400 1575 10500 1575
 Wire Wire Line
@@ -562,7 +553,7 @@ Wire Wire Line
 Text GLabel 2100 5775 1    50   Input ~ 0
 ~INT0
 Text GLabel 10500 3275 2    50   Input ~ 0
-~INT
+~INT0
 Wire Wire Line
 	7175 5775 7075 5775
 Wire Wire Line
@@ -572,41 +563,19 @@ Wire Wire Line
 Wire Wire Line
 	7175 6075 7075 6075
 Wire Wire Line
-	7175 6375 7075 6375
-Wire Wire Line
-	7175 6475 7075 6475
-Wire Wire Line
-	7175 6575 7075 6575
-Wire Wire Line
-	7175 6775 7075 6775
-Wire Wire Line
-	7175 6875 7075 6875
-Wire Wire Line
-	7175 6975 7075 6975
-Wire Wire Line
-	7175 7075 7075 7075
-Wire Wire Line
-	7175 6175 7075 6175
-Wire Wire Line
-	7175 6275 7075 6275
-Wire Wire Line
-	7175 6675 7075 6675
-Wire Wire Line
-	7175 7175 7075 7175
-Wire Wire Line
 	2400 5975 2400 5875
 Wire Wire Line
 	10125 6775 10025 6775
 Wire Wire Line
-	7675 7875 7575 7875
+	7675 7825 7575 7825
 Wire Wire Line
-	7575 7875 7575 7825
+	7575 7825 7575 7775
 Wire Wire Line
 	10025 6875 10125 6875
 Wire Wire Line
-	7575 5625 7575 5575
+	7575 5575 7575 5525
 Wire Wire Line
-	7575 5575 7475 5575
+	7575 5525 7475 5525
 $Comp
 L Device:R R32
 U 1 1 5E6D6A8A
@@ -679,14 +648,14 @@ Wire Wire Line
 Wire Wire Line
 	8725 6875 8825 6875
 $Comp
-L Memory_EEPROM:AT28C256-15PU Z1-2
+L Memory_EEPROM:28C256 Z1-2
 U 1 1 5F80C898
-P 7375 5725
-F 0 "Z1-2" H 7600 6050 50  0000 C CNN
-F 1 "28C256" H 7600 5950 50  0000 C CNN
-F 2 "Package_DIP:DIP-28_W15.24mm" H 7375 5725 50  0001 C CNN
-F 3 "http:~/ww1.microchip.com/downloads/en/DeviceDoc/doc0015.pdf" H 7375 5725 50  0001 C CNN
-	1    7375 5725
+P 7575 6675
+F 0 "Z1-2" H 7600 8000 50  0000 C CNN
+F 1 "28C256" H 7600 7900 50  0000 C CNN
+F 2 "Package_DIP:DIP-28_W15.24mm" H 7575 6675 50  0001 C CNN
+F 3 "http:~/ww1.microchip.com/downloads/en/DeviceDoc/doc0015.pdf" H 7575 6675 50  0001 C CNN
+	1    7575 6675
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -774,10 +743,6 @@ Wire Wire Line
 	2000 5975 2000 5775
 Wire Wire Line
 	1900 5975 1900 5775
-Text GLabel 2000 5775 1    50   Input ~ 0
-~INT1
-Text GLabel 1900 5775 1    50   Input ~ 0
-~INT2
 Wire Wire Line
 	1300 6675 1200 6675
 Text Label 1200 6675 2    50   ~ 0
@@ -825,7 +790,7 @@ Wire Wire Line
 Wire Wire Line
 	2475 2400 2475 3625
 $Comp
-L Memory_RAM:AS6C8008-55ZIN Z3-4
+L SamacSys_Parts:AS6C8008-55ZIN Z3-4
 U 1 1 5FC4A936
 P 8825 5775
 F 0 "Z3-4" H 9425 6075 50  0000 C CNN
@@ -1151,7 +1116,6 @@ A1
 Text GLabel 9800 1275 0    50   Input ~ 0
 ~WE
 NoConn ~ 500  11800
-NoConn ~ 7175 7675
 Text GLabel 11025 5100 2    50   Input ~ 0
 ~WE
 $Comp
@@ -1175,139 +1139,119 @@ Wire Wire Line
 	7750 14175 8400 14175
 Connection ~ 4000 11025
 Connection ~ 4000 10925
-Wire Wire Line
-	10425 10750 10425 10600
-Wire Wire Line
-	10425 11250 10425 11350
 $Comp
-L SamacSys_Parts:K104K10X7RF53H5 C409
+L Device:C C409
 U 1 1 5D7DC48B
-P 10425 10750
-F 0 "C409" V 10590 10900 50  0000 L CNN
-F 1 "100nf" V 10690 10900 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 10775 10800 50  0001 L CNN
-F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 10775 10700 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 10775 10600 50  0001 L CNN "Description"
-F 5 "3" H 10775 10500 50  0001 L CNN "Height"
-F 6 "8523267" H 10775 10400 50  0001 L CNN "RS Part Number"
-F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 10775 10300 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 10775 10200 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 10775 10100 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 10775 10000 50  0001 L CNN "Allied_Number"
-	1    10425 10750
-	0    1    1    0   
+P 10425 11000
+F 0 "C409" V 10590 11150 50  0000 L CNN
+F 1 "100nf" V 10690 11150 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 10775 11050 50  0001 L CNN
+F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 10775 10950 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 10775 10850 50  0001 L CNN "Description"
+F 5 "3" H 10775 10750 50  0001 L CNN "Height"
+F 6 "8523267" H 10775 10650 50  0001 L CNN "RS Part Number"
+F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 10775 10550 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 10775 10450 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 10775 10350 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 10775 10250 50  0001 L CNN "Allied_Number"
+	1    10425 11000
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	10150 10600 10425 10600
 Connection ~ 10150 10600
 Wire Wire Line
-	10150 10750 10150 10600
-Wire Wire Line
 	9875 10600 10150 10600
 Connection ~ 9875 10600
 Wire Wire Line
-	9875 10750 9875 10600
-Wire Wire Line
 	9625 10600 9875 10600
 Connection ~ 9625 10600
-Wire Wire Line
-	9625 10750 9625 10600
 Connection ~ 9625 11350
-Wire Wire Line
-	9625 11250 9625 11350
 Wire Wire Line
 	9625 11350 9875 11350
 Connection ~ 9875 11350
-Wire Wire Line
-	9875 11250 9875 11350
 Wire Wire Line
 	10150 11350 10425 11350
 Wire Wire Line
 	9875 11350 10150 11350
 Connection ~ 10150 11350
-Wire Wire Line
-	10150 11250 10150 11350
 $Comp
-L SamacSys_Parts:K104K10X7RF53H5 C407
+L Device:C C407
 U 1 1 5D7DC46A
-P 9875 10750
-F 0 "C407" V 10040 10915 50  0000 L CNN
-F 1 "100nf" V 10140 10915 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 10225 10800 50  0001 L CNN
-F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 10225 10700 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 10225 10600 50  0001 L CNN "Description"
-F 5 "3" H 10225 10500 50  0001 L CNN "Height"
-F 6 "8523267" H 10225 10400 50  0001 L CNN "RS Part Number"
-F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 10225 10300 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 10225 10200 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 10225 10100 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 10225 10000 50  0001 L CNN "Allied_Number"
-	1    9875 10750
-	0    1    1    0   
+P 9875 11000
+F 0 "C407" V 10040 11165 50  0000 L CNN
+F 1 "100nf" V 10140 11165 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 10225 11050 50  0001 L CNN
+F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 10225 10950 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 10225 10850 50  0001 L CNN "Description"
+F 5 "3" H 10225 10750 50  0001 L CNN "Height"
+F 6 "8523267" H 10225 10650 50  0001 L CNN "RS Part Number"
+F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 10225 10550 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 10225 10450 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 10225 10350 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 10225 10250 50  0001 L CNN "Allied_Number"
+	1    9875 11000
+	-1   0    0    1   
 $EndComp
 $Comp
-L SamacSys_Parts:K104K10X7RF53H5 C406
+L Device:C C406
 U 1 1 5D7DC459
-P 9625 10750
-F 0 "C406" V 9790 10915 50  0000 L CNN
-F 1 "100nf" V 9890 10915 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 9975 10800 50  0001 L CNN
-F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 9975 10700 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 9975 10600 50  0001 L CNN "Description"
-F 5 "3" H 9975 10500 50  0001 L CNN "Height"
-F 6 "8523267" H 9975 10400 50  0001 L CNN "RS Part Number"
-F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 9975 10300 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 9975 10200 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 9975 10100 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 9975 10000 50  0001 L CNN "Allied_Number"
-	1    9625 10750
-	0    1    1    0   
+P 9625 11000
+F 0 "C406" V 9790 11165 50  0000 L CNN
+F 1 "100nf" V 9890 11165 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 9975 11050 50  0001 L CNN
+F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 9975 10950 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 9975 10850 50  0001 L CNN "Description"
+F 5 "3" H 9975 10750 50  0001 L CNN "Height"
+F 6 "8523267" H 9975 10650 50  0001 L CNN "RS Part Number"
+F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 9975 10550 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 9975 10450 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 9975 10350 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 9975 10250 50  0001 L CNN "Allied_Number"
+	1    9625 11000
+	-1   0    0    1   
 $EndComp
 $Comp
-L SamacSys_Parts:K104K10X7RF53H5 C408
+L Device:C C408
 U 1 1 5D7DC448
-P 10150 10750
-F 0 "C408" V 10315 10900 50  0000 L CNN
-F 1 "100nf" V 10415 10900 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 10500 10800 50  0001 L CNN
-F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 10500 10700 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 10500 10600 50  0001 L CNN "Description"
-F 5 "3" H 10500 10500 50  0001 L CNN "Height"
-F 6 "8523267" H 10500 10400 50  0001 L CNN "RS Part Number"
-F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 10500 10300 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 10500 10200 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 10500 10100 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 10500 10000 50  0001 L CNN "Allied_Number"
-	1    10150 10750
-	0    1    1    0   
+P 10150 11000
+F 0 "C408" V 10315 11150 50  0000 L CNN
+F 1 "100nf" V 10415 11150 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 10500 11050 50  0001 L CNN
+F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 10500 10950 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 10500 10850 50  0001 L CNN "Description"
+F 5 "3" H 10500 10750 50  0001 L CNN "Height"
+F 6 "8523267" H 10500 10650 50  0001 L CNN "RS Part Number"
+F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 10500 10550 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 10500 10450 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 10500 10350 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 10500 10250 50  0001 L CNN "Allied_Number"
+	1    10150 11000
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	9375 10600 9625 10600
 Connection ~ 9375 10600
 Wire Wire Line
-	9375 10750 9375 10600
-Wire Wire Line
 	9375 11350 9625 11350
 Connection ~ 9375 11350
-Wire Wire Line
-	9375 11250 9375 11350
 $Comp
-L SamacSys_Parts:K104K10X7RF53H5 C405
+L Device:C C405
 U 1 1 5D78459E
-P 9375 10750
-F 0 "C405" V 9540 10900 50  0000 L CNN
-F 1 "100nf" V 9640 10900 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 9725 10800 50  0001 L CNN
-F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 9725 10700 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 9725 10600 50  0001 L CNN "Description"
-F 5 "3" H 9725 10500 50  0001 L CNN "Height"
-F 6 "8523267" H 9725 10400 50  0001 L CNN "RS Part Number"
-F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 9725 10300 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 9725 10200 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 9725 10100 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 9725 10000 50  0001 L CNN "Allied_Number"
-	1    9375 10750
-	0    1    1    0   
+P 9375 11000
+F 0 "C405" V 9540 11150 50  0000 L CNN
+F 1 "100nf" V 9640 11150 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 9725 11050 50  0001 L CNN
+F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 9725 10950 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 9725 10850 50  0001 L CNN "Description"
+F 5 "3" H 9725 10750 50  0001 L CNN "Height"
+F 6 "8523267" H 9725 10650 50  0001 L CNN "RS Part Number"
+F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 9725 10550 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 9725 10450 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 9725 10350 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 9725 10250 50  0001 L CNN "Allied_Number"
+	1    9375 11000
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	5700 10600 5900 10600
@@ -1339,8 +1283,6 @@ Wire Wire Line
 	6925 10600 7075 10600
 Connection ~ 8100 11350
 Wire Wire Line
-	8100 11250 8100 11350
-Wire Wire Line
 	4400 10600 4850 10600
 Connection ~ 4850 10600
 Wire Wire Line
@@ -1349,59 +1291,39 @@ Wire Wire Line
 	9100 10600 9375 10600
 Connection ~ 9100 10600
 Wire Wire Line
-	9100 10750 9100 10600
-Wire Wire Line
 	8825 10600 9100 10600
 Connection ~ 8825 10600
-Wire Wire Line
-	8825 10750 8825 10600
 Wire Wire Line
 	8575 10600 8825 10600
 Connection ~ 8575 10600
 Wire Wire Line
-	8575 10750 8575 10600
-Wire Wire Line
 	8325 10600 8575 10600
 Connection ~ 8325 10600
-Wire Wire Line
-	8325 10750 8325 10600
 Wire Wire Line
 	8100 10600 8325 10600
 Connection ~ 8100 10600
 Wire Wire Line
-	8100 10750 8100 10600
-Wire Wire Line
 	7875 10600 8100 10600
 Connection ~ 7875 10600
-Wire Wire Line
-	7875 10750 7875 10600
 Wire Wire Line
 	7550 10600 7650 10600
 Wire Wire Line
 	7650 10600 7875 10600
 Connection ~ 7650 10600
 Wire Wire Line
-	7650 10750 7650 10600
-Wire Wire Line
 	7425 10600 7550 10600
 Connection ~ 7425 10600
-Wire Wire Line
-	7425 10750 7425 10600
 Wire Wire Line
 	7075 10600 7200 10600
 Wire Wire Line
 	7200 10600 7425 10600
 Connection ~ 7200 10600
 Wire Wire Line
-	7200 10750 7200 10600
-Wire Wire Line
 	6925 10850 6925 10600
 Connection ~ 6925 10600
 Wire Wire Line
 	4850 11150 4850 11350
 Connection ~ 5275 11350
-Wire Wire Line
-	5275 11250 5275 11350
 Wire Wire Line
 	5275 11350 5900 11350
 Connection ~ 5900 11350
@@ -1412,8 +1334,6 @@ Wire Wire Line
 Wire Wire Line
 	4850 10600 5275 10600
 Connection ~ 5275 10600
-Wire Wire Line
-	5275 10750 5275 10600
 Wire Wire Line
 	5900 11350 6400 11350
 Connection ~ 6400 11350
@@ -1428,46 +1348,30 @@ Wire Wire Line
 	7075 11350 7200 11350
 Connection ~ 7200 11350
 Wire Wire Line
-	7200 11250 7200 11350
-Wire Wire Line
 	7200 11350 7425 11350
 Connection ~ 7425 11350
 Wire Wire Line
-	7425 11250 7425 11350
-Wire Wire Line
 	7425 11350 7650 11350
 Connection ~ 7650 11350
-Wire Wire Line
-	7650 11250 7650 11350
 Wire Wire Line
 	7875 11350 8100 11350
 Wire Wire Line
 	7650 11350 7875 11350
 Connection ~ 7875 11350
 Wire Wire Line
-	7875 11250 7875 11350
-Wire Wire Line
 	8100 11350 8325 11350
 Connection ~ 8325 11350
-Wire Wire Line
-	8325 11250 8325 11350
 Wire Wire Line
 	8325 11350 8575 11350
 Connection ~ 8575 11350
 Wire Wire Line
-	8575 11250 8575 11350
-Wire Wire Line
 	8575 11350 8825 11350
 Connection ~ 8825 11350
-Wire Wire Line
-	8825 11250 8825 11350
 Wire Wire Line
 	9100 11350 9375 11350
 Wire Wire Line
 	8825 11350 9100 11350
 Connection ~ 9100 11350
-Wire Wire Line
-	9100 11250 9100 11350
 Wire Wire Line
 	5900 10600 5900 10850
 Connection ~ 5900 10600
@@ -1476,22 +1380,22 @@ Wire Wire Line
 Wire Wire Line
 	6100 10600 6025 10600
 $Comp
-L SamacSys_Parts:K104K10X7RF53H5 C10
+L Device:C C10
 U 1 1 5F80CAF7
-P 5275 10750
-F 0 "C10" V 5515 10890 50  0000 L CNN
-F 1 "100nf" V 5530 10900 50  0001 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 5625 10800 50  0001 L CNN
-F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 5625 10700 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 5625 10600 50  0001 L CNN "Description"
-F 5 "3" H 5625 10500 50  0001 L CNN "Height"
-F 6 "8523267" H 5625 10400 50  0001 L CNN "RS Part Number"
-F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 5625 10300 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 5625 10200 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 5625 10100 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 5625 10000 50  0001 L CNN "Allied_Number"
-	1    5275 10750
-	0    1    1    0   
+P 5275 11000
+F 0 "C10" V 5515 11140 50  0000 L CNN
+F 1 "100nf" V 5530 11150 50  0001 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 5625 11050 50  0001 L CNN
+F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 5625 10950 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 5625 10850 50  0001 L CNN "Description"
+F 5 "3" H 5625 10750 50  0001 L CNN "Height"
+F 6 "8523267" H 5625 10650 50  0001 L CNN "RS Part Number"
+F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 5625 10550 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 5625 10450 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 5625 10350 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 5625 10250 50  0001 L CNN "Allied_Number"
+	1    5275 11000
+	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74LS393 Z11
@@ -1722,22 +1626,22 @@ F 10 "70122995" H 6250 10250 50  0001 L CNN "Allied_Number"
 	1    0    0    -1  
 $EndComp
 $Comp
-L SamacSys_Parts:K104K10X7RF53H5 C13
+L Device:C C13
 U 1 1 5F80CB15
-P 7200 10750
-F 0 "C13" V 7365 10915 50  0000 L CNN
-F 1 "100nf" V 7465 10915 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 7550 10800 50  0001 L CNN
-F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 7550 10700 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 7550 10600 50  0001 L CNN "Description"
-F 5 "3" H 7550 10500 50  0001 L CNN "Height"
-F 6 "8523267" H 7550 10400 50  0001 L CNN "RS Part Number"
-F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 7550 10300 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 7550 10200 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 7550 10100 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 7550 10000 50  0001 L CNN "Allied_Number"
-	1    7200 10750
-	0    1    1    0   
+P 7200 11000
+F 0 "C13" V 7365 11165 50  0000 L CNN
+F 1 "100nf" V 7465 11165 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 7550 11050 50  0001 L CNN
+F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 7550 10950 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 7550 10850 50  0001 L CNN "Description"
+F 5 "3" H 7550 10750 50  0001 L CNN "Height"
+F 6 "8523267" H 7550 10650 50  0001 L CNN "RS Part Number"
+F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 7550 10550 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 7550 10450 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 7550 10350 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 7550 10250 50  0001 L CNN "Allied_Number"
+	1    7200 11000
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	4400 11350 4850 11350
@@ -1761,130 +1665,130 @@ Wire Wire Line
 	6925 11350 7075 11350
 Connection ~ 6925 11350
 $Comp
-L SamacSys_Parts:K104K10X7RF53H5 C15
+L Device:C C15
 U 1 1 5F80CBCD
-P 7650 10750
-F 0 "C15" V 7815 10915 50  0000 L CNN
-F 1 "100nf" V 7915 10915 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 8000 10800 50  0001 L CNN
-F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 8000 10700 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 8000 10600 50  0001 L CNN "Description"
-F 5 "3" H 8000 10500 50  0001 L CNN "Height"
-F 6 "8523267" H 8000 10400 50  0001 L CNN "RS Part Number"
-F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 8000 10300 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 8000 10200 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 8000 10100 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 8000 10000 50  0001 L CNN "Allied_Number"
-	1    7650 10750
-	0    1    1    0   
+P 7650 11000
+F 0 "C15" V 7815 11165 50  0000 L CNN
+F 1 "100nf" V 7915 11165 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8000 11050 50  0001 L CNN
+F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 8000 10950 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 8000 10850 50  0001 L CNN "Description"
+F 5 "3" H 8000 10750 50  0001 L CNN "Height"
+F 6 "8523267" H 8000 10650 50  0001 L CNN "RS Part Number"
+F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 8000 10550 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 8000 10450 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 8000 10350 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 8000 10250 50  0001 L CNN "Allied_Number"
+	1    7650 11000
+	-1   0    0    1   
 $EndComp
 $Comp
-L SamacSys_Parts:K104K10X7RF53H5 C16
+L Device:C C16
 U 1 1 5F80CBDC
-P 7875 10750
-F 0 "C16" V 8040 10915 50  0000 L CNN
-F 1 "100nf" V 8140 10915 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 8225 10800 50  0001 L CNN
-F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 8225 10700 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 8225 10600 50  0001 L CNN "Description"
-F 5 "3" H 8225 10500 50  0001 L CNN "Height"
-F 6 "8523267" H 8225 10400 50  0001 L CNN "RS Part Number"
-F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 8225 10300 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 8225 10200 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 8225 10100 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 8225 10000 50  0001 L CNN "Allied_Number"
-	1    7875 10750
-	0    1    1    0   
+P 7875 11000
+F 0 "C16" V 8040 11165 50  0000 L CNN
+F 1 "100nf" V 8140 11165 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8225 11050 50  0001 L CNN
+F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 8225 10950 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 8225 10850 50  0001 L CNN "Description"
+F 5 "3" H 8225 10750 50  0001 L CNN "Height"
+F 6 "8523267" H 8225 10650 50  0001 L CNN "RS Part Number"
+F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 8225 10550 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 8225 10450 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 8225 10350 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 8225 10250 50  0001 L CNN "Allied_Number"
+	1    7875 11000
+	-1   0    0    1   
 $EndComp
 $Comp
-L SamacSys_Parts:K104K10X7RF53H5 C17
+L Device:C C17
 U 1 1 5F80CBEB
-P 8100 10750
-F 0 "C17" V 8265 10915 50  0000 L CNN
-F 1 "100nf" V 8365 10915 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 8450 10800 50  0001 L CNN
-F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 8450 10700 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 8450 10600 50  0001 L CNN "Description"
-F 5 "3" H 8450 10500 50  0001 L CNN "Height"
-F 6 "8523267" H 8450 10400 50  0001 L CNN "RS Part Number"
-F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 8450 10300 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 8450 10200 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 8450 10100 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 8450 10000 50  0001 L CNN "Allied_Number"
-	1    8100 10750
-	0    1    1    0   
+P 8100 11000
+F 0 "C17" V 8265 11165 50  0000 L CNN
+F 1 "100nf" V 8365 11165 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8450 11050 50  0001 L CNN
+F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 8450 10950 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 8450 10850 50  0001 L CNN "Description"
+F 5 "3" H 8450 10750 50  0001 L CNN "Height"
+F 6 "8523267" H 8450 10650 50  0001 L CNN "RS Part Number"
+F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 8450 10550 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 8450 10450 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 8450 10350 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 8450 10250 50  0001 L CNN "Allied_Number"
+	1    8100 11000
+	-1   0    0    1   
 $EndComp
 $Comp
-L SamacSys_Parts:K104K10X7RF53H5 C18
+L Device:C C18
 U 1 1 5F80CBFA
-P 8325 10750
-F 0 "C18" V 8490 10915 50  0000 L CNN
-F 1 "100nf" V 8590 10915 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 8675 10800 50  0001 L CNN
-F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 8675 10700 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 8675 10600 50  0001 L CNN "Description"
-F 5 "3" H 8675 10500 50  0001 L CNN "Height"
-F 6 "8523267" H 8675 10400 50  0001 L CNN "RS Part Number"
-F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 8675 10300 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 8675 10200 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 8675 10100 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 8675 10000 50  0001 L CNN "Allied_Number"
-	1    8325 10750
-	0    1    1    0   
+P 8325 11000
+F 0 "C18" V 8490 11165 50  0000 L CNN
+F 1 "100nf" V 8590 11165 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8675 11050 50  0001 L CNN
+F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 8675 10950 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 8675 10850 50  0001 L CNN "Description"
+F 5 "3" H 8675 10750 50  0001 L CNN "Height"
+F 6 "8523267" H 8675 10650 50  0001 L CNN "RS Part Number"
+F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 8675 10550 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 8675 10450 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 8675 10350 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 8675 10250 50  0001 L CNN "Allied_Number"
+	1    8325 11000
+	-1   0    0    1   
 $EndComp
 $Comp
-L SamacSys_Parts:K104K10X7RF53H5 C20
+L Device:C C20
 U 1 1 5F80CC09
-P 8825 10750
-F 0 "C20" V 8990 10915 50  0000 L CNN
-F 1 "100nf" V 9090 10915 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 9175 10800 50  0001 L CNN
-F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 9175 10700 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 9175 10600 50  0001 L CNN "Description"
-F 5 "3" H 9175 10500 50  0001 L CNN "Height"
-F 6 "8523267" H 9175 10400 50  0001 L CNN "RS Part Number"
-F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 9175 10300 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 9175 10200 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 9175 10100 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 9175 10000 50  0001 L CNN "Allied_Number"
-	1    8825 10750
-	0    1    1    0   
+P 8825 11000
+F 0 "C20" V 8990 11165 50  0000 L CNN
+F 1 "100nf" V 9090 11165 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 9175 11050 50  0001 L CNN
+F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 9175 10950 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 9175 10850 50  0001 L CNN "Description"
+F 5 "3" H 9175 10750 50  0001 L CNN "Height"
+F 6 "8523267" H 9175 10650 50  0001 L CNN "RS Part Number"
+F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 9175 10550 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 9175 10450 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 9175 10350 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 9175 10250 50  0001 L CNN "Allied_Number"
+	1    8825 11000
+	-1   0    0    1   
 $EndComp
 $Comp
-L SamacSys_Parts:K104K10X7RF53H5 C14
+L Device:C C14
 U 1 1 5F80CC18
-P 7425 10750
-F 0 "C14" V 7590 10915 50  0000 L CNN
-F 1 "100nf" V 7690 10915 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 7775 10800 50  0001 L CNN
-F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 7775 10700 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 7775 10600 50  0001 L CNN "Description"
-F 5 "3" H 7775 10500 50  0001 L CNN "Height"
-F 6 "8523267" H 7775 10400 50  0001 L CNN "RS Part Number"
-F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 7775 10300 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 7775 10200 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 7775 10100 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 7775 10000 50  0001 L CNN "Allied_Number"
-	1    7425 10750
-	0    1    1    0   
+P 7425 11000
+F 0 "C14" V 7590 11165 50  0000 L CNN
+F 1 "100nf" V 7690 11165 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 7775 11050 50  0001 L CNN
+F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 7775 10950 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 7775 10850 50  0001 L CNN "Description"
+F 5 "3" H 7775 10750 50  0001 L CNN "Height"
+F 6 "8523267" H 7775 10650 50  0001 L CNN "RS Part Number"
+F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 7775 10550 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 7775 10450 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 7775 10350 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 7775 10250 50  0001 L CNN "Allied_Number"
+	1    7425 11000
+	-1   0    0    1   
 $EndComp
 $Comp
-L SamacSys_Parts:K104K10X7RF53H5 C19
+L Device:C C19
 U 1 1 5F80CC3A
-P 8575 10750
-F 0 "C19" V 8740 10915 50  0000 L CNN
-F 1 "100nf" V 8840 10915 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 8925 10800 50  0001 L CNN
-F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 8925 10700 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 8925 10600 50  0001 L CNN "Description"
-F 5 "3" H 8925 10500 50  0001 L CNN "Height"
-F 6 "8523267" H 8925 10400 50  0001 L CNN "RS Part Number"
-F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 8925 10300 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 8925 10200 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 8925 10100 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 8925 10000 50  0001 L CNN "Allied_Number"
-	1    8575 10750
-	0    1    1    0   
+P 8575 11000
+F 0 "C19" V 8740 11165 50  0000 L CNN
+F 1 "100nf" V 8840 11165 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8925 11050 50  0001 L CNN
+F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 8925 10950 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 8925 10850 50  0001 L CNN "Description"
+F 5 "3" H 8925 10750 50  0001 L CNN "Height"
+F 6 "8523267" H 8925 10650 50  0001 L CNN "RS Part Number"
+F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 8925 10550 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 8925 10450 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 8925 10350 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 8925 10250 50  0001 L CNN "Allied_Number"
+	1    8575 11000
+	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #~~~PWR0135
@@ -1967,22 +1871,22 @@ F 3 "~" H 4225 10925 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SamacSys_Parts:K104K10X7RF53H5 C21
+L Device:C C21
 U 1 1 5F80CB3A
-P 9100 10750
-F 0 "C21" V 9265 10900 50  0000 L CNN
-F 1 "100nf" V 9365 10900 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 9450 10800 50  0001 L CNN
-F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 9450 10700 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 9450 10600 50  0001 L CNN "Description"
-F 5 "3" H 9450 10500 50  0001 L CNN "Height"
-F 6 "8523267" H 9450 10400 50  0001 L CNN "RS Part Number"
-F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 9450 10300 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 9450 10200 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 9450 10100 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 9450 10000 50  0001 L CNN "Allied_Number"
-	1    9100 10750
-	0    1    1    0   
+P 9100 11000
+F 0 "C21" V 9265 11150 50  0000 L CNN
+F 1 "100nf" V 9365 11150 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 9450 11050 50  0001 L CNN
+F 3 "http:~/uk.rs-online.com/web/p/products/8523267" H 9450 10950 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 9450 10850 50  0001 L CNN "Description"
+F 5 "3" H 9450 10750 50  0001 L CNN "Height"
+F 6 "8523267" H 9450 10650 50  0001 L CNN "RS Part Number"
+F 7 "http:~/uk.rs-online.com/web/p/products/8523267" H 9450 10550 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 9450 10450 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 9450 10350 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 9450 10250 50  0001 L CNN "Allied_Number"
+	1    9100 11000
+	-1   0    0    1   
 $EndComp
 $Sheet
 S 900  14725 2750 1000
@@ -2218,23 +2122,8 @@ F 3 "" H 1200 8075 50  0001 C CNN
 	1    1200 8075
 	0    -1   -1   0   
 $EndComp
-$Comp
-L 74xx:74LS139 Z400
-U 2 1 6C7D47DA
-P 9475 9125
-F 0 "Z400" H 9500 9550 50  0000 C CNN
-F 1 "SN74AHCT139N" H 9500 9450 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm" H 9475 9125 50  0001 C CNN
-F 3 "http:~/www.ti.com/lit/gpn/snSN74AHCT139N" H 9475 9125 50  0001 C CNN
-	2    9475 9125
-	1    0    0    -1  
-$EndComp
-Text GLabel 10025 9125 2    50   Input ~ 0
-~IOREQ&11111101B
 Wire Wire Line
 	9975 9125 10025 9125
-Text GLabel 10025 9025 2    50   Input ~ 0
-~IOREQ&11111100B
 Wire Wire Line
 	9975 9025 10025 9025
 Text GLabel 10025 9325 2    50   Input ~ 0
@@ -2280,9 +2169,7 @@ F 3 "http:~/www.ti.com/lit/gpn/snSN74AHCT30N" H 9625 13675 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 2200 5925 1    50   Input ~ 0
-~INT
-Wire Wire Line
-	6700 10600 6750 10600
+~NMI
 Wire Wire Line
 	1300 8775 1200 8775
 $Comp
@@ -2393,7 +2280,6 @@ Wire Wire Line
 	3700 9675 3700 9725
 NoConn ~ 4800 7275
 NoConn ~ 4800 7375
-NoConn ~ 1175 10150
 Text Label 3500 5875 1    50   ~ 0
 ~MREQ
 Wire Wire Line
@@ -2439,7 +2325,7 @@ U 1 1 6090DCC1
 P 2900 5125
 F 0 "C101" H 3075 5225 59  0000 L CNN
 F 1 "22p" H 3075 5075 59  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 2900 5125 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 2900 5125 50  0001 C CNN
 F 3 "~" H 2900 5125 50  0001 C CNN
 	1    2900 5125
 	1    0    0    -1  
@@ -2549,10 +2435,6 @@ Text GLabel 3100 9725 3    50   Input ~ 0
 PB6
 Text GLabel 3200 9725 3    50   Input ~ 0
 RxS\~CTS~
-Text GLabel 3300 9725 3    50   Input ~ 0
-CKA0
-Text GLabel 3500 9725 3    50   Input ~ 0
-CKA1
 Text GLabel 3600 9725 3    50   Input ~ 0
 TxS
 Text GLabel 3700 9725 3    50   Input ~ 0
@@ -2583,8 +2465,8 @@ $Comp
 L Zilog_Z180:Z80-182-L182-VQFP-100 Z0
 U 1 1 5D81B294
 P 1500 6175
-F 0 "Z0" H 3100 5100 50  0000 L CNN
-F 1 "Z80-182-L182-VQFP-100" H 2625 4625 50  0000 L CNN
+F 0 "Z0" H 4850 4600 50  0000 L CNN
+F 1 "Z80-182-L182-VQFP-100" H 4850 4500 50  0000 L CNN
 F 2 "Package_QFP:VQFP-100_14x14mm_P0.5mm" H 2550 7575 50  0001 L CNN
 F 3 "https://www.mouser.co.uk/datasheet/2/450/z80182-35610.pdf" H 4650 6075 50  0001 L CNN
 F 4 "Zilog Z80182 & Z8L182, Z80 Microprocessor Z180 8bit CISC 100-Pin QFP 20x30" H 2550 7375 50  0001 L CNN "Description"
@@ -2597,22 +2479,7 @@ $EndComp
 NoConn ~ 1900 5775
 NoConn ~ 2000 5775
 NoConn ~ 3800 9675
-$Comp
-L power:PWR_FLAG #~~~FLG0104
-U 1 1 622B0188
-P 6750 10600
-F 0 "#~~~FLG0104" H 6750 10675 50  0001 C CNN
-F 1 "PWR_FLAG" H 6915 10740 50  0000 C CNN
-F 2 "" H 6750 10600 50  0001 C CNN
-F 3 "~" H 6750 10600 50  0001 C CNN
-	1    6750 10600
-	1    0    0    -1  
-$EndComp
-Connection ~ 6750 10600
-Wire Wire Line
-	6750 10600 6925 10600
 NoConn ~ 1200 6675
-NoConn ~ 3700 5875
 NoConn ~ 3400 5875
 Wire Wire Line
 	8400 14175 9625 14175
@@ -2638,4 +2505,129 @@ Wire Wire Line
 	4000 3725 4800 3725
 Wire Wire Line
 	6575 3225 6350 3225
+Wire Wire Line
+	6700 10600 6925 10600
+Wire Wire Line
+	10425 10600 10425 10850
+Wire Wire Line
+	10425 11150 10425 11350
+Wire Wire Line
+	10150 11150 10150 11350
+Wire Wire Line
+	10150 10600 10150 10850
+Wire Wire Line
+	9875 10600 9875 10850
+Wire Wire Line
+	9875 11150 9875 11350
+Wire Wire Line
+	9625 11150 9625 11350
+Wire Wire Line
+	9625 10600 9625 10850
+Wire Wire Line
+	9375 10600 9375 10850
+Wire Wire Line
+	9375 11150 9375 11350
+Wire Wire Line
+	9100 11150 9100 11350
+Wire Wire Line
+	9100 10600 9100 10850
+Wire Wire Line
+	8825 10600 8825 10850
+Wire Wire Line
+	8825 11150 8825 11350
+Wire Wire Line
+	8575 11150 8575 11350
+Wire Wire Line
+	8575 10600 8575 10850
+Wire Wire Line
+	8325 10600 8325 10850
+Wire Wire Line
+	8325 11150 8325 11350
+Wire Wire Line
+	8100 11150 8100 11350
+Wire Wire Line
+	8100 10600 8100 10850
+Wire Wire Line
+	7875 10600 7875 10850
+Wire Wire Line
+	7875 11150 7875 11350
+Wire Wire Line
+	7650 11150 7650 11350
+Wire Wire Line
+	7650 10600 7650 10850
+Wire Wire Line
+	7425 11150 7425 11350
+Wire Wire Line
+	7425 10600 7425 10850
+Wire Wire Line
+	7200 10600 7200 10850
+Wire Wire Line
+	7200 11150 7200 11350
+Wire Wire Line
+	5275 10600 5275 10850
+Wire Wire Line
+	5275 11150 5275 11350
+Wire Wire Line
+	6575 7475 7125 7475
+Wire Wire Line
+	7075 6375 7175 6375
+Wire Wire Line
+	7075 6475 7175 6475
+Wire Wire Line
+	7075 6575 7175 6575
+Wire Wire Line
+	7075 6775 7175 6775
+Wire Wire Line
+	7075 6875 7175 6875
+Wire Wire Line
+	7075 6975 7175 6975
+Wire Wire Line
+	7075 7075 7175 7075
+Wire Wire Line
+	7075 6175 7175 6175
+Wire Wire Line
+	7075 6275 7175 6275
+Wire Wire Line
+	7075 6675 7175 6675
+Wire Wire Line
+	7075 7175 7175 7175
+Text GLabel 10500 2175 2    50   Input ~ 0
+~M1
+Text GLabel 10500 2075 2    50   Input ~ 0
+~RFSH
+NoConn ~ 10025 7275
+NoConn ~ 10025 7175
+NoConn ~ 10025 6475
+NoConn ~ 10025 6375
+NoConn ~ 8825 6375
+NoConn ~ 8825 7275
+NoConn ~ 8825 7175
+Text GLabel 3700 5875 1    50   Input ~ 0
+~RFSH
+NoConn ~ 7175 7375
+Text Label 2000 5775 1    50   ~ 0
+~INT1
+Text Label 1900 5775 1    50   ~ 0
+~INT2
+Text Label 10025 9025 0    50   ~ 0
+~IOREQ&11111100B
+$Comp
+L 74xx:74LS139 Z400
+U 2 1 6C7D47DA
+P 9475 9125
+F 0 "Z400" H 9500 9550 50  0000 C CNN
+F 1 "SN74AHCT139N" H 9500 9450 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 9475 9125 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/snSN74AHCT139N" H 9475 9125 50  0001 C CNN
+	2    9475 9125
+	1    0    0    -1  
+$EndComp
+Text Label 10025 9125 0    50   ~ 0
+~IOREQ&11111101B
+NoConn ~ 10025 9025
+NoConn ~ 10025 9125
+Text Label 3300 9725 3    50   ~ 0
+CKA0
+Text Label 3500 9725 3    50   ~ 0
+CKA1
 $EndSCHEMATC
