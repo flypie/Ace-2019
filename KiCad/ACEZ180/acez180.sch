@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:acez180-cache
 EELAYER 30 0
 EELAYER END
 $Descr A3 11693 16535 portrait
@@ -1084,7 +1085,7 @@ NoConn ~ 5575 14600
 Wire Wire Line
 	8000 9725 8100 9725
 Wire Wire Line
-	8975 9025 8875 9025
+	8975 9125 8875 9125
 Text GLabel 8000 9725 0    50   Input ~ 0
 A7
 Text GLabel 8000 9625 0    50   Input ~ 0
@@ -1096,7 +1097,7 @@ A4
 Text GLabel 8000 9325 0    50   Input ~ 0
 A3
 Wire Wire Line
-	8975 9125 8875 9125
+	8975 9025 8875 9025
 Wire Wire Line
 	8100 9625 8000 9625
 Wire Wire Line
@@ -1109,9 +1110,9 @@ U 5D66C06C
 F0 "Tape&SPKR" 125
 F1 "Tape&SPKR.sch" 125
 $EndSheet
-Text GLabel 8875 9025 0    50   Input ~ 0
-A0
 Text GLabel 8875 9125 0    50   Input ~ 0
+A0
+Text GLabel 8875 9025 0    50   Input ~ 0
 A1
 Text GLabel 9800 1275 0    50   Input ~ 0
 ~WE

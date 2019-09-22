@@ -2904,8 +2904,6 @@ Text Label 14650 7650 2    50   ~ 0
 A13
 Wire Wire Line
 	14750 7650 14650 7650
-Wire Wire Line
-	24275 4350 25145 4350
 Text Label 20720 4800 2    50   ~ 0
 FONTCHAR2
 Wire Wire Line
@@ -2926,14 +2924,14 @@ Wire Wire Line
 	9075 5975 9075 5825
 Wire Wire Line
 	9200 5975 9075 5975
-Text Label 9800 4725 2    50   ~ 0
+Text Label 9800 4625 2    50   ~ 0
 A12
 Wire Wire Line
-	9900 4725 9800 4725
-Text Label 9800 4625 2    50   ~ 0
+	9900 4625 9800 4625
+Text Label 9800 4725 2    50   ~ 0
 A11
 Wire Wire Line
-	9900 4625 9800 4625
+	9900 4725 9800 4725
 Text Label 5350 6175 2    50   ~ 0
 ~MREQ
 Wire Wire Line
@@ -3336,12 +3334,12 @@ $EndComp
 $Comp
 L power:GND #~PWR0105
 U 1 1 5F80C593
-P 24175 4250
-F 0 "#~PWR0105" H 24175 4000 50  0001 C CNN
-F 1 "GND" H 24225 4030 50  0000 C CNN
-F 2 "" H 24175 4250 50  0001 C CNN
-F 3 "" H 24175 4250 50  0001 C CNN
-	1    24175 4250
+P 24275 4250
+F 0 "#~PWR0105" H 24275 4000 50  0001 C CNN
+F 1 "GND" H 24325 4030 50  0000 C CNN
+F 2 "" H 24275 4250 50  0001 C CNN
+F 3 "" H 24275 4250 50  0001 C CNN
+	1    24275 4250
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -3368,8 +3366,8 @@ F 3 "" H 24575 4200 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	24575 4200 24475 4200
-Text GLabel 24075 4250 3    50   Input ~ 0
-~CPUCLK
+Text GLabel 24175 4250 3    50   Input ~ 0
+~VIDEOCLK
 Text GLabel 17950 1875 0    50   Input ~ 0
 ~VIDEOCLK
 Text GLabel 5675 13050 0    50   Input ~ 0
@@ -4104,14 +4102,14 @@ Text GLabel 25575 12675 2    50   Input ~ 0
 Text GLabel 6375 13150 2    50   Input ~ 0
 ~INT
 $Comp
-L Connector_Generic:Conn_02x25_Odd_Even Z80CPUOUT1
+L Connector_Generic:Conn_02x22_Odd_Even Z80CPUOUT1
 U 1 1 5F80C84A
-P 5975 12350
-F 0 "Z80CPUOUT1" H 6050 13790 50  0000 C CNN
-F 1 "Conn_02x25_Odd_Even" H 6050 13690 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x25_P2.54mm_Vertical" H 5975 12350 50  0001 C CNN
-F 3 "~" H 5975 12350 50  0001 C CNN
-	1    5975 12350
+P 5975 12150
+F 0 "Z80CPUOUT1" H 6050 13590 50  0000 C CNN
+F 1 "Conn_02x22_Odd_Even" H 6050 13490 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x22_P2.54mm_Vertical" H 5975 12150 50  0001 C CNN
+F 3 "~" H 5975 12150 50  0001 C CNN
+	1    5975 12150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -4201,12 +4199,6 @@ F 3 "http:~/www.ti.com/lit/gpn/sn74LS11" H 23850 10475 50  0001 C CNN
 	1    23850 10475
 	1    0    0    -1  
 $EndComp
-NoConn ~ 5775 13550
-NoConn ~ 5775 13450
-NoConn ~ 5775 13350
-NoConn ~ 6275 13350
-NoConn ~ 6275 13450
-NoConn ~ 6275 13550
 Wire Wire Line
 	9175 13700 8975 13700
 Wire Wire Line
@@ -4508,13 +4500,11 @@ Wire Wire Line
 Wire Wire Line
 	23075 4150 23075 4300
 Wire Wire Line
-	24075 4150 24075 4250
-Wire Wire Line
-	24275 4150 24275 4350
+	24175 4150 24175 4250
 Wire Wire Line
 	23875 4150 23875 4250
 Wire Wire Line
-	24175 4150 24175 4250
+	24275 4150 24275 4250
 $Comp
 L Device:R R107
 U 1 1 5F80C8E6
@@ -4868,10 +4858,6 @@ F 3 "" H 23025 2075 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	23025 2175 23025 2075
-Wire Wire Line
-	18650 1075 25145 1075
-Wire Wire Line
-	25145 1075 25145 4350
 $Comp
 L Connector_Generic:Conn_01x02 COMPOSITE-OUT1
 U 1 1 5D703F64
@@ -5355,4 +5341,12 @@ NoConn ~ -2075 5900
 NoConn ~ -2075 6100
 Wire Wire Line
 	13050 7025 12950 7025
+Wire Wire Line
+	24075 4350 24075 4150
+Wire Wire Line
+	24075 4350 25150 4350
+Wire Wire Line
+	25150 4350 25150 1075
+Wire Wire Line
+	18650 1075 25150 1075
 $EndSCHEMATC
