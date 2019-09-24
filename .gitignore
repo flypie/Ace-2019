@@ -18,6 +18,9 @@ gui_defaults.par
 sdreader/
 ExtraFootprints.pretty/
 gerber/
+fp-lib-table
+sym-lib-table
+
 
 
 
