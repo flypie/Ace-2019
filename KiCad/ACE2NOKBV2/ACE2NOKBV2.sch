@@ -2,7 +2,7 @@ EESchema Schematic File Version 4
 LIBS:ACE2NOKBV2-cache
 EELAYER 30 0
 EELAYER END
-$Descr User 27639 18687
+$Descr User 28000 19000
 encoding utf-8
 Sheet 1 1
 Title "ACE2NOKB"

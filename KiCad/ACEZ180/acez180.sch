@@ -2631,4 +2631,26 @@ Text Label 3300 9725 3    50   ~ 0
 CKA0
 Text Label 3500 9725 3    50   ~ 0
 CKA1
+$Comp
+L Graphic:ZilogBack Logo1
+U 1 1 5D8B33DB
+P 725 1450
+F 0 "Logo1" H 1075 1675 50  0000 C CNN
+F 1 "ZilogBack" H 1075 1575 50  0000 C CNN
+F 2 "Symbol:ZilogInsideBack" H 1175 1700 50  0001 C CNN
+F 3 "" H 925 1600 50  0001 C CNN
+	1    725  1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Graphic:ZilogFront Logo2
+U 1 1 5D8B4839
+P 675 1925
+F 0 "Logo2" H 1025 2125 50  0000 C CNN
+F 1 "ZilogFront" H 1025 2025 50  0000 C CNN
+F 2 "Symbol:ZilogInsideFront" H 1125 2175 50  0001 C CNN
+F 3 "" H 675 1825 50  0001 C CNN
+	1    675  1925
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
