@@ -2,9 +2,10 @@
 
 for (( ; ; ))
 do
-   echo "infinite loops [ hit CTRL+C to stop]"
-    make
-    sleep 10m
+    	echo "infinite loops [ hit CTRL+C to stop]"
+    	make
+	date +"%T"    
+	sleep 1m
 done
 
 

@@ -11,13 +11,12 @@ gui_defaults.par
 *.pdf
 *.gbr
 *.drl
-*.zip
 *.bck
 *.dcm
 *fp-info-cache*
 sdreader/
 ExtraFootprints.pretty/
-gerber/
+*.gbr
 fp-lib-table
 sym-lib-table
 
