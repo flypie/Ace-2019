@@ -19,6 +19,8 @@ ExtraFootprints.pretty/
 *.gbr
 fp-lib-table
 sym-lib-table
+*.ps
+*.csv
 
 
 
