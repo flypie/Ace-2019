@@ -6,7 +6,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "ACE2NOKB"
-Date "2019-09-17"
+Date "2019-09-27"
 Rev "Beta"
 Comp "Ontobus"
 Comment1 "John Bradley"
@@ -863,4 +863,48 @@ Wire Wire Line
 	6850 2100 5575 2100
 Wire Wire Line
 	5575 2100 5575 2900
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5DAC6CEA
+P 1650 1275
+F 0 "H1" H 1650 1550 50  0000 C CNN
+F 1 "MountingHole" H 1650 1450 50  0000 C CNN
+F 2 "MountingHole:MountingHole_2.5mm" H 1650 1275 50  0001 C CNN
+F 3 "~" H 1650 1275 50  0001 C CNN
+	1    1650 1275
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5DAC77E0
+P 1650 1425
+F 0 "H2" H 1750 1500 50  0000 L CNN
+F 1 "MountingHole" H 1750 1400 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.5mm" H 1650 1425 50  0001 C CNN
+F 3 "~" H 1650 1425 50  0001 C CNN
+	1    1650 1425
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5DACD069
+P 1650 1575
+F 0 "H3" H 1550 1650 50  0000 R CNN
+F 1 "MountingHole" H 1550 1550 50  0000 R CNN
+F 2 "MountingHole:MountingHole_2.5mm" H 1650 1575 50  0001 C CNN
+F 3 "~" H 1650 1575 50  0001 C CNN
+	1    1650 1575
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 5DAD2A05
+P 1650 1725
+F 0 "H4" H 1750 1800 50  0000 L CNN
+F 1 "MountingHole" H 1750 1700 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.5mm" H 1650 1725 50  0001 C CNN
+F 3 "~" H 1650 1725 50  0001 C CNN
+	1    1650 1725
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
