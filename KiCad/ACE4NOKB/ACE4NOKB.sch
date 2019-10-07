@@ -507,8 +507,8 @@ U 1 1 63493097
 P 15300 2375
 F 0 "Q101" H 15495 2470 50  0000 L CNN
 F 1 "2N3904" H 15495 2370 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 15500 2300 50  0001 L CIN
-F 3 "~" H 15300 2375 50  0001 L CNN
+F 2 "Package_TO_SOT_THT:TO-92L_Inline" H 15500 2300 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/PZT3904-D.pdf" H 15300 2375 50  0001 L CNN
 	1    15300 2375
 	1    0    0    -1  
 $EndComp
@@ -724,15 +724,15 @@ $EndComp
 $Comp
 L Device:Q_NPN_EBC Q2
 U 1 1 5D2BC8AD
-P 2650 7375
-F 0 "Q2" H 2850 7425 50  0000 L CNN
-F 1 "2N2369A" H 2850 7375 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-18-3" H 3200 7225 50  0001 L CNN
-F 3 "~" H 3200 7125 50  0001 L CNN
-F 4 "Bipolar Transistors - BJT NPN Fast SW SS" H 3200 7025 50  0001 L CNN "Description"
-F 5 "Central Semiconductor" H 3200 6625 50  0001 L CNN "Manufacturer_Name"
-F 6 "2N2369A" H 3200 6525 50  0001 L CNN "Manufacturer_Part_Number"
-	1    2650 7375
+P 2850 7375
+F 0 "Q2" H 3050 7450 50  0000 L CNN
+F 1 "2N2369A" H 3050 7350 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-18-3" H 3400 7225 50  0001 L CNN
+F 3 "https://cdn-reichelt.de/documents/datenblatt/A100/2N2369A-CDIL.pdf" H 3400 7125 50  0001 L CNN
+F 4 "Bipolar Transistors - BJT NPN Fast SW SS" H 3400 7025 50  0001 L CNN "Description"
+F 5 "Central Semiconductor" H 3400 6625 50  0001 L CNN "Manufacturer_Name"
+F 6 "2N2369A" H 3400 6525 50  0001 L CNN "Manufacturer_Part_Number"
+	1    2850 7375
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1485,12 +1485,12 @@ A15
 $Comp
 L power:GND #~PWR0105
 U 1 1 63AB1104
-P 2750 7675
-F 0 "#~PWR0105" H 2750 7425 50  0001 C CNN
-F 1 "GND" H 2760 7485 50  0000 C CNN
-F 2 "" H 2750 7675 50  0001 C CNN
-F 3 "" H 2750 7675 50  0001 C CNN
-	1    2750 7675
+P 2950 7675
+F 0 "#~PWR0105" H 2950 7425 50  0001 C CNN
+F 1 "GND" H 2960 7485 50  0000 C CNN
+F 2 "" H 2950 7675 50  0001 C CNN
+F 3 "" H 2950 7675 50  0001 C CNN
+	1    2950 7675
 	1    0    0    -1  
 $EndComp
 NoConn ~ 10060 -660
@@ -2070,7 +2070,7 @@ Connection ~ 2550 7375
 Wire Wire Line
 	2450 7375 2550 7375
 Wire Wire Line
-	3050 7075 2750 7075
+	3050 7075 2950 7075
 Wire Wire Line
 	3050 5975 3050 7075
 Wire Wire Line
@@ -2098,7 +2098,7 @@ Wire Wire Line
 Wire Wire Line
 	11400 3915 11500 3915
 Wire Wire Line
-	2750 7575 2750 7675
+	2950 7575 2950 7675
 Text Label 7475 7700 0    50   ~ 0
 ~WR
 Wire Wire Line
@@ -2185,10 +2185,10 @@ Wire Wire Line
 Wire Wire Line
 	3750 2325 3925 2325
 $Comp
-L 74xx:74LS138 Z13
+L 74xx:74LS138 Z29
 U 1 1 7397220B
 P 3925 2975
-F 0 "Z13" H 3930 3775 50  0000 C CNN
+F 0 "Z29" H 3930 3775 50  0000 C CNN
 F 1 "74AHCT138" H 3930 3675 50  0000 C CNN
 F 2 "Package_DIP:DIP-16_W7.62mm" H 3925 2975 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS138" H 3925 2975 50  0001 C CNN
@@ -2756,13 +2756,13 @@ $EndComp
 Wire Wire Line
 	20200 7300 20200 7380
 $Comp
-L Device:Q_NPN_EBC Q3
+L Device:Q_NPN_CBE Q3
 U 1 1 6252DD48
 P 20100 7100
 F 0 "Q3" H 20300 7150 50  0000 L CNN
-F 1 "BC237" H 20300 7100 50  0000 L CNN
+F 1 "BC183" H 20300 7100 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 20300 7025 50  0001 L CIN
-F 3 "~" H 20100 7100 50  0001 L CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/308/BC183-1299954.pdf" H 20100 7100 50  0001 L CNN
 	1    20100 7100
 	1    0    0    -1  
 $EndComp
@@ -3195,8 +3195,7 @@ Wire Wire Line
 Wire Wire Line
 	13325 16300 13325 16525
 Wire Wire Line
-	2750 7175 2750 7075
-Connection ~ 2750 7075
+	2950 7175 2950 7075
 Wire Wire Line
 	19250 17175 19675 17175
 Wire Wire Line
@@ -3247,21 +3246,21 @@ U 5D919407
 F0 "KIO" 250
 F1 "KIO.sch" 250
 $EndSheet
-Text GLabel 4650 5675 0    50   Input ~ 0
+Text GLabel 4650 5675 2    50   Input ~ 0
 DA0
-Text GLabel 4650 5775 0    50   Input ~ 0
+Text GLabel 4650 5775 2    50   Input ~ 0
 DA1
-Text GLabel 4650 5875 0    50   Input ~ 0
+Text GLabel 4650 5875 2    50   Input ~ 0
 DA2
-Text GLabel 4650 5975 0    50   Input ~ 0
+Text GLabel 4650 5975 2    50   Input ~ 0
 DA3
-Text GLabel 4650 6075 0    50   Input ~ 0
+Text GLabel 4650 6075 2    50   Input ~ 0
 DA4
-Text GLabel 4650 6175 0    50   Input ~ 0
+Text GLabel 4650 6175 2    50   Input ~ 0
 DA5
-Text GLabel 4650 6275 0    50   Input ~ 0
+Text GLabel 4650 6275 2    50   Input ~ 0
 DA6
-Text GLabel 4650 6375 0    50   Input ~ 0
+Text GLabel 4650 6375 2    50   Input ~ 0
 DA7
 Text GLabel 4650 4775 2    50   Input ~ 0
 A8
@@ -3373,7 +3372,7 @@ Wire Wire Line
 Wire Wire Line
 	15400 2675 15400 2575
 $Sheet
-S 2250 12625 2175 1350
+S 2250 13125 2175 1350
 U 5E2F9A69
 F0 "CompositeVid" 250
 F1 "CompositeVid.sch" 250
@@ -3431,5 +3430,7 @@ A6
 Text GLabel 4650 4675 2    50   Input ~ 0
 A7
 Connection ~ 11950 8000
-Connection ~ 2450 7375
+Connection ~ 2950 7075
+Wire Wire Line
+	2750 7075 2950 7075
 $EndSCHEMATC

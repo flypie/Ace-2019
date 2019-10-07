@@ -232,8 +232,8 @@ U 1 1 5D703F6A
 P 14450 3325
 F 0 "Q100" H 14250 3325 50  0000 L BNN
 F 1 "2N3904" H 14050 3225 50  0000 L BNN
-F 2 "Package_TO_SOT_THT:TO-92L_HandSolder" H 14450 3325 50  0001 C CNN
-F 3 "" H 14450 3325 50  0001 C CNN
+F 2 "Package_TO_SOT_THT:TO-92L_Inline" H 14450 3325 50  0001 C CNN
+F 3 "https://www.onsemi.com/pub/Collateral/PZT3904-D.pdf" H 14450 3325 50  0001 C CNN
 	1    14450 3325
 	1    0    0    -1  
 $EndComp
@@ -1627,8 +1627,8 @@ U 1 1 5F80CE24
 P 5400 8675
 F 0 "Q1" H 5205 8585 50  0000 L CNN
 F 1 "2N3904" H 5190 8820 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5600 8600 50  0001 L CIN
-F 3 "https:~/www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 5400 8675 50  0001 L CNN
+F 2 "Package_TO_SOT_THT:TO-92L_Inline" H 5600 8600 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/PZT3904-D.pdf" H 5400 8675 50  0001 L CNN
 	1    5400 8675
 	1    0    0    -1  
 $EndComp

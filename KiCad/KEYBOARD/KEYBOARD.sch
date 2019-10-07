@@ -14,36 +14,36 @@ Comment2 "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 Comment3 "Attribution-NonCommercial-ShareAlike 4.0 International License."
 Comment4 "This work is licensed under a Creative Commons "
 $EndDescr
-Text Label 7500 1700 0    50   ~ 0
+Text Label 4750 1700 2    50   ~ 0
 A8
-Text Label 7600 1800 0    50   ~ 0
+Text Label 4750 1800 2    50   ~ 0
 A9
-Text Label 7550 1900 0    50   ~ 0
+Text Label 4775 1900 2    50   ~ 0
 A10
-Text Label 7600 2000 0    50   ~ 0
+Text Label 4775 2000 2    50   ~ 0
 A11
-Text Label 7500 2100 0    50   ~ 0
+Text Label 4775 2100 2    50   ~ 0
 A12
-Text Label 7600 2200 0    50   ~ 0
+Text Label 4775 2200 2    50   ~ 0
 A13
-Text Label 7550 2300 0    50   ~ 0
+Text Label 4775 2300 2    50   ~ 0
 A14
-Text Label 7600 2400 0    50   ~ 0
+Text Label 4775 2400 2    50   ~ 0
 A15
 $Comp
 L Connector_Generic:Conn_02x08_Odd_Even KEYBOARD1
 U 1 1 64115543
-P 7050 2000
-F 0 "KEYBOARD1" H 7100 2550 50  0000 C CNN
-F 1 "Conn_02x08_Odd_Even" H 7100 2450 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical" H 7050 2000 50  0001 C CNN
-F 3 "~" H 7050 2000 50  0001 C CNN
-	1    7050 2000
+P 5100 2000
+F 0 "KEYBOARD1" H 5150 2550 50  0000 C CNN
+F 1 "Conn_02x08_Odd_Even" H 5150 2450 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical" H 5100 2000 50  0001 C CNN
+F 3 "~" H 5100 2000 50  0001 C CNN
+	1    5100 2000
 	1    0    0    -1  
 $EndComp
-NoConn ~ 6850 2400
-NoConn ~ 6850 2300
-NoConn ~ 6850 2200
+NoConn ~ 5400 2400
+NoConn ~ 5400 2300
+NoConn ~ 5400 2200
 Text Label 2675 5300 2    70   ~ 0
 A8
 Text Label 2675 4800 2    70   ~ 0
@@ -723,21 +723,21 @@ Wire Wire Line
 Wire Wire Line
 	2675 5300 3375 5300
 Wire Wire Line
-	7350 1700 7500 1700
+	4900 1700 4750 1700
 Wire Wire Line
-	7350 1800 7600 1800
+	4900 1800 4750 1800
 Wire Wire Line
-	7350 2000 7600 2000
+	4900 2000 4775 2000
 Wire Wire Line
-	7350 2100 7500 2100
+	4900 2100 4775 2100
 Wire Wire Line
-	7350 2200 7600 2200
+	4900 2200 4775 2200
 Wire Wire Line
-	7350 2400 7600 2400
+	4900 2400 4775 2400
 Wire Wire Line
-	7350 1900 7550 1900
+	4900 1900 4775 1900
 Wire Wire Line
-	7350 2300 7550 2300
+	4900 2300 4775 2300
 Wire Wire Line
 	8275 2900 8275 3700
 Connection ~ 8275 3700
@@ -846,65 +846,65 @@ Connection ~ 3775 3700
 Wire Wire Line
 	3775 3700 3775 4200
 Wire Wire Line
-	6075 1700 6850 1700
-Wire Wire Line
 	6075 1700 6075 3300
-Wire Wire Line
-	6850 1800 5875 1800
 Wire Wire Line
 	5875 1800 5875 3200
 Wire Wire Line
-	6850 1900 5775 1900
-Wire Wire Line
-	6850 2000 5675 2000
-Wire Wire Line
 	5675 2000 5675 3000
 Wire Wire Line
-	6850 2100 5575 2100
+	5400 2100 5575 2100
 Wire Wire Line
 	5575 2100 5575 2900
 $Comp
 L Mechanical:MountingHole H1
 U 1 1 5DAC6CEA
-P 1650 1275
-F 0 "H1" H 1650 1550 50  0000 C CNN
-F 1 "MountingHole" H 1650 1450 50  0000 C CNN
-F 2 "MountingHole:MountingHole_2.5mm" H 1650 1275 50  0001 C CNN
-F 3 "~" H 1650 1275 50  0001 C CNN
-	1    1650 1275
+P 3350 1700
+F 0 "H1" H 3350 1975 50  0000 C CNN
+F 1 "MountingHole" H 3350 1875 50  0000 C CNN
+F 2 "MountingHole:MountingHole_2.5mm" H 3350 1700 50  0001 C CNN
+F 3 "~" H 3350 1700 50  0001 C CNN
+	1    3350 1700
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H2
 U 1 1 5DAC77E0
-P 1650 1425
-F 0 "H2" H 1750 1500 50  0000 L CNN
-F 1 "MountingHole" H 1750 1400 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.5mm" H 1650 1425 50  0001 C CNN
-F 3 "~" H 1650 1425 50  0001 C CNN
-	1    1650 1425
+P 3350 1850
+F 0 "H2" H 3450 1925 50  0000 L CNN
+F 1 "MountingHole" H 3450 1825 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.5mm" H 3350 1850 50  0001 C CNN
+F 3 "~" H 3350 1850 50  0001 C CNN
+	1    3350 1850
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H3
 U 1 1 5DACD069
-P 1650 1575
-F 0 "H3" H 1550 1650 50  0000 R CNN
-F 1 "MountingHole" H 1550 1550 50  0000 R CNN
-F 2 "MountingHole:MountingHole_2.5mm" H 1650 1575 50  0001 C CNN
-F 3 "~" H 1650 1575 50  0001 C CNN
-	1    1650 1575
+P 3350 2000
+F 0 "H3" H 3250 2075 50  0000 R CNN
+F 1 "MountingHole" H 3250 1975 50  0000 R CNN
+F 2 "MountingHole:MountingHole_2.5mm" H 3350 2000 50  0001 C CNN
+F 3 "~" H 3350 2000 50  0001 C CNN
+	1    3350 2000
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H4
 U 1 1 5DAD2A05
-P 1650 1725
-F 0 "H4" H 1750 1800 50  0000 L CNN
-F 1 "MountingHole" H 1750 1700 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.5mm" H 1650 1725 50  0001 C CNN
-F 3 "~" H 1650 1725 50  0001 C CNN
-	1    1650 1725
+P 3350 2150
+F 0 "H4" H 3450 2225 50  0000 L CNN
+F 1 "MountingHole" H 3450 2125 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.5mm" H 3350 2150 50  0001 C CNN
+F 3 "~" H 3350 2150 50  0001 C CNN
+	1    3350 2150
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	5400 2000 5675 2000
+Wire Wire Line
+	5400 1900 5775 1900
+Wire Wire Line
+	5400 1800 5875 1800
+Wire Wire Line
+	5400 1700 6075 1700
 $EndSCHEMATC

@@ -409,117 +409,116 @@ F 3 "https://www.mouser.com/datasheet/2/450/ps0118-25896.pdf" H 6400 1250 50  00
 	1    5250 2350
 	1    0    0    -1  
 $EndComp
-NoConn ~ 1350 2850
-NoConn ~ 2575 5950
-Text Label 2475 5650 2    50   ~ 0
+NoConn ~ 2300 5950
+Text Label 2200 5650 2    50   ~ 0
 CLK\TRG0
-Text Label 2475 5750 2    50   ~ 0
+Text Label 2200 5750 2    50   ~ 0
 CLK\TRG1
-Text Label 2475 5850 2    50   ~ 0
+Text Label 2200 5850 2    50   ~ 0
 CLK\TRG2
 $Comp
 L Connector_Generic:Conn_02x04_Odd_Even J105
 U 1 1 6602BBD4
-P 2775 5750
-F 0 "J105" H 2825 6100 50  0000 C CNN
-F 1 "Conn_02x04_Odd_Even" H 2825 6000 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 2775 5750 50  0001 C CNN
-F 3 "~" H 2775 5750 50  0001 C CNN
-	1    2775 5750
+P 2500 5750
+F 0 "J105" H 2550 6100 50  0000 C CNN
+F 1 "Conn_02x04_Odd_Even" H 2550 6000 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 2500 5750 50  0001 C CNN
+F 3 "~" H 2500 5750 50  0001 C CNN
+	1    2500 5750
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector_Generic:Conn_02x03_Odd_Even J104
 U 1 1 64A32B0F
-P 2775 5150
-F 0 "J104" H 2825 5500 50  0000 C CNN
-F 1 "Conn_02x03_Odd_Even" H 2825 5400 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 2775 5150 50  0001 C CNN
-F 3 "~" H 2775 5150 50  0001 C CNN
-	1    2775 5150
+P 2500 5150
+F 0 "J104" H 2550 5500 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 2550 5400 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 2500 5150 50  0001 C CNN
+F 3 "~" H 2500 5150 50  0001 C CNN
+	1    2500 5150
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector_Generic:Conn_02x03_Odd_Even J103
 U 1 1 6454B474
-P 2775 4550
-F 0 "J103" H 2850 4900 50  0000 C CNN
-F 1 "Conn_02x03_Odd_Even" H 2850 4800 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 2775 4550 50  0001 C CNN
-F 3 "~" H 2775 4550 50  0001 C CNN
-	1    2775 4550
+P 2500 4550
+F 0 "J103" H 2575 4900 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 2575 4800 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 2500 4550 50  0001 C CNN
+F 3 "~" H 2500 4550 50  0001 C CNN
+	1    2500 4550
 	1    0    0    -1  
 $EndComp
-Text Label 3175 5950 0    50   ~ 0
+Text Label 2900 5950 0    50   ~ 0
 ZC\TO3
 Wire Wire Line
-	3075 5950 3175 5950
-Text Label 3175 5850 0    50   ~ 0
+	2800 5950 2900 5950
+Text Label 2900 5850 0    50   ~ 0
 ZC\TO2
 Wire Wire Line
-	3075 5850 3175 5850
-Text Label 3175 5750 0    50   ~ 0
+	2800 5850 2900 5850
+Text Label 2900 5750 0    50   ~ 0
 ZC\TO1
 Wire Wire Line
-	3075 5750 3175 5750
-Text Label 3175 5650 0    50   ~ 0
+	2800 5750 2900 5750
+Text Label 2900 5650 0    50   ~ 0
 ZC\TO0
 Wire Wire Line
-	3075 5650 3175 5650
+	2800 5650 2900 5650
 Wire Wire Line
-	2575 5850 2475 5850
+	2300 5850 2200 5850
 Wire Wire Line
-	2575 5750 2475 5750
+	2300 5750 2200 5750
 Wire Wire Line
-	2575 5650 2475 5650
-Text Label 3175 5250 0    50   ~ 0
+	2300 5650 2200 5650
+Text Label 2900 5250 0    50   ~ 0
 ~CTSB
 Wire Wire Line
-	3075 5250 3175 5250
-Text Label 3175 5150 0    50   ~ 0
+	2800 5250 2900 5250
+Text Label 2900 5150 0    50   ~ 0
 ~DCDB
 Wire Wire Line
-	3075 5150 3175 5150
-Text Label 2475 5050 2    50   ~ 0
+	2800 5150 2900 5150
+Text Label 2200 5050 2    50   ~ 0
 TxDB
 Wire Wire Line
-	2575 5050 2475 5050
-Text Label 2475 5150 2    50   ~ 0
+	2300 5050 2200 5050
+Text Label 2200 5150 2    50   ~ 0
 ~TxCB
 Wire Wire Line
-	2575 5150 2475 5150
-Text Label 2475 5250 2    50   ~ 0
+	2300 5150 2200 5150
+Text Label 2200 5250 2    50   ~ 0
 ~RxCB
 Wire Wire Line
-	2575 5250 2475 5250
-Text Label 3175 5050 0    50   ~ 0
+	2300 5250 2200 5250
+Text Label 2900 5050 0    50   ~ 0
 RxDB
 Wire Wire Line
-	3075 5050 3175 5050
-Text Label 3175 4650 0    50   ~ 0
+	2800 5050 2900 5050
+Text Label 2900 4650 0    50   ~ 0
 ~CTSA
 Wire Wire Line
-	3075 4650 3175 4650
-Text Label 3175 4550 0    50   ~ 0
+	2800 4650 2900 4650
+Text Label 2900 4550 0    50   ~ 0
 ~DCDA
 Wire Wire Line
-	3075 4550 3175 4550
-Text Label 3175 4450 0    50   ~ 0
+	2800 4550 2900 4550
+Text Label 2900 4450 0    50   ~ 0
 RxDA
 Wire Wire Line
-	3075 4450 3175 4450
-Text Label 2475 4650 2    50   ~ 0
+	2800 4450 2900 4450
+Text Label 2200 4650 2    50   ~ 0
 ~RxCA
 Wire Wire Line
-	2575 4650 2475 4650
-Text Label 2475 4550 2    50   ~ 0
+	2300 4650 2200 4650
+Text Label 2200 4550 2    50   ~ 0
 ~TxCA
 Wire Wire Line
-	2575 4550 2475 4550
-Text Label 2475 4450 2    50   ~ 0
+	2300 4550 2200 4550
+Text Label 2200 4450 2    50   ~ 0
 TxDA
 Wire Wire Line
-	2575 4450 2475 4450
+	2300 4450 2200 4450
 $Comp
 L Connector_Generic:Conn_02x05_Odd_Even J100
 U 1 1 5D98E8C9
@@ -712,5 +711,5 @@ Text GLabel 7700 2075 1    50   Input ~ 0
 Text Label 7200 5400 3    50   ~ 0
 ZC\TO3
 Text GLabel 8550 4400 2    50   Input ~ 0
-~CPUCLK
+PHI
 $EndSCHEMATC

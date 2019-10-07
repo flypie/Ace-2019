@@ -100,8 +100,6 @@ Wire Wire Line
 Wire Wire Line
 	6700 2150 6700 2050
 Wire Wire Line
-	7700 2150 7700 2075
-Wire Wire Line
 	5050 3850 4900 3850
 Wire Wire Line
 	6000 2150 6000 2050
@@ -120,7 +118,7 @@ Text Label 4950 3050 2    50   ~ 0
 Wire Wire Line
 	5050 3050 4950 3050
 Wire Wire Line
-	8450 4700 8525 4700
+	8450 4700 8550 4700
 Text Label 7000 5400 3    50   ~ 0
 ARDY
 Wire Wire Line
@@ -234,7 +232,7 @@ PA0
 Wire Wire Line
 	5050 3350 4950 3350
 Wire Wire Line
-	7200 2150 7200 2000
+	7200 2150 7200 2050
 Wire Wire Line
 	7500 2000 7500 2150
 Wire Wire Line
@@ -260,13 +258,13 @@ Wire Wire Line
 Wire Wire Line
 	8450 3300 8550 3300
 Wire Wire Line
-	7100 2150 7100 1950
+	7100 2150 7100 2050
 Wire Wire Line
 	7000 2150 7000 2050
 Wire Wire Line
 	6800 2150 6800 2050
 Wire Wire Line
-	6900 2150 6900 1950
+	6900 2150 6900 2050
 Wire Wire Line
 	4900 3650 5050 3650
 $Comp
@@ -402,124 +400,124 @@ $Comp
 L Zilog_Z80_Peripherals:KIO-PLCC-84 Z112
 U 1 1 5D84861B
 P 5250 2350
-F 0 "Z112" H 4900 2600 50  0000 L CNN
-F 1 "Z84-KIO-PLCC-84" H 4350 2475 50  0000 L CNN
+F 0 "Z112" H 8500 1050 50  0000 L CNN
+F 1 "Z84-KIO-PLCC-84" H 8500 950 50  0000 L CNN
 F 2 "Package_LCC:PLCC-84_THT-Socket" H 7100 3750 50  0001 C CNN
 F 3 "https://www.mouser.com/datasheet/2/450/ps0118-25896.pdf" H 6400 1250 50  0001 C CNN
 	1    5250 2350
 	1    0    0    -1  
 $EndComp
 NoConn ~ 1350 2850
-NoConn ~ 2575 5950
-Text Label 2475 5650 2    50   ~ 0
+NoConn ~ 2325 5900
+Text Label 2225 5600 2    50   ~ 0
 CLK\TRG0
-Text Label 2475 5750 2    50   ~ 0
+Text Label 2225 5700 2    50   ~ 0
 CLK\TRG1
-Text Label 2475 5850 2    50   ~ 0
+Text Label 2225 5800 2    50   ~ 0
 CLK\TRG2
 $Comp
 L Connector_Generic:Conn_02x04_Odd_Even J105
 U 1 1 6602BBD4
-P 2775 5750
-F 0 "J105" H 2825 6100 50  0000 C CNN
-F 1 "Conn_02x04_Odd_Even" H 2825 6000 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 2775 5750 50  0001 C CNN
-F 3 "~" H 2775 5750 50  0001 C CNN
-	1    2775 5750
+P 2525 5700
+F 0 "J105" H 2575 6050 50  0000 C CNN
+F 1 "Conn_02x04_Odd_Even" H 2575 5950 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 2525 5700 50  0001 C CNN
+F 3 "~" H 2525 5700 50  0001 C CNN
+	1    2525 5700
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector_Generic:Conn_02x03_Odd_Even J104
 U 1 1 64A32B0F
-P 2775 5150
-F 0 "J104" H 2825 5500 50  0000 C CNN
-F 1 "Conn_02x03_Odd_Even" H 2825 5400 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 2775 5150 50  0001 C CNN
-F 3 "~" H 2775 5150 50  0001 C CNN
-	1    2775 5150
+P 2525 5100
+F 0 "J104" H 2575 5450 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 2575 5350 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 2525 5100 50  0001 C CNN
+F 3 "~" H 2525 5100 50  0001 C CNN
+	1    2525 5100
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector_Generic:Conn_02x03_Odd_Even J103
 U 1 1 6454B474
-P 2775 4550
-F 0 "J103" H 2850 4900 50  0000 C CNN
-F 1 "Conn_02x03_Odd_Even" H 2850 4800 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 2775 4550 50  0001 C CNN
-F 3 "~" H 2775 4550 50  0001 C CNN
-	1    2775 4550
+P 2525 4500
+F 0 "J103" H 2600 4850 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 2600 4750 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 2525 4500 50  0001 C CNN
+F 3 "~" H 2525 4500 50  0001 C CNN
+	1    2525 4500
 	1    0    0    -1  
 $EndComp
-Text Label 3175 5950 0    50   ~ 0
+Text Label 2925 5900 0    50   ~ 0
 ZC\TO3
 Wire Wire Line
-	3075 5950 3175 5950
-Text Label 3175 5850 0    50   ~ 0
+	2825 5900 2925 5900
+Text Label 2925 5800 0    50   ~ 0
 ZC\TO2
 Wire Wire Line
-	3075 5850 3175 5850
-Text Label 3175 5750 0    50   ~ 0
+	2825 5800 2925 5800
+Text Label 2925 5700 0    50   ~ 0
 ZC\TO1
 Wire Wire Line
-	3075 5750 3175 5750
-Text Label 3175 5650 0    50   ~ 0
+	2825 5700 2925 5700
+Text Label 2925 5600 0    50   ~ 0
 ZC\TO0
 Wire Wire Line
-	3075 5650 3175 5650
+	2825 5600 2925 5600
 Wire Wire Line
-	2575 5850 2475 5850
+	2325 5800 2225 5800
 Wire Wire Line
-	2575 5750 2475 5750
+	2325 5700 2225 5700
 Wire Wire Line
-	2575 5650 2475 5650
-Text Label 3175 5250 0    50   ~ 0
+	2325 5600 2225 5600
+Text Label 2925 5200 0    50   ~ 0
 ~CTSB
 Wire Wire Line
-	3075 5250 3175 5250
-Text Label 3175 5150 0    50   ~ 0
+	2825 5200 2925 5200
+Text Label 2925 5100 0    50   ~ 0
 ~DCDB
 Wire Wire Line
-	3075 5150 3175 5150
-Text Label 2475 5050 2    50   ~ 0
+	2825 5100 2925 5100
+Text Label 2225 5000 2    50   ~ 0
 TxDB
 Wire Wire Line
-	2575 5050 2475 5050
-Text Label 2475 5150 2    50   ~ 0
+	2325 5000 2225 5000
+Text Label 2225 5100 2    50   ~ 0
 ~TxCB
 Wire Wire Line
-	2575 5150 2475 5150
-Text Label 2475 5250 2    50   ~ 0
+	2325 5100 2225 5100
+Text Label 2225 5200 2    50   ~ 0
 ~RxCB
 Wire Wire Line
-	2575 5250 2475 5250
-Text Label 3175 5050 0    50   ~ 0
+	2325 5200 2225 5200
+Text Label 2925 5000 0    50   ~ 0
 RxDB
 Wire Wire Line
-	3075 5050 3175 5050
-Text Label 3175 4650 0    50   ~ 0
+	2825 5000 2925 5000
+Text Label 2925 4600 0    50   ~ 0
 ~CTSA
 Wire Wire Line
-	3075 4650 3175 4650
-Text Label 3175 4550 0    50   ~ 0
+	2825 4600 2925 4600
+Text Label 2925 4500 0    50   ~ 0
 ~DCDA
 Wire Wire Line
-	3075 4550 3175 4550
-Text Label 3175 4450 0    50   ~ 0
+	2825 4500 2925 4500
+Text Label 2925 4400 0    50   ~ 0
 RxDA
 Wire Wire Line
-	3075 4450 3175 4450
-Text Label 2475 4650 2    50   ~ 0
+	2825 4400 2925 4400
+Text Label 2225 4600 2    50   ~ 0
 ~RxCA
 Wire Wire Line
-	2575 4650 2475 4650
-Text Label 2475 4550 2    50   ~ 0
+	2325 4600 2225 4600
+Text Label 2225 4500 2    50   ~ 0
 ~TxCA
 Wire Wire Line
-	2575 4550 2475 4550
-Text Label 2475 4450 2    50   ~ 0
+	2325 4500 2225 4500
+Text Label 2225 4400 2    50   ~ 0
 TxDA
 Wire Wire Line
-	2575 4450 2475 4450
+	2325 4400 2225 4400
 $Comp
 L Connector_Generic:Conn_02x05_Odd_Even J100
 U 1 1 5D98E8C9
@@ -667,7 +665,7 @@ Text Label 2225 1825 2    50   ~ 0
 PA1
 Text Label 2225 1725 2    50   ~ 0
 PA0
-Text GLabel 7200 2000 1    50   Input ~ 0
+Text GLabel 7200 2050 1    50   Input ~ 0
 ~KIOCS
 Text Label 6700 5400 3    50   ~ 0
 PB0
@@ -689,7 +687,7 @@ Text GLabel 8550 3100 2    50   Input ~ 0
 DA6
 Text GLabel 8550 3000 2    50   Input ~ 0
 DA7
-Text GLabel 8525 4700 2    50   Input ~ 0
+Text GLabel 8550 4700 2    50   Input ~ 0
 ~INT
 Text GLabel 7800 2050 1    50   Input ~ 0
 CLK\TRG3
@@ -697,20 +695,22 @@ Text GLabel 7400 2050 1    50   Input ~ 0
 ~RD
 Text GLabel 7300 2050 1    50   Input ~ 0
 ~M1
-Text GLabel 7100 1950 1    50   Input ~ 0
+Text GLabel 7100 2050 1    50   Input ~ 0
 A11
 Text GLabel 7000 2050 1    50   Input ~ 0
 A10
-Text GLabel 6900 1950 1    50   Input ~ 0
+Text GLabel 6900 2050 1    50   Input ~ 0
 A9
 Text GLabel 6800 2050 1    50   Input ~ 0
 A8
 Text GLabel 7600 2050 1    50   Input ~ 0
 ~IOREQ
-Text GLabel 7700 2075 1    50   Input ~ 0
+Text GLabel 7700 2050 1    50   Input ~ 0
 ~RESET
 Text Label 7200 5400 3    50   ~ 0
 ZC\TO3
 Text GLabel 8550 4400 2    50   Input ~ 0
 ~CPUCLK
+Wire Wire Line
+	7700 2050 7700 2150
 $EndSCHEMATC

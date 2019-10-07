@@ -347,13 +347,13 @@ Connection ~ 9875 4000
 Wire Wire Line
 	9875 3200 9875 4000
 $Comp
-L Transistor_BJT:BC237 Q3
+L Device:Q_NPN_CBE Q3
 U 1 1 5F80CB45
 P 12475 4900
 F 0 "Q3" H 12700 4975 50  0000 L CNN
-F 1 "BC237" H 12700 4875 50  0000 L CNN
+F 1 "BC183" H 12700 4875 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 12675 4825 50  0001 L CIN
-F 3 "http:~/www.onsemi.com/pub_link/Collateral/BC237-D.PDF" H 12475 4900 50  0001 L CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/308/BC183-1299954.pdf" H 12475 4900 50  0001 L CNN
 	1    12475 4900
 	1    0    0    -1  
 $EndComp
@@ -741,7 +741,6 @@ Text GLabel 2200 6800 0    50   Input ~ 0
 A14
 Text GLabel 2100 6900 0    50   Input ~ 0
 A15
-NoConn ~ 13800 4150
 Connection ~ 4300 5800
 Text GLabel 6850 3900 0    50   Input ~ 0
 ~IOREQ&11111110B

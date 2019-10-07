@@ -5333,10 +5333,4 @@ Wire Wire Line
 	17750 4925 17750 6725
 Wire Wire Line
 	16850 4925 17750 4925
-$Sheet
-S 3975 10600 1175 1750
-U 5FBB02D5
-F0 "IO&Speaker" 150
-F1 "IO&Speaker.sch" 150
-$EndSheet
 $EndSCHEMATC

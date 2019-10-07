@@ -5,13 +5,14 @@ XCDIR := C:/home/JohnB/Dropbox/Ace-2019/KiCad
 
 else
 
-FREEROUTING = java -jar ~/NetBeansProjects/freeRouting/dist/freeRouting.jar -s -asx -moi 20 -de  
+FREEROUTING = java -jar $(HOME)/freeRoutingProj/dist/freeRouting.jar -s -asx -moi 20 -de  
 XCDIR = $(HOME)/Dropbox/Ace-2019/KiCad
 
 endif
 
 csrc = $(wildcard $(XCDIR)/ACE1/*.dsn) \
 		$(wildcard $(XCDIR)/ACE2NOKBV2/*.dsn) \
+		$(wildcard $(XCDIR)/ACE2NOKBV2MK2/*.dsn) \
 		$(wildcard $(XCDIR)/ACE3NOKB/*.dsn) \
 		$(wildcard $(XCDIR)/ACE4NOKB/*.dsn) \
 		$(wildcard $(XCDIR)/ACE5/*.dsn) \
@@ -24,7 +25,8 @@ csrc = $(wildcard $(XCDIR)/ACE1/*.dsn) \
 obj = $(csrc:.dsn=.ses)
 
 %.ses: %.dsn
-	echo Update > $@
+	@echo Update > $@
+	@echo Start $$(date +%T-%d/%m/%y) $^ >> log.txt
 	$(FREEROUTING) $^
-
+	@echo End $$(date +%T-%d/%m/%y) $^ >> log.txt
 routing: $(obj)
