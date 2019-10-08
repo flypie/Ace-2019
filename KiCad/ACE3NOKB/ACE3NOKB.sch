@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A2 23386 16535
 encoding utf-8
-Sheet 1 2
+Sheet 1 3
 Title "JupiterAce Z80 plus KIO and new memory format."
 Date "2019-09-11"
 Rev "Alpha"
@@ -77,8 +77,6 @@ Wire Wire Line
 	18750 1225 18750 1425
 Wire Wire Line
 	18350 1825 18750 1825
-Wire Wire Line
-	13475 10850 13725 10850
 Wire Wire Line
 	15300 3125 15450 3125
 Connection ~ 15450 3125
@@ -188,30 +186,6 @@ Text Label 20625 8125 3    50   ~ 0
 DA4
 Text Label 20825 8125 3    50   ~ 0
 DA6
-$Comp
-L Device:C_Small C6
-U 1 1 5E9F8ADD
-P 13825 10850
-F 0 "C6" V 13575 10850 50  0000 C CNN
-F 1 "47nF" V 13675 10850 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 13825 10850 50  0001 C CNN
-F 3 "~" H 13825 10850 50  0001 C CNN
-	1    13825 10850
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	14225 10850 14225 11550
-$Comp
-L Device:C_Small C5
-U 1 1 5E5189FF
-P 14225 11650
-F 0 "C5" H 14125 11700 50  0000 R CNN
-F 1 "47p" H 14125 11650 50  0000 R CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 14225 11650 50  0001 C CNN
-F 3 "" H 14225 11650 50  0001 C CNN
-	1    14225 11650
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	15250 9350 15650 9350
 Wire Wire Line
@@ -265,7 +239,7 @@ L Device:Crystal X1
 U 1 1 5D1D7B86
 P 15100 9050
 F 0 "X1" H 15100 9250 50  0000 C CNN
-F 1 "CRYSTALHC49U-V 6.556MHz" H 15110 9210 50  0001 C CNN
+F 1 "6.5MHz" H 15110 9210 50  0001 C CNN
 F 2 "Crystal:Crystal_HC49-U_Vertical" H 15100 9050 50  0001 C CNN
 F 3 "" H 15100 9050 50  0001 C CNN
 	1    15100 9050
@@ -274,79 +248,47 @@ $EndComp
 $Comp
 L Regulator_Linear:LM7805_TO220 LVR1
 U 1 1 735D1281
-P 5975 15125
-F 0 "LVR1" H 6000 15400 50  0000 C CNN
-F 1 "LM7805_TO220" H 6000 15300 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5975 15350 50  0001 C CIN
-F 3 "http://www.fairchildsemi.com/ds/LM/LM7805.pdf" H 5975 15075 50  0001 C CNN
-	1    5975 15125
+P 6525 13575
+F 0 "LVR1" H 6550 13850 50  0000 C CNN
+F 1 "LM7805_TO220" H 6550 13750 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 6525 13800 50  0001 C CIN
+F 3 "http://www.fairchildsemi.com/ds/LM/LM7805.pdf" H 6525 13525 50  0001 C CNN
+	1    6525 13575
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #~PWR0161
 U 1 1 731E2B46
-P 3425 15875
-F 0 "#~PWR0161" H 3425 15625 50  0001 C CNN
-F 1 "GND" H 3450 15650 50  0000 C CNN
-F 2 "" H 3425 15875 50  0001 C CNN
-F 3 "" H 3425 15875 50  0001 C CNN
-	1    3425 15875
+P 3975 14325
+F 0 "#~PWR0161" H 3975 14075 50  0001 C CNN
+F 1 "GND" H 4000 14100 50  0000 C CNN
+F 2 "" H 3975 14325 50  0001 C CNN
+F 3 "" H 3975 14325 50  0001 C CNN
+	1    3975 14325
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:PWR_FLAG #~FLG0102
 U 1 1 727010D5
-P 3250 15175
-F 0 "#~FLG0102" H 3250 15250 50  0001 C CNN
-F 1 "PWR_FLAG" V 3250 15350 50  0000 L CNN
-F 2 "" H 3250 15175 50  0001 C CNN
-F 3 "~" H 3250 15175 50  0001 C CNN
-	1    3250 15175
+P 3800 13625
+F 0 "#~FLG0102" H 3800 13700 50  0001 C CNN
+F 1 "PWR_FLAG" V 3800 13800 50  0000 L CNN
+F 2 "" H 3800 13625 50  0001 C CNN
+F 3 "~" H 3800 13625 50  0001 C CNN
+	1    3800 13625
 	0    -1   -1   0   
 $EndComp
 $Comp
 L power:PWR_FLAG #~FLG0101
 U 1 1 725FB0E7
-P 3250 15825
-F 0 "#~FLG0101" H 3250 15900 50  0001 C CNN
-F 1 "PWR_FLAG" V 3250 16000 50  0000 L CNN
-F 2 "" H 3250 15825 50  0001 C CNN
-F 3 "~" H 3250 15825 50  0001 C CNN
-	1    3250 15825
+P 3800 14275
+F 0 "#~FLG0101" H 3800 14350 50  0001 C CNN
+F 1 "PWR_FLAG" V 3800 14450 50  0000 L CNN
+F 2 "" H 3800 14275 50  0001 C CNN
+F 3 "~" H 3800 14275 50  0001 C CNN
+	1    3800 14275
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	6225 13250 6225 14325
-Wire Wire Line
-	6525 13250 6525 13550
-Wire Wire Line
-	6325 13250 6325 13750
-$Comp
-L 74xx:74LS367 Z14
-U 1 1 70940791
-P 6225 12750
-F 0 "Z14" V 6055 12210 50  0000 R CNN
-F 1 "74LS367" V 6575 12545 50  0000 R CNN
-F 2 "Package_DIP:DIP-16_W7.62mm" H 6225 12750 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS367" H 6225 12750 50  0001 C CNN
-	1    6225 12750
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	6525 13550 6625 13550
-Wire Wire Line
-	6625 13550 10825 13550
-Connection ~ 6625 13550
-Wire Wire Line
-	6625 13250 6625 13550
-Wire Wire Line
-	6125 13250 6125 14225
-Wire Wire Line
-	6025 13250 6025 14125
-Wire Wire Line
-	5925 13250 5925 14025
-Wire Wire Line
-	5825 13250 5825 13925
 $Comp
 L power:VCC #~PWR0143
 U 1 1 6EE1F51B
@@ -384,19 +326,6 @@ F 3 "" H 11150 6075 50  0001 C CNN
 	1    11150 6075
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:VCC #~PWR0156
-U 1 1 6B547B93
-P 5425 12750
-F 0 "#~PWR0156" H 5425 12600 50  0001 C CNN
-F 1 "VCC" V 5465 12915 50  0000 L CNN
-F 2 "" H 5425 12750 50  0001 C CNN
-F 3 "" H 5425 12750 50  0001 C CNN
-	1    5425 12750
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	5525 12750 5425 12750
 $Comp
 L power:GND #~PWR0152
 U 1 1 6AC5A37D
@@ -563,82 +492,36 @@ F 3 "" H 19925 4225 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #~PWR0123
-U 1 1 67A4A3C1
-P 12775 11350
-F 0 "#~PWR0123" H 12775 11200 50  0001 C CNN
-F 1 "VCC" H 12790 11555 50  0000 C CNN
-F 2 "" H 12775 11350 50  0001 C CNN
-F 3 "" H 12775 11350 50  0001 C CNN
-	1    12775 11350
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:VCC #~PWR0122
-U 1 1 67A4410D
-P 12775 10550
-F 0 "#~PWR0122" H 12775 10400 50  0001 C CNN
-F 1 "VCC" H 12835 10755 50  0000 C CNN
-F 2 "" H 12775 10550 50  0001 C CNN
-F 3 "" H 12775 10550 50  0001 C CNN
-	1    12775 10550
-	1    0    0    -1  
-$EndComp
-$Comp
 L 74xx:74LS86 Z23
 U 5 1 6A760723
-P 9015 15500
-F 0 "Z23" H 9275 15575 50  0000 L CNN
-F 1 "74LS86" H 9275 15475 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 9015 15500 50  0001 C CNN
-F 3 "74xx/74ls86.pdf" H 9015 15500 50  0001 C CNN
-	5    9015 15500
+P 9565 13950
+F 0 "Z23" H 9825 14025 50  0000 L CNN
+F 1 "74LS86" H 9825 13925 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 9565 13950 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 9565 13950 50  0001 C CNN
+	5    9565 13950
 	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #~PWR0119
-U 1 1 667C1C52
-P 7025 12750
-F 0 "#~PWR0119" H 7025 12500 50  0001 C CNN
-F 1 "GND" V 7030 12645 50  0000 R CNN
-F 2 "" H 7025 12750 50  0001 C CNN
-F 3 "" H 7025 12750 50  0001 C CNN
-	1    7025 12750
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	7025 12750 6925 12750
-$Comp
-L power:GND #~PWR0117
-U 1 1 665CA8F3
-P 14825 10750
-F 0 "#~PWR0117" H 14825 10500 50  0001 C CNN
-F 1 "GND" V 14830 10600 50  0000 R CNN
-F 2 "" H 14825 10750 50  0001 C CNN
-F 3 "" H 14825 10750 50  0001 C CNN
-	1    14825 10750
-	0    1    1    0   
 $EndComp
 $Comp
 L 74xx:74LS32 Z26
 U 5 1 62A13BFB
-P 12120 15500
-F 0 "Z26" H 12350 15595 50  0000 L CNN
-F 1 "74LS32" H 12350 15495 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 12120 15500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 12120 15500 50  0001 C CNN
-	5    12120 15500
+P 12670 13950
+F 0 "Z26" H 12900 14045 50  0000 L CNN
+F 1 "74LS32" H 12900 13945 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 12670 13950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 12670 13950 50  0001 C CNN
+	5    12670 13950
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74LS02 Z24
 U 5 1 629F3A79
-P 11690 15500
-F 0 "Z24" H 11955 15565 50  0000 L CNN
-F 1 "74LS02" H 11955 15465 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 11690 15500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 11690 15500 50  0001 C CNN
-	5    11690 15500
+P 12240 13950
+F 0 "Z24" H 12505 14015 50  0000 L CNN
+F 1 "74LS02" H 12505 13915 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 12240 13950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 12240 13950 50  0001 C CNN
+	5    12240 13950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -652,43 +535,19 @@ F 3 "" H 15850 9550 50  0001 C CNN
 	1    15850 9550
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:VCC #~PWR0114
-U 1 1 661C6D0F
-P 14825 11150
-F 0 "#~PWR0114" H 14825 11000 50  0001 C CNN
-F 1 "VCC" H 14850 11335 50  0000 C CNN
-F 2 "" H 14825 11150 50  0001 C CNN
-F 3 "" H 14825 11150 50  0001 C CNN
-	1    14825 11150
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5725 8250 5675 8250
 Wire Wire Line
 	5725 8150 5675 8150
 $Comp
-L power:GND #~PWR0101
-U 1 1 6535A473
-P 14225 13050
-F 0 "#~PWR0101" H 14225 12800 50  0001 C CNN
-F 1 "GND" H 14245 12850 50  0000 C CNN
-F 2 "" H 14225 13050 50  0001 C CNN
-F 3 "" H 14225 13050 50  0001 C CNN
-	1    14225 13050
-	1    0    0    -1  
-$EndComp
-Text Label 4425 14625 2    50   ~ 0
-A15
-$Comp
 L 74xx:74LS00 Z19
 U 5 1 66907DE2
-P 15200 15500
-F 0 "Z19" H 15470 15585 50  0000 L CNN
-F 1 "74LS00" H 15470 15485 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 15200 15500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 15200 15500 50  0001 C CNN
-	5    15200 15500
+P 15750 13950
+F 0 "Z19" H 16020 14035 50  0000 L CNN
+F 1 "74LS00" H 16020 13935 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 15750 13950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 15750 13950 50  0001 C CNN
+	5    15750 13950
 	1    0    0    -1  
 $EndComp
 Connection ~ 18750 1825
@@ -696,8 +555,6 @@ Wire Wire Line
 	18750 1875 18750 1825
 Wire Wire Line
 	16050 3320 16050 3425
-Wire Wire Line
-	11570 10850 12475 10850
 Wire Wire Line
 	16850 4925 16850 4425
 $Comp
@@ -714,154 +571,138 @@ $EndComp
 $Comp
 L Device:C C19
 U 1 1 5D79AD57
-P 7950 15375
-F 0 "C19" H 7800 15300 50  0000 R CNN
-F 1 "100nf" H 7800 15400 50  0000 R CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8300 15425 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 8300 15325 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 8300 15225 50  0001 L CNN "Description"
-F 5 "3" H 8300 15125 50  0001 L CNN "Height"
-F 6 "8523267" H 8300 15025 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 8300 14925 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 8300 14825 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 8300 14725 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 8300 14625 50  0001 L CNN "Allied_Number"
-	1    7950 15375
+P 8500 13825
+F 0 "C19" H 8350 13750 50  0000 R CNN
+F 1 "100nf" H 8350 13850 50  0000 R CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8850 13875 50  0001 L CNN
+F 3 "http://uk.rs-online.com/web/p/products/8523267" H 8850 13775 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 8850 13675 50  0001 L CNN "Description"
+F 5 "3" H 8850 13575 50  0001 L CNN "Height"
+F 6 "8523267" H 8850 13475 50  0001 L CNN "RS Part Number"
+F 7 "http://uk.rs-online.com/web/p/products/8523267" H 8850 13375 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 8850 13275 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 8850 13175 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 8850 13075 50  0001 L CNN "Allied_Number"
+	1    8500 13825
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:C C14
 U 1 1 5D956C31
-P 6800 15375
-F 0 "C14" H 6650 15300 50  0000 R CNN
-F 1 "100nf" H 6650 15400 50  0000 R CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 7150 15425 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 7150 15325 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 7150 15225 50  0001 L CNN "Description"
-F 5 "3" H 7150 15125 50  0001 L CNN "Height"
-F 6 "8523267" H 7150 15025 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 7150 14925 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 7150 14825 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 7150 14725 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 7150 14625 50  0001 L CNN "Allied_Number"
-	1    6800 15375
+P 7350 13825
+F 0 "C14" H 7200 13750 50  0000 R CNN
+F 1 "100nf" H 7200 13850 50  0000 R CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 7700 13875 50  0001 L CNN
+F 3 "http://uk.rs-online.com/web/p/products/8523267" H 7700 13775 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 7700 13675 50  0001 L CNN "Description"
+F 5 "3" H 7700 13575 50  0001 L CNN "Height"
+F 6 "8523267" H 7700 13475 50  0001 L CNN "RS Part Number"
+F 7 "http://uk.rs-online.com/web/p/products/8523267" H 7700 13375 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 7700 13275 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 7700 13175 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 7700 13075 50  0001 L CNN "Allied_Number"
+	1    7350 13825
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:C C20
 U 1 1 5D878331
-P 8225 15375
-F 0 "C20" H 8100 15300 50  0000 R CNN
-F 1 "100nf" H 8100 15400 50  0000 R CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8575 15425 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 8575 15325 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 8575 15225 50  0001 L CNN "Description"
-F 5 "3" H 8575 15125 50  0001 L CNN "Height"
-F 6 "8523267" H 8575 15025 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 8575 14925 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 8575 14825 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 8575 14725 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 8575 14625 50  0001 L CNN "Allied_Number"
-	1    8225 15375
+P 8775 13825
+F 0 "C20" H 8650 13750 50  0000 R CNN
+F 1 "100nf" H 8650 13850 50  0000 R CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 9125 13875 50  0001 L CNN
+F 3 "http://uk.rs-online.com/web/p/products/8523267" H 9125 13775 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 9125 13675 50  0001 L CNN "Description"
+F 5 "3" H 9125 13575 50  0001 L CNN "Height"
+F 6 "8523267" H 9125 13475 50  0001 L CNN "RS Part Number"
+F 7 "http://uk.rs-online.com/web/p/products/8523267" H 9125 13375 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 9125 13275 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 9125 13175 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 9125 13075 50  0001 L CNN "Allied_Number"
+	1    8775 13825
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:C C18
 U 1 1 5D6BE2CF
-P 7700 15375
-F 0 "C18" H 7550 15300 50  0000 R CNN
-F 1 "100nf" H 7550 15400 50  0000 R CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8050 15425 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 8050 15325 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 8050 15225 50  0001 L CNN "Description"
-F 5 "3" H 8050 15125 50  0001 L CNN "Height"
-F 6 "8523267" H 8050 15025 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 8050 14925 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 8050 14825 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 8050 14725 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 8050 14625 50  0001 L CNN "Allied_Number"
-	1    7700 15375
+P 8250 13825
+F 0 "C18" H 8100 13750 50  0000 R CNN
+F 1 "100nf" H 8100 13850 50  0000 R CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8600 13875 50  0001 L CNN
+F 3 "http://uk.rs-online.com/web/p/products/8523267" H 8600 13775 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 8600 13675 50  0001 L CNN "Description"
+F 5 "3" H 8600 13575 50  0001 L CNN "Height"
+F 6 "8523267" H 8600 13475 50  0001 L CNN "RS Part Number"
+F 7 "http://uk.rs-online.com/web/p/products/8523267" H 8600 13375 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 8600 13275 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 8600 13175 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 8600 13075 50  0001 L CNN "Allied_Number"
+	1    8250 13825
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:C C17
 U 1 1 5D5E2433
-P 7475 15375
-F 0 "C17" H 7350 15300 50  0000 R CNN
-F 1 "100nf" H 7350 15400 50  0000 R CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 7825 15425 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 7825 15325 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 7825 15225 50  0001 L CNN "Description"
-F 5 "3" H 7825 15125 50  0001 L CNN "Height"
-F 6 "8523267" H 7825 15025 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 7825 14925 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 7825 14825 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 7825 14725 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 7825 14625 50  0001 L CNN "Allied_Number"
-	1    7475 15375
+P 8025 13825
+F 0 "C17" H 7900 13750 50  0000 R CNN
+F 1 "100nf" H 7900 13850 50  0000 R CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8375 13875 50  0001 L CNN
+F 3 "http://uk.rs-online.com/web/p/products/8523267" H 8375 13775 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 8375 13675 50  0001 L CNN "Description"
+F 5 "3" H 8375 13575 50  0001 L CNN "Height"
+F 6 "8523267" H 8375 13475 50  0001 L CNN "RS Part Number"
+F 7 "http://uk.rs-online.com/web/p/products/8523267" H 8375 13375 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 8375 13275 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 8375 13175 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 8375 13075 50  0001 L CNN "Allied_Number"
+	1    8025 13825
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:C C16
 U 1 1 5D506FED
-P 7250 15375
-F 0 "C16" H 7100 15300 50  0000 R CNN
-F 1 "100nf" H 7100 15400 50  0000 R CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 7600 15425 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 7600 15325 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 7600 15225 50  0001 L CNN "Description"
-F 5 "3" H 7600 15125 50  0001 L CNN "Height"
-F 6 "8523267" H 7600 15025 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 7600 14925 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 7600 14825 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 7600 14725 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 7600 14625 50  0001 L CNN "Allied_Number"
-	1    7250 15375
+P 7800 13825
+F 0 "C16" H 7650 13750 50  0000 R CNN
+F 1 "100nf" H 7650 13850 50  0000 R CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8150 13875 50  0001 L CNN
+F 3 "http://uk.rs-online.com/web/p/products/8523267" H 8150 13775 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 8150 13675 50  0001 L CNN "Description"
+F 5 "3" H 8150 13575 50  0001 L CNN "Height"
+F 6 "8523267" H 8150 13475 50  0001 L CNN "RS Part Number"
+F 7 "http://uk.rs-online.com/web/p/products/8523267" H 8150 13375 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 8150 13275 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 8150 13175 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 8150 13075 50  0001 L CNN "Allied_Number"
+	1    7800 13825
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:C C15
 U 1 1 5D42C6C3
-P 7025 15375
-F 0 "C15" H 6900 15300 50  0000 R CNN
-F 1 "100nf" H 6900 15400 50  0000 R CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 7375 15425 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 7375 15325 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 7375 15225 50  0001 L CNN "Description"
-F 5 "3" H 7375 15125 50  0001 L CNN "Height"
-F 6 "8523267" H 7375 15025 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 7375 14925 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 7375 14825 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 7375 14725 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 7375 14625 50  0001 L CNN "Allied_Number"
-	1    7025 15375
+P 7575 13825
+F 0 "C15" H 7450 13750 50  0000 R CNN
+F 1 "100nf" H 7450 13850 50  0000 R CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 7925 13875 50  0001 L CNN
+F 3 "http://uk.rs-online.com/web/p/products/8523267" H 7925 13775 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 7925 13675 50  0001 L CNN "Description"
+F 5 "3" H 7925 13575 50  0001 L CNN "Height"
+F 6 "8523267" H 7925 13475 50  0001 L CNN "RS Part Number"
+F 7 "http://uk.rs-online.com/web/p/products/8523267" H 7925 13375 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 7925 13275 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 7925 13175 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 7925 13075 50  0001 L CNN "Allied_Number"
+	1    7575 13825
 	-1   0    0    1   
 $EndComp
-Text Label 6125 12150 1    50   ~ 0
-DA3
-Wire Wire Line
-	6125 12250 6125 12150
-Text Label 5825 12150 1    50   ~ 0
-DA0
-Wire Wire Line
-	5825 12250 5825 12150
-Text Label 6025 12150 1    50   ~ 0
-DA2
-Wire Wire Line
-	6025 12250 6025 12150
-Text Label 5925 12150 1    50   ~ 0
-DA1
-Wire Wire Line
-	5925 12250 5925 12150
 $Comp
 L 74xx:74LS11 Z22
 U 4 1 6989826C
-P 9945 15500
-F 0 "Z22" H 10185 15555 50  0000 L CNN
-F 1 "74LS11" H 10185 15455 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 9945 15500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 9945 15500 50  0001 C CNN
-	4    9945 15500
+P 10495 13950
+F 0 "Z22" H 10735 14005 50  0000 L CNN
+F 1 "74LS11" H 10735 13905 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 10495 13950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 10495 13950 50  0001 C CNN
+	4    10495 13950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -885,8 +726,6 @@ F 3 "" H 17950 3925 50  0001 C CNN
 	1    17950 3925
 	0    1    1    0   
 $EndComp
-Text Label 16350 5025 2    50   ~ 0
-EAR
 Wire Wire Line
 	20225 2350 17350 2350
 Wire Wire Line
@@ -936,12 +775,12 @@ $EndComp
 $Comp
 L 74xx:74LS11 Z21
 U 4 1 69DE0CE8
-P 9460 15500
-F 0 "Z21" H 9690 15590 50  0000 L CNN
-F 1 "74LS11" H 9690 15490 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 9460 15500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 9460 15500 50  0001 C CNN
-	4    9460 15500
+P 10010 13950
+F 0 "Z21" H 10240 14040 50  0000 L CNN
+F 1 "74LS11" H 10240 13940 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 10010 13950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 10010 13950 50  0001 C CNN
+	4    10010 13950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -958,12 +797,12 @@ $EndComp
 $Comp
 L 74xx:74LS08 Z20
 U 5 1 68B9DD2C
-P 10395 15500
-F 0 "Z20" H 10655 15575 50  0000 L CNN
-F 1 "74LS08" H 10655 15475 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 10395 15500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 10395 15500 50  0001 C CNN
-	5    10395 15500
+P 10945 13950
+F 0 "Z20" H 11205 14025 50  0000 L CNN
+F 1 "74LS08" H 11205 13925 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 10945 13950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 10945 13950 50  0001 C CNN
+	5    10945 13950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -991,12 +830,12 @@ $EndComp
 $Comp
 L 74xx:74LS02 Z25
 U 5 1 67CF6A6D
-P 10820 15500
-F 0 "Z25" H 11090 15595 50  0000 L CNN
-F 1 "74LS02" H 11090 15495 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 10820 15500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 10820 15500 50  0001 C CNN
-	5    10820 15500
+P 11370 13950
+F 0 "Z25" H 11640 14045 50  0000 L CNN
+F 1 "74LS02" H 11640 13945 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 11370 13950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 11370 13950 50  0001 C CNN
+	5    11370 13950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1024,12 +863,12 @@ $EndComp
 $Comp
 L 74xx:74LS32 Z108
 U 5 1 675FD764
-P 11240 15500
-F 0 "Z108" H 11510 15575 50  0000 L CNN
-F 1 "74LS32" H 11510 15475 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 11240 15500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 11240 15500 50  0001 C CNN
-	5    11240 15500
+P 11790 13950
+F 0 "Z108" H 12060 14025 50  0000 L CNN
+F 1 "74LS32" H 12060 13925 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 11790 13950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 11790 13950 50  0001 C CNN
+	5    11790 13950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1059,12 +898,12 @@ Wire Wire Line
 $Comp
 L 74xx:74LS04 Z102
 U 7 1 64E78705
-P 14760 15500
-F 0 "Z102" H 15005 15575 50  0000 L CNN
-F 1 "74LS04" H 15005 15475 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 14760 15500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 14760 15500 50  0001 C CNN
-	7    14760 15500
+P 15310 13950
+F 0 "Z102" H 15555 14025 50  0000 L CNN
+F 1 "74LS04" H 15555 13925 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 15310 13950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 15310 13950 50  0001 C CNN
+	7    15310 13950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1077,17 +916,6 @@ F 2 "Package_DIP:DIP-14_W7.62mm" H 14725 2825 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 14725 2825 50  0001 C CNN
 	6    14725 2825
 	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS04 Z102
-U 3 1 64E6C736
-P 10825 13150
-F 0 "Z102" V 10730 13350 50  0000 L CNN
-F 1 "74LS04" V 10830 13350 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 10825 13150 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 10825 13150 50  0001 C CNN
-	3    10825 13150
-	0    1    1    0   
 $EndComp
 $Comp
 L 74xx:74LS04 Z102
@@ -1120,18 +948,14 @@ Wire Wire Line
 $Comp
 L 74xx:74LS74 Z27
 U 3 1 62A1CDDB
-P 14300 15500
-F 0 "Z27" H 14535 15580 50  0000 L CNN
-F 1 "74LS74" H 14535 15480 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 14300 15500 50  0001 C CNN
-F 3 "74xx/74hc_hct74.pdf" H 14300 15500 50  0001 C CNN
-	3    14300 15500
+P 14850 13950
+F 0 "Z27" H 15085 14030 50  0000 L CNN
+F 1 "74LS74" H 15085 13930 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 14850 13950 50  0001 C CNN
+F 3 "74xx/74hc_hct74.pdf" H 14850 13950 50  0001 C CNN
+	3    14850 13950
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	11570 10950 11570 11750
-Wire Wire Line
-	12475 10950 11570 10950
 $Comp
 L 74xx:74LS74 Z27
 U 2 1 62A19C05
@@ -1144,85 +968,85 @@ F 3 "74xx/74hc_hct74.pdf" H 16850 1825 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5275 15870 5975 15870
+	5825 14320 6525 14320
 $Comp
 L Device:CP C12
 U 1 1 5F0A734F
-P 6325 15375
-F 0 "C12" H 6200 15450 50  0000 R CNN
-F 1 "100uf" H 6200 15350 50  0000 R CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 6363 15225 50  0001 C CNN
-F 3 "~" H 6325 15375 50  0001 C CNN
-	1    6325 15375
+P 6875 13825
+F 0 "C12" H 6750 13900 50  0000 R CNN
+F 1 "100uf" H 6750 13800 50  0000 R CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 6913 13675 50  0001 C CNN
+F 3 "~" H 6875 13825 50  0001 C CNN
+	1    6875 13825
 	-1   0    0    -1  
 $EndComp
 $Comp
 L Device:CP C11
 U 1 1 5F75CDD3
-P 5275 15525
-F 0 "C11" V 5440 15675 50  0000 L CNN
-F 1 "100uf" V 5540 15675 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D4.0mm_P1.50mm" H 5625 15575 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 5625 15475 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 5625 15375 50  0001 L CNN "Description"
-F 5 "3" H 5625 15275 50  0001 L CNN "Height"
-F 6 "8523267" H 5625 15175 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 5625 15075 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 5625 14975 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 5625 14875 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 5625 14775 50  0001 L CNN "Allied_Number"
-	1    5275 15525
+P 5825 13975
+F 0 "C11" V 5990 14125 50  0000 L CNN
+F 1 "100uf" V 6090 14125 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D4.0mm_P1.50mm" H 6175 14025 50  0001 L CNN
+F 3 "http://uk.rs-online.com/web/p/products/8523267" H 6175 13925 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 6175 13825 50  0001 L CNN "Description"
+F 5 "3" H 6175 13725 50  0001 L CNN "Height"
+F 6 "8523267" H 6175 13625 50  0001 L CNN "RS Part Number"
+F 7 "http://uk.rs-online.com/web/p/products/8523267" H 6175 13525 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 6175 13425 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 6175 13325 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 6175 13225 50  0001 L CNN "Allied_Number"
+	1    5825 13975
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C C10
 U 1 1 5E828036
-P 4225 15525
-F 0 "C10" V 4430 15690 50  0000 L CNN
-F 1 "100nf" V 4480 15675 50  0001 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 4575 15575 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 4575 15475 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 4575 15375 50  0001 L CNN "Description"
-F 5 "3" H 4575 15275 50  0001 L CNN "Height"
-F 6 "8523267" H 4575 15175 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 4575 15075 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 4575 14975 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 4575 14875 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 4575 14775 50  0001 L CNN "Allied_Number"
-	1    4225 15525
+P 4775 13975
+F 0 "C10" V 4980 14140 50  0000 L CNN
+F 1 "100nf" V 5030 14125 50  0001 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 5125 14025 50  0001 L CNN
+F 3 "http://uk.rs-online.com/web/p/products/8523267" H 5125 13925 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 5125 13825 50  0001 L CNN "Description"
+F 5 "3" H 5125 13725 50  0001 L CNN "Height"
+F 6 "8523267" H 5125 13625 50  0001 L CNN "RS Part Number"
+F 7 "http://uk.rs-online.com/web/p/products/8523267" H 5125 13525 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 5125 13425 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 5125 13325 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 5125 13225 50  0001 L CNN "Allied_Number"
+	1    4775 13975
 	-1   0    0    1   
 $EndComp
 $Comp
 L 74xx:74LS393 Z10
 U 3 1 5D1978A5
-P 13425 15500
-F 0 "Z10" H 13655 15590 50  0000 L CNN
-F 1 "74LS393" H 13655 15490 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 13425 15500 50  0001 C CNN
-F 3 "74xx\\74LS393.pdf" H 13425 15500 50  0001 C CNN
-	3    13425 15500
+P 13975 13950
+F 0 "Z10" H 14205 14040 50  0000 L CNN
+F 1 "74LS393" H 14205 13940 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 13975 13950 50  0001 C CNN
+F 3 "74xx\\74LS393.pdf" H 13975 13950 50  0001 C CNN
+	3    13975 13950
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74LS393 Z11
 U 3 1 5D2736AB
-P 13865 15500
-F 0 "Z11" H 14095 15590 50  0000 L CNN
-F 1 "74LS393" H 14095 15490 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 13865 15500 50  0001 C CNN
-F 3 "74xx\\74LS393.pdf" H 13865 15500 50  0001 C CNN
-	3    13865 15500
+P 14415 13950
+F 0 "Z11" H 14645 14040 50  0000 L CNN
+F 1 "74LS393" H 14645 13940 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 14415 13950 50  0001 C CNN
+F 3 "74xx\\74LS393.pdf" H 14415 13950 50  0001 C CNN
+	3    14415 13950
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74LS393 Z9
 U 3 1 5E382F4F
-P 13000 15500
-F 0 "Z9" H 13230 15590 50  0000 L CNN
-F 1 "74LS393" H 13230 15490 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 13000 15500 50  0001 C CNN
-F 3 "74xx\\74LS393.pdf" H 13000 15500 50  0001 C CNN
-	3    13000 15500
+P 13550 13950
+F 0 "Z9" H 13780 14040 50  0000 L CNN
+F 1 "74LS393" H 13780 13940 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 13550 13950 50  0001 C CNN
+F 3 "74xx\\74LS393.pdf" H 13550 13950 50  0001 C CNN
+	3    13550 13950
 	1    0    0    -1  
 $EndComp
 Text Label 8400 6825 0    50   ~ 0
@@ -1372,84 +1196,25 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 7350 3125 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74LS32 Z108
-U 4 1 62A08EB0
-P 8625 12150
-F 0 "Z108" H 8655 12530 50  0000 C CNN
-F 1 "74LS32" H 8655 12430 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 8625 12150 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 8625 12150 50  0001 C CNN
-	4    8625 12150
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS02 Z24
-U 1 1 620DC700
-P 9925 11750
-F 0 "Z24" H 9925 12100 50  0000 C CNN
-F 1 "74LS02" H 9925 12000 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 9925 11750 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 9925 11750 50  0001 C CNN
-	1    9925 11750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9625 11650 9125 11650
-Wire Wire Line
-	9625 11850 9525 11850
-$Comp
-L 74xx:74LS02 Z24
-U 4 1 620F1165
-P 12025 12650
-F 0 "Z24" H 12025 13000 50  0000 C CNN
-F 1 "74LS02" H 12025 12900 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 12025 12650 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 12025 12650 50  0001 C CNN
-	4    12025 12650
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS02 Z24
-U 3 1 620EA48A
-P 12025 11850
-F 0 "Z24" H 12025 12200 50  0000 C CNN
-F 1 "74LS02" H 12025 12100 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 12025 11850 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 12025 11850 50  0001 C CNN
-	3    12025 11850
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS02 Z24
-U 2 1 620E3DB8
-P 9925 12750
-F 0 "Z24" H 9925 13100 50  0000 C CNN
-F 1 "74LS02" H 9925 13000 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 9925 12750 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 9925 12750 50  0001 C CNN
-	2    9925 12750
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:L L1
 U 1 1 61703B56
-P 4875 15125
-F 0 "L1" V 5005 15105 50  0000 C CNN
-F 1 "EMI_Filter_LL_1423" H 4915 15360 50  0001 C CNN
-F 2 "Inductor_THT:L_Axial_L13.0mm_D4.5mm_P5.08mm_Vertical_Fastron_HCCC" H 4875 14875 50  0001 C CNN
-F 3 "~" V 4875 15165 50  0001 C CNN
-	1    4875 15125
+P 5425 13575
+F 0 "L1" V 5555 13555 50  0000 C CNN
+F 1 "EMI_Filter_LL_1423" H 5465 13810 50  0001 C CNN
+F 2 "Inductor_THT:L_Axial_L13.0mm_D4.5mm_P5.08mm_Vertical_Fastron_HCCC" H 5425 13325 50  0001 C CNN
+F 3 "~" V 5425 13615 50  0001 C CNN
+	1    5425 13575
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:CP C9
 U 1 1 5EDD7FFE
-P 3775 15525
-F 0 "C9" H 3650 15460 50  0000 R CNN
-F 1 "100uF" H 3650 15560 50  0000 R CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 3813 15375 50  0001 C CNN
-F 3 "~" H 3775 15525 50  0001 C CNN
-	1    3775 15525
+P 4325 13975
+F 0 "C9" H 4200 13910 50  0000 R CNN
+F 1 "100uF" H 4200 14010 50  0000 R CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 4363 13825 50  0001 C CNN
+F 3 "~" H 4325 13975 50  0001 C CNN
+	1    4325 13975
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -1464,28 +1229,6 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 11050
 	1    0    0    -1  
 $EndComp
 $Comp
-L Diode:1N4148 D2
-U 1 1 5DDACDE3
-P 14525 11600
-F 0 "D2" V 14475 11725 50  0000 L CNN
-F 1 "1N4148" V 14525 11725 50  0000 L CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 14525 11425 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 14525 11600 50  0001 C CNN
-	1    14525 11600
-	0    1    1    0   
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x02 AUDIO-OUT1
-U 1 1 C18BD510
-P 15325 10750
-F 0 "AUDIO-OUT1" H 15425 10800 51  0000 L CNN
-F 1 "332-02" H 15425 10650 50  0000 L CNN
-F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 15325 10750 50  0001 C CNN
-F 3 "" H 15325 10750 50  0001 C CNN
-	1    15325 10750
-	1    0    0    -1  
-$EndComp
-$Comp
 L 6116p:6116P Z5-6
 U 1 1 0AE95C9F
 P 15150 7125
@@ -1495,28 +1238,6 @@ F 2 "Package_DIP:DIP-24_W7.62mm" H 15150 7125 50  0001 C CNN
 F 3 "" H 15150 7125 50  0001 C CNN
 	1    15150 7125
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R9
-U 1 1 C32E0CEB
-P 13375 12650
-F 0 "R9" V 13125 12650 50  0000 C CNN
-F 1 "22k" V 13225 12650 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 13375 12650 50  0001 C CNN
-F 3 "" H 13375 12650 50  0001 C CNN
-	1    13375 12650
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R10
-U 1 1 C0B20218
-P 13325 10850
-F 0 "R10" V 13575 10850 50  0000 C CNN
-F 1 "10k" V 13475 10850 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 13325 10850 50  0001 C CNN
-F 3 "" H 13325 10850 50  0001 C CNN
-	1    13325 10850
-	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R R4
@@ -1584,151 +1305,12 @@ F 3 "" H 5400 2725 50  0001 C CNN
 	1    5400 2725
 	0    1    1    0   
 $EndComp
-$Comp
-L Diode:1N4148 D10
-U 1 1 5DC974AA
-P 4775 13925
-F 0 "D10" H 4800 14100 50  0000 C CNN
-F 1 "1N4148" V 4775 14010 50  0001 L CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 4775 13750 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4775 13925 50  0001 C CNN
-	1    4775 13925
-	1    0    0    -1  
-$EndComp
-$Comp
-L Diode:1N4148 D7
-U 1 1 5DC85D2A
-P 4775 14225
-F 0 "D7" V 4695 14175 50  0000 L CNN
-F 1 "1N4148" V 4775 14310 50  0001 L CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 4775 14050 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4775 14225 50  0001 C CNN
-	1    4775 14225
-	1    0    0    -1  
-$EndComp
-$Comp
-L Diode:1N4148 D6
-U 1 1 5DC7D8C5
-P 4775 14325
-F 0 "D6" V 4695 14275 50  0000 L CNN
-F 1 "1N4148" V 4775 14410 50  0001 L CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 4775 14150 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4775 14325 50  0001 C CNN
-	1    4775 14325
-	1    0    0    -1  
-$EndComp
-$Comp
-L Diode:1N4148 D5
-U 1 1 5DC77A9B
-P 4775 14425
-F 0 "D5" V 4695 14375 50  0000 L CNN
-F 1 "1N4148" V 4775 14510 50  0001 L CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 4775 14250 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4775 14425 50  0001 C CNN
-	1    4775 14425
-	1    0    0    -1  
-$EndComp
-$Comp
-L Diode:1N4148 D4
-U 1 1 5DC720AB
-P 4775 14525
-F 0 "D4" V 4695 14475 50  0000 L CNN
-F 1 "1N4148" V 4775 14610 50  0001 L CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 4775 14350 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4775 14525 50  0001 C CNN
-	1    4775 14525
-	1    0    0    -1  
-$EndComp
-$Comp
-L Diode:1N4148 D3
-U 1 1 5D5FB160
-P 4775 14625
-F 0 "D3" H 4800 14450 50  0000 C CNN
-F 1 "1N4148" V 4775 14710 50  0001 L CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 4775 14450 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4775 14625 50  0001 C CNN
-	1    4775 14625
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_02x08_Odd_Even KEYBOARD1
-U 1 1 5E446247
-P 5225 14225
-F 0 "KEYBOARD1" H 5285 14780 50  0000 C CNN
-F 1 "Conn_02x08_Odd_Even" H 5285 14680 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical" H 5225 14225 50  0001 C CNN
-F 3 "~" H 5225 14225 50  0001 C CNN
-	1    5225 14225
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6325 13750 6425 13750
-Text Label 6425 13750 0    50   ~ 0
-EAR
-Wire Wire Line
-	5025 13925 4925 13925
-Wire Wire Line
-	4925 14025 5025 14025
-Wire Wire Line
-	5025 14125 4925 14125
-Wire Wire Line
-	4925 14225 5025 14225
-Wire Wire Line
-	5025 14325 4925 14325
-Wire Wire Line
-	4925 14425 5025 14425
-Wire Wire Line
-	5025 14525 4925 14525
-Wire Wire Line
-	4925 14625 5025 14625
-Wire Wire Line
-	4625 14625 4425 14625
-Text Label 4425 14025 2    50   ~ 0
-A9
-Wire Wire Line
-	4625 14025 4425 14025
-Text Label 4525 14525 2    50   ~ 0
-A14
-Wire Wire Line
-	4625 14525 4525 14525
-Text Label 4425 14425 2    50   ~ 0
-A13
-Wire Wire Line
-	4625 14425 4425 14425
-Text Label 4525 14325 2    50   ~ 0
-A12
-Wire Wire Line
-	4625 14325 4525 14325
-Text Label 4425 14225 2    50   ~ 0
-A11
-Wire Wire Line
-	4625 14225 4425 14225
-Text Label 4525 14125 2    50   ~ 0
-A10
-Text Label 4525 13925 2    50   ~ 0
-A8
-Wire Wire Line
-	4625 13925 4525 13925
-Wire Wire Line
-	14525 11350 14525 11450
-Wire Wire Line
-	14525 11350 14825 11350
 Wire Wire Line
 	12750 1025 12750 1225
 Text Notes 11645 5830 0    50   ~ 0
 These chips are twice the size of orginal.\nKeep A10 low so always using same half.
 Text Notes 11650 5125 0    50   ~ 0
 Produce an OE by inverting WR
-Text Label 6325 12150 1    50   ~ 0
-DA5
-Wire Wire Line
-	6325 12250 6325 12150
-Text Label 11570 10850 2    50   ~ 0
-DA0
-Text Label 6225 12150 1    50   ~ 0
-DA4
-Wire Wire Line
-	6225 12250 6225 12150
 Text Label 5625 7350 2    50   ~ 0
 A9
 Wire Wire Line
@@ -1825,18 +1407,12 @@ Wire Wire Line
 	5725 6550 5625 6550
 Text Label 16650 3325 1    50   ~ 0
 A1
-Text Label 8225 12250 2    50   ~ 0
-A0
-Wire Wire Line
-	8325 12250 8225 12250
 Text Label 5625 6450 2    50   ~ 0
 A0
 Wire Wire Line
 	5725 6450 5625 6450
 Text Label 16550 3325 1    50   ~ 0
 A0
-Wire Wire Line
-	13350 4725 13350 5425
 Wire Wire Line
 	12950 4725 13350 4725
 Wire Wire Line
@@ -1902,51 +1478,12 @@ Wire Wire Line
 	14850 9050 14850 9350
 Wire Wire Line
 	14850 9350 14950 9350
-Connection ~ 14225 10850
-Wire Wire Line
-	13925 10850 14225 10850
-Connection ~ 12525 12650
-Wire Wire Line
-	12525 12650 13225 12650
-Wire Wire Line
-	12525 12350 12525 12650
-Wire Wire Line
-	11625 11950 11725 11950
-Wire Wire Line
-	11625 12150 11625 11950
-Wire Wire Line
-	12525 12350 11625 12150
-Wire Wire Line
-	12325 12650 12525 12650
-Wire Wire Line
-	11625 12550 11725 12550
-Wire Wire Line
-	11625 12350 11625 12550
-Wire Wire Line
-	12525 12150 11625 12350
-Wire Wire Line
-	12525 11850 12525 12150
-Wire Wire Line
-	12325 11850 12525 11850
-Connection ~ 9125 12150
-Wire Wire Line
-	8925 12150 9125 12150
-Wire Wire Line
-	9125 12650 9625 12650
-Wire Wire Line
-	9125 12150 9125 12650
-Wire Wire Line
-	9125 11650 9125 12150
 Wire Wire Line
 	16350 4425 16350 5025
 Text Label 8400 7275 0    50   ~ 0
 ~RD
 Wire Wire Line
 	8300 7275 8400 7275
-Text Label 9525 12850 2    50   ~ 0
-~RD
-Wire Wire Line
-	9625 12850 9525 12850
 Text Label 19025 1820 1    50   ~ 0
 VIDEO
 Wire Wire Line
@@ -1969,8 +1506,6 @@ Text Label 13850 1325 2    50   ~ 0
 CNT1
 Wire Wire Line
 	13850 1325 13950 1325
-Wire Wire Line
-	15125 10750 14825 10750
 Wire Wire Line
 	15850 9550 15950 9550
 Wire Wire Line
@@ -2007,23 +1542,12 @@ Text Label 8400 7375 0    50   ~ 0
 ~WR
 Wire Wire Line
 	8300 7375 8400 7375
-Text Label 9525 11850 2    50   ~ 0
-~WR
 Wire Wire Line
 	10050 3125 10050 2625
 Wire Wire Line
 	7650 3125 10050 3125
-Connection ~ 14825 11350
-Wire Wire Line
-	14825 11350 14825 11150
-Wire Wire Line
-	14825 11350 15125 11350
 Wire Wire Line
 	15650 8650 15650 8550
-Wire Wire Line
-	12775 11250 12775 11350
-Wire Wire Line
-	12775 10650 12775 10550
 Wire Wire Line
 	16850 2125 16850 2225
 Text Label 2525 5850 2    50   ~ 0
@@ -2075,83 +1599,83 @@ $EndComp
 $Comp
 L Connector:Barrel_Jack POWER-9V-DC1
 U 1 1 3CE93F70
-P 3000 15475
-F 0 "POWER-9V-DC1" H 2725 15575 50  0000 R CNN
-F 1 "cuipj:CUI_PJ-036C" H 2725 15425 50  0000 R CNN
-F 2 "cuipj:CUI_PJ-036C" H 3000 15475 50  0001 C CNN
-F 3 "" H 3000 15475 50  0001 C CNN
-	1    3000 15475
+P 3550 13925
+F 0 "POWER-9V-DC1" H 3275 14025 50  0000 R CNN
+F 1 "cuipj:CUI_PJ-036C" H 3275 13875 50  0000 R CNN
+F 2 "cuipj:CUI_PJ-036C" H 3550 13925 50  0001 C CNN
+F 3 "" H 3550 13925 50  0001 C CNN
+	1    3550 13925
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole HBL1
 U 1 1 5D394BEA
-P 980 14670
-F 0 "HBL1" H 1125 14765 50  0000 L CNN
-F 1 "MountingHole" H 1125 14665 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.5mm" H 980 14670 50  0001 C CNN
-F 3 "~" H 980 14670 50  0001 C CNN
-	1    980  14670
+P 855 15820
+F 0 "HBL1" H 1000 15915 50  0000 L CNN
+F 1 "MountingHole" H 1000 15815 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.5mm" H 855 15820 50  0001 C CNN
+F 3 "~" H 855 15820 50  0001 C CNN
+	1    855  15820
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole HBR1
 U 1 1 5D5498C4
-P 1875 14660
-F 0 "HBR1" H 1975 14745 50  0001 L CNN
-F 1 "MountingHole" H 1975 14645 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.5mm" H 1875 14660 50  0001 C CNN
-F 3 "~" H 1875 14660 50  0001 C CNN
-	1    1875 14660
+P 1750 15810
+F 0 "HBR1" H 1850 15895 50  0001 L CNN
+F 1 "MountingHole" H 1850 15795 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.5mm" H 1750 15810 50  0001 C CNN
+F 3 "~" H 1750 15810 50  0001 C CNN
+	1    1750 15810
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole HTL1
 U 1 1 5D549A40
-P 970 14210
-F 0 "HTL1" H 1075 14295 50  0000 L CNN
-F 1 "MountingHole" H 1075 14195 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.5mm" H 970 14210 50  0001 C CNN
-F 3 "~" H 970 14210 50  0001 C CNN
-	1    970  14210
+P 845 15360
+F 0 "HTL1" H 950 15445 50  0000 L CNN
+F 1 "MountingHole" H 950 15345 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.5mm" H 845 15360 50  0001 C CNN
+F 3 "~" H 845 15360 50  0001 C CNN
+	1    845  15360
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole HTR1
 U 1 1 5D54EC52
-P 1855 14215
-F 0 "HTR1" H 1975 14305 50  0001 L CNN
-F 1 "MountingHole" H 1975 14205 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.5mm" H 1855 14215 50  0001 C CNN
-F 3 "~" H 1855 14215 50  0001 C CNN
-	1    1855 14215
+P 1730 15365
+F 0 "HTR1" H 1850 15455 50  0001 L CNN
+F 1 "MountingHole" H 1850 15355 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.5mm" H 1730 15365 50  0001 C CNN
+F 3 "~" H 1730 15365 50  0001 C CNN
+	1    1730 15365
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5275 15125 5275 15375
+	5825 13575 5825 13825
 Wire Wire Line
-	5975 15425 5975 15625
+	6525 13875 6525 14075
 Wire Wire Line
-	4725 15125 4225 15125
-Connection ~ 4225 15125
+	5275 13575 4775 13575
+Connection ~ 4775 13575
 Wire Wire Line
-	4225 15125 3775 15125
+	4775 13575 4325 13575
 Wire Wire Line
-	3775 15375 3775 15125
-Connection ~ 3775 15125
-Connection ~ 4225 15875
+	4325 13825 4325 13575
+Connection ~ 4325 13575
+Connection ~ 4775 14325
 Wire Wire Line
-	3775 15675 3775 15875
-Connection ~ 3775 15875
+	4325 14125 4325 14325
+Connection ~ 4325 14325
 Wire Wire Line
-	3775 15875 4225 15875
+	4325 14325 4775 14325
 Wire Wire Line
-	5275 15675 5275 15870
+	5825 14125 5825 14320
 Wire Wire Line
-	4225 15875 5275 15875
-Connection ~ 5275 15870
+	4775 14325 5825 14325
+Connection ~ 5825 14320
 Wire Wire Line
-	5275 15870 5275 15875
+	5825 14320 5825 14325
 Wire Wire Line
 	2325 7450 2225 7450
 Wire Wire Line
@@ -2164,7 +1688,7 @@ Wire Wire Line
 	2325 6750 2225 6750
 Wire Wire Line
 	2325 7650 2225 7650
-Text Label 2325 7950 2    50   ~ 0
+Text Label 2325 8150 2    50   ~ 0
 ~BUSRQ
 Wire Wire Line
 	1325 7950 2325 7950
@@ -2184,28 +1708,16 @@ Text Label 2225 7050 2    50   ~ 0
 ~REFSH
 Wire Wire Line
 	3725 6450 3825 6450
-Text Label 3825 6450 0    50   ~ 0
-A0
 Wire Wire Line
 	3725 6550 3825 6550
-Text Label 3825 6550 0    50   ~ 0
-A1
 Wire Wire Line
 	3725 6650 3825 6650
-Text Label 3825 6650 0    50   ~ 0
-A2
 Wire Wire Line
 	3725 6750 3825 6750
-Text Label 3825 6750 0    50   ~ 0
-A3
 Wire Wire Line
 	3725 7050 3825 7050
-Text Label 3825 7050 0    50   ~ 0
-A6
 Wire Wire Line
 	3725 7150 3825 7150
-Text Label 3825 7150 0    50   ~ 0
-A7
 Wire Wire Line
 	3725 7250 3825 7250
 Wire Wire Line
@@ -2214,28 +1726,16 @@ Wire Wire Line
 	3725 7550 3825 7550
 Wire Wire Line
 	3725 7650 3825 7650
-Text Label 3825 7650 0    50   ~ 0
-A12
 Wire Wire Line
 	3725 7750 3825 7750
-Text Label 3825 7750 0    50   ~ 0
-A13
 Wire Wire Line
 	3725 7850 3825 7850
-Text Label 3825 7850 0    50   ~ 0
-A14
 Wire Wire Line
 	3725 7950 3825 7950
-Text Label 3825 7950 0    50   ~ 0
-A15
 Wire Wire Line
 	3725 6850 3825 6850
-Text Label 3825 6850 0    50   ~ 0
-A4
 Wire Wire Line
 	3725 6950 3825 6950
-Text Label 3825 6950 0    50   ~ 0
-A5
 Wire Wire Line
 	3725 7350 3825 7350
 Wire Wire Line
@@ -2568,8 +2068,6 @@ Wire Wire Line
 Wire Wire Line
 	14650 6625 12750 6625
 Wire Wire Line
-	14250 7825 14650 7825
-Wire Wire Line
 	12650 6525 14650 6525
 Text Label 10565 6425 2    50   ~ 0
 A0
@@ -2666,8 +2164,6 @@ Wire Wire Line
 Wire Wire Line
 	5550 2725 6050 2725
 Wire Wire Line
-	13750 5225 14250 5225
-Wire Wire Line
 	12150 4725 12150 3125
 Wire Wire Line
 	13475 2625 13475 3125
@@ -2726,56 +2222,6 @@ Wire Wire Line
 Connection ~ 15650 9050
 Wire Wire Line
 	15650 9050 15650 9350
-Wire Wire Line
-	14225 11750 14225 11850
-Wire Wire Line
-	14225 11850 14525 11850
-Wire Wire Line
-	14525 11850 14525 11750
-Wire Wire Line
-	10225 12750 10825 12750
-Wire Wire Line
-	10825 12750 10825 12850
-Connection ~ 10825 12750
-Wire Wire Line
-	10825 12750 11725 12750
-Wire Wire Line
-	4625 14125 4525 14125
-$Comp
-L Diode:1N4148 D8
-U 1 1 5DC8B9CE
-P 4775 14125
-F 0 "D8" V 4695 14075 50  0000 L CNN
-F 1 "1N4148" V 4775 14210 50  0001 L CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 4775 13950 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4775 14125 50  0001 C CNN
-	1    4775 14125
-	1    0    0    -1  
-$EndComp
-$Comp
-L Diode:1N4148 D9
-U 1 1 5DC916E7
-P 4775 14025
-F 0 "D9" V 4695 13975 50  0000 L CNN
-F 1 "1N4148" V 4775 14110 50  0001 L CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 4775 13850 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 4775 14025 50  0001 C CNN
-	1    4775 14025
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5525 13925 5825 13925
-Wire Wire Line
-	5525 14025 5925 14025
-Wire Wire Line
-	5525 14125 6025 14125
-Wire Wire Line
-	6125 14225 5525 14225
-Wire Wire Line
-	5525 14325 6225 14325
-NoConn ~ 5525 14425
-NoConn ~ 5525 14525
-NoConn ~ 5525 14625
 Wire Wire Line
 	4625 4050 4350 4050
 Connection ~ 4350 4050
@@ -2965,26 +2411,6 @@ Wire Wire Line
 Connection ~ 20225 6425
 Wire Wire Line
 	20225 6425 20225 7625
-Connection ~ 11570 11750
-Wire Wire Line
-	11570 11750 11725 11750
-Wire Wire Line
-	10225 11750 11570 11750
-$Comp
-L 74xx:74LS74 Z27
-U 1 1 62A1631E
-P 12775 10950
-F 0 "Z27" H 12985 11210 50  0000 C CNN
-F 1 "74LS74" H 12545 11200 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 12775 10950 50  0001 C CNN
-F 3 "74xx/74hc_hct74.pdf" H 12775 10950 50  0001 C CNN
-	1    12775 10950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	13175 10850 13075 10850
-Wire Wire Line
-	10825 13450 10825 13550
 $Comp
 L 74xx:74LS138 Z29
 U 1 1 7397220B
@@ -2997,120 +2423,120 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS138" H 3125 5450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8675 15000 9015 15000
-Connection ~ 9015 15000
+	9225 13450 9565 13450
+Connection ~ 9565 13450
 Wire Wire Line
-	9015 15000 9460 15000
-Connection ~ 9460 15000
+	9565 13450 10010 13450
+Connection ~ 10010 13450
 Wire Wire Line
-	9460 15000 9945 15000
-Connection ~ 9945 15000
+	10010 13450 10495 13450
+Connection ~ 10495 13450
 Wire Wire Line
-	9945 15000 10395 15000
-Connection ~ 10395 15000
+	10495 13450 10945 13450
+Connection ~ 10945 13450
 Wire Wire Line
-	10395 15000 10820 15000
-Connection ~ 10820 15000
+	10945 13450 11370 13450
+Connection ~ 11370 13450
 Wire Wire Line
-	10820 15000 11240 15000
-Connection ~ 11240 15000
+	11370 13450 11790 13450
+Connection ~ 11790 13450
 Wire Wire Line
-	11240 15000 11690 15000
-Connection ~ 11690 15000
+	11790 13450 12240 13450
+Connection ~ 12240 13450
 Wire Wire Line
-	11690 15000 12120 15000
-Connection ~ 12120 15000
-Connection ~ 13425 15000
+	12240 13450 12670 13450
+Connection ~ 12670 13450
+Connection ~ 13975 13450
 Wire Wire Line
-	13425 15000 13865 15000
-Connection ~ 13865 15000
-Connection ~ 14760 15000
+	13975 13450 14415 13450
+Connection ~ 14415 13450
+Connection ~ 15310 13450
 Wire Wire Line
-	14760 15000 15200 15000
-Connection ~ 13000 15000
+	15310 13450 15750 13450
+Connection ~ 13550 13450
 Wire Wire Line
-	13000 15000 13425 15000
+	13550 13450 13975 13450
 Wire Wire Line
-	15200 16000 14760 16000
-Connection ~ 9015 16000
+	15750 14450 15310 14450
+Connection ~ 9565 14450
 Wire Wire Line
-	9015 16000 8725 16000
-Connection ~ 9460 16000
+	9565 14450 9275 14450
+Connection ~ 10010 14450
 Wire Wire Line
-	9460 16000 9015 16000
-Connection ~ 9945 16000
+	10010 14450 9565 14450
+Connection ~ 10495 14450
 Wire Wire Line
-	9945 16000 9460 16000
-Connection ~ 10395 16000
+	10495 14450 10010 14450
+Connection ~ 10945 14450
 Wire Wire Line
-	10395 16000 9945 16000
-Connection ~ 10820 16000
+	10945 14450 10495 14450
+Connection ~ 11370 14450
 Wire Wire Line
-	10820 16000 10395 16000
-Connection ~ 11240 16000
+	11370 14450 10945 14450
+Connection ~ 11790 14450
 Wire Wire Line
-	11240 16000 10820 16000
-Connection ~ 11690 16000
+	11790 14450 11370 14450
+Connection ~ 12240 14450
 Wire Wire Line
-	11690 16000 11240 16000
-Connection ~ 12120 16000
+	12240 14450 11790 14450
+Connection ~ 12670 14450
 Wire Wire Line
-	12120 16000 11690 16000
-Connection ~ 13000 16000
-Connection ~ 13425 16000
+	12670 14450 12240 14450
+Connection ~ 13550 14450
+Connection ~ 13975 14450
 Wire Wire Line
-	13425 16000 13000 16000
-Connection ~ 13865 16000
+	13975 14450 13550 14450
+Connection ~ 14415 14450
 Wire Wire Line
-	13865 16000 13425 16000
-Connection ~ 14760 16000
+	14415 14450 13975 14450
+Connection ~ 15310 14450
 Wire Wire Line
-	8675 15125 8675 15000
+	9225 13575 9225 13450
 $Comp
 L Device:C C13
 U 1 1 5FC78850
-P 6550 15375
-F 0 "C13" H 6400 15300 50  0000 R CNN
-F 1 "100nf" H 6400 15400 50  0000 R CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 6900 15425 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 6900 15325 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 6900 15225 50  0001 L CNN "Description"
-F 5 "3" H 6900 15125 50  0001 L CNN "Height"
-F 6 "8523267" H 6900 15025 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 6900 14925 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 6900 14825 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 6900 14725 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 6900 14625 50  0001 L CNN "Allied_Number"
-	1    6550 15375
+P 7100 13825
+F 0 "C13" H 6950 13750 50  0000 R CNN
+F 1 "100nf" H 6950 13850 50  0000 R CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 7450 13875 50  0001 L CNN
+F 3 "http://uk.rs-online.com/web/p/products/8523267" H 7450 13775 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 7450 13675 50  0001 L CNN "Description"
+F 5 "3" H 7450 13575 50  0001 L CNN "Height"
+F 6 "8523267" H 7450 13475 50  0001 L CNN "RS Part Number"
+F 7 "http://uk.rs-online.com/web/p/products/8523267" H 7450 13375 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 7450 13275 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 7450 13175 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 7450 13075 50  0001 L CNN "Allied_Number"
+	1    7100 13825
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	6275 15125 6325 15125
+	6825 13575 6875 13575
 Wire Wire Line
-	8725 16000 8725 15625
-Connection ~ 5975 15625
+	9275 14450 9275 14075
+Connection ~ 6525 14075
 Wire Wire Line
-	5975 15625 5975 15870
+	6525 14075 6525 14320
 Wire Wire Line
-	6325 15225 6325 15125
-Connection ~ 6325 15125
+	6875 13675 6875 13575
+Connection ~ 6875 13575
 Wire Wire Line
-	6325 15525 6325 15625
-Connection ~ 6325 15625
+	6875 13975 6875 14075
+Connection ~ 6875 14075
 Wire Wire Line
-	6325 15625 5975 15625
+	6875 14075 6525 14075
 Wire Wire Line
-	6675 15125 6675 15025
-Connection ~ 6675 15125
+	7225 13575 7225 13475
+Connection ~ 7225 13575
 $Comp
 L power:VCC #~PWR0102
 U 1 1 7CA45A95
-P 6675 15025
-F 0 "#~PWR0102" H 6675 14875 50  0001 C CNN
-F 1 "VCC" H 6725 15225 50  0000 C CNN
-F 2 "" H 6675 15025 50  0001 C CNN
-F 3 "" H 6675 15025 50  0001 C CNN
-	1    6675 15025
+P 7225 13475
+F 0 "#~PWR0102" H 7225 13325 50  0001 C CNN
+F 1 "VCC" H 7275 13675 50  0000 C CNN
+F 2 "" H 7225 13475 50  0001 C CNN
+F 3 "" H 7225 13475 50  0001 C CNN
+	1    7225 13475
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -3232,7 +2658,6 @@ Wire Wire Line
 Wire Wire Line
 	7750 2525 7750 2925
 Connection ~ 7750 2525
-NoConn ~ 13075 11050
 Wire Wire Line
 	2325 5650 2625 5650
 Wire Wire Line
@@ -3273,7 +2698,7 @@ Wire Wire Line
 	10475 3125 10575 3125
 Text Label 10575 3125 0    50   ~ 0
 ~WE
-Text GLabel 6325 15125 1    50   Input ~ 0
+Text GLabel 6875 13575 1    50   Input ~ 0
 +5V
 $Comp
 L power:+5V #~PWR0103
@@ -3304,9 +2729,9 @@ Wire Wire Line
 Text GLabel 2225 7750 3    50   Input ~ 0
 ~NMI
 Wire Wire Line
-	5025 15125 5275 15125
-Connection ~ 5275 15125
-Text GLabel 5275 15125 1    50   Input ~ 0
+	5575 13575 5825 13575
+Connection ~ 5825 13575
+Text GLabel 5825 13575 1    50   Input ~ 0
 +9Vsm
 Wire Wire Line
 	19750 1625 19750 1575
@@ -3363,37 +2788,6 @@ F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 19650 1825 50  00
 $EndComp
 Wire Wire Line
 	18750 1825 19450 1825
-$Comp
-L Connector_Generic:Conn_01x02 SPK1
-U 1 1 5DD9F9BA
-P 15325 11625
-F 0 "SPK1" H 15425 11595 51  0000 L BNN
-F 1 "SPk1" H 15295 11680 50  0000 L BNN
-F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 15325 11625 50  0001 C CNN
-F 3 "" H 15325 11625 50  0001 C CNN
-	1    15325 11625
-	1    0    0    1   
-$EndComp
-Wire Wire Line
-	15125 11525 15125 11350
-Wire Wire Line
-	15125 11850 15125 11625
-$Comp
-L Device:R R102
-U 1 1 5E75336D
-P 14800 11850
-F 0 "R102" V 14650 11825 50  0000 C CNN
-F 1 "200" V 14550 11825 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 14800 11850 50  0001 C CNN
-F 3 "" H 14800 11850 50  0001 C CNN
-	1    14800 11850
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	14950 11850 15125 11850
-Wire Wire Line
-	14650 11850 14525 11850
-Connection ~ 14525 11850
 Text Label 2225 7450 2    50   ~ 0
 ~WAIT
 $Comp
@@ -3434,7 +2828,6 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS367" H 11150 6825 50  0001 C CNN
 	1    11150 6825
 	1    0    0    -1  
 $EndComp
-Connection ~ 14225 11850
 $Comp
 L Device:R_POT_TRIM RV101
 U 1 1 5E3CEE0D
@@ -3472,120 +2865,23 @@ F 3 "" H 20425 1925 50  0001 C CNN
 	1    20425 1925
 	1    0    0    1   
 $EndComp
-Text Label 7500 11750 2    50   ~ 0
-A7
-Wire Wire Line
-	7600 11750 7500 11750
-Wire Wire Line
-	7600 11050 7475 11050
-$Comp
-L 74xx:74LS04 Z102
-U 4 1 5F8DC5BC
-P 7175 11050
-F 0 "Z102" H 7200 11400 50  0000 C CNN
-F 1 "74LS04" H 7200 11300 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 7175 11050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 7175 11050 50  0001 C CNN
-	4    7175 11050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6875 11050 6775 11050
-Text Label 6775 11050 2    50   ~ 0
-~IOREQ
-Wire Wire Line
-	7600 11150 7500 11150
-Text Label 7500 11150 2    50   ~ 0
-A1
-Wire Wire Line
-	7600 11250 7500 11250
-Text Label 7500 11250 2    50   ~ 0
-A2
-Wire Wire Line
-	7600 11350 7500 11350
-Text Label 7500 11350 2    50   ~ 0
-A3
-Wire Wire Line
-	7600 11650 7500 11650
-Text Label 7500 11650 2    50   ~ 0
-A6
-Wire Wire Line
-	7600 11450 7500 11450
-Text Label 7500 11450 2    50   ~ 0
-A4
-Wire Wire Line
-	7600 11550 7500 11550
-Text Label 7500 11550 2    50   ~ 0
-A5
-$Comp
-L 74xx:74LS30 Z110
-U 1 1 5F61E055
-P 7900 11350
-F 0 "Z110" H 7925 10850 50  0000 C CNN
-F 1 "74LS30" H 7925 10750 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 7900 11350 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS30" H 7900 11350 50  0001 C CNN
-	1    7900 11350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8325 12050 8200 12050
-Wire Wire Line
-	8200 12050 8200 11350
-$Comp
-L 74xx:74LS32 Z108
-U 3 1 6011E6A2
-P 8675 11250
-F 0 "Z108" H 8705 11630 50  0000 C CNN
-F 1 "74LS32" H 8705 11530 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 8675 11250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 8675 11250 50  0001 C CNN
-	3    8675 11250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8200 11350 8375 11350
-Connection ~ 8200 11350
-Text Label 7475 10675 2    50   ~ 0
-A0
-Wire Wire Line
-	7575 10675 7475 10675
-$Comp
-L 74xx:74LS04 Z102
-U 1 1 603D9E46
-P 7875 10675
-F 0 "Z102" H 7875 11050 50  0000 C CNN
-F 1 "74LS04" H 7875 10950 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 7875 10675 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 7875 10675 50  0001 C CNN
-	1    7875 10675
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8375 11150 8200 11150
-Wire Wire Line
-	8200 11150 8200 10675
-Wire Wire Line
-	8200 10675 8175 10675
 $Comp
 L 74xx:74LS30 Z110
 U 2 1 606C8971
-P 15675 15500
-F 0 "Z110" H 15950 15550 50  0000 L CNN
-F 1 "74LS30" H 15950 15500 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 15675 15500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS30" H 15675 15500 50  0001 C CNN
-	2    15675 15500
+P 16225 13950
+F 0 "Z110" H 16500 14000 50  0000 L CNN
+F 1 "74LS30" H 16500 13950 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 16225 13950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS30" H 16225 13950 50  0001 C CNN
+	2    16225 13950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	15200 15000 15675 15000
-Connection ~ 15200 15000
-Connection ~ 15200 16000
+	15750 13450 16225 13450
+Connection ~ 15750 13450
+Connection ~ 15750 14450
 Wire Wire Line
-	15675 16000 15200 16000
-Wire Wire Line
-	8975 11250 9125 11250
+	16225 14450 15750 14450
 NoConn ~ -1125 11750
 $Comp
 L power:GND #~PWR0155
@@ -3803,54 +3099,37 @@ Text Label 1700 2900 0    50   ~ 0
 ~INT
 NoConn ~ 20300 2075
 Wire Wire Line
-	3300 15875 3425 15875
-Connection ~ 3425 15875
+	3850 14325 3975 14325
+Connection ~ 3975 14325
 Wire Wire Line
-	3425 15875 3775 15875
+	3975 14325 4325 14325
 Wire Wire Line
-	3300 15125 3775 15125
+	3850 13575 4325 13575
 $Comp
 L power:+9V #~PWR0162
 U 1 1 732DA8FB
-P 5575 15125
-F 0 "#~PWR0162" H 5575 14975 50  0001 C CNN
-F 1 "+9V" V 5600 15275 50  0000 L CNN
-F 2 "" H 5575 15125 50  0001 C CNN
-F 3 "" H 5575 15125 50  0001 C CNN
-	1    5575 15125
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Q_NPN_CBE Q3
-U 1 1 5D74034F
-P 14125 12650
-F 0 "Q3" H 14350 12700 50  0000 L CNN
-F 1 "BC183" H 14350 12650 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92L_Inline" H 14125 12650 50  0001 C CNN
-F 3 "https://www.mouser.co.uk/datasheet/2/308/BC183-1299954.pdf" H 14125 12650 50  0001 C CNN
-	1    14125 12650
+P 6125 13575
+F 0 "#~PWR0162" H 6125 13425 50  0001 C CNN
+F 1 "+9V" V 6150 13725 50  0000 L CNN
+F 2 "" H 6125 13575 50  0001 C CNN
+F 3 "" H 6125 13575 50  0001 C CNN
+	1    6125 13575
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	14225 11850 14225 12450
+	3850 14025 3850 14275
 Wire Wire Line
-	14225 12850 14225 13050
+	3850 13575 3850 13625
 Wire Wire Line
-	13925 12650 13525 12650
+	3800 14275 3850 14275
+Connection ~ 3850 14275
 Wire Wire Line
-	3300 15575 3300 15825
+	3850 14275 3850 14325
 Wire Wire Line
-	3300 15125 3300 15175
+	3800 13625 3850 13625
+Connection ~ 3850 13625
 Wire Wire Line
-	3250 15825 3300 15825
-Connection ~ 3300 15825
-Wire Wire Line
-	3300 15825 3300 15875
-Wire Wire Line
-	3250 15175 3300 15175
-Connection ~ 3300 15175
-Wire Wire Line
-	3300 15175 3300 15375
+	3850 13625 3850 13825
 Wire Wire Line
 	4575 5750 4575 5850
 Wire Wire Line
@@ -4382,12 +3661,12 @@ $EndComp
 $Comp
 L 74xx:74LS21 Z101
 U 3 1 5F7EC8E6
-P 12575 15500
-F 0 "Z101" H 12850 15550 50  0000 L CNN
-F 1 "74AHCT21" H 12850 15500 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 12575 15500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS21" H 12575 15500 50  0001 C CNN
-	3    12575 15500
+P 13125 13950
+F 0 "Z101" H 13400 14000 50  0000 L CNN
+F 1 "74AHCT21" H 13400 13950 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 13125 13950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS21" H 13125 13950 50  0001 C CNN
+	3    13125 13950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -4556,15 +3835,15 @@ A14
 Wire Wire Line
 	7200 9925 7100 9925
 Wire Wire Line
-	12120 15000 12575 15000
+	12670 13450 13125 13450
 Wire Wire Line
-	12120 16000 12575 16000
-Connection ~ 12575 15000
+	12670 14450 13125 14450
+Connection ~ 13125 13450
 Wire Wire Line
-	12575 15000 13000 15000
-Connection ~ 12575 16000
+	13125 13450 13550 13450
+Connection ~ 13125 14450
 Wire Wire Line
-	12575 16000 13000 16000
+	13125 14450 13550 14450
 NoConn ~ 16450 4425
 Wire Wire Line
 	16150 2825 17550 2825
@@ -4691,171 +3970,169 @@ F 3 "" H -1850 5125 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6325 15125 6550 15125
+	6875 13575 7100 13575
 Wire Wire Line
-	4225 15125 4225 15375
+	4775 13575 4775 13825
 Wire Wire Line
-	4225 15675 4225 15875
+	4775 14125 4775 14325
 $Comp
 L Device:C C21
 U 1 1 618E9BE1
-P 8475 15375
-F 0 "C21" H 8350 15300 50  0000 R CNN
-F 1 "100nf" H 8350 15400 50  0000 R CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8825 15425 50  0001 L CNN
-F 3 "http://uk.rs-online.com/web/p/products/8523267" H 8825 15325 50  0001 L CNN
-F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 8825 15225 50  0001 L CNN "Description"
-F 5 "3" H 8825 15125 50  0001 L CNN "Height"
-F 6 "8523267" H 8825 15025 50  0001 L CNN "RS Part Number"
-F 7 "http://uk.rs-online.com/web/p/products/8523267" H 8825 14925 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 8825 14825 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 8825 14725 50  0001 L CNN "Manufacturer_Part_Number"
-F 10 "70122995" H 8825 14625 50  0001 L CNN "Allied_Number"
-	1    8475 15375
+P 9025 13825
+F 0 "C21" H 8900 13750 50  0000 R CNN
+F 1 "100nf" H 8900 13850 50  0000 R CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 9375 13875 50  0001 L CNN
+F 3 "http://uk.rs-online.com/web/p/products/8523267" H 9375 13775 50  0001 L CNN
+F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +/-10% X7R Dielectric Radial, Max. Temp. +125C" H 9375 13675 50  0001 L CNN "Description"
+F 5 "3" H 9375 13575 50  0001 L CNN "Height"
+F 6 "8523267" H 9375 13475 50  0001 L CNN "RS Part Number"
+F 7 "http://uk.rs-online.com/web/p/products/8523267" H 9375 13375 50  0001 L CNN "RS Price/Stock"
+F 8 "Vishay" H 9375 13275 50  0001 L CNN "Manufacturer_Name"
+F 9 "K104K10X7RF53H5" H 9375 13175 50  0001 L CNN "Manufacturer_Part_Number"
+F 10 "70122995" H 9375 13075 50  0001 L CNN "Allied_Number"
+	1    9025 13825
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	8475 15225 8475 15125
-Connection ~ 8475 15125
+	9025 13675 9025 13575
+Connection ~ 9025 13575
 Wire Wire Line
-	8475 15125 8675 15125
+	9025 13575 9225 13575
 Wire Wire Line
-	8475 15625 8475 15525
-Connection ~ 8475 15625
+	9025 14075 9025 13975
+Connection ~ 9025 14075
 Wire Wire Line
-	8475 15625 8725 15625
+	9025 14075 9275 14075
 Wire Wire Line
-	7950 15225 7950 15125
-Connection ~ 7950 15125
+	8500 13675 8500 13575
+Connection ~ 8500 13575
 Wire Wire Line
-	7950 15125 8225 15125
+	8500 13575 8775 13575
 Wire Wire Line
-	7700 15225 7700 15125
-Connection ~ 7700 15125
+	8250 13675 8250 13575
+Connection ~ 8250 13575
 Wire Wire Line
-	7700 15125 7950 15125
+	8250 13575 8500 13575
 Wire Wire Line
-	7475 15225 7475 15125
-Connection ~ 7475 15125
+	8025 13675 8025 13575
+Connection ~ 8025 13575
 Wire Wire Line
-	7475 15125 7700 15125
+	8025 13575 8250 13575
 Wire Wire Line
-	7250 15225 7250 15125
-Connection ~ 7250 15125
+	7800 13675 7800 13575
+Connection ~ 7800 13575
 Wire Wire Line
-	7250 15125 7475 15125
+	7800 13575 8025 13575
 Wire Wire Line
-	7025 15225 7025 15125
-Connection ~ 7025 15125
+	7575 13675 7575 13575
+Connection ~ 7575 13575
 Wire Wire Line
-	7025 15125 7250 15125
+	7575 13575 7800 13575
 Wire Wire Line
-	6800 15225 6800 15125
+	7350 13675 7350 13575
 Wire Wire Line
-	6675 15125 6800 15125
-Connection ~ 6800 15125
+	7225 13575 7350 13575
+Connection ~ 7350 13575
 Wire Wire Line
-	6800 15125 7025 15125
+	7350 13575 7575 13575
 Wire Wire Line
-	6550 15225 6550 15125
-Connection ~ 6550 15125
+	7100 13675 7100 13575
+Connection ~ 7100 13575
 Wire Wire Line
-	6550 15125 6675 15125
+	7100 13575 7225 13575
 Wire Wire Line
-	8225 15225 8225 15125
-Connection ~ 8225 15125
+	8775 13675 8775 13575
+Connection ~ 8775 13575
 Wire Wire Line
-	8225 15125 8475 15125
+	8775 13575 9025 13575
 Wire Wire Line
-	8225 15625 8225 15525
-Connection ~ 8225 15625
+	8775 14075 8775 13975
+Connection ~ 8775 14075
 Wire Wire Line
-	8225 15625 8475 15625
+	8775 14075 9025 14075
 Wire Wire Line
-	7950 15525 7950 15625
-Connection ~ 7950 15625
+	8500 13975 8500 14075
+Connection ~ 8500 14075
 Wire Wire Line
-	7950 15625 8225 15625
+	8500 14075 8775 14075
 Wire Wire Line
-	7700 15525 7700 15625
-Connection ~ 7700 15625
+	8250 13975 8250 14075
+Connection ~ 8250 14075
 Wire Wire Line
-	7700 15625 7950 15625
+	8250 14075 8500 14075
 Wire Wire Line
-	7475 15525 7475 15625
-Connection ~ 7475 15625
+	8025 13975 8025 14075
+Connection ~ 8025 14075
 Wire Wire Line
-	7475 15625 7700 15625
+	8025 14075 8250 14075
 Wire Wire Line
-	7250 15525 7250 15625
-Connection ~ 7250 15625
+	7800 13975 7800 14075
+Connection ~ 7800 14075
 Wire Wire Line
-	7250 15625 7475 15625
+	7800 14075 8025 14075
 Wire Wire Line
-	7025 15525 7025 15625
-Connection ~ 7025 15625
+	7575 13975 7575 14075
+Connection ~ 7575 14075
 Wire Wire Line
-	7025 15625 7250 15625
+	7575 14075 7800 14075
 Wire Wire Line
-	6800 15525 6800 15625
-Connection ~ 6800 15625
+	7350 13975 7350 14075
+Connection ~ 7350 14075
 Wire Wire Line
-	6800 15625 7025 15625
+	7350 14075 7575 14075
 Wire Wire Line
-	6550 15525 6550 15625
+	7100 13975 7100 14075
 Wire Wire Line
-	6325 15625 6550 15625
-Connection ~ 6550 15625
+	6875 14075 7100 14075
+Connection ~ 7100 14075
 Wire Wire Line
-	6550 15625 6800 15625
+	7100 14075 7350 14075
 Wire Wire Line
-	13865 15000 14300 15000
+	14415 13450 14850 13450
 Wire Wire Line
-	13865 16000 14300 16000
+	14415 14450 14850 14450
 Wire Wire Line
-	14300 15900 14300 16000
-Connection ~ 14300 16000
+	14850 14350 14850 14450
+Connection ~ 14850 14450
 Wire Wire Line
-	14300 16000 14760 16000
+	14850 14450 15310 14450
 Wire Wire Line
-	14300 15100 14300 15000
-Connection ~ 14300 15000
+	14850 13550 14850 13450
+Connection ~ 14850 13450
 Wire Wire Line
-	14300 15000 14760 15000
+	14850 13450 15310 13450
 NoConn ~ 5725 8050
 Wire Wire Line
 	6250 8500 6125 8500
 Wire Wire Line
 	6125 8500 6125 8450
-Connection ~ 5575 15125
+Connection ~ 6125 13575
 Wire Wire Line
-	5575 15125 5675 15125
+	6125 13575 6225 13575
 Wire Wire Line
-	5275 15125 5425 15125
+	5825 13575 5975 13575
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 5F525AFD
-P 5425 15125
-F 0 "#FLG0101" H 5425 15200 50  0001 C CNN
-F 1 "PWR_FLAG" H 5425 15350 50  0000 C CNN
-F 2 "" H 5425 15125 50  0001 C CNN
-F 3 "~" H 5425 15125 50  0001 C CNN
-	1    5425 15125
+P 5975 13575
+F 0 "#FLG0101" H 5975 13650 50  0001 C CNN
+F 1 "PWR_FLAG" H 5975 13800 50  0000 C CNN
+F 2 "" H 5975 13575 50  0001 C CNN
+F 3 "~" H 5975 13575 50  0001 C CNN
+	1    5975 13575
 	1    0    0    -1  
 $EndComp
-Connection ~ 5425 15125
+Connection ~ 5975 13575
 Wire Wire Line
-	5425 15125 5575 15125
+	5975 13575 6125 13575
 Wire Wire Line
 	7750 8225 7750 8275
 $Sheet
-S 1375 10625 1875 2250
+S 1375 10625 1875 1750
 U 5E14EF55
-F0 "KIO" 250
-F1 "KIO.sch" 250
+F0 "KIO" 150
+F1 "KIO.sch" 150
 $EndSheet
-Text GLabel 9125 11250 2    50   Input ~ 0
-~KIOCS
 Text GLabel 22000 12950 2    50   Input ~ 0
 CLK\TRG3
 Text Label 8400 8625 0    50   ~ 0
@@ -4903,8 +4180,6 @@ Text GLabel 3825 7550 2    50   Input ~ 0
 A11
 Text GLabel 2225 6450 0    50   Input ~ 0
 ~M1
-Text Label 2225 6850 2    50   ~ 0
-~WR
 Text GLabel 2225 6750 0    50   Input ~ 0
 ~RD
 Text Label 2225 6550 2    50   ~ 0
@@ -5078,8 +4353,6 @@ Wire Wire Line
 	19025 10150 19700 10150
 Wire Wire Line
 	20775 9850 21025 9850
-Wire Wire Line
-	14225 10850 15125 10850
 Wire Wire Line
 	17400 9100 18675 9100
 Wire Wire Line
@@ -5310,21 +4583,7 @@ Wire Wire Line
 Wire Wire Line
 	16750 4425 16750 6625
 Wire Wire Line
-	18850 7625 18850 5400
-Wire Wire Line
-	18775 2450 18775 7450
-Wire Wire Line
 	13550 2425 18775 2450
-Wire Wire Line
-	18450 7425 18775 7450
-Wire Wire Line
-	13350 5425 14250 5425
-Wire Wire Line
-	14250 5425 18850 5400
-Wire Wire Line
-	14350 7625 14350 5425
-Wire Wire Line
-	14250 5225 14250 7825
 Wire Wire Line
 	8925 5800 8925 9475
 Wire Wire Line
@@ -5333,10 +4592,61 @@ Wire Wire Line
 	17750 4925 17750 6725
 Wire Wire Line
 	16850 4925 17750 4925
+Wire Wire Line
+	14250 7825 14650 7825
+Wire Wire Line
+	13750 5225 14250 5225
+Wire Wire Line
+	18850 7625 18850 5425
+Wire Wire Line
+	13350 4725 13350 5425
+Wire Wire Line
+	18775 2450 18775 7425
+Wire Wire Line
+	14350 7625 14350 5425
 $Sheet
-S 3975 10600 1175 1750
+S 3375 10625 1875 1750
 U 5FBB02D5
 F0 "IO&Speaker" 150
 F1 "IO&Speaker.sch" 150
 $EndSheet
+Wire Wire Line
+	13350 5425 14250 5425
+Wire Wire Line
+	14250 5425 14350 5425
+Connection ~ 14350 5425
+Wire Wire Line
+	14350 5425 18850 5425
+Wire Wire Line
+	14250 5225 14250 7825
+Text GLabel 16350 5025 3    50   Input ~ 0
+EAR
+Text GLabel 3825 6550 2    50   Input ~ 0
+A1
+Text GLabel 3825 6650 2    50   Input ~ 0
+A2
+Text GLabel 3825 6750 2    50   Input ~ 0
+A3
+Text GLabel 3825 6850 2    50   Input ~ 0
+A4
+Text GLabel 3825 6950 2    50   Input ~ 0
+A5
+Text GLabel 3825 7050 2    50   Input ~ 0
+A6
+Text GLabel 3825 7150 2    50   Input ~ 0
+A7
+Text GLabel 3825 7850 2    50   Input ~ 0
+A14
+Text GLabel 3825 7950 2    50   Input ~ 0
+A15
+Text GLabel 3825 7750 2    50   Input ~ 0
+A13
+Text GLabel 3825 7650 2    50   Input ~ 0
+A12
+Text GLabel 2225 6850 0    50   Input ~ 0
+~WR
+Text GLabel 3825 6450 2    50   Input ~ 0
+A0
+Wire Wire Line
+	18450 7425 18775 7425
 $EndSCHEMATC
