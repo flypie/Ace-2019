@@ -1,12 +1,11 @@
-//#!/bin/bash
+#!/bin/bash
 
-echo off
-
-:top
+for (( ; ; ))
+do
     	echo "infinite loops [ hit CTRL+C to stop]"
-    	make   
-	time /T 
+    	make
+	date +"%T"    
 	sleep 1m
-goto :top
+done
 
 

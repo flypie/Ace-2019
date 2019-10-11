@@ -22,8 +22,11 @@ U 1 1 5E9F8ADD
 P 9075 1875
 F 0 "C6" V 8825 1875 50  0000 C CNN
 F 1 "47nF" V 8925 1875 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 9075 1875 50  0001 C CNN
-F 3 "~" H 9075 1875 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 9075 1875 50  0001 C CNN
+F 3 "" H 9075 1875 50  0001 C CNN
+F 4 "vishay" H 9075 1875 50  0001 C CNN "Manufacturer_Name"
+F 5 "K473K15X7RF5TL2" H 9075 1875 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "4" H 9075 1875 50  0001 C CNN "Height"
 	1    9075 1875
 	0    1    1    0   
 $EndComp
@@ -34,9 +37,11 @@ L Device:C_Small C5
 U 1 1 5E5189FF
 P 9475 2675
 F 0 "C5" H 9375 2725 50  0000 R CNN
-F 1 "47p" H 9375 2675 50  0000 R CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 9475 2675 50  0001 C CNN
+F 1 "47pf" H 9375 2675 50  0000 R CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 9475 2675 50  0001 C CNN
 F 3 "" H 9475 2675 50  0001 C CNN
+F 4 "tdk" H 9475 2675 50  0001 C CNN "Manufacturer_Name"
+F 5 "FA18C0G1H470JNU00" H 9475 2675 50  0001 C CNN "Manufacturer_Part_Number"
 	1    9475 2675
 	1    0    0    -1  
 $EndComp
@@ -51,9 +56,11 @@ L 74xx:74LS367 Z14
 U 1 1 70940791
 P 2675 3775
 F 0 "Z14" V 2505 3235 50  0000 R CNN
-F 1 "74LS367" V 3025 3570 50  0000 R CNN
+F 1 "SN74LS367A" V 3025 3570 50  0000 R CNN
 F 2 "Package_DIP:DIP-16_W7.62mm" H 2675 3775 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS367" H 2675 3775 50  0001 C CNN
+F 3 "" H 2675 3775 50  0001 C CNN
+F 4 "SN74LS367A" H 2675 3775 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "Texas Instruments" H 2675 3775 50  0001 C CNN "Manufacturer_Name"
 	1    2675 3775
 	0    -1   -1   0   
 $EndComp
@@ -168,9 +175,11 @@ L 74xx:74LS04 Z102
 U 3 1 64E6C736
 P 6075 4175
 F 0 "Z102" V 5980 4375 50  0000 L CNN
-F 1 "74LS04" V 6080 4375 50  0000 L CNN
+F 1 "SN74AHCT04N" V 6080 4375 50  0000 L CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 6075 4175 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 6075 4175 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/snSN74AHCT04" H 6075 4175 50  0001 C CNN
+F 4 "SN74AHCT04N" H 6075 4175 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "Texas Instruments" H 6075 4175 50  0001 C CNN "Manufacturer_Name"
 	3    6075 4175
 	0    1    1    0   
 $EndComp
@@ -183,9 +192,11 @@ L 74xx:74LS32 Z108
 U 4 1 62A08EB0
 P 3875 3175
 F 0 "Z108" H 3905 3555 50  0000 C CNN
-F 1 "74LS32" H 3905 3455 50  0000 C CNN
+F 1 "SN74AHCT32N" H 3905 3455 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 3875 3175 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 3875 3175 50  0001 C CNN
+F 3 "" H 3875 3175 50  0001 C CNN
+F 4 "SN74AHCT32N" H 3875 3175 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "Texas Instruments" H 3875 3175 50  0001 C CNN "Manufacturer_Name"
 	4    3875 3175
 	1    0    0    -1  
 $EndComp
@@ -194,9 +205,11 @@ L 74xx:74LS02 Z24
 U 1 1 620DC700
 P 5175 2775
 F 0 "Z24" H 5175 3125 50  0000 C CNN
-F 1 "74LS02" H 5175 3025 50  0000 C CNN
+F 1 "SN74AHCT02N" H 5175 3025 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 5175 2775 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 5175 2775 50  0001 C CNN
+F 3 "" H 5175 2775 50  0001 C CNN
+F 4 "SN74AHCT02N" H 5175 2775 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "Texas Instruments" H 5175 2775 50  0001 C CNN "Manufacturer_Name"
 	1    5175 2775
 	1    0    0    -1  
 $EndComp
@@ -209,9 +222,11 @@ L 74xx:74LS02 Z24
 U 4 1 620F1165
 P 7275 3675
 F 0 "Z24" H 7275 4025 50  0000 C CNN
-F 1 "74LS02" H 7275 3925 50  0000 C CNN
+F 1 "SN74AHCT02N" H 7275 3925 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 7275 3675 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 7275 3675 50  0001 C CNN
+F 3 "" H 7275 3675 50  0001 C CNN
+F 4 "SN74AHCT02N" H 7275 3675 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "Texas Instruments" H 7275 3675 50  0001 C CNN "Manufacturer_Name"
 	4    7275 3675
 	1    0    0    -1  
 $EndComp
@@ -220,9 +235,11 @@ L 74xx:74LS02 Z24
 U 3 1 620EA48A
 P 7275 2875
 F 0 "Z24" H 7275 3225 50  0000 C CNN
-F 1 "74LS02" H 7275 3125 50  0000 C CNN
+F 1 "SN74AHCT02N" H 7275 3125 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 7275 2875 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 7275 2875 50  0001 C CNN
+F 3 "" H 7275 2875 50  0001 C CNN
+F 4 "SN74AHCT02N" H 7275 2875 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "Texas Instruments" H 7275 2875 50  0001 C CNN "Manufacturer_Name"
 	3    7275 2875
 	1    0    0    -1  
 $EndComp
@@ -231,9 +248,11 @@ L 74xx:74LS02 Z24
 U 2 1 620E3DB8
 P 5175 3775
 F 0 "Z24" H 5175 4125 50  0000 C CNN
-F 1 "74LS02" H 5175 4025 50  0000 C CNN
+F 1 "SN74AHCT02N" H 5175 4025 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 5175 3775 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 5175 3775 50  0001 C CNN
+F 3 "" H 5175 3775 50  0001 C CNN
+F 4 "SN74AHCT02N" H 5175 3775 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "Texas Instruments" H 5175 3775 50  0001 C CNN "Manufacturer_Name"
 	2    5175 3775
 	1    0    0    -1  
 $EndComp
@@ -244,7 +263,9 @@ P 9775 2625
 F 0 "D2" V 9725 2750 50  0000 L CNN
 F 1 "1N4148" V 9775 2750 50  0000 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 9775 2450 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 9775 2625 50  0001 C CNN
+F 3 "" H 9775 2625 50  0001 C CNN
+F 4 "ON Semiconductor" H 9775 2625 50  0001 C CNN "Manufacturer_Name"
+F 5 "1N4148" H 9775 2625 50  0001 C CNN "Manufacturer_Part_Number"
 	1    9775 2625
 	0    1    1    0   
 $EndComp
@@ -254,8 +275,10 @@ U 1 1 C18BD510
 P 10575 1775
 F 0 "AUDIO-OUT1" H 10675 1825 51  0000 L CNN
 F 1 "332-02" H 10675 1675 50  0000 L CNN
-F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 10575 1775 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10575 1775 50  0001 C CNN
 F 3 "" H 10575 1775 50  0001 C CNN
+F 4 "SAMTEC" H 10575 1775 50  0001 C CNN "Manufacturer_Name"
+F 5 "TSW–101–10–T–D–RA" H 10575 1775 50  0001 C CNN "Manufacturer_Part_Number"
 	1    10575 1775
 	1    0    0    -1  
 $EndComp
@@ -267,6 +290,8 @@ F 0 "R9" V 8375 3675 50  0000 C CNN
 F 1 "22k" V 8475 3675 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 8625 3675 50  0001 C CNN
 F 3 "" H 8625 3675 50  0001 C CNN
+F 4 "Vishay" H 8625 3675 50  0001 C CNN "Manufacturer_Name"
+F 5 "MBA02040C2202FRP00" H 8625 3675 50  0001 C CNN "Manufacturer_Part_Number"
 	1    8625 3675
 	0    1    1    0   
 $EndComp
@@ -278,6 +303,8 @@ F 0 "R10" V 8825 1875 50  0000 C CNN
 F 1 "10k" V 8725 1875 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 8575 1875 50  0001 C CNN
 F 3 "" H 8575 1875 50  0001 C CNN
+F 4 "Vishay" H 8575 1875 50  0001 C CNN "Manufacturer_Name"
+F 5 "MBA02040C1002FRP00 " H 8575 1875 50  0001 C CNN "Manufacturer_Part_Number"
 	1    8575 1875
 	0    -1   -1   0   
 $EndComp
@@ -288,7 +315,9 @@ P 1225 4950
 F 0 "D10" H 1250 5125 50  0000 C CNN
 F 1 "1N4148" V 1225 5035 50  0001 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 1225 4775 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 1225 4950 50  0001 C CNN
+F 3 "" H 1225 4950 50  0001 C CNN
+F 4 "ON Semiconductor" H 1225 4950 50  0001 C CNN "Manufacturer_Name"
+F 5 "1N4148" H 1225 4950 50  0001 C CNN "Manufacturer_Part_Number"
 	1    1225 4950
 	1    0    0    -1  
 $EndComp
@@ -299,7 +328,9 @@ P 1225 5250
 F 0 "D7" V 1145 5200 50  0000 L CNN
 F 1 "1N4148" V 1225 5335 50  0001 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 1225 5075 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 1225 5250 50  0001 C CNN
+F 3 "" H 1225 5250 50  0001 C CNN
+F 4 "ON Semiconductor" H 1225 5250 50  0001 C CNN "Manufacturer_Name"
+F 5 "1N4148" H 1225 5250 50  0001 C CNN "Manufacturer_Part_Number"
 	1    1225 5250
 	1    0    0    -1  
 $EndComp
@@ -310,7 +341,9 @@ P 1225 5350
 F 0 "D6" V 1145 5300 50  0000 L CNN
 F 1 "1N4148" V 1225 5435 50  0001 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 1225 5175 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 1225 5350 50  0001 C CNN
+F 3 "" H 1225 5350 50  0001 C CNN
+F 4 "ON Semiconductor" H 1225 5350 50  0001 C CNN "Manufacturer_Name"
+F 5 "1N4148" H 1225 5350 50  0001 C CNN "Manufacturer_Part_Number"
 	1    1225 5350
 	1    0    0    -1  
 $EndComp
@@ -321,7 +354,9 @@ P 1225 5450
 F 0 "D5" V 1145 5400 50  0000 L CNN
 F 1 "1N4148" V 1225 5535 50  0001 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 1225 5275 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 1225 5450 50  0001 C CNN
+F 3 "" H 1225 5450 50  0001 C CNN
+F 4 "ON Semiconductor" H 1225 5450 50  0001 C CNN "Manufacturer_Name"
+F 5 "1N4148" H 1225 5450 50  0001 C CNN "Manufacturer_Part_Number"
 	1    1225 5450
 	1    0    0    -1  
 $EndComp
@@ -332,7 +367,9 @@ P 1225 5550
 F 0 "D4" V 1145 5500 50  0000 L CNN
 F 1 "1N4148" V 1225 5635 50  0001 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 1225 5375 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 1225 5550 50  0001 C CNN
+F 3 "" H 1225 5550 50  0001 C CNN
+F 4 "ON Semiconductor" H 1225 5550 50  0001 C CNN "Manufacturer_Name"
+F 5 "1N4148" H 1225 5550 50  0001 C CNN "Manufacturer_Part_Number"
 	1    1225 5550
 	1    0    0    -1  
 $EndComp
@@ -343,7 +380,9 @@ P 1225 5650
 F 0 "D3" H 1250 5475 50  0000 C CNN
 F 1 "1N4148" V 1225 5735 50  0001 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 1225 5475 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 1225 5650 50  0001 C CNN
+F 3 "" H 1225 5650 50  0001 C CNN
+F 4 "ON Semiconductor" H 1225 5650 50  0001 C CNN "Manufacturer_Name"
+F 5 "1N4148" H 1225 5650 50  0001 C CNN "Manufacturer_Part_Number"
 	1    1225 5650
 	1    0    0    -1  
 $EndComp
@@ -354,7 +393,9 @@ P 1675 5250
 F 0 "KEYBOARD1" H 1735 5805 50  0000 C CNN
 F 1 "Conn_02x08_Odd_Even" H 1735 5705 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical" H 1675 5250 50  0001 C CNN
-F 3 "~" H 1675 5250 50  0001 C CNN
+F 3 "" H 1675 5250 50  0001 C CNN
+F 4 "SAMTEC" H 1675 5250 50  0001 C CNN "Manufacturer_Name"
+F 5 "TSW–108–10–T–D–RA" H 1675 5250 50  0001 C CNN "Manufacturer_Part_Number"
 	1    1675 5250
 	1    0    0    -1  
 $EndComp
@@ -474,7 +515,9 @@ P 1225 5150
 F 0 "D8" V 1145 5100 50  0000 L CNN
 F 1 "1N4148" V 1225 5235 50  0001 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 1225 4975 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 1225 5150 50  0001 C CNN
+F 3 "" H 1225 5150 50  0001 C CNN
+F 4 "ON Semiconductor" H 1225 5150 50  0001 C CNN "Manufacturer_Name"
+F 5 "1N4148" H 1225 5150 50  0001 C CNN "Manufacturer_Part_Number"
 	1    1225 5150
 	1    0    0    -1  
 $EndComp
@@ -485,7 +528,9 @@ P 1225 5050
 F 0 "D9" V 1145 5000 50  0000 L CNN
 F 1 "1N4148" V 1225 5135 50  0001 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 1225 4875 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 1225 5050 50  0001 C CNN
+F 3 "" H 1225 5050 50  0001 C CNN
+F 4 "ON Semiconductor" H 1225 5050 50  0001 C CNN "Manufacturer_Name"
+F 5 "1N4148" H 1225 5050 50  0001 C CNN "Manufacturer_Part_Number"
 	1    1225 5050
 	1    0    0    -1  
 $EndComp
@@ -512,9 +557,11 @@ L 74xx:74LS74 Z27
 U 1 1 62A1631E
 P 8025 1975
 F 0 "Z27" H 8235 2235 50  0000 C CNN
-F 1 "74LS74" H 7795 2225 50  0000 C CNN
+F 1 "SN74AHCT74N" H 7795 2225 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 8025 1975 50  0001 C CNN
 F 3 "74xx/74hc_hct74.pdf" H 8025 1975 50  0001 C CNN
+F 4 "SN74AHCT74N" H 8025 1975 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "Texas Instruments" H 8025 1975 50  0001 C CNN "Manufacturer_Name"
 	1    8025 1975
 	1    0    0    -1  
 $EndComp
@@ -529,8 +576,10 @@ U 1 1 5DD9F9BA
 P 10575 2650
 F 0 "SPK1" H 10675 2620 51  0000 L BNN
 F 1 "SPk1" H 10545 2705 50  0000 L BNN
-F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 10575 2650 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10575 2650 50  0001 C CNN
 F 3 "" H 10575 2650 50  0001 C CNN
+F 4 "SAMTEC" H 10575 2650 50  0001 C CNN "Manufacturer_Name"
+F 5 "TSW–101–10–T–D–RA" H 10575 2650 50  0001 C CNN "Manufacturer_Part_Number"
 	1    10575 2650
 	1    0    0    1   
 $EndComp
@@ -546,6 +595,8 @@ F 0 "R102" V 9900 2850 50  0000 C CNN
 F 1 "200" V 9800 2850 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 10050 2875 50  0001 C CNN
 F 3 "" H 10050 2875 50  0001 C CNN
+F 4 "Vishay" H 10050 2875 50  0001 C CNN "Manufacturer_Name"
+F 5 "MBA02040C2000FRP00 " H 10050 2875 50  0001 C CNN "Manufacturer_Part_Number"
 	1    10050 2875
 	0    -1   -1   0   
 $EndComp
@@ -564,9 +615,11 @@ L 74xx:74LS04 Z102
 U 4 1 5F8DC5BC
 P 2425 2075
 F 0 "Z102" H 2450 2425 50  0000 C CNN
-F 1 "74LS04" H 2450 2325 50  0000 C CNN
+F 1 "SN74AHCT04N" H 2450 2325 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 2425 2075 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 2425 2075 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/snSN74AHCT04" H 2425 2075 50  0001 C CNN
+F 4 "SN74AHCT04N" H 2425 2075 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "Texas Instruments" H 2425 2075 50  0001 C CNN "Manufacturer_Name"
 	4    2425 2075
 	1    0    0    -1  
 $EndComp
@@ -589,9 +642,11 @@ L 74xx:74LS30 Z110
 U 1 1 5F61E055
 P 3150 2375
 F 0 "Z110" H 3175 1875 50  0000 C CNN
-F 1 "74LS30" H 3175 1775 50  0000 C CNN
+F 1 "SN74ALS30AN " H 3175 1775 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 3150 2375 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS30" H 3150 2375 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74als30a.pdf" H 3150 2375 50  0001 C CNN
+F 4 "SN74ALS30AN " H 3150 2375 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "Texas Instruments" H 3150 2375 50  0001 C CNN "Manufacturer_Name"
 	1    3150 2375
 	1    0    0    -1  
 $EndComp
@@ -604,9 +659,11 @@ L 74xx:74LS32 Z108
 U 3 1 6011E6A2
 P 3925 2275
 F 0 "Z108" H 3955 2655 50  0000 C CNN
-F 1 "74LS32" H 3955 2555 50  0000 C CNN
+F 1 "SN74AHCT32N" H 3955 2555 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 3925 2275 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 3925 2275 50  0001 C CNN
+F 3 "" H 3925 2275 50  0001 C CNN
+F 4 "SN74AHCT32N" H 3925 2275 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "Texas Instruments" H 3925 2275 50  0001 C CNN "Manufacturer_Name"
 	3    3925 2275
 	1    0    0    -1  
 $EndComp
@@ -620,9 +677,11 @@ L 74xx:74LS04 Z102
 U 1 1 603D9E46
 P 3125 1700
 F 0 "Z102" H 3125 2075 50  0000 C CNN
-F 1 "74LS04" H 3125 1975 50  0000 C CNN
+F 1 "SN74AHCT04N" H 3125 1975 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 3125 1700 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 3125 1700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/snSN74AHCT04" H 3125 1700 50  0001 C CNN
+F 4 "SN74AHCT04N" H 3125 1700 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "Texas Instruments" H 3125 1700 50  0001 C CNN "Manufacturer_Name"
 	1    3125 1700
 	1    0    0    -1  
 $EndComp
@@ -642,7 +701,8 @@ P 9375 3675
 F 0 "Q3" H 9600 3725 50  0000 L CNN
 F 1 "BC183" H 9600 3675 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92L_Inline" H 9375 3675 50  0001 C CNN
-F 3 "https://www.mouser.co.uk/datasheet/2/308/BC183-1299954.pdf" H 9375 3675 50  0001 C CNN
+F 3 "" H 9375 3675 50  0001 C CNN
+F 4 "BC183" H 9375 3675 50  0001 C CNN "Manufacturer_Part_Number"
 	1    9375 3675
 	1    0    0    -1  
 $EndComp

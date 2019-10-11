@@ -1,6 +1,6 @@
 ifeq  ($(OS),Windows_NT)
 
-FREEROUTING := C:\Program_Files\Java\jdk-11.0.4\bin\java.exe -jar C:\home\JohnB\source\freeRoutingProj\dist\freeRouting.jar -s -asx -moi 20 -de  
+FREEROUTING := C:\ProgramFiles\Java\jdk-11.0.4\bin\java.exe -jar C:\home\JohnB\source\freeRoutingProj\dist\freeRouting.jar -s -asx -moi 20 -de  
 XCDIR := C:/home/JohnB/Dropbox/Ace-2019/KiCad
 
 else
