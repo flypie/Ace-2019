@@ -4857,10 +4857,10 @@ Wire Wire Line
 Wire Wire Line
 	8850 15350 8900 15350
 $Comp
-L Diode:1N4148 D19
+L Diode:1N4148 D10
 U 1 1 4E22A259
 P 8700 15350
-F 0 "D19" H 8800 15369 50  0000 L BNN
+F 0 "D10" H 8800 15369 50  0000 L BNN
 F 1 "1N4148DO35-7" H 8800 15259 50  0001 L BNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 15350 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 15350 50  0001 C CNN
@@ -4868,10 +4868,10 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 
 	1    0    0    1   
 $EndComp
 $Comp
-L Diode:1N4148 D18
+L Diode:1N4148 D9
 U 1 1 6C4F5204
 P 8700 15450
-F 0 "D18" H 8800 15469 50  0000 L BNN
+F 0 "D9" H 8800 15469 50  0000 L BNN
 F 1 "1N4148DO35-7" H 8800 15359 50  0001 L BNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 15450 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 15450 50  0001 C CNN
@@ -4879,10 +4879,10 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 
 	1    0    0    1   
 $EndComp
 $Comp
-L Diode:1N4148 D17
+L Diode:1N4148 D8
 U 1 1 545FE2A8
 P 8700 15550
-F 0 "D17" H 8800 15569 50  0000 L BNN
+F 0 "D8" H 8800 15569 50  0000 L BNN
 F 1 "1N4148DO35-7" H 8800 15459 50  0001 L BNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 15550 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 15550 50  0001 C CNN
@@ -4890,10 +4890,10 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 
 	1    0    0    1   
 $EndComp
 $Comp
-L Diode:1N4148 D16
+L Diode:1N4148 D7
 U 1 1 4AB03EFC
 P 8700 15650
-F 0 "D16" H 8800 15669 50  0000 L BNN
+F 0 "D7" H 8800 15669 50  0000 L BNN
 F 1 "1N4148DO35-7" H 8800 15559 50  0001 L BNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 15650 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 15650 50  0001 C CNN
@@ -4901,10 +4901,10 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 
 	1    0    0    1   
 $EndComp
 $Comp
-L Diode:1N4148 D15
+L Diode:1N4148 D6
 U 1 1 093B9CD1
 P 8700 15750
-F 0 "D15" H 8800 15769 50  0000 L BNN
+F 0 "D6" H 8800 15769 50  0000 L BNN
 F 1 "1N4148DO35-7" H 8800 15659 50  0001 L BNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 15750 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 15750 50  0001 C CNN
@@ -4912,10 +4912,10 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 
 	1    0    0    1   
 $EndComp
 $Comp
-L Diode:1N4148 D14
+L Diode:1N4148 D5
 U 1 1 2984713A
 P 8700 15850
-F 0 "D14" H 8800 15869 50  0000 L BNN
+F 0 "D5" H 8800 15869 50  0000 L BNN
 F 1 "1N4148DO35-7" H 8800 15759 50  0001 L BNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 15850 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 15850 50  0001 C CNN
@@ -4923,10 +4923,10 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 
 	1    0    0    1   
 $EndComp
 $Comp
-L Diode:1N4148 D13
+L Diode:1N4148 D4
 U 1 1 E5DD51DD
 P 8700 15950
-F 0 "D13" H 8800 15969 50  0000 L BNN
+F 0 "D4" H 8800 15969 50  0000 L BNN
 F 1 "1N4148DO35-7" H 8800 15859 50  0001 L BNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 15950 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 15950 50  0001 C CNN
@@ -4934,10 +4934,10 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 
 	1    0    0    1   
 $EndComp
 $Comp
-L Diode:1N4148 D12
+L Diode:1N4148 D3
 U 1 1 B603868B
 P 8700 16050
-F 0 "D12" H 8800 16069 50  0000 L BNN
+F 0 "D3" H 8800 16069 50  0000 L BNN
 F 1 "1N4148DO35-7" H 8800 15959 50  0001 L BNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 16050 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 16050 50  0001 C CNN
