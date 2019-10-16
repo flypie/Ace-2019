@@ -828,10 +828,10 @@ Wire Wire Line
 Wire Wire Line
 	7800 6100 9700 6100
 Wire Wire Line
-	7600 14600 7600 14500
+	7600 15275 7600 14500
 Wire Wire Line
-	7600 14600 7700 14600
-Text Label 7700 14600 0    50   ~ 0
+	7600 15275 7700 15275
+Text Label 7700 15275 0    50   ~ 0
 EAR
 Wire Wire Line
 	18500 5800 18500 5900
@@ -1613,7 +1613,7 @@ $Comp
 L 6116p:6116P Z7
 U 1 1 3B27C4BC
 P 21900 8100
-F 0 "Z7" H 21600 8825 50  0000 L BNN
+F 0 "Z7" H 21900 9200 50  0000 C CNN
 F 1 "6116SA20TPGI" H 21600 7300 50  0001 L BNN
 F 2 "Package_DIP:DIP-24_W7.62mm" H 21900 8100 50  0001 C CNN
 F 3 "https://www.princeton.edu/~mae412/HANDOUTS/Datasheets/2114.pdf" H 21900 8100 50  0001 C CNN
@@ -2741,19 +2741,6 @@ F 3 "" H 14700 14200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Diode:1N4148 D11
-U 1 1 AB7A9E27
-P 13600 10300
-F 0 "D11" H 13800 10419 50  0000 R TNN
-F 1 "1N4148DO35-7" H 13400 10209 50  0000 L BNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 13600 10300 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 13600 10300 50  0001 C CNN
-F 4 "ON Semiconductor" H 13600 10300 50  0001 C CNN "Manufacturer_Name"
-F 5 "1N4148" H 13600 10300 50  0001 C CNN "Manufacturer_Part_Number"
-	1    13600 10300
-	-1   0    0    1   
-$EndComp
-$Comp
 L Device:R R11
 U 1 1 B4AB49B7
 P 14900 10250
@@ -3324,19 +3311,15 @@ Connection ~ 4400 16350
 Wire Wire Line
 	4400 16350 3950 16350
 Wire Wire Line
-	7950 15350 7600 15350
+	7850 15350 7500 15350
 Wire Wire Line
-	7600 15350 7600 14700
+	7850 15450 7400 15450
 Wire Wire Line
-	7950 15450 7500 15450
+	7850 15550 7300 15550
 Wire Wire Line
-	7500 15450 7500 14800
+	7850 15650 7200 15650
 Wire Wire Line
-	7950 15550 7400 15550
-Wire Wire Line
-	7950 15650 7300 15650
-Wire Wire Line
-	7950 15750 7200 15750
+	7850 15750 7100 15750
 $Comp
 L Connector_Generic:Conn_01x02 PWR-IN1
 U 1 1 66037FE7
@@ -3686,32 +3669,6 @@ Wire Wire Line
 	12700 12100 11900 12100
 Wire Wire Line
 	11900 12100 11900 12900
-Wire Wire Line
-	7200 15750 7200 15100
-Wire Wire Line
-	7300 15650 7300 15000
-Wire Wire Line
-	7400 15550 7400 14900
-Wire Wire Line
-	7200 15000 7200 14500
-Wire Wire Line
-	7300 15000 7200 15000
-Wire Wire Line
-	7100 15100 7100 14500
-Wire Wire Line
-	7200 15100 7100 15100
-Wire Wire Line
-	7300 14900 7300 14500
-Wire Wire Line
-	7400 14900 7300 14900
-Wire Wire Line
-	7400 14500 7400 14800
-Wire Wire Line
-	7400 14800 7500 14800
-Wire Wire Line
-	7500 14500 7500 14700
-Wire Wire Line
-	7500 14700 7600 14700
 $Comp
 L 74xx:74LS367 Z14
 U 1 1 BC34DC86
@@ -4287,171 +4244,171 @@ PHI
 Text Label 20725 11600 0    50   ~ 0
 BASECLK
 Wire Wire Line
-	8450 15950 8550 15950
+	8350 15950 8450 15950
 Wire Wire Line
-	8550 15850 8450 15850
+	8450 15850 8350 15850
 Wire Wire Line
-	8450 15750 8550 15750
+	8350 15750 8450 15750
 Wire Wire Line
-	8550 15650 8450 15650
+	8450 15650 8350 15650
 Wire Wire Line
-	8450 15550 8550 15550
+	8350 15550 8450 15550
 Wire Wire Line
-	8550 15450 8450 15450
+	8450 15450 8350 15450
 Wire Wire Line
-	8550 15350 8450 15350
+	8450 15350 8350 15350
 Wire Wire Line
-	8950 15950 8850 15950
+	8850 15950 8750 15950
 Wire Wire Line
-	8950 15550 8850 15550
+	8850 15550 8750 15550
 Wire Wire Line
-	8850 16050 9000 16050
+	8750 16050 8900 16050
 Wire Wire Line
-	8850 15850 9000 15850
+	8750 15850 8900 15850
 Wire Wire Line
-	8850 15750 8900 15750
+	8750 15750 8800 15750
 Wire Wire Line
-	8850 15650 9000 15650
+	8750 15650 8900 15650
 Wire Wire Line
-	8850 15450 9000 15450
+	8750 15450 8900 15450
 Wire Wire Line
-	8850 15350 8900 15350
+	8750 15350 8800 15350
 $Comp
 L Diode:1N4148 D10
 U 1 1 4E22A259
-P 8700 15350
-F 0 "D10" H 8800 15369 50  0000 L BNN
-F 1 "1N4148DO35-7" H 8800 15259 50  0001 L BNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 15350 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 15350 50  0001 C CNN
-F 4 "ON Semiconductor" H 8700 15350 50  0001 C CNN "Manufacturer_Name"
-F 5 "1N4148" H 8700 15350 50  0001 C CNN "Manufacturer_Part_Number"
-	1    8700 15350
+P 8600 15350
+F 0 "D10" H 8700 15369 50  0000 L BNN
+F 1 "1N4148DO35-7" H 8700 15259 50  0001 L BNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8600 15350 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8600 15350 50  0001 C CNN
+F 4 "ON Semiconductor" H 8600 15350 50  0001 C CNN "Manufacturer_Name"
+F 5 "1N4148" H 8600 15350 50  0001 C CNN "Manufacturer_Part_Number"
+	1    8600 15350
 	1    0    0    1   
 $EndComp
 $Comp
 L Diode:1N4148 D9
 U 1 1 6C4F5204
-P 8700 15450
-F 0 "D9" H 8800 15469 50  0000 L BNN
-F 1 "1N4148DO35-7" H 8800 15359 50  0001 L BNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 15450 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 15450 50  0001 C CNN
-F 4 "ON Semiconductor" H 8700 15450 50  0001 C CNN "Manufacturer_Name"
-F 5 "1N4148" H 8700 15450 50  0001 C CNN "Manufacturer_Part_Number"
-	1    8700 15450
+P 8600 15450
+F 0 "D9" H 8700 15469 50  0000 L BNN
+F 1 "1N4148DO35-7" H 8700 15359 50  0001 L BNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8600 15450 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8600 15450 50  0001 C CNN
+F 4 "ON Semiconductor" H 8600 15450 50  0001 C CNN "Manufacturer_Name"
+F 5 "1N4148" H 8600 15450 50  0001 C CNN "Manufacturer_Part_Number"
+	1    8600 15450
 	1    0    0    1   
 $EndComp
 $Comp
 L Diode:1N4148 D8
 U 1 1 545FE2A8
-P 8700 15550
-F 0 "D8" H 8800 15569 50  0000 L BNN
-F 1 "1N4148DO35-7" H 8800 15459 50  0001 L BNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 15550 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 15550 50  0001 C CNN
-F 4 "ON Semiconductor" H 8700 15550 50  0001 C CNN "Manufacturer_Name"
-F 5 "1N4148" H 8700 15550 50  0001 C CNN "Manufacturer_Part_Number"
-	1    8700 15550
+P 8600 15550
+F 0 "D8" H 8700 15569 50  0000 L BNN
+F 1 "1N4148DO35-7" H 8700 15459 50  0001 L BNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8600 15550 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8600 15550 50  0001 C CNN
+F 4 "ON Semiconductor" H 8600 15550 50  0001 C CNN "Manufacturer_Name"
+F 5 "1N4148" H 8600 15550 50  0001 C CNN "Manufacturer_Part_Number"
+	1    8600 15550
 	1    0    0    1   
 $EndComp
 $Comp
 L Diode:1N4148 D7
 U 1 1 4AB03EFC
-P 8700 15650
-F 0 "D7" H 8800 15669 50  0000 L BNN
-F 1 "1N4148DO35-7" H 8800 15559 50  0001 L BNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 15650 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 15650 50  0001 C CNN
-F 4 "ON Semiconductor" H 8700 15650 50  0001 C CNN "Manufacturer_Name"
-F 5 "1N4148" H 8700 15650 50  0001 C CNN "Manufacturer_Part_Number"
-	1    8700 15650
+P 8600 15650
+F 0 "D7" H 8700 15669 50  0000 L BNN
+F 1 "1N4148DO35-7" H 8700 15559 50  0001 L BNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8600 15650 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8600 15650 50  0001 C CNN
+F 4 "ON Semiconductor" H 8600 15650 50  0001 C CNN "Manufacturer_Name"
+F 5 "1N4148" H 8600 15650 50  0001 C CNN "Manufacturer_Part_Number"
+	1    8600 15650
 	1    0    0    1   
 $EndComp
 $Comp
 L Diode:1N4148 D6
 U 1 1 093B9CD1
-P 8700 15750
-F 0 "D6" H 8800 15769 50  0000 L BNN
-F 1 "1N4148DO35-7" H 8800 15659 50  0001 L BNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 15750 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 15750 50  0001 C CNN
-F 4 "ON Semiconductor" H 8700 15750 50  0001 C CNN "Manufacturer_Name"
-F 5 "1N4148" H 8700 15750 50  0001 C CNN "Manufacturer_Part_Number"
-	1    8700 15750
+P 8600 15750
+F 0 "D6" H 8700 15769 50  0000 L BNN
+F 1 "1N4148DO35-7" H 8700 15659 50  0001 L BNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8600 15750 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8600 15750 50  0001 C CNN
+F 4 "ON Semiconductor" H 8600 15750 50  0001 C CNN "Manufacturer_Name"
+F 5 "1N4148" H 8600 15750 50  0001 C CNN "Manufacturer_Part_Number"
+	1    8600 15750
 	1    0    0    1   
 $EndComp
 $Comp
 L Diode:1N4148 D5
 U 1 1 2984713A
-P 8700 15850
-F 0 "D5" H 8800 15869 50  0000 L BNN
-F 1 "1N4148DO35-7" H 8800 15759 50  0001 L BNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 15850 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 15850 50  0001 C CNN
-F 4 "ON Semiconductor" H 8700 15850 50  0001 C CNN "Manufacturer_Name"
-F 5 "1N4148" H 8700 15850 50  0001 C CNN "Manufacturer_Part_Number"
-	1    8700 15850
+P 8600 15850
+F 0 "D5" H 8700 15869 50  0000 L BNN
+F 1 "1N4148DO35-7" H 8700 15759 50  0001 L BNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8600 15850 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8600 15850 50  0001 C CNN
+F 4 "ON Semiconductor" H 8600 15850 50  0001 C CNN "Manufacturer_Name"
+F 5 "1N4148" H 8600 15850 50  0001 C CNN "Manufacturer_Part_Number"
+	1    8600 15850
 	1    0    0    1   
 $EndComp
 $Comp
 L Diode:1N4148 D4
 U 1 1 E5DD51DD
-P 8700 15950
-F 0 "D4" H 8800 15969 50  0000 L BNN
-F 1 "1N4148DO35-7" H 8800 15859 50  0001 L BNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 15950 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 15950 50  0001 C CNN
-F 4 "ON Semiconductor" H 8700 15950 50  0001 C CNN "Manufacturer_Name"
-F 5 "1N4148" H 8700 15950 50  0001 C CNN "Manufacturer_Part_Number"
-	1    8700 15950
+P 8600 15950
+F 0 "D4" H 8700 15969 50  0000 L BNN
+F 1 "1N4148DO35-7" H 8700 15859 50  0001 L BNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8600 15950 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8600 15950 50  0001 C CNN
+F 4 "ON Semiconductor" H 8600 15950 50  0001 C CNN "Manufacturer_Name"
+F 5 "1N4148" H 8600 15950 50  0001 C CNN "Manufacturer_Part_Number"
+	1    8600 15950
 	1    0    0    1   
 $EndComp
 $Comp
 L Diode:1N4148 D3
 U 1 1 B603868B
-P 8700 16050
-F 0 "D3" H 8800 16069 50  0000 L BNN
-F 1 "1N4148DO35-7" H 8800 15959 50  0001 L BNN
-F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 16050 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 16050 50  0001 C CNN
-F 4 "ON Semiconductor" H 8700 16050 50  0001 C CNN "Manufacturer_Name"
-F 5 "1N4148" H 8700 16050 50  0001 C CNN "Manufacturer_Part_Number"
-	1    8700 16050
+P 8600 16050
+F 0 "D3" H 8700 16069 50  0000 L BNN
+F 1 "1N4148DO35-7" H 8700 15959 50  0001 L BNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8600 16050 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8600 16050 50  0001 C CNN
+F 4 "ON Semiconductor" H 8600 16050 50  0001 C CNN "Manufacturer_Name"
+F 5 "1N4148" H 8600 16050 50  0001 C CNN "Manufacturer_Part_Number"
+	1    8600 16050
 	1    0    0    1   
 $EndComp
-Text Label 9000 16050 0    50   ~ 0
+Text Label 8900 16050 0    50   ~ 0
 A15
-Text Label 8950 15950 0    50   ~ 0
+Text Label 8850 15950 0    50   ~ 0
 A14
-Text Label 9000 15850 0    50   ~ 0
+Text Label 8900 15850 0    50   ~ 0
 A13
-Text Label 8900 15750 0    50   ~ 0
+Text Label 8800 15750 0    50   ~ 0
 A12
-Text Label 9000 15650 0    50   ~ 0
+Text Label 8900 15650 0    50   ~ 0
 A11
-Text Label 8950 15550 0    50   ~ 0
+Text Label 8850 15550 0    50   ~ 0
 A10
-Text Label 9000 15450 0    50   ~ 0
+Text Label 8900 15450 0    50   ~ 0
 A9
-Text Label 8900 15350 0    50   ~ 0
+Text Label 8800 15350 0    50   ~ 0
 A8
-NoConn ~ 7950 15850
-NoConn ~ 7950 15950
-NoConn ~ 7950 16050
+NoConn ~ 7850 15850
+NoConn ~ 7850 15950
+NoConn ~ 7850 16050
 Wire Wire Line
-	8550 16050 8450 16050
+	8450 16050 8350 16050
 $Comp
 L Connector_Generic:Conn_02x08_Odd_Even KEYBOARD1
 U 1 1 64115543
-P 8150 15650
-F 0 "KEYBOARD1" H 8200 16200 50  0000 C CNN
-F 1 "Conn_02x08_Odd_Even" H 8200 16100 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical" H 8150 15650 50  0001 C CNN
-F 3 "" H 8150 15650 50  0001 C CNN
-F 4 "SAMTEC" H 8150 15650 50  0001 C CNN "Manufacturer_Name"
-F 5 "TSW–108–10–T–D–RA" H 8150 15650 50  0001 C CNN "Manufacturer_Part_Number"
-	1    8150 15650
+P 8050 15650
+F 0 "KEYBOARD1" H 8100 15100 50  0000 C CNN
+F 1 "Conn_02x08_Odd_Even" H 8100 15000 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical" H 8050 15650 50  0001 C CNN
+F 3 "" H 8050 15650 50  0001 C CNN
+F 4 "SAMTEC" H 8050 15650 50  0001 C CNN "Manufacturer_Name"
+F 5 "TSW–108–10–T–D–RA" H 8050 15650 50  0001 C CNN "Manufacturer_Part_Number"
+	1    8050 15650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -4503,7 +4460,7 @@ $Comp
 L 6116p:6116P Z5
 U 1 1 614D798D
 P 17675 8100
-F 0 "Z5" H 17375 8825 50  0000 L BNN
+F 0 "Z5" H 17700 9200 50  0000 C CNN
 F 1 "6116SA20TPGI" H 17375 7300 50  0001 L BNN
 F 2 "Package_DIP:DIP-24_W7.62mm" H 17675 8100 50  0001 C CNN
 F 3 "https://www.princeton.edu/~mae412/HANDOUTS/Datasheets/2114.pdf" H 17675 8100 50  0001 C CNN
@@ -4603,8 +4560,6 @@ Wire Wire Line
 	11200 3800 14675 3800
 Wire Wire Line
 	15700 6600 17075 6600
-Wire Wire Line
-	10000 4100 14925 4100
 Wire Wire Line
 	17175 8600 17075 8600
 Wire Wire Line
@@ -5188,4 +5143,49 @@ Wire Wire Line
 	8025 8850 8025 8800
 Wire Wire Line
 	8025 9400 8025 9675
+Wire Wire Line
+	7100 14500 7100 15750
+Wire Wire Line
+	7200 14500 7200 15650
+Wire Wire Line
+	7300 14500 7300 15550
+Wire Wire Line
+	7400 14500 7400 15450
+Wire Wire Line
+	7500 14500 7500 15350
+$Comp
+L Diode:1N4148 D11
+U 1 1 AB7A9E27
+P 13600 10300
+F 0 "D11" H 13800 10419 50  0000 R TNN
+F 1 "1N4148DO35-7" H 13400 10209 50  0000 L BNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 13600 10300 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 13600 10300 50  0001 C CNN
+F 4 "ON Semiconductor" H 13600 10300 50  0001 C CNN "Manufacturer_Name"
+F 5 "1N4148" H 13600 10300 50  0001 C CNN "Manufacturer_Part_Number"
+	1    13600 10300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13475 4400 13475 4800
+Text Label 13475 4800 0    50   ~ 0
+~WE
+$Comp
+L Device:R R32
+U 1 1 5EADA1DB
+P 13475 4250
+F 0 "R32" H 13575 4350 50  0000 L CNN
+F 1 "1K" H 13575 4200 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 13475 4250 50  0001 C CNN
+F 3 "" H 13475 4250 50  0001 C CNN
+F 4 "Vishay" H 13475 4250 50  0001 C CNN "Manufacturer_Name"
+F 5 "MBA02040C1202FRP00" H 13475 4250 50  0001 C CNN "Manufacturer_Part_Number"
+	1    13475 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 4100 13475 4100
+Connection ~ 13475 4100
+Wire Wire Line
+	13475 4100 14925 4100
 $EndSCHEMATC
