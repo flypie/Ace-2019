@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:ACE3NOKB-cache
+LIBS:temp-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -30,7 +31,7 @@ L power:VCC #~PWR0173
 U 1 1 5F41BAB5
 P 7500 2000
 F 0 "#~PWR0173" H 7500 1850 50  0001 C CNN
-F 1 "VCC" H 7550 2225 50  0000 C CNN
+F 1 "VCC" H 7550 2200 50  0000 C CNN
 F 2 "" H 7500 2000 50  0001 C CNN
 F 3 "" H 7500 2000 50  0001 C CNN
 	1    7500 2000
@@ -411,122 +412,122 @@ F 5 "Z84C9010VEG" H 5250 2350 50  0001 C CNN "Manufacturer_Part_Number"
 	1    5250 2350
 	1    0    0    -1  
 $EndComp
-NoConn ~ 2300 5950
-Text Label 2200 5650 2    50   ~ 0
+NoConn ~ 2350 5725
+Text Label 2250 5425 2    50   ~ 0
 CLK\TRG0
-Text Label 2200 5750 2    50   ~ 0
+Text Label 2250 5525 2    50   ~ 0
 CLK\TRG1
-Text Label 2200 5850 2    50   ~ 0
+Text Label 2250 5625 2    50   ~ 0
 CLK\TRG2
 $Comp
 L Connector_Generic:Conn_02x04_Odd_Even J105
 U 1 1 6602BBD4
-P 2500 5750
-F 0 "J105" H 2550 6100 50  0000 C CNN
-F 1 "Conn_02x04_Odd_Even" H 2550 6000 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 2500 5750 50  0001 C CNN
-F 3 "" H 2500 5750 50  0001 C CNN
-F 4 "SAMTEC" H 2500 5750 50  0001 C CNN "Manufacturer_Name"
-F 5 "TSW–104–10–T–D–RA" H 2500 5750 50  0001 C CNN "Manufacturer_Part_Number"
-	1    2500 5750
+P 2550 5525
+F 0 "J105" H 2600 5875 50  0000 C CNN
+F 1 "Conn_02x04_Odd_Even" H 2600 5775 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 2550 5525 50  0001 C CNN
+F 3 "" H 2550 5525 50  0001 C CNN
+F 4 "SAMTEC" H 2550 5525 50  0001 C CNN "Manufacturer_Name"
+F 5 "TSW–104–10–T–D–RA" H 2550 5525 50  0001 C CNN "Manufacturer_Part_Number"
+	1    2550 5525
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector_Generic:Conn_02x03_Odd_Even J104
 U 1 1 64A32B0F
-P 2500 5150
-F 0 "J104" H 2550 5500 50  0000 C CNN
-F 1 "Conn_02x03_Odd_Even" H 2550 5400 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 2500 5150 50  0001 C CNN
-F 3 "" H 2500 5150 50  0001 C CNN
-F 4 "SAMTEC" H 2500 5150 50  0001 C CNN "Manufacturer_Name"
-F 5 "TSW–103–10–T–D–RA" H 2500 5150 50  0001 C CNN "Manufacturer_Part_Number"
-	1    2500 5150
+P 2550 4925
+F 0 "J104" H 2600 5275 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 2600 5175 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 2550 4925 50  0001 C CNN
+F 3 "" H 2550 4925 50  0001 C CNN
+F 4 "SAMTEC" H 2550 4925 50  0001 C CNN "Manufacturer_Name"
+F 5 "TSW–103–10–T–D–RA" H 2550 4925 50  0001 C CNN "Manufacturer_Part_Number"
+	1    2550 4925
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector_Generic:Conn_02x03_Odd_Even J103
 U 1 1 6454B474
-P 2500 4550
-F 0 "J103" H 2575 4900 50  0000 C CNN
-F 1 "Conn_02x03_Odd_Even" H 2575 4800 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 2500 4550 50  0001 C CNN
-F 3 "" H 2500 4550 50  0001 C CNN
-F 4 "SAMTEC" H 2500 4550 50  0001 C CNN "Manufacturer_Name"
-F 5 "TSW–103–10–T–D–RA" H 2500 4550 50  0001 C CNN "Manufacturer_Part_Number"
-	1    2500 4550
+P 2550 4325
+F 0 "J103" H 2625 4675 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 2625 4575 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 2550 4325 50  0001 C CNN
+F 3 "" H 2550 4325 50  0001 C CNN
+F 4 "SAMTEC" H 2550 4325 50  0001 C CNN "Manufacturer_Name"
+F 5 "TSW–103–10–T–D–RA" H 2550 4325 50  0001 C CNN "Manufacturer_Part_Number"
+	1    2550 4325
 	1    0    0    -1  
 $EndComp
-Text Label 2900 5950 0    50   ~ 0
+Text Label 2950 5725 0    50   ~ 0
 ZC\TO3
 Wire Wire Line
-	2800 5950 2900 5950
-Text Label 2900 5850 0    50   ~ 0
+	2850 5725 2950 5725
+Text Label 2950 5625 0    50   ~ 0
 ZC\TO2
 Wire Wire Line
-	2800 5850 2900 5850
-Text Label 2900 5750 0    50   ~ 0
+	2850 5625 2950 5625
+Text Label 2950 5525 0    50   ~ 0
 ZC\TO1
 Wire Wire Line
-	2800 5750 2900 5750
-Text Label 2900 5650 0    50   ~ 0
+	2850 5525 2950 5525
+Text Label 2950 5425 0    50   ~ 0
 ZC\TO0
 Wire Wire Line
-	2800 5650 2900 5650
+	2850 5425 2950 5425
 Wire Wire Line
-	2300 5850 2200 5850
+	2350 5625 2250 5625
 Wire Wire Line
-	2300 5750 2200 5750
+	2350 5525 2250 5525
 Wire Wire Line
-	2300 5650 2200 5650
-Text Label 2900 5250 0    50   ~ 0
+	2350 5425 2250 5425
+Text Label 2950 5025 0    50   ~ 0
 ~CTSB
 Wire Wire Line
-	2800 5250 2900 5250
-Text Label 2900 5150 0    50   ~ 0
+	2850 5025 2950 5025
+Text Label 2950 4925 0    50   ~ 0
 ~DCDB
 Wire Wire Line
-	2800 5150 2900 5150
-Text Label 2200 5050 2    50   ~ 0
+	2850 4925 2950 4925
+Text Label 2250 4825 2    50   ~ 0
 TxDB
 Wire Wire Line
-	2300 5050 2200 5050
-Text Label 2200 5150 2    50   ~ 0
+	2350 4825 2250 4825
+Text Label 2250 4925 2    50   ~ 0
 ~TxCB
 Wire Wire Line
-	2300 5150 2200 5150
-Text Label 2200 5250 2    50   ~ 0
+	2350 4925 2250 4925
+Text Label 2250 5025 2    50   ~ 0
 ~RxCB
 Wire Wire Line
-	2300 5250 2200 5250
-Text Label 2900 5050 0    50   ~ 0
+	2350 5025 2250 5025
+Text Label 2950 4825 0    50   ~ 0
 RxDB
 Wire Wire Line
-	2800 5050 2900 5050
-Text Label 2900 4650 0    50   ~ 0
+	2850 4825 2950 4825
+Text Label 2950 4425 0    50   ~ 0
 ~CTSA
 Wire Wire Line
-	2800 4650 2900 4650
-Text Label 2900 4550 0    50   ~ 0
+	2850 4425 2950 4425
+Text Label 2950 4325 0    50   ~ 0
 ~DCDA
 Wire Wire Line
-	2800 4550 2900 4550
-Text Label 2900 4450 0    50   ~ 0
+	2850 4325 2950 4325
+Text Label 2950 4225 0    50   ~ 0
 RxDA
 Wire Wire Line
-	2800 4450 2900 4450
-Text Label 2200 4650 2    50   ~ 0
+	2850 4225 2950 4225
+Text Label 2250 4425 2    50   ~ 0
 ~RxCA
 Wire Wire Line
-	2300 4650 2200 4650
-Text Label 2200 4550 2    50   ~ 0
+	2350 4425 2250 4425
+Text Label 2250 4325 2    50   ~ 0
 ~TxCA
 Wire Wire Line
-	2300 4550 2200 4550
-Text Label 2200 4450 2    50   ~ 0
+	2350 4325 2250 4325
+Text Label 2250 4225 2    50   ~ 0
 TxDA
 Wire Wire Line
-	2300 4450 2200 4450
+	2350 4225 2250 4225
 $Comp
 L Connector_Generic:Conn_02x05_Odd_Even J100
 U 1 1 5D98E8C9

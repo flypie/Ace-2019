@@ -1,10 +1,11 @@
 EESchema Schematic File Version 4
 LIBS:ACE4NOKB-cache
+LIBS:ear-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 3
+Sheet 2 4
 Title "JupiterAce Z80 plus KIO and new memory format."
 Date "2019-09-11"
 Rev "Alpha"
@@ -57,10 +58,7 @@ Text Label 6300 2050 1    50   ~ 0
 NoConn ~ 7450 11300
 NoConn ~ 8450 4600
 Wire Wire Line
-	8450 4400 8550 4400
-NoConn ~ 8450 4500
-NoConn ~ 8450 4100
-NoConn ~ 8450 4200
+	8450 4500 8525 4500
 Wire Wire Line
 	7200 5300 7200 5400
 Wire Wire Line
@@ -422,7 +420,7 @@ P 2525 5700
 F 0 "J105" H 2575 6050 50  0000 C CNN
 F 1 "Conn_02x04_Odd_Even" H 2575 5950 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 2525 5700 50  0001 C CNN
-F 3 "~" H 2525 5700 50  0001 C CNN
+F 3 "" H 2525 5700 50  0001 C CNN
 	1    2525 5700
 	1    0    0    -1  
 $EndComp
@@ -433,7 +431,7 @@ P 2525 5100
 F 0 "J104" H 2575 5450 50  0000 C CNN
 F 1 "Conn_02x03_Odd_Even" H 2575 5350 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 2525 5100 50  0001 C CNN
-F 3 "~" H 2525 5100 50  0001 C CNN
+F 3 "" H 2525 5100 50  0001 C CNN
 	1    2525 5100
 	1    0    0    -1  
 $EndComp
@@ -444,7 +442,7 @@ P 2525 4500
 F 0 "J103" H 2600 4850 50  0000 C CNN
 F 1 "Conn_02x03_Odd_Even" H 2600 4750 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 2525 4500 50  0001 C CNN
-F 3 "~" H 2525 4500 50  0001 C CNN
+F 3 "" H 2525 4500 50  0001 C CNN
 	1    2525 4500
 	1    0    0    -1  
 $EndComp
@@ -525,7 +523,7 @@ P 2525 1925
 F 0 "J100" H 2575 2375 50  0000 C CNN
 F 1 "Conn_02x05_Odd_Even" H 2575 2275 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 2525 1925 50  0001 C CNN
-F 3 "~" H 2525 1925 50  0001 C CNN
+F 3 "" H 2525 1925 50  0001 C CNN
 	1    2525 1925
 	1    0    0    -1  
 $EndComp
@@ -596,7 +594,7 @@ P 2525 2725
 F 0 "J101" H 2575 3175 50  0000 C CNN
 F 1 "Conn_02x05_Odd_Even" H 2575 3075 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 2525 2725 50  0001 C CNN
-F 3 "~" H 2525 2725 50  0001 C CNN
+F 3 "" H 2525 2725 50  0001 C CNN
 	1    2525 2725
 	1    0    0    -1  
 $EndComp
@@ -629,7 +627,7 @@ P 2525 3525
 F 0 "J102" H 2600 3975 50  0000 C CNN
 F 1 "Conn_02x05_Odd_Even" H 2600 3875 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 2525 3525 50  0001 C CNN
-F 3 "~" H 2525 3525 50  0001 C CNN
+F 3 "" H 2525 3525 50  0001 C CNN
 	1    2525 3525
 	1    0    0    -1  
 $EndComp
@@ -709,8 +707,98 @@ Text GLabel 7700 2050 1    50   Input ~ 0
 ~RESET
 Text Label 7200 5400 3    50   ~ 0
 ZC\TO3
-Text GLabel 8550 4400 2    50   Input ~ 0
-~CPUCLK
+Text GLabel 8550 4500 2    50   Input ~ 0
+PHI
 Wire Wire Line
 	7700 2050 7700 2150
+$Comp
+L Device:Crystal X?
+U 1 1 600DA20C
+P 9075 4150
+AR Path="/600DA20C" Ref="X?"  Part="1" 
+AR Path="/5D919407/600DA20C" Ref="X2"  Part="1" 
+F 0 "X2" H 9075 4350 50  0000 C CNN
+F 1 "CRYSTALHC49U-V 25 MHz" H 9085 4310 50  0001 C CNN
+F 2 "Crystal:Crystal_HC49-U_Vertical" H 9075 4150 50  0001 C CNN
+F 3 "" H 9075 4150 50  0001 C CNN
+	1    9075 4150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8525 4500 8525 4400
+Wire Wire Line
+	8525 4400 8450 4400
+Connection ~ 8525 4500
+Wire Wire Line
+	8525 4500 8550 4500
+Wire Wire Line
+	8450 4200 8925 4200
+Wire Wire Line
+	8925 4200 8925 4300
+Wire Wire Line
+	8925 4300 9075 4300
+Wire Wire Line
+	8450 4100 8925 4100
+Wire Wire Line
+	8925 4100 8925 4000
+Wire Wire Line
+	8925 4000 9075 4000
+Wire Wire Line
+	9075 4000 9350 4000
+Connection ~ 9075 4000
+Wire Wire Line
+	9075 4300 9350 4300
+Connection ~ 9075 4300
+$Comp
+L Device:C C104
+U 1 1 601207F5
+P 9500 4300
+F 0 "C104" V 9700 4300 50  0000 C CNN
+F 1 "33p" V 9800 4300 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 9538 4150 50  0001 C CNN
+F 3 "~" H 9500 4300 50  0001 C CNN
+F 4 "Vishay" H 9500 4300 50  0001 C CNN "Manufacturer_Name"
+F 5 "1C10C0G330J100B " H 9500 4300 50  0001 C CNN "Manufacturer_Part_Number"
+	1    9500 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C103
+U 1 1 6012167F
+P 9500 4000
+F 0 "C103" V 9200 4000 50  0000 C CNN
+F 1 "33p" V 9300 4000 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 9538 3850 50  0001 C CNN
+F 3 "~" H 9500 4000 50  0001 C CNN
+F 4 "Vishay" H 9500 4000 50  0001 C CNN "Manufacturer_Name"
+F 5 "1C10C0G330J100B " H 9500 4000 50  0001 C CNN "Manufacturer_Part_Number"
+	1    9500 4000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 60128ABF
+P 9750 4000
+F 0 "#PWR0101" H 9750 3750 50  0001 C CNN
+F 1 "GND" V 9775 3825 50  0000 R CNN
+F 2 "" H 9750 4000 50  0001 C CNN
+F 3 "" H 9750 4000 50  0001 C CNN
+	1    9750 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 60129F10
+P 9750 4300
+F 0 "#PWR0102" H 9750 4050 50  0001 C CNN
+F 1 "GND" V 9775 4125 50  0000 R CNN
+F 2 "" H 9750 4300 50  0001 C CNN
+F 3 "" H 9750 4300 50  0001 C CNN
+	1    9750 4300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9750 4000 9650 4000
+Wire Wire Line
+	9650 4300 9750 4300
 $EndSCHEMATC

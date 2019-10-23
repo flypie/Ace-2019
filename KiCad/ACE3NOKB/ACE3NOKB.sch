@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:ACE3NOKB-cache
+LIBS:temp-cache
 EELAYER 30 0
 EELAYER END
 $Descr A2 23386 16535
@@ -1809,10 +1810,10 @@ NoConn ~ 150  3425
 NoConn ~ -450 3325
 NoConn ~ -1250 3325
 NoConn ~ -1250 3525
-NoConn ~ -1250 2725
-NoConn ~ -1250 2925
+NoConn ~ -3350 4350
+NoConn ~ -3350 4550
 NoConn ~ -450 3525
-NoConn ~ -650 2825
+NoConn ~ -2750 4450
 Wire Wire Line
 	4000 5525 4000 6375
 Connection ~ 4000 5525
@@ -2958,8 +2959,8 @@ $Comp
 L Zilog_Z80:Z80CPU-LCC Z0
 U 1 1 09F6B21C
 P 2925 6875
-F 0 "Z0" H 3425 4225 50  0000 C CNN
-F 1 "Z80CPU_LCC" H 3425 4125 50  0000 C CNN
+F 0 "Z0" H 3450 7100 50  0000 C CNN
+F 1 "Z80CPU_LCC" H 3450 7000 50  0000 C CNN
 F 2 "Package_LCC:PLCC-44_THT-Socket" H 2825 8375 50  0001 C CNN
 F 3 "" H 2925 7025 50  0001 C CNN
 F 4 "Zilog" H 400 525 50  0001 C CNN "Manufacturer_Name"
@@ -3304,7 +3305,7 @@ P 4850 6800
 F 0 "Z102" V 4755 7000 50  0000 L CNN
 F 1 "SN74AHCT04N" V 4855 7000 50  0000 L CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 4850 6800 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 4850 6800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/snSN74AHCT04" H 4850 6800 50  0001 C CNN
 F 4 "SN74AHCT04N" H 4850 6800 50  0001 C CNN "Manufacturer_Part_Number"
 F 5 "Texas Instruments" H 4850 6800 50  0001 C CNN "Manufacturer_Name"
 	5    4850 6800
@@ -3582,14 +3583,14 @@ $EndComp
 $Comp
 L 74xx:74LS32 Z108
 U 2 1 675EB8AA
-P -950 2825
-F 0 "Z108" H -925 3180 50  0000 C CNN
-F 1 "SN74AHCT32N" H -925 3080 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H -950 2825 50  0001 C CNN
-F 3 "" H -950 2825 50  0001 C CNN
-F 4 "SN74AHCT32N" H -950 2825 50  0001 C CNN "Manufacturer_Part_Number"
-F 5 "Texas Instruments" H -950 2825 50  0001 C CNN "Manufacturer_Name"
-	2    -950 2825
+P -3050 4450
+F 0 "Z108" H -3025 4805 50  0000 C CNN
+F 1 "SN74AHCT32N" H -3025 4705 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H -3050 4450 50  0001 C CNN
+F 3 "" H -3050 4450 50  0001 C CNN
+F 4 "SN74AHCT32N" H -3050 4450 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "Texas Instruments" H -3050 4450 50  0001 C CNN "Manufacturer_Name"
+	2    -3050 4450
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -4001,7 +4002,7 @@ P 11550 4325
 F 0 "Z102" H 11550 4675 50  0000 C CNN
 F 1 "SN74AHCT04N" H 11550 4575 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 11550 4325 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 11550 4325 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/snSN74AHCT04" H 11550 4325 50  0001 C CNN
 F 4 "SN74AHCT04N" H 11550 4325 50  0001 C CNN "Manufacturer_Part_Number"
 F 5 "Texas Instruments" H 11550 4325 50  0001 C CNN "Manufacturer_Name"
 	2    11550 4325
@@ -4014,7 +4015,7 @@ P 13025 3100
 F 0 "Z102" H 13025 3450 50  0000 C CNN
 F 1 "SN74AHCT04N" H 13025 3350 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 13025 3100 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 13025 3100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/snSN74AHCT04" H 13025 3100 50  0001 C CNN
 F 4 "SN74AHCT04N" H 13025 3100 50  0001 C CNN "Manufacturer_Part_Number"
 F 5 "Texas Instruments" H 13025 3100 50  0001 C CNN "Manufacturer_Name"
 	6    13025 3100
@@ -4027,7 +4028,7 @@ P 13660 15275
 F 0 "Z102" H 13905 15350 50  0000 L CNN
 F 1 "SN74AHCT04N" H 13905 15250 50  0000 L CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 13660 15275 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 13660 15275 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/snSN74AHCT04" H 13660 15275 50  0001 C CNN
 F 4 "SN74AHCT04N" H 13660 15275 50  0001 C CNN "Manufacturer_Part_Number"
 F 5 "Texas Instruments" H 13660 15275 50  0001 C CNN "Manufacturer_Name"
 	7    13660 15275
@@ -4876,4 +4877,187 @@ Wire Wire Line
 	6250 5775 8950 5775
 Wire Wire Line
 	8950 5775 8950 7450
+$Comp
+L 74xx:74LS32 Z108
+U 4 1 62A08EB0
+P -1625 4450
+F 0 "Z108" H -1600 4825 50  0000 C CNN
+F 1 "SN74AHCT32N" H -1600 4725 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H -1625 4450 50  0001 C CNN
+F 3 "" H -1625 4450 50  0001 C CNN
+F 4 "SN74AHCT32N" H -1625 4450 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "Texas Instruments" H -1625 4450 50  0001 C CNN "Manufacturer_Name"
+	4    -1625 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 12075 10050 12075
+Wire Wire Line
+	9375 12075 9275 12075
+Wire Wire Line
+	10850 12075 10750 12075
+$Comp
+L 74xx:74LS30 Z110
+U 1 1 5F61E055
+P 10400 12375
+F 0 "Z110" H 10425 12950 50  0000 C CNN
+F 1 "SN74ALS30AN " H 10425 12850 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 10400 12375 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74als30a.pdf" H 10400 12375 50  0001 C CNN
+F 4 "SN74ALS30AN " H 10400 12375 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "Texas Instruments" H 10400 12375 50  0001 C CNN "Manufacturer_Name"
+	1    10400 12375
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS32 Z108
+U 3 1 6011E6A2
+P -2325 4450
+F 0 "Z108" H -2300 4825 50  0000 C CNN
+F 1 "SN74AHCT32N" H -2300 4725 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H -2325 4450 50  0001 C CNN
+F 3 "" H -2325 4450 50  0001 C CNN
+F 4 "SN74AHCT32N" H -2325 4450 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "Texas Instruments" H -2325 4450 50  0001 C CNN "Manufacturer_Name"
+	3    -2325 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10850 12175 10750 12175
+$Comp
+L 74xx:74LS04 Z102
+U 1 1 603D9E46
+P -1900 6000
+F 0 "Z102" H -1875 6350 50  0000 C CNN
+F 1 "SN74AHCT04N" H -1875 6250 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H -1900 6000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/snSN74AHCT04" H -1900 6000 50  0001 C CNN
+F 4 "SN74AHCT04N" H -1900 6000 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "Texas Instruments" H -1900 6000 50  0001 C CNN "Manufacturer_Name"
+	1    -1900 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11850 12075 11925 12075
+NoConn ~ -1125 11750
+Text GLabel 11925 12075 2    50   Input ~ 0
+~KIOCS
+Text GLabel 10750 12075 0    50   Input ~ 0
+A1
+Text GLabel 9275 12075 0    50   Input ~ 0
+~IOREQ
+Text GLabel 10750 12175 0    50   Input ~ 0
+A0
+$Comp
+L 74xx:74LS139 Z111
+U 1 1 5DC3F8B2
+P 11350 12175
+F 0 "Z111" H 11350 12600 50  0000 C CNN
+F 1 "SN74AHCT139N " H 11350 12500 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 11350 12175 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS139" H 11350 12175 50  0001 C CNN
+F 4 "Texas Instruments" H 11350 12175 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT139N" H 11350 12175 50  0001 C CNN "Manufacturer_Part_Number"
+	1    11350 12175
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS139 Z111
+U 2 1 5DC40D15
+P -300 6000
+F 0 "Z111" H -300 6425 50  0000 C CNN
+F 1 "SN74AHCT139N " H -300 6325 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H -300 6000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS139" H -300 6000 50  0001 C CNN
+F 4 "Texas Instruments" H -300 6000 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT139N" H -300 6000 50  0001 C CNN "Manufacturer_Part_Number"
+	2    -300 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS139 Z111
+U 3 1 5DC42116
+P 15025 15275
+F 0 "Z111" H 15300 15325 50  0000 L CNN
+F 1 "SN74AHCT139N " H 15300 15275 50  0000 L CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 15025 15275 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS139" H 15025 15275 50  0001 C CNN
+F 4 "Texas Instruments" H 15025 15275 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT139N" H 15025 15275 50  0001 C CNN "Manufacturer_Part_Number"
+	3    15025 15275
+	1    0    0    -1  
+$EndComp
+Text GLabel 10000 12775 0    50   Input ~ 0
+A7
+Text GLabel 10000 12675 0    50   Input ~ 0
+A6
+Text GLabel 10000 12575 0    50   Input ~ 0
+A5
+Text GLabel 10000 12475 0    50   Input ~ 0
+A4
+Text GLabel 10000 12375 0    50   Input ~ 0
+A3
+Text GLabel 10000 12275 0    50   Input ~ 0
+A2
+Wire Wire Line
+	10100 12575 10000 12575
+Wire Wire Line
+	10100 12475 10000 12475
+Wire Wire Line
+	10100 12675 10000 12675
+Wire Wire Line
+	10100 12375 10000 12375
+Wire Wire Line
+	10100 12275 10000 12275
+$Comp
+L 74xx:74LS04 Z102
+U 4 1 5F8DC5BC
+P 9675 12075
+F 0 "Z102" H 9700 12450 50  0000 C CNN
+F 1 "SN74AHCT04N" H 9700 12350 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 9675 12075 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/snSN74AHCT04" H 9675 12075 50  0001 C CNN
+F 4 "SN74AHCT04N" H 9675 12075 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "Texas Instruments" H 9675 12075 50  0001 C CNN "Manufacturer_Name"
+	4    9675 12075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 12775 10000 12775
+Wire Wire Line
+	10850 12375 10700 12375
+Wire Wire Line
+	10050 12075 10050 12175
+Wire Wire Line
+	10050 12175 10100 12175
+Connection ~ 10050 12075
+Wire Wire Line
+	10050 12075 9975 12075
+Wire Wire Line
+	11850 12275 11925 12275
+Text GLabel 11925 12275 2    50   Input ~ 0
+~TAPECS
+Wire Wire Line
+	15025 14775 14575 14775
+Connection ~ 14575 14775
+Wire Wire Line
+	15025 15775 14575 15775
+Connection ~ 14575 15775
+NoConn ~ -2025 4450
+NoConn ~ -2625 4550
+NoConn ~ -2625 4350
+NoConn ~ -1925 4350
+NoConn ~ -1925 4550
+NoConn ~ -1325 4450
+NoConn ~ -1600 6000
+NoConn ~ -2200 6000
+NoConn ~ -800 5900
+NoConn ~ -800 6000
+NoConn ~ -800 6200
+NoConn ~ 200  6200
+NoConn ~ 200  6100
+NoConn ~ 200  6000
+NoConn ~ 200  5900
+NoConn ~ 11850 12375
+NoConn ~ 11850 12175
 $EndSCHEMATC

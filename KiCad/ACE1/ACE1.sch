@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
 LIBS:ACE1-cache
-LIBS:kb-cache
 EELAYER 30 0
 EELAYER END
 $Descr A1 33110 23386

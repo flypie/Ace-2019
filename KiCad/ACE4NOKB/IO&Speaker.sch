@@ -1,11 +1,11 @@
 EESchema Schematic File Version 4
-LIBS:ACE3NOKB-cache
-LIBS:temp-cache
+LIBS:ACE4NOKB-cache
+LIBS:ear-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 3
+Sheet 4 4
 Title "JupiterAce Z80 plus KIO and new memory format."
 Date "2019-09-11"
 Rev "Alpha"
@@ -35,8 +35,6 @@ Text GLabel 6225 4275 0    50   Input ~ 0
 ~RD
 Text GLabel 6225 3275 0    50   Input ~ 0
 ~WR
-Text GLabel 4575 5175 2    50   Input ~ 0
-EAR
 Text GLabel 2575 5475 0    50   Input ~ 0
 A15
 Text GLabel 2675 5375 0    50   Input ~ 0
@@ -274,8 +272,6 @@ Wire Wire Line
 	3075 4875 3175 4875
 Wire Wire Line
 	3175 4775 3075 4775
-Wire Wire Line
-	4475 5175 4575 5175
 $Comp
 L Connector_Generic:Conn_02x08_Odd_Even KEYBOARD1
 U 1 1 5E446247
@@ -519,10 +515,10 @@ F 3 "" H 8675 4475 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #~PWR0114
+L power:VCC #~PWR0105
 U 1 1 661C6D0F
 P 9175 2575
-F 0 "#~PWR0114" H 9175 2425 50  0001 C CNN
+F 0 "#~PWR0105" H 9175 2425 50  0001 C CNN
 F 1 "VCC" H 9200 2760 50  0000 C CNN
 F 2 "" H 9175 2575 50  0001 C CNN
 F 3 "" H 9175 2575 50  0001 C CNN
@@ -543,10 +539,10 @@ $EndComp
 Wire Wire Line
 	5125 4175 5075 4175
 $Comp
-L power:GND #~PWR0119
+L power:GND #~PWR0108
 U 1 1 667C1C52
 P 5125 4175
-F 0 "#~PWR0119" H 5125 3925 50  0001 C CNN
+F 0 "#~PWR0108" H 5125 3925 50  0001 C CNN
 F 1 "GND" V 5130 4070 50  0000 R CNN
 F 2 "" H 5125 4175 50  0001 C CNN
 F 3 "" H 5125 4175 50  0001 C CNN
@@ -578,10 +574,10 @@ $EndComp
 Wire Wire Line
 	3675 4175 3575 4175
 $Comp
-L power:VCC #~PWR0156
+L power:VCC #~PWR0109
 U 1 1 6B547B93
 P 3575 4175
-F 0 "#~PWR0156" H 3575 4025 50  0001 C CNN
+F 0 "#~PWR0109" H 3575 4025 50  0001 C CNN
 F 1 "VCC" V 3615 4340 50  0000 L CNN
 F 2 "" H 3575 4175 50  0001 C CNN
 F 3 "" H 3575 4175 50  0001 C CNN
@@ -603,8 +599,6 @@ Wire Wire Line
 Connection ~ 4775 4975
 Wire Wire Line
 	4675 4975 4775 4975
-Wire Wire Line
-	4475 4675 4475 5175
 Wire Wire Line
 	4675 4675 4675 4975
 Wire Wire Line
@@ -647,4 +641,111 @@ Wire Wire Line
 	8325 2275 8375 2275
 Text GLabel 5625 3575 0    50   Input ~ 0
 ~TAPECS
+Wire Wire Line
+	4475 5750 4475 5600
+Connection ~ 4475 5600
+Wire Wire Line
+	4575 5600 4475 5600
+Wire Wire Line
+	4475 6100 4475 6050
+Connection ~ 4475 6100
+Wire Wire Line
+	4575 6100 4475 6100
+Wire Wire Line
+	4475 6455 4475 6100
+$Comp
+L power:GND #0127
+U 1 1 6AC5A37D
+P 4975 5600
+F 0 "#0127" H 4975 5350 50  0001 C CNN
+F 1 "GND" H 5025 5400 50  0000 C CNN
+F 2 "" H 4975 5600 50  0001 C CNN
+F 3 "" H 4975 5600 50  0001 C CNN
+	1    4975 5600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #0128
+U 1 1 6AC56FD1
+P 4975 6100
+F 0 "#0128" H 4975 5850 50  0001 C CNN
+F 1 "GND" H 5025 5900 50  0000 C CNN
+F 2 "" H 4975 6100 50  0001 C CNN
+F 3 "" H 4975 6100 50  0001 C CNN
+	1    4975 6100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #0129
+U 1 1 6959AE62
+P 4575 6355
+F 0 "#0129" H 4575 6105 50  0001 C CNN
+F 1 "GND" H 4585 6155 50  0000 C CNN
+F 2 "" H 4575 6355 50  0001 C CNN
+F 3 "" H 4575 6355 50  0001 C CNN
+	1    4575 6355
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4875 5600 4975 5600
+Wire Wire Line
+	4875 6100 4975 6100
+Wire Wire Line
+	4575 6355 4575 6455
+NoConn ~ -13575 11150
+$Comp
+L Device:R R5
+U 1 1 64D54441
+P 4725 6100
+F 0 "R5" H 4650 6025 50  0000 R CNN
+F 1 "1K" H 4650 6125 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 4725 6100 50  0001 C CNN
+F 3 "" H 4725 6100 50  0001 C CNN
+F 4 "Vishay" H 4725 6100 50  0001 C CNN "Manufacturer_Name"
+F 5 "MBA02040C1202FRP00" H 4725 6100 50  0001 C CNN "Manufacturer_Part_Number"
+	1    4725 6100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 8C955809
+P 4725 5600
+F 0 "R6" H 4650 5525 50  0000 R CNN
+F 1 "12k" H 4650 5625 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 4725 5600 50  0001 C CNN
+F 3 "" H 4725 5600 50  0001 C CNN
+F 4 "Vishay" H 4725 5600 50  0001 C CNN "Manufacturer_Name"
+F 5 "MBA02040C1202FRP00" H 4725 5600 50  0001 C CNN "Manufacturer_Part_Number"
+	1    4725 5600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 2D83036D
+P 4475 5900
+F 0 "C3" V 4700 5875 50  0000 C CNN
+F 1 "47nF" V 4600 5875 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 4475 5900 50  0001 C CNN
+F 3 "" H 4475 5900 50  0001 C CNN
+F 4 "vishay" H 4475 5900 50  0001 C CNN "Manufacturer_Name"
+F 5 "K473K15X7RF5TL2" H 4475 5900 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "4" H 4475 5900 50  0001 C CNN "Height"
+	1    4475 5900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 AUDIO-IN1
+U 1 1 10A0DA0D
+P 4475 6655
+F 0 "AUDIO-IN1" H 4595 6680 51  0000 L CNN
+F 1 "332-02" H 4595 6580 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4475 6655 50  0001 C CNN
+F 3 "" H 4475 6655 50  0001 C CNN
+F 4 "SAMTEC" H 4475 6655 50  0001 C CNN "Manufacturer_Name"
+F 5 "TSW–101–10–T–D–RA" H 4475 6655 50  0001 C CNN "Manufacturer_Part_Number"
+	1    4475 6655
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	4475 4675 4475 5600
 $EndSCHEMATC
