@@ -1,11 +1,10 @@
 EESchema Schematic File Version 4
 LIBS:ACE4NOKB-cache
-LIBS:ear-cache
 EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 3 4
+Sheet 2 4
 Title "JupiterAceZ180"
 Date "2019-08-26"
 Rev "Alpha"
@@ -890,7 +889,7 @@ F 3 "" H 13300 7325 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L 7132la100pdg:IDT71321 Z7-8
+L ACE4NOKB-rescue:IDT71321-7132la100pdg Z7-8
 U 1 1 5F80C938
 P 11775 4625
 AR Path="/5F80C938" Ref="Z7-8"  Part="1" 
@@ -908,7 +907,7 @@ F 7 "71321SA55JG8" H 12925 4175 50  0001 L CNN "Manufacturer_Part_Number"
 	1    0    0    -1  
 $EndComp
 $Comp
-L 7132la100pdg:IDT71321 Z5-6
+L ACE4NOKB-rescue:IDT71321-7132la100pdg Z5-6
 U 1 1 5F80C942
 P 9175 5225
 AR Path="/5F80C942" Ref="Z5-6"  Part="1" 

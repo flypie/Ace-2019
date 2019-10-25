@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 3 3
+Sheet 3 4
 Title "JupiterAceZ180"
 Date "2019-08-26"
 Rev "Alpha"
@@ -129,8 +129,6 @@ Text GLabel 13455 4725 2    50   Input ~ 0
 DA1
 Text GLabel 13455 4625 2    50   Input ~ 0
 DA0
-Text GLabel 11675 5625 0    50   Input ~ 0
-A10
 Text GLabel 11675 5525 0    50   Input ~ 0
 A9
 Text GLabel 11675 5425 0    50   Input ~ 0
@@ -167,8 +165,6 @@ Text GLabel 10550 5325 2    50   Input ~ 0
 DA1
 Text GLabel 10550 5225 2    50   Input ~ 0
 DA0
-Text GLabel 9075 6225 0    50   Input ~ 0
-A10
 Text GLabel 9075 6125 0    50   Input ~ 0
 A9
 Text GLabel 9075 6025 0    50   Input ~ 0
@@ -361,10 +357,6 @@ Wire Wire Line
 Wire Wire Line
 	13075 4925 13455 4925
 Wire Wire Line
-	8550 7325 9175 7325
-Wire Wire Line
-	8550 7325 8550 8425
-Wire Wire Line
 	9825 8425 9825 8275
 Wire Wire Line
 	10475 6625 11775 6625
@@ -529,8 +521,6 @@ Wire Wire Line
 Wire Wire Line
 	9175 6025 9075 6025
 Wire Wire Line
-	9175 6225 9075 6225
-Wire Wire Line
 	9175 5625 9075 5625
 Wire Wire Line
 	9175 5725 9075 5725
@@ -550,8 +540,6 @@ Wire Wire Line
 	11775 5325 11675 5325
 Wire Wire Line
 	11775 5425 11675 5425
-Wire Wire Line
-	11775 5625 11675 5625
 Wire Wire Line
 	11775 5025 11675 5025
 Wire Wire Line
@@ -625,12 +613,7 @@ F 3 "" H 11670 7225 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	11305 6725 11305 7870
-Wire Wire Line
-	11775 6725 11305 6725
-Wire Wire Line
 	11305 7870 11450 7870
-Connection ~ 11305 7870
 Wire Wire Line
 	11305 7870 11305 8425
 $Comp
@@ -777,7 +760,7 @@ AR Path="/5FA4DA0E/5F80C856" Ref="Z27"  Part="2"
 AR Path="/5E2F9A69/5F80C856" Ref="Z27"  Part="2" 
 AR Path="/5DAF6158/5F80C856" Ref="Z27"  Part="2" 
 F 0 "Z27" H 11860 3675 50  0000 C CNN
-F 1 "74AHCT74" H 11875 3580 50  0000 C CNN
+F 1 "SN74AHCT74N" H 11875 3580 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 11650 3325 50  0001 C CNN
 F 3 "74xx~74hc_AHCT74.pdf" H 11650 3325 50  0001 C CNN
 	2    11650 3325
@@ -850,10 +833,10 @@ F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT166" H 14725 4775 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R102
+L Device:R R108
 U 1 1 5F80C8DA
 P 10700 7925
-F 0 "R102" V 10475 7925 50  0000 C CNN
+F 0 "R108" V 10475 7925 50  0000 C CNN
 F 1 "270" V 10575 7925 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 10630 7925 50  0001 C CNN
 F 3 "~" H 10700 7925 50  0001 C CNN
@@ -889,44 +872,6 @@ F 3 "~" H 13300 7325 50  0001 C CNN
 	1    13300 7325
 	0    1    1    0   
 $EndComp
-$Comp
-L 7132la100pdg:IDT71321 Z7-8
-U 1 1 5F80C938
-P 11775 4625
-AR Path="/5F80C938" Ref="Z7-8"  Part="1" 
-AR Path="/5FA4DA0E/5F80C938" Ref="Z7-8"  Part="1" 
-AR Path="/5E2F9A69/5F80C938" Ref="Z7-8"  Part="1" 
-AR Path="/5DAF6158/5F80C938" Ref="Z7-8"  Part="1" 
-F 0 "Z7-8" H 12100 4800 50  0000 C CNN
-F 1 "71321SA55JG8" H 12450 5050 50  0000 C CNN
-F 2 "Package_LCC:PLCC-52_THT-Socket" H 12575 5275 50  0001 L CNN
-F 3 "https:~/www.idt.com/document/dst/71321421-datasheet" H 12575 5175 50  0001 L CNN
-F 4 "IC SRAM 16K PARALLEL 52PLCC" H 12575 5375 50  0001 L CNN "Description"
-F 5 "3.63" H 12925 4575 50  0001 L CNN "Height"
-F 6 "IDT, Integrated Device Technology Inc" H 12575 5475 50  0001 L CNN "Manufacturer_Name"
-F 7 "71321SA55JG8" H 12925 4175 50  0001 L CNN "Manufacturer_Part_Number"
-	1    11775 4625
-	1    0    0    -1  
-$EndComp
-$Comp
-L 7132la100pdg:IDT71321 Z5-6
-U 1 1 5F80C942
-P 9175 5225
-AR Path="/5F80C942" Ref="Z5-6"  Part="1" 
-AR Path="/5FA4DA0E/5F80C942" Ref="Z5-6"  Part="1" 
-AR Path="/5E2F9A69/5F80C942" Ref="Z5-6"  Part="1" 
-AR Path="/5DAF6158/5F80C942" Ref="Z5-6"  Part="1" 
-F 0 "Z5-6" H 10155 5510 50  0000 C CNN
-F 1 "71321SA55JG8" H 9465 5520 50  0000 C CNN
-F 2 "Package_LCC:PLCC-52_THT-Socket" H 9975 5875 50  0001 L CNN
-F 3 "https:~/www.idt.com/document/dst/71321421-datasheet" H 9975 5775 50  0001 L CNN
-F 4 "IC SRAM 16K PARALLEL 52PLCC" H 9975 5975 50  0001 L CNN "Description"
-F 5 "3.63" H 10325 5175 50  0001 L CNN "Height"
-F 6 "IDT, Integrated Device Technology Inc" H 9975 6075 50  0001 L CNN "Manufacturer_Name"
-F 7 "71321SA55JG8" H 10325 4775 50  0001 L CNN "Manufacturer_Part_Number"
-	1    9175 5225
-	1    0    0    -1  
-$EndComp
 Text GLabel 11675 7025 0    50   Input ~ 0
 ~CHARRAMSEL
 Text GLabel 9075 7625 0    50   Input ~ 0
@@ -950,7 +895,7 @@ L 74xx:74HCT04 Z102
 U 4 1 5F80CB5F
 P 5825 5125
 F 0 "Z102" H 5825 5475 50  0000 C CNN
-F 1 "74AHCT04" H 5825 5375 50  0000 C CNN
+F 1 "SN74AHCT04N" H 5825 5375 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 5825 5125 50  0001 C CNN
 F 3 "https:~/assets.nexperia.com/documents/data-sheet/74HC_AHCT04.pdf" H 5825 5125 50  0001 C CNN
 	4    5825 5125
@@ -1376,8 +1321,6 @@ Wire Wire Line
 	13550 3675 13550 4125
 Wire Wire Line
 	6025 4125 13550 4125
-Wire Wire Line
-	8550 8425 9825 8425
 $Comp
 L power:VCC #0122
 U 1 1 5F80CE39
@@ -1444,7 +1387,7 @@ U 1 1 5F80CE54
 P 950 10455
 F 0 "C2" H 1050 10510 50  0000 L CNN
 F 1 "100p" H 1050 10410 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 950 10455 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 950 10455 50  0001 C CNN
 F 3 "~" H 950 10455 50  0001 C CNN
 	1    950  10455
 	1    0    0    -1  
@@ -1482,7 +1425,7 @@ U 1 1 5F80CE3F
 P 1505 9750
 F 0 "C1" V 1255 9795 50  0000 C CNN
 F 1 "30p" V 1355 9795 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 1505 9750 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 1505 9750 50  0001 C CNN
 F 3 "~" H 1505 9750 50  0001 C CNN
 	1    1505 9750
 	0    1    1    0   
@@ -1526,7 +1469,6 @@ Wire Wire Line
 	1750 10450 1750 10550
 Wire Wire Line
 	1750 9350 1750 9250
-Connection ~ 9825 8425
 Wire Wire Line
 	9825 8425 11305 8425
 Connection ~ 11305 8425
@@ -1587,10 +1529,6 @@ $EndComp
 Wire Wire Line
 	10850 7625 10850 7925
 Connection ~ 10850 7925
-Wire Wire Line
-	10375 7625 10550 7625
-Wire Wire Line
-	10375 7525 10550 7525
 $Comp
 L Device:R R104
 U 1 1 5DF62BE4
@@ -1619,10 +1557,6 @@ $EndComp
 Wire Wire Line
 	13450 7025 13450 7325
 Wire Wire Line
-	12975 7025 13150 7025
-Wire Wire Line
-	12975 6925 13150 6925
-Wire Wire Line
 	15025 5475 15875 5475
 $Comp
 L Transistor_BJT:2N3904 Q1
@@ -1633,6 +1567,52 @@ F 1 "2N3904" H 1440 10395 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92L_Inline" H 1850 10175 50  0001 L CIN
 F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 1650 10250 50  0001 L CNN
 	1    1650 10250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13150 7025 13075 7025
+Wire Wire Line
+	13075 6925 13150 6925
+Wire Wire Line
+	10550 7625 10475 7625
+Wire Wire Line
+	10475 7525 10550 7525
+$Comp
+L 7132la100pdg:IDT7130-40-52PIN Z7-8
+U 1 1 5F80C938
+P 11775 4625
+AR Path="/5F80C938" Ref="Z7-8"  Part="1" 
+AR Path="/5FA4DA0E/5F80C938" Ref="Z7-8"  Part="1" 
+AR Path="/5E2F9A69/5F80C938" Ref="Z7-8"  Part="1" 
+AR Path="/5DAF6158/5F80C938" Ref="Z7-8"  Part="1" 
+F 0 "Z7-8" H 12100 4800 50  0000 C CNN
+F 1 "IDT7130" H 12450 5050 50  0000 C CNN
+F 2 "Package_LCC:PLCC-52_THT-Socket" H 12575 5275 50  0001 L CNN
+F 3 "https:~/www.idt.com/document/dst/71321421-datasheet" H 12575 5175 50  0001 L CNN
+F 4 "IC SRAM 16K PARALLEL 52PLCC" H 12575 5375 50  0001 L CNN "Description"
+F 5 "3.63" H 12925 4575 50  0001 L CNN "Height"
+F 6 "IDT, Integrated Device Technology Inc" H 12575 5475 50  0001 L CNN "Manufacturer_Name"
+F 7 "71321SA55JG8" H 12925 4175 50  0001 L CNN "Manufacturer_Part_Number"
+	1    11775 4625
+	1    0    0    -1  
+$EndComp
+$Comp
+L 7132la100pdg:IDT7130-40-52PIN Z5-6
+U 1 1 5F80C942
+P 9175 5225
+AR Path="/5F80C942" Ref="Z5-6"  Part="1" 
+AR Path="/5FA4DA0E/5F80C942" Ref="Z5-6"  Part="1" 
+AR Path="/5E2F9A69/5F80C942" Ref="Z5-6"  Part="1" 
+AR Path="/5DAF6158/5F80C942" Ref="Z5-6"  Part="1" 
+F 0 "Z5-6" H 10155 5510 50  0000 C CNN
+F 1 "IDT7130" H 9465 5520 50  0000 C CNN
+F 2 "Package_LCC:PLCC-52_THT-Socket" H 9975 5875 50  0001 L CNN
+F 3 "https:~/www.idt.com/document/dst/71321421-datasheet" H 9975 5775 50  0001 L CNN
+F 4 "IC SRAM 16K PARALLEL 52PLCC" H 9975 5975 50  0001 L CNN "Description"
+F 5 "3.63" H 10325 5175 50  0001 L CNN "Height"
+F 6 "IDT, Integrated Device Technology Inc" H 9975 6075 50  0001 L CNN "Manufacturer_Name"
+F 7 "71321SA55JG8" H 10325 4775 50  0001 L CNN "Manufacturer_Part_Number"
+	1    9175 5225
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
