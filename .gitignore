@@ -22,4 +22,4 @@ sym-lib-table
 *.ps
 *.csv
 *.zip
-
+!KiCad/Archive/*.zip
