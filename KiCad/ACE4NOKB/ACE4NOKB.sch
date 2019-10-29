@@ -207,45 +207,45 @@ $EndComp
 $Comp
 L Mechanical:MountingHole HTL1
 U 1 1 5D2F2BFA
-P -1320 4525
-F 0 "HTL1" H -1180 4620 50  0000 L CNN
-F 1 "MountingHole" H -1180 4520 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.5mm" H -1320 4525 50  0001 C CNN
-F 3 "" H -1320 4525 50  0001 C CNN
-	1    -1320 4525
+P -3645 5400
+F 0 "HTL1" H -3505 5495 50  0000 L CNN
+F 1 "MountingHole" H -3505 5395 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.5mm" H -3645 5400 50  0001 C CNN
+F 3 "" H -3645 5400 50  0001 C CNN
+	1    -3645 5400
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole HTR1
 U 1 1 5D3BD959
-P -545 4525
-F 0 "HTR1" H -430 4620 50  0000 L CNN
-F 1 "MountingHole" H -430 4520 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.5mm" H -545 4525 50  0001 C CNN
-F 3 "" H -545 4525 50  0001 C CNN
-	1    -545 4525
+P -2870 5400
+F 0 "HTR1" H -2755 5495 50  0000 L CNN
+F 1 "MountingHole" H -2755 5395 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.5mm" H -2870 5400 50  0001 C CNN
+F 3 "" H -2870 5400 50  0001 C CNN
+	1    -2870 5400
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole HBL1
 U 1 1 5D48649C
-P -1315 4750
-F 0 "HBL1" H -1205 4845 50  0000 L CNN
-F 1 "MountingHole" H -1205 4745 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.5mm" H -1315 4750 50  0001 C CNN
-F 3 "" H -1315 4750 50  0001 C CNN
-	1    -1315 4750
+P -3640 5625
+F 0 "HBL1" H -3530 5720 50  0000 L CNN
+F 1 "MountingHole" H -3530 5620 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.5mm" H -3640 5625 50  0001 C CNN
+F 3 "" H -3640 5625 50  0001 C CNN
+	1    -3640 5625
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole HBR1
 U 1 1 5D4864A2
-P -540 4750
-F 0 "HBR1" H -405 4845 50  0000 L CNN
-F 1 "MountingHole" H -405 4745 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.5mm" H -540 4750 50  0001 C CNN
-F 3 "" H -540 4750 50  0001 C CNN
-	1    -540 4750
+P -2865 5625
+F 0 "HBR1" H -2730 5720 50  0000 L CNN
+F 1 "MountingHole" H -2730 5620 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.5mm" H -2865 5625 50  0001 C CNN
+F 3 "" H -2865 5625 50  0001 C CNN
+	1    -2865 5625
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -325,7 +325,7 @@ L power:GND #~PWR0163
 U 1 1 672E2423
 P 11100 2600
 F 0 "#~PWR0163" H 11100 2350 50  0001 C CNN
-F 1 "GND" H 11125 2385 50  0000 C CNN
+F 1 "GND" H 11150 2400 50  0000 C CNN
 F 2 "" H 11100 2600 50  0001 C CNN
 F 3 "" H 11100 2600 50  0001 C CNN
 	1    11100 2600
@@ -340,17 +340,6 @@ F 1 "VCC" H 11140 1060 50  0000 C CNN
 F 2 "" H 11100 850 50  0001 C CNN
 F 3 "" H 11100 850 50  0001 C CNN
 	1    11100 850 
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VCC #~PWR0151
-U 1 1 65F45603
-P 11100 3265
-F 0 "#~PWR0151" H 11100 3115 50  0001 C CNN
-F 1 "VCC" V 11075 3405 50  0000 L CNN
-F 2 "" H 11100 3265 50  0001 C CNN
-F 3 "" H 11100 3265 50  0001 C CNN
-	1    11100 3265
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1403,23 +1392,23 @@ Connection ~ 10675 11075
 $Comp
 L Graphic:ZilogFront Logo1
 U 1 1 5FAEF1E0
-P -625 3175
-F 0 "Logo1" H -200 3400 50  0000 C CNN
-F 1 "ZilogFront" H -200 3300 50  0000 C CNN
-F 2 "Symbol:ZilogInsideFront" H -175 3425 50  0001 C CNN
-F 3 "" H -625 3075 50  0001 C CNN
-	1    -625 3175
+P -2950 4050
+F 0 "Logo1" H -2525 4275 50  0000 C CNN
+F 1 "ZilogFront" H -2525 4175 50  0000 C CNN
+F 2 "Symbol:ZilogInsideFront" H -2500 4300 50  0001 C CNN
+F 3 "" H -2950 3950 50  0001 C CNN
+	1    -2950 4050
 	1    0    0    -1  
 $EndComp
 $Comp
 L Graphic:ZilogBack Logo2
 U 1 1 5FAF188D
-P -600 3650
-F 0 "Logo2" H -250 3850 50  0000 C CNN
-F 1 "ZilogBack" H -250 3750 50  0000 C CNN
-F 2 "Symbol:ZilogInsideBack" H -150 3900 50  0001 C CNN
-F 3 "" H -400 3800 50  0001 C CNN
-	1    -600 3650
+P -2925 4525
+F 0 "Logo2" H -2575 4725 50  0000 C CNN
+F 1 "ZilogBack" H -2575 4625 50  0000 C CNN
+F 2 "Symbol:ZilogInsideBack" H -2475 4775 50  0001 C CNN
+F 3 "" H -2725 4675 50  0001 C CNN
+	1    -2925 4525
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1461,12 +1450,12 @@ NoConn ~ 15525 7750
 $Comp
 L Graphic:Logo_Open_Hardware_Large #LOGO1
 U 1 1 64A144E2
-P -300 750
-F 0 "#LOGO1" H -300 1250 50  0001 C CNN
-F 1 "Logo_Open_Hardware_Large" H -300 350 50  0001 C CNN
-F 2 "Symbol:OSHW-Logo2_14.6x12mm_SilkScreen" H -225 1300 50  0000 C CNN
-F 3 "" H -300 750 50  0001 C CNN
-	1    -300 750 
+P -2625 1625
+F 0 "#LOGO1" H -2625 2125 50  0001 C CNN
+F 1 "Logo_Open_Hardware_Large" H -2625 1225 50  0001 C CNN
+F 2 "Symbol:OSHW-Logo2_14.6x12mm_SilkScreen" H -2550 2175 50  0000 C CNN
+F 3 "" H -2625 1625 50  0001 C CNN
+	1    -2625 1625
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1604,8 +1593,8 @@ Text GLabel 4450 7100 2    50   Input ~ 0
 A7
 Text GLabel 2850 8400 0    50   Input ~ 0
 PHI
-NoConn ~ -450 1600
-NoConn ~ -1050 1500
+NoConn ~ -2775 2475
+NoConn ~ -3375 2375
 $Sheet
 S 13375 8150 1500 1000
 U 60462D93
@@ -1666,10 +1655,6 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 8100 7125 50  0001 C CNN
 $EndComp
 Text Label 7700 7125 2    50   ~ 0
 ~IOREQ
-Text Label 10500 7425 3    50   ~ 0
-~IOREQ&11111111B
-Wire Wire Line
-	10200 7225 10500 7225
 Wire Wire Line
 	8400 7125 8600 7125
 Text Label 8500 7625 2    50   ~ 0
@@ -1724,15 +1709,6 @@ Wire Wire Line
 Connection ~ 8400 7125
 Text GLabel 10500 7125 1    50   Input ~ 0
 ~KIOCS
-Text Label 10500 7225 0    50   ~ 0
-~PAGING
-Wire Wire Line
-	10200 7425 10500 7425
-NoConn ~ 10500 7425
-Text GLabel 10500 7325 2    50   Input ~ 0
-~TAPECS
-Wire Wire Line
-	10200 7325 10500 7325
 Wire Wire Line
 	10200 7125 10500 7125
 Text Label 14650 3490 2    50   ~ 0
@@ -2136,18 +2112,17 @@ Wire Wire Line
 	4550 4250 4550 1400
 Wire Wire Line
 	4550 1400 4400 1400
-NoConn ~ -300 1500
-NoConn ~ 300  1600
+NoConn ~ -2625 2375
 $Comp
-L 74xx:74LS373 Z105
+L 74xx:74LS573 Z105
 U 1 1 5DD74626
 P 11100 1750
-F 0 "Z105" H 11100 2750 50  0000 C CNN
-F 1 "SN74AHCT374N " H 11100 2650 50  0000 C CNN
+F 0 "Z105" H 10875 2400 50  0000 C CNN
+F 1 "SN74AHCT574N " H 11425 2400 50  0000 C CNN
 F 2 "Package_DIP:DIP-20_W7.62mm" H 11100 1750 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS373" H 11100 1750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74ahct573.pdf" H 11100 1750 50  0001 C CNN
 F 4 "Texas Instruments" H 11100 1750 50  0001 C CNN "Manufacturer_Name"
-F 5 "SN74AHCT374N " H 11100 1750 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "SN74AHCT573N " H 11100 1750 50  0001 C CNN "Manufacturer_Part_Number"
 	1    11100 1750
 	1    0    0    -1  
 $EndComp
@@ -2163,10 +2138,10 @@ $Comp
 L 74xx:74LS541 Z106
 U 1 1 6567AE36
 P 11100 4175
-F 0 "Z106" H 11100 5200 50  0000 C CNN
-F 1 "SN74AHCT541N" H 11100 5100 50  0000 C CNN
+F 0 "Z106" H 10875 4825 50  0000 C CNN
+F 1 "SN74AHCT541N" H 11425 4825 50  0000 C CNN
 F 2 "Package_DIP:DIP-20_W7.62mm" H 11100 4175 50  0001 C CNN
-F 3 "https://www.mouser.co.uk/datasheet/2/916/74VHC_VHCT541-1320076.pdf" H 11100 4175 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74ahct541.pdf" H 11100 4175 50  0001 C CNN
 F 4 "Texas Instruments" H 11100 4175 50  0001 C CNN "Manufacturer_Name"
 F 5 "SN74AHCT541N" H 11100 4175 50  0001 C CNN "Manufacturer_Part_Number"
 	1    11100 4175
@@ -2378,42 +2353,67 @@ F 3 "" H 9025 1750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9125 1750 9025 1750
-NoConn ~ -300 1700
-NoConn ~ -1050 1700
+NoConn ~ -2625 2575
+NoConn ~ -3375 2575
 $Comp
 L 74xx:74LS00 Z19
 U 4 1 6128AC88
-P -750 1600
-F 0 "Z19" H -750 1950 50  0000 C CNN
-F 1 "74AHCT00" H -750 1850 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H -750 1600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H -750 1600 50  0001 C CNN
-	4    -750 1600
+P -3075 2475
+F 0 "Z19" H -3075 2825 50  0000 C CNN
+F 1 "74AHCT00" H -3075 2725 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H -3075 2475 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H -3075 2475 50  0001 C CNN
+	4    -3075 2475
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74LS00 Z19
 U 3 1 61287264
-P 0 1600
-F 0 "Z19" H 0   1975 50  0000 C CNN
-F 1 "74AHCT00" H 0   1875 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 0   1600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 0   1600 50  0001 C CNN
-	3    0    1600
+P -2325 2475
+F 0 "Z19" H -2325 2850 50  0000 C CNN
+F 1 "74AHCT00" H -2325 2750 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H -2325 2475 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H -2325 2475 50  0001 C CNN
+	3    -2325 2475
 	1    0    0    -1  
 $EndComp
-NoConn ~ -300 2175
-NoConn ~ -300 2375
-NoConn ~ 300  2275
+NoConn ~ -2625 3050
+NoConn ~ -2625 3250
 $Comp
 L 74xx:74LS86 Z23
 U 2 1 6A75490B
-P 0 2275
-F 0 "Z23" H 0   2625 50  0000 C CNN
-F 1 "74AHCT86" H 0   2525 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 0   2275 50  0001 C CNN
-F 3 "74xx/74ls86.pdf" H 0   2275 50  0001 C CNN
-	2    0    2275
+P -2325 3150
+F 0 "Z23" H -2325 3500 50  0000 C CNN
+F 1 "74AHCT86" H -2325 3400 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H -2325 3150 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H -2325 3150 50  0001 C CNN
+	2    -2325 3150
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:VCC #~PWR0151
+U 1 1 65F45603
+P 11100 3265
+F 0 "#~PWR0151" H 11100 3115 50  0001 C CNN
+F 1 "VCC" H 11150 3480 50  0000 C CNN
+F 2 "" H 11100 3265 50  0001 C CNN
+F 3 "" H 11100 3265 50  0001 C CNN
+	1    11100 3265
+	1    0    0    -1  
+$EndComp
+Text Label 10500 7225 0    50   ~ 0
+~PAGING
+Wire Wire Line
+	10200 7225 10500 7225
+Wire Wire Line
+	10200 7325 10500 7325
+Text GLabel 10500 7325 2    50   Input ~ 0
+~TAPECS
+NoConn ~ 10500 7425
+Wire Wire Line
+	10200 7425 10500 7425
+Text Label 10500 7425 3    50   ~ 0
+~IOREQ&11111111B
+NoConn ~ 300  2275
+NoConn ~ 300  1600
 $EndSCHEMATC
