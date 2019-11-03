@@ -838,17 +838,6 @@ F 3 "74xx~74AHCT86.pdf" H 12450 3325 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74LS166 Z28
-U 1 1 5F80C89E
-P 14725 4775
-F 0 "Z28" V 15450 4770 50  0000 C CNN
-F 1 "74AHCT166" V 15350 4770 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm" H 14725 4775 50  0001 C CNN
-F 3 "http:/www.ti.com/lit/gpn/sn74AHCT166" H 14725 4775 50  0001 C CNN
-	1    14725 4775
-	0    -1   -1   0   
-$EndComp
-$Comp
 L Device:R R108
 U 1 1 5F80C8DA
 P 10700 7925
@@ -1628,5 +1617,16 @@ F 2 "Package_TO_SOT_THT:TO-92L_Inline" H 5600 8600 50  0001 L CIN
 F 3 "https://www.onsemi.com/pub/Collateral/PZT3904-D.pdf" H 5400 8675 50  0001 L CNN
 	1    5400 8675
 	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS166 Z28
+U 1 1 5F80C89E
+P 14725 4775
+F 0 "Z28" V 15450 4770 50  0000 C CNN
+F 1 "74LS166" V 15350 4770 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 14725 4775 50  0001 C CNN
+F 3 "http:/www.ti.com/lit/gpn/sn74ALS166" H 14725 4775 50  0001 C CNN
+	1    14725 4775
+	0    -1   -1   0   
 $EndComp
 $EndSCHEMATC
