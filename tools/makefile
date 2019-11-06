@@ -10,6 +10,8 @@ XCDIR = $(HOME)/Dropbox/Ace-2019/KiCad
 
 endif
 
+
+
 csrc = $(wildcard $(XCDIR)/ACE1/*.dsn) \
 		$(wildcard $(XCDIR)/ACE2NOKBV2/*.dsn) \
 		$(wildcard $(XCDIR)/ACE2NOKBV2MK2/*.dsn) \
@@ -20,6 +22,7 @@ csrc = $(wildcard $(XCDIR)/ACE1/*.dsn) \
 		$(wildcard $(XCDIR)/ACEZ180/*.dsn) \
 		$(wildcard $(XCDIR)/ACEeZ80/*.dsn) \
 		$(wildcard $(XCDIR)/Edgeboard/*.dsn) \
+		$(wildcard $(XCDIR)/eBigRam/*.dsn) \
 		$(wildcard $(XCDIR)/KEYBOARD/*.dsn)
 
 obj = $(csrc:.dsn=.ses)

@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 3 5
+Sheet 3 6
 Title "JupiterAceZ180"
 Date "2019-08-26"
 Rev "Alpha"
@@ -14,7 +14,6 @@ Comment2 "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 Comment3 "Attribution-NonCommercial-ShareAlike 4.0 International License."
 Comment4 "This work is licensed under a Creative Commons "
 $EndDescr
-NoConn ~ 8775 8600
 Text Label 8650 2925 2    50   ~ 0
 CNT0
 Wire Wire Line
@@ -71,7 +70,7 @@ P 6650 2525
 F 0 "Z19" H 6655 2895 50  0000 C CNN
 F 1 "SN74AHCT00N" H 6655 2795 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 6650 2525 50  0001 C CNN
-F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT00" H 6650 2525 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hct00" H 6650 2525 50  0001 C CNN
 	1    6650 2525
 	1    0    0    -1  
 $EndComp
@@ -82,7 +81,7 @@ P 6650 3125
 F 0 "Z25" H 6650 3475 50  0000 C CNN
 F 1 "SN74AHCT02N" H 6650 3375 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 6650 3125 50  0001 C CNN
-F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT02" H 6650 3125 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hct02" H 6650 3125 50  0001 C CNN
 	1    6650 3125
 	1    0    0    -1  
 $EndComp
@@ -93,7 +92,7 @@ P 7850 2825
 F 0 "Z20" H 7875 3180 50  0000 C CNN
 F 1 "SN74AHCT08N" H 7875 3080 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 7850 2825 50  0001 C CNN
-F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT08" H 7850 2825 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 7850 2825 50  0001 C CNN
 	2    7850 2825
 	1    0    0    -1  
 $EndComp
@@ -104,7 +103,7 @@ P 8650 3325
 F 0 "Z20" H 8670 3685 50  0000 C CNN
 F 1 "SN74AHCT08N" H 8670 3585 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 8650 3325 50  0001 C CNN
-F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT08" H 8650 3325 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 8650 3325 50  0001 C CNN
 	4    8650 3325
 	1    0    0    -1  
 $EndComp
@@ -130,8 +129,6 @@ Text GLabel 13455 4725 2    50   Input ~ 0
 DA1
 Text GLabel 13455 4625 2    50   Input ~ 0
 DA0
-Text GLabel 11675 5625 0    50   Input ~ 0
-A10
 Text GLabel 11675 5525 0    50   Input ~ 0
 A9
 Text GLabel 11675 5425 0    50   Input ~ 0
@@ -168,8 +165,6 @@ Text GLabel 10550 5325 2    50   Input ~ 0
 DA1
 Text GLabel 10550 5225 2    50   Input ~ 0
 DA0
-Text GLabel 9075 6225 0    50   Input ~ 0
-A10
 Text GLabel 9075 6125 0    50   Input ~ 0
 A9
 Text GLabel 9075 6025 0    50   Input ~ 0
@@ -233,8 +228,8 @@ U 1 1 5D703F6A
 P 14450 3325
 F 0 "Q100" H 14250 3325 50  0000 L BNN
 F 1 "2N3904" H 14050 3225 50  0000 L BNN
-F 2 "Package_TO_SOT_THT:TO-92L_HandSolder" H 14450 3325 50  0001 C CNN
-F 3 "" H 14450 3325 50  0001 C CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 14450 3325 50  0001 C CNN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 14450 3325 50  0001 C CNN
 	1    14450 3325
 	1    0    0    -1  
 $EndComp
@@ -316,8 +311,8 @@ $Comp
 L Device:R R15
 U 1 1 5F80C8E6
 P 13300 7425
-F 0 "R15" V 13050 7430 50  0000 C CNN
-F 1 "R" V 13150 7430 50  0000 C CNN
+F 0 "R15" V 13425 7425 50  0000 C CNN
+F 1 "R" V 13525 7425 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 13230 7425 50  0001 C CNN
 F 3 "~" H 13300 7425 50  0001 C CNN
 	1    13300 7425
@@ -361,10 +356,6 @@ Wire Wire Line
 	13075 5125 13455 5125
 Wire Wire Line
 	13075 4925 13455 4925
-Wire Wire Line
-	8550 7325 9175 7325
-Wire Wire Line
-	8550 7325 8550 8425
 Wire Wire Line
 	9825 8425 9825 8275
 Wire Wire Line
@@ -530,8 +521,6 @@ Wire Wire Line
 Wire Wire Line
 	9175 6025 9075 6025
 Wire Wire Line
-	9175 6225 9075 6225
-Wire Wire Line
 	9175 5625 9075 5625
 Wire Wire Line
 	9175 5725 9075 5725
@@ -551,8 +540,6 @@ Wire Wire Line
 	11775 5325 11675 5325
 Wire Wire Line
 	11775 5425 11675 5425
-Wire Wire Line
-	11775 5625 11675 5625
 Wire Wire Line
 	11775 5025 11675 5025
 Wire Wire Line
@@ -626,12 +613,7 @@ F 3 "" H 11670 7225 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	11305 6725 11305 7870
-Wire Wire Line
-	11775 6725 11305 6725
-Wire Wire Line
 	11305 7870 11450 7870
-Connection ~ 11305 7870
 Wire Wire Line
 	11305 7870 11305 8425
 $Comp
@@ -751,8 +733,8 @@ $Comp
 L Device:R R11
 U 1 1 5F80C83E
 P 13100 3325
-F 0 "R11" H 12950 3384 50  0000 L BNN
-F 1 "1K5" H 12950 3195 50  0000 L BNN
+F 0 "R11" V 12875 3325 50  0000 C CNN
+F 1 "1K5" V 12975 3325 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" H 13100 3325 50  0001 C CNN
 F 3 "~" H 13100 3325 50  0001 C CNN
 	1    13100 3325
@@ -778,7 +760,7 @@ AR Path="/5FA4DA0E/5F80C856" Ref="Z27"  Part="2"
 F 0 "Z27" H 11860 3675 50  0000 C CNN
 F 1 "SN74AHCT74N" H 11875 3580 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 11650 3325 50  0001 C CNN
-F 3 "74xx~74hc_AHCT74.pdf" H 11650 3325 50  0001 C CNN
+F 3 "74xx/74hc_hct74.pdf" H 11650 3325 50  0001 C CNN
 	2    11650 3325
 	1    0    0    -1  
 $EndComp
@@ -786,10 +768,10 @@ $Comp
 L Diode:1N4148 D11
 U 1 1 5F80C85C
 P 13550 3525
-F 0 "D11" V 13470 3475 50  0000 L CNN
+F 0 "D11" V 13575 3425 50  0000 R CNN
 F 1 "1N4148" V 13550 3610 50  0001 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 13550 3350 50  0001 C CNN
-F 3 "https:~/assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 13550 3525 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 13550 3525 50  0001 C CNN
 	1    13550 3525
 	0    -1   -1   0   
 $EndComp
@@ -800,7 +782,7 @@ P 10350 2225
 F 0 "Z19" H 10385 2595 50  0000 C CNN
 F 1 "SN74AHCT00N" H 10385 2495 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 10350 2225 50  0001 C CNN
-F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT00" H 10350 2225 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hct00" H 10350 2225 50  0001 C CNN
 	2    10350 2225
 	1    0    0    -1  
 $EndComp
@@ -811,7 +793,7 @@ P 10350 2925
 F 0 "Z20" H 10365 3275 50  0000 C CNN
 F 1 "SN74AHCT08N" H 10365 3175 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 10350 2925 50  0001 C CNN
-F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT08" H 10350 2925 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 10350 2925 50  0001 C CNN
 	3    10350 2925
 	1    0    0    -1  
 $EndComp
@@ -822,7 +804,7 @@ P 9050 2825
 F 0 "Z22" H 9050 3205 50  0000 C CNN
 F 1 "SN74AHCT11N" H 9050 3105 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 9050 2825 50  0001 C CNN
-F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT11" H 9050 2825 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 9050 2825 50  0001 C CNN
 	2    9050 2825
 	1    0    0    -1  
 $EndComp
@@ -833,7 +815,7 @@ P 12450 3325
 F 0 "Z23" H 12490 3665 50  0000 C CNN
 F 1 "SN74AHCT86N" H 12490 3565 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 12450 3325 50  0001 C CNN
-F 3 "74xx~74AHCT86.pdf" H 12450 3325 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 12450 3325 50  0001 C CNN
 	4    12450 3325
 	1    0    0    -1  
 $EndComp
@@ -844,7 +826,7 @@ P 14725 4775
 F 0 "Z28" V 15450 4770 50  0000 C CNN
 F 1 "SN74AHCT166N" V 15350 4770 50  0000 C CNN
 F 2 "Package_DIP:DIP-16_W7.62mm" H 14725 4775 50  0001 C CNN
-F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT166" H 14725 4775 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS166" H 14725 4775 50  0001 C CNN
 	1    14725 4775
 	0    -1   -1   0   
 $EndComp
@@ -852,8 +834,8 @@ $Comp
 L Device:R R8
 U 1 1 5F80C8DA
 P 10700 7925
-F 0 "R8" V 10450 7925 50  0000 C CNN
-F 1 "R" V 10550 7925 50  0000 C CNN
+F 0 "R8" V 10475 7925 50  0000 C CNN
+F 1 "R" V 10575 7925 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 10630 7925 50  0001 C CNN
 F 3 "~" H 10700 7925 50  0001 C CNN
 	1    10700 7925
@@ -868,8 +850,8 @@ $Comp
 L Device:R R9
 U 1 1 5F80C8E0
 P 10700 8025
-F 0 "R9" V 10450 8025 50  0000 C CNN
-F 1 "R" V 10550 8025 50  0000 C CNN
+F 0 "R9" V 10825 8025 50  0000 C CNN
+F 1 "R" V 10925 8025 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 10630 8025 50  0001 C CNN
 F 3 "~" H 10700 8025 50  0001 C CNN
 	1    10700 8025
@@ -881,44 +863,44 @@ $Comp
 L Device:R R14
 U 1 1 5F80C8EC
 P 13300 7325
-F 0 "R14" V 13050 7330 50  0000 C CNN
-F 1 "R" V 13150 7330 50  0000 C CNN
+F 0 "R14" V 13075 7325 50  0000 C CNN
+F 1 "R" V 13175 7325 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 13230 7325 50  0001 C CNN
 F 3 "~" H 13300 7325 50  0001 C CNN
 	1    13300 7325
 	0    1    1    0   
 $EndComp
 $Comp
-L 7132la100pdg:IDT71321 Z7-8
+L 7132la100pdg:IDT7130-40-52PIN Z7-8
 U 1 1 5F80C938
 P 11775 4625
 AR Path="/5F80C938" Ref="Z7-8"  Part="1" 
 AR Path="/5FA4DA0E/5F80C938" Ref="Z7-8"  Part="1" 
 F 0 "Z7-8" H 12100 4800 50  0000 C CNN
-F 1 "71321SA55JG8" H 12450 5050 50  0000 C CNN
+F 1 "7130" H 12450 5050 50  0000 C CNN
 F 2 "Package_LCC:PLCC-52_THT-Socket" H 12575 5275 50  0001 L CNN
-F 3 "https:~/www.idt.com/document/dst/71321421-datasheet" H 12575 5175 50  0001 L CNN
-F 4 "IC SRAM 16K PARALLEL 52PLCC" H 12575 5375 50  0001 L CNN "Description"
-F 5 "3.63" H 12925 4575 50  0001 L CNN "Height"
-F 6 "IDT, Integrated Device Technology Inc" H 12575 5475 50  0001 L CNN "Manufacturer_Name"
-F 7 "71321SA55JG8" H 12925 4175 50  0001 L CNN "Manufacturer_Part_Number"
+F 3 "https://www.idt.com/document/dst/71321421-datasheet" H 12575 5175 50  0001 L CNN
+F 4 "SRAM 1K x 8 Dual-Port RAM Memory & Logic/ Master" H 12575 5375 50  0001 L CNN "Description"
+F 5 "3.8" H 12925 4575 50  0001 L CNN "Height"
+F 6 "IDT (Integrated Device Technology)" H 12575 5475 50  0001 L CNN "Manufacturer_Name"
+F 7 "7132LA100PDG" H 12925 4175 50  0001 L CNN "Manufacturer_Part_Number"
 	1    11775 4625
 	1    0    0    -1  
 $EndComp
 $Comp
-L 7132la100pdg:IDT71321 Z5-6
+L 7132la100pdg:IDT7130-40-52PIN Z5-6
 U 1 1 5F80C942
 P 9175 5225
 AR Path="/5F80C942" Ref="Z5-6"  Part="1" 
 AR Path="/5FA4DA0E/5F80C942" Ref="Z5-6"  Part="1" 
 F 0 "Z5-6" H 10155 5510 50  0000 C CNN
-F 1 "7132LA100PDG" H 9465 5520 50  0000 C CNN
+F 1 "7130" H 9465 5520 50  0000 C CNN
 F 2 "Package_LCC:PLCC-52_THT-Socket" H 9975 5875 50  0001 L CNN
-F 3 "https:~/www.idt.com/document/dst/71321421-datasheet" H 9975 5775 50  0001 L CNN
-F 4 "IC SRAM 16K PARALLEL 52PLCC" H 9975 5975 50  0001 L CNN "Description"
-F 5 "3.63" H 10325 5175 50  0001 L CNN "Height"
-F 6 "IDT, Integrated Device Technology Inc" H 9975 6075 50  0001 L CNN "Manufacturer_Name"
-F 7 "71321SA55JG8" H 10325 4775 50  0001 L CNN "Manufacturer_Part_Number"
+F 3 "https://www.idt.com/document/dst/71321421-datasheet" H 9975 5775 50  0001 L CNN
+F 4 "SRAM 1K x 8 Dual-Port RAM Memory & Logic/ Master" H 9975 5975 50  0001 L CNN "Description"
+F 5 "3.8" H 10325 5175 50  0001 L CNN "Height"
+F 6 "IDT (Integrated Device Technology)" H 9975 6075 50  0001 L CNN "Manufacturer_Name"
+F 7 "7132LA100PDG" H 10325 4775 50  0001 L CNN "Manufacturer_Part_Number"
 	1    9175 5225
 	1    0    0    -1  
 $EndComp
@@ -947,7 +929,7 @@ P 5825 5125
 F 0 "Z102" H 5825 5475 50  0000 C CNN
 F 1 "SN74AHCT04N" H 5825 5375 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 5825 5125 50  0001 C CNN
-F 3 "https:~/assets.nexperia.com/documents/data-sheet/74HC_AHCT04.pdf" H 5825 5125 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H 5825 5125 50  0001 C CNN
 	4    5825 5125
 	1    0    0    -1  
 $EndComp
@@ -1025,7 +1007,7 @@ P 4925 2925
 F 0 "Z22" H 4930 3305 50  0000 C CNN
 F 1 "SN74AHCT11N" H 4930 3205 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 4925 2925 50  0001 C CNN
-F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT11" H 4925 2925 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 4925 2925 50  0001 C CNN
 	1    4925 2925
 	1    0    0    -1  
 $EndComp
@@ -1192,7 +1174,7 @@ P 1725 1725
 F 0 "Z9" H 1760 2150 50  0000 C CNN
 F 1 "SN74AHCT393N" H 1760 2050 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 1725 1725 50  0001 C CNN
-F 3 "74xx\\74AHCT393.pdf" H 1725 1725 50  0001 C CNN
+F 3 "74xx\\74LS393.pdf" H 1725 1725 50  0001 C CNN
 	1    1725 1725
 	1    0    0    -1  
 $EndComp
@@ -1203,7 +1185,7 @@ P 1725 3525
 F 0 "Z10" H 1760 3950 50  0000 C CNN
 F 1 "SN74AHCT393N" H 1760 3850 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 1725 3525 50  0001 C CNN
-F 3 "74xx\\74AHCT393.pdf" H 1725 3525 50  0001 C CNN
+F 3 "74xx\\74LS393.pdf" H 1725 3525 50  0001 C CNN
 	1    1725 3525
 	1    0    0    -1  
 $EndComp
@@ -1214,7 +1196,7 @@ P 1725 4525
 F 0 "Z10" H 1755 4910 50  0000 C CNN
 F 1 "SN74AHCT393N" H 1755 4810 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 1725 4525 50  0001 C CNN
-F 3 "74xx\\74AHCT393.pdf" H 1725 4525 50  0001 C CNN
+F 3 "74xx\\74LS393.pdf" H 1725 4525 50  0001 C CNN
 	2    1725 4525
 	1    0    0    -1  
 $EndComp
@@ -1225,7 +1207,7 @@ P 1725 5525
 F 0 "Z11" H 1760 5950 50  0000 C CNN
 F 1 "SN74AHCT393N" H 1760 5850 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 1725 5525 50  0001 C CNN
-F 3 "74xx\\74AHCT393.pdf" H 1725 5525 50  0001 C CNN
+F 3 "74xx\\74LS393.pdf" H 1725 5525 50  0001 C CNN
 	1    1725 5525
 	1    0    0    -1  
 $EndComp
@@ -1236,7 +1218,7 @@ P 1725 6425
 F 0 "Z11" H 1755 6810 50  0000 C CNN
 F 1 "SN74AHCT393N" H 1755 6710 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 1725 6425 50  0001 C CNN
-F 3 "74xx\\74AHCT393.pdf" H 1725 6425 50  0001 C CNN
+F 3 "74xx\\74LS393.pdf" H 1725 6425 50  0001 C CNN
 	2    1725 6425
 	1    0    0    -1  
 $EndComp
@@ -1247,7 +1229,7 @@ P 5725 4125
 F 0 "Z25" H 5730 4485 50  0000 C CNN
 F 1 "SN74AHCT02N" H 5730 4385 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 5725 4125 50  0001 C CNN
-F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT02" H 5725 4125 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hct02" H 5725 4125 50  0001 C CNN
 	2    5725 4125
 	1    0    0    -1  
 $EndComp
@@ -1258,7 +1240,7 @@ P 4225 2925
 F 0 "Z25" H 4265 3310 50  0000 C CNN
 F 1 "SN74AHCT02N" H 4265 3210 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 4225 2925 50  0001 C CNN
-F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT02" H 4225 2925 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hct02" H 4225 2925 50  0001 C CNN
 	4    4225 2925
 	1    0    0    -1  
 $EndComp
@@ -1269,7 +1251,7 @@ P 4125 5625
 F 0 "Z20" H 4150 5980 50  0000 C CNN
 F 1 "SN74AHCT08N" H 4150 5880 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 4125 5625 50  0001 C CNN
-F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT08" H 4125 5625 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 4125 5625 50  0001 C CNN
 	1    4125 5625
 	1    0    0    -1  
 $EndComp
@@ -1280,7 +1262,7 @@ P 3325 5525
 F 0 "Z21" H 3325 5865 50  0000 C CNN
 F 1 "SN74AHCT11N" H 3325 5765 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 3325 5525 50  0001 C CNN
-F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT11" H 3325 5525 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 3325 5525 50  0001 C CNN
 	1    3325 5525
 	1    0    0    -1  
 $EndComp
@@ -1291,7 +1273,7 @@ P 4925 5125
 F 0 "Z21" H 4945 5495 50  0000 C CNN
 F 1 "SN74AHCT11N" H 4945 5395 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 4925 5125 50  0001 C CNN
-F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT11" H 4925 5125 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 4925 5125 50  0001 C CNN
 	2    4925 5125
 	1    0    0    -1  
 $EndComp
@@ -1302,7 +1284,7 @@ P 3225 3625
 F 0 "Z21" H 3235 3990 50  0000 C CNN
 F 1 "SN74AHCT11N" H 3235 3890 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 3225 3625 50  0001 C CNN
-F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT11" H 3225 3625 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 3225 3625 50  0001 C CNN
 	3    3225 3625
 	1    0    0    -1  
 $EndComp
@@ -1313,7 +1295,7 @@ P 1725 2625
 F 0 "Z9" H 1755 3010 50  0000 C CNN
 F 1 "SN74AHCT393N" H 1755 2910 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 1725 2625 50  0001 C CNN
-F 3 "74xx\\74AHCT393.pdf" H 1725 2625 50  0001 C CNN
+F 3 "74xx\\74LS393.pdf" H 1725 2625 50  0001 C CNN
 	2    1725 2625
 	1    0    0    -1  
 $EndComp
@@ -1363,7 +1345,7 @@ P 6400 5125
 F 0 "D10" H 6400 5445 50  0000 C CNN
 F 1 "BAT54W" H 6400 5345 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 6400 4950 50  0001 C CNN
-F 3 "https:~/assets.nexperia.com/documents/data-sheet/BAT54W_SER.pdf" H 6400 5125 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/BAT54W_SER.pdf" H 6400 5125 50  0001 C CNN
 	1    6400 5125
 	1    0    0    -1  
 $EndComp
@@ -1371,8 +1353,6 @@ Wire Wire Line
 	13550 3675 13550 4125
 Wire Wire Line
 	6025 4125 13550 4125
-Wire Wire Line
-	8550 8425 9825 8425
 $Comp
 L power:VCC #0122
 U 1 1 5F80CE39
@@ -1500,7 +1480,7 @@ P 6100 8575
 F 0 "Z23" H 6100 8925 50  0000 C CNN
 F 1 "SN74AHCT86N" H 6100 8825 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 6100 8575 50  0001 C CNN
-F 3 "74xx~74AHCT86.pdf" H 6100 8575 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 6100 8575 50  0001 C CNN
 	3    6100 8575
 	1    0    0    -1  
 $EndComp
@@ -1513,7 +1493,7 @@ P 5400 8675
 F 0 "Q1" H 5205 8585 50  0000 L CNN
 F 1 "2N3904" H 5190 8820 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5600 8600 50  0001 L CIN
-F 3 "https:~/www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 5400 8675 50  0001 L CNN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 5400 8675 50  0001 L CNN
 	1    5400 8675
 	1    0    0    -1  
 $EndComp
@@ -1532,7 +1512,6 @@ Wire Wire Line
 	5500 8875 5500 8975
 Wire Wire Line
 	5500 7775 5500 7675
-Connection ~ 9825 8425
 Wire Wire Line
 	9825 8425 11305 8425
 Connection ~ 11305 8425
@@ -1563,8 +1542,6 @@ $EndComp
 NoConn ~ 15050 3525
 Text Label 15125 5375 3    50   ~ 0
 ~VIDEOCLK
-Text GLabel 6650 5125 2    50   Input ~ 0
-~INT0
 $Comp
 L power:VCC #0165
 U 1 1 5E0231F3
@@ -1603,10 +1580,6 @@ F 3 "~" H 10700 7625 50  0001 C CNN
 	1    10700 7625
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	10375 7625 10550 7625
-Wire Wire Line
-	10375 7525 10550 7525
 $Comp
 L power:VCC #0166
 U 1 1 5E079299
@@ -1646,9 +1619,15 @@ F 3 "~" H 13300 7025 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	12975 6925 13150 6925
-Wire Wire Line
-	12975 7025 13150 7025
-Wire Wire Line
 	15025 5475 15875 5475
+Wire Wire Line
+	10550 7525 10475 7525
+Wire Wire Line
+	10475 7625 10550 7625
+Wire Wire Line
+	13150 6925 13075 6925
+Wire Wire Line
+	13075 7025 13150 7025
+Text GLabel 6650 5125 2    50   Input ~ 0
+~INT
 $EndSCHEMATC

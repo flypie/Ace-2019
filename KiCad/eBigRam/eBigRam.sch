@@ -1,0 +1,1567 @@
+EESchema Schematic File Version 4
+LIBS:eBigRam-cache
+EELAYER 30 0
+EELAYER END
+$Descr A3 11693 16535 portrait
+encoding utf-8
+Sheet 1 1
+Title "JupiterAceZ180"
+Date "2019-09-14"
+Rev "Alpha"
+Comp "Ontobus"
+Comment1 "John Bradley"
+Comment2 "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+Comment3 "Attribution-NonCommercial-ShareAlike 4.0 International License."
+Comment4 "This work is licensed under a Creative Commons "
+$EndDescr
+Wire Wire Line
+	1725 3050 1825 3050
+Wire Wire Line
+	1725 3150 1825 3150
+Wire Wire Line
+	1725 3250 1825 3250
+Wire Wire Line
+	3125 3250 3025 3250
+Wire Wire Line
+	3125 3150 3025 3150
+Wire Wire Line
+	3125 3050 3025 3050
+$Comp
+L power:GND #0164
+U 1 1 5FCF8446
+P 3125 2350
+F 0 "#0164" H 3125 2100 50  0001 C CNN
+F 1 "GND" V 3150 2175 50  0000 R CNN
+F 2 "" H 3125 2350 50  0001 C CNN
+F 3 "" H 3125 2350 50  0001 C CNN
+	1    3125 2350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #0167
+U 1 1 5FCF8450
+P 3125 2450
+F 0 "#0167" H 3125 2300 50  0001 C CNN
+F 1 "VCC" V 3100 2625 50  0000 L CNN
+F 2 "" H 3125 2450 50  0001 C CNN
+F 3 "" H 3125 2450 50  0001 C CNN
+	1    3125 2450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3025 2250 3125 2250
+Wire Wire Line
+	3025 2650 3125 2650
+Wire Wire Line
+	1825 2250 1725 2250
+Wire Wire Line
+	3025 2150 3125 2150
+Wire Wire Line
+	1825 2550 1725 2550
+Wire Wire Line
+	1825 2150 1725 2150
+Wire Wire Line
+	3025 2550 3125 2550
+Wire Wire Line
+	1825 2650 1725 2650
+Wire Wire Line
+	3025 1950 3125 1950
+Wire Wire Line
+	3025 1550 3125 1550
+Wire Wire Line
+	1825 1550 1725 1550
+Wire Wire Line
+	3025 2950 3125 2950
+Wire Wire Line
+	3025 2850 3125 2850
+Wire Wire Line
+	3025 2750 3125 2750
+Wire Wire Line
+	3025 1850 3125 1850
+Wire Wire Line
+	3025 1750 3125 1750
+Wire Wire Line
+	3025 1650 3125 1650
+Wire Wire Line
+	1825 1650 1725 1650
+Wire Wire Line
+	1825 1750 1725 1750
+Wire Wire Line
+	1825 1850 1725 1850
+Wire Wire Line
+	1825 1950 1725 1950
+Wire Wire Line
+	3025 2050 3125 2050
+Wire Wire Line
+	1825 2750 1725 2750
+Wire Wire Line
+	3125 2350 3025 2350
+Wire Wire Line
+	3025 2450 3125 2450
+Wire Wire Line
+	1725 2950 1825 2950
+Wire Wire Line
+	1825 2350 1725 2350
+Wire Wire Line
+	1725 2450 1825 2450
+$Comp
+L power:GND #0168
+U 1 1 5FCF8478
+P 1725 2450
+F 0 "#0168" H 1725 2200 50  0001 C CNN
+F 1 "GND" V 1750 2275 50  0000 R CNN
+F 2 "" H 1725 2450 50  0001 C CNN
+F 3 "" H 1725 2450 50  0001 C CNN
+	1    1725 2450
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:VCC #0169
+U 1 1 5FCF8482
+P 1725 2350
+F 0 "#0169" H 1725 2200 50  0001 C CNN
+F 1 "VCC" V 1700 2525 50  0000 L CNN
+F 2 "" H 1725 2350 50  0001 C CNN
+F 3 "" H 1725 2350 50  0001 C CNN
+	1    1725 2350
+	0    -1   1    0   
+$EndComp
+Text Label 3125 2850 0    50   ~ 0
+A11
+Text Label 1725 2150 2    50   ~ 0
+DA0
+Text Label 1725 2250 2    50   ~ 0
+DA1
+Text Label 1725 2550 2    50   ~ 0
+DA2
+Text Label 1725 2650 2    50   ~ 0
+DA3
+Text Label 3125 2650 0    50   ~ 0
+DA4
+Text Label 3125 2550 0    50   ~ 0
+DA5
+Text Label 3125 2250 0    50   ~ 0
+DA6
+Text Label 3125 2150 0    50   ~ 0
+DA7
+Text Label 3125 3250 0    50   ~ 0
+A15
+Text Label 1725 3250 2    50   ~ 0
+A16
+Text Label 1725 3150 2    50   ~ 0
+A17
+Text Label 1725 3050 2    50   ~ 0
+A18
+Text Label 1725 2950 2    50   ~ 0
+A19
+Text Label 1725 1950 2    50   ~ 0
+A0
+Text Label 1725 1850 2    50   ~ 0
+A1
+Text Label 1725 1750 2    50   ~ 0
+A2
+Text Label 1725 1650 2    50   ~ 0
+A3
+Text Label 1725 1550 2    50   ~ 0
+A4
+Text Label 3125 1550 0    50   ~ 0
+A5
+Text Label 3125 1650 0    50   ~ 0
+A6
+Text Label 3125 1750 0    50   ~ 0
+A7
+Text Label 3125 1850 0    50   ~ 0
+A8
+Text Label 3125 1950 0    50   ~ 0
+A9
+Text Label 3125 2750 0    50   ~ 0
+A10
+Text Label 3125 2950 0    50   ~ 0
+A12
+Text Label 3125 3050 0    50   ~ 0
+A13
+Text Label 3125 3150 0    50   ~ 0
+A14
+Text Label 3125 2050 0    50   ~ 0
+~RD
+Text Label 1725 2750 2    50   ~ 0
+~WR
+$Comp
+L SamacSys_Parts:AS7C316096A-10TIN Z1100
+U 1 1 5FCF84AE
+P 1825 1250
+F 0 "Z1100" H 2450 1550 50  0000 C CNN
+F 1 "AS7C316096A-10TIN" H 2450 1450 50  0000 C CNN
+F 2 "Package_SO:TSOP-I-48_18.4x12mm_P0.5mm" H 2875 1350 50  0001 L CNN
+F 3 "" H 2875 1250 50  0001 L CNN
+F 4 "Alliance Memory SRAM, AS7C316096A-10TIN- 16Mbit" H 2875 1150 50  0001 L CNN "Description"
+F 5 "1.2" H 2875 1050 50  0001 L CNN "Height"
+F 6 "Alliance Memory" H 2875 750 50  0001 L CNN "Manufacturer_Name"
+F 7 "AS7C316096A-10TIN" H 2875 650 50  0001 L CNN "Manufacturer_Part_Number"
+	1    1825 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1725 2850 1825 2850
+Text Label 1725 2850 2    50   ~ 0
+A20
+Text Label 1450 2050 2    50   ~ 0
+~3&4Meg
+Wire Wire Line
+	1450 2050 1825 2050
+Wire Wire Line
+	4125 3025 4225 3025
+Wire Wire Line
+	4125 3125 4225 3125
+Wire Wire Line
+	4125 3225 4225 3225
+Wire Wire Line
+	5525 3225 5425 3225
+Wire Wire Line
+	5525 3125 5425 3125
+Wire Wire Line
+	5525 3025 5425 3025
+$Comp
+L power:GND #0170
+U 1 1 5FEB65DF
+P 5525 2325
+F 0 "#0170" H 5525 2075 50  0001 C CNN
+F 1 "GND" V 5550 2150 50  0000 R CNN
+F 2 "" H 5525 2325 50  0001 C CNN
+F 3 "" H 5525 2325 50  0001 C CNN
+	1    5525 2325
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #0171
+U 1 1 5FEB65E9
+P 5525 2425
+F 0 "#0171" H 5525 2275 50  0001 C CNN
+F 1 "VCC" V 5500 2600 50  0000 L CNN
+F 2 "" H 5525 2425 50  0001 C CNN
+F 3 "" H 5525 2425 50  0001 C CNN
+	1    5525 2425
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5425 2225 5525 2225
+Wire Wire Line
+	5425 2625 5525 2625
+Wire Wire Line
+	4225 2225 4125 2225
+Wire Wire Line
+	5425 2125 5525 2125
+Wire Wire Line
+	4225 2525 4125 2525
+Wire Wire Line
+	4225 2125 4125 2125
+Wire Wire Line
+	5425 2525 5525 2525
+Wire Wire Line
+	4225 2625 4125 2625
+Wire Wire Line
+	5425 1925 5525 1925
+Wire Wire Line
+	5425 1525 5525 1525
+Wire Wire Line
+	4225 1525 4125 1525
+Wire Wire Line
+	5425 2925 5525 2925
+Wire Wire Line
+	5425 2825 5525 2825
+Wire Wire Line
+	5425 2725 5525 2725
+Wire Wire Line
+	5425 1825 5525 1825
+Wire Wire Line
+	5425 1725 5525 1725
+Wire Wire Line
+	5425 1625 5525 1625
+Wire Wire Line
+	4225 1625 4125 1625
+Wire Wire Line
+	4225 1725 4125 1725
+Wire Wire Line
+	4225 1825 4125 1825
+Wire Wire Line
+	4225 1925 4125 1925
+Wire Wire Line
+	5425 2025 5525 2025
+Wire Wire Line
+	4225 2725 4125 2725
+Wire Wire Line
+	5525 2325 5425 2325
+Wire Wire Line
+	5425 2425 5525 2425
+Wire Wire Line
+	4125 2925 4225 2925
+Wire Wire Line
+	4225 2325 4125 2325
+Wire Wire Line
+	4125 2425 4225 2425
+$Comp
+L power:GND #0172
+U 1 1 5FEB660F
+P 4125 2425
+F 0 "#0172" H 4125 2175 50  0001 C CNN
+F 1 "GND" V 4150 2250 50  0000 R CNN
+F 2 "" H 4125 2425 50  0001 C CNN
+F 3 "" H 4125 2425 50  0001 C CNN
+	1    4125 2425
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:VCC #0173
+U 1 1 5FEB6619
+P 4125 2325
+F 0 "#0173" H 4125 2175 50  0001 C CNN
+F 1 "VCC" V 4100 2500 50  0000 L CNN
+F 2 "" H 4125 2325 50  0001 C CNN
+F 3 "" H 4125 2325 50  0001 C CNN
+	1    4125 2325
+	0    -1   1    0   
+$EndComp
+Text Label 5525 2825 0    50   ~ 0
+A11
+Text Label 4125 2125 2    50   ~ 0
+DA0
+Text Label 4125 2225 2    50   ~ 0
+DA1
+Text Label 4125 2525 2    50   ~ 0
+DA2
+Text Label 4125 2625 2    50   ~ 0
+DA3
+Text Label 5525 2625 0    50   ~ 0
+DA4
+Text Label 5525 2525 0    50   ~ 0
+DA5
+Text Label 5525 2225 0    50   ~ 0
+DA6
+Text Label 5525 2125 0    50   ~ 0
+DA7
+Text Label 5525 3225 0    50   ~ 0
+A15
+Text Label 4125 3225 2    50   ~ 0
+A16
+Text Label 4125 3125 2    50   ~ 0
+A17
+Text Label 4125 3025 2    50   ~ 0
+A18
+Text Label 4125 2925 2    50   ~ 0
+A19
+Text Label 4125 1925 2    50   ~ 0
+A0
+Text Label 4125 1825 2    50   ~ 0
+A1
+Text Label 4125 1725 2    50   ~ 0
+A2
+Text Label 4125 1625 2    50   ~ 0
+A3
+Text Label 4125 1525 2    50   ~ 0
+A4
+Text Label 5525 1525 0    50   ~ 0
+A5
+Text Label 5525 1625 0    50   ~ 0
+A6
+Text Label 5525 1725 0    50   ~ 0
+A7
+Text Label 5525 1825 0    50   ~ 0
+A8
+Text Label 5525 1925 0    50   ~ 0
+A9
+Text Label 5525 2725 0    50   ~ 0
+A10
+Text Label 5525 2925 0    50   ~ 0
+A12
+Text Label 5525 3025 0    50   ~ 0
+A13
+Text Label 5525 3125 0    50   ~ 0
+A14
+Text Label 5525 2025 0    50   ~ 0
+~RD
+Text Label 4125 2725 2    50   ~ 0
+~WR
+$Comp
+L SamacSys_Parts:AS7C316096A-10TIN Z1101
+U 1 1 5FEB6645
+P 4225 1225
+F 0 "Z1101" H 4850 1550 50  0000 C CNN
+F 1 "AS7C316096A-10TIN" H 4850 1450 50  0000 C CNN
+F 2 "Package_SO:TSOP-I-48_18.4x12mm_P0.5mm" H 5275 1325 50  0001 L CNN
+F 3 "" H 5275 1225 50  0001 L CNN
+F 4 "Alliance Memory SRAM, AS7C316096A-10TIN- 16Mbit" H 5275 1125 50  0001 L CNN "Description"
+F 5 "1.2" H 5275 1025 50  0001 L CNN "Height"
+F 6 "Alliance Memory" H 5275 725 50  0001 L CNN "Manufacturer_Name"
+F 7 "AS7C316096A-10TIN" H 5275 625 50  0001 L CNN "Manufacturer_Part_Number"
+	1    4225 1225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4125 2825 4225 2825
+Text Label 4125 2825 2    50   ~ 0
+A20
+Text Label 3850 2025 2    50   ~ 0
+~5&6Meg
+Wire Wire Line
+	3850 2025 4225 2025
+Wire Wire Line
+	6550 3050 6650 3050
+Wire Wire Line
+	6550 3150 6650 3150
+Wire Wire Line
+	6550 3250 6650 3250
+Wire Wire Line
+	7950 3250 7850 3250
+Wire Wire Line
+	7950 3150 7850 3150
+Wire Wire Line
+	7950 3050 7850 3050
+$Comp
+L power:GND #0174
+U 1 1 5FF4E33A
+P 7950 2350
+F 0 "#0174" H 7950 2100 50  0001 C CNN
+F 1 "GND" V 7975 2175 50  0000 R CNN
+F 2 "" H 7950 2350 50  0001 C CNN
+F 3 "" H 7950 2350 50  0001 C CNN
+	1    7950 2350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #0175
+U 1 1 5FF4E340
+P 7950 2450
+F 0 "#0175" H 7950 2300 50  0001 C CNN
+F 1 "VCC" V 7925 2625 50  0000 L CNN
+F 2 "" H 7950 2450 50  0001 C CNN
+F 3 "" H 7950 2450 50  0001 C CNN
+	1    7950 2450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7850 2250 7950 2250
+Wire Wire Line
+	7850 2650 7950 2650
+Wire Wire Line
+	6650 2250 6550 2250
+Wire Wire Line
+	7850 2150 7950 2150
+Wire Wire Line
+	6650 2550 6550 2550
+Wire Wire Line
+	6650 2150 6550 2150
+Wire Wire Line
+	7850 2550 7950 2550
+Wire Wire Line
+	6650 2650 6550 2650
+Wire Wire Line
+	7850 1950 7950 1950
+Wire Wire Line
+	7850 1550 7950 1550
+Wire Wire Line
+	6650 1550 6550 1550
+Wire Wire Line
+	7850 2950 7950 2950
+Wire Wire Line
+	7850 2850 7950 2850
+Wire Wire Line
+	7850 2750 7950 2750
+Wire Wire Line
+	7850 1850 7950 1850
+Wire Wire Line
+	7850 1750 7950 1750
+Wire Wire Line
+	7850 1650 7950 1650
+Wire Wire Line
+	6650 1650 6550 1650
+Wire Wire Line
+	6650 1750 6550 1750
+Wire Wire Line
+	6650 1850 6550 1850
+Wire Wire Line
+	6650 1950 6550 1950
+Wire Wire Line
+	7850 2050 7950 2050
+Wire Wire Line
+	6650 2750 6550 2750
+Wire Wire Line
+	7950 2350 7850 2350
+Wire Wire Line
+	7850 2450 7950 2450
+Wire Wire Line
+	6550 2950 6650 2950
+Wire Wire Line
+	6650 2350 6550 2350
+Wire Wire Line
+	6550 2450 6650 2450
+$Comp
+L power:GND #0176
+U 1 1 5FF4E362
+P 6550 2450
+F 0 "#0176" H 6550 2200 50  0001 C CNN
+F 1 "GND" V 6575 2275 50  0000 R CNN
+F 2 "" H 6550 2450 50  0001 C CNN
+F 3 "" H 6550 2450 50  0001 C CNN
+	1    6550 2450
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:VCC #0177
+U 1 1 5FF4E368
+P 6550 2350
+F 0 "#0177" H 6550 2200 50  0001 C CNN
+F 1 "VCC" V 6525 2525 50  0000 L CNN
+F 2 "" H 6550 2350 50  0001 C CNN
+F 3 "" H 6550 2350 50  0001 C CNN
+	1    6550 2350
+	0    -1   1    0   
+$EndComp
+Text Label 7950 2850 0    50   ~ 0
+A11
+Text Label 6550 2150 2    50   ~ 0
+DA0
+Text Label 6550 2250 2    50   ~ 0
+DA1
+Text Label 6550 2550 2    50   ~ 0
+DA2
+Text Label 6550 2650 2    50   ~ 0
+DA3
+Text Label 7950 2650 0    50   ~ 0
+DA4
+Text Label 7950 2550 0    50   ~ 0
+DA5
+Text Label 7950 2250 0    50   ~ 0
+DA6
+Text Label 7950 2150 0    50   ~ 0
+DA7
+Text Label 7950 3250 0    50   ~ 0
+A15
+Text Label 6550 3250 2    50   ~ 0
+A16
+Text Label 6550 3150 2    50   ~ 0
+A17
+Text Label 6550 3050 2    50   ~ 0
+A18
+Text Label 6550 2950 2    50   ~ 0
+A19
+Text Label 6550 1950 2    50   ~ 0
+A0
+Text Label 6550 1850 2    50   ~ 0
+A1
+Text Label 6550 1750 2    50   ~ 0
+A2
+Text Label 6550 1650 2    50   ~ 0
+A3
+Text Label 6550 1550 2    50   ~ 0
+A4
+Text Label 7950 1550 0    50   ~ 0
+A5
+Text Label 7950 1650 0    50   ~ 0
+A6
+Text Label 7950 1750 0    50   ~ 0
+A7
+Text Label 7950 1850 0    50   ~ 0
+A8
+Text Label 7950 1950 0    50   ~ 0
+A9
+Text Label 7950 2750 0    50   ~ 0
+A10
+Text Label 7950 2950 0    50   ~ 0
+A12
+Text Label 7950 3050 0    50   ~ 0
+A13
+Text Label 7950 3150 0    50   ~ 0
+A14
+Text Label 7950 2050 0    50   ~ 0
+~RD
+Text Label 6550 2750 2    50   ~ 0
+~WR
+$Comp
+L SamacSys_Parts:AS7C316096A-10TIN Z1102
+U 1 1 5FF4E390
+P 6650 1250
+F 0 "Z1102" H 7275 1575 50  0000 C CNN
+F 1 "AS7C316096A-10TIN" H 7275 1475 50  0000 C CNN
+F 2 "Package_SO:TSOP-I-48_18.4x12mm_P0.5mm" H 7700 1350 50  0001 L CNN
+F 3 "" H 7700 1250 50  0001 L CNN
+F 4 "Alliance Memory SRAM, AS7C316096A-10TIN- 16Mbit" H 7700 1150 50  0001 L CNN "Description"
+F 5 "1.2" H 7700 1050 50  0001 L CNN "Height"
+F 6 "Alliance Memory" H 7700 750 50  0001 L CNN "Manufacturer_Name"
+F 7 "AS7C316096A-10TIN" H 7700 650 50  0001 L CNN "Manufacturer_Part_Number"
+	1    6650 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 2850 6650 2850
+Text Label 6550 2850 2    50   ~ 0
+A20
+Wire Wire Line
+	9050 3025 9150 3025
+Wire Wire Line
+	9050 3125 9150 3125
+Wire Wire Line
+	9050 3225 9150 3225
+Wire Wire Line
+	10450 3225 10350 3225
+Wire Wire Line
+	10450 3125 10350 3125
+Wire Wire Line
+	10450 3025 10350 3025
+$Comp
+L power:GND #0178
+U 1 1 5FF551E5
+P 10450 2325
+F 0 "#0178" H 10450 2075 50  0001 C CNN
+F 1 "GND" V 10475 2150 50  0000 R CNN
+F 2 "" H 10450 2325 50  0001 C CNN
+F 3 "" H 10450 2325 50  0001 C CNN
+	1    10450 2325
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #0179
+U 1 1 5FF551EB
+P 10450 2425
+F 0 "#0179" H 10450 2275 50  0001 C CNN
+F 1 "VCC" V 10425 2600 50  0000 L CNN
+F 2 "" H 10450 2425 50  0001 C CNN
+F 3 "" H 10450 2425 50  0001 C CNN
+	1    10450 2425
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10350 2225 10450 2225
+Wire Wire Line
+	10350 2625 10450 2625
+Wire Wire Line
+	9150 2225 9050 2225
+Wire Wire Line
+	10350 2125 10450 2125
+Wire Wire Line
+	9150 2525 9050 2525
+Wire Wire Line
+	9150 2125 9050 2125
+Wire Wire Line
+	10350 2525 10450 2525
+Wire Wire Line
+	9150 2625 9050 2625
+Wire Wire Line
+	10350 1925 10450 1925
+Wire Wire Line
+	10350 1525 10450 1525
+Wire Wire Line
+	9150 1525 9050 1525
+Wire Wire Line
+	10350 2925 10450 2925
+Wire Wire Line
+	10350 2825 10450 2825
+Wire Wire Line
+	10350 2725 10450 2725
+Wire Wire Line
+	10350 1825 10450 1825
+Wire Wire Line
+	10350 1725 10450 1725
+Wire Wire Line
+	10350 1625 10450 1625
+Wire Wire Line
+	9150 1625 9050 1625
+Wire Wire Line
+	9150 1725 9050 1725
+Wire Wire Line
+	9150 1825 9050 1825
+Wire Wire Line
+	9150 1925 9050 1925
+Wire Wire Line
+	10350 2025 10450 2025
+Wire Wire Line
+	9150 2725 9050 2725
+Wire Wire Line
+	10450 2325 10350 2325
+Wire Wire Line
+	10350 2425 10450 2425
+Wire Wire Line
+	9050 2925 9150 2925
+Wire Wire Line
+	9150 2325 9050 2325
+Wire Wire Line
+	9050 2425 9150 2425
+$Comp
+L power:GND #0180
+U 1 1 5FF5520D
+P 9050 2425
+F 0 "#0180" H 9050 2175 50  0001 C CNN
+F 1 "GND" V 9075 2250 50  0000 R CNN
+F 2 "" H 9050 2425 50  0001 C CNN
+F 3 "" H 9050 2425 50  0001 C CNN
+	1    9050 2425
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:VCC #0181
+U 1 1 5FF55213
+P 9050 2325
+F 0 "#0181" H 9050 2175 50  0001 C CNN
+F 1 "VCC" V 9025 2500 50  0000 L CNN
+F 2 "" H 9050 2325 50  0001 C CNN
+F 3 "" H 9050 2325 50  0001 C CNN
+	1    9050 2325
+	0    -1   1    0   
+$EndComp
+Text Label 10450 2825 0    50   ~ 0
+A11
+Text Label 9050 2125 2    50   ~ 0
+DA0
+Text Label 9050 2225 2    50   ~ 0
+DA1
+Text Label 9050 2525 2    50   ~ 0
+DA2
+Text Label 9050 2625 2    50   ~ 0
+DA3
+Text Label 10450 2625 0    50   ~ 0
+DA4
+Text Label 10450 2525 0    50   ~ 0
+DA5
+Text Label 10450 2225 0    50   ~ 0
+DA6
+Text Label 10450 2125 0    50   ~ 0
+DA7
+Text Label 10450 3225 0    50   ~ 0
+A15
+Text Label 9050 3225 2    50   ~ 0
+A16
+Text Label 9050 3125 2    50   ~ 0
+A17
+Text Label 9050 3025 2    50   ~ 0
+A18
+Text Label 9050 2925 2    50   ~ 0
+A19
+Text Label 9050 1925 2    50   ~ 0
+A0
+Text Label 9050 1825 2    50   ~ 0
+A1
+Text Label 9050 1725 2    50   ~ 0
+A2
+Text Label 9050 1625 2    50   ~ 0
+A3
+Text Label 9050 1525 2    50   ~ 0
+A4
+Text Label 10450 1525 0    50   ~ 0
+A5
+Text Label 10450 1625 0    50   ~ 0
+A6
+Text Label 10450 1725 0    50   ~ 0
+A7
+Text Label 10450 1825 0    50   ~ 0
+A8
+Text Label 10450 1925 0    50   ~ 0
+A9
+Text Label 10450 2725 0    50   ~ 0
+A10
+Text Label 10450 2925 0    50   ~ 0
+A12
+Text Label 10450 3025 0    50   ~ 0
+A13
+Text Label 10450 3125 0    50   ~ 0
+A14
+Text Label 10450 2025 0    50   ~ 0
+~RD
+Text Label 9050 2725 2    50   ~ 0
+~WR
+$Comp
+L SamacSys_Parts:AS7C316096A-10TIN Z1103
+U 1 1 5FF5523B
+P 9150 1225
+F 0 "Z1103" H 9775 1550 50  0000 C CNN
+F 1 "AS7C316096A-10TIN" H 9775 1450 50  0000 C CNN
+F 2 "Package_SO:TSOP-I-48_18.4x12mm_P0.5mm" H 10200 1325 50  0001 L CNN
+F 3 "" H 10200 1225 50  0001 L CNN
+F 4 "Alliance Memory SRAM, AS7C316096A-10TIN- 16Mbit" H 10200 1125 50  0001 L CNN "Description"
+F 5 "1.2" H 10200 1025 50  0001 L CNN "Height"
+F 6 "Alliance Memory" H 10200 725 50  0001 L CNN "Manufacturer_Name"
+F 7 "AS7C316096A-10TIN" H 10200 625 50  0001 L CNN "Manufacturer_Part_Number"
+	1    9150 1225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 2825 9150 2825
+Text Label 9050 2825 2    50   ~ 0
+A20
+Wire Wire Line
+	1725 6175 1825 6175
+Wire Wire Line
+	1725 6275 1825 6275
+Wire Wire Line
+	1725 6375 1825 6375
+Wire Wire Line
+	3125 6375 3025 6375
+Wire Wire Line
+	3125 6275 3025 6275
+Wire Wire Line
+	3125 6175 3025 6175
+$Comp
+L power:GND #0182
+U 1 1 5FF5FFCC
+P 3125 5475
+F 0 "#0182" H 3125 5225 50  0001 C CNN
+F 1 "GND" V 3150 5300 50  0000 R CNN
+F 2 "" H 3125 5475 50  0001 C CNN
+F 3 "" H 3125 5475 50  0001 C CNN
+	1    3125 5475
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #0183
+U 1 1 5FF5FFD2
+P 3125 5575
+F 0 "#0183" H 3125 5425 50  0001 C CNN
+F 1 "VCC" V 3100 5750 50  0000 L CNN
+F 2 "" H 3125 5575 50  0001 C CNN
+F 3 "" H 3125 5575 50  0001 C CNN
+	1    3125 5575
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3025 5375 3125 5375
+Wire Wire Line
+	3025 5775 3125 5775
+Wire Wire Line
+	1825 5375 1725 5375
+Wire Wire Line
+	3025 5275 3125 5275
+Wire Wire Line
+	1825 5675 1725 5675
+Wire Wire Line
+	1825 5275 1725 5275
+Wire Wire Line
+	3025 5675 3125 5675
+Wire Wire Line
+	1825 5775 1725 5775
+Wire Wire Line
+	3025 5075 3125 5075
+Wire Wire Line
+	3025 4675 3125 4675
+Wire Wire Line
+	1825 4675 1725 4675
+Wire Wire Line
+	3025 6075 3125 6075
+Wire Wire Line
+	3025 5975 3125 5975
+Wire Wire Line
+	3025 5875 3125 5875
+Wire Wire Line
+	3025 4975 3125 4975
+Wire Wire Line
+	3025 4875 3125 4875
+Wire Wire Line
+	3025 4775 3125 4775
+Wire Wire Line
+	1825 4775 1725 4775
+Wire Wire Line
+	1825 4875 1725 4875
+Wire Wire Line
+	1825 4975 1725 4975
+Wire Wire Line
+	1825 5075 1725 5075
+Wire Wire Line
+	3025 5175 3125 5175
+Wire Wire Line
+	1825 5875 1725 5875
+Wire Wire Line
+	3125 5475 3025 5475
+Wire Wire Line
+	3025 5575 3125 5575
+Wire Wire Line
+	1725 6075 1825 6075
+Wire Wire Line
+	1825 5475 1725 5475
+Wire Wire Line
+	1725 5575 1825 5575
+$Comp
+L power:GND #0184
+U 1 1 5FF5FFF4
+P 1725 5575
+F 0 "#0184" H 1725 5325 50  0001 C CNN
+F 1 "GND" V 1750 5400 50  0000 R CNN
+F 2 "" H 1725 5575 50  0001 C CNN
+F 3 "" H 1725 5575 50  0001 C CNN
+	1    1725 5575
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:VCC #0185
+U 1 1 5FF5FFFA
+P 1725 5475
+F 0 "#0185" H 1725 5325 50  0001 C CNN
+F 1 "VCC" V 1700 5650 50  0000 L CNN
+F 2 "" H 1725 5475 50  0001 C CNN
+F 3 "" H 1725 5475 50  0001 C CNN
+	1    1725 5475
+	0    -1   1    0   
+$EndComp
+Text Label 3125 5975 0    50   ~ 0
+A11
+Text Label 1725 5275 2    50   ~ 0
+DA0
+Text Label 1725 5375 2    50   ~ 0
+DA1
+Text Label 1725 5675 2    50   ~ 0
+DA2
+Text Label 1725 5775 2    50   ~ 0
+DA3
+Text Label 3125 5775 0    50   ~ 0
+DA4
+Text Label 3125 5675 0    50   ~ 0
+DA5
+Text Label 3125 5375 0    50   ~ 0
+DA6
+Text Label 3125 5275 0    50   ~ 0
+DA7
+Text Label 3125 6375 0    50   ~ 0
+A15
+Text Label 1725 6375 2    50   ~ 0
+A16
+Text Label 1725 6275 2    50   ~ 0
+A17
+Text Label 1725 6175 2    50   ~ 0
+A18
+Text Label 1725 6075 2    50   ~ 0
+A19
+Text Label 1725 4975 2    50   ~ 0
+A1
+Text Label 1725 4875 2    50   ~ 0
+A2
+Text Label 1725 4775 2    50   ~ 0
+A3
+Text Label 1725 4675 2    50   ~ 0
+A4
+Text Label 3125 4675 0    50   ~ 0
+A5
+Text Label 3125 4775 0    50   ~ 0
+A6
+Text Label 3125 4875 0    50   ~ 0
+A7
+Text Label 3125 4975 0    50   ~ 0
+A8
+Text Label 3125 5075 0    50   ~ 0
+A9
+Text Label 3125 5875 0    50   ~ 0
+A10
+Text Label 3125 6075 0    50   ~ 0
+A12
+Text Label 3125 6175 0    50   ~ 0
+A13
+Text Label 3125 6275 0    50   ~ 0
+A14
+Text Label 3125 5175 0    50   ~ 0
+~RD
+Text Label 1725 5875 2    50   ~ 0
+~WR
+$Comp
+L SamacSys_Parts:AS7C316096A-10TIN Z1104
+U 1 1 5FF60022
+P 1825 4375
+F 0 "Z1104" H 2450 4700 50  0000 C CNN
+F 1 "AS7C316096A-10TIN" H 2450 4600 50  0000 C CNN
+F 2 "Package_SO:TSOP-I-48_18.4x12mm_P0.5mm" H 2875 4475 50  0001 L CNN
+F 3 "" H 2875 4375 50  0001 L CNN
+F 4 "Alliance Memory SRAM, AS7C316096A-10TIN- 16Mbit" H 2875 4275 50  0001 L CNN "Description"
+F 5 "1.2" H 2875 4175 50  0001 L CNN "Height"
+F 6 "Alliance Memory" H 2875 3875 50  0001 L CNN "Manufacturer_Name"
+F 7 "AS7C316096A-10TIN" H 2875 3775 50  0001 L CNN "Manufacturer_Part_Number"
+	1    1825 4375
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1725 5975 1825 5975
+Text Label 1725 5975 2    50   ~ 0
+A20
+Text Label 1450 5175 2    50   ~ 0
+~11&12Meg
+Wire Wire Line
+	1450 5175 1825 5175
+Wire Wire Line
+	4100 6100 4200 6100
+Wire Wire Line
+	4100 6200 4200 6200
+Wire Wire Line
+	4100 6300 4200 6300
+Wire Wire Line
+	5500 6300 5400 6300
+Wire Wire Line
+	5500 6200 5400 6200
+Wire Wire Line
+	5500 6100 5400 6100
+$Comp
+L power:GND #0186
+U 1 1 5FF71ECB
+P 5500 5400
+F 0 "#0186" H 5500 5150 50  0001 C CNN
+F 1 "GND" V 5525 5225 50  0000 R CNN
+F 2 "" H 5500 5400 50  0001 C CNN
+F 3 "" H 5500 5400 50  0001 C CNN
+	1    5500 5400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #0187
+U 1 1 5FF71ED1
+P 5500 5500
+F 0 "#0187" H 5500 5350 50  0001 C CNN
+F 1 "VCC" V 5475 5675 50  0000 L CNN
+F 2 "" H 5500 5500 50  0001 C CNN
+F 3 "" H 5500 5500 50  0001 C CNN
+	1    5500 5500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5400 5300 5500 5300
+Wire Wire Line
+	5400 5700 5500 5700
+Wire Wire Line
+	4200 5300 4100 5300
+Wire Wire Line
+	5400 5200 5500 5200
+Wire Wire Line
+	4200 5600 4100 5600
+Wire Wire Line
+	4200 5200 4100 5200
+Wire Wire Line
+	5400 5600 5500 5600
+Wire Wire Line
+	4200 5700 4100 5700
+Wire Wire Line
+	5400 5000 5500 5000
+Wire Wire Line
+	5400 4600 5500 4600
+Wire Wire Line
+	4200 4600 4100 4600
+Wire Wire Line
+	5400 6000 5500 6000
+Wire Wire Line
+	5400 5900 5500 5900
+Wire Wire Line
+	5400 5800 5500 5800
+Wire Wire Line
+	5400 4900 5500 4900
+Wire Wire Line
+	5400 4800 5500 4800
+Wire Wire Line
+	5400 4700 5500 4700
+Wire Wire Line
+	4200 4700 4100 4700
+Wire Wire Line
+	4200 4800 4100 4800
+Wire Wire Line
+	4200 4900 4100 4900
+Wire Wire Line
+	4200 5000 4100 5000
+Wire Wire Line
+	5400 5100 5500 5100
+Wire Wire Line
+	4200 5800 4100 5800
+Wire Wire Line
+	5500 5400 5400 5400
+Wire Wire Line
+	5400 5500 5500 5500
+Wire Wire Line
+	4100 6000 4200 6000
+Wire Wire Line
+	4200 5400 4100 5400
+Wire Wire Line
+	4100 5500 4200 5500
+$Comp
+L power:GND #0188
+U 1 1 5FF71EF3
+P 4100 5500
+F 0 "#0188" H 4100 5250 50  0001 C CNN
+F 1 "GND" V 4125 5325 50  0000 R CNN
+F 2 "" H 4100 5500 50  0001 C CNN
+F 3 "" H 4100 5500 50  0001 C CNN
+	1    4100 5500
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:VCC #0189
+U 1 1 5FF71EF9
+P 4100 5400
+F 0 "#0189" H 4100 5250 50  0001 C CNN
+F 1 "VCC" V 4075 5575 50  0000 L CNN
+F 2 "" H 4100 5400 50  0001 C CNN
+F 3 "" H 4100 5400 50  0001 C CNN
+	1    4100 5400
+	0    -1   1    0   
+$EndComp
+Text Label 5500 5900 0    50   ~ 0
+A11
+Text Label 4100 5200 2    50   ~ 0
+DA0
+Text Label 4100 5300 2    50   ~ 0
+DA1
+Text Label 4100 5600 2    50   ~ 0
+DA2
+Text Label 4100 5700 2    50   ~ 0
+DA3
+Text Label 5500 5700 0    50   ~ 0
+DA4
+Text Label 5500 5600 0    50   ~ 0
+DA5
+Text Label 5500 5300 0    50   ~ 0
+DA6
+Text Label 5500 5200 0    50   ~ 0
+DA7
+Text Label 5500 6300 0    50   ~ 0
+A15
+Text Label 4100 6300 2    50   ~ 0
+A16
+Text Label 4100 6200 2    50   ~ 0
+A17
+Text Label 4100 6100 2    50   ~ 0
+A18
+Text Label 4100 6000 2    50   ~ 0
+A19
+Text Label 4100 5000 2    50   ~ 0
+A0
+Text Label 4100 4900 2    50   ~ 0
+A1
+Text Label 4100 4800 2    50   ~ 0
+A2
+Text Label 4100 4700 2    50   ~ 0
+A3
+Text Label 4100 4600 2    50   ~ 0
+A4
+Text Label 5500 4600 0    50   ~ 0
+A5
+Text Label 5500 4700 0    50   ~ 0
+A6
+Text Label 5500 4800 0    50   ~ 0
+A7
+Text Label 5500 4900 0    50   ~ 0
+A8
+Text Label 5500 5000 0    50   ~ 0
+A9
+Text Label 5500 5800 0    50   ~ 0
+A10
+Text Label 5500 6000 0    50   ~ 0
+A12
+Text Label 5500 6100 0    50   ~ 0
+A13
+Text Label 5500 6200 0    50   ~ 0
+A14
+Text Label 5500 5100 0    50   ~ 0
+~RD
+Text Label 4100 5800 2    50   ~ 0
+~WR
+$Comp
+L SamacSys_Parts:AS7C316096A-10TIN Z1105
+U 1 1 5FF71F21
+P 4200 4300
+F 0 "Z1105" H 4825 4625 50  0000 C CNN
+F 1 "AS7C316096A-10TIN" H 4825 4525 50  0000 C CNN
+F 2 "Package_SO:TSOP-I-48_18.4x12mm_P0.5mm" H 5250 4400 50  0001 L CNN
+F 3 "" H 5250 4300 50  0001 L CNN
+F 4 "Alliance Memory SRAM, AS7C316096A-10TIN- 16Mbit" H 5250 4200 50  0001 L CNN "Description"
+F 5 "1.2" H 5250 4100 50  0001 L CNN "Height"
+F 6 "Alliance Memory" H 5250 3800 50  0001 L CNN "Manufacturer_Name"
+F 7 "AS7C316096A-10TIN" H 5250 3700 50  0001 L CNN "Manufacturer_Part_Number"
+	1    4200 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 5900 4200 5900
+Text Label 4100 5900 2    50   ~ 0
+A20
+Text Label 3825 5100 2    50   ~ 0
+~13&14Meg
+Wire Wire Line
+	3825 5100 4200 5100
+Wire Wire Line
+	6500 6075 6600 6075
+Wire Wire Line
+	6500 6175 6600 6175
+Wire Wire Line
+	6500 6275 6600 6275
+Wire Wire Line
+	7900 6275 7800 6275
+Wire Wire Line
+	7900 6175 7800 6175
+Wire Wire Line
+	7900 6075 7800 6075
+$Comp
+L power:GND #0190
+U 1 1 5FF8C553
+P 7900 5375
+F 0 "#0190" H 7900 5125 50  0001 C CNN
+F 1 "GND" V 7925 5200 50  0000 R CNN
+F 2 "" H 7900 5375 50  0001 C CNN
+F 3 "" H 7900 5375 50  0001 C CNN
+	1    7900 5375
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #0191
+U 1 1 5FF8C559
+P 7900 5475
+F 0 "#0191" H 7900 5325 50  0001 C CNN
+F 1 "VCC" V 7875 5650 50  0000 L CNN
+F 2 "" H 7900 5475 50  0001 C CNN
+F 3 "" H 7900 5475 50  0001 C CNN
+	1    7900 5475
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7800 5275 7900 5275
+Wire Wire Line
+	7800 5675 7900 5675
+Wire Wire Line
+	6600 5275 6500 5275
+Wire Wire Line
+	7800 5175 7900 5175
+Wire Wire Line
+	6600 5575 6500 5575
+Wire Wire Line
+	6600 5175 6500 5175
+Wire Wire Line
+	7800 5575 7900 5575
+Wire Wire Line
+	6600 5675 6500 5675
+Wire Wire Line
+	7800 4975 7900 4975
+Wire Wire Line
+	7800 4575 7900 4575
+Wire Wire Line
+	6600 4575 6500 4575
+Wire Wire Line
+	7800 5975 7900 5975
+Wire Wire Line
+	7800 5875 7900 5875
+Wire Wire Line
+	7800 5775 7900 5775
+Wire Wire Line
+	7800 4875 7900 4875
+Wire Wire Line
+	7800 4775 7900 4775
+Wire Wire Line
+	7800 4675 7900 4675
+Wire Wire Line
+	6600 4675 6500 4675
+Wire Wire Line
+	6600 4775 6500 4775
+Wire Wire Line
+	6600 4875 6500 4875
+Wire Wire Line
+	6600 4975 6500 4975
+Wire Wire Line
+	7800 5075 7900 5075
+Wire Wire Line
+	6600 5775 6500 5775
+Wire Wire Line
+	7900 5375 7800 5375
+Wire Wire Line
+	7800 5475 7900 5475
+Wire Wire Line
+	6500 5975 6600 5975
+Wire Wire Line
+	6600 5375 6500 5375
+Wire Wire Line
+	6500 5475 6600 5475
+$Comp
+L power:GND #0192
+U 1 1 5FF8C57B
+P 6500 5475
+F 0 "#0192" H 6500 5225 50  0001 C CNN
+F 1 "GND" V 6525 5300 50  0000 R CNN
+F 2 "" H 6500 5475 50  0001 C CNN
+F 3 "" H 6500 5475 50  0001 C CNN
+	1    6500 5475
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:VCC #0193
+U 1 1 5FF8C581
+P 6500 5375
+F 0 "#0193" H 6500 5225 50  0001 C CNN
+F 1 "VCC" V 6475 5550 50  0000 L CNN
+F 2 "" H 6500 5375 50  0001 C CNN
+F 3 "" H 6500 5375 50  0001 C CNN
+	1    6500 5375
+	0    -1   1    0   
+$EndComp
+Text Label 7900 5875 0    50   ~ 0
+A11
+Text Label 6500 5175 2    50   ~ 0
+DA0
+Text Label 6500 5275 2    50   ~ 0
+DA1
+Text Label 6500 5575 2    50   ~ 0
+DA2
+Text Label 6500 5675 2    50   ~ 0
+DA3
+Text Label 7900 5675 0    50   ~ 0
+DA4
+Text Label 7900 5575 0    50   ~ 0
+DA5
+Text Label 7900 5275 0    50   ~ 0
+DA6
+Text Label 7900 5175 0    50   ~ 0
+DA7
+Text Label 7900 6275 0    50   ~ 0
+A15
+Text Label 6500 6275 2    50   ~ 0
+A16
+Text Label 6500 6175 2    50   ~ 0
+A17
+Text Label 6500 6075 2    50   ~ 0
+A18
+Text Label 6500 5975 2    50   ~ 0
+A19
+Text Label 6500 4975 2    50   ~ 0
+A0
+Text Label 6500 4875 2    50   ~ 0
+A1
+Text Label 6500 4775 2    50   ~ 0
+A2
+Text Label 6500 4675 2    50   ~ 0
+A3
+Text Label 6500 4575 2    50   ~ 0
+A4
+Text Label 7900 4575 0    50   ~ 0
+A5
+Text Label 7900 4675 0    50   ~ 0
+A6
+Text Label 7900 4775 0    50   ~ 0
+A7
+Text Label 7900 4875 0    50   ~ 0
+A8
+Text Label 7900 4975 0    50   ~ 0
+A9
+Text Label 7900 5775 0    50   ~ 0
+A10
+Text Label 7900 5975 0    50   ~ 0
+A12
+Text Label 7900 6075 0    50   ~ 0
+A13
+Text Label 7900 6175 0    50   ~ 0
+A14
+Text Label 7900 5075 0    50   ~ 0
+~RD
+Text Label 6500 5775 2    50   ~ 0
+~WR
+$Comp
+L SamacSys_Parts:AS7C316096A-10TIN Z1106
+U 1 1 5FF8C5A9
+P 6600 4275
+F 0 "Z1106" H 7225 4600 50  0000 C CNN
+F 1 "Z1106" H 7225 4500 50  0000 C CNN
+F 2 "Package_SO:TSOP-I-48_18.4x12mm_P0.5mm" H 7650 4375 50  0001 L CNN
+F 3 "" H 7650 4275 50  0001 L CNN
+F 4 "Alliance Memory SRAM, AS7C316096A-10TIN- 16Mbit" H 7650 4175 50  0001 L CNN "Description"
+F 5 "1.2" H 7650 4075 50  0001 L CNN "Height"
+F 6 "Alliance Memory" H 7650 3775 50  0001 L CNN "Manufacturer_Name"
+F 7 "AS7C316096A-10TIN" H 7650 3675 50  0001 L CNN "Manufacturer_Part_Number"
+	1    6600 4275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 5875 6600 5875
+Text Label 6500 5875 2    50   ~ 0
+A20
+Text Label 4925 9050 0    50   ~ 0
+~15&16Meg
+Wire Wire Line
+	4925 9050 4825 9050
+Text Label 1725 5075 2    50   ~ 0
+A0
+Wire Wire Line
+	4225 9150 4325 9150
+Wire Wire Line
+	4225 9050 4325 9050
+Wire Wire Line
+	4225 8950 4325 8950
+Wire Wire Line
+	4825 7550 4925 7550
+Wire Wire Line
+	4825 7650 4925 7650
+Wire Wire Line
+	4825 7450 4925 7450
+Wire Wire Line
+	4825 7750 4925 7750
+Wire Wire Line
+	4325 7750 4225 7750
+Wire Wire Line
+	4325 7650 4225 7650
+Wire Wire Line
+	4325 7550 4225 7550
+Wire Wire Line
+	4325 7450 4225 7450
+Wire Wire Line
+	4325 7350 4225 7350
+Wire Wire Line
+	4825 8350 4925 8350
+Wire Wire Line
+	4925 9250 4825 9250
+Text Label 4925 7450 0    50   ~ 0
+DA0
+Text Label 4925 7550 0    50   ~ 0
+DA1
+Text Label 4925 7750 0    50   ~ 0
+DA3
+Text Label 4225 8950 2    50   ~ 0
+A16
+Text Label 4225 9050 2    50   ~ 0
+A17
+Text Label 4225 9150 2    50   ~ 0
+A18
+Text Label 4925 9250 0    50   ~ 0
+A19
+Text Label 4225 7450 2    50   ~ 0
+A1
+Text Label 4225 7550 2    50   ~ 0
+A2
+Text Label 4225 7650 2    50   ~ 0
+A3
+Text Label 4225 7750 2    50   ~ 0
+A4
+Text Label 4925 8350 0    50   ~ 0
+~WR
+Wire Wire Line
+	4925 9150 4825 9150
+Text Label 4925 9150 0    50   ~ 0
+A20
+Text Label 4925 8850 0    50   ~ 0
+~11&12Meg
+Wire Wire Line
+	4925 8850 4825 8850
+Text Label 4225 7350 2    50   ~ 0
+A0
+Wire Wire Line
+	4225 8850 4325 8850
+Wire Wire Line
+	4225 8750 4325 8750
+Wire Wire Line
+	4225 8650 4325 8650
+$Comp
+L power:GND #0101
+U 1 1 5DC5E1B4
+P 4225 9250
+F 0 "#0101" H 4225 9000 50  0001 C CNN
+F 1 "GND" V 4250 9075 50  0000 R CNN
+F 2 "" H 4225 9250 50  0001 C CNN
+F 3 "" H 4225 9250 50  0001 C CNN
+	1    4225 9250
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	4825 8050 4925 8050
+Wire Wire Line
+	4825 7850 4925 7850
+Wire Wire Line
+	4825 8150 4925 8150
+Wire Wire Line
+	4825 7950 4925 7950
+Wire Wire Line
+	4325 8250 4225 8250
+Wire Wire Line
+	4325 7850 4225 7850
+Wire Wire Line
+	4325 8550 4225 8550
+Wire Wire Line
+	4325 8450 4225 8450
+Wire Wire Line
+	4325 8350 4225 8350
+Wire Wire Line
+	4325 8150 4225 8150
+Wire Wire Line
+	4325 8050 4225 8050
+Wire Wire Line
+	4325 7950 4225 7950
+Wire Wire Line
+	4825 8250 4925 8250
+Wire Wire Line
+	4225 9250 4325 9250
+Text Label 4225 8450 2    50   ~ 0
+A11
+Text Label 4925 7850 0    50   ~ 0
+DA4
+Text Label 4925 7950 0    50   ~ 0
+DA5
+Text Label 4925 8050 0    50   ~ 0
+DA6
+Text Label 4925 8150 0    50   ~ 0
+DA7
+Text Label 4225 8850 2    50   ~ 0
+A15
+Text Label 4225 7850 2    50   ~ 0
+A5
+Text Label 4225 7950 2    50   ~ 0
+A6
+Text Label 4225 8050 2    50   ~ 0
+A7
+Text Label 4225 8150 2    50   ~ 0
+A8
+Text Label 4225 8250 2    50   ~ 0
+A9
+Text Label 4225 8350 2    50   ~ 0
+A10
+Text Label 4225 8550 2    50   ~ 0
+A12
+Text Label 4225 8650 2    50   ~ 0
+A13
+Text Label 4225 8750 2    50   ~ 0
+A14
+Text Label 4925 8250 0    50   ~ 0
+~RD
+Text Label 4925 7650 0    50   ~ 0
+DA2
+$Comp
+L power:VCC #0102
+U 1 1 5DC31854
+P 4925 7350
+F 0 "#0102" H 4925 7200 50  0001 C CNN
+F 1 "VCC" V 4900 7525 50  0000 L CNN
+F 2 "" H 4925 7350 50  0001 C CNN
+F 3 "" H 4925 7350 50  0001 C CNN
+	1    4925 7350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4825 7350 4925 7350
+Wire Wire Line
+	4925 8950 4825 8950
+Text Label 4925 8950 0    50   ~ 0
+~13&14Meg
+Wire Wire Line
+	6275 2050 6650 2050
+Text Label 6275 2050 2    50   ~ 0
+~7&8Meg
+Wire Wire Line
+	8775 2025 9150 2025
+Text Label 8775 2025 2    50   ~ 0
+~9&10Meg
+Wire Wire Line
+	4925 8750 4825 8750
+Text Label 4925 8750 0    50   ~ 0
+~9&10Meg
+Wire Wire Line
+	4925 8650 4825 8650
+Text Label 4925 8650 0    50   ~ 0
+~7&8Meg
+Text Label 4925 8550 0    50   ~ 0
+~5&6Meg
+Wire Wire Line
+	4925 8550 4825 8550
+Text Label 4925 8450 0    50   ~ 0
+~3&4Meg
+Wire Wire Line
+	4925 8450 4825 8450
+$Comp
+L Connector_Generic:Conn_02x20_Counter_Clockwise J1
+U 1 1 5DC2B09E
+P 4525 8250
+F 0 "J1" H 4600 9400 50  0000 C CNN
+F 1 "Conn_02x20_Counter_Clockwise_MountingPin" H 4600 9300 50  0000 C CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_2x20_P1.27mm_Vertical" H 4525 8250 50  0001 C CNN
+F 3 "~" H 4525 8250 50  0001 C CNN
+	1    4525 8250
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

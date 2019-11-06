@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 5
+Sheet 3 6
 Title "JupiterAceZ180"
 Date "2019-08-26"
 Rev "Alpha"
@@ -14,70 +14,36 @@ Comment2 "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 Comment3 "Attribution-NonCommercial-ShareAlike 4.0 International License."
 Comment4 "This work is licensed under a Creative Commons "
 $EndDescr
-Text GLabel 1475 5300 0    50   Input ~ 0
-CKS
-Text GLabel 1425 5200 0    50   Input ~ 0
-TxS
-Text GLabel 1425 5100 0    50   Input ~ 0
-RxS\~CTS~
-Wire Wire Line
-	1425 5200 1975 5200
-Wire Wire Line
-	1425 5100 1975 5100
-Wire Wire Line
-	1975 5100 1975 4875
-Connection ~ 1975 5100
-Wire Wire Line
-	1975 4875 2450 4875
-Wire Wire Line
-	1975 5200 1975 5100
-Wire Wire Line
-	1475 5300 2450 5300
-Wire Wire Line
-	2450 5075 2450 5300
 $Comp
 L power:GND #~~~SUPPLY?
 U 1 1 618F6985
-P 2250 4975
+P 6725 3475
 AR Path="/618F6985" Ref="#~~~SUPPLY?"  Part="1" 
 AR Path="/5D9DD1F0/618F6985" Ref="#~~~SUPPLY0103"  Part="1" 
-F 0 "#~~~SUPPLY0103" H 2250 4975 50  0001 C CNN
-F 1 "GND" H 2175 4850 59  0000 L BNN
-F 2 "" H 2250 4975 50  0001 C CNN
-F 3 "" H 2250 4975 50  0001 C CNN
-	1    2250 4975
+F 0 "#~~~SUPPLY0103" H 6725 3475 50  0001 C CNN
+F 1 "GND" V 6600 3450 59  0000 C CNN
+F 2 "" H 6725 3475 50  0001 C CNN
+F 3 "" H 6725 3475 50  0001 C CNN
+	1    6725 3475
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2450 4975 2250 4975
+	6925 3475 6725 3475
 Wire Wire Line
-	3130 4975 3050 4975
-$Comp
-L power:VCC #~~~P+?
-U 1 1 618F697D
-P 3130 4975
-AR Path="/618F697D" Ref="#~~~P+?"  Part="1" 
-AR Path="/5D9DD1F0/618F697D" Ref="#~~~P+0101"  Part="1" 
-F 0 "#~~~P+0101" H 3130 4975 50  0001 C CNN
-F 1 "VCC" V 3130 4975 59  0000 L BNN
-F 2 "" H 3130 4975 50  0001 C CNN
-F 3 "" H 3130 4975 50  0001 C CNN
-	1    3130 4975
-	0    1    -1   0   
-$EndComp
-NoConn ~ 3050 5075
-NoConn ~ 3050 4875
+	7605 3475 7525 3475
+NoConn ~ 7525 3575
+NoConn ~ 7525 3375
 $Comp
 L Connector:Mini-DIN-6 PS/2
 U 1 1 618F6975
-P 2750 4975
+P 7225 3475
 AR Path="/5D9DD1F0/618F6975" Ref="PS/2"  Part="1" 
 AR Path="/618F6975" Ref="J?"  Part="1" 
-F 0 "PS/2" H 2750 4575 50  0000 C CNN
-F 1 "Mini-DIN-6" H 2750 4675 50  0000 C CNN
-F 2 "Local:5749180-1" H 2750 4975 50  0001 C CNN
-F 3 "http://service.powerdynamics.com/ec/Catalog17/Section%2011.pdf" H 2750 4975 50  0001 C CNN
-	1    2750 4975
+F 0 "PS/2" H 7225 3075 50  0000 C CNN
+F 1 "Mini-DIN-6" H 7225 3175 50  0000 C CNN
+F 2 "Local:5749180-1" H 7225 3475 50  0001 C CNN
+F 3 "http://service.powerdynamics.com/ec/Catalog17/Section%2011.pdf" H 7225 3475 50  0001 C CNN
+	1    7225 3475
 	-1   0    0    1   
 $EndComp
 Text GLabel 1800 2350 2    50   Input ~ 0
@@ -175,14 +141,8 @@ Text GLabel 1800 1750 2    50   Input ~ 0
 PA7
 Wire Wire Line
 	1750 1750 1800 1750
-Text GLabel 1200 4025 0    50   Input ~ 0
-~SYNCB
-Text GLabel 1200 3925 0    50   Input ~ 0
-~RTxCB
 Text GLabel 1200 3825 0    50   Input ~ 0
 RxDB
-Text GLabel 1200 3725 0    50   Input ~ 0
-TRxCB
 Text GLabel 1200 3625 0    50   Input ~ 0
 TxDB
 Text GLabel 1800 3825 2    50   Input ~ 0
@@ -191,24 +151,14 @@ Text GLabel 1800 3725 2    50   Input ~ 0
 ~CTSB
 Text GLabel 1800 3625 2    50   Input ~ 0
 ~DCDB
-Text GLabel 1800 3350 2    50   Input ~ 0
-~W~\REQA
-Text GLabel 1800 3250 2    50   Input ~ 0
-~DTR~\REQA
 Text GLabel 1800 3150 2    50   Input ~ 0
 ~RTSA
 Text GLabel 1800 3050 2    50   Input ~ 0
 ~CTSA
 Text GLabel 1800 2950 2    50   Input ~ 0
 ~DCDA
-Text GLabel 1200 3350 0    50   Input ~ 0
-~SYNCA
-Text GLabel 1200 3250 0    50   Input ~ 0
-~RTxCA
 Text GLabel 1200 3150 0    50   Input ~ 0
 RxDA
-Text GLabel 1200 3050 0    50   Input ~ 0
-TRxCA
 Text GLabel 1200 2950 0    50   Input ~ 0
 TxDA
 Text GLabel 1200 2650 0    50   Input ~ 0
@@ -355,136 +305,206 @@ F 3 "~" H 1450 1850 50  0001 C CNN
 	1    1450 1850
 	1    0    0    -1  
 $EndComp
-Text GLabel 6725 2550 0    50   Input ~ 0
+NoConn ~ 1800 3350
+NoConn ~ 1800 3250
+NoConn ~ 1200 3050
+NoConn ~ 1200 3250
+NoConn ~ 1200 3350
+NoConn ~ 1200 3725
+NoConn ~ 1200 3925
+NoConn ~ 1200 4025
+$Comp
+L MCU_ST_STM8:STM8S003F3P Z1100
+U 1 1 5DC55916
+P 5100 3575
+F 0 "Z1100" H 5450 4500 50  0000 C CNN
+F 1 "STM8S003F3P" H 4775 4500 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 5150 4675 50  0001 L CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00024550.pdf" H 5050 3175 50  0001 C CNN
+	1    5100 3575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 3575 6925 3575
+$Comp
+L power:VCC #~~~P+?
+U 1 1 618F697D
+P 7605 3475
+AR Path="/618F697D" Ref="#~~~P+?"  Part="1" 
+AR Path="/5D9DD1F0/618F697D" Ref="#~~~P+0101"  Part="1" 
+F 0 "#~~~P+0101" H 7605 3475 50  0001 C CNN
+F 1 "VCC" V 7630 3620 59  0000 L CNN
+F 2 "" H 7605 3475 50  0001 C CNN
+F 3 "" H 7605 3475 50  0001 C CNN
+	1    7605 3475
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	6925 3375 6475 3375
+Wire Wire Line
+	6475 3375 6475 3725
+Wire Wire Line
+	6475 3725 5775 3725
+Wire Wire Line
+	5775 3725 5775 3675
+Wire Wire Line
+	5775 3675 5700 3675
+Wire Wire Line
+	5700 3775 5775 3775
+Wire Wire Line
+	5775 3775 5775 3725
+Connection ~ 5775 3725
+Wire Wire Line
+	5100 2495 5100 2575
+$Comp
+L power:VCC #
+U 1 1 5DC8032B
+P 5100 2495
+AR Path="/5DC8032B" Ref="#"  Part="P+?" 
+AR Path="/5D9DD1F0/5DC8032B" Ref="#0168"  Part="1" 
+F 0 "#0168" H 5100 2495 50  0001 C CNN
+F 1 "VCC" V 5100 2495 59  0000 L BNN
+F 2 "" H 5100 2495 50  0001 C CNN
+F 3 "" H 5100 2495 50  0001 C CNN
+	1    5100 2495
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #
+U 1 1 5DC868D4
+P 5100 4650
+AR Path="/5DC868D4" Ref="#"  Part="SUPPLY?" 
+AR Path="/5D9DD1F0/5DC868D4" Ref="#0169"  Part="1" 
+F 0 "#0169" H 5100 4650 50  0001 C CNN
+F 1 "GND" H 5025 4525 59  0000 L BNN
+F 2 "" H 5100 4650 50  0001 C CNN
+F 3 "" H 5100 4650 50  0001 C CNN
+	1    5100 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 4575 5100 4650
+Text GLabel 4450 3275 0    50   Input ~ 0
 I2C-Clock
 Wire Wire Line
-	6775 2550 6725 2550
-Text GLabel 6725 2650 0    50   Input ~ 0
+	4500 3275 4450 3275
+Text GLabel 4450 3375 0    50   Input ~ 0
 I2C-Data
 Wire Wire Line
-	6775 2650 6725 2650
+	4500 3375 4450 3375
+NoConn ~ 4500 4175
 $Comp
-L power:GND #0161
-U 1 1 5DC12AFF
-P 6675 1850
-F 0 "#0161" H 6675 1850 50  0001 C CNN
-F 1 "GND" V 6700 1570 59  0000 L BNN
-F 2 "" H 6675 1850 50  0001 C CNN
-F 3 "" H 6675 1850 50  0001 C CNN
-	1    6675 1850
+L Device:C C1000
+U 1 1 5DCA9033
+P 4225 4275
+F 0 "C1000" H 4350 4325 50  0000 L CNN
+F 1 "1uf" H 4350 4275 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 4263 4125 50  0001 C CNN
+F 3 "~" H 4225 4275 50  0001 C CNN
+	1    4225 4275
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #
+U 1 1 5DCAA50B
+P 4000 4275
+AR Path="/5DCAA50B" Ref="#"  Part="SUPPLY?" 
+AR Path="/5D9DD1F0/5DCAA50B" Ref="#0170"  Part="1" 
+F 0 "#0170" H 4000 4275 50  0001 C CNN
+F 1 "GND" H 3925 4150 59  0000 L BNN
+F 2 "" H 4000 4275 50  0001 C CNN
+F 3 "" H 4000 4275 50  0001 C CNN
+	1    4000 4275
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	6775 1850 6675 1850
+	4075 4275 4000 4275
 $Comp
-L power:VCC #0162
-U 1 1 5DC12B06
-P 10375 1850
-F 0 "#0162" H 10375 1700 50  0001 C CNN
-F 1 "VCC" V 10395 1995 50  0000 L CNN
-F 2 "" H 10375 1850 50  0001 C CNN
-F 3 "" H 10375 1850 50  0001 C CNN
-	1    10375 1850
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	10275 1850 10375 1850
-$Comp
-L SamacSys_Parts:Z51F3220SKX Z?
-U 1 1 5DC12B13
-P 6775 1850
-AR Path="/5DC12B13" Ref="Z?"  Part="1" 
-AR Path="/5D9DD1F0/5DC12B13" Ref="Z1000"  Part="1" 
-F 0 "Z1000" H 8525 2150 50  0000 C CNN
-F 1 "Z51F3220SKX" H 8525 2050 50  0000 C CNN
-F 2 "SOIC127P1040X254-32N" H 10125 1950 50  0001 L CNN
-F 3 "http://www.zilog.com/docs/ps0299.pdf" H 10125 1850 50  0001 L CNN
-F 4 "8-bit Microcontrollers - MCU Ser Core LCD Fl MCU 32KB Fl, 1K bytes" H 10125 1750 50  0001 L CNN "Description"
-F 5 "2.54" H 10125 1650 50  0001 L CNN "Height"
-F 6 "Zilog" H 10125 1350 50  0001 L CNN "Manufacturer_Name"
-F 7 "Z51F3220SKX" H 10125 1250 50  0001 L CNN "Manufacturer_Part_Number"
-	1    6775 1850
+L Connector_Generic:Conn_02x06_Counter_Clockwise J1000
+U 1 1 5DD0638C
+P 5050 1650
+F 0 "J1000" H 5100 2100 50  0000 C CNN
+F 1 "Conn_02x06_Counter_Clockwise" H 5100 2000 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical" H 5050 1650 50  0001 C CNN
+F 3 "~" H 5050 1650 50  0001 C CNN
+	1    5050 1650
 	1    0    0    -1  
 $EndComp
-Text GLabel 10325 3050 2    50   Input ~ 0
-CKS
 Wire Wire Line
-	10275 3050 10325 3050
+	4500 2975 3325 2975
 Wire Wire Line
-	3625 2025 3675 2025
+	4500 3075 3450 3075
 Wire Wire Line
-	3625 1900 3675 1900
+	4500 2875 3175 2875
 Wire Wire Line
-	3625 2150 3675 2150
+	4850 1450 3175 1450
 Wire Wire Line
-	3625 2300 3675 2300
+	3175 1450 3175 2875
 Wire Wire Line
-	3625 2450 3675 2450
+	4850 1550 3325 1550
 Wire Wire Line
-	3625 2775 3675 2775
+	3325 1550 3325 2975
 Wire Wire Line
-	3625 2650 3675 2650
+	4850 1650 3450 1650
 Wire Wire Line
-	3625 2900 3675 2900
+	3450 1650 3450 3075
 Wire Wire Line
-	3650 1300 3700 1300
+	3575 3575 3575 1750
 Wire Wire Line
-	3650 1600 3700 1600
-Text GLabel 3675 1900 2    50   Input ~ 0
-~RTxCA
-Text GLabel 3675 2150 2    50   Input ~ 0
-~SYNCA
-Text GLabel 3675 2300 2    50   Input ~ 0
-~DTR~\REQA
-Text GLabel 3675 2450 2    50   Input ~ 0
-~W~\REQA
-Text GLabel 3700 1600 2    50   Input ~ 0
-RxS\~CTS~
-Text GLabel 3700 1300 2    50   Input ~ 0
-TxS
-Text GLabel 3675 2900 2    50   Input ~ 0
-~SYNCB
-Text GLabel 3675 2650 2    50   Input ~ 0
-~RTxCB
-Text GLabel 3675 2775 2    50   Input ~ 0
-TRxCB
-Text GLabel 3675 2025 2    50   Input ~ 0
-TRxCA
-$Comp
-L MCU_ST_STM8:STM8S003F3P Z1001
-U 1 1 5D84CCBA
-P 5650 3800
-F 0 "Z1001" H 5650 5000 50  0000 C CNN
-F 1 "STM8S003F3P" H 5650 4900 50  0000 C CNN
-F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 5700 4900 50  0001 L CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00024550.pdf" H 5600 3400 50  0001 C CNN
-	1    5650 3800
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #0163
-U 1 1 5F5182AF
-P 5650 2700
-F 0 "#0163" H 5650 2700 50  0001 C CNN
-F 1 "GND" V 5675 2420 59  0000 L BNN
-F 2 "" H 5650 2700 50  0001 C CNN
-F 3 "" H 5650 2700 50  0001 C CNN
-	1    5650 2700
-	-1   0    0    1   
-$EndComp
+	3575 1750 4850 1750
 Wire Wire Line
-	5650 2800 5650 2700
-$Comp
-L power:VCC #0164
-U 1 1 5F51B9A3
-P 5650 4900
-F 0 "#0164" H 5650 4750 50  0001 C CNN
-F 1 "VCC" V 5670 5045 50  0000 L CNN
-F 2 "" H 5650 4900 50  0001 C CNN
-F 3 "" H 5650 4900 50  0001 C CNN
-	1    5650 4900
-	-1   0    0    1   
-$EndComp
+	3575 3575 4500 3575
 Wire Wire Line
-	5650 4800 5650 4900
+	3700 3675 3700 1850
+Wire Wire Line
+	3700 1850 4850 1850
+Wire Wire Line
+	3700 3675 4500 3675
+Wire Wire Line
+	4500 3775 3825 3775
+Wire Wire Line
+	3825 3775 3825 1950
+Wire Wire Line
+	3825 1950 4850 1950
+Wire Wire Line
+	4375 4275 4500 4275
+Wire Wire Line
+	4500 3875 3175 3875
+Wire Wire Line
+	3175 3875 3175 5225
+Wire Wire Line
+	3175 5225 5950 5225
+Wire Wire Line
+	5950 5225 5950 1950
+Wire Wire Line
+	5950 1950 5350 1950
+Wire Wire Line
+	4500 3975 3250 3975
+Wire Wire Line
+	3250 3975 3250 5150
+Wire Wire Line
+	3250 5150 6050 5150
+Wire Wire Line
+	6050 5150 6050 1850
+Wire Wire Line
+	6050 1850 5350 1850
+Wire Wire Line
+	5700 3475 6225 3475
+Wire Wire Line
+	6225 3475 6225 1750
+Wire Wire Line
+	6225 1750 5350 1750
+Wire Wire Line
+	5700 3375 6350 3375
+Wire Wire Line
+	6350 3375 6350 1650
+Wire Wire Line
+	6350 1650 5350 1650
+Wire Wire Line
+	6450 1550 5350 1550
+NoConn ~ 5350 1450
+Wire Wire Line
+	5700 3275 6450 3275
+Wire Wire Line
+	6450 1550 6450 3275
 $EndSCHEMATC

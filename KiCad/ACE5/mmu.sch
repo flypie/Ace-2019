@@ -1,0 +1,391 @@
+EESchema Schematic File Version 4
+LIBS:ACE5-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 5 6
+Title "ACE4NOKB"
+Date "2019-10-24"
+Rev "Alpha"
+Comp "Ontobus"
+Comment1 "John Bradley"
+Comment2 "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+Comment3 "Attribution-NonCommercial-ShareAlike 4.0 International License."
+Comment4 "This work is licensed under a Creative Commons "
+$EndDescr
+Wire Wire Line
+	8350 -75  8400 -75 
+Wire Wire Line
+	2925 3225 2825 3225
+Wire Wire Line
+	2925 2825 2825 2825
+Wire Wire Line
+	4975 3300 4875 3300
+Wire Wire Line
+	4975 2900 4875 2900
+$Comp
+L power:GND #0137
+U 1 1 5E26B795
+P 3425 3575
+F 0 "#0137" H 3425 3325 50  0001 C CNN
+F 1 "GND" H 3475 3375 50  0000 C CNN
+F 2 "" H 3425 3575 50  0001 C CNN
+F 3 "" H 3425 3575 50  0001 C CNN
+	1    3425 3575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3425 3575 3425 3525
+$Comp
+L power:GND #0136
+U 1 1 5E2246FB
+P 5475 3650
+F 0 "#0136" H 5475 3400 50  0001 C CNN
+F 1 "GND" H 5525 3450 50  0000 C CNN
+F 2 "" H 5475 3650 50  0001 C CNN
+F 3 "" H 5475 3650 50  0001 C CNN
+	1    5475 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5475 3650 5475 3600
+$Comp
+L power:VCC #0135
+U 1 1 5E1D9DCC
+P 5475 1800
+F 0 "#0135" H 5475 1650 50  0001 C CNN
+F 1 "VCC" H 5515 2010 50  0000 C CNN
+F 2 "" H 5475 1800 50  0001 C CNN
+F 3 "" H 5475 1800 50  0001 C CNN
+	1    5475 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5475 1900 5475 1800
+$Comp
+L power:VCC #0134
+U 1 1 5E1969CB
+P 3425 1725
+F 0 "#0134" H 3425 1575 50  0001 C CNN
+F 1 "VCC" H 3465 1935 50  0000 C CNN
+F 2 "" H 3425 1725 50  0001 C CNN
+F 3 "" H 3425 1725 50  0001 C CNN
+	1    3425 1725
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3425 1825 3425 1725
+$Comp
+L power:GND #0133
+U 1 1 5E10A4A4
+P 2825 2725
+F 0 "#0133" H 2825 2475 50  0001 C CNN
+F 1 "GND" H 2875 2525 50  0000 C CNN
+F 2 "" H 2825 2725 50  0001 C CNN
+F 3 "" H 2825 2725 50  0001 C CNN
+	1    2825 2725
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #0132
+U 1 1 5E1097EE
+P 2825 3125
+F 0 "#0132" H 2825 2875 50  0001 C CNN
+F 1 "GND" H 2875 2925 50  0000 C CNN
+F 2 "" H 2825 3125 50  0001 C CNN
+F 3 "" H 2825 3125 50  0001 C CNN
+	1    2825 3125
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #0131
+U 1 1 5E1083F8
+P 4875 2800
+F 0 "#0131" H 4875 2550 50  0001 C CNN
+F 1 "GND" H 4925 2600 50  0000 C CNN
+F 2 "" H 4875 2800 50  0001 C CNN
+F 3 "" H 4875 2800 50  0001 C CNN
+	1    4875 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #0130
+U 1 1 5E0809C8
+P 4875 3200
+F 0 "#0130" H 4875 2950 50  0001 C CNN
+F 1 "GND" H 4925 3000 50  0000 C CNN
+F 2 "" H 4875 3200 50  0001 C CNN
+F 3 "" H 4875 3200 50  0001 C CNN
+	1    4875 3200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2925 2625 2825 2625
+Wire Wire Line
+	2925 2725 2825 2725
+Text Label 2825 2625 2    50   ~ 0
+A12
+Wire Wire Line
+	4975 2700 4875 2700
+Wire Wire Line
+	4975 2800 4875 2800
+Wire Wire Line
+	2925 3025 2825 3025
+Wire Wire Line
+	2925 3125 2825 3125
+Text Label 2825 3025 2    50   ~ 0
+A12
+Wire Wire Line
+	4975 3100 4875 3100
+Wire Wire Line
+	4975 3200 4875 3200
+Text Label 4875 3100 2    50   ~ 0
+A12
+Wire Wire Line
+	4865 2300 4975 2300
+Wire Wire Line
+	4865 2400 4975 2400
+Wire Wire Line
+	4865 2500 4975 2500
+Wire Wire Line
+	2815 2125 2925 2125
+Wire Wire Line
+	2815 2225 2925 2225
+Wire Wire Line
+	2815 2325 2925 2325
+Wire Wire Line
+	2815 2425 2925 2425
+Wire Wire Line
+	5975 2500 6075 2500
+Wire Wire Line
+	5975 2400 6075 2400
+Wire Wire Line
+	5975 2300 6075 2300
+Wire Wire Line
+	5975 2200 6075 2200
+Wire Wire Line
+	3925 2425 4025 2425
+Wire Wire Line
+	3925 2325 4025 2325
+Wire Wire Line
+	3925 2225 4025 2225
+Wire Wire Line
+	3925 2125 4025 2125
+$Comp
+L 74xx:74LS670 Z105
+U 1 1 5DC05EE5
+P 3425 2625
+F 0 "Z105" H 3425 3650 50  0000 C CNN
+F 1 "SN74LS670N" H 3425 3550 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 3425 2625 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS670" H 3425 2625 50  0001 C CNN
+	1    3425 2625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3875 5450 3925 5450
+Wire Wire Line
+	3875 5550 3925 5550
+Connection ~ 3875 5550
+Wire Wire Line
+	3875 5550 3875 5450
+Wire Wire Line
+	3725 5550 3875 5550
+Wire Wire Line
+	3825 4850 3925 4850
+Wire Wire Line
+	3825 4750 3925 4750
+Wire Wire Line
+	3825 4650 3925 4650
+Wire Wire Line
+	3825 4550 3925 4550
+Text Label 3825 4550 2    50   ~ 0
+A12
+Wire Wire Line
+	4925 5250 5025 5250
+Text Label 5025 4550 0    50   ~ 0
+MA12
+Wire Wire Line
+	4925 4550 5025 4550
+Text Label 5025 5150 0    50   ~ 0
+MA18
+Text Label 5025 5050 0    50   ~ 0
+MA17
+Text Label 5025 4950 0    50   ~ 0
+MA16
+Text Label 5025 4850 0    50   ~ 0
+MA15
+Text Label 5025 4750 0    50   ~ 0
+MA14
+Text Label 5025 4650 0    50   ~ 0
+MA13
+Text Label 5025 5250 0    50   ~ 0
+MA19
+Wire Wire Line
+	4925 5150 5025 5150
+Wire Wire Line
+	4925 5050 5025 5050
+Wire Wire Line
+	4925 4950 5025 4950
+Wire Wire Line
+	4925 4850 5025 4850
+Wire Wire Line
+	4925 4750 5025 4750
+Wire Wire Line
+	4925 4650 5025 4650
+Wire Wire Line
+	3925 5250 3835 5250
+$Comp
+L power:GND #~SUPPLY0102
+U 1 1 5DF94578
+P 3835 5250
+F 0 "#~SUPPLY0102" H 3835 5250 50  0001 C CNN
+F 1 "GND" H 3760 5125 50  0000 L BNN
+F 2 "" H 3835 5250 50  0001 C CNN
+F 3 "" H 3835 5250 50  0001 C CNN
+	1    3835 5250
+	0    1    1    0   
+$EndComp
+$Comp
+L 74xx:74LS541 Z106
+U 1 1 6567AE36
+P 4425 5050
+F 0 "Z106" H 4200 5700 50  0000 C CNN
+F 1 "SN74AHCT541N" H 4750 5700 50  0000 C CNN
+F 2 "Package_DIP:DIP-20_W7.62mm" H 4425 5050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74ahct541.pdf" H 4425 5050 50  0001 C CNN
+F 4 "Texas Instruments" H 4425 5050 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT541N" H 4425 5050 50  0001 C CNN "Manufacturer_Part_Number"
+	1    4425 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #~PWR0119
+U 1 1 65F42A2D
+P 4425 5950
+F 0 "#~PWR0119" H 4425 5700 50  0001 C CNN
+F 1 "GND" H 4450 5750 50  0000 C CNN
+F 2 "" H 4425 5950 50  0001 C CNN
+F 3 "" H 4425 5950 50  0001 C CNN
+	1    4425 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3925 4950 3835 4950
+Wire Wire Line
+	4425 4250 4425 4140
+Wire Wire Line
+	4425 5850 4425 5950
+Wire Wire Line
+	3925 5050 3835 5050
+$Comp
+L power:GND #~SUPPLY0103
+U 1 1 5F7BB948
+P 3835 4950
+F 0 "#~SUPPLY0103" H 3835 4950 50  0001 C CNN
+F 1 "GND" H 3760 4825 50  0000 L BNN
+F 2 "" H 3835 4950 50  0001 C CNN
+F 3 "" H 3835 4950 50  0001 C CNN
+	1    3835 4950
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #~SUPPLY0110
+U 1 1 15C4ECC7
+P 3835 5050
+F 0 "#~SUPPLY0110" H 3835 5050 50  0001 C CNN
+F 1 "GND" H 3760 4925 50  0000 L BNN
+F 2 "" H 3835 5050 50  0001 C CNN
+F 3 "" H 3835 5050 50  0001 C CNN
+	1    3835 5050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3925 5150 3835 5150
+$Comp
+L power:GND #~SUPPLY0101
+U 1 1 5DF9456E
+P 3835 5150
+F 0 "#~SUPPLY0101" H 3835 5150 50  0001 C CNN
+F 1 "GND" H 3760 5025 50  0000 L BNN
+F 2 "" H 3835 5150 50  0001 C CNN
+F 3 "" H 3835 5150 50  0001 C CNN
+	1    3835 5150
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VCC #~PWR0151
+U 1 1 65F45603
+P 4425 4140
+F 0 "#~PWR0151" H 4425 3990 50  0001 C CNN
+F 1 "VCC" H 4475 4355 50  0000 C CNN
+F 2 "" H 4425 4140 50  0001 C CNN
+F 3 "" H 4425 4140 50  0001 C CNN
+	1    4425 4140
+	1    0    0    -1  
+$EndComp
+Text GLabel 2815 2125 0    50   Input ~ 0
+DA0
+Text GLabel 4875 2900 0    50   Input ~ 0
+~PAGING
+Text GLabel 2825 2825 0    50   Input ~ 0
+~PAGING
+Text GLabel 2825 3225 0    50   Input ~ 0
+~PAGED8K
+Text GLabel 4875 3300 0    50   Input ~ 0
+~PAGED8K
+Wire Wire Line
+	4865 2200 4975 2200
+$Comp
+L 74xx:74LS670 Z107
+U 1 1 5DC59E5E
+P 5475 2700
+F 0 "Z107" H 5500 3700 50  0000 C CNN
+F 1 "SN74LS670N" H 5500 3600 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 5475 2700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS770" H 5475 2700 50  0001 C CNN
+	1    5475 2700
+	1    0    0    -1  
+$EndComp
+Text GLabel 3725 5550 0    50   Input ~ 0
+PAGED8K
+Text GLabel 4025 2125 2    50   Input ~ 0
+MA12
+Text GLabel 4025 2225 2    50   Input ~ 0
+MA13
+Text GLabel 4025 2325 2    50   Input ~ 0
+MA14
+Text GLabel 4025 2425 2    50   Input ~ 0
+MA15
+Text GLabel 2815 2225 0    50   Input ~ 0
+DA1
+Text GLabel 2815 2325 0    50   Input ~ 0
+DA2
+Text GLabel 2815 2425 0    50   Input ~ 0
+DA3
+Text GLabel 4865 2200 0    50   Input ~ 0
+DA4
+Text GLabel 4865 2300 0    50   Input ~ 0
+DA5
+Text GLabel 4865 2400 0    50   Input ~ 0
+DA6
+Text GLabel 4865 2500 0    50   Input ~ 0
+DA7
+Text GLabel 4875 2700 0    50   Input ~ 0
+A12
+Text GLabel 6075 2200 2    50   Input ~ 0
+MA16
+Text GLabel 6075 2300 2    50   Input ~ 0
+MA17
+Text GLabel 6075 2400 2    50   Input ~ 0
+MA18
+Text GLabel 6075 2500 2    50   Input ~ 0
+MA19
+Text GLabel 3825 4650 0    50   Input ~ 0
+A13
+Text GLabel 3825 4750 0    50   Input ~ 0
+A14
+Text GLabel 3825 4850 0    50   Input ~ 0
+A15
+$EndSCHEMATC
