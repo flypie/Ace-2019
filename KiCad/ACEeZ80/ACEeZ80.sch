@@ -257,22 +257,22 @@ F 7 "EZ80L92AZ050EG" H 2550 5625 50  0001 L CNN "Manufacturer_Part_Number"
 	1    0    0    -1  
 $EndComp
 NoConn ~ 10500 2075
-Text GLabel 10500 3575 2    50   Input ~ 0
-A23
 Text GLabel 10500 3475 2    50   Input ~ 0
+A23
+Text GLabel 10500 3575 2    50   Input ~ 0
 A22
 Wire Wire Line
-	10400 3475 10500 3475
-Wire Wire Line
 	10400 3575 10500 3575
-Text GLabel 9800 3475 0    50   Input ~ 0
+Wire Wire Line
+	10400 3475 10500 3475
+Text GLabel 10500 3775 2    50   Input ~ 0
 A20
-Text GLabel 9800 3575 0    50   Input ~ 0
+Text GLabel 10500 3675 2    50   Input ~ 0
 A21
 Wire Wire Line
-	9900 3575 9800 3575
+	10400 3675 10500 3675
 Wire Wire Line
-	9900 3475 9800 3475
+	10400 3775 10500 3775
 Text GLabel 10500 2175 2    50   Input ~ 0
 ~M1
 NoConn ~ 7175 7775
@@ -886,8 +886,8 @@ $Comp
 L Device:Crystal X2
 U 1 1 604B268F
 P 5850 7275
-F 0 "X2" H 5925 7625 59  0000 C CNN
-F 1 "20MHz" H 5925 7475 59  0000 C CNN
+F 0 "X2" V 5775 7425 59  0000 L CNN
+F 1 "50MHz" V 5875 7425 59  0000 L CNN
 F 2 "Crystal:Crystal_HC49-U_Vertical" H 5850 7275 50  0001 C CNN
 F 3 "~" H 5850 7275 50  0001 C CNN
 	1    5850 7275
@@ -1505,14 +1505,14 @@ DA1
 Text GLabel 1800 9225 3    50   Input ~ 0
 DA0
 $Comp
-L Connector_Generic:Conn_02x24_Odd_Even Z80CPUOUT1
+L Connector_Generic:Conn_02x26_Odd_Even Z80CPUOUT1
 U 1 1 5F80C84A
-P 10100 2375
-F 0 "Z80CPUOUT1" H 10175 3815 50  0000 C CNN
-F 1 "Conn_02x24_Odd_Even" H 10175 3715 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x24_P2.54mm_Vertical" H 10100 2375 50  0001 C CNN
-F 3 "~" H 10100 2375 50  0001 C CNN
-	1    10100 2375
+P 10100 2475
+F 0 "Z80CPUOUT1" H 10175 3915 50  0000 C CNN
+F 1 "Conn_02x26_Odd_Even" H 10175 3815 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x26_P2.54mm_Vertical" H 10100 2475 50  0001 C CNN
+F 3 "~" H 10100 2475 50  0001 C CNN
+	1    10100 2475
 	1    0    0    -1  
 $EndComp
 Text GLabel 9800 2775 0    50   Input ~ 0
@@ -2430,4 +2430,151 @@ Text Label 2225 3675 0    50   ~ 0
 ~13&14Meg
 Text Label 2225 3775 0    50   ~ 0
 ~15&16Meg
+Text GLabel 9800 3775 0    50   Input ~ 0
+A19
+Text GLabel 9800 3675 0    50   Input ~ 0
+A18
+Wire Wire Line
+	9900 3675 9800 3675
+Wire Wire Line
+	9900 3775 9800 3775
+Text GLabel 9800 3475 0    50   Input ~ 0
+A16
+Text GLabel 9800 3575 0    50   Input ~ 0
+A17
+Wire Wire Line
+	9900 3575 9800 3575
+Wire Wire Line
+	9900 3475 9800 3475
+$Comp
+L Connector_Generic:Conn_02x01 I2COUT1
+U 1 1 5DFB669B
+P 10125 4225
+F 0 "I2COUT1" H 10175 4500 50  0000 C CNN
+F 1 "Conn_02x01_Odd_Even" H 10175 4400 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x01_P2.54mm_Vertical" H 10125 4225 50  0001 C CNN
+F 3 "~" H 10125 4225 50  0001 C CNN
+	1    10125 4225
+	1    0    0    -1  
+$EndComp
+Text GLabel 9875 4225 0    50   Input ~ 0
+I2C-Clock
+Wire Wire Line
+	9925 4225 9875 4225
+Text GLabel 10475 4225 2    50   Input ~ 0
+I2C-Data
+Wire Wire Line
+	10425 4225 10475 4225
+$Comp
+L 74xx:74HCT04 Z?
+U 3 1 5DCA9869
+P -500 10300
+AR Path="/5D66C06C/5DCA9869" Ref="Z?"  Part="5" 
+AR Path="/5DCA9869" Ref="Z102"  Part="3" 
+F 0 "Z102" H -500 10650 50  0000 C CNN
+F 1 "SN74AHCT04N" H -500 10550 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H -500 10300 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74HC_HCT04.pdf" H -500 10300 50  0001 C CNN
+	3    -500 10300
+	1    0    0    -1  
+$EndComp
+NoConn ~ -200 10300
+NoConn ~ -800 10300
+$Comp
+L 74xx:74LS86 Z?
+U 1 1 5DD56C70
+P -500 10800
+AR Path="/5EED81F4/5DD56C70" Ref="Z?"  Part="5" 
+AR Path="/5DD56C70" Ref="Z23"  Part="1" 
+F 0 "Z23" H -500 10450 50  0000 C CNN
+F 1 "SN74AHCT86N" H -500 10550 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H -500 10800 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H -500 10800 50  0001 C CNN
+	1    -500 10800
+	1    0    0    1   
+$EndComp
+NoConn ~ -800 10900
+NoConn ~ -800 10700
+NoConn ~ -200 10800
+$Comp
+L 74xx:74LS86 Z?
+U 2 1 5DE1C1C3
+P -500 11200
+AR Path="/5EED81F4/5DE1C1C3" Ref="Z?"  Part="5" 
+AR Path="/5DE1C1C3" Ref="Z23"  Part="2" 
+F 0 "Z23" H -500 11450 50  0000 C CNN
+F 1 "SN74AHCT86N" H -500 11550 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H -500 11200 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H -500 11200 50  0001 C CNN
+	2    -500 11200
+	1    0    0    1   
+$EndComp
+NoConn ~ -800 11300
+NoConn ~ -800 11100
+NoConn ~ -200 11200
+$Comp
+L 74xx:74LS00 Z?
+U 3 1 5DE54CA9
+P -525 12075
+AR Path="/5EED81F4/5DE54CA9" Ref="Z?"  Part="5" 
+AR Path="/5DE54CA9" Ref="Z19"  Part="3" 
+F 0 "Z19" H -525 11700 50  0000 C CNN
+F 1 "SN74AHCT00N" H -525 11800 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H -525 12075 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H -525 12075 50  0001 C CNN
+	3    -525 12075
+	1    0    0    1   
+$EndComp
+NoConn ~ -825 12175
+NoConn ~ -825 11975
+NoConn ~ -225 12075
+$Comp
+L 74xx:74LS00 Z?
+U 4 1 5DF1B68B
+P -525 12750
+AR Path="/5EED81F4/5DF1B68B" Ref="Z?"  Part="5" 
+AR Path="/5DF1B68B" Ref="Z19"  Part="4" 
+F 0 "Z19" H -525 12400 50  0000 C CNN
+F 1 "SN74AHCT00N" H -525 12500 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H -525 12750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H -525 12750 50  0001 C CNN
+	4    -525 12750
+	1    0    0    1   
+$EndComp
+NoConn ~ -825 12850
+NoConn ~ -825 12650
+NoConn ~ -225 12750
+$Comp
+L 74xx:74LS11 Z?
+U 3 1 5DF56F8E
+P -525 13400
+AR Path="/5EED81F4/5DF56F8E" Ref="Z?"  Part="4" 
+AR Path="/5DF56F8E" Ref="Z22"  Part="3" 
+F 0 "Z22" H -525 13050 50  0000 C CNN
+F 1 "SN74AHCT11N" H -525 13150 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H -525 13400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS11" H -525 13400 50  0001 C CNN
+	3    -525 13400
+	1    0    0    1   
+$EndComp
+NoConn ~ -825 13300
+NoConn ~ -825 13400
+NoConn ~ -825 13500
+NoConn ~ -225 13400
+$Comp
+L 74xx:74LS02 Z?
+U 3 1 5E0B9D8F
+P -525 14075
+AR Path="/5EED81F4/5E0B9D8F" Ref="Z?"  Part="5" 
+AR Path="/5E0B9D8F" Ref="Z25"  Part="3" 
+F 0 "Z25" H -525 13700 50  0000 C CNN
+F 1 "SN74AHCT02N" H -525 13800 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H -525 14075 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls02" H -525 14075 50  0001 C CNN
+	3    -525 14075
+	1    0    0    1   
+$EndComp
+NoConn ~ -825 14175
+NoConn ~ -825 13975
+NoConn ~ -225 14075
 $EndSCHEMATC

@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 6
+Sheet 2 6
 Title "ACE4NOKB"
 Date "2019-10-24"
 Rev "Alpha"

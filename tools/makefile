@@ -23,6 +23,10 @@ csrc = $(wildcard $(XCDIR)/ACE1/*.dsn) \
 		$(wildcard $(XCDIR)/ACEeZ80/*.dsn) \
 		$(wildcard $(XCDIR)/Edgeboard/*.dsn) \
 		$(wildcard $(XCDIR)/eBigRam/*.dsn) \
+		$(wildcard $(XCDIR)/UniBoard/*.dsn) \
+		$(wildcard $(XCDIR)/MultiUniBoard/*.dsn) \
+		$(wildcard $(XCDIR)/eUniBoard/*.dsn) \
+		$(wildcard $(XCDIR)/eMultiUniBoard/*.dsn) \
 		$(wildcard $(XCDIR)/KEYBOARD/*.dsn)
 
 obj = $(csrc:.dsn=.ses)

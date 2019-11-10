@@ -263,7 +263,7 @@ L0096:  DEFW    $0000                   ; 'link field' - end of linked list.
 
 L0098:  DEFB    $04                     ; 'name length field'
 
-L0099:  DEFW    L009B                   ; 'code field' 
+L0099:  DEFW    L009B                   ; 'code field'
                                         ; address of machine code for routine.
 
 ; ---
@@ -272,7 +272,7 @@ L009B:  LD      SP,(RAMSTART + $18)              ; set stack-pointer to RAMTOP.
 
         EI                              ; Enable Interrupts.
 
-        JP      L04F2                   ; jump forward to the main execution 
+        JP      L04F2                   ; jump forward to the main execution
                                         ; loop.
 
 ; ----------------
@@ -284,8 +284,8 @@ L009B:  LD      SP,(RAMSTART + $18)              ; set stack-pointer to RAMTOP.
 ; control to the keyboard.
 
 
-L00A3:  DEFM    "ABOR"                  ; 'name field' 
-        DEFB    'T' + $80               
+L00A3:  DEFM    "ABOR"                  ; 'name field'
+        DEFB    'T' + $80
 
         DEFW    L0098                   ; 'link field' to previous word QUIT.
 
@@ -622,7 +622,7 @@ L01F7:  DEFB    $50             ; L0247         $07     - UP
 L01F8:  DEFB    $06             ; L01FE         $08     - INV
 L01F9:  DEFB    $9C             ; L0295         $09     - DOWN
 L01FA:  DEFB    $C9             ; L02C3         $0A     - DEL LINE
-L01FB:  DEFB    $15             ; L0210         $0B     - RET
+L01FB:  DEFB    $15             ; L0210         $     - RET
 L01FC:  DEFB    $14             ; L0210         $0C     - RET
 L01FD:  DEFB    $D3             ; L02D0         $0D     - KEY-ENTER
 
@@ -657,7 +657,7 @@ L0204:  LD      HL,(RAMSTART + $20)              ; fetch CURSOR.
 
 L0210:  RET                             ; return.
 
-; Note. various unallocated keys in the EDIT KEYS table point to the 
+; Note. various unallocated keys in the EDIT KEYS table point to the
 ; above RET instruction.
 
 ; -----------------------------
@@ -1562,7 +1562,7 @@ x04b5:   DEFB    $FF                     ;; 04b5 + ffe8 = 049d  = ';'
 ; ------------------------
 ; The 'Exit' Internal Word
 ; ------------------------
-; Drops the 'Next Word' pointer from the Return Stack thereby ending a 
+; Drops the 'Next Word' pointer from the Return Stack thereby ending a
 ; subroutine and returning to next word in calling thread.
 
 L04B6:  DEFW    L04B8                   ; headerless 'code field'
@@ -1607,10 +1607,10 @@ L04BF:  EX      DE,HL
 ; --------------------------------
 ; The 'Memory Check' Internal Word
 ; --------------------------------
-; This internal word which also checks the BREAK key is only used from the 
-; start of the LINE definition. However the machine code entry point is the 
+; This internal word which also checks the BREAK key is only used from the
+; start of the LINE definition. However the machine code entry point is the
 ; normal value of the IY register and so this code is executed at the end of
-; every word. 
+; every word.
 
 L04C6:  DEFW    L04C8                   ; headerless 'code field'
 
@@ -1703,7 +1703,7 @@ L0508:  DEFW    L04C6                   ; check mem each time through loop
 
         DEFW    L063D                   ; FIND          - search the dictionary
         DEFW    L08EE                   ; ?DUP          - duplicate if found
-        DEFW    L1283                   ; ?branch       - forward if not a 
+        DEFW    L1283                   ; ?branch       - forward if not a
 L0510:  DEFW    $0007                   ; to L0518      - word.
 
         DEFW    L054F                   ; test and stack??
@@ -1721,7 +1721,7 @@ L0524:  DEFW    $FFE3                   ; loop back to L0508
 
 L0526:  DEFW    L061B                   ; stack-length
         DEFW    L0C1A                   ; 0=
-        DEFW    L1283                   ; ?branch       - forward with anything 
+        DEFW    L1283                   ; ?branch       - forward with anything
 L052C:  DEFW    $0003                   ; to L0530      - else
 
 L052E:  DEFW    L04B6                   ; EXIT                          >>>
@@ -1780,7 +1780,7 @@ L0551:  RST     18H                     ; pop address from Data Stack to DE
 
         AND     (IX+$3E)                ; FLAGS
 
-        AND     $40                     ; isolate BIT 6 of FLAGS, set if in 
+        AND     $40                     ; isolate BIT 6 of FLAGS, set if in
                                         ; compiler mode.
 
         INC     DE                      ; increment address to 'code field'
@@ -1788,7 +1788,7 @@ L0551:  RST     18H                     ; pop address from Data Stack to DE
         JR      Z,L0561                 ; forward if not in compiling mode
 
         RST     10H                     ; push word DE          - add to dict
-        LD      DE,L0F4E                ; ','                   - enclose 
+        LD      DE,L0F4E                ; ','                   - enclose
 
 L0561:  JP      L04BF                   ; next word.
 
@@ -2751,7 +2751,7 @@ L0879:  DEFW    L087B                   ; 'code field'
 
 ; ---
 
-L087B:  RST     18H                     ; unstack Data Word DE 
+L087B:  RST     18H                     ; unstack Data Word DE
         JP      (IY)                    ; to 'next'.
 
 ; ---------------
@@ -3104,9 +3104,9 @@ L0970:  CALL    L084E                   ; stk_to_bc
 ; --------------------------
 ; THE 'PRINT STRING' ROUTINE
 ; --------------------------
-; The first entry point prints strings embedded in the Dictionary with the 
+; The first entry point prints strings embedded in the Dictionary with the
 ; DE pointing to the preceding length word.
-; 
+;
 ; The second entry point prints a string with length in BC and start in DE.
 ; It is called by TYPE above and to print comment fields.
 
@@ -3533,7 +3533,7 @@ L0AA5:  RST     18H                     ; pop de off data stack
 ;       |       34      BCD     |sign of exponent 1=positive (bit 6)
 ;       |       56      BCD     sign of number 0=positive (bit 7)
 ;
-; Zero 0. is a special case floating point number with all four bytes set 
+; Zero 0. is a special case floating point number with all four bytes set
 ; to zero.
 
 
@@ -3557,7 +3557,7 @@ L0AB1:  LD      HL,(RAMSTART + $3B)              ; set pointer from system varia
         LD      A,$2D                   ; prepare  the '-' character.
         RST     08H                     ; print the minus sign.
 
-; The E register is initialized to zero to denote not E-FORMAT 
+; The E register is initialized to zero to denote not E-FORMAT
 
 L0ABE:  LD      E,$00                   ; signal not scientific notation.
 
@@ -3585,7 +3585,7 @@ L0ACE:  LD      A,$40                   ; test value is plus zero.
 ; exponent is negative so decimal point comes first. e.g. .001
 
         LD      B,A                     ; result of subtraction to B.
-        INC     B                       ; B is now one less than count of 
+        INC     B                       ; B is now one less than count of
                                         ; leading zeros.
 
         LD      A,$2E                   ; prepare '.'
@@ -3594,12 +3594,12 @@ L0AD7:  RST     08H                     ; print decimal point or zero.
 
         LD      A,$30                   ; prepare a zero - '0'
 
-        DJNZ    L0AD7                   ; loop back to print leading zeros 
+        DJNZ    L0AD7                   ; loop back to print leading zeros
                                         ; unless the counter was 1.
 
 ; the branch was here with positive exponent (and zero)
 ; now enter a loop to print each of the leading BCD digits
-; the loop will end when the exponent is <= +0 and all 6 nibbles contain zero. 
+; the loop will end when the exponent is <= +0 and all 6 nibbles contain zero.
 
 L0ADC:  LD      A,$40                   ; set accumulator to plus 0
         CP      (HL)                    ; compare to exponent on data stack.
@@ -3614,14 +3614,14 @@ L0ADC:  LD      A,$40                   ; set accumulator to plus 0
         INC     HL                      ; adjust the pointer to
         INC     HL                      ; the start of the mantissa.
 
-        JR      Z,L0AFC                 ; forward if all digits have been 
+        JR      Z,L0AFC                 ; forward if all digits have been
                                         ; printed.
 
 ; else print each binary coded decimal in turn.
 
         XOR     A                       ; prepare to feed a zero nibble in.
 
-        CALL    L0732                   ; routine shift_fp extracts the most 
+        CALL    L0732                   ; routine shift_fp extracts the most
                                         ; significant nibble from the 3 bytes
                                         ; also decrementing the exponent.
 
@@ -3654,7 +3654,7 @@ L0AFC:  LD      A,E                     ; fetch the exponent format flag - from
         LD      A,$20                   ; else prepare a space
         RST     08H                     ; print it
 
-        JR      L0B10                   ; forward to delete the two words from 
+        JR      L0B10                   ; forward to delete the two words from
                                         ; the data stack and exit.
 
 ; ---
@@ -3670,7 +3670,7 @@ L0B05:  SUB     $41                     ; convert to signed 8-bit.
         LD      A,$45                   ; prepare a 'E'
         RST     08H                     ; print it
 
-        CALL    L180E                   ; routine pr_int_hl prints the signed 
+        CALL    L180E                   ; routine pr_int_hl prints the signed
                                         ; integer followed by a space.
 
 ; finally delete the floating point number from the Data Stack.
@@ -3865,7 +3865,7 @@ L0BAF:  LD      A,$7F                   ; place $7FFE on address bus and read
 
         DEC     DE                      ; decrement counter.
 
-        LD      A,D                     ; all even addresses are reserved for 
+        LD      A,D                     ; all even addresses are reserved for
                                         ; Jupiter Ace so any value does for the
                                         ; high order byte. $FE is low value.
 
@@ -4531,7 +4531,7 @@ L0DA9:  DEFW    L0DAB                   ; 'code field'
 
 ; ---
 
-L0DAB:  LD      BC,$0002                ; 
+L0DAB:  LD      BC,$0002                ;
         JR      L0DBF                   ;
 
 ; ------------------
@@ -5586,7 +5586,7 @@ L10B6:  DEFW    L10E8                   ; exit
 
         DEFW    L12D8                   ; check??
 
-        DEFB    $0C                     ; 12    
+        DEFB    $0C                     ; 12
 
         DEFW    L10CD                   ;
         DEFW    L104B                   ; stk_data
@@ -6086,7 +6086,7 @@ L1276:  DEFW    L1278                   ; headerless 'code field'
 
 L1278:  POP     HL                      ; drop next word pointer
         LD      E,(HL)                  ; read the 16-bit offset
-        INC     HL                      ; that is 
+        INC     HL                      ; that is
         LD      D,(HL)                  ; stored there.
 
 L127C:  ADD     HL,DE                   ; add to current address.
@@ -6309,7 +6309,7 @@ L12F7:  DEFW    L12F9                   ; 'code field'
 ; ---
 
 L12F9:  LD      HL,$0004                ; two bytes per entry.
-        JR      L1307                   ; forward to use the 'J' indexing 
+        JR      L1307                   ; forward to use the 'J' indexing
                                         ; routine
 
 ; ------------
@@ -6440,7 +6440,7 @@ L133F:  POP     BC                      ; pop return address to BC.
         SCF                             ; set carry.
         JP      PE,L1358                ; jump forward with overflow.
 
-        PUSH    DE                      ; push limit 
+        PUSH    DE                      ; push limit
         PUSH    HL                      ; push adjusted counter.
         RLCA                            ; now test sign of number (n)
         JR      NC,L1350                ;
@@ -6561,7 +6561,7 @@ L1398:  POP     DE
 ; The '???' Internal Word
 ; -----------------------
 ; enclose comment
-; comments may be multiple 
+; comments may be multiple
 ; e.g. : SV ( system) ( variables) CLS BEGIN 0 0 AT 15360 80 TYPE 0 UNTIL ;
 
 
@@ -6582,7 +6582,7 @@ L13A1:  RST     18H                     ; pop word DE
         CP      L
         JR      Z,L13B8                 ; forward with a match.         =->
 
-        EX      DE,HL                   ; 
+        EX      DE,HL                   ;
         RST     10H                     ; push word DE
         LD      DE,$0578                ; addr retype?
 
@@ -8463,7 +8463,7 @@ L1AF8:  LD      (BC),A                  ; clear the workspace.
 
         LD      A,C                     ; transfer C to A.
         RRCA                            ; rotate sign bit to bit 6.
-        XOR     B                       ; XOR B       
+        XOR     B                       ; XOR B
         AND     $7F                     ; mask off bits to restore
         XOR     B                       ; bit 6 as it was, bit 7 of B to A.
 
@@ -8491,7 +8491,7 @@ L1B22:  LD      A,$09
 
         LD      B,A                     ; set shift counter to nine. i.e clear.
 
-L1B28:  LD      C,$04                   ; four bytes 
+L1B28:  LD      C,$04                   ; four bytes
         INC     HL
         INC     HL
         INC     HL                      ; point to highest byte
@@ -8520,9 +8520,9 @@ L1B3A:  LD      A,(HL)                  ; fetch the pair of BCD nibbles.
                                         ; ($99 becomes $00 with carry set).
 
         LD      (HL),A                  ; put nibbles back.
-        INC     HL                      ; point to next significant pair of 
+        INC     HL                      ; point to next significant pair of
                                         ; binary coded decimal digits.
-        JR      C,L1B3A                 ; and ripple any rounding through.   
+        JR      C,L1B3A                 ; and ripple any rounding through.
 
         POP     HL                      ;; retrieve the pointer to start.
         RET                             ; return.
@@ -8531,7 +8531,7 @@ L1B3A:  LD      A,(HL)                  ; fetch the pair of BCD nibbles.
 ; THE 'BCD NEGATE' SUBROUTINE
 ; ---------------------------
 ; Negates the four byte, 8 nibble, binary coded decimal on the Data Stack.
-; For example -123.456 
+; For example -123.456
 ; is prepared as $00 $12 $34 $56
 ; and negated as $99 $87 $65 $34
 
@@ -8547,7 +8547,7 @@ L1B48:  LD      A,$00                   ; set to zero without disturbing carry.
         DAA                             ; Decimal Adjust Accumulator
                                         ; adjusts as if from 100 setting carry
 
-        LD      (HL),A                  ; place adjusted decimals back. 
+        LD      (HL),A                  ; place adjusted decimals back.
 
         INC     HL                      ; next location on Data Stack.
 
@@ -8569,7 +8569,7 @@ L1B48:  LD      A,$00                   ; set to zero without disturbing carry.
 L1B53:  LD      C,$01                   ; signal the operation is addition.
 
 ; -> (with c!=0)
-L1B55:  PUSH    HL                      ; preserve the 
+L1B55:  PUSH    HL                      ; preserve the
         PUSH    DE                      ; three main
         PUSH    BC                      ; registers.
 
@@ -8599,7 +8599,7 @@ L1B55:  PUSH    HL                      ; preserve the
 
 ; loop
 
-L1B67:  PUSH    BC                      ; push the counters. 
+L1B67:  PUSH    BC                      ; push the counters.
         PUSH    DE                      ; push the (f2) pointer
 
         PUSH    HL                      ; push the (f1) pointer.
@@ -8686,7 +8686,7 @@ L1B91:  EX      DE,HL                   ; transfer result to DE.
 ;
 ; just flip the sign and then do floating point addition.
 
-L1B9F:  DEFB    'F'                     ; 'name field'  
+L1B9F:  DEFB    'F'                     ; 'name field'
         DEFB    '-' + $80
 
         DEFW    L1989                   ; 'link field'
@@ -8708,7 +8708,7 @@ L1BA6:  DEFW    L1D0F                   ; fnegate
 ; ( f1, f2 -- f1+f2 )
 ; Adds top two floating point numbers.
 
-L1BAC:  DEFB    'F'                     ; 'name field'   
+L1BAC:  DEFB    'F'                     ; 'name field'
         DEFB    '+' + $80
 
         DEFW    L1BA3                   ; 'link field'
@@ -8764,14 +8764,14 @@ L1BCE:  RL      C                       ; test sign bit first bit 7 then bit 6.
 
         LD      A,(DE)                  ; fetch the result sign byte.
         ADD     A,$68                   ; add $68 causing carry if negative.
-        RR      B                       ; pick up carry in bit 7 of B, which 
+        RR      B                       ; pick up carry in bit 7 of B, which
                                         ; was zero so zero flag now set if none.
 
         LD      (IX+$02),B              ; place result sign in  FP_WS_02
 
         CALL    NZ,L1B43                ; routine BCD_NEGATE if negative result.
 
-; if the 
+; if the
 
 L1BE5:  LD      A,(DE)                  ;
         AND     A                       ;
@@ -8789,13 +8789,13 @@ L1BE5:  LD      A,(DE)                  ;
         LD      L,E                     ; equal to DE
         DEC     HL                      ; minus one.
 
-        LD      BC,$03FF                ; counter for three bytes. The $FF 
-                                        ; value ensures B is not affected by 
+        LD      BC,$03FF                ; counter for three bytes. The $FF
+                                        ; value ensures B is not affected by
                                         ; the LDD instruction. Also A is 0.
 
 L1BF6:  OR      (HL)                    ; (detects if the three bytes are zero)
 
-        LDD                             ; copy HL contents one location higher 
+        LDD                             ; copy HL contents one location higher
                                         ; to that addressed by DE. Also dec bc.
 
         DJNZ    L1BF6                   ; repeat for all 3 bytes
@@ -8814,7 +8814,7 @@ L1BF6:  OR      (HL)                    ; (detects if the three bytes are zero)
 
 ; ---
 
-; The branch was to here, from the end test above, when the 4th byte had been 
+; The branch was to here, from the end test above, when the 4th byte had been
 ; filled.
 ; Before joining common code, ensure that the initial block move will be
 ; ineffective.
@@ -8849,7 +8849,7 @@ L1C0C:  LD      A,(DE)                  ; load the 4th byte to accumulator.
         ADD     A,(IX+$00)              ; add count to FP_WS_00 the result
         LD      (RAMSTART),A               ; exponent and place back in FP_WS_00.
 
-        CALL    L1B22                   ; routine 'shift_addend' moves all the 
+        CALL    L1B22                   ; routine 'shift_addend' moves all the
                                         ; nibbles to the right.
 
         JR      L1C0C                   ; back to pick up byte and then to
@@ -8857,7 +8857,7 @@ L1C0C:  LD      A,(DE)                  ; load the 4th byte to accumulator.
 
 ; ---
 
-; now test for a result that is too large or too small. 
+; now test for a result that is too large or too small.
 ; Note. these results may have arisen from multiplication or addition.
 
 L1C21:  LD      A,(RAMSTART)               ; fetch result exponent from FP_WS_00
@@ -8874,7 +8874,7 @@ L1C21:  LD      A,(RAMSTART)               ; fetch result exponent from FP_WS_00
         LD      B,A                     ; save unsigned exponent in B.
 
 ; now combine result sign and the exponent.
-; for addition then FP_WS_02 contains either $80 or $00 and most of what 
+; for addition then FP_WS_02 contains either $80 or $00 and most of what
 ; follows does not apply.
 ; for multiplication then bit 7 is sign of (f1) bit 6 is sign of (f2).
 
@@ -8915,7 +8915,7 @@ L1C40:  LD      (HL),C                  ; insert a zero.
 ; (f1, f2 -- f1*f2)
 ; Multiplies top two floating point numbers and leaves result on the stack.
 
-L1C46:  DEFB    'F'                     ; 'name field' 
+L1C46:  DEFB    'F'                     ; 'name field'
         DEFB    '*' + $80
 
         DEFW    L1BB0                   ; 'link field'
@@ -8939,7 +8939,7 @@ L1C4D:  CALL    L1AF4                   ; routine PREP_FP prepares the two
 
         PUSH    HL                      ; save pointer to first number - result.
 
-        LD      BC,RAMSTART + $02                ; set BC to location before free 
+        LD      BC,RAMSTART + $02                ; set BC to location before free
                                         ; workspace set to zero by PREP_FP.
 
         PUSH    BC                      ; push onto machine stack.
@@ -8954,7 +8954,7 @@ L1C5D:  LD      C,(HL)                  ; fetch BCD pair to C
         INC     HL                      ; increment workspace pointer.
 
         CALL    L1B55                   ; routine BCD_OP multiplies C by each
-                                        ; of the 4 bytes of (f2) laying the 
+                                        ; of the 4 bytes of (f2) laying the
                                         ; result down in workspace at HL
 
         EX      (SP),HL                 ; swap in multiplier pointer to HL,
@@ -8974,7 +8974,7 @@ L1C5D:  LD      C,(HL)                  ; fetch BCD pair to C
         POP     DE                      ; pop result pointer to DE.
 
         JR      L1C04                   ; back to common code to copy the 4
-                                        ; bytes from the workspace to the 
+                                        ; bytes from the workspace to the
                                         ; Data Stack and then set exponent
                                         ; and sign.
 
@@ -8996,12 +8996,12 @@ L1C7B:  DEFW    L1C7D                   ; 'code field'
 ;---
 
 L1C7D:  CALL    L1AF4                   ; routine PREP_FP prepares the two
-                                        ; numbers (f1) and (f2) placing the 
-                                        ; raw exponents in the first two 
+                                        ; numbers (f1) and (f2) placing the
+                                        ; raw exponents in the first two
                                         ; locations of workspace, the signs in
                                         ; the next location and clearing the
                                         ; sixteen remaining locations.
-                                        ; This must be the one that uses them 
+                                        ; This must be the one that uses them
                                         ; all.
 
         XOR     A                       ; set accumulator to zero.
@@ -9023,7 +9023,7 @@ L1C7D:  CALL    L1AF4                   ; routine PREP_FP prepares the two
         ADD     A,$01                   ; add one (e.g. 99 would give 9A)
         DAA                             ; adjust  (e.g. $9A would be $00 carry)
         EX      AF,AF'                  ; save the flags
-        EX      DE,HL                   ; HL now points to divisor 
+        EX      DE,HL                   ; HL now points to divisor
 
         CALL    L1B43                   ; routine BCD negate the divisor
 
@@ -9033,7 +9033,7 @@ L1C7D:  CALL    L1AF4                   ; routine PREP_FP prepares the two
         LD      DE,RAMSTART + $10                ; destination FP_WS_10
         LD      BC,$0004                ; four bytes
 
-        LDIR                            ; copy to end of FP_WS 
+        LDIR                            ; copy to end of FP_WS
                                         ; (+ one byte of list_ws)
 
         EX      DE,HL                   ; HL points to last cell plus one.
@@ -9138,7 +9138,7 @@ L1CFE:  LD      (IX+$00),B              ;
         POP     DE                      ;
 
         JP      L1C04                   ; back to common code to copy the 4
-                                        ; bytes from the workspace to the 
+                                        ; bytes from the workspace to the
                                         ; Data Stack and then set exponent
                                         ; and sign.
 
@@ -9315,932 +9315,933 @@ L1D62:  ADD     HL,HL                   ; double
 
 ; $20 - Character: ' '          CHR$(32)
 
-L1D7B:  DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00000000
+L1D7B:  DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00000000B
 
 ; $21 - Character: '!'          CHR$(33)
 
-        DEFB    0b00010000
-        DEFB    0b00010000
-        DEFB    0b00010000
-        DEFB    0b00010000
-        DEFB    0b00000000
-        DEFB    0b00010000
-        DEFB    0b00000000
+        DEFB    00010000B
+        DEFB    00010000B
+        DEFB    00010000B
+        DEFB    00010000B
+        DEFB    00000000B
+        DEFB    00010000B
+        DEFB    00000000B
 
 ; $22 - Character: '"'          CHR$(34)
 
-        DEFB    0b00100100
-        DEFB    0b00100100
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00000000
+        DEFB    00100100B
+        DEFB    00100100B
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00000000B
 
 ; $23 - Character: '#'          CHR$(35)
 
-        DEFB    0b00100100
-        DEFB    0b01111110
-        DEFB    0b00100100
-        DEFB    0b00100100
-        DEFB    0b01111110
-        DEFB    0b00100100
-        DEFB    0b00000000
+        DEFB    00100100B
+        DEFB    01111110B
+        DEFB    00100100B
+        DEFB    00100100B
+        DEFB    01111110B
+        DEFB    00100100B
+        DEFB    00000000B
 
 ; $24 - Character: '$'          CHR$(36)
 
-        DEFB    0b00001000
-        DEFB    0b00111110
-        DEFB    0b00101000
-        DEFB    0b00111110
-        DEFB    0b00001010
-        DEFB    0b00111110
-        DEFB    0b00001000
+        DEFB    00001000B
+        DEFB    00111110B
+        DEFB    00101000B
+        DEFB    00111110B
+        DEFB    00001010B
+        DEFB    00111110B
+        DEFB    00001000B
 
 ; $25 - Character: '%'          CHR$(37)
 
-        DEFB    0b01100010
-        DEFB    0b01100100
-        DEFB    0b00001000
-        DEFB    0b00010000
-        DEFB    0b00100110
-        DEFB    0b01000110
-        DEFB    0b00000000
+        DEFB    01100010B
+        DEFB    01100100B
+        DEFB    00001000B
+        DEFB    00010000B
+        DEFB    00100110B
+        DEFB    01000110B
+        DEFB    00000000B
 
 ; $26 - Character: '&'          CHR$(38)
 
-        DEFB    0b00010000
-        DEFB    0b00101000
-        DEFB    0b00010000
-        DEFB    0b00101010
-        DEFB    0b01000100
-        DEFB    0b00111010
-        DEFB    0b00000000
+        DEFB    00010000B
+        DEFB    00101000B
+        DEFB    00010000B
+        DEFB    00101010B
+        DEFB    01000100B
+        DEFB    00111010B
+        DEFB    00000000B
 
 ; $27 - Character: '''          CHR$(39)
 
-        DEFB    0b00001000
-        DEFB    0b00010000
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00000000
+        DEFB    00001000B
+        DEFB    00010000B
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00000000B
 
 ; $28 - Character: '('          CHR$(40)
 
-        DEFB    0b00000100
-        DEFB    0b00001000
-        DEFB    0b00001000
-        DEFB    0b00001000
-        DEFB    0b00001000
-        DEFB    0b00000100
-        DEFB    0b00000000
+        DEFB    00000100B
+        DEFB    00001000B
+        DEFB    00001000B
+        DEFB    00001000B
+        DEFB    00001000B
+        DEFB    00000100B
+        DEFB    00000000B
 
 ; $29 - Character: ')'          CHR$(42)
 
-        DEFB    0b00100000
-        DEFB    0b00010000
-        DEFB    0b00010000
-        DEFB    0b00010000
-        DEFB    0b00010000
-        DEFB    0b00100000
-        DEFB    0b00000000
+        DEFB    00100000B
+        DEFB    00010000B
+        DEFB    00010000B
+        DEFB    00010000B
+        DEFB    00010000B
+        DEFB    00100000B
+        DEFB    00000000B
 
 ; $2A - Character: '*'          CHR$(42)
 
-        DEFB    0b00000000
-        DEFB    0b00010100
-        DEFB    0b00001000
-        DEFB    0b00111110
-        DEFB    0b00001000
-        DEFB    0b00010100
-        DEFB    0b00000000
+        DEFB    00000000B
+        DEFB    00010100B
+        DEFB    00001000B
+        DEFB    00111110B
+        DEFB    00001000B
+        DEFB    00010100B
+        DEFB    00000000B
 
 ; $2B - Character: '+'          CHR$(43)
 
-        DEFB    0b00000000
-        DEFB    0b00001000
-        DEFB    0b00001000
-        DEFB    0b00111110
-        DEFB    0b00001000
-        DEFB    0b00001000
-        DEFB    0b00000000
+        DEFB    00000000B
+        DEFB    00001000B
+        DEFB    00001000B
+        DEFB    00111110B
+        DEFB    00001000B
+        DEFB    00001000B
+        DEFB    00000000B
 
 ; $2C - Character: ','          CHR$(44)
 
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00001000
-        DEFB    0b00001000
-        DEFB    0b00010000
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00001000B
+        DEFB    00001000B
+        DEFB    00010000B
 
 ; $2D - Character: '-'          CHR$(45)
 
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00111110
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00000000
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00111110B
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00000000B
 
 ; $2E - Character: '.'          CHR$(46)
 
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00011000
-        DEFB    0b00011000
-        DEFB    0b00000000
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00011000B
+        DEFB    00011000B
+        DEFB    00000000B
 
 ; $2F - Character: '/'          CHR$(47)
 
-        DEFB    0b00000000
-        DEFB    0b00000010
-        DEFB    0b00000100
-        DEFB    0b00001000
-        DEFB    0b00010000
-        DEFB    0b00100000
-        DEFB    0b00000000
+        DEFB    00000000B
+        DEFB    00000010B
+        DEFB    00000100B
+        DEFB    00001000B
+        DEFB    00010000B
+        DEFB    00100000B
+        DEFB    00000000B
 
 ; $30 - Character: '0'          CHR$(48)
 
-        DEFB    0b00111100
-        DEFB    0b01000110
-        DEFB    0b01001010
-        DEFB    0b01010010
-        DEFB    0b01100010
-        DEFB    0b00111100
-        DEFB    0b00000000
+        DEFB    00111100B
+        DEFB    01000110B
+        DEFB    01001010B
+        DEFB    01010010B
+        DEFB    01100010B
+        DEFB    00111100B
+        DEFB    00000000B
 
 ; $31 - Character: '1'          CHR$(49)
 
-        DEFB    0b00011000
-        DEFB    0b00101000
-        DEFB    0b00001000
-        DEFB    0b00001000
-        DEFB    0b00001000
-        DEFB    0b00111110
-        DEFB    0b00000000
+        DEFB    00011000B
+        DEFB    00101000B
+        DEFB    00001000B
+        DEFB    00001000B
+        DEFB    00001000B
+        DEFB    00111110B
+        DEFB    00000000B
 
 ; $32 - Character: '2'          CHR$(50)
 
-        DEFB    0b00111100
-        DEFB    0b01000010
-        DEFB    0b00000010
-        DEFB    0b00111100
-        DEFB    0b01000000
-        DEFB    0b01111110
-        DEFB    0b00000000
+        DEFB    00111100B
+        DEFB    01000010B
+        DEFB    00000010B
+        DEFB    00111100B
+        DEFB    01000000B
+        DEFB    01111110B
+        DEFB    00000000B
 
 ; $33 - Character: '3'          CHR$(51)
 
-        DEFB    0b00111100
-        DEFB    0b01000010
-        DEFB    0b00001100
-        DEFB    0b00000010
-        DEFB    0b01000010
-        DEFB    0b00111100
-        DEFB    0b00000000
+        DEFB    00111100B
+        DEFB    01000010B
+        DEFB    00001100B
+        DEFB    00000010B
+        DEFB    01000010B
+        DEFB    00111100B
+        DEFB    00000000B
 
 ; $34 - Character: '4'          CHR$(52)
 
-        DEFB    0b00001000
-        DEFB    0b00011000
-        DEFB    0b00101000
-        DEFB    0b01001000
-        DEFB    0b01111110
-        DEFB    0b00001000
-        DEFB    0b00000000
+        DEFB    00001000B
+        DEFB    00011000B
+        DEFB    00101000B
+        DEFB    01001000B
+        DEFB    01111110B
+        DEFB    00001000B
+        DEFB    00000000B
 
 ; $35 - Character: '5'          CHR$(53)
 
-        DEFB    0b01111110
-        DEFB    0b01000000
-        DEFB    0b01111100
-        DEFB    0b00000010
-        DEFB    0b01000010
-        DEFB    0b00111100
-        DEFB    0b00000000
+        DEFB    01111110B
+        DEFB    01000000B
+        DEFB    01111100B
+        DEFB    00000010B
+        DEFB    01000010B
+        DEFB    00111100B
+        DEFB    00000000B
 
 ; $36 - Character: '6'          CHR$(54)
 
-        DEFB    0b00111100
-        DEFB    0b01000000
-        DEFB    0b01111100
-        DEFB    0b01000010
-        DEFB    0b01000010
-        DEFB    0b00111100
-        DEFB    0b00000000
+        DEFB    00111100B
+        DEFB    01000000B
+        DEFB    01111100B
+        DEFB    01000010B
+        DEFB    01000010B
+        DEFB    00111100B
+        DEFB    00000000B
 
 ; $37 - Character: '7'          CHR$(55)
 
-        DEFB    0b01111110
-        DEFB    0b00000010
-        DEFB    0b00000100
-        DEFB    0b00001000
-        DEFB    0b00010000
-        DEFB    0b00010000
-        DEFB    0b00000000
+        DEFB    01111110B
+        DEFB    00000010B
+        DEFB    00000100B
+        DEFB    00001000B
+        DEFB    00010000B
+        DEFB    00010000B
+        DEFB    00000000B
 
 ; $38 - Character: '8'          CHR$(56)
 
-        DEFB    0b00111100
-        DEFB    0b01000010
-        DEFB    0b00111100
-        DEFB    0b01000010
-        DEFB    0b01000010
-        DEFB    0b00111100
-        DEFB    0b00000000
+        DEFB    00111100B
+        DEFB    01000010B
+        DEFB    00111100B
+        DEFB    01000010B
+        DEFB    01000010B
+        DEFB    00111100B
+        DEFB    00000000B
 
 ; $39 - Character: '9'          CHR$(57)
 
-        DEFB    0b00111100
-        DEFB    0b01000010
-        DEFB    0b01000010
-        DEFB    0b00111110
-        DEFB    0b00000010
-        DEFB    0b00111100
-        DEFB    0b00000000
+        DEFB    00111100B
+        DEFB    01000010B
+        DEFB    01000010B
+        DEFB    00111110B
+        DEFB    00000010B
+        DEFB    00111100B
+        DEFB    00000000B
 
 ; $3A - Character: ':'          CHR$(58)
 
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00010000
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00010000
-        DEFB    0b00000000
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00010000B
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00010000B
+        DEFB    00000000B
 
 ; $3B - Character: ';'          CHR$(59)
 
-        DEFB    0b00000000
-        DEFB    0b00010000
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00010000
-        DEFB    0b00010000
-        DEFB    0b00100000
+        DEFB    00000000B
+        DEFB    00010000B
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00010000B
+        DEFB    00010000B
+        DEFB    00100000B
 
 ; $3C - Character: '<'          CHR$(60)
 
-        DEFB    0b00000000
-        DEFB    0b00000100
-        DEFB    0b00001000
-        DEFB    0b00010000
-        DEFB    0b00001000
-        DEFB    0b00000100
-        DEFB    0b00000000
+        DEFB    00000000B
+        DEFB    00000100B
+        DEFB    00001000B
+        DEFB    00010000B
+        DEFB    00001000B
+        DEFB    00000100B
+        DEFB    00000000B
 
 ; $3D - Character: '='          CHR$(61)
 
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00111110
-        DEFB    0b00000000
-        DEFB    0b00111110
-        DEFB    0b00000000
-        DEFB    0b00000000
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00111110B
+        DEFB    00000000B
+        DEFB    00111110B
+        DEFB    00000000B
+        DEFB    00000000B
 
 ; $3E - Character: '>'          CHR$(62)
 
-        DEFB    0b00000000
-        DEFB    0b00010000
-        DEFB    0b00001000
-        DEFB    0b00000100
-        DEFB    0b00001000
-        DEFB    0b00010000
-        DEFB    0b00000000
+        DEFB    00000000B
+        DEFB    00010000B
+        DEFB    00001000B
+        DEFB    00000100B
+        DEFB    00001000B
+        DEFB    00010000B
+        DEFB    00000000B
 
 ; $3F - Character: '?'          CHR$(63)
 
-        DEFB    0b00111100
-        DEFB    0b01000010
-        DEFB    0b00000100
-        DEFB    0b00001000
-        DEFB    0b00000000
-        DEFB    0b00001000
+        DEFB    00111100B
+        DEFB    01000010B
+        DEFB    00000100B
+        DEFB    00001000B
+        DEFB    00000000B
+        DEFB    00001000B
 
 ; $40 - Character: '@'          CHR$(64)
 
-        DEFB    0b00111100
-        DEFB    0b01001010
-        DEFB    0b01010110
-        DEFB    0b01011110
-        DEFB    0b01000000
-        DEFB    0b00111100
+        DEFB    00111100B
+        DEFB    01001010B
+        DEFB    01010110B
+        DEFB    01011110B
+        DEFB    01000000B
+        DEFB    00111100B
 
 ; $41 - Character: 'A'          CHR$(65)
 
-        DEFB    0b00111100
-        DEFB    0b01000010
-        DEFB    0b01000010
-        DEFB    0b01111110
-        DEFB    0b01000010
-        DEFB    0b01000010
+        DEFB    00111100B
+        DEFB    01000010B
+        DEFB    01000010B
+        DEFB    01111110B
+        DEFB    01000010B
+        DEFB    01000010B
 
 ; $42 - Character: 'B'          CHR$(66)
 
-        DEFB    0b01111100
-        DEFB    0b01000010
-        DEFB    0b01111100
-        DEFB    0b01000010
-        DEFB    0b01000010
-        DEFB    0b01111100
+        DEFB    01111100B
+        DEFB    01000010B
+        DEFB    01111100B
+        DEFB    01000010B
+        DEFB    01000010B
+        DEFB    01111100B
 
 ; $43 - Character: 'C'          CHR$(67)
 
-        DEFB    0b00111100
-        DEFB    0b01000010
-        DEFB    0b01000000
-        DEFB    0b01000000
-        DEFB    0b01000010
-        DEFB    0b00111100
+        DEFB    00111100B
+        DEFB    01000010B
+        DEFB    01000000B
+        DEFB    01000000B
+        DEFB    01000010B
+        DEFB    00111100B
 
 ; $44 - Character: 'D'          CHR$(68)
 
-        DEFB    0b01111000
-        DEFB    0b01000100
-        DEFB    0b01000010
-        DEFB    0b01000010
-        DEFB    0b01000100
-        DEFB    0b01111000
+        DEFB    01111000B
+        DEFB    01000100B
+        DEFB    01000010B
+        DEFB    01000010B
+        DEFB    01000100B
+        DEFB    01111000B
 
 ; $45 - Character: 'E'          CHR$(69)
 
-        DEFB    0b01111110
-        DEFB    0b01000000
-        DEFB    0b01111100
-        DEFB    0b01000000
-        DEFB    0b01000000
-        DEFB    0b01111110
+        DEFB    01111110B
+        DEFB    01000000B
+        DEFB    01111100B
+        DEFB    01000000B
+        DEFB    01000000B
+        DEFB    01111110B
 
 ; $46 - Character: 'F'          CHR$(70)
 
-        DEFB    0b01111110
-        DEFB    0b01000000
-        DEFB    0b01111100
-        DEFB    0b01000000
-        DEFB    0b01000000
-        DEFB    0b01000000
+        DEFB    01111110B
+        DEFB    01000000B
+        DEFB    01111100B
+        DEFB    01000000B
+        DEFB    01000000B
+        DEFB    01000000B
 
 ; $47 - Character: 'G'          CHR$(71)
 
-        DEFB    0b00111100
-        DEFB    0b01000010
-        DEFB    0b01000000
-        DEFB    0b01001110
-        DEFB    0b01000010
-        DEFB    0b00111100
+        DEFB    00111100B
+        DEFB    01000010B
+        DEFB    01000000B
+        DEFB    01001110B
+        DEFB    01000010B
+        DEFB    00111100B
 
 ; $48 - Character: 'H'          CHR$(72)
 
-        DEFB    0b01000010
-        DEFB    0b01000010
-        DEFB    0b01111110
-        DEFB    0b01000010
-        DEFB    0b01000010
-        DEFB    0b01000010
+        DEFB    01000010B
+        DEFB    01000010B
+        DEFB    01111110B
+        DEFB    01000010B
+        DEFB    01000010B
+        DEFB    01000010B
 
 ; $49 - Character: 'I'          CHR$(73)
 
-        DEFB    0b00111110
-        DEFB    0b00001000
-        DEFB    0b00001000
-        DEFB    0b00001000
-        DEFB    0b00001000
-        DEFB    0b00111110
+        DEFB    00111110B
+        DEFB    00001000B
+        DEFB    00001000B
+        DEFB    00001000B
+        DEFB    00001000B
+        DEFB    00111110B
 
 ; $4A - Character: 'J'          CHR$(74)
 
-        DEFB    0b00000010
-        DEFB    0b00000010
-        DEFB    0b00000010
-        DEFB    0b01000010
-        DEFB    0b01000010
-        DEFB    0b00111100
+        DEFB    00000010B
+        DEFB    00000010B
+        DEFB    00000010B
+        DEFB    01000010B
+        DEFB    01000010B
+        DEFB    00111100B
 
 ; $4B - Character: 'K'          CHR$(75)
 
-        DEFB    0b01000100
-        DEFB    0b01001000
-        DEFB    0b01110000
-        DEFB    0b01001000
-        DEFB    0b01000100
-        DEFB    0b01000010
+        DEFB    01000100B
+        DEFB    01001000B
+        DEFB    01110000B
+        DEFB    01001000B
+        DEFB    01000100B
+        DEFB    01000010B
 
 ; $4C - Character: 'L'          CHR$(76)
 
-        DEFB    0b01000000
-        DEFB    0b01000000
-        DEFB    0b01000000
-        DEFB    0b01000000
-        DEFB    0b01000000
-        DEFB    0b01111110
+        DEFB    01000000B
+        DEFB    01000000B
+        DEFB    01000000B
+        DEFB    01000000B
+        DEFB    01000000B
+        DEFB    01111110B
 
 ; $4D - Character: 'M'          CHR$(77)
 
-        DEFB    0b01000010
-        DEFB    0b01100110
-        DEFB    0b01011010
-        DEFB    0b01000010
-        DEFB    0b01000010
-        DEFB    0b01000010
+        DEFB    01000010B
+        DEFB    01100110B
+        DEFB    01011010B
+        DEFB    01000010B
+        DEFB    01000010B
+        DEFB    01000010B
 
 ; $4E - Character: 'N'          CHR$(78)
 
-        DEFB    0b01000010
-        DEFB    0b01100010
-        DEFB    0b01010010
-        DEFB    0b01001010
-        DEFB    0b01000110
-        DEFB    0b01000010
+        DEFB    01000010B
+        DEFB    01100010B
+        DEFB    01010010B
+        DEFB    01001010B
+        DEFB    01000110B
+        DEFB    01000010B
 
 ; $4F - Character: 'O'          CHR$(79)
 
-        DEFB    0b00111100
-        DEFB    0b01000010
-        DEFB    0b01000010
-        DEFB    0b01000010
-        DEFB    0b01000010
-        DEFB    0b00111100
+        DEFB    00111100B
+        DEFB    01000010B
+        DEFB    01000010B
+        DEFB    01000010B
+        DEFB    01000010B
+        DEFB    00111100B
 
 ; $50 - Character: 'P'          CHR$(80)
 
-        DEFB    0b01111100
-        DEFB    0b01000010
-        DEFB    0b01000010
-        DEFB    0b01111100
-        DEFB    0b01000000
-        DEFB    0b01000000
+        DEFB    01111100B
+        DEFB    01000010B
+        DEFB    01000010B
+        DEFB    01111100B
+        DEFB    01000000B
+        DEFB    01000000B
 
 ; $51 - Character: 'Q'          CHR$(81)
 
-        DEFB    0b00111100
-        DEFB    0b01000010
-        DEFB    0b01000010
-        DEFB    0b01010010
-        DEFB    0b01001010
-        DEFB    0b00111100
+        DEFB    00111100B
+        DEFB    01000010B
+        DEFB    01000010B
+        DEFB    01010010B
+        DEFB    01001010B
+        DEFB    00111100B
 
 ; $52 - Character: 'R'          CHR$(82)
 
-        DEFB    0b01111100
-        DEFB    0b01000010
-        DEFB    0b01000010
-        DEFB    0b01111100
-        DEFB    0b01000100
-        DEFB    0b01000010
+        DEFB    01111100B
+        DEFB    01000010B
+        DEFB    01000010B
+        DEFB    01111100B
+        DEFB    01000100B
+        DEFB    01000010B
 
 ; $53 - Character: 'S'          CHR$(83)
 
-        DEFB    0b00111100
-        DEFB    0b01000000
-        DEFB    0b00111100
-        DEFB    0b00000010
-        DEFB    0b01000010
-        DEFB    0b00111100
+        DEFB    00111100B
+        DEFB    01000000B
+        DEFB    00111100B
+        DEFB    00000010B
+        DEFB    01000010B
+        DEFB    00111100B
 
 ; $54 - Character: 'T'          CHR$(84)
 
-        DEFB    0b11111110
-        DEFB    0b00010000
-        DEFB    0b00010000
-        DEFB    0b00010000
-        DEFB    0b00010000
-        DEFB    0b00010000
+        DEFB    11111110B
+        DEFB    00010000B
+        DEFB    00010000B
+        DEFB    00010000B
+        DEFB    00010000B
+        DEFB    00010000B
 
 ; $55 - Character: 'U'          CHR$(85)
 
-        DEFB    0b01000010
-        DEFB    0b01000010
-        DEFB    0b01000010
-        DEFB    0b01000010
-        DEFB    0b01000010
-        DEFB    0b00111110
+        DEFB    01000010B
+        DEFB    01000010B
+        DEFB    01000010B
+        DEFB    01000010B
+        DEFB    01000010B
+        DEFB    00111110B
 
 ; $56 - Character: 'V'          CHR$(86)
 
-        DEFB    0b01000010
-        DEFB    0b01000010
-        DEFB    0b01000010
-        DEFB    0b01000010
-        DEFB    0b00100100
-        DEFB    0b00011000
+        DEFB    01000010B
+        DEFB    01000010B
+        DEFB    01000010B
+        DEFB    01000010B
+        DEFB    00100100B
+        DEFB    00011000B
 
 ; $57 - Character: 'W'          CHR$(87)
 
-        DEFB    0b01000010
-        DEFB    0b01000010
-        DEFB    0b01000010
-        DEFB    0b01000010
-        DEFB    0b01011010
-        DEFB    0b00100100
+        DEFB    01000010B
+        DEFB    01000010B
+        DEFB    01000010B
+        DEFB    01000010B
+        DEFB    01011010B
+        DEFB    00100100B
 
 ; $58 - Character: 'X'          CHR$(88)
 
-        DEFB    0b01000010
-        DEFB    0b00100100
-        DEFB    0b00011000
-        DEFB    0b00011000
-        DEFB    0b00100100
-        DEFB    0b01000010
+        DEFB    01000010B
+        DEFB    00100100B
+        DEFB    00011000B
+        DEFB    00011000B
+        DEFB    00100100B
+        DEFB    01000010B
 
 ; $59 - Character: 'Y'          CHR$(89)
 
-        DEFB    0b10000010
-        DEFB    0b01000100
-        DEFB    0b00101000
-        DEFB    0b00010000
-        DEFB    0b00010000
-        DEFB    0b00010000
+        DEFB    10000010B
+        DEFB    01000100B
+        DEFB    00101000B
+        DEFB    00010000B
+        DEFB    00010000B
+        DEFB    00010000B
 
 ; $5A - Character: 'Z'          CHR$(90)
 
-        DEFB    0b01111110
-        DEFB    0b00000100
-        DEFB    0b00001000
-        DEFB    0b00010000
-        DEFB    0b00100000
-        DEFB    0b01111110
+        DEFB    01111110B
+        DEFB    00000100B
+        DEFB    00001000B
+        DEFB    00010000B
+        DEFB    00100000B
+        DEFB    01111110B
 
 ; $5B - Character: '['          CHR$(91)
 
-        DEFB    0b00001110
-        DEFB    0b00001000
-        DEFB    0b00001000
-        DEFB    0b00001000
-        DEFB    0b00001000
-        DEFB    0b00001110
+        DEFB    00001110B
+        DEFB    00001000B
+        DEFB    00001000B
+        DEFB    00001000B
+        DEFB    00001000B
+        DEFB    00001110B
 
 ; $5C - Character: '\'          CHR$(92)
 
-        DEFB    0b00000000
-        DEFB    0b01000000
-        DEFB    0b00100000
-        DEFB    0b00010000
-        DEFB    0b00001000
-        DEFB    0b00000100
+        DEFB    00000000B
+        DEFB    01000000B
+        DEFB    00100000B
+        DEFB    00010000B
+        DEFB    00001000B
+        DEFB    00000100B
 
 ; $5D - Character: ']'          CHR$(93)
 
-        DEFB    0b01110000
-        DEFB    0b00010000
-        DEFB    0b00010000
-        DEFB    0b00010000
-        DEFB    0b00010000
-        DEFB    0b01110000
+        DEFB    01110000B
+        DEFB    00010000B
+        DEFB    00010000B
+        DEFB    00010000B
+        DEFB    00010000B
+        DEFB    01110000B
 
 ; $5E - Character: '^'          CHR$(94)
 
-        DEFB    0b00010000
-        DEFB    0b00111000
-        DEFB    0b01010100
-        DEFB    0b00010000
-        DEFB    0b00010000
-        DEFB    0b00010000
+        DEFB    00010000B
+        DEFB    00111000B
+        DEFB    01010100B
+        DEFB    00010000B
+        DEFB    00010000B
+        DEFB    00010000B
 
 ; $5F - Character: '_'          CHR$(95)
 
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b11111111
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    11111111B
 
 ; $60 - Character:  �           CHR$(96)
 
-        DEFB    0b00011100
-        DEFB    0b00100010
-        DEFB    0b01111000
-        DEFB    0b00100000
-        DEFB    0b00100000
-        DEFB    0b01111110
-        DEFB    0b00000000
+        DEFB    00011100B
+        DEFB    00100010B
+        DEFB    01111000B
+        DEFB    00100000B
+        DEFB    00100000B
+        DEFB    01111110B
+        DEFB    00000000B
 
 ; $61 - Character: 'a'          CHR$(97)
 
-        DEFB    0b00000000
-        DEFB    0b00111000
-        DEFB    0b00000100
-        DEFB    0b00111100
-        DEFB    0b01000100
-        DEFB    0b00111110
-        DEFB    0b00000000
+        DEFB    00000000B
+        DEFB    00111000B
+        DEFB    00000100B
+        DEFB    00111100B
+        DEFB    01000100B
+        DEFB    00111110B
+        DEFB    00000000B
 
 ; $62 - Character: 'b'          CHR$(98)
 
-        DEFB    0b00100000
-        DEFB    0b00100000
-        DEFB    0b00111100
-        DEFB    0b00100010
-        DEFB    0b00100010
-        DEFB    0b00111100
-        DEFB    0b00000000
+        DEFB    00100000B
+        DEFB    00100000B
+        DEFB    00111100B
+        DEFB    00100010B
+        DEFB    00100010B
+        DEFB    00111100B
+        DEFB    00000000B
 
 ; $63 - Character: 'c'          CHR$(99)
 
-        DEFB    0b00000000
-        DEFB    0b00011100
-        DEFB    0b00100000
-        DEFB    0b00100000
-        DEFB    0b00100000
-        DEFB    0b00011100
-        DEFB    0b00000000
+        DEFB    00000000B
+        DEFB    00011100B
+        DEFB    00100000B
+        DEFB    00100000B
+        DEFB    00100000B
+        DEFB    00011100B
+        DEFB    00000000B
 
 ; $64 - Character: 'd'          CHR$(100)
 
-        DEFB    0b00000100
-        DEFB    0b00000100
-        DEFB    0b00111100
-        DEFB    0b01000100
-        DEFB    0b01000100
-        DEFB    0b00111110
-        DEFB    0b00000000
+        DEFB    00000100B
+        DEFB    00000100B
+        DEFB    00111100B
+        DEFB    01000100B
+        DEFB    01000100B
+        DEFB    00111110B
+        DEFB    00000000B
 
 ; $65 - Character: 'e'          CHR$(101)
 
-        DEFB    0b00000000
-        DEFB    0b00111000
-        DEFB    0b01000100
-        DEFB    0b01111000
-        DEFB    0b01000000
-        DEFB    0b00111100
-        DEFB    0b00000000
+        DEFB    00000000B
+        DEFB    00111000B
+        DEFB    01000100B
+        DEFB    01111000B
+        DEFB    01000000B
+        DEFB    00111100B
+        DEFB    00000000B
 
 ; $66 - Character: 'f'          CHR$(102)
 
-        DEFB    0b00001100
-        DEFB    0b00010000
-        DEFB    0b00011000
-        DEFB    0b00010000
-        DEFB    0b00010000
-        DEFB    0b00010000
-        DEFB    0b00000000
+        DEFB    00001100B
+        DEFB    00010000B
+        DEFB    00011000B
+        DEFB    00010000B
+        DEFB    00010000B
+        DEFB    00010000B
+        DEFB    00000000B
 
 ; $67 - Character: 'g'          CHR$(103)
 
-        DEFB    0b00000000
-        DEFB    0b00111100
-        DEFB    0b01000100
-        DEFB    0b01000100
-        DEFB    0b00111100
-        DEFB    0b00000100
-        DEFB    0b00111000
+        DEFB    00000000B
+        DEFB    00111100B
+        DEFB    01000100B
+        DEFB    01000100B
+        DEFB    00111100B
+        DEFB    00000100B
+        DEFB    00111000B
 
 ; $68 - Character: 'h'          CHR$(104)
 
-        DEFB    0b01000000
-        DEFB    0b01000000
-        DEFB    0b01111000
-        DEFB    0b01000100
-        DEFB    0b01000100
-        DEFB    0b01000100
-        DEFB    0b00000000
+        DEFB    01000000B
+        DEFB    01000000B
+        DEFB    01111000B
+        DEFB    01000100B
+        DEFB    01000100B
+        DEFB    01000100B
+        DEFB    00000000B
 
 ; $69 - Character: 'i'          CHR$(105)
 
-        DEFB    0b00010000
-        DEFB    0b00000000
-        DEFB    0b00110000
-        DEFB    0b00010000
-        DEFB    0b00010000
-        DEFB    0b00111000
-        DEFB    0b00000000
+        DEFB    00010000B
+        DEFB    00000000B
+        DEFB    00110000B
+        DEFB    00010000B
+        DEFB    00010000B
+        DEFB    00111000B
+        DEFB    00000000B
 
 ; $6A - Character: 'j'          CHR$(106)
 
-        DEFB    0b00000100
-        DEFB    0b00000000
-        DEFB    0b00000100
-        DEFB    0b00000100
-        DEFB    0b00000100
-        DEFB    0b00100100
-        DEFB    0b00011000
+        DEFB    00000100B
+        DEFB    00000000B
+        DEFB    00000100B
+        DEFB    00000100B
+        DEFB    00000100B
+        DEFB    00100100B
+        DEFB    00011000B
 
 ; $6B - Character: 'k'          CHR$(107)
 
-        DEFB    0b00100000
-        DEFB    0b00101000
-        DEFB    0b00110000
-        DEFB    0b00110000
-        DEFB    0b00101000
-        DEFB    0b00100100
-        DEFB    0b00000000
+        DEFB    00100000B
+        DEFB    00101000B
+        DEFB    00110000B
+        DEFB    00110000B
+        DEFB    00101000B
+        DEFB    00100100B
+        DEFB    00000000B
 
 ; $6C - Character: 'l'          CHR$(108)
 
-        DEFB    0b00010000
-        DEFB    0b00010000
-        DEFB    0b00010000
-        DEFB    0b00010000
-        DEFB    0b00010000
-        DEFB    0b00001100
-        DEFB    0b00000000
+        DEFB    00010000B
+        DEFB    00010000B
+        DEFB    00010000B
+        DEFB    00010000B
+        DEFB    00010000B
+        DEFB    00001100B
+        DEFB    00000000B
 
 ; $6D - Character: 'm'          CHR$(109)
 
-        DEFB    0b00000000
-        DEFB    0b01101000
-        DEFB    0b01010100
-        DEFB    0b01010100
-        DEFB    0b01010100
-        DEFB    0b01010100
-        DEFB    0b00000000
+        DEFB    00000000B
+        DEFB    01101000B
+        DEFB    01010100B
+        DEFB    01010100B
+        DEFB    01010100B
+        DEFB    01010100B
+        DEFB    00000000B
 
 ; $6E - Character: 'n'          CHR$(110)
 
-        DEFB    0b00000000
-        DEFB    0b01111000
-        DEFB    0b01000100
-        DEFB    0b01000100
-        DEFB    0b01000100
-        DEFB    0b01000100
-        DEFB    0b00000000
+        DEFB    00000000B
+        DEFB    01111000B
+        DEFB    01000100B
+        DEFB    01000100B
+        DEFB    01000100B
+        DEFB    01000100B
+        DEFB    00000000B
 
 ; $6F - Character: 'o'          CHR$(111)
 
-        DEFB    0b00000000
-        DEFB    0b00111000
-        DEFB    0b01000100
-        DEFB    0b01000100
-        DEFB    0b01000100
-        DEFB    0b00111000
-        DEFB    0b00000000
+        DEFB    00000000B
+        DEFB    00111000B
+        DEFB    01000100B
+        DEFB    01000100B
+        DEFB    01000100B
+        DEFB    00111000B
+        DEFB    00000000B
 
 ; $70 - Character: 'p'          CHR$(112)
 
-        DEFB    0b00000000
-        DEFB    0b01111000
-        DEFB    0b01000100
-        DEFB    0b01000100
-        DEFB    0b01111000
-        DEFB    0b01000000
-        DEFB    0b01000000
+        DEFB    00000000B
+        DEFB    01111000B
+        DEFB    01000100B
+        DEFB    01000100B
+        DEFB    01111000B
+        DEFB    01000000B
+        DEFB    01000000B
 
 ; $71 - Character: 'q'          CHR$(113)
 
-        DEFB    0b00000000
-        DEFB    0b00111100
-        DEFB    0b01000100
-        DEFB    0b01000100
-        DEFB    0b00111100
-        DEFB    0b00000100
-        DEFB    0b00000110
+        DEFB    00000000B
+        DEFB    00111100B
+        DEFB    01000100B
+        DEFB    01000100B
+        DEFB    00111100B
+        DEFB    00000100B
+        DEFB    00000110B
 
 ; $72 - Character: 'r'          CHR$(114)
 
-        DEFB    0b00000000
-        DEFB    0b00011100
-        DEFB    0b00100000
-        DEFB    0b00100000
-        DEFB    0b00100000
-        DEFB    0b00100000
-        DEFB    0b00000000
+        DEFB    00000000B
+        DEFB    00011100B
+        DEFB    00100000B
+        DEFB    00100000B
+        DEFB    00100000B
+        DEFB    00100000B
+        DEFB    00000000B
 
 ; $73 - Character: 's'          CHR$(115)
 
-        DEFB    0b00000000
-        DEFB    0b00111000
-        DEFB    0b01000000
-        DEFB    0b00111000
-        DEFB    0b00000100
-        DEFB    0b01111000
-        DEFB    0b00000000
+        DEFB    00000000B
+        DEFB    00111000B
+        DEFB    01000000B
+        DEFB    00111000B
+        DEFB    00000100B
+        DEFB    01111000B
+        DEFB    00000000B
 
 ; $74 - Character: 't'          CHR$(116)
 
-        DEFB    0b00010000
-        DEFB    0b00111000
-        DEFB    0b00010000
-        DEFB    0b00010000
-        DEFB    0b00010000
-        DEFB    0b00001100
-        DEFB    0b00000000
+        DEFB    00010000B
+        DEFB    00111000B
+        DEFB    00010000B
+        DEFB    00010000B
+        DEFB    00010000B
+        DEFB    00001100B
+        DEFB    00000000B
 
 ; $75 - Character: 'u'          CHR$(117)
 
-        DEFB    0b00000000
-        DEFB    0b01000100
-        DEFB    0b01000100
-        DEFB    0b01000100
-        DEFB    0b01000100
-        DEFB    0b00111100
-        DEFB    0b00000000
+        DEFB    00000000B
+        DEFB    01000100B
+        DEFB    01000100B
+        DEFB    01000100B
+        DEFB    01000100B
+        DEFB    00111100B
+        DEFB    00000000B
 
 ; $76 - Character: 'v'          CHR$(118)
 
-        DEFB    0b00000000
-        DEFB    0b01000100
-        DEFB    0b01000100
-        DEFB    0b00101000
-        DEFB    0b00101000
-        DEFB    0b00010000
-        DEFB    0b00000000
+        DEFB    00000000B
+        DEFB    01000100B
+        DEFB    01000100B
+        DEFB    00101000B
+        DEFB    00101000B
+        DEFB    00010000B
+        DEFB    00000000B
 
 ; $77 - Character: 'w'          CHR$(119)
 
-        DEFB    0b00000000
-        DEFB    0b01000100
-        DEFB    0b01010100
-        DEFB    0b01010100
-        DEFB    0b01010100
-        DEFB    0b00101000
-        DEFB    0b00000000
+        DEFB    00000000B
+        DEFB    01000100B
+        DEFB    01010100B
+        DEFB    01010100B
+        DEFB    01010100B
+        DEFB    00101000B
+        DEFB    00000000B
 
 ; $78 - Character: 'x'          CHR$(120)
 
-        DEFB    0b00000000
-        DEFB    0b01000100
-        DEFB    0b00101000
-        DEFB    0b00010000
-        DEFB    0b00101000
-        DEFB    0b01000100
-        DEFB    0b00000000
+        DEFB    00000000B
+        DEFB    01000100B
+        DEFB    00101000B
+        DEFB    00010000B
+        DEFB    00101000B
+        DEFB    01000100B
+        DEFB    00000000B
 
 ; $79 - Character: 'y'          CHR$(121)
 
-        DEFB    0b00000000
-        DEFB    0b01000100
-        DEFB    0b01000100
-        DEFB    0b01000100
-        DEFB    0b00111100
-        DEFB    0b00000100
-        DEFB    0b00111000
+        DEFB    00000000B
+        DEFB    01000100B
+        DEFB    01000100B
+        DEFB    01000100B
+        DEFB    00111100B
+        DEFB    00000100B
+        DEFB    00111000B
 
 ; $7A - Character: 'z'          CHR$(122)
 
-        DEFB    0b00000000
-        DEFB    0b01111100
-        DEFB    0b00001000
-        DEFB    0b00010000
-        DEFB    0b00100000
-        DEFB    0b01111100
-        DEFB    0b00000000
+        DEFB    00000000B
+        DEFB    01111100B
+        DEFB    00001000B
+        DEFB    00010000B
+        DEFB    00100000B
+        DEFB    01111100B
+        DEFB    00000000B
 
 ; $7B - Character: '{'          CHR$(123)
 
-        DEFB    0b00001110
-        DEFB    0b00001000
-        DEFB    0b00110000
-        DEFB    0b00110000
-        DEFB    0b00001000
-        DEFB    0b00001110
-        DEFB    0b00000000
+        DEFB    00001110B
+        DEFB    00001000B
+        DEFB    00110000B
+        DEFB    00110000B
+        DEFB    00001000B
+        DEFB    00001110B
+        DEFB    00000000B
 
 ; $7C - Character: '|'          CHR$(124)
 
-        DEFB    0b00001000
-        DEFB    0b00001000
-        DEFB    0b00001000
-        DEFB    0b00001000
-        DEFB    0b00001000
-        DEFB    0b00001000
-        DEFB    0b00000000
+        DEFB    00001000B
+        DEFB    00001000B
+        DEFB    00001000B
+        DEFB    00001000B
+        DEFB    00001000B
+        DEFB    00001000B
+        DEFB    00000000B
 
 ; $7D - Character: '}'          CHR$(125)
 
-        DEFB    0b01110000
-        DEFB    0b00010000
-        DEFB    0b00001100
-        DEFB    0b00001100
-        DEFB    0b00010000
-        DEFB    0b01110000
-        DEFB    0b00000000
+        DEFB    01110000B
+        DEFB    00010000B
+        DEFB    00001100B
+        DEFB    00001100B
+        DEFB    00010000B
+        DEFB    01110000B
+        DEFB    00000000B
 
 ; $7E - Character: '~'          CHR$(126)
 
-        DEFB    0b00110010
-        DEFB    0b01001100
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00000000
-        DEFB    0b00000000
+        DEFB    00110010B
+        DEFB    01001100B
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00000000B
+        DEFB    00000000B
 
 ; $7F - Character:  �           CHR$(127)
 
-        DEFB    0b00111100
-        DEFB    0b01000010
-        DEFB    0b10011001
-        DEFB    0b10100001
-        DEFB    0b10100001
-        DEFB    0b10011001
-        DEFB    0b01000010
-L1FFB:  DEFB    0b00111100
+        DEFB    00111100B
+        DEFB    01000010B
+        DEFB    10011001B
+        DEFB    10100001B
+        DEFB    10100001B
+        DEFB    10011001B
+        DEFB    01000010B
+L1FFB:  DEFB    00111100B
+
 
 
 ; ---------------
@@ -10261,12 +10262,16 @@ L1FFF:  DEFB    $00                     ; length of dummy word zero
 
 ORG     0x2000
 
-HOLE4VIDRAM: DS  4096     
+HOLE4VIDRAM: DS  4096
 
 ORG     0x3000
 
 NEWROMSTART:
-LD HL,0 
+LD HL,0
+
+ORG     0x3FFF
+
+NEWROMEND: DS   1        ,'Z'
 
 ;.END
 
@@ -10414,3 +10419,4 @@ LD HL,0
 ;                     [] mosaic graphic          �  currency symbol
 ;
 ; -----------------------------------------------------------------------------
+
