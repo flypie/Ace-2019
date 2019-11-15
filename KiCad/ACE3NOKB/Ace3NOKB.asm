@@ -14,17 +14,17 @@
 
 ;#define DEFB    .BYTE
 ;#define DEFW    .WORD
-;#define DEFM    .TEXT
+DEFM    equ DB
 ;#define EQU     .EQU
 ;#define ORG     .ORG
 
-;RAMSTART equ  $3C00
-RAMSTART equ $4000
+;RAMSTART equ  03C00h
+RAMSTART equ 04000h
 
 
 
 
-        ORG     $0000
+        ORG     00000h
 
 ; -------------------
 ; THE 'START' RESTART
@@ -32,7 +32,7 @@ RAMSTART equ $4000
 
 L0000:  DI                              ; disable interrupts.
         LD      HL,RAMSTART                ; start of 'User' RAM
-        LD      A,$FC                   ; a test byte and 1K masking byte.
+        LD      A,0FCh                   ; a test byte and 1K masking byte.
         JR      L0028                   ; forward to continue at Part 2.
 
 ; -------------------
@@ -40,14 +40,14 @@ L0000:  DI                              ; disable interrupts.
 ; -------------------
 
 L0008:  EXX                             ; preserve main registers.
-        BIT     3,(IX+$3E)              ; test FLAGS for print destination.
+        BIT     3,(IX+03Eh)              ; test FLAGS for print destination.
         JP      L03EE                   ; forward to
 
 ; ---------------------------
 ; THE 'STACK WORD DE' RESTART
 ; ---------------------------
 
-L0010:  LD      HL,(RAMSTART + $3B)              ; SPARE
+L0010:  LD      HL,(RAMSTART + 03Bh)              ; SPARE
         LD      (HL),E
         INC     HL
         JP      L085F                   ;
@@ -57,7 +57,7 @@ L0010:  LD      HL,(RAMSTART + $3B)              ; SPARE
 ; -------------------------
 
 
-L0018:  LD      HL,(RAMSTART + $3B)              ; SPARE
+L0018:  LD      HL,(RAMSTART + 03Bh)              ; SPARE
         DEC     HL
         LD      D,(HL)
         JP      L0859                   ;
@@ -68,7 +68,7 @@ L0018:  LD      HL,(RAMSTART + $3B)              ; SPARE
 
 L0020:  POP     HL
         LD      A,(HL)
-        LD      (RAMSTART + $3D),A               ; ERR_NO
+        LD      (RAMSTART + 03Dh),A               ; ERR_NO
         JP      L00AD                   ;
 
 ; ------------------------------------
@@ -82,7 +82,7 @@ L0028:  INC     H                       ; increase high byte
 
         AND     H                       ; limit to nearest 1K segment.
         LD      H,A                     ; place back in H.
-        LD      (RAMSTART + $18),HL              ; set system variable RAMTOP.
+        LD      (RAMSTART + 018h),HL              ; set system variable RAMTOP.
         LD      SP,HL                   ; initialize the stack pointer.
 
 ; the Z80 instructions CALL, PUSH and POP can now be used.
@@ -101,43 +101,43 @@ L0038:  JP      L013A                   ; jump to somewhere more convenient.
 ;
 ; MEMORY MAP
 ;
-; $0000 +======================================================+
+; 00000h +======================================================+
 ;       |                                                      |
 ;       |                   ROM 8K                             |
-;       |                                     v $2300          |
-; $2000 +======================================================+ - - - - - -
-;       |       copy of $2400                 |0|<  cassette  >|
-; $2400 +-------------------------------------+-+--------------+
+;       |                                     v 02300h          |
+; 02000h +======================================================+ - - - - - -
+;       |       copy of 02400h                 |0|<  cassette  >|
+; 02400h +-------------------------------------+-+--------------+
 ;       |       VIDEO MEMORY 768 bytes        |0| PAD 254 bytes| 1K RAM
-; $2800 +-------------------------------------+-+--------------+
-;       |       copy of $2c00                 ^ $2700          |
-; $2C00 +------------------------------------------------------+
+; 02800h +-------------------------------------+-+--------------+
+;       |       copy of 02c00h                 ^ 02700h          |
+; 02C00h +------------------------------------------------------+
 ;       |       CHARACTER SET - Write-Only                     | 1K RAM
-; $3000 +------------------------------------------------------+
+; 03000h +------------------------------------------------------+
 ;       |        ROM 4K                                        |
-; $4000 +-------+----------------------------------------------+
+; 04000h +-------+----------------------------------------------+
 ;       |SYSVARS| DICT {12} DATA STACK ->         <- RET STACK | 1K RAM
 ;       +=======+==============================================+
 ;       |                                                      |
 ;                       48K AVAILABLE FOR EXPANSION.
 ;       |                                                      |
-; $FFFF +======================================================+
+; 0FFFFh +======================================================+
 ;
 ; The Ace had an 8K ROM and was sold with 3K of RAM each byte of which had
 ; at least two addresses and sometimes four addresses so the mapping of the
 ; 3K of RAM was as above.
 ; The 768 bytes of video memory is accessed by the ROM using addresses
-; $2400 - $26FF. This gives priority to the video circuitry which also needs
-; this information to build the TV picture. The byte at $2700 is set to zero
+; 02400h - 026FFh. This gives priority to the video circuitry which also needs
+; this information to build the TV picture. The byte at 02700h is set to zero
 ; so that it is easy for the ROM to detect when it is at the end of the screen.
 ; The 254 bytes remaining are the PAD - the workspace used by FORTH.
 ; This same area is used by the tape recorder routines to assemble the tape
 ; header information but since, for accurate tape timing, the FORTH ROM needs
-; priority over the video circuitry, then the ROM uses addresses $2301 - $23FF.
+; priority over the video circuitry, then the ROM uses addresses 02301h - 023FFh.
 ;
 ; Similarly the Character Set is written to by the ROM (and User) at the 1K
-; section starting at $2C00. The video circuitry accesses this using addresses
-; $2800 - $2BFF to build the TV picture. It is not possible for the ROM or User
+; section starting at 02C00h. The video circuitry accesses this using addresses
+; 02800h - 02BFFh to build the TV picture. It is not possible for the ROM or User
 ; to read back the information from either address so this precludes the saving
 ; of character sets and writing a driver for a device like the ZX Printer.
 ;
@@ -152,30 +152,30 @@ L0038:  JP      L013A                   ; jump to somewhere more convenient.
 ; THE 'INITIALIZATION ROUTINE' Part 3.
 ; ------------------------------------
 
-L003B:  LD      DE,RAMSTART + $24                ; destination system variable L_HALF
-        LD      BC,$002D                ; number of bytes.
+L003B:  LD      DE,RAMSTART + 024h                ; destination system variable L_HALF
+        LD      BC,0002Dh                ; number of bytes.
         LDIR                            ; copy initial state from ROM to RAM.
 
-        LD      IX,RAMSTART + $00                ; set IX to index the system variables.
+        LD      IX,RAMSTART + 000h                ; set IX to index the system variables.
         LD      IY,L04C8                ; set IY to the SLOW return address.
 
 L004B:  CALL    L0A24                   ; routine CLS.
 
         XOR     A                       ; clear accumulator.
 
-        LD      ($2700),A               ; make location after screen zero.
+        LD      (02700h),A               ; make location after screen zero.
 
 ; There are 128 bit-mapped 8x8 characters.
-; Define the 8 Battenberg graphics ($10 to $17) from low byte of address.
-; This routine also sets the other characters $00 to $0F and $18 to $1F
-; to copies of this range. The inverse form of character $17 is used as the
-; normal cursor - character $97.
+; Define the 8 Battenberg graphics (010h to 017h) from low byte of address.
+; This routine also sets the other characters 000h to 00Fh and 018h to 01Fh
+; to copies of this range. The inverse form of character 017h is used as the
+; normal cursor - character 097h.
 
-L0052:  LD      HL,$2C00                ; point to the start of the 1K write-
+L0052:  LD      HL,02C00h                ; point to the start of the 1K write-
                                         ; only Character Set RAM.
 
 L0055:  LD      A,L                     ; set A to low byte of address
-        AND     $BF                     ; AND %10111111
+        AND     0BFh                     ; AND %10111111
         RRCA                            ; rotate
         RRCA                            ; three times
         RRCA                            ; to test bit 2
@@ -188,12 +188,12 @@ L005F:  RRCA                            ; set carry from bit (3) or (6)
 
         LD      B,A
 
-        SBC     A,A                     ; $00 or $FF
+        SBC     A,A                     ; 000h or 0FFh
         RR      B
         LD      B,A
         SBC     A,A
         XOR     B
-        AND     $F0
+        AND     0F0h
         XOR     B
         LD      (HL),A                  ; insert the byte.
         INC     L                       ; increment low byte of address
@@ -205,22 +205,22 @@ L005F:  RRCA                            ; set carry from bit (3) or (6)
 ; the Character RAM, filling in some blank bytes omitted to save ROM space.
 ; This process starts at high memory and works downwards.
 
-L006E:  LD      DE,$2FFF                ; top of destination.
+L006E:  LD      DE,02FFFh                ; top of destination.
         LD      HL,L1FFB                ; end of copyright character.
-        LD      BC,$0008                ; 8 characters
+        LD      BC,00008h                ; 8 characters
 
         LDDR                            ; copy the  �  character
 
         EX      DE,HL                   ; switch pointers.
 
-        LD      A,$5F                   ; set character counter to ninety five.
+        LD      A,05Fh                   ; set character counter to ninety five.
                                         ; i.e. %0101 1111
                                         ; bit 5 shows which 32-character sector
                                         ; we are in.
 
 ; enter a loop for the remaining characters supplying zero bytes as required.
 
-L007C:  LD      C,$07                   ; set byte counter to seven.
+L007C:  LD      C,007h                   ; set byte counter to seven.
 
         BIT     5,A                     ; test bit 5 of the counter.
         JR      Z,L0085                 ; forward if not in middle section
@@ -257,39 +257,39 @@ L0085:  EX      DE,HL                   ; switch pointers.
 ; keyboard.
 
 L0092:  DEFM    "QUI"                   ; 'name field'
-        DEFB    'T' + $80
+        DEFB    'T' + 080h
 
-L0096:  DEFW    $0000                   ; 'link field' - end of linked list.
+L0096:  DEFW    00000h                   ; 'link field' - end of linked list.
 
-L0098:  DEFB    $04                     ; 'name length field'
+L0098:  DEFB    004h                     ; 'name length field'
 
-L0099:  DEFW    L009B                   ; 'code field'
+L0099:  DEFW    L009B                   ; 'code field' 
                                         ; address of machine code for routine.
 
 ; ---
 
-L009B:  LD      SP,(RAMSTART + $18)              ; set stack-pointer to RAMTOP.
+L009B:  LD      SP,(RAMSTART + 018h)              ; set stack-pointer to RAMTOP.
 
         EI                              ; Enable Interrupts.
 
-        JP      L04F2                   ; jump forward to the main execution
+        JP      L04F2                   ; jump forward to the main execution 
                                         ; loop.
 
 ; ----------------
 ; THE 'ABORT' WORD
 ; ----------------
 ; Clears the data and return stacks, deletes any incomplete definition
-; left in the dictionary, prints 'ERROR' and the byte from address RAMSTART + $3D
+; left in the dictionary, prints 'ERROR' and the byte from address RAMSTART + 03Dh
 ; if the byte is non-negative, empties the input buffer, and returns
 ; control to the keyboard.
 
 
-L00A3:  DEFM    "ABOR"                  ; 'name field'
-        DEFB    'T' + $80
+L00A3:  DEFM    "ABOR"                  ; 'name field' 
+        DEFB    'T' + 080h               
 
         DEFW    L0098                   ; 'link field' to previous word QUIT.
 
-L00AA:  DEFB    $05                     ; 'name length field'
+L00AA:  DEFB    005h                     ; 'name length field'
 
 L00AB:  DEFW    L00AD                   ; 'code field'
 
@@ -301,11 +301,11 @@ L00AD:  PUSH    IY                      ; preserve current IY value slow/fast.
 
         LD      IY,L04B9                ; set IY to FAST
                                         ; now empty the data stack
-        LD      HL,(RAMSTART + $37)              ; STKBOT
-        LD      (RAMSTART + $3B),HL              ; SPARE
-        LD      HL,RAMSTART + $3E                ; address FLAGS
+        LD      HL,(RAMSTART + 037h)              ; STKBOT
+        LD      (RAMSTART + 03Bh),HL              ; SPARE
+        LD      HL,RAMSTART + 03Eh                ; address FLAGS
         LD      A,(HL)                  ; fetch status from FLAGS.
-        AND     $B3                     ; AND %10110011
+        AND     0B3h                     ; AND %10110011
                                         ; reset bit 2 - show definition complete
                                         ; reset bit 3 - output to screen.
                                         ; reset bit 6 - show in interpreter mode
@@ -318,13 +318,13 @@ L00C4:  CALL    L04B9                   ; do forth
         DEFW    L0490                   ; dict          address of sv DICT
         DEFW    L08B3                   ; @             value of sv DICT (d).
         DEFW    L104B                   ; stk_data      d.         length field
-        DEFB    $05                     ; five          d, 5.
+        DEFB    005h                     ; five          d, 5.
         DEFW    L0DD2                   ; +             d+5.       code field
         DEFW    L086B                   ; dup           d+5, d+5.
         DEFW    L1610                   ; prvcur        d+5.
         DEFW    L15B5                   ; namefield     n.
         DEFW    L1011                   ; stackwrd      n.
-        DEFW    RAMSTART + $37                   ; (stkbot)      n, stkbot.
+        DEFW    RAMSTART + 037h                   ; (stkbot)      n, stkbot.
         DEFW    L08C1                   ; !             .
         DEFW    L1A0E                   ; end-forth.    .
 
@@ -332,7 +332,7 @@ L00C4:  CALL    L04B9                   ; do forth
 ; obsolete name field and the system variable CURRENT points to the
 ; address of the previous complete word - obtained from the old link field.
 
-L00DE:  BIT     7,(IX+$3D)              ; test ERR_NO for normal value 255.
+L00DE:  BIT     7,(IX+03Dh)              ; test ERR_NO for normal value 255.
         JR      NZ,L00FF                ; set-min then main-loop if OK.
 
         CALL    L1808                   ; else pr-inline
@@ -340,25 +340,25 @@ L00DE:  BIT     7,(IX+$3D)              ; test ERR_NO for normal value 255.
 ; ---
 
 L00E7:  DEFM    "ERRO"                  ; the message "ERROR" with the last
-        DEFB    'R' + $80               ; character inverted.
+        DEFB    'R' + 080h               ; character inverted.
 
 ; ---
 
 L00EC:  CALL    L04B9                   ; forth
 
         DEFW    L1011                   ; stack next word
-        DEFW    RAMSTART + $3D                   ; -> system variable ERR_NO
+        DEFW    RAMSTART + 03Dh                   ; -> system variable ERR_NO
         DEFW    L0896                   ; C@            - fetch content byte
         DEFW    L09B3                   ; .             - print it
         DEFW    L0A95                   ; CR
         DEFW    L1A0E                   ; end-forth.
 
-        LD      (IX+$3D),$FF            ; set ERR_NO to 'No Error'
+        LD      (IX+03Dh),0FFh            ; set ERR_NO to 'No Error'
 
-L00FF:  LD      HL,(RAMSTART + $37)              ; fetch STKBOT
-        LD      BC,$000C                ; allow twelve bytes for stack underflow
+L00FF:  LD      HL,(RAMSTART + 037h)              ; fetch STKBOT
+        LD      BC,0000Ch                ; allow twelve bytes for stack underflow
         ADD     HL,BC                   ; add the extra
-        LD      (RAMSTART + $3B),HL              ; set SPARE
+        LD      (RAMSTART + 03Bh),HL              ; set SPARE
         POP     IY                      ; restore previous state of IY
 
         JR      L009B                   ; rejoin main loop
@@ -369,48 +369,48 @@ L00FF:  LD      HL,(RAMSTART + $37)              ; fetch STKBOT
 ; This is the default environment that is copied from ROM to RAM as part of
 ; the initialization process. This also contains the FORTH word FORTH definition
 
-L010D:  DEFW    $26E0                   ; L_HALF
+L010D:  DEFW    026E0h                   ; L_HALF
 
-        DEFB    $00                     ; KEYCOD
-        DEFB    $00                     ; KEYCNT copy the 32 bytes.
-        DEFB    $00                     ; STATIN
-        DEFW    $0000                   ; EXWRCH
-        DEFB    $00                     ; FRAMES
-        DEFB    $00                     ; FRAMES
-        DEFB    $00                     ; FRAMES
-        DEFB    $00                     ; FRAMES
-        DEFB    $00                     ; XCOORD
-        DEFB    $00                     ; YCOORD
-        DEFW    RAMSTART + $4C                   ; CURRENT
-        DEFW    RAMSTART + $4C                   ; CONTEXT
-        DEFW    RAMSTART + $4F                   ; VOCLNK
-        DEFW    RAMSTART + $51                   ; STKBOT
-        DEFW    RAMSTART + $45                   ; DICT
-        DEFW    RAMSTART + $5D                   ; SPARE
-        DEFB    $FF                     ; ERR_NO
-        DEFB    $00                     ; FLAGS
-        DEFB    $0A                     ; BASE
+        DEFB    000h                     ; KEYCOD
+        DEFB    000h                     ; KEYCNT copy the 32 bytes.
+        DEFB    000h                     ; STATIN
+        DEFW    00000h                   ; EXWRCH
+        DEFB    000h                     ; FRAMES
+        DEFB    000h                     ; FRAMES
+        DEFB    000h                     ; FRAMES
+        DEFB    000h                     ; FRAMES
+        DEFB    000h                     ; XCOORD
+        DEFB    000h                     ; YCOORD
+        DEFW    RAMSTART + 04Ch                   ; CURRENT
+        DEFW    RAMSTART + 04Ch                   ; CONTEXT
+        DEFW    RAMSTART + 04Fh                   ; VOCLNK
+        DEFW    RAMSTART + 051h                   ; STKBOT
+        DEFW    RAMSTART + 045h                   ; DICT
+        DEFW    RAMSTART + 05Dh                   ; SPARE
+        DEFB    0FFh                     ; ERR_NO
+        DEFB    000h                     ; FLAGS
+        DEFB    00Ah                     ; BASE
 
 ; FORTH
 
         DEFM    "FORT"                  ; The 'name field'
-        DEFB    'H' + $80               ; FORTH
+        DEFB    'H' + 080h               ; FORTH
 
 
-        DEFW    $0000                   ; length field - filled when next word
+        DEFW    00000h                   ; length field - filled when next word
                                         ; is defined.
-        DEFW    L1FFF                   ; link field copied to RAMSTART + $49.
-        DEFB    $05                     ; name length field
+        DEFW    L1FFF                   ; link field copied to RAMSTART + 049h.
+        DEFB    005h                     ; name length field
         DEFW    L11B5                   ; code field
-        DEFW    RAMSTART + $49                   ; address of parameters
-        DEFB    $00                     ; VOCLNK                        [RAMSTART + $4F]
-        DEFB    $00                     ; - link to next vocabulary.
-        DEFB    $00                     ; last byte to be copied.    to [RAMSTART + $51]
+        DEFW    RAMSTART + 049h                   ; address of parameters
+        DEFB    000h                     ; VOCLNK                        [RAMSTART + 04Fh]
+        DEFB    000h                     ; - link to next vocabulary.
+        DEFB    000h                     ; last byte to be copied.    to [RAMSTART + 051h]
 
 ; -----------------------------------------------
 ; THE 'CONTINUATION OF THE Z80 INTERRUPT' ROUTINE
 ; -----------------------------------------------
-; The destination of the jump at $0038.
+; The destination of the jump at 00038h.
 ; Begin by saving both accumulators and the 3 main registers.
 
 L013A:  PUSH    AF                      ; preserve both accumulators
@@ -423,13 +423,13 @@ L013A:  PUSH    AF                      ; preserve both accumulators
 
 ; Now wait for 62 * 12 clock cycles. ( To avoid flicker perhaps? ).
 
-        LD      B,$3E                   ; delay counter.
+        LD      B,03Eh                   ; delay counter.
 
 L0142:  DJNZ    L0142                   ; self loop for delay
 
 ; Increment the 4-byte frames counter for use as a system clock.
 
-        LD      HL,RAMSTART + $2B                ; FRAMES1
+        LD      HL,RAMSTART + 02Bh                ; FRAMES1
 
 L0147:  INC     (HL)                    ; increment timer.
         INC     HL                      ; next significant byte of four.
@@ -446,7 +446,7 @@ L0147:  INC     (HL)                    ; increment timer.
 
         CALL    L0310                   ; routine KEYBOARD.
 
-        LD      HL,RAMSTART + $28                ; address system variable STATIN
+        LD      HL,RAMSTART + 028h                ; address system variable STATIN
 
         BIT     0,(HL)                  ; new key?
         JR      Z,L0176                 ; forward if not to RESTORE/EXIT
@@ -454,7 +454,7 @@ L0147:  INC     (HL)                    ; increment timer.
         AND     A                       ; zero key code ?
         JR      Z,L0176                 ; forward if so to EXIT.
 
-        CP      $20                     ; compare to SPACE
+        CP      020h                     ; compare to SPACE
         JR      C,L0170                 ; forward if less as an Editing Key.
 
         BIT     1,(HL)                  ; CAPS shift?
@@ -463,12 +463,12 @@ L0147:  INC     (HL)                    ; increment timer.
         BIT     2,(HL)                  ; GRAPHICS mode?
         JR      Z,L0167                 ; skip forward if not
 
-        AND     $9F                     ; convert to one of 8 mosaic characters
+        AND     09Fh                     ; convert to one of 8 mosaic characters
 
 L0167:  BIT     3,(HL)                  ; INVERSE mode?
         JR      Z,L016D                 ; forward if not.
 
-        OR      $80                     ; set bit 7 to make character inverse.
+        OR      080h                     ; set bit 7 to make character inverse.
 
 L016D:  CALL    L0196                   ; routine pr_buffer
 
@@ -492,23 +492,23 @@ L0176:  POP     HL                      ;
 ; THE 'PRINT to LOWER SCREEN' ROUTINE
 ; -----------------------------------
 
-L017E:  CP      $0D                     ; carriage return?
+L017E:  CP      00Dh                     ; carriage return?
         JR      NZ,L0196                ; forward if not
 
 ; a carriage return to input buffer i.e. lower screen memory.
 
-        LD      HL,$2700                ; set pointer to location after the
+        LD      HL,02700h                ; set pointer to location after the
                                         ; input buffer.
 
-        LD      (RAMSTART + $22),HL              ; set ENDBUF - end of logical line
-        LD      (RAMSTART + $20),HL              ; set the CURSOR
+        LD      (RAMSTART + 022h),HL              ; set ENDBUF - end of logical line
+        LD      (RAMSTART + 020h),HL              ; set the CURSOR
 
         XOR     A                       ; clear A
 
         CALL    L0198                   ; print character zero.
 
-        LD      HL,$26E0                ; left hand position of bottom line.
-        LD      (RAMSTART + $1E),HL              ; set INSCRN to this position.
+        LD      HL,026E0h                ; left hand position of bottom line.
+        LD      (RAMSTART + 01Eh),HL              ; set INSCRN to this position.
         RET                             ; return.
 
 ; ---------------------------------------
@@ -522,27 +522,27 @@ L0196:  AND     A                       ; check for zero character
 
 L0198:  EX      AF,AF'                  ; preserve the output character.
 
-        LD      HL,(RAMSTART + $22)              ; fetch ENDBUF end of logical line
+        LD      HL,(RAMSTART + 022h)              ; fetch ENDBUF end of logical line
         LD      A,(HL)                  ; fetch character from position
         AND     A                       ; is it zero ?
         JR      Z,L01A6                 ; skip forward if so.
 
 ; else lower screen scrolling is required.
 
-        LD      DE,$D900                ; $0000 - $2700
+        LD      DE,0D900h                ; 00000h - 02700h
         ADD     HL,DE                   ; test if position is within video RAM
-        JR      NC,L01CE                ; forward if < $26FF
+        JR      NC,L01CE                ; forward if < 026FFh
 
 ; now check that the limit of 22 lines in lower screen is not exceeded.
 
-L01A6:  LD      DE,(RAMSTART + $24)              ; fetch start of buffer from L_HALF
-        LD      HL,$DBA0                ; $0000 - $2460
+L01A6:  LD      DE,(RAMSTART + 024h)              ; fetch start of buffer from L_HALF
+        LD      HL,0DBA0h                ; 00000h - 02460h
         ADD     HL,DE                   ;
         JR      NC,L01E4                ; forward to exit if buffer full.
 
 
-        LD      HL,(RAMSTART + $1C)              ; fetch position SCRPOS for upper screen
-        LD      BC,$0020                ; allow an extra 32 characters - 1 line.
+        LD      HL,(RAMSTART + 01Ch)              ; fetch position SCRPOS for upper screen
+        LD      BC,00020h                ; allow an extra 32 characters - 1 line.
         ADD     HL,BC                   ;
         SBC     HL,DE                   ; subtract the start of input buffer
         PUSH    DE                      ; and save the L_HALF value
@@ -558,10 +558,10 @@ L01A6:  LD      DE,(RAMSTART + $24)              ; fetch start of buffer from L_
 ; The four system variables INSCRN, CURSOR, ENDBUF and L_HALF are each
 ; reduced by 32 bytes a screen line.
 
-        LD      HL,RAMSTART + $1E                ; address INSCRN the left-hand location
+        LD      HL,RAMSTART + 01Eh                ; address INSCRN the left-hand location
                                         ; of the current input line.
 
-        LD      B,$04                   ; four system variables to update
+        LD      B,004h                   ; four system variables to update
 
 L01C9:  CALL    L0443                   ; routine SCR-PTRS
 
@@ -574,7 +574,7 @@ L01CE:  CALL    L0302                   ; routine find characters to EOL.
         LD      D,H                     ; HL is end of line
         LD      E,L                     ; transfer to DE register.
         INC     HL                      ; increment
-        LD      (RAMSTART + $22),HL              ; update ENDBUF
+        LD      (RAMSTART + 022h),HL              ; update ENDBUF
         DEC     HL                      ; decrement
         DEC     HL                      ; so HL = DE -1
 
@@ -586,7 +586,7 @@ L01DD:  EX      AF,AF'                  ; restore the output character.
         LD      (DE),A                  ; insert at screen position.
                                         ; (a zero if CR lower)
         INC     DE                      ; next character position
-        LD      (RAMSTART + $20),DE              ; update CURSOR
+        LD      (RAMSTART + 020h),DE              ; update CURSOR
 
 L01E4:  XOR     A                       ; ?
         RET                             ; return.
@@ -597,7 +597,7 @@ L01E4:  XOR     A                       ; ?
 
 L01E6:  LD      HL,L01F0                ; address the EDIT KEYS table.
 
-        LD      D,$00                   ; prepare to index by one byte.
+        LD      D,000h                   ; prepare to index by one byte.
         LD      E,A                     ; character code to E.
         ADD     HL,DE                   ; index into the table.
 
@@ -611,20 +611,20 @@ L01E6:  LD      HL,L01F0                ; address the EDIT KEYS table.
 ; THE 'EDIT KEYS' TABLE
 ; ---------------------
 
-L01F0:  DEFB    $20             ; L0210         $00     - RET
-L01F1:  DEFB    $13             ; L0204         $01     - LEFT
-L01F2:  DEFB    $0C             ; L01FE         $02     - CAPS
-L01F3:  DEFB    $1E             ; L0211         $03     - RIGHT
-L01F4:  DEFB    $0A             ; L01FE         $04     - GRAPH
-L01F5:  DEFB    $37             ; L022C         $05     - DEL
-L01F6:  DEFB    $1A             ; L0210         $06     - RET
-L01F7:  DEFB    $50             ; L0247         $07     - UP
-L01F8:  DEFB    $06             ; L01FE         $08     - INV
-L01F9:  DEFB    $9C             ; L0295         $09     - DOWN
-L01FA:  DEFB    $C9             ; L02C3         $0A     - DEL LINE
-L01FB:  DEFB    $15             ; L0210         $     - RET
-L01FC:  DEFB    $14             ; L0210         $0C     - RET
-L01FD:  DEFB    $D3             ; L02D0         $0D     - KEY-ENTER
+L01F0:  DEFB    020h             ; L0210         000h     - RET
+L01F1:  DEFB    013h             ; L0204         001h     - LEFT
+L01F2:  DEFB    00Ch             ; L01FE         002h     - CAPS
+L01F3:  DEFB    01Eh             ; L0211         003h     - RIGHT
+L01F4:  DEFB    00Ah             ; L01FE         004h     - GRAPH
+L01F5:  DEFB    037h             ; L022C         005h     - DEL
+L01F6:  DEFB    01Ah             ; L0210         006h     - RET
+L01F7:  DEFB    050h             ; L0247         007h     - UP
+L01F8:  DEFB    006h             ; L01FE         008h     - INV
+L01F9:  DEFB    09Ch             ; L0295         009h     - DOWN
+L01FA:  DEFB    0C9h             ; L02C3         00Ah     - DEL LINE
+L01FB:  DEFB    015h             ; L0210         0h     - RET
+L01FC:  DEFB    014h             ; L0210         00Ch     - RET
+L01FD:  DEFB    0D3h             ; L02D0         00Dh     - KEY-ENTER
 
 ; -------------------------------
 ; THE 'TOGGLE STATUS BIT' ROUTINE
@@ -633,7 +633,7 @@ L01FD:  DEFB    $D3             ; L02D0         $0D     - KEY-ENTER
 ; system variable so this simple routine maintains all three status bits.
 ; KEY '2' - CAPS SHIFT, '4' - GRAPHICS, '8' - INVERSE VIDEO.
 
-L01FE:  LD      HL,RAMSTART + $28                ; system variable STATIN
+L01FE:  LD      HL,RAMSTART + 028h                ; system variable STATIN
         XOR     (HL)                    ; toggle the single relevant bit.
         LD      (HL),A                  ; put back.
         RET                             ; return.
@@ -644,36 +644,36 @@ L01FE:  LD      HL,RAMSTART + $28                ; system variable STATIN
 ; this subroutine moves the cursor to the left unless the character at that
 ; position is zero.
 
-L0204:  LD      HL,(RAMSTART + $20)              ; fetch CURSOR.
+L0204:  LD      HL,(RAMSTART + 020h)              ; fetch CURSOR.
         DEC     HL                      ; decrement value.
         LD      A,(HL)                  ; fetch character at new position.
         AND     A                       ; test for zero. (cr)
         RET     Z                       ; return if so.                  >>
 
-        LD      (RAMSTART + $20),HL              ; else update CURSOR
+        LD      (RAMSTART + 020h),HL              ; else update CURSOR
         INC     HL                      ; step back
         LD      (HL),A                  ; and put character that was at new
                                         ; cursor position where cursor is now.
 
 L0210:  RET                             ; return.
 
-; Note. various unallocated keys in the EDIT KEYS table point to the
+; Note. various unallocated keys in the EDIT KEYS table point to the 
 ; above RET instruction.
 
 ; -----------------------------
 ; THE 'CURSOR RIGHT' SUBROUTINE
 ; -----------------------------
 
-L0211:  LD      HL,(RAMSTART + $20)              ; fetch CURSOR position
+L0211:  LD      HL,(RAMSTART + 020h)              ; fetch CURSOR position
         INC     HL                      ; and increment it.
 
-        LD      DE,(RAMSTART + $22)              ; fetch ENDBUF - end of current line.
+        LD      DE,(RAMSTART + 022h)              ; fetch ENDBUF - end of current line.
         AND     A                       ; prepare to subtract.
         SBC     HL,DE                   ; test
         RET     Z                       ; return if zero - CURSOR is at ENDBUF
 
         ADD     HL,DE                   ; else reform the pointers.
-        LD      (RAMSTART + $20),HL              ; update CURSOR
+        LD      (RAMSTART + 020h),HL              ; update CURSOR
         LD      A,(HL)                  ; fetch character at new position.
         DEC     HL                      ; decrement
         LD      (HL),A                  ; and insert where cursor was.
@@ -684,9 +684,9 @@ L0211:  LD      HL,(RAMSTART + $20)              ; fetch CURSOR position
 ; ---------------------------
 ; Moves cursor position to right and then continues into DEL-CHAR
 
-L0225:  LD      HL,(RAMSTART + $20)              ; fetch CURSOR
+L0225:  LD      HL,(RAMSTART + 020h)              ; fetch CURSOR
         INC     HL                      ; increment position.
-        LD      (RAMSTART + $20),HL              ; update CURSOR
+        LD      (RAMSTART + 020h),HL              ; update CURSOR
 
 
 ; ------------------------------
@@ -703,7 +703,7 @@ L022C:  CALL    L0302                   ; routine finds characters to EOL.
         AND     A                       ; test for zero.
         RET     Z                       ; return if so.                 >>
 
-        LD      (RAMSTART + $20),DE              ; else update CURSOR
+        LD      (RAMSTART + 020h),DE              ; else update CURSOR
         LD      A,B                     ; check for count of characters
         OR      C                       ; being zero
         JR      Z,L023F                 ; skip if so.
@@ -712,8 +712,8 @@ L023D:  LDIR                            ; else shift characters to left.
 
 L023F:  DEC     HL                      ; decrement HL so that points to end -
                                         ; last position on the logical line.
-        LD      (HL),$20                ; insert a space.
-        LD      (RAMSTART + $22),HL              ; set ENDBUF
+        LD      (HL),020h                ; insert a space.
+        LD      (RAMSTART + 022h),HL              ; set ENDBUF
         INC     C                       ; reset zero flag??
         RET                             ; return.
 
@@ -735,7 +735,7 @@ L0247:  CALL    L0204                   ; routine CURSOR-LEFT
 ; calls to cursor left fails having encountered a zero, then all subsequent
 ; calls will fail. The routine will return with the cursor adjacent to the zero.
 
-        LD      B,$1F                   ; count 31 decimal
+        LD      B,01Fh                   ; count 31 decimal
 L024E:  CALL    L0204                   ; move cursor left thirty one times.
         DJNZ    L024E                   ; makes thirty two moves counting first
 
@@ -743,17 +743,17 @@ L024E:  CALL    L0204                   ; move cursor left thirty one times.
 
 ; ---
 
-L0254:  LD      HL,(RAMSTART + $1E)              ; fetch INSCRN start of current line.
-        LD      DE,(RAMSTART + $24)              ; fetch L_HALF start of buffer.
+L0254:  LD      HL,(RAMSTART + 01Eh)              ; fetch INSCRN start of current line.
+        LD      DE,(RAMSTART + 024h)              ; fetch L_HALF start of buffer.
         AND     A                       ; reset carry for
         SBC     HL,DE                   ; true subtraction.
         RET     Z                       ; return if at beginning of input buffer
 
         CALL    L0225                   ; routine DEL-CURSOR
 
-        LD      HL,(RAMSTART + $1E)              ; fetch INSCRN leftmost location of
+        LD      HL,(RAMSTART + 01Eh)              ; fetch INSCRN leftmost location of
                                         ; current line.
-        LD      DE,$FFE0                ; make DE minus thirty two.
+        LD      DE,0FFE0h                ; make DE minus thirty two.
         XOR     A                       ; clear accumulator to zero.
 
 L0269:  ADD     HL,DE                   ; subtract 32
@@ -761,39 +761,39 @@ L0269:  ADD     HL,DE                   ; subtract 32
                                         ; ( i.e. prev (cr) or buffer start?)
         JR      NZ,L0269                ; loop back until HL holds zero.
 
-        LD      (RAMSTART + $1E),HL              ; update INSCRN
+        LD      (RAMSTART + 01Eh),HL              ; update INSCRN
 
         CALL    L02F4                   ; find endbuf
 
-        LD      (RAMSTART + $20),HL              ; set CURSOR
+        LD      (RAMSTART + 020h),HL              ; set CURSOR
 
 ; ----------
 ; PR_CURSOR
 ; ----------
 
-L0276:  LD      A,$A0                   ; inverse space - so solid square
+L0276:  LD      A,0A0h                   ; inverse space - so solid square
 
         CALL    L017E                   ; routine PR_LOWER
 
-        LD      HL,(RAMSTART + $20)              ; CURSOR
+        LD      HL,(RAMSTART + 020h)              ; CURSOR
         DEC     HL
-        LD      (RAMSTART + $20),HL              ; CURSOR
+        LD      (RAMSTART + 020h),HL              ; CURSOR
 
 ; -> from interrupt
-L0282:  LD      HL,(RAMSTART + $20)              ; CURSOR
+L0282:  LD      HL,(RAMSTART + 020h)              ; CURSOR
 
-        LD      A,(RAMSTART + $28)               ; STATIN
+        LD      A,(RAMSTART + 028h)               ; STATIN
         RRA                             ; ignore bit 0
-        LD      (HL),$97                ; pixel cursor.
+        LD      (HL),097h                ; pixel cursor.
         RRA                             ; test bit 1 - CAPS
         JR      NC,L0290                ; forward if no CAPS SHIFT
 
-        LD      (HL),$C3                ; inverse [C] cursor.
+        LD      (HL),0C3h                ; inverse [C] cursor.
 
 L0290:  RRA                             ; test bit 2 - GRAPHICS.
         RET     NC                      ; return if not
 
-L0292:  LD      (HL),$C7                ; inverse [G] cursor.
+L0292:  LD      (HL),0C7h                ; inverse [G] cursor.
         RET                             ; return
 
 ; -------------------------
@@ -804,7 +804,7 @@ L0292:  LD      (HL),$C7                ; inverse [G] cursor.
 L0295:  CALL    L0211                   ; routine CURSOR RIGHT
         JR      Z,L02A2                 ; forward if not possible.
 
-        LD      B,$1F                   ; set counter to thirty one.
+        LD      B,01Fh                   ; set counter to thirty one.
 
 L029C:  CALL    L0211                   ; routine CURSOR RIGHT
         DJNZ    L029C                   ; thirty two moves altogether.
@@ -826,9 +826,9 @@ L02A2:  CALL    L02B0                   ; find zerobyte
 ; ---
 ; -> called 5 times
 
-L02B0:  LD      HL,$2700                ; this location is always zero.
+L02B0:  LD      HL,02700h                ; this location is always zero.
                                         ; the byte following video RAM.
-        LD      DE,(RAMSTART + $1E)              ; INSCRN        e.g. $26E0
+        LD      DE,(RAMSTART + 01Eh)              ; INSCRN        e.g. 026E0h
 
         AND     A                       ; prepare for true subtraction
 
@@ -851,11 +851,11 @@ L02B0:  LD      HL,$2700                ; this location is always zero.
 ; -------------------------
 ; THE 'DELETE LINE' ROUTINE
 ; -------------------------
-; CHR$ 10
+; CHR0h 10
 
-L02C3:  LD      HL,(RAMSTART + $22)              ; ENDBUF
+L02C3:  LD      HL,(RAMSTART + 022h)              ; ENDBUF
         DEC     HL                      ;
-        LD      (RAMSTART + $20),HL              ; CURSOR
+        LD      (RAMSTART + 020h),HL              ; CURSOR
 
 L02CA:  CALL    L022C                   ; KEY-DEL
         JR      NZ,L02CA                ; repeat
@@ -866,7 +866,7 @@ L02CA:  CALL    L022C                   ; KEY-DEL
 ; THE 'KEY-ENTER' SUBROUTINE
 ; --------------------------
 
-L02D0:  LD      HL,RAMSTART + $28                ; STATIN
+L02D0:  LD      HL,RAMSTART + 028h                ; STATIN
         SET     5,(HL)                  ; signal new key.
         RES     0,(HL)                  ; reset new key flag
         RET                             ; return.
@@ -877,35 +877,35 @@ L02D0:  LD      HL,RAMSTART + $28                ; STATIN
 ; ------------------------
 ; called by LIST, QUERY
 
-L02D8:  LD      HL,$2700                ; one past end of screen.
-        LD      DE,(RAMSTART + $24)              ; fetch start of buffer from L_HALF
+L02D8:  LD      HL,02700h                ; one past end of screen.
+        LD      DE,(RAMSTART + 024h)              ; fetch start of buffer from L_HALF
 
         CALL    L07FA                   ; routine SPACE_FILL
 
-        LD      HL,$26E0                ; first location of bottom line.
-        LD      (RAMSTART + $24),HL              ; set L_HALF
+        LD      HL,026E0h                ; first location of bottom line.
+        LD      (RAMSTART + 024h),HL              ; set L_HALF
 
-        LD      (HL),$00                ; insert a ZERO.
+        LD      (HL),000h                ; insert a ZERO.
 
 ; -> called by retype
-L02EA:  LD      HL,(RAMSTART + $24)              ; fetch L_HALF
+L02EA:  LD      HL,(RAMSTART + 024h)              ; fetch L_HALF
 
 ; -> from cursor down
-L02ED:  LD      (RAMSTART + $1E),HL              ; set INSCRN
+L02ED:  LD      (RAMSTART + 01Eh),HL              ; set INSCRN
         INC     HL                      ; step past the zero
-        LD      (RAMSTART + $20),HL              ; set CURSOR
+        LD      (RAMSTART + 020h),HL              ; set CURSOR
 
 ; => from cursor up.
 L02F4:  CALL    L02B0                   ; find zerobyte
 
-        LD      A,$20                   ; prepare a space
+        LD      A,020h                   ; prepare a space
 
 L02F9:  DEC     HL                      ; move to the left.
         CP      (HL)                    ; compare to space.
         JR      Z,L02F9                 ; back while spaces exist.
 
         INC     HL                      ; point to last space encountered.
-        LD      (RAMSTART + $22),HL              ; set ENDBUF - end of logical line.
+        LD      (RAMSTART + 022h),HL              ; set ENDBUF - end of logical line.
         RET                             ; return.
 
 ; ----------------------------------
@@ -913,8 +913,8 @@ L02F9:  DEC     HL                      ; move to the left.
 ; ----------------------------------
 ; Find the number of characters to the end of the logical line.
 
-L0302:  LD      HL,(RAMSTART + $22)              ; system variable ENDBUF
-        LD      DE,(RAMSTART + $20)              ; system variable CURSOR
+L0302:  LD      HL,(RAMSTART + 022h)              ; system variable ENDBUF
+        LD      DE,(RAMSTART + 020h)              ; system variable CURSOR
         AND     A                       ; prepare to subtract.
         SBC     HL,DE                   ; subtract to give character places
         LD      B,H                     ; transfer result
@@ -932,7 +932,7 @@ L0310:  CALL    L0336                   ; routine KEY_SCAN
 
         LD      B,A                     ; save key in B
 
-        LD      HL,(RAMSTART + $26)              ; load L with KEYCOD - last key pressed
+        LD      HL,(RAMSTART + 026h)              ; load L with KEYCOD - last key pressed
                                         ; load H with KEYCNT - debounce counter
 
         XOR     L                       ; compare to previous key.
@@ -947,7 +947,7 @@ L0310:  CALL    L0336                   ; routine KEY_SCAN
         RET     NZ                      ; return if not zero.
 
 L0320:  LD      L,B                     ; set L to original keycode
-        LD      H,$20                   ; set counter to thirty two.
+        LD      H,020h                   ; set counter to thirty two.
         JR      L0332                   ; forward to store values and exit
                                         ; returning zero.
 
@@ -958,18 +958,18 @@ L0320:  LD      L,B                     ; set L to original keycode
 
 L0325:  DEC     H                       ; decrement the counter.
         LD      A,H                     ; fetch counter to A.
-        CP      $1E                     ; compare to thirty.
+        CP      01Eh                     ; compare to thirty.
         JR      Z,L0331                 ; forward if so to return key in A.
 
         XOR     A                       ; clear accumulator.
         CP      H                       ; is counter zero?
         JR      NZ,L0332                ; forward if not to keep counting.
 
-        LD      H,$04                   ; else set counter to four.
+        LD      H,004h                   ; else set counter to four.
 
 L0331:  LD      A,L                     ; pick up previous key.
 
-L0332:  LD      (RAMSTART + $26),HL              ;  update KEYCOD/KEYCNT
+L0332:  LD      (RAMSTART + 026h),HL              ;  update KEYCOD/KEYCNT
 
         RET                             ; return.
 
@@ -1003,7 +1003,7 @@ L0332:  LD      (RAMSTART + $26),HL              ;  update KEYCOD/KEYCNT
 ; left of the space key.
 
 
-L0336:  LD      BC,$FEFE                ; port address - B is also an 8 counter
+L0336:  LD      BC,0FEFEh                ; port address - B is also an 8 counter
 
         IN      D,(C)                   ; read from port to D.
                                         ; when a key is pressed, the
@@ -1013,39 +1013,39 @@ L0336:  LD      BC,$FEFE                ; port address - B is also an 8 counter
 
         SRL     D                       ; read the outer SHIFT key.
 
-        SBC     A,A                     ; $00 if SHIFT else $FF.
-        AND     $D8                     ; $00 if SHIFT else $D8.
+        SBC     A,A                     ; 000h if SHIFT else 0FFh.
+        AND     0D8h                     ; 000h if SHIFT else 0D8h.
 
         SRL     D                       ; read the symbol shift bit
         JR      C,L0347                 ; skip if not pressed.
 
-        LD      A,$28                   ; load A with 40 decimal.
+        LD      A,028h                   ; load A with 40 decimal.
 
-L0347:  ADD     A,$57                   ; gives $7F SYM, $57 SHIFT, or $2F
+L0347:  ADD     A,057h                   ; gives 07Fh SYM, 057h SHIFT, or 02Fh
 
 ; Since 8 will be subtracted from the initial key value there are three
 ; distinct ranges 0 - 39, 40 - 79, 80 - 119.
 
         LD      L,A                     ; save key range value in L
         LD      A,E                     ; fetch the original port reading.
-        OR      $03                     ; cancel the two shift bits.
+        OR      003h                     ; cancel the two shift bits.
 
-        LD      E,$FF                   ; set a flag to detect multiple keys.
+        LD      E,0FFh                   ; set a flag to detect multiple keys.
 
 ; KEY_LINE the half-row loop.
 
 L034F:  CPL                             ; complement bits
 
-        AND     $1F                     ; mask off the rightmost five key bits.
+        AND     01Fh                     ; mask off the rightmost five key bits.
         LD      D,A                     ; save a copy in D.
         JR      Z,L0362                 ; forward if no keys pressed to do the
                                         ; next row.
 
         LD      A,L                     ; else fetch the key value
-        INC     E                       ; test E for $FF
+        INC     E                       ; test E for 0FFh
         JR      NZ,L036B                ; forward if not now zero to quit
 
-L0359:  SUB     $08                     ; subtract 8 from key value
+L0359:  SUB     008h                     ; subtract 8 from key value
 
         SRL     D                       ; test next bit affecting zero and carry
 
@@ -1068,13 +1068,13 @@ L0362:  DEC     L                       ; decrement the key value for next row.
 ; ---
 ; ABORTKEY
 
-L036B:  LD      E,$FF                   ; signal invalid key.
+L036B:  LD      E,0FFh                   ; signal invalid key.
 
-; the normal exit checks if E holds a key and not $FF.
+; the normal exit checks if E holds a key and not 0FFh.
 
 L036D:  LD      A,E                     ; fetch possible key value.
         INC     A                       ; increment
-        RET     Z                       ; return if was $FF as original.
+        RET     Z                       ; return if was 0FFh as original.
 
         LD      HL,L0376                ; else address KEY TABLE
         ADD     HL,DE                   ; index into table.
@@ -1094,136 +1094,136 @@ L036D:  LD      A,E                     ; fetch possible key value.
 ; THE '40 UNSHIFTED KEYS'
 ; -----------------------
 
-L0376:  DEFB    $76                     ; V - v
-        DEFB    $68                     ; H - h
-        DEFB    $79                     ; Y - y
-        DEFB    $36                     ; 6 - 6
-        DEFB    $35                     ; 5 - 5
-        DEFB    $74                     ; T - t
-        DEFB    $67                     ; G - g
-        DEFB    $63                     ; C - c
-        DEFB    $62                     ; B - b
-        DEFB    $6A                     ; J - j
-        DEFB    $75                     ; U - u
-        DEFB    $37                     ; 7 - 7
-        DEFB    $34                     ; 4 - 4
-        DEFB    $72                     ; R - r
-        DEFB    $66                     ; F - f
-        DEFB    $78                     ; X - x
-        DEFB    $6E                     ; N - n
-        DEFB    $6B                     ; K - k
-        DEFB    $69                     ; I - i
-        DEFB    $38                     ; 8 - 8
-        DEFB    $33                     ; 3 - 3
-        DEFB    $65                     ; E - e
-        DEFB    $64                     ; D - d
-        DEFB    $7A                     ; Z - z
-        DEFB    $6D                     ; M - m
-        DEFB    $6C                     ; L - l
-        DEFB    $6F                     ; O - o
-        DEFB    $39                     ; 9 - 9
-        DEFB    $32                     ; 2 - 2
-        DEFB    $77                     ; W - w
-        DEFB    $73                     ; S - s
-        DEFB    $00                     ; SYMBOL
-        DEFB    $20                     ; SPACE
-        DEFB    $0D                     ; ENTER
-        DEFB    $70                     ; P - p
-        DEFB    $30                     ; 0 - 0
-        DEFB    $31                     ; 1 - 1
-        DEFB    $71                     ; Q - q
-        DEFB    $61                     ; A - a
-        DEFB    $00                     ; SHIFT
+L0376:  DEFB    076h                     ; V - v
+        DEFB    068h                     ; H - h
+        DEFB    079h                     ; Y - y
+        DEFB    036h                     ; 6 - 6
+        DEFB    035h                     ; 5 - 5
+        DEFB    074h                     ; T - t
+        DEFB    067h                     ; G - g
+        DEFB    063h                     ; C - c
+        DEFB    062h                     ; B - b
+        DEFB    06Ah                     ; J - j
+        DEFB    075h                     ; U - u
+        DEFB    037h                     ; 7 - 7
+        DEFB    034h                     ; 4 - 4
+        DEFB    072h                     ; R - r
+        DEFB    066h                     ; F - f
+        DEFB    078h                     ; X - x
+        DEFB    06Eh                     ; N - n
+        DEFB    06Bh                     ; K - k
+        DEFB    069h                     ; I - i
+        DEFB    038h                     ; 8 - 8
+        DEFB    033h                     ; 3 - 3
+        DEFB    065h                     ; E - e
+        DEFB    064h                     ; D - d
+        DEFB    07Ah                     ; Z - z
+        DEFB    06Dh                     ; M - m
+        DEFB    06Ch                     ; L - l
+        DEFB    06Fh                     ; O - o
+        DEFB    039h                     ; 9 - 9
+        DEFB    032h                     ; 2 - 2
+        DEFB    077h                     ; W - w
+        DEFB    073h                     ; S - s
+        DEFB    000h                     ; SYMBOL
+        DEFB    020h                     ; SPACE
+        DEFB    00Dh                     ; ENTER
+        DEFB    070h                     ; P - p
+        DEFB    030h                     ; 0 - 0
+        DEFB    031h                     ; 1 - 1
+        DEFB    071h                     ; Q - q
+        DEFB    061h                     ; A - a
+        DEFB    000h                     ; SHIFT
 
 ; ---------------------
 ; THE '40 SHIFTED KEYS'
 ; ---------------------
 
-        DEFB    $56                     ; V - V
-        DEFB    $48                     ; H - H
-        DEFB    $59                     ; Y - Y
-        DEFB    $07                     ; 6 - 7 KEY-UP
-        DEFB    $01                     ; 5 - 1 KEY-LEFT
-        DEFB    $54                     ;
-        DEFB    $47
-        DEFB    $43
-        DEFB    $42
-        DEFB    $4A
-        DEFB    $55
-        DEFB    $09                     ; 7 - 9 KEY-DOWN
-        DEFB    $08                     ; 4 - 8 INV-VIDEO
-        DEFB    $52
-        DEFB    $46
-        DEFB    $58
-        DEFB    $4E
-        DEFB    $4B
-        DEFB    $49
-        DEFB    $03                     ; 8 - 3 KEY-RIGHT
-        DEFB    $33                     ; 3 - 3
-        DEFB    $45
-        DEFB    $44
-        DEFB    $5A
-        DEFB    $4D
-        DEFB    $4C
-        DEFB    $4F
-        DEFB    $04                     ; 9 - 4 GRAPH
-        DEFB    $02                     ; 2 - 2 CAPS LOCK
-        DEFB    $57                     ; W - W
-        DEFB    $53                     ; S - S
-        DEFB    $00                     ; SYMB
-        DEFB    $20                     ; SPACE
-        DEFB    $0D                     ; ENTER
-        DEFB    $50                     ; P - P
-        DEFB    $05                     ; 0 - 5   DEL
-        DEFB    $0A                     ; 1 - 0A  DEL_LINE
-        DEFB    $51                     ; Q - Q
-        DEFB    $41                     ; A - A
-        DEFB    $00                     ; SHIFT
+        DEFB    056h                     ; V - V
+        DEFB    048h                     ; H - H
+        DEFB    059h                     ; Y - Y
+        DEFB    007h                     ; 6 - 7 KEY-UP
+        DEFB    001h                     ; 5 - 1 KEY-LEFT
+        DEFB    054h                     ;
+        DEFB    047h
+        DEFB    043h
+        DEFB    042h
+        DEFB    04Ah
+        DEFB    055h
+        DEFB    009h                     ; 7 - 9 KEY-DOWN
+        DEFB    008h                     ; 4 - 8 INV-VIDEO
+        DEFB    052h
+        DEFB    046h
+        DEFB    058h
+        DEFB    04Eh
+        DEFB    04Bh
+        DEFB    049h
+        DEFB    003h                     ; 8 - 3 KEY-RIGHT
+        DEFB    033h                     ; 3 - 3
+        DEFB    045h
+        DEFB    044h
+        DEFB    05Ah
+        DEFB    04Dh
+        DEFB    04Ch
+        DEFB    04Fh
+        DEFB    004h                     ; 9 - 4 GRAPH
+        DEFB    002h                     ; 2 - 2 CAPS LOCK
+        DEFB    057h                     ; W - W
+        DEFB    053h                     ; S - S
+        DEFB    000h                     ; SYMB
+        DEFB    020h                     ; SPACE
+        DEFB    00Dh                     ; ENTER
+        DEFB    050h                     ; P - P
+        DEFB    005h                     ; 0 - 5   DEL
+        DEFB    00Ah                     ; 1 - 0A  DEL_LINE
+        DEFB    051h                     ; Q - Q
+        DEFB    041h                     ; A - A
+        DEFB    000h                     ; SHIFT
 
 ; --------------------------
 ; THE '40 SYMBOL SHIFT KEYS'
 ; --------------------------
 
-        DEFB    $2F                     ; V - /
-        DEFB    $5E                     ; H - ^
-        DEFB    $5B                     ; Y - [
-        DEFB    $26                     ; 6 - &
-        DEFB    $25                     ; 5 - %
-        DEFB    $3E                     ; T - >
-        DEFB    $7D                     ;
-        DEFB    $3F
-        DEFB    $2A
-        DEFB    $2D
-        DEFB    $5D
-        DEFB    $27
-        DEFB    $24
-        DEFB    $3C
-        DEFB    $7B
-        DEFB    $60
-        DEFB    $2C
-        DEFB    $2B
-        DEFB    $7F
-        DEFB    $28
-        DEFB    $23
-        DEFB    $45
-        DEFB    $5C
-        DEFB    $3A
-        DEFB    $2E
-        DEFB    $3D
-        DEFB    $3B
-        DEFB    $29
-        DEFB    $40                     ; 2 - @
-        DEFB    $57                     ; W - W
-        DEFB    $7C                     ; S
-        DEFB    $00                     ; SYMB
-        DEFB    $20                     ; SPACE
-        DEFB    $0D                     ; ENTER
-        DEFB    $22                     ; P - "
-        DEFB    $5F                     ; 0 - _
-        DEFB    $21                     ; 1 - !
-        DEFB    $51                     ; Q - Q
-        DEFB    $7E                     ; A - ~
-        DEFB    $00                     ; SHIFT
+        DEFB    02Fh                     ; V - /
+        DEFB    05Eh                     ; H - ^
+        DEFB    05Bh                     ; Y - [
+        DEFB    026h                     ; 6 - &
+        DEFB    025h                     ; 5 - %
+        DEFB    03Eh                     ; T - >
+        DEFB    07Dh                     ;
+        DEFB    03Fh
+        DEFB    02Ah
+        DEFB    02Dh
+        DEFB    05Dh
+        DEFB    027h
+        DEFB    024h
+        DEFB    03Ch
+        DEFB    07Bh
+        DEFB    060h
+        DEFB    02Ch
+        DEFB    02Bh
+        DEFB    07Fh
+        DEFB    028h
+        DEFB    023h
+        DEFB    045h
+        DEFB    05Ch
+        DEFB    03Ah
+        DEFB    02Eh
+        DEFB    03Dh
+        DEFB    03Bh
+        DEFB    029h
+        DEFB    040h                     ; 2 - @
+        DEFB    057h                     ; W - W
+        DEFB    07Ch                     ; S
+        DEFB    000h                     ; SYMB
+        DEFB    020h                     ; SPACE
+        DEFB    00Dh                     ; ENTER
+        DEFB    022h                     ; P - "
+        DEFB    05Fh                     ; 0 - _
+        DEFB    021h                     ; 1 - !
+        DEFB    051h                     ; Q - Q
+        DEFB    07Eh                     ; A - ~
+        DEFB    000h                     ; SHIFT
 
 ; end of key tables
 
@@ -1247,7 +1247,7 @@ L03EE:  JR      Z,L03F5                 ; forward to main screen print.
 
 L03F5:  LD      B,A                     ; save the character in the B register.
 
-        LD      HL,(RAMSTART + $29)              ; fetch possible vector from EXWRCH
+        LD      HL,(RAMSTART + 029h)              ; fetch possible vector from EXWRCH
                                         ; (normally 0)
         LD      A,H                     ; test for
         OR      L                       ; the value zero.
@@ -1263,8 +1263,8 @@ L03FE:  JP      (HL)                    ; else jump to user-supplied routine
 ; PRINTING TO UPPER SCREEN
 ; ---
 
-L03FF:  LD      HL,(RAMSTART + $1C)              ; SCRPOS
-        LD      DE,(RAMSTART + $24)              ; L_HALF
+L03FF:  LD      HL,(RAMSTART + 01Ch)              ; SCRPOS
+        LD      DE,(RAMSTART + 024h)              ; L_HALF
 
         EX      DE,HL                   ; ??
 
@@ -1275,7 +1275,7 @@ L03FF:  LD      HL,(RAMSTART + $1C)              ; SCRPOS
 
         CALL    C,L0421                 ; if no room then scroll upper display
 
-        CP      $0D                     ; carriage return?
+        CP      00Dh                     ; carriage return?
 
         JR      Z,L0416                 ; skip forward if so.
 
@@ -1290,13 +1290,13 @@ L03FF:  LD      HL,(RAMSTART + $1C)              ; SCRPOS
 
 L0416:  INC     HL                      ; increment screen address.
         LD      A,L                     ; fetch low byte of address and mask.
-        AND     $1F                     ; a zero result indicates a line skip.
+        AND     01Fh                     ; a zero result indicates a line skip.
         JR      NZ,L0416                ; loop until a new line of 32 columns
                                         ; is started.
 
 ; both paths converge.
 
-L041C:  LD      (RAMSTART + $1C),HL              ; update SCRPOS
+L041C:  LD      (RAMSTART + 01Ch),HL              ; update SCRPOS
 
         EXX                             ; back to main set.
 
@@ -1308,7 +1308,7 @@ L041C:  LD      (RAMSTART + $1C),HL              ; update SCRPOS
 
 L0421:  PUSH    AF                      ; save character
 
-        LD      HL,RAMSTART + $1C                ; address the low order byte SCRPOS
+        LD      HL,RAMSTART + 01Ch                ; address the low order byte SCRPOS
 
         CALL    L0443                   ; routine cursor up
                                         ; i.e. SCRPOS = SCRPOS - 32
@@ -1317,8 +1317,8 @@ L0421:  PUSH    AF                      ; save character
 
 ; now calculate the number of characters to scroll in the upper display.
 
-        LD      HL,(RAMSTART + $24)              ; fetch L_HALF the start of input buffer
-        LD      DE,$2420                ; second line in video display
+        LD      HL,(RAMSTART + 024h)              ; fetch L_HALF the start of input buffer
+        LD      DE,02420h                ; second line in video display
 
 ;
 ; => scroll lower display enters here
@@ -1328,16 +1328,16 @@ L042F:  AND     A                       ; prepare for true subtraction.
         LD      B,H                     ; result to BC
         LD      C,L
 
-        LD      HL,$FFE0                ; set HL to -32d
+        LD      HL,0FFE0h                ; set HL to -32d
         ADD     HL,DE                   ; now HL = DE -32d
         EX      DE,HL                   ; switch so DE = HL - 32
 
         LDIR                            ; scroll the lines up.
 
-        LD      B,$20                   ; blank a line of 32 characters
+        LD      B,020h                   ; blank a line of 32 characters
 
 L043D:  DEC     HL                      ; decrement screen address.
-        LD      (HL),$20                ; insert a space character
+        LD      (HL),020h                ; insert a space character
         DJNZ    L043D                   ; and loop for all 32 characters
 
         RET                             ; return.
@@ -1348,7 +1348,7 @@ L043D:  DEC     HL                      ; decrement screen address.
 ;
 
 L0443:  LD      A,(HL)                  ; fetch low byte of screen address
-        SUB     $20                     ; subtract thirty two characters.
+        SUB     020h                     ; subtract thirty two characters.
         LD      (HL),A                  ; and put back.
 
         INC     HL                      ; address high-order byte.
@@ -1368,13 +1368,13 @@ L044B:  INC     HL                      ; address following System Variable
 ; stack a system variable associated with a FORTH word. See shortly.
 ;
 ; It is a bit overblown considering the eventual position of the System
-; Variables and ld d,$3c; rst 10h; jp (iy) could have been used instead of
+; Variables and ld d,03ch; rst 10h; jp (iy) could have been used instead of
 ; the long-winded addition below.
 
 L044D:  EX      DE,HL                   ; HL addresses the offset byte.
         LD      E,(HL)                  ; fetch to E register
 ;
-        LD      D,$00                   ; prepare to add.
+        LD      D,000h                   ; prepare to add.
         LD      HL,RAMSTART                ; the address of start of SYSVARS
         ADD     HL,DE                   ; add the 8-bit offset
         EX      DE,HL                   ; location to DE.
@@ -1389,17 +1389,17 @@ L044D:  EX      DE,HL                   ; HL addresses the offset byte.
 ; Leaves the address of one past the end of the dictionary.
 
 L0459:  DEFM    "HER"                   ; 'name field'
-        DEFB    'E' + $80
+        DEFB    'E' + 080h
 
         DEFW    L00AA                   ; 'link field'
 
-L045F:  DEFB    $04                     ; 'name length field'
+L045F:  DEFB    004h                     ; 'name length field'
 
 L0460:  DEFW    L0462                   ; 'code field'
 
 ; ---
 
-L0462:  LD      DE,(RAMSTART + $37)              ; system variable STKBOT.
+L0462:  LD      DE,(RAMSTART + 037h)              ; system variable STKBOT.
         RST     10H                     ; push word DE
 
         JP      (IY)                    ; to 'next'.
@@ -1409,60 +1409,60 @@ L0462:  LD      DE,(RAMSTART + $37)              ; system variable STKBOT.
 ; ------------------
 ; (  -- 15411 )
 ; A system variable pointing to the context vocabulary.
-; RAMSTART + $33 CONTEXT
+; RAMSTART + 033h CONTEXT
 
 L0469:  DEFM    "CONTEX"                ; 'name field'
-        DEFB    'T' + $80
+        DEFB    'T' + 080h
 
         DEFW    L045F                   ; 'link field'
 
-L0472:  DEFB    $07                     ; 'name length field'
+L0472:  DEFB    007h                     ; 'name length field'
 
 L0473:  DEFW    L044D                   ; 'code field'
 
 ; ---
 
-L0475:  DEFB    $33                     ; low byte of system variable.
+L0475:  DEFB    033h                     ; low byte of system variable.
 
 ; ------------------
 ; THE 'CURRENT' WORD
 ; ------------------
 ; (  -- 15409 )
 ; A system variable pointing to the current vocabulary.
-; RAMSTART + $31 CURRENT
+; RAMSTART + 031h CURRENT
 
 L0476:  DEFM    "CURREN"                ; 'name field'
-        DEFB    'T' + $80
+        DEFB    'T' + 080h
 
         DEFW    L0472                   ; 'link field'
 
-L047F:  DEFB    $07                     ; 'name length field'
+L047F:  DEFB    007h                     ; 'name length field'
 
 L0480:  DEFW    L044D                   ; 'code field'
 
 ; ---
 
-L0482:  DEFB    $31                     ; a single parameter low-byte of RAMSTART + $31.
+L0482:  DEFB    031h                     ; a single parameter low-byte of RAMSTART + 031h.
 
 ; ---------------
 ; THE 'BASE' WORD
 ; ---------------
 ; ( -- 15423)
 ; A one-byte variable containing the system number base.
-; RAMSTART + $3F BASE
+; RAMSTART + 03Fh BASE
 
 L0483:  DEFM    "BAS"                   ; 'name field'
-        DEFB    'E' + $80
+        DEFB    'E' + 080h
 
         DEFW    L047F                   ; 'link field'
 
-L0489:  DEFB    $04                     ; 'name length field'
+L0489:  DEFB    004h                     ; 'name length field'
 
 L048A:  DEFW    L044D                   ; 'code field'
 
 ; ---
 
-L048C:  DEFB    $3F                     ; low-byte of system variable BASE
+L048C:  DEFB    03Fh                     ; low-byte of system variable BASE
 
 ; ---
 
@@ -1476,7 +1476,7 @@ L048D:  DEFW    L044D                   ; headerless 'code field'
 
 ; ---
 
-L048F:  DEFB    $3E                     ; low-order byte of FLAGS RAMSTART + $3E
+L048F:  DEFB    03Eh                     ; low-order byte of FLAGS RAMSTART + 03Eh
 
 ; -------------------------
 ; The 'dict' Internal Word
@@ -1486,7 +1486,7 @@ L0490:  DEFW    L044D                   ; headerless 'code field'
 
 ; ---
 
-L0492:  DEFB    $39                     ; low-order byte of DICT RAMSTART + $39
+L0492:  DEFB    039h                     ; low-order byte of DICT RAMSTART + 039h
 
 
 ; --------------
@@ -1498,17 +1498,17 @@ L0492:  DEFB    $39                     ; low-order byte of DICT RAMSTART + $39
 ; fixed in location and size. Its definition is simply a constant.
 
 L0493:  DEFM    "PA"            ; 'name field'
-        DEFB    'D' + $80
+        DEFB    'D' + 080h
 
         DEFW    L0489                   ; 'link field'
 
-L0498:  DEFB    $03                     ; 'name length field'
+L0498:  DEFB    003h                     ; 'name length field'
 
 L0499:  DEFW    L0FF5                   ; 'code field' - stack word
 
 ; ---
 
-L049B:  DEFW    $2701                   ; parameter is 9985 decimal -
+L049B:  DEFW    02701h                   ; parameter is 9985 decimal -
                                         ; work pad address
 
 ; ------------
@@ -1516,11 +1516,11 @@ L049B:  DEFW    $2701                   ; parameter is 9985 decimal -
 ; ------------
 ; Terminates colon, DEFINER and COMPILER definitions.
 
-L049D:  DEFB    ';' + $80               ; 'name field'
+L049D:  DEFB    ';' + 080h               ; 'name field'
 
         DEFW    L0498                   ; 'link field'
 
-L04A0:  DEFB    $41                     ; length 1 + $40 (immediate word)
+L04A0:  DEFB    041h                     ; length 1 + 040h (immediate word)
 
 L04A1:  DEFW    L1108                   ; 'code field' - compile
 
@@ -1529,15 +1529,15 @@ L04A1:  DEFW    L1108                   ; 'code field' - compile
 L04A3:  DEFW    L04B6                   ; exit
 
 L04A5:  DEFW    L12D8                   ; check-for
-        DEFB    $0A                     ; ten                   marker byte?
+        DEFB    00Ah                     ; ten                   marker byte?
         DEFW    L1A0E                   ; end-forth.
 
 ; code gels
 
-L04AA:  LD      HL,RAMSTART + $3E                ; address FLAGS
+L04AA:  LD      HL,RAMSTART + 03Eh                ; address FLAGS
         LD      A,(HL)                  ; fetch FLAGS value.
 
-        AND     $BB                     ; AND %10111011
+        AND     0BBh                     ; AND %10111011
                                         ; reset bit 2 - show definition complete
                                         ; reset bit 6 - show in interpreter mode
 
@@ -1548,12 +1548,12 @@ L04AA:  LD      HL,RAMSTART + $3E                ; address FLAGS
 ; ----
 ; Note. these backward links to the beginning of words will probably be less
 ; of a mystery when the syntax checking and listing modules are more fully
-; explored. A value of $FFFF sometimes occurs.
+; explored. A value of 0FFFFh sometimes occurs.
 
-x04b3:   DEFB    $00                     ;;
+x04b3:   DEFB    000h                     ;;
 
-x04b4:   DEFB    $E8                     ;;
-x04b5:   DEFB    $FF                     ;; 04b5 + ffe8 = 049d  = ';'
+x04b4:   DEFB    0E8h                     ;;
+x04b5:   DEFB    0FFh                     ;; 04b5 + ffe8 = 049d  = ';'
 
 ; ----------------------------------
 ; THE 'ADDRESS' INTERPRETER ROUTINES
@@ -1562,7 +1562,7 @@ x04b5:   DEFB    $FF                     ;; 04b5 + ffe8 = 049d  = ';'
 ; ------------------------
 ; The 'Exit' Internal Word
 ; ------------------------
-; Drops the 'Next Word' pointer from the Return Stack thereby ending a
+; Drops the 'Next Word' pointer from the Return Stack thereby ending a 
 ; subroutine and returning to next word in calling thread.
 
 L04B6:  DEFW    L04B8                   ; headerless 'code field'
@@ -1607,18 +1607,18 @@ L04BF:  EX      DE,HL
 ; --------------------------------
 ; The 'Memory Check' Internal Word
 ; --------------------------------
-; This internal word which also checks the BREAK key is only used from the
-; start of the LINE definition. However the machine code entry point is the
+; This internal word which also checks the BREAK key is only used from the 
+; start of the LINE definition. However the machine code entry point is the 
 ; normal value of the IY register and so this code is executed at the end of
-; every word.
+; every word. 
 
 L04C6:  DEFW    L04C8                   ; headerless 'code field'
 
 ; iy_slow
 
-L04C8:  LD      BC,$000B                ; allow overhead of eleven bytes
-        LD      DE,(RAMSTART + $3B)              ; SPARE
-        LD      HL,(RAMSTART + $37)              ; STKBOT
+L04C8:  LD      BC,0000Bh                ; allow overhead of eleven bytes
+        LD      DE,(RAMSTART + 03Bh)              ; SPARE
+        LD      HL,(RAMSTART + 037h)              ; STKBOT
         ADD     HL,BC                   ; add the overhead
         SBC     HL,DE                   ; subtract the SPARE value
         JR      C,L04D9                 ; forward if the original 12 byte gap
@@ -1627,11 +1627,11 @@ L04C8:  LD      BC,$000B                ; allow overhead of eleven bytes
 ; else stack underflow has occurred.
 
 L04D7:  RST     20H                     ; Error 2
-        DEFB    $02                     ; Data stack underflow.
+        DEFB    002h                     ; Data stack underflow.
 
 ; ---
 
-L04D9:  LD      BC,$0000                ; allow no overhead.
+L04D9:  LD      BC,00000h                ; allow no overhead.
 
         CALL    L0F8C                   ; check free memory
         CALL    L04E4                   ; check BREAK key.
@@ -1642,20 +1642,20 @@ L04D9:  LD      BC,$0000                ; allow no overhead.
 ; ------------------------------------
 ; Check for the key combination SHIFT/SPACE.
 
-L04E4:  LD      A,$FE                   ; read port $FEFE -
-        IN      A,($FE)                 ; keys SPACE, SYMSHIFT, M, N, B.
+L04E4:  LD      A,0FEh                   ; read port 0FEFEh -
+        IN      A,(0FEh)                 ; keys SPACE, SYMSHIFT, M, N, B.
 
         RRA                             ; test bit for outermost key
         RET     C                       ; return if not pressed.
 
-        LD      A,$7F                   ; read port $7FFE -
-        IN      A,($FE)                 ; keys SHIFT, Z, X, C, V.
+        LD      A,07Fh                   ; read port 07FFEh -
+        IN      A,(0FEh)                 ; keys SHIFT, Z, X, C, V.
 
         RRA                             ; test bit for outermost key
         RET     C                       ; return if not pressed.
 
 L04F0:  RST     20H                     ; Error 3.
-        DEFB    $03                     ; BREAK pressed.
+        DEFB    003h                     ; BREAK pressed.
 
 ; -------------------------
 ; THE 'MAIN EXECUTION' LOOP
@@ -1676,7 +1676,7 @@ L04F5:  DEFW    L058C                   ; QUERY         - input buffer
         DEFW    L0536                   ; prOK          - print OK
         DEFW    L1276                   ; branch        - relative jump
 
-L04FD:  DEFW    $FFF7                   ; back to L04F5
+L04FD:  DEFW    0FFF7h                   ; back to L04F5
 
 ; ---
 ; the first high-level interpreted word.
@@ -1688,11 +1688,11 @@ L04FD:  DEFW    $FFF7                   ; back to L04F5
 ; Interprets input buffer as a normal FORTH line.
 
 L04FF:  DEFM    "LIN"                   ; 'name field'
-        DEFB    'E' + $80
+        DEFB    'E' + 080h
 
         DEFW    L04A0                   ; 'link field'
 
-L0505:  DEFB    $04                     ; 'name length field'
+L0505:  DEFB    004h                     ; 'name length field'
 
 L0506:  DEFW    L0EC3                   ; 'code field' - docolon
 
@@ -1703,26 +1703,26 @@ L0508:  DEFW    L04C6                   ; check mem each time through loop
 
         DEFW    L063D                   ; FIND          - search the dictionary
         DEFW    L08EE                   ; ?DUP          - duplicate if found
-        DEFW    L1283                   ; ?branch       - forward if not a
-L0510:  DEFW    $0007                   ; to L0518      - word.
+        DEFW    L1283                   ; ?branch       - forward if not a 
+L0510:  DEFW    00007h                   ; to L0518      - word.
 
         DEFW    L054F                   ; test and stack??
         DEFW    L1276                   ; branch
-L0516:  DEFW    $FFF1                   ; back to L0508
+L0516:  DEFW    0FFF1h                   ; back to L0508
 
 L0518:  DEFW    L06A9                   ; NUMBER
         DEFW    L08EE                   ; ?DUP
         DEFW    L1283                   ; ?branch       - forward if not a
-L051E:  DEFW    $0007                   ; to L0526      - number.
+L051E:  DEFW    00007h                   ; to L0526      - number.
 
         DEFW    L0564                   ; pop de with test
         DEFW    L1276                   ; branch
-L0524:  DEFW    $FFE3                   ; loop back to L0508
+L0524:  DEFW    0FFE3h                   ; loop back to L0508
 
 L0526:  DEFW    L061B                   ; stack-length
         DEFW    L0C1A                   ; 0=
-        DEFW    L1283                   ; ?branch       - forward with anything
-L052C:  DEFW    $0003                   ; to L0530      - else
+        DEFW    L1283                   ; ?branch       - forward with anything 
+L052C:  DEFW    00003h                   ; to L0530      - else
 
 L052E:  DEFW    L04B6                   ; EXIT                          >>>
 
@@ -1730,7 +1730,7 @@ L052E:  DEFW    L04B6                   ; EXIT                          >>>
 
 L0530:  DEFW    L0578                   ; RETYPE        - [?] at relevant place
         DEFW    L1276                   ; branch        - once corrected back
-L0534:  DEFW    $FFD3                   ; to L0508      - to the loop.
+L0534:  DEFW    0FFD3h                   ; to L0508      - to the loop.
 
 ; ----------------------------
 ; The 'Print OK' Internal Word
@@ -1739,7 +1739,7 @@ L0534:  DEFW    $FFD3                   ; to L0508      - to the loop.
 
 L0536:  DEFW    L0538                   ; headerless 'code field'
 
-L0538:  LD      A,(RAMSTART + $3E)               ; fetch system variable FLAGS
+L0538:  LD      A,(RAMSTART + 03Eh)               ; fetch system variable FLAGS
 
         BIT     6,A                     ; test for 'COMPILER' mode.
         JR      NZ,L054D                ; forward if so.
@@ -1752,11 +1752,11 @@ L0538:  LD      A,(RAMSTART + $3E)               ; fetch system variable FLAGS
 ; ---
 
         DEFM    " OK"                   ; the OK message between two spaces.
-        DEFB    ' ' + $80               ; last one inverted.
+        DEFB    ' ' + 080h               ; last one inverted.
 
 ; ---
 
-L054A:  LD      A,$0D                   ; prepare a carriage return.
+L054A:  LD      A,00Dh                   ; prepare a carriage return.
         RST     08H                     ; and PRINT also.
 
 L054D:  JP      (IY)                    ; to 'next'.
@@ -1778,9 +1778,9 @@ L0551:  RST     18H                     ; pop address from Data Stack to DE
 
         CPL                             ; complement.
 
-        AND     (IX+$3E)                ; FLAGS
+        AND     (IX+03Eh)                ; FLAGS
 
-        AND     $40                     ; isolate BIT 6 of FLAGS, set if in
+        AND     040h                     ; isolate BIT 6 of FLAGS, set if in 
                                         ; compiler mode.
 
         INC     DE                      ; increment address to 'code field'
@@ -1788,7 +1788,7 @@ L0551:  RST     18H                     ; pop address from Data Stack to DE
         JR      Z,L0561                 ; forward if not in compiling mode
 
         RST     10H                     ; push word DE          - add to dict
-        LD      DE,L0F4E                ; ','                   - enclose
+        LD      DE,L0F4E                ; ','                   - enclose 
 
 L0561:  JP      L04BF                   ; next word.
 
@@ -1803,7 +1803,7 @@ L0564:  DEFW    L0566                   ; headerless 'code field'
 
 L0566:  RST     18H                     ; pop word DE
 
-        BIT     6,(IX+$3E)              ; test FLAGS - compiler mode ?
+        BIT     6,(IX+03Eh)              ; test FLAGS - compiler mode ?
 
         JR      NZ,L0561                ; loop back while in compiler mode.
 
@@ -1815,11 +1815,11 @@ L0566:  RST     18H                     ; pop word DE
 ; Allows user to edit the input line. Turns cursor to [?].
 
 L056F:  DEFM    "RETYP"                 ; 'name field'
-        DEFB    'E' + $80
+        DEFB    'E' + 080h
 
         DEFW    L058B                   ; 'link field'
 
-L0577:  DEFB    $06                     ; 'name length field'
+L0577:  DEFB    006h                     ; 'name length field'
 
 L0578:  DEFW    L057A                   ; 'code field'
 
@@ -1829,7 +1829,7 @@ L057A:  CALL    L02EA                   ; routine sets logical line.
 
         CALL    L0276                   ; routine pr_cursor
 
-        LD      (HL),$BF                ; the inverse [?] character
+        LD      (HL),0BFh                ; the inverse [?] character
 
         JR      L0594                   ; forward to join the QUERY routine.
 
@@ -1840,11 +1840,11 @@ L057A:  CALL    L02EA                   ; routine sets logical line.
 ; Buffer can be edited as usual and is limited to 22 lines.
 
 L0584:  DEFM    "QUER"                  ; 'name field'
-        DEFB    'Y' + $80
+        DEFB    'Y' + 080h
 
         DEFW    L0505                   ; 'link field'
 
-L058B:  DEFB    $05                     ; 'name length field'
+L058B:  DEFB    005h                     ; 'name length field'
 
 L058C:  DEFW    L058E                   ; 'code field'
 
@@ -1855,7 +1855,7 @@ L058E:  CALL    L02D8                   ; routine SETBUF
         CALL    L0276                   ; routine pr_cursor
 
 ; ->
-L0594:  LD      HL,RAMSTART + $28                ; fetch STATIN
+L0594:  LD      HL,RAMSTART + 028h                ; fetch STATIN
         SET     0,(HL)                  ;
         RES     5,(HL)                  ; (bit 5 set by interrupt when the user
                                         ; presses the ENTER key)
@@ -1880,21 +1880,21 @@ L059B:  BIT     5,(HL)                  ; wait for interrupt to set the bit.
 ; Initial delimiters are ignored.
 
 L05A4:  DEFM    "WOR"                   ; 'name field'
-        DEFB    'D' + $80
+        DEFB    'D' + 080h
 
         DEFW    L0577                   ; 'link field'
 
-L05AA:  DEFB    $04                     ; 'name length field'
+L05AA:  DEFB    004h                     ; 'name length field'
 
 L05AB:  DEFW    L05AD                   ; 'code field'
 
 ; ---
 
 L05AD:  RST     18H                     ; pop word DE
-        LD      HL,$27FE                ; set HL to penultimate byte of 'pad'.
-        LD      B,$FD                   ; the count is 253.
+        LD      HL,027FEh                ; set HL to penultimate byte of 'pad'.
+        LD      B,0FDh                   ; the count is 253.
 
-L05B3:  LD      (HL),$20                ; insert a space in pad.
+L05B3:  LD      (HL),020h                ; insert a space in pad.
         DEC     HL                      ; decrement the address.
         DJNZ    L05B3                   ; repeat for the 253 locations.
 
@@ -1910,12 +1910,12 @@ L05B3:  LD      (HL),$20                ; insert a space in pad.
         DEC     B
         JR      Z,L05C6                 ;
 
-        LD      BC,$00FF
+        LD      BC,000FFh
 
-L05C6:  LD      HL,$2701
+L05C6:  LD      HL,02701h
         LD      (HL),C
         INC     HL
-        LD      A,$FC
+        LD      A,0FCh
         CP      C
         JR      NC,L05D1                ;
 
@@ -1940,15 +1940,15 @@ L05D1:  INC     C
 ; It is also used to find the end of a comment delimited by ')'.
 ;
 ; =>
-L05DF:  LD      E,$20                   ; set a space as the skip character.
+L05DF:  LD      E,020h                   ; set a space as the skip character.
 
 ; =>called with E holding delimiter.
 ;
-L05E1:  LD      HL,(RAMSTART + $24)              ; fetch L_HALF - start of screen buffer.
-        LD      (RAMSTART + $1E),HL              ; make INSCRN start of logical line the
+L05E1:  LD      HL,(RAMSTART + 024h)              ; fetch L_HALF - start of screen buffer.
+        LD      (RAMSTART + 01Eh),HL              ; make INSCRN start of logical line the
                                         ; same.
 
-        LD      BC,$0000                ; initialize letter count to zero.
+        LD      BC,00000h                ; initialize letter count to zero.
 
 ; -> loop
 L05EA:  INC     HL                      ; increment screen address.
@@ -1956,7 +1956,7 @@ L05EA:  INC     HL                      ; increment screen address.
         CP      E                       ; compare to character in E.
         JR      Z,L05EA                 ; loop while character matches.
 
-        AND     A                       ; test for zero (at $2700?)
+        AND     A                       ; test for zero (at 02700h?)
         JR      Z,L0600                 ; forward if so.
 
 ; a word has been found on the screen line.
@@ -1987,9 +1987,9 @@ L0600:  PUSH    DE                      ; save delimiter
         CALL    L02B0                   ; routine find zerobyte
         JP      PO,L0614                ; jump if found to exit failure
 
-        LD      DE,(RAMSTART + $24)              ; else set DE from L_HALF
+        LD      DE,(RAMSTART + 024h)              ; else set DE from L_HALF
         CALL    L07FA                   ; routine SPACE_FILL (DE-HL)
-        LD      (RAMSTART + $24),HL              ; set L_HALF to next line
+        LD      (RAMSTART + 024h),HL              ; set L_HALF to next line
 
         POP     DE                      ; restore delimiter
 
@@ -2001,7 +2001,7 @@ L0600:  PUSH    DE                      ; save delimiter
 
 L0614:  EX      DE,HL                   ; DE addresses cursor.
         POP     BC                      ; discard saved delimiter
-        LD      BC,$0000                ; set BC, to zero
+        LD      BC,00000h                ; set BC, to zero
         SCF                             ; signal not found
         RET                             ; return.
 
@@ -2030,21 +2030,21 @@ L061D:  CALL    L05DF                   ; get buffer
 ; (no pause after 18 lines)
 
 L0625:  DEFM    "VLIS"                  ; 'name field'
-        DEFB    'T' + $80
+        DEFB    'T' + 080h
 
         DEFW    L05AA                   ; 'link field'
 
-L062C:  DEFB    $05                     ; 'name length field'
+L062C:  DEFB    005h                     ; 'name length field'
 
 L062D:  DEFW    L062F                   ; 'code field'
 
 ; ---
 
-L062F:  LD      A,$0D                   ; prepare a newline
+L062F:  LD      A,00Dh                   ; prepare a newline
 
         RST     08H                     ; print it.
 
-        LD      C,$00                   ; set a flag for 'do all names'.
+        LD      C,000h                   ; set a flag for 'do all names'.
 
         JR      L0644                   ; forward to FIND.
 
@@ -2057,11 +2057,11 @@ L062F:  LD      A,$0D                   ; prepare a newline
 ; context vocabulary; else 0.
 
 L0636:  DEFM    "FIN"                   ; 'name field'
-        DEFB    'D' + $80
+        DEFB    'D' + 080h
 
         DEFW    L062C                   ; 'link field'
 
-L063C:  DEFB    $04                     ; 'name length field'
+L063C:  DEFB    004h                     ; 'name length field'
 
 L063D:  DEFW    L063F                   ; 'code field'
 
@@ -2073,7 +2073,7 @@ L063F:  CALL    L05DF                   ; get buffer word, gets length in C.
 
 ; ->
 
-L0644:  LD      HL,(RAMSTART + $33)              ; fetch value of system variable CONTEXT
+L0644:  LD      HL,(RAMSTART + 033h)              ; fetch value of system variable CONTEXT
         LD      A,(HL)                  ; extract low byte of address.
         INC     HL                      ; increment pointer.
         LD      H,(HL)                  ; extract high byte of address.
@@ -2084,7 +2084,7 @@ L0644:  LD      HL,(RAMSTART + $33)              ; fetch value of system variabl
 
 
 L064B:  LD      A,(HL)                  ; fetch addressed byte.
-        AND     $3F                     ; discount bit 6, the immediate word
+        AND     03Fh                     ; discount bit 6, the immediate word
                                         ; indicator, to give length 1-31
 
         JR      Z,L067F                 ; a 'zero' length indicates this is a
@@ -2121,7 +2121,7 @@ L0660:  LD      A,(DE)                  ; fetch first letter of match word.
 
         INC     DE                      ; update pointer (in lower screen)
         XOR     (HL)                    ; match against letter (in dictionary).
-        AND     $7F                     ; disregard any inverted bit.
+        AND     07Fh                     ; disregard any inverted bit.
         INC     HL                      ; increment dictionary pointer.
 
         JR      NZ,L067D                ; exit loop to try next link if no match
@@ -2174,7 +2174,7 @@ L067F:  DEC     HL                      ; point to high byte of 'link field'
         JR      NZ,L064B                ; loop back while this is not the
                                         ; last entry in the vocabulary.
 
-L0687:  DEFB    $C3                     ; A JP instruction i.e. JP L068A
+L0687:  DEFB    0C3h                     ; A JP instruction i.e. JP L068A
 
 ; Note. The intention is to jump past the headerless code word for the internal
 ; word stk_zero. Since the word that would follow the first byte of the jump
@@ -2190,7 +2190,7 @@ L0688:  DEFW    L068A                   ; headerless 'code field'
 
 ; ---
 
-L068A:  LD      DE,$0000                ; load DE with the value zero.
+L068A:  LD      DE,00000h                ; load DE with the value zero.
         RST     10H                     ; stack Data Word DE
 
         JP      (IY)                    ; to 'next'.
@@ -2202,11 +2202,11 @@ L068A:  LD      DE,$0000                ; load DE with the value zero.
 ; Executes the word with the given compilation address.
 
 L0690:  DEFM    "EXECUT"                ; 'name field'
-        DEFB    'E' + $80
+        DEFB    'E' + 080h
 
         DEFW    L063C                   ; 'link field'
 
-L0699:  DEFB    $07                     ; 'name length field'
+L0699:  DEFB    007h                     ; 'name length field'
 
 L069A:  DEFW    L069C                   ; 'code field'
 
@@ -2227,11 +2227,11 @@ L069C:  RST     18H
 ; If no valid number then leaves just 0 on the stack.
 
 L06A0:  DEFM    "NUMBE"                 ; 'name field'
-        DEFB    'R' + $80
+        DEFB    'R' + 080h
 
         DEFW    L0699                   ; 'link field'
 
-L06A8:  DEFB    $06                     ; 'name length field'
+L06A8:  DEFB    006h                     ; 'name length field'
 
 L06A9:  DEFW    L06AB                   ; 'code field'
 
@@ -2248,22 +2248,22 @@ L06AB:  CALL    L05DF                   ; get buffer
 
         JR      NZ,L06BC                ;
 
-        LD      DE,$1006                ; addr literal?
+        LD      DE,01006h                ; addr literal?
         JR      L0714                   ;
 
 ; ---
 
 L06BC:  RST     18H                     ; pop word DE
-        LD      DE,$0000
+        LD      DE,00000h
         RST     10H                     ; push word DE
-        LD      DE,$4500
+        LD      DE,04500h
         POP     BC
         PUSH    BC
         LD      A,(BC)
-        CP      $2D                     ; is it '-' ?
+        CP      02Dh                     ; is it '-' ?
         JR      NZ,L06CE                ;
 
-        LD      D,$C5
+        LD      D,0C5h
         INC     BC
 L06CE:  RST     10H                     ; push word DE
         LD      D,B
@@ -2278,23 +2278,23 @@ L06D3:  CALL    L0723                   ; routine GET_DECIMAL
         DEC     HL
         JR      NC,L06D3                ;
 
-        CP      $FE
+        CP      0FEh
         JR      NZ,L071C                ;
 
 L06DF:  CALL    L0723                   ; routine GET_DECIMAL
 
         JR      NC,L06DF                ;
 
-        ADD     A,$30                   ; add '0' converting to letter.
+        ADD     A,030h                   ; add '0' converting to letter.
         CALL    L077B                   ;
         JR      NZ,L06EF                ;
 
-        LD      E,$00
+        LD      E,000h
         JR      L06FD                   ;
 
-L06EF:  AND     $DF                     ;
+L06EF:  AND     0DFh                     ;
 
-        CP      $45                     ; is it 'E' - extended format?
+        CP      045h                     ; is it 'E' - extended format?
         JR      NZ,L071C                ;
 
         PUSH    HL
@@ -2310,7 +2310,7 @@ L06FD:  CALL    L0740                   ;
 
         INC     HL
         LD      A,(HL)
-        AND     $7F
+        AND     07Fh
         ADD     A,E
 
         JP      M,L071C                 ; forward +->
@@ -2318,7 +2318,7 @@ L06FD:  CALL    L0740                   ;
         JR      Z,L071C                 ; forward +->
 
         XOR     (HL)
-        AND     $7F
+        AND     07Fh
         XOR     (HL)
         LD      (HL),A
 L0711:  LD      DE,L1055                ; stk_fp
@@ -2345,10 +2345,10 @@ L071C:  POP     HL
 
 L0723:  LD      A,(DE)
         INC     DE
-        SUB     $30                     ; subtract '0'
+        SUB     030h                     ; subtract '0'
         RET     C                       ; return if was less than '0'
 
-        CP      $0A                     ; compare to ten.
+        CP      00Ah                     ; compare to ten.
         CCF                             ; complement
         RET     C                       ; return - with carry set if over 9.
 
@@ -2358,7 +2358,7 @@ L0723:  LD      A,(DE)
 ; => from below only.
 L072C:  LD      C,A
         LD      A,(HL)
-        AND     $F0
+        AND     0F0h
         RET     NZ
 
         LD      A,C
@@ -2366,7 +2366,7 @@ L072C:  LD      C,A
 ; => (int/print_fp)
 L0732:  DEC     HL
         DEC     HL
-        LD      C,$03
+        LD      C,003h
 
 L0736:  RLD                             ;  A = xxxx3210  <--   7654<-3210 (HL)
 
@@ -2383,7 +2383,7 @@ L0736:  RLD                             ;  A = xxxx3210  <--   7654<-3210 (HL)
 
 ; from ufloat to normalize 6-nibble mantissa
 
-L0740:  LD      B,$06                   ; six nibbles
+L0740:  LD      B,006h                   ; six nibbles
 
 L0742:  XOR     A
 
@@ -2412,7 +2412,7 @@ L074C:  RST     10H                     ; push word DE
 L0750:  DEFW    L086B                   ; dup
         DEFW    L0896                   ; C@
         DEFW    L104B                   ; stk-data
-        DEFB    $2D                     ;  chr '-'
+        DEFB    02Dh                     ;  chr '-'
         DEFW    L0C4A                   ; =
         DEFW    L086B                   ; dup
         DEFW    L0DA9                   ; negate
@@ -2434,7 +2434,7 @@ L0769:  DEFW    L078A                   ; convert
 L0779:  RST     18H                     ; pop word DE
         LD      A,(DE)
 
-L077B:  CP      $20
+L077B:  CP      020h
         RET     Z
 
         AND     A
@@ -2452,11 +2452,11 @@ L077B:  CP      $20
 ; final value of the accumulator.
 
 L0780:  DEFM    "CONVER"                ; 'name field'
-        DEFB    'T' + $80
+        DEFB    'T' + 080h
 
         DEFW    L06A8                   ; 'link field'
 
-L0789:  DEFB    $07                     ; 'name length field'
+L0789:  DEFB    007h                     ; 'name length field'
 
 L078A:  DEFW    L0EC3                   ; 'code field' - docolon
 
@@ -2468,7 +2468,7 @@ L0790:  DEFW    L08D2                   ; >R
 L0792:  DEFW    L0896                   ; C@
 L0794:  DEFW    L07B8                   ; stk_digit
 L0796:  DEFW    L1283                   ; ?branch
-L0798:  DEFW    $001B                   ; to 0799 + 1B = $07B4
+L0798:  DEFW    0001Bh                   ; to 0799 + 1B = 007B4h
 
 L079A:  DEFW    L0885                   ; swap
 L079C:  DEFW    L048A                   ; get base
@@ -2482,7 +2482,7 @@ L07AA:  DEFW    L0CA8                   ; U*
 L07AC:  DEFW    L0DEE                   ; D+
 L07AE:  DEFW    L08DF                   ; R>
 L07B0:  DEFW    L1276                   ; branch
-L07B2:  DEFW    $FFD9                   ; loop back to L078C
+L07B2:  DEFW    0FFD9h                   ; loop back to L078C
 
 L07B4:  DEFW    L08DF                   ; R>
 L07B6:  DEFW    L04B6                   ; exit
@@ -2501,24 +2501,24 @@ L07BA:  RST     18H                     ; pop word DE
 
         CALL    L0807                   ; to_upper
 
-        ADD     A,$D0                   ; add to give carry with '0' and more.
+        ADD     A,0D0h                   ; add to give carry with '0' and more.
 
         JR      NC,L07D7                ; if less than '0' push byte 0 false.
 
-        CP      $0A                     ; compare to ten.
+        CP      00Ah                     ; compare to ten.
         JR      C,L07CD                 ; forward to stack bytes 0 - 9.
 
-        ADD     A,$EF                   ;
+        ADD     A,0EFh                   ;
         JR      NC,L07D7                ; push word false 0.
 
-        ADD     A,$0A
+        ADD     A,00Ah
 
-L07CD:  CP      (IX+$3F)                ; compare to BASE
+L07CD:  CP      (IX+03Fh)                ; compare to BASE
         JR      NC,L07D7                ; push word false 0.
 
 ; else digit is within range of number base
 
-        LD      D,$00
+        LD      D,000h
         LD      E,A
         RST     10H                     ; push word DE
         SCF                             ; set carry to signal true
@@ -2534,7 +2534,7 @@ L07DA:  LD      H,D
         INC     BC
         ADD     HL,BC
         PUSH    HL
-        BIT     4,(IX+$3E)              ; FLAGS
+        BIT     4,(IX+03Eh)              ; FLAGS
         CALL    Z,L097F                 ; pr_string
 
         CALL    L02B0                   ; curs?
@@ -2544,7 +2544,7 @@ L07DA:  LD      H,D
         SBC     HL,DE
         LD      B,H
         LD      C,L
-        LD      HL,(RAMSTART + $1E)              ; INSCRN
+        LD      HL,(RAMSTART + 01Eh)              ; INSCRN
         INC     HL
         EX      DE,HL
         JR      C,L07FB                 ;
@@ -2568,7 +2568,7 @@ L07FE:  LD      A,D                     ; check if the
         OR      E                       ; counter is zero.
         RET     Z                       ; return if so.                 >>
 
-        LD      (HL),$20                ; insert a space character.
+        LD      (HL),020h                ; insert a space character.
         INC     HL                      ; next address.
         DEC     DE                      ; decrement byte counter.
         JR      L07FE                   ; loop back to exit on zero.
@@ -2578,14 +2578,14 @@ L07FE:  LD      A,D                     ; check if the
 ; --------------------------
 ; converts characters to uppercase.
 
-L0807:  AND     $7F                     ; ignore inverse bit 7
-        CP      $61                     ; compare to 'a'
+L0807:  AND     07Fh                     ; ignore inverse bit 7
+        CP      061h                     ; compare to 'a'
         RET     C                       ; return if lower
 
-        CP      $7B                     ; compare to 'z' + 1
+        CP      07Bh                     ; compare to 'z' + 1
         RET     NC                      ; return if higher than 'z'
 
-        AND     $5F                     ; make uppercase
+        AND     05Fh                     ; make uppercase
         RET                             ; return.
 
 ; --------------
@@ -2594,17 +2594,17 @@ L0807:  AND     $7F                     ; ignore inverse bit 7
 ; Allows copy-up mechanism and 'OK'.
 
 L0812:  DEFM    "VI"                    ; 'name field'
-        DEFB    'S' + $80
+        DEFB    'S' + 080h
 
         DEFW    L0789                   ; 'link field'
 
-L0817:  DEFB    $03                     ; 'name length field'
+L0817:  DEFB    003h                     ; 'name length field'
 
 L0818:  DEFW    L081A                   ; 'code field'
 
 ; ---
 
-L081A:  RES     4,(IX+$3E)              ; update FLAGS signal visible mode.
+L081A:  RES     4,(IX+03Eh)              ; update FLAGS signal visible mode.
         JP      (IY)                    ; to 'next'.
 
 ; ----------------
@@ -2613,17 +2613,17 @@ L081A:  RES     4,(IX+$3E)              ; update FLAGS signal visible mode.
 ; Suppresses copy-up mechanism and 'OK'.
 
 L0820:  DEFM    "INVI"                  ; 'name field'
-        DEFB    'S' + $80
+        DEFB    'S' + 080h
 
         DEFW    L0817                   ; 'link field'
 
-L0827:  DEFB    $05                     ; 'name length field'
+L0827:  DEFB    005h                     ; 'name length field'
 
 L0828:  DEFW    L082A                   ; 'code field'
 
 ; ---
 
-L082A:  SET     4,(IX+$3E)              ; update FLAGS signal invisible mode.
+L082A:  SET     4,(IX+03Eh)              ; update FLAGS signal invisible mode.
 
         JP      (IY)                    ; to 'next'.
 
@@ -2635,11 +2635,11 @@ L082A:  SET     4,(IX+$3E)              ; update FLAGS signal invisible mode.
 ; Debugged programs run 25% faster.
 
 L0830:  DEFM    "FAS"                   ; 'name field'
-        DEFB    'T' + $80
+        DEFB    'T' + 080h
 
         DEFW    L0827                   ; 'link field'
 
-L0836:  DEFB    $04                     ; 'name length field'
+L0836:  DEFB    004h                     ; 'name length field'
 
 L0837:  DEFW    L0839                   ; 'code field'
 
@@ -2658,11 +2658,11 @@ L0839:  LD      IY,L04B9                ; miss memory checks on return
 
 
 L083F:  DEFM    "SLO"                   ; 'name field'
-        DEFB    'W' + $80
+        DEFB    'W' + 080h
 
         DEFW    L0836                   ; 'link field'
 
-L0845:  DEFB    $04                     ; 'name length field'
+L0845:  DEFB    004h                     ; 'name length field'
 
 
 L0846:  DEFW    L0848                   ; 'code field'
@@ -2682,12 +2682,12 @@ L0848:  LD      IY,L04C8                ; set vector to memory checks each pass
 ; In fact, as two Z80 restarts are unused, then 40 bytes of ROM code could have
 ; been saved by making this a restart also.
 
-L084E:  LD      HL,(RAMSTART + $3B)              ; fetch SPARE - start of Spare Memory.
+L084E:  LD      HL,(RAMSTART + 03Bh)              ; fetch SPARE - start of Spare Memory.
         DEC     HL                      ; decrement to point to last stack item
         LD      B,(HL)                  ; load high byte to B.
         DEC     HL                      ; address low byte of word.
         LD      C,(HL)                  ; and load to C.
-        LD      (RAMSTART + $3B),HL              ; update the system variable SPARE to
+        LD      (RAMSTART + 03Bh),HL              ; update the system variable SPARE to
                                         ; a location two bytes less than it was.
         RET                             ; return.
 
@@ -2698,7 +2698,7 @@ L084E:  LD      HL,(RAMSTART + $3B)              ; fetch SPARE - start of Spare 
 
 L0859:  DEC     HL                      ;
         LD      E,(HL)                  ;
-        LD      (RAMSTART + $3B),HL              ; update SPARE
+        LD      (RAMSTART + 03Bh),HL              ; update SPARE
         RET                             ; return.
 
 ; -----------------------------------------
@@ -2708,7 +2708,7 @@ L0859:  DEC     HL                      ;
 
 L085F:  LD      (HL),D                  ;
         INC     HL                      ;
-        LD      (RAMSTART + $3B),HL              ; update SPARE
+        LD      (RAMSTART + 03Bh),HL              ; update SPARE
         RET                             ; return.
 
 ; --------------
@@ -2718,11 +2718,11 @@ L085F:  LD      (HL),D                  ;
 ; Duplicates the top of the stack.
 
 L0865:  DEFM    "DU"                    ; 'name field'
-        DEFB    'P' + $80
+        DEFB    'P' + 080h
 
         DEFW    L0845                   ; 'link field'
 
-L086A:  DEFB    $03                     ; 'name length field'
+L086A:  DEFB    003h                     ; 'name length field'
 
 L086B:  DEFW    L086D                   ; 'code field'
 
@@ -2741,17 +2741,17 @@ L086D:  RST     18H                     ; unstack Data Word DE
 ; Throws away the top of the stack.
 
 L0872:  DEFM    "DRO"                   ; 'name field'
-        DEFB    'P' + $80
+        DEFB    'P' + 080h
 
         DEFW    L086A                   ; 'link field'
 
-L0878:  DEFB    $04                     ; 'name length field'
+L0878:  DEFB    004h                     ; 'name length field'
 
 L0879:  DEFW    L087B                   ; 'code field'
 
 ; ---
 
-L087B:  RST     18H                     ; unstack Data Word DE
+L087B:  RST     18H                     ; unstack Data Word DE 
         JP      (IY)                    ; to 'next'.
 
 ; ---------------
@@ -2760,11 +2760,11 @@ L087B:  RST     18H                     ; unstack Data Word DE
 ; (n1, n2 -- n2, n1)
 
 L087E:  DEFM    "SWA"                   ; 'name field'
-        DEFB    'P' + $80
+        DEFB    'P' + 080h
 
         DEFW    L0878                   ; 'link field'
 
-L0884:  DEFB    $04                     ; 'name length field'
+L0884:  DEFB    004h                     ; 'name length field'
 
 L0885:  DEFW    L0887                   ; 'code field'
 
@@ -2786,11 +2786,11 @@ L0887:  RST     18H                     ; pop word DE
 ; Fetches the contents of a given address.
 
 L0891:  DEFB    'C'                     ; 'name field'
-        DEFB    '@' + $80
+        DEFB    '@' + 080h
 
         DEFW    L0884                   ; 'link field'
 
-L0895:  DEFB    $02                     ; 'name length field'
+L0895:  DEFB    002h                     ; 'name length field'
 
 L0896:  DEFW    L0898                   ; 'code field'
 
@@ -2799,7 +2799,7 @@ L0896:  DEFW    L0898                   ; 'code field'
 L0898:  RST     18H                     ; pop word DE
         LD      A,(DE)
         LD      E,A
-        LD      D,$00
+        LD      D,000h
 
         RST     10H                     ; push word DE
 
@@ -2812,11 +2812,11 @@ L0898:  RST     18H                     ; pop word DE
 ; Stores the less significant byte on n at a given address.
 
 L08A0:  DEFB    'C'                     ; 'name field'
-        DEFB    '!' + $80
+        DEFB    '!' + 080h
 
         DEFW    L0895                   ; 'link field'
 
-L08A4:  DEFB    $02                     ; 'name length field'
+L08A4:  DEFB    002h                     ; 'name length field'
 
 L08A5:  DEFW    L08A7                   ; 'code field'
 
@@ -2835,11 +2835,11 @@ L08A7:  RST     18H                     ; pop word DE
 ; (address -- n)
 ; Leaves on stack the single length integer at the given address.
 
-L08AF:  DEFB    '@' + $80               ; 'name field'
+L08AF:  DEFB    '@' + 080h               ; 'name field'
 
         DEFW    L08A4                   ; 'link field'
 
-L08B2:  DEFB    $01                     ; 'name length field'
+L08B2:  DEFB    001h                     ; 'name length field'
 
 L08B3:  DEFW    L08B5                   ; 'code field'
 
@@ -2862,11 +2862,11 @@ L08B5:  RST     18H                     ; pop word DE
 ; (n,address --)
 ; Stores the single-length integer n at the given address in memory.
 
-L08BD:  DEFB    '!' + $80               ; 'name field'
+L08BD:  DEFB    '!' + 080h               ; 'name field'
 
         DEFW    L08B2                   ; 'link field'
 
-L08C0:  DEFB    $01                     ; 'name length field'
+L08C0:  DEFB    001h                     ; 'name length field'
 
 L08C1:  DEFW    L08C3                   ; 'code field'
 
@@ -2889,11 +2889,11 @@ L08C3:  RST     18H                     ; pop word DE
 ; It can be copied back using 'I'.
 
 L08CD:  DEFB    '>'                     ; 'name field'
-        DEFB    'R' + $80
+        DEFB    'R' + 080h
 
         DEFW    L08C0                   ; 'link field'
 
-L08D1:  DEFB    $02                     ; 'name length field'
+L08D1:  DEFB    002h                     ; 'name length field'
 
 L08D2:  DEFW    L08D4                   ; 'code field'
 
@@ -2912,11 +2912,11 @@ L08D4:  RST     18H
 ; Transfers top entry on return stack to data stack.
 
 L08DA:  DEFB    'R'                     ; 'name field'
-        DEFB    '>' + $80
+        DEFB    '>' + 080h
 
         DEFW    L08D1                   ; 'link field'
 
-L08DE:  DEFB    $02                     ; 'name length field'
+L08DE:  DEFB    002h                     ; 'name length field'
 
 L08DF:  DEFW    L08E1                   ; 'code field'
 
@@ -2935,11 +2935,11 @@ L08E1:  POP     BC
 ; (n -- n)       if n=0.
 
 L08E7:  DEFM    "?DU"                   ; 'name field'
-        DEFB    'P' + $80
+        DEFB    'P' + 080h
 
         DEFW    L08DE                   ; 'link field'
 
-L08ED:  DEFB    $04                     ; 'name length field'
+L08ED:  DEFB    004h                     ; 'name length field'
 
 L08EE:  DEFW    L08F0                   ; 'code field'
 
@@ -2959,11 +2959,11 @@ L08F0:  RST     18H                     ; fetch word DE
 ; (n1, n2, n3 -- n2, n3, n1)
 
 L08F9:  DEFM    "RO"                    ; 'name field'
-        DEFB    'T' + $80
+        DEFB    'T' + 080h
 
         DEFW    L08ED                   ; 'link field'
 
-L08FE:  DEFB    $03                     ; 'name length field'
+L08FE:  DEFB    003h                     ; 'name length field'
 
 L08FF:  DEFW    L0EC3                   ; 'code field' - docolon
 
@@ -2981,11 +2981,11 @@ L0909:  DEFW    L04B6                   ; exit
 ; (n1, n2 -- n1, n2, n1)
 
 L090B:  DEFM    "OVE"                   ; 'name field'
-        DEFB    'R' + $80
+        DEFB    'R' + 080h
 
         DEFW    L08FE                   ; 'link field'
 
-L0911:  DEFB    $04                     ; 'name length field'
+L0911:  DEFB    004h                     ; 'name length field'
 
 L0912:  DEFW    L0EC3                   ; 'code field' - docolon
 
@@ -3005,11 +3005,11 @@ L091C:  DEFW    L04B6                   ; exit
 ; Error 7 if n1 <= 0.
 
 L091E:  DEFM    "PIC"                   ; 'name field'
-        DEFB    'K' + $80
+        DEFB    'K' + 080h
 
         DEFW    L0911                   ; 'link field'
 
-L0924:  DEFB    $04                     ; 'name length field'
+L0924:  DEFB    004h                     ; 'name length field'
 
         DEFW    L0927                   ; 'code field'
 
@@ -3027,11 +3027,11 @@ L0927:  CALL    L094D                   ;
 ; Error 7 if n <= 0.
 
 L092C:  DEFM    "ROL"                   ; 'name field'
-        DEFB    'L' + $80
+        DEFB    'L' + 080h
 
         DEFW    L0924                   ; 'link field'
 
-L0932:  DEFB    $04                     ; 'name length field'
+L0932:  DEFB    004h                     ; 'name length field'
 
 L0933:  DEFW    L0935                   ; 'code field'
 
@@ -3039,7 +3039,7 @@ L0933:  DEFW    L0935                   ; 'code field'
 
 L0935:  CALL    L094D                   ;
         EX      DE,HL
-        LD      HL,(RAMSTART + $37)              ; STKBOT
+        LD      HL,(RAMSTART + 037h)              ; STKBOT
         SBC     HL,DE
         JP      NC,L04D7                ; jump back to Error 2
 
@@ -3048,7 +3048,7 @@ L0935:  CALL    L094D                   ;
         INC     HL
         INC     HL
         LDIR
-        LD      (RAMSTART + $3B),DE              ; SPARE
+        LD      (RAMSTART + 03Bh),DE              ; SPARE
         JP      (IY)                    ; to 'next'.
 
 ; ---
@@ -3062,12 +3062,12 @@ L094D:  CALL    L084E                   ; stk_to_bc
         JR      NC,L095B                ; skip the error routine
 
         RST     20H                     ; Error 7
-        DEFB    $07                     ; PICK or ROLL used with operand 0
+        DEFB    007h                     ; PICK or ROLL used with operand 0
                                         ; or negative
 
 ; ---
 
-L095B:  LD      HL,(RAMSTART + $3B)              ; SPARE
+L095B:  LD      HL,(RAMSTART + 03Bh)              ; SPARE
         SBC     HL,BC
         PUSH    HL
         LD      E,(HL)
@@ -3085,11 +3085,11 @@ L095B:  LD      HL,(RAMSTART + $3B)              ; SPARE
 
 
 L0967:  DEFM    "TYP"                   ; 'name field'
-        DEFB    'E' + $80
+        DEFB    'E' + 080h
 
         DEFW    L0932                   ; 'link field'
 
-L096D:  DEFB    $04                     ; 'name length field'
+L096D:  DEFB    004h                     ; 'name length field'
 
 L096E:  DEFW    L0970                   ; 'code field'
 
@@ -3104,9 +3104,9 @@ L0970:  CALL    L084E                   ; stk_to_bc
 ; --------------------------
 ; THE 'PRINT STRING' ROUTINE
 ; --------------------------
-; The first entry point prints strings embedded in the Dictionary with the
+; The first entry point prints strings embedded in the Dictionary with the 
 ; DE pointing to the preceding length word.
-;
+; 
 ; The second entry point prints a string with length in BC and start in DE.
 ; It is called by TYPE above and to print comment fields.
 
@@ -3138,18 +3138,18 @@ L097F:  LD      A,B
 ; Initiates formatted output.
 
 L0988:  DEFB    '<'                     ; 'name field'
-        DEFB    '#' + $80
+        DEFB    '#' + 080h
 
         DEFW    L096D                   ; 'link field'
 
-L098C:  DEFB    $02                     ; 'name length field'
+L098C:  DEFB    002h                     ; 'name length field'
 
 L098D:  DEFW    L098F                   ; 'code field'
 
 ; ---
 
-L098F:  LD      HL,$27FF                ; end of pad
-        LD      (RAMSTART + $1A),HL              ; update system variable HLD
+L098F:  LD      HL,027FFh                ; end of pad
+        LD      (RAMSTART + 01Ah),HL              ; update system variable HLD
         JP      (IY)                    ; to 'next'.
 
 ; -------------
@@ -3160,11 +3160,11 @@ L098F:  LD      HL,$27FF                ; end of pad
 ; resultant string.
 
 L0997:  DEFB    '#'                     ; 'name field'
-        DEFB    '>' + $80
+        DEFB    '>' + 080h
 
         DEFW    L098C                   ; 'link field'
 
-L099B:  DEFB    $02                     ; 'name length field'
+L099B:  DEFB    002h                     ; 'name length field'
 
 L099C:  DEFW    L099E                   ; 'code field'
 
@@ -3172,9 +3172,9 @@ L099C:  DEFW    L099E                   ; 'code field'
 
 L099E:  RST     18H                     ; pop word DE
         RST     18H                     ; pop word DE
-        LD      DE,(RAMSTART + $1A)              ; HLD
+        LD      DE,(RAMSTART + 01Ah)              ; HLD
         RST     10H                     ; push word DE (address)
-        LD      HL,$27FF                ; end of pad.
+        LD      HL,027FFh                ; end of pad.
         AND     A                       ; prepare to subtract.
         SBC     HL,DE                   ; find length of string.
         EX      DE,HL                   ; transfer to DE
@@ -3187,11 +3187,11 @@ L099E:  RST     18H                     ; pop word DE
 ; ------------
 ;
 
-L09AF:  DEFB    '.' + $80               ; 'name field'
+L09AF:  DEFB    '.' + 080h               ; 'name field'
 
         DEFW    L0A49                   ; 'link field'
 
-L09B2:  DEFB    $01                     ; 'name length field'
+L09B2:  DEFB    001h                     ; 'name length field'
 
 L09B3:  DEFW    L0EC3                   ; 'code field' - docolon
 
@@ -3218,11 +3218,11 @@ L09C3:  DEFW    L099C                   ; #>
 ; followed by a space.
 
 L09CB:  DEFB    'U'                     ; 'name field'
-        DEFB    '.' + $80
+        DEFB    '.' + 080h
 
         DEFW    L09B2                   ; 'link field'
 
-L09CF:  DEFB    $02                     ; 'name length field'
+L09CF:  DEFB    002h                     ; 'name length field'
 
 L09D0:  DEFW    L0EC3                   ; 'code field' - docolon
 
@@ -3232,7 +3232,7 @@ L09D2:  DEFW    L0688                   ; stk-zero
 L09D4:  DEFW    L098D                   ; <#
 L09D6:  DEFW    L09E1                   ; #S
 L09D8:  DEFW    L1276                   ; branch
-L09DA:  DEFW    $FFE8                   ; -> 09C3
+L09DA:  DEFW    0FFE8h                   ; -> 09C3
 
 
 ; -------------
@@ -3243,11 +3243,11 @@ L09DA:  DEFW    $FFE8                   ; -> 09C3
 ; on the stack is 0.
 
 L09DC:  DEFB    '#'                     ; 'name field'
-        DEFB    'S' + $80
+        DEFB    'S' + 080h
 
         DEFW    L09CF                   ; 'link field'
 
-L09E0:  DEFB    $02                     ; 'name length field'
+L09E0:  DEFB    002h                     ; 'name length field'
 
 L09E1:  DEFW    L0EC3                   ; 'code field' - docolon
 
@@ -3260,7 +3260,7 @@ L09E3:  DEFW    L09F7                   ; #
         DEFW    L0C1A                   ; 0=
         DEFW    L128D                   ; ?branch
 
-L09EF:  DEFW    $FFF3                   ; back to L09E3
+L09EF:  DEFW    0FFF3h                   ; back to L09E3
 
         DEFW    L04B6                   ; exit
 
@@ -3272,11 +3272,11 @@ L09EF:  DEFW    $FFF3                   ; back to L09E3
 ; length integer ud1 and holds it in the pad. The unsigned double length
 ; integer ud2 is the quotient when ud1 is divided by the number base.
 
-L09F3:  DEFB    '#' + $80               ; 'name field'
+L09F3:  DEFB    '#' + 080h               ; 'name field'
 
         DEFW    L09E0                   ; 'link field'
 
-L09F6:  DEFB    $01                     ; 'name length field'
+L09F6:  DEFB    001h                     ; 'name length field'
 
 L09F7:  DEFW    L0EC3                   ; 'code field' - docolon
 
@@ -3301,10 +3301,10 @@ L0A07:  DEFW    L0A09                   ; headerless 'code field'
 
 L0A09:  RST     18H                     ; data stack to DE
         LD      A,E                     ; character to A
-        ADD     A,$30                   ; convert digit to ASCII
-        CP      $3A                     ; compare to '9'
+        ADD     A,030h                   ; convert digit to ASCII
+        CP      03Ah                     ; compare to '9'
         JR      C,L0A13                 ; forward if digit
-        ADD     A,$07                   ; else add for hex
+        ADD     A,007h                   ; else add for hex
 
 L0A13:  LD      E,A                     ; back to E
         RST     10H                     ; push ASCII on data stack.
@@ -3318,11 +3318,11 @@ L0A13:  LD      E,A                     ; back to E
 ; the screen.
 
 L0A17:  DEFM    "CL"                    ; 'name field'
-        DEFB    'S' + $80
+        DEFB    'S' + 080h
 
         DEFW    L09F6                   ; 'link field'
 
-L0A1C:  DEFB    $03                     ; 'name length field'
+L0A1C:  DEFB    003h                     ; 'name length field'
 
         DEFW    L0A1F                   ; 'code field'
 
@@ -3339,13 +3339,13 @@ L0A1F:  CALL    L0A24                   ; routine CLS below.
 ; Called from the 'CLS' word definition above and also from the initialization
 ; routine.
 
-L0A24:  LD      DE,$26FF                ; point destination to end of video
+L0A24:  LD      DE,026FFh                ; point destination to end of video
                                         ; memory.
-        LD      HL,(RAMSTART + $24)              ; set HL to first byte of input buffer
+        LD      HL,(RAMSTART + 024h)              ; set HL to first byte of input buffer
                                         ; from system variable L_HALF.
-                                        ; (at initialization $26E0).
+                                        ; (at initialization 026E0h).
 
-        LD      BC,$0020                ; set count to thirty two.
+        LD      BC,00020h                ; set count to thirty two.
 
         ADD     HL,BC                   ; add to the low address.
         DEC     HL                      ; step back and
@@ -3353,16 +3353,16 @@ L0A24:  LD      DE,$26FF                ; point destination to end of video
 
 ; while BC is zero, set the plotting coordinates.
 
-        LD      (RAMSTART + $2F),BC              ; set XCOORD and YCOORD to zero.
+        LD      (RAMSTART + 02Fh),BC              ; set XCOORD and YCOORD to zero.
 
 ; set the screen position to the start of video memory.
 
-        LD      HL,$2400                ; start of the 768 bytes of video RAM.
-        LD      (RAMSTART + $1C),HL              ; set system variable SCRPOS.
+        LD      HL,02400h                ; start of the 768 bytes of video RAM.
+        LD      (RAMSTART + 01Ch),HL              ; set system variable SCRPOS.
 
         INC     DE                      ; the byte before logical line.
         EX      DE,HL                   ; transfer to HL.
-        LD      (RAMSTART + $24),HL              ; set L_HALF.
+        LD      (RAMSTART + 024h),HL              ; set L_HALF.
         JP      L07FA                   ; jump back to fill the locations
                                         ; from DE to HL -1 with spaces.
 
@@ -3374,11 +3374,11 @@ L0A24:  LD      DE,$26FF                ; point destination to end of video
 
 
 L0A43:  DEFM    "SIG"                   ; 'name field'
-        DEFB    'N' + $80
+        DEFB    'N' + 080h
 
         DEFW    L099B                   ; 'link field'
 
-L0A49:  DEFB    $04                     ; 'name length field'
+L0A49:  DEFB    004h                     ; 'name length field'
 
 L0A4A:  DEFW    L0A4C                   ; 'code field'
 
@@ -3386,7 +3386,7 @@ L0A4A:  DEFW    L0A4C                   ; 'code field'
 
 L0A4C:  RST     18H                     ; pop word DE
         RL      D                       ; test sign bit
-        LD      E,$2D                   ; prepare a '-'
+        LD      E,02Dh                   ; prepare a '-'
         JR      C,L0A5F                 ; forward if minus
         JP      (IY)                    ; to 'next'.
 
@@ -3397,11 +3397,11 @@ L0A4C:  RST     18H                     ; pop word DE
 ; Used in formatted output to hold the character in the pad.
 
 L0A55:  DEFM    "HOL"                   ; 'name field'
-        DEFB    'D' + $80
+        DEFB    'D' + 080h
 
 L0A59:  DEFW    L0A1C                   ; 'link field'
 
-L0A5B:  DEFB    $04                     ; 'name length field'
+L0A5B:  DEFB    004h                     ; 'name length field'
 
 L0A5C:  DEFW    L0A5E                   ; 'code field'
 
@@ -3409,11 +3409,11 @@ L0A5C:  DEFW    L0A5E                   ; 'code field'
 
 L0A5E:  RST     18H                     ; data stack to DE
 
-L0A5F:  LD      HL,(RAMSTART + $1A)              ; HLD
+L0A5F:  LD      HL,(RAMSTART + 01Ah)              ; HLD
         DEC     L
         JR      Z,L0A69                 ; forward when full
 
-        LD      (RAMSTART + $1A),HL              ; update HLD
+        LD      (RAMSTART + 01Ah),HL              ; update HLD
         LD      (HL),E                  ; and place character in buffer
 
 L0A69:  JP      (IY)                    ; to 'next'.
@@ -3425,17 +3425,17 @@ L0A69:  JP      (IY)                    ; to 'next'.
 ; EMITs a space.
 
 L0A6B:  DEFM    "SPAC"                  ; 'name field'
-        DEFB    'E' + $80
+        DEFB    'E' + 080h
 
         DEFW    L0A5B                   ; 'link field'
 
-L0A72:  DEFB    $05                     ; 'name length field'
+L0A72:  DEFB    005h                     ; 'name length field'
 
 L0A73:  DEFW    L0A75                   ; 'code field'
 
 ; ---
 
-L0A75:  LD      A,$20                   ; load accumulator with the ASCII
+L0A75:  LD      A,020h                   ; load accumulator with the ASCII
                                         ; code for space.
         RST     08H                     ; print_ch
 
@@ -3448,11 +3448,11 @@ L0A78:  JP      (IY)                    ; to 'next'.
 ; EMITs n spaces if n >= 1.
 
 L0A7A:  DEFM    "SPACE"                 ; 'name field'
-        DEFB    'S' + $80
+        DEFB    'S' + 080h
 
         DEFW    L0A72                   ; 'link field'
 
-L0A82:  DEFB    $06                     ; 'name length field'
+L0A82:  DEFB    006h                     ; 'name length field'
 
         DEFW    L0A85                   ; 'code field'
 
@@ -3464,7 +3464,7 @@ L0A86:  DEC     DE                      ; decrement the counter.
         BIT     7,D                     ; test for a negative value
         JR      NZ,L0A78                ; back to a jp iy  when done    >>
 
-        LD      A,$20                   ; prepare a space
+        LD      A,020h                   ; prepare a space
         RST     08H                     ; print it
         JR      L0A86                   ; loop back for more.
 
@@ -3474,17 +3474,17 @@ L0A86:  DEC     DE                      ; decrement the counter.
 ; Outputs a carriage return character to the television.
 
 L0A90:  DEFB    'C'                     ; 'name field'
-        DEFB    'R' + $80
+        DEFB    'R' + 080h
 
         DEFW    L0A82                   ; 'link field'
 
-L0A94:  DEFB    $02                     ; 'name length field'
+L0A94:  DEFB    002h                     ; 'name length field'
 
 L0A95:  DEFW    L0A97                   ; 'code field'
 
 ; ---
 
-L0A97:  LD      A,$0D                   ; prepare a CR
+L0A97:  LD      A,00Dh                   ; prepare a CR
         RST     08H                     ; print it.
 
         JP      (IY)                    ; to 'next'.
@@ -3496,11 +3496,11 @@ L0A97:  LD      A,$0D                   ; prepare a CR
 ; writes the character to the television screen.
 
 L0A9C:  DEFM    "EMI"                   ; 'name field'
-        DEFB    'T' + $80
+        DEFB    'T' + 080h
 
         DEFW    L0A94                   ; 'link field'
 
-L0AA2:  DEFB    $04                     ; 'name length field'
+L0AA2:  DEFB    004h                     ; 'name length field'
 
 L0AA3:  DEFW    L0AA5                   ; 'code field'
 
@@ -3533,77 +3533,77 @@ L0AA5:  RST     18H                     ; pop de off data stack
 ;       |       34      BCD     |sign of exponent 1=positive (bit 6)
 ;       |       56      BCD     sign of number 0=positive (bit 7)
 ;
-; Zero 0. is a special case floating point number with all four bytes set
+; Zero 0. is a special case floating point number with all four bytes set 
 ; to zero.
 
 
 L0AAA:  DEFB    'F'                     ; 'name field'
-        DEFB    '.' + $80
+        DEFB    '.' + 080h
 
-        DEFW    $0AA2                   ; 'link field'
+        DEFW    00AA2h                   ; 'link field'
 
-L0AAE:  DEFB    $02                     ; 'name length field'
+L0AAE:  DEFB    002h                     ; 'name length field'
 
-L0AAF:  DEFW    $0AB1                   ; 'code field'
+L0AAF:  DEFW    00AB1h                   ; 'code field'
 
 ; ---
 
-L0AB1:  LD      HL,(RAMSTART + $3B)              ; set pointer from system variable SPARE
+L0AB1:  LD      HL,(RAMSTART + 03Bh)              ; set pointer from system variable SPARE
         DEC     HL                      ; now points to last byte of data stack.
         BIT     7,(HL)                  ; test sign of number.
         RES     7,(HL)                  ; reset the sign bit.
         JR      Z,L0ABE                 ; forward if initially positive.
 
-        LD      A,$2D                   ; prepare  the '-' character.
+        LD      A,02Dh                   ; prepare  the '-' character.
         RST     08H                     ; print the minus sign.
 
-; The E register is initialized to zero to denote not E-FORMAT
+; The E register is initialized to zero to denote not E-FORMAT 
 
-L0ABE:  LD      E,$00                   ; signal not scientific notation.
+L0ABE:  LD      E,000h                   ; signal not scientific notation.
 
         LD      A,(HL)                  ; fetch exponent byte
-        DEC     A                       ; adjust to make zero $FF
+        DEC     A                       ; adjust to make zero 0FFh
 
-        CP      $49                     ; compare to +9   e.g.  123456000.
+        CP      049h                     ; compare to +9   e.g.  123456000.
         JR      NC,L0ACA                ; skip forward if out of range.
 
-        CP      $3C                     ; compare to -4   e.g  .000123456
+        CP      03Ch                     ; compare to -4   e.g  .000123456
         JR      NC,L0ACE                ; skip forward if in range.
 
 ; else E format printing will be used with decimal point after first digit.
 
-L0ACA:  LD      (HL),$41                ; make Data Stack exponent +1
+L0ACA:  LD      (HL),041h                ; make Data Stack exponent +1
         INC     A                       ; restore true exponent byte
         LD      E,A                     ; transfer to E.
 
 ; the branch was here when within range for normal printing.
 
-L0ACE:  LD      A,$40                   ; test value is plus zero.
+L0ACE:  LD      A,040h                   ; test value is plus zero.
         SUB     (HL)                    ; subtract signed exponent.
         JR      C,L0ADC                 ; forward if positive
 
 ; exponent is negative so decimal point comes first. e.g. .001
 
         LD      B,A                     ; result of subtraction to B.
-        INC     B                       ; B is now one less than count of
+        INC     B                       ; B is now one less than count of 
                                         ; leading zeros.
 
-        LD      A,$2E                   ; prepare '.'
+        LD      A,02Eh                   ; prepare '.'
 
 L0AD7:  RST     08H                     ; print decimal point or zero.
 
-        LD      A,$30                   ; prepare a zero - '0'
+        LD      A,030h                   ; prepare a zero - '0'
 
-        DJNZ    L0AD7                   ; loop back to print leading zeros
+        DJNZ    L0AD7                   ; loop back to print leading zeros 
                                         ; unless the counter was 1.
 
 ; the branch was here with positive exponent (and zero)
 ; now enter a loop to print each of the leading BCD digits
-; the loop will end when the exponent is <= +0 and all 6 nibbles contain zero.
+; the loop will end when the exponent is <= +0 and all 6 nibbles contain zero. 
 
-L0ADC:  LD      A,$40                   ; set accumulator to plus 0
+L0ADC:  LD      A,040h                   ; set accumulator to plus 0
         CP      (HL)                    ; compare to exponent on data stack.
-        SBC     A,A                     ; $FF if more leading digits else $00.
+        SBC     A,A                     ; 0FFh if more leading digits else 000h.
         DEC     HL                      ; address first two nibbles.
         OR      (HL)                    ; combine.
         DEC     HL                      ; address next two nibbles.
@@ -3614,29 +3614,29 @@ L0ADC:  LD      A,$40                   ; set accumulator to plus 0
         INC     HL                      ; adjust the pointer to
         INC     HL                      ; the start of the mantissa.
 
-        JR      Z,L0AFC                 ; forward if all digits have been
+        JR      Z,L0AFC                 ; forward if all digits have been 
                                         ; printed.
 
 ; else print each binary coded decimal in turn.
 
         XOR     A                       ; prepare to feed a zero nibble in.
 
-        CALL    L0732                   ; routine shift_fp extracts the most
+        CALL    L0732                   ; routine shift_fp extracts the most 
                                         ; significant nibble from the 3 bytes
                                         ; also decrementing the exponent.
 
-        ADD     A,$30                   ; convert to ASCII
+        ADD     A,030h                   ; convert to ASCII
         RST     08H                     ; print digit
 
         INC     HL                      ; point to reduced exponent.
         LD      A,(HL)                  ; fetch to accumulator and
-        CP      $40                     ; compare to zero.
+        CP      040h                     ; compare to zero.
 
         JR      NZ,L0ADC                ; loop back while more digits.
 
 ; else this is the place to print the mid or trailing decimal point.
 
-        LD      A,$2E                   ; prepare '.'
+        LD      A,02Eh                   ; prepare '.'
         RST     08H                     ; print it.
 
         JR      L0ADC                   ; loop back for end test and any digits
@@ -3651,26 +3651,26 @@ L0AFC:  LD      A,E                     ; fetch the exponent format flag - from
         AND     A                       ; test for zero - normal format.
         JR      NZ,L0B05                ; forward to E_FORMAT if not.
 
-        LD      A,$20                   ; else prepare a space
+        LD      A,020h                   ; else prepare a space
         RST     08H                     ; print it
 
-        JR      L0B10                   ; forward to delete the two words from
+        JR      L0B10                   ; forward to delete the two words from 
                                         ; the data stack and exit.
 
 ; ---
 
 ; this branch deals with scientific notation. The accumulator holds the
-; original exponent. $01-$3C (negative) $49-$7F (positive).
+; original exponent. 001h-03Ch (negative) 049h-07Fh (positive).
 
-L0B05:  SUB     $41                     ; convert to signed 8-bit.
+L0B05:  SUB     041h                     ; convert to signed 8-bit.
         LD      L,A                     ; low order byte to L.
-        SBC     A,A                     ; $FF negative or $00 positive
+        SBC     A,A                     ; 0FFh negative or 000h positive
         LD      H,A                     ; set the high order byte.
 
-        LD      A,$45                   ; prepare a 'E'
+        LD      A,045h                   ; prepare a 'E'
         RST     08H                     ; print it
 
-        CALL    L180E                   ; routine pr_int_hl prints the signed
+        CALL    L180E                   ; routine pr_int_hl prints the signed 
                                         ; integer followed by a space.
 
 ; finally delete the floating point number from the Data Stack.
@@ -3691,11 +3691,11 @@ L0B10:  RST     18H                     ; unstack word DE
 ; in the input buffer at the bottom.
 
 L0B14:  DEFB    'A'                     ; 'name field'
-        DEFB    'T' + $80
+        DEFB    'T' + 080h
 
         DEFW    L0AAE                   ; 'link field'
 
-L0B18:  DEFB    $02                     ; 'name length field'
+L0B18:  DEFB    002h                     ; 'name length field'
 
         DEFW    L0B1B                   ; 'code field'
 
@@ -3709,7 +3709,7 @@ L0B1B:  RST     18H                     ; pop word DE
 
         CALL    L0B28                   ;
 
-        LD      (RAMSTART + $1C),HL              ; update system variable SCRPOS
+        LD      (RAMSTART + 01Ch),HL              ; update system variable SCRPOS
 
         JP      (IY)                    ; to 'next'.
 
@@ -3717,20 +3717,20 @@ L0B1B:  RST     18H                     ; pop word DE
 
 ; plotsub
 
-L0B28:  ADD     A,$20
+L0B28:  ADD     A,020h
         LD      L,A
-        LD      H,$01
+        LD      H,001h
         ADD     HL,HL
         ADD     HL,HL
         ADD     HL,HL
         ADD     HL,HL
         ADD     HL,HL
-        LD      D,$00
+        LD      D,000h
         LD      A,E
-        AND     $1F
+        AND     01Fh
         LD      E,A
         ADD     HL,DE
-        LD      DE,(RAMSTART + $24)              ; fetch start of lower half from L_HALF
+        LD      DE,(RAMSTART + 024h)              ; fetch start of lower half from L_HALF
         SBC     HL,DE
         ADD     HL,DE
         RET     C
@@ -3738,7 +3738,7 @@ L0B28:  ADD     A,$20
 ;
 
         RST     20H                     ; Error 9
-        DEFB    $09                     ; Erroneous 'AT' Command.
+        DEFB    009h                     ; Erroneous 'AT' Command.
 
 ; ---------------
 ; THE 'PLOT' WORD
@@ -3752,11 +3752,11 @@ L0B28:  ADD     A,$20
 ; If n>3, takes value modulo 4.
 
 L0B43:  DEFM    "PLO"                   ; 'name field'
-        DEFB    'T' + $80
+        DEFB    'T' + 080h
 
         DEFW    L0B18                   ; 'link field'
 
-L0B49:  DEFB    $04                     ; 'name length field'
+L0B49:  DEFB    004h                     ; 'name length field'
 
         DEFW    L0B4C                   ; 'code field'
 
@@ -3765,38 +3765,38 @@ L0B49:  DEFB    $04                     ; 'name length field'
 L0B4C:  CALL    L084E                   ; stk_to_bc
 
         RST     18H                     ; pop word DE
-        LD      (IX+$30),E              ; YCOORD
+        LD      (IX+030h),E              ; YCOORD
         SRL     E
         RL      C
-        LD      A,$16                   ; 24
+        LD      A,016h                   ; 24
         SUB     E
 
         RST     18H                     ; pop word DE
-        LD      (IX+$2F),E              ; XCOORD
+        LD      (IX+02Fh),E              ; XCOORD
         SRL     E
         RL      C
 
         CALL    L0B28                   ;
 
         LD      A,(HL)
-        AND     $78                     ; 01111000
-        CP      $10
+        AND     078h                     ; 01111000
+        CP      010h
         LD      A,(HL)
         JR      Z,L0B6F                 ;
 
-        LD      A,$10
+        LD      A,010h
 
 L0B6F:  LD      E,A
-        LD      D,$87
+        LD      D,087h
         LD      A,C
-        AND     $03
+        AND     003h
         LD      B,A
         JR      Z,L0B7F                 ;
 
         CPL
 
-        ADD     A,$02
-        ADC     A,$03
+        ADD     A,002h
+        ADC     A,003h
         LD      D,A
         LD      B,E
 L0B7F:  LD      A,C
@@ -3824,11 +3824,11 @@ L0B8C:  AND     D
 ; n = time in milliseconds.
 
 L0B91:  DEFM    "BEE"                   ; 'name field'
-        DEFB    'P' + $80
+        DEFB    'P' + 080h
 
         DEFW    L0B49                   ; 'link field'
 
-L0B97:  DEFB    $04                     ; 'name length field'
+L0B97:  DEFB    004h                     ; 'name length field'
 
         DEFW    L0EC3                   ; 'code field'  m, n.
 
@@ -3836,7 +3836,7 @@ L0B97:  DEFB    $04                     ; 'name length field'
 
 L0B9A:  DEFW    L0912                   ; OVER          m, n, m.
         DEFW    L104B                   ; stk-data      m, n, m, 125.
-        DEFB    $7D                     ;  (125)
+        DEFB    07Dh                     ;  (125)
         DEFW    L0885                   ; SWAP          m, n, 125, m.
         DEFW    L0D7A                   ; */            m, (n*125)/m
         DEFW    L1A0E                   ; end
@@ -3847,14 +3847,14 @@ L0BA5:  RST     18H                     ; pop word DE
 
         CALL    L084E                   ; stk_to_bc
 
-        LD      HL,$00F9                ;
+        LD      HL,000F9h                ;
         ADD     HL,BC                   ;
         INC     L                       ;
 
         DI                              ; Disable Interrupts.
 
-L0BAF:  LD      A,$7F                   ; place $7FFE on address bus and read
-        IN      A,($FE)                 ; from port, pushing the loudspeaker
+L0BAF:  LD      A,07Fh                   ; place 07FFEh on address bus and read
+        IN      A,(0FEh)                 ; from port, pushing the loudspeaker
                                         ; diaphragm in.
 
         RRCA                            ; test the read 'SPACE' key bit.
@@ -3865,11 +3865,11 @@ L0BAF:  LD      A,$7F                   ; place $7FFE on address bus and read
 
         DEC     DE                      ; decrement counter.
 
-        LD      A,D                     ; all even addresses are reserved for
+        LD      A,D                     ; all even addresses are reserved for 
                                         ; Jupiter Ace so any value does for the
-                                        ; high order byte. $FE is low value.
+                                        ; high order byte. 0FEh is low value.
 
-        OUT     ($FE),A                 ; push the loudspeaker diaphragm out.
+        OUT     (0FEh),A                 ; push the loudspeaker diaphragm out.
 
         CALL    L0BC9                   ; routine delay_HL
 
@@ -3883,7 +3883,7 @@ L0BAF:  LD      A,$7F                   ; place $7FFE on address bus and read
 ; ---
 
 L0BC7:  RST     20H                     ; Error 3
-        DEFB    $03                     ; BREAK pressed.
+        DEFB    003h                     ; BREAK pressed.
 
 ; ---------------------------
 ; THE 'BEEP DELAY' SUBROUTINE
@@ -3895,7 +3895,7 @@ L0BC9:  LD      B,L                     ; transfer the value of
 
 L0BCB:  DJNZ    L0BCB                   ; self-loop for B times
 
-        DEC     B                       ; set B to $FF for future loops
+        DEC     B                       ; set B to 0FFh for future loops
         DEC     C                       ; decrement outer loop counter C
         JP      NZ,L0BCB                ; JUMP back if not zero           (10)
 
@@ -3910,11 +3910,11 @@ L0BCB:  DJNZ    L0BCB                   ; self-loop for B times
 
 
 L0BD3:  DEFM    "INKE"                  ; 'name field'
-        DEFB    'Y' + $80
+        DEFB    'Y' + 080h
 
         DEFW    L0B97                   ; 'link field'
 
-L0BDA:  DEFB    $05                     ; 'name length field'
+L0BDA:  DEFB    005h                     ; 'name length field'
 
 L0BDB:  DEFW    L0BDD                   ; 'code field'
 
@@ -3923,7 +3923,7 @@ L0BDB:  DEFW    L0BDD                   ; 'code field'
 L0BDD:  CALL    L0336                   ; routine KEY-SCAN
 
         LD      E,A                     ; transfer the key code to E.
-        LD      D,$00                   ; make high order byte zero.
+        LD      D,000h                   ; make high order byte zero.
 
         RST     10H                     ; stack Data Word DE
 
@@ -3936,18 +3936,18 @@ L0BDD:  CALL    L0336                   ; routine KEY-SCAN
 ; Inputs a data byte from an I/O port.
 
 L0BE6:  DEFB    'I'                     ; 'name field'
-        DEFB    'N' + $80
+        DEFB    'N' + 080h
 
         DEFW    L0BDA                   ; 'link field'
 
-L0BEA:  DEFB    $02                     ; 'name length field'
+L0BEA:  DEFB    002h                     ; 'name length field'
 
         DEFW    L0BED                   ; 'code field'
 
 ; ---
 
 L0BED:  CALL    L084E                   ; stk_to_bc
-        LD      D,$00                   ; make high order byte zero.
+        LD      D,000h                   ; make high order byte zero.
 
         IN      E,(C)                   ; read the port to E.
 
@@ -3962,11 +3962,11 @@ L0BF5:  JP      (IY)                    ; to 'next'.
 ; Outputs a data byte to an I/O port.
 
 L0BF7:  DEFM    "OU"                    ; 'name field'
-        DEFB    'T' + $80
+        DEFB    'T' + 080h
 
         DEFW    L0BEA                   ; 'link field'
 
-L0BFC:  DEFB    $03                     ; 'name length field'
+L0BFC:  DEFB    003h                     ; 'name length field'
 
         DEFW    L0BFF                   ; 'code field'
 
@@ -3987,11 +3987,11 @@ L0BFF:  CALL    L084E                   ; stk_to_bc
 ; (n -- absolute value of n)
 
 L0C07:  DEFM    "AB"                    ; 'name field'
-        DEFB    'S' + $80
+        DEFB    'S' + 080h
 
         DEFW    L0BFC                   ; 'link field'
 
-L0C0C:  DEFB    $03                     ; 'name length field'
+L0C0C:  DEFB    003h                     ; 'name length field'
 
 L0C0D:  DEFW    L0EC3                   ; 'code field' - docolon
 
@@ -4008,11 +4008,11 @@ L0C0D:  DEFW    L0EC3                   ; 'code field' - docolon
 ; flag is 1 in n = 0.
 
 L0C15:  DEFB    '0'                     ; 'name field'
-        DEFB    '=' + $80
+        DEFB    '=' + 080h
 
         DEFW    L0C0C                   ; 'link field'
 
-L0C19:  DEFB    $02                     ; 'name length field'
+L0C19:  DEFB    002h                     ; 'name length field'
 
 L0C1A:  DEFW    L0C1C                   ; 'code field'
 
@@ -4021,11 +4021,11 @@ L0C1A:  DEFW    L0C1C                   ; 'code field'
 L0C1C:  RST     18H                     ; pop word DE
         LD      A,D                     ; test for
         OR      E                       ; zero
-        CP      $01                     ; sets carry if word is zero
+        CP      001h                     ; sets carry if word is zero
 
 ; -> zero_or_one
 
-L0C21:  LD      A,$00                   ; make accumulator zero.
+L0C21:  LD      A,000h                   ; make accumulator zero.
         LD      D,A                     ; set D to zero
         RLA                             ; pick up carry (1/0)
         LD      E,A                     ; set DE to one or zero
@@ -4040,11 +4040,11 @@ L0C21:  LD      A,$00                   ; make accumulator zero.
 ; flag is 1 if n is negative
 
 L0C29:  DEFB    '0'                     ; 'name field'
-        DEFB    '<' + $80
+        DEFB    '<' + 080h
 
         DEFW    L0C19                   ; 'link field'
 
-L0C2D:  DEFB    $02                     ; 'name length field'
+L0C2D:  DEFB    002h                     ; 'name length field'
 
 L0C2E:  DEFW    L0C30                   ; 'code field'
 
@@ -4064,11 +4064,11 @@ L0C30:  RST     18H                     ; pop word DE
 
 
 L0C35:  DEFB    '0'                     ; 'name field'
-        DEFB    '>' + $80
+        DEFB    '>' + 080h
 
         DEFW    L0C2D                   ; 'link field'
 
-L0C39:  DEFB    $02                     ; 'name length field'
+L0C39:  DEFB    002h                     ; 'name length field'
 
 L0C3A:  DEFW    L0C3C                   ; 'code field'
 
@@ -4089,11 +4089,11 @@ L0C3C:  RST     18H                     ; pop word DE
 ; (n1, n2 -- flag)
 ; flag is 1 if n1=n2.
 
-L0C46:  DEFB    '=' + $80               ; 'name field'
+L0C46:  DEFB    '=' + 080h               ; 'name field'
 
         DEFW    L0C39                   ; 'link field'
 
-L0C49:  DEFB    $01                     ; 'name length field'
+L0C49:  DEFB    001h                     ; 'name length field'
 
 L0C4A:  DEFW    L0EC3                   ; 'code field' - docolon
 
@@ -4109,11 +4109,11 @@ L0C4C:  DEFW    L0DE1                   ; -
 ; (n1, n2 -- flag)
 ; flag is 1 if n1>n2.
 
-L0C52:  DEFB    '>' + $80               ; 'name field'
+L0C52:  DEFB    '>' + 080h               ; 'name field'
 
         DEFW    L0C49                   ; 'link field'
 
-L0C55:  DEFB    $01                     ; 'name length field'
+L0C55:  DEFB    001h                     ; 'name length field'
 
 L0C56:  DEFW    L0C58                   ; 'code field'
 
@@ -4134,11 +4134,11 @@ L0C58:  RST     18H                     ; pop word DE
 ; (n1, n2 -- flag)
 ; flag is 1 if n1 < n2.
 
-L0C61:  DEFB    '<' + $80               ; 'name field'
+L0C61:  DEFB    '<' + 080h               ; 'name field'
 
         DEFW    L0C55                   ; 'link field'
 
-L0C64:  DEFB    $01                     ; 'name length field'
+L0C64:  DEFB    001h                     ; 'name length field'
 
 L0C65:  DEFW    L0EC3                   ; 'code field' - docolon
 
@@ -4157,11 +4157,11 @@ L0C65:  DEFW    L0EC3                   ; 'code field' - docolon
 ; than un2.
 
 L0C6D:  DEFB    'U'                     ; 'name field'
-        DEFB    '<' + $80
+        DEFB    '<' + 080h
 
         DEFW    L0C64                   ; 'link field'
 
-L0C71:  DEFB    $02                     ; 'name length field'
+L0C71:  DEFB    002h                     ; 'name length field'
 
 L0C72:  DEFW    L0C74                   ; 'code field'
 
@@ -4182,11 +4182,11 @@ L0C77:  RST     18H                     ; pop word DE
 ; flag is 1 if the signed double integer, d1 < d2.
 
 L0C7E:  DEFB    'D'                     ; 'name field'
-        DEFB    '<' + $80
+        DEFB    '<' + 080h
 
         DEFW    L0C71                   ; 'link field'
 
-L0C82:  DEFB    $02                     ; 'name length field'
+L0C82:  DEFB    002h                     ; 'name length field'
 
 L0C83:  DEFW    L0C85                   ; 'code field'
 
@@ -4230,11 +4230,11 @@ L0CA0:  RL      H
 ; double length product.
 
 L0CA3:  DEFB    'U'                     ; 'name field'
-        DEFB    '*' + $80
+        DEFB    '*' + 080h
 
         DEFW    L0C82                   ; 'link field'
 
-L0CA7:  DEFB    $02                     ; 'name length field'
+L0CA7:  DEFB    002h                     ; 'name length field'
 
 L0CA8:  DEFW    L0CAA                   ; 'code field'
 
@@ -4242,8 +4242,8 @@ L0CA8:  DEFW    L0CAA                   ; 'code field'
 
 L0CAA:  RST     18H                     ; pop word DE
         CALL    L084E                   ; stk_to_bc
-        LD      HL,$0000
-        LD      A,$10
+        LD      HL,00000h
+        LD      A,010h
 L0CB3:  ADD     HL,HL
         EX      DE,HL
         ADC     HL,HL
@@ -4275,11 +4275,11 @@ L0CC6:  RST     18H                     ; pop word DE
         POP     HL
         LD      A,H
         OR      L
-        LD      A,$21                   ; 33
+        LD      A,021h                   ; 33
         JR      NZ,L0CD5                ;
 
         EX      DE,HL
-        LD      A,$11                   ; 17
+        LD      A,011h                   ; 17
 
 L0CD5:  EXX
         LD      B,A
@@ -4323,11 +4323,11 @@ L0CF3:  PUSH    HL
 ; The remainder has the same sign as the dividend n1.
 
 L0CF9:  DEFM    "/MO"                   ; 'name field'
-        DEFB    'D' + $80
+        DEFB    'D' + 080h
 
         DEFW    L0CA7                   ; 'link field'
 
-L0CFF:  DEFB    $04                     ; 'name length field'
+L0CFF:  DEFB    004h                     ; 'name length field'
 
 L0D00:  DEFW    L0EC3                   ; 'code field' - docolon
 
@@ -4338,7 +4338,7 @@ L0D02:  DEFW    L0885                   ; swap
         DEFW    L12E9                   ; I
         DEFW    L0C0D                   ; abs
         DEFW    L104B                   ; stk_data
-        DEFB    $00                     ; zero
+        DEFB    000h                     ; zero
 ; ->
 L0D0D:  DEFW    L08FF                   ; rot
         DEFW    L086B                   ; dup
@@ -4362,11 +4362,11 @@ L0D0D:  DEFW    L08FF                   ; rot
 ; As in */, n1 * n2 is held to double length.
 
 L0D29:  DEFM    "*/MO"                  ; 'name field'
-        DEFB    'D' + $80
+        DEFB    'D' + 080h
 
         DEFW    L0CFF                   ; 'link field'
 
-L0D30:  DEFB    $05                     ; 'name length field'
+L0D30:  DEFB    005h                     ; 'name length field'
 
 L0D31:  DEFW    L0EC3                   ; 'code field' - docolon
 
@@ -4385,7 +4385,7 @@ L0D31:  DEFW    L0EC3                   ; 'code field' - docolon
         DEFW    L0CA8                   ; u*
         DEFW    L1276                   ; branch
 
-L0D4B:  DEFW    $FFC1                   ; back to L0D0D  (in /MOD)
+L0D4B:  DEFW    0FFC1h                   ; back to L0D0D  (in /MOD)
 
 
 
@@ -4396,11 +4396,11 @@ L0D4B:  DEFW    $FFC1                   ; back to L0D0D  (in /MOD)
 ; (n1, n2 -- n1/n2)
 ; Single length signed integer division.
 
-L0D4D:  DEFB    '/' + $80               ; 'name field'
+L0D4D:  DEFB    '/' + 080h               ; 'name field'
 
         DEFW    L0D30                   ; 'link field'
 
-L0D50:  DEFB    $01                     ; 'name length field'
+L0D50:  DEFB    001h                     ; 'name length field'
 
 L0D51:  DEFW    L0EC3                   ; 'code field' - docolon
 
@@ -4418,11 +4418,11 @@ L0D53:  DEFW    L0D00                   ; /MOD
 ; The remainder has the same sign as the dividend.
 
 L0D5B:  DEFM    "MO"                    ; 'name field'
-        DEFB    'D' + $80
+        DEFB    'D' + 080h
 
         DEFW    L0D50                   ; 'link field'
 
-L0D60:  DEFB    $03                     ; 'name length field'
+L0D60:  DEFB    003h                     ; 'name length field'
 
 L0D61:  DEFW    L0EC3                   ; 'code field' - docolon
 
@@ -4438,11 +4438,11 @@ L0D61:  DEFW    L0EC3                   ; 'code field' - docolon
 ; ------------
 ; (n1, n2 -- n1*n2)
 
-L0D69:  DEFB    '*' + $80               ; 'name field'
+L0D69:  DEFB    '*' + 080h               ; 'name field'
 
         DEFW    L0D60                   ; 'link field'
 
-L0D6C:  DEFB    $01                     ; 'name length field'
+L0D6C:  DEFB    001h                     ; 'name length field'
 
         DEFW    L0EC3                   ; 'code field' - docolon
 
@@ -4460,11 +4460,11 @@ L0D6C:  DEFB    $01                     ; 'name length field'
 ; The intermediate product n1*n2 is held to double length.
 
 L0D75:  DEFB    '*'                     ; 'name field'
-        DEFB    '/' + $80
+        DEFB    '/' + 080h
 
         DEFW    L0D6C                   ; 'link field'
 
-L0D79:  DEFB    $02                     ; 'name length field'
+L0D79:  DEFB    002h                     ; 'name length field'
 
 L0D7A:  DEFW    L0EC3                   ; 'code field' - docolon
 
@@ -4484,11 +4484,11 @@ L0D7A:  DEFW    L0EC3                   ; 'code field' - docolon
 ; and a single length quotient un4.
 
 L0D84:  DEFM    "U/MO"                  ; 'name field'
-        DEFB    'D' + $80
+        DEFB    'D' + 080h
 
         DEFW    L0D79                   ; 'link field'
 
-L0D8B:  DEFB    $05                     ; 'name length field'
+L0D8B:  DEFB    005h                     ; 'name length field'
 
 L0D8C:  DEFW    L0EC3                   ; 'code field' - docolon
 
@@ -4508,7 +4508,7 @@ L0D94:  DEFW    L0EC3                   ; 'code field' - docolon
 
 L0D96:  DEFW    L0C2E                   ; 0<
         DEFW    L1283                   ; ?branch               (if false)
-L0D9A:  DEFW    $0003                   ; to L0D9E
+L0D9A:  DEFW    00003h                   ; to L0D9E
 
         DEFW    L0DA9                   ; negate
 
@@ -4521,17 +4521,17 @@ L0D9E:  DEFW    L04B6                   ; exit
 
 
 L0DA0:  DEFM    "NEGAT"                 ; 'name field'
-        DEFB    'E' +$80
+        DEFB    'E' +080h
 
         DEFW    L0D8B                   ; 'link field'
 
-L0DA8:  DEFB    $06                     ; 'name length field'
+L0DA8:  DEFB    006h                     ; 'name length field'
 
 L0DA9:  DEFW    L0DAB                   ; 'code field'
 
 ; ---
 
-L0DAB:  LD      BC,$0002                ;
+L0DAB:  LD      BC,00002h                ; 
         JR      L0DBF                   ;
 
 ; ------------------
@@ -4541,21 +4541,21 @@ L0DAB:  LD      BC,$0002                ;
 ; Double length integer negation.
 
 L0DB0:  DEFM    "DNEGAT"                ; 'name field'
-        DEFB    'E' +$80
+        DEFB    'E' +080h
 
         DEFW    L0DA8                   ; 'link field'
 
-L0DB9:  DEFB    $07                     ; 'name length field'
+L0DB9:  DEFB    007h                     ; 'name length field'
 
 L0DBA:  DEFW    L0DBC                   ; 'code field'
 
 ; ---
 
-L0DBC:  LD      BC,$0004
+L0DBC:  LD      BC,00004h
 
 ; NEGATE joins here with bc=2
 
-L0DBF:  LD      HL,(RAMSTART + $3B)              ; SPARE
+L0DBF:  LD      HL,(RAMSTART + 03Bh)              ; SPARE
         AND     A
         SBC     HL,BC
 
@@ -4573,11 +4573,11 @@ L0DC5:  LD      A,B
 ; ------------
 ; (n1, n2 -- n1 + n2)
 
-L0DCE:  DEFB    '+' + $80               ; 'name field'
+L0DCE:  DEFB    '+' + 080h               ; 'name field'
 
         DEFW    L0DB9                   ; 'link field'
 
-L0DD1:  DEFB    $01                     ; 'name length field'
+L0DD1:  DEFB    001h                     ; 'name length field'
 
 L0DD2:  DEFW    L0DD4                   ; 'code field'
 
@@ -4601,11 +4601,11 @@ L0DD4:  RST     18H                     ; pop word DE
 ; (n1, n2 -- n1-n2)
 ; flip the sign and do a plus.
 
-L0DDD:  DEFB    '-' + $80               ; 'name field'
+L0DDD:  DEFB    '-' + 080h               ; 'name field'
 
         DEFW    L0DD1                   ; 'link field'
 
-L0DE0:  DEFB    $01                     ; 'name length field'
+L0DE0:  DEFB    001h                     ; 'name length field'
 
 L0DE1:  DEFW    L0EC3                   ; 'code field' - docolon
 
@@ -4622,11 +4622,11 @@ L0DE3:  DEFW    L0DA9                   ; negate
 ; double length integer addition.
 
 L0DE9:  DEFB    'D'                     ; 'name field'
-        DEFB    '+' + $80
+        DEFB    '+' + 080h
 
         DEFW    L0DE0                   ; 'link field'
 
-L0DED:  DEFB    $02                     ; 'name length field'
+L0DED:  DEFB    002h                     ; 'name length field'
 
 L0DEE:  DEFW    L0DF0                   ; 'code field'
 
@@ -4657,11 +4657,11 @@ L0DF0:  RST     18H                     ; pop word DE
 ; (n -- n+1)
 
 L0E04:  DEFB    '1'                     ; 'name field'
-        DEFB    '+' + $80
+        DEFB    '+' + 080h
 
         DEFW    L0DED                   ; 'link field'
 
-L0E08:  DEFB    $02                     ; 'name length field'
+L0E08:  DEFB    002h                     ; 'name length field'
 
 L0E09:  DEFW    L0E0B                   ; 'code field'
 
@@ -4676,11 +4676,11 @@ L0E0B:  RST     18H                     ; get word 'n' in DE
 ; (n -- n+2)
 
 L0E0E:  DEFB    '2'                     ; 'name field'
-        DEFB    '+' + $80
+        DEFB    '+' + 080h
 
         DEFW    L0E08                   ; 'link field'
 
-L0E12:  DEFB    $02                     ; 'name length field'
+L0E12:  DEFB    002h                     ; 'name length field'
 
 L0E13:  DEFW    L0E15                   ; 'code field'
 
@@ -4699,11 +4699,11 @@ L0E17:  INC     DE                      ; increment n                   (4)
 
 
 L0E1A:  DEFB    '1'                     ; 'name field'
-        DEFB    '-' + $80
+        DEFB    '-' + 080h
 
         DEFW    L0E12                   ; 'link field'
 
-L0E1E:  DEFB    $02                     ; 'name length field'
+L0E1E:  DEFB    002h                     ; 'name length field'
 
 L0E1F:  DEFW    L0E21                   ; 'code field'
 
@@ -4719,11 +4719,11 @@ L0E21:  RST     18H                     ;
 
 
 L0E24:  DEFB    '2'                     ; 'name field'
-L0E25:  DEFB    '-' + $80
+L0E25:  DEFB    '-' + 080h
 
 L0E26:  DEFW    L0E1E                   ; 'link field'
 
-L0E28:  DEFB    $02                     ; 'name length field'
+L0E28:  DEFB    002h                     ; 'name length field'
 
 L0E29:  DEFW    L0E2B                   ; 'code field'
 
@@ -4749,11 +4749,11 @@ L0E2E:  RST     10H                     ; push word DE
 
 
 L0E31:  DEFB    'O'                     ; 'name field'
-        DEFB    'R' + $80
+        DEFB    'R' + 080h
 
         DEFW    L0E28                   ; 'link field'
 
-L0E35:  DEFB    $02                     ; 'name length field'
+L0E35:  DEFB    002h                     ; 'name length field'
 
 L0E36:  DEFW    L0E38                   ; 'code field'
 
@@ -4782,11 +4782,11 @@ L0E38:  RST     18H                     ; pop word DE
 
 
 L0E45:  DEFM    "AN"                    ; 'name field'
-        DEFB    'D' + $80
+        DEFB    'D' + 080h
 
         DEFW    L0E35                   ; 'link field'
 
-L0E4A:  DEFB    $03                     ; 'name length field'
+L0E4A:  DEFB    003h                     ; 'name length field'
 
         DEFW    L0E4D                   ; 'code field'
 
@@ -4813,11 +4813,11 @@ L0E4D:  RST     18H
 ; Bitwise Boolean XOR (exclusive or)
 
 L0E5A:  DEFM    "XO"                    ; 'name field'
-        DEFB    'R' + $80
+        DEFB    'R' + 080h
 
         DEFW    L0E4A                   ; 'link field'
 
-L0E5F:  DEFB    $03                     ; 'name length field'
+L0E5F:  DEFB    003h                     ; 'name length field'
 
 L0E60:  DEFW    L0E62                   ; 'code field'
 
@@ -4844,11 +4844,11 @@ L0E62:  RST     18H
 ; Calculates the larger of two numbers.
 
 L0E72:  DEFM    "MA"                    ; 'name field'
-        DEFB    'X' + $80
+        DEFB    'X' + 080h
 
         DEFW    L0E5F                   ; 'link field'
 
-L0E74:  DEFB    $03                     ; 'name length field'
+L0E74:  DEFB    003h                     ; 'name length field'
 
 L0E75:  DEFW    L0EC3                   ; 'code field' - docolon
 
@@ -4858,7 +4858,7 @@ L0E77:  DEFW    L0912                   ; over
         DEFW    L0912                   ; over
         DEFW    L0C65                   ; <
         DEFW    L1271                   ; branch
-L0E7F:  DEFW    $000F                   ; forward to L0E8F
+L0E7F:  DEFW    0000Fh                   ; forward to L0E8F
 
 ; --------------
 ; THE 'MIN' WORD
@@ -4867,11 +4867,11 @@ L0E7F:  DEFW    $000F                   ; forward to L0E8F
 ; Calculates the smaller of two numbers.
 
 L0E81:  DEFM    "MI"                    ; 'name field'
-        DEFB    'N' + $80
+        DEFB    'N' + 080h
 
         DEFW    L0E74                   ; 'link field'
 
-L0E86:  DEFB    $03                     ; 'name length field'
+L0E86:  DEFB    003h                     ; 'name length field'
 
         DEFW    L0EC3                   ; 'code field' - docolon
 
@@ -4882,7 +4882,7 @@ L0E89:  DEFW    L0912                   ; over
         DEFW    L0C56                   ; >
 ; ->
 L0E8F:  DEFW    L1283                   ; ?branch
-L0E91:  DEFW    $0003                   ; forward to L0995
+L0E91:  DEFW    00003h                   ; forward to L0995
 
         DEFW    L0885                   ; swap
 
@@ -4896,17 +4896,17 @@ L0995:  DEFW    L0879                   ; drop
 ; Sets the system number base to ten.
 
 L0E99:  DEFM    "DECIMA"                ; 'name field'
-        DEFB    'L' + $80
+        DEFB    'L' + 080h
 
         DEFW    L0E86                   ; 'link field'
 
-L0EA2:  DEFB    $07                     ; 'name length field'
+L0EA2:  DEFB    007h                     ; 'name length field'
 
         DEFW    L0EA5                   ; 'code field'
 
 ; ---
 
-L0EA5:  LD      (IX+$3F),$0A            ; update system variable BASE to 10
+L0EA5:  LD      (IX+03Fh),00Ah            ; update system variable BASE to 10
 
         JP      (IY)                    ; to 'next'.
 
@@ -4915,11 +4915,11 @@ L0EA5:  LD      (IX+$3F),$0A            ; update system variable BASE to 10
 ; ------------
 ; Introduces colon definitions.
 
-L0EAB:  DEFB    ':' + $80               ; 'name field'
+L0EAB:  DEFB    ':' + 080h               ; 'name field'
 
         DEFW    L0EA2                   ; 'link field'
 
-L0EAE:  DEFB    $01                     ; 'name length field'
+L0EAE:  DEFB    001h                     ; 'name length field'
 
 L0EAF:  DEFW    L1085                   ; 'code field' - create and enclose
 
@@ -4928,14 +4928,14 @@ L0EAF:  DEFW    L1085                   ; 'code field' - create and enclose
 L0EB1:  DEFW    L0EC3                   ; do_colon
 
         DEFW    L104B                   ; stk_data
-        DEFB    $0A                     ; ten                   marker byte?
+        DEFB    00Ah                     ; ten                   marker byte?
 ; ->
 L0EB6:  DEFW    L1A0E                   ; end_forth
 
-L0EB8:  LD      HL,RAMSTART + $3E                ; FLAGS
+L0EB8:  LD      HL,RAMSTART + 03Eh                ; FLAGS
 
         LD      A,(HL)                  ; update bits 6 and 2.
-        OR      $44                     ; signal in compile mode, definition
+        OR      044h                     ; signal in compile mode, definition
                                         ; incomplete.
         LD      (HL),A                  ; update FLAGS.
 
@@ -4943,8 +4943,8 @@ L0EB8:  LD      HL,RAMSTART + $3E                ; FLAGS
 
 ; ---
 
-x0EC1:   DEFB    $E9                     ;;
-x0Ec2:   DEFB    $FF                     ;; 0ec2 + ffe9 =  0eab = ':'
+x0EC1:   DEFB    0E9h                     ;;
+x0Ec2:   DEFB    0FFh                     ;; 0ec2 + ffe9 =  0eab = ':'
 
 ; -------------------------------
 ; THE 'ENTER' or 'DOCOLON' action
@@ -4964,18 +4964,18 @@ L0EC3:  EX      DE,HL                   ;
 ; When executed, the new word stacks its parameter field address.
 
 L0EC7:  DEFM    "CREAT"                 ; 'name field'
-        DEFB    'E' + $80
+        DEFB    'E' + 080h
 
         DEFW    L0EAE                   ; 'link field'
 
-L0ECF:  DEFB    $06                     ; 'name length field'
+L0ECF:  DEFB    006h                     ; 'name length field'
 
 L0ED0:  DEFW    L0EC3                   ; 'code field' - docolon
 
 ; ---
 
 L0ED2:  DEFW    L104B                   ; stk_data
-        DEFB    $20                     ; a space               delimiter
+        DEFB    020h                     ; a space               delimiter
         DEFW    L05AB                   ; word to pad
         DEFW    L0EFB                   ; get-name              in dict
         DEFW    L0688                   ; stk-zero              link
@@ -4992,7 +4992,7 @@ L0ED2:  DEFW    L104B                   ; stk_data
         DEFW    L0896                   ; C@            fetch 1 byte
         DEFW    L0F5F                   ; C,
         DEFW    L1011                   ; stack next word
-        DEFW    $0FEC                   ; ???
+        DEFW    00FECh                   ; ???
         DEFW    L0F4E                   ; ,
 L0EF9:  DEFW    L04B6                   ; exit
 
@@ -5010,26 +5010,26 @@ L0EFD:  CALL    L0F2E                   ; blank stack
         RST     18H                     ; pop word DE
 
         LD      A,(DE)
-        DEC     A                       ; zero becomes $FF
-        CP      $3F                     ; max length is 64
+        DEC     A                       ; zero becomes 0FFh
+        CP      03Fh                     ; max length is 64
         JR      C,L0F09                 ; forward if n range 1 - 64.
 
         RST     20H                     ; Error 6
-        DEFB    $06                     ; Name of new word too short or long.
+        DEFB    006h                     ; Name of new word too short or long.
 
 ; ---
 
-L0F09:  ADD     A,$08                   ; allow for prev/len/addr 3 missing
+L0F09:  ADD     A,008h                   ; allow for prev/len/addr 3 missing
 
         LD      C,A                     ;
-        LD      B,$00                   ; length to BC
+        LD      B,000h                   ; length to BC
 
 L0F0E:  CALL    L0F8C                   ; check free memory.
 
 x0f11:   LD      A,(DE)                  ; true length to A
         LD      C,A                     ; and BC again
 
-        LD      HL,(RAMSTART + $37)              ; STKBOT
+        LD      HL,(RAMSTART + 037h)              ; STKBOT
 
         PUSH    DE                      ;
         CALL    L0F9E                   ; routine MAKE ROOM
@@ -5047,7 +5047,7 @@ L0F1D:  INC     DE                      ; increase source
         INC     HL                      ; increase destination
         DJNZ    L0F1D                   ; loop back for all letters.
 
-        LD      (RAMSTART + $39),HL              ; store this location in SPARE
+        LD      (RAMSTART + 039h),HL              ; store this location in SPARE
         DEC     HL                      ; step back to last letter of word.
         SET     7,(HL)                  ; and 'invert' it.
         JP      (IY)                    ; to 'next'.
@@ -5055,16 +5055,16 @@ L0F1D:  INC     DE                      ; increase source
 ; ---
 
 
-L0F2E:  BIT     2,(IX+$3E)              ; test FLAGS incomplete definition ?
+L0F2E:  BIT     2,(IX+03Eh)              ; test FLAGS incomplete definition ?
         JR      Z,L0F36                 ; forward if not.
 
         RST     20H                     ; Error 12
-        DEFB    $0C                     ; Incomplete definition in dictionary.
+        DEFB    00Ch                     ; Incomplete definition in dictionary.
 
 ; ---
 
-L0F36:  LD      HL,(RAMSTART + $37)              ; fetch STKBOT
-        LD      DE,(RAMSTART + $39)              ; fetch SPARE
+L0F36:  LD      HL,(RAMSTART + 037h)              ; fetch STKBOT
+        LD      DE,(RAMSTART + 039h)              ; fetch SPARE
 
         XOR     A                       ; clear accumulator and carry flag
 
@@ -5076,7 +5076,7 @@ L0F36:  LD      HL,(RAMSTART + $37)              ; fetch STKBOT
         LD      (HL),D                  ; place high byte
         LD      H,A                     ; make HL zero
         LD      L,A                     ;
-        LD      (RAMSTART + $39),HL              ; update system variable SPARE to zero
+        LD      (RAMSTART + 039h),HL              ; update system variable SPARE to zero
 
         RET                             ; return
 
@@ -5088,11 +5088,11 @@ L0F36:  LD      HL,(RAMSTART + $37)              ; fetch STKBOT
 ; ( n --   )
 ; Encloses the single length integer in the dictionary.
 
-L0F4A:  DEFB    ',' + $80               ; 'name field'
+L0F4A:  DEFB    ',' + 080h               ; 'name field'
 
         DEFW    L0ECF                   ; 'link field'
 
-L0F4D:  DEFB    $01                     ; 'name length field'
+L0F4D:  DEFB    001h                     ; 'name length field'
 
 L0F4E:  DEFW    L0EC3                   ; 'code field' - docolon
 
@@ -5113,18 +5113,18 @@ L0F50:  DEFW    L0F83                   ; allot2
 ; Encloses the less significant byte of n in the dictionary.
 
 L0F5A:  DEFB    'C'                     ; 'name field'
-        DEFB    ',' + $80
+        DEFB    ',' + 080h
 
         DEFW    L0F4D                   ; 'link field'
 
-L0F5E:  DEFB    $02                     ; 'name length field'
+L0F5E:  DEFB    002h                     ; 'name length field'
 
 L0F5F:  DEFW    L0EC3                   ; 'code field' - docolon
 
 ; ---
 
 L0F61:  DEFW    L104B                   ; stk-data
-        DEFB    $01                     ; one
+        DEFB    001h                     ; one
         DEFW    L0F76                   ; allot
 
 x0f66:   DEFW    L0460                   ; here
@@ -5139,18 +5139,18 @@ x0f66:   DEFW    L0460                   ; here
 ; Encloses n bytes in the dictionary, without initializing them.
 
 L0F6E:  DEFM    "ALLO"                  ; 'name field'
-        DEFB    'T' + $80
+        DEFB    'T' + 080h
 
         DEFW    L0F5E                   ; 'link field'
 
-L0F75:  DEFB    $05                     ; 'name length field'
+L0F75:  DEFB    005h                     ; 'name length field'
 
 L0F76:  DEFW    L0F78                   ; 'code field'
 
 ; ---
 
 L0F78:  CALL    L084E                   ; stk_to_bc
-        LD      HL,(RAMSTART + $37)              ; STKBOT
+        LD      HL,(RAMSTART + 037h)              ; STKBOT
         CALL    L0F9E                   ; routine MAKE ROOM
         JP      (IY)                    ; to 'next'.
 
@@ -5164,7 +5164,7 @@ L0F83:  DEFW    L0EC3                   ; headerless 'code field' - docolon
 ; ---
 
 L0F85:  DEFW    L104B                   ; stk_data
-        DEFB    $02                     ; two bytes required
+        DEFB    002h                     ; two bytes required
         DEFW    L0F76                   ; allot
         DEFW    L04B6                   ; exit
 
@@ -5173,7 +5173,7 @@ L0F85:  DEFW    L104B                   ; stk_data
 ; ----------------------------------
 ; called each cycle in slow mode to check free memory.
 
-L0F8C:  LD      HL,$001E                ; Allow a thirty byte overhead.
+L0F8C:  LD      HL,0001Eh                ; Allow a thirty byte overhead.
 
 ; ----------------------------------
 ; THE 'CHECK FREE MEMORY' SUBROUTINE
@@ -5182,7 +5182,7 @@ L0F8C:  LD      HL,$001E                ; Allow a thirty byte overhead.
 L0F8F:  PUSH    BC                      ; save bytes to check.
 
         ADD     HL,BC                   ;
-        LD      BC,(RAMSTART + $3B)              ; SPARE
+        LD      BC,(RAMSTART + 03Bh)              ; SPARE
         ADD     HL,BC                   ; carry indicates error - past 65535
 
         POP     BC                      ; restore number of bytes
@@ -5193,27 +5193,27 @@ L0F8F:  PUSH    BC                      ; save bytes to check.
         RET     C                       ; return if value is less
 
 L0F9C:  RST     20H                     ; Error 1
-        DEFB    $01                     ; Not enough memory
+        DEFB    001h                     ; Not enough memory
 
 ; --------------------------
 ; THE 'MAKE ROOM' SUBROUTINE
 ; --------------------------
 
 L0F9E:  EX      DE,HL                   ; first new location to DE
-        LD      HL,$0028                ; overhead 40 bytes.
+        LD      HL,00028h                ; overhead 40 bytes.
 
 L0FA2:  CALL    L0F8F                   ; check free memory.
 
 ; now increase the two data stack pointers.
 
-        LD      HL,(RAMSTART + $37)              ; fetch value of STKBOT
+        LD      HL,(RAMSTART + 037h)              ; fetch value of STKBOT
         ADD     HL,BC                   ; add required room.
-        LD      (RAMSTART + $37),HL              ; update STKBOT.
+        LD      (RAMSTART + 037h),HL              ; update STKBOT.
 
-        LD      HL,(RAMSTART + $3B)              ; fetch value of SPARE
+        LD      HL,(RAMSTART + 03Bh)              ; fetch value of SPARE
         PUSH    HL                      ; take a copy of 'old' value
         ADD     HL,BC                   ; add required room.
-        LD      (RAMSTART + $3B),HL              ; update SPARE.
+        LD      (RAMSTART + 03Bh),HL              ; update SPARE.
 
         EX      (SP),HL                 ; new SPARE value to stack,
                                         ; old SPARE value to HL.
@@ -5245,11 +5245,11 @@ L0FC2:  INC     HL                      ; point to first new location.
 ; Sets up a variable with the given name, and initializes its value to n.
 
 L0FC4:  DEFM    "VARIABL"               ; 'name field'
-        DEFB    'E' + $80
+        DEFB    'E' + 080h
 
         DEFW    L0F75                   ; 'link field'
 
-L0FCE:  DEFB    $08                     ; 'name length field'
+L0FCE:  DEFB    008h                     ; 'name length field'
 
         DEFW    L1085                   ; 'code field' - create and enclose
 
@@ -5268,11 +5268,11 @@ L0FD1:  DEFW    L0FF0                   ; push word DE
 ; Defines a constant with the given name and value n.
 
 L0FD7:  DEFM    "CONSTAN"               ; 'name field'
-        DEFB    'T' + $80
+        DEFB    'T' + 080h
 
         DEFW    L0FCE                   ; 'link field'
 
-L0FE1:  DEFB    $08                     ; 'name length field'
+L0FE1:  DEFB    008h                     ; 'name length field'
 
 L0FE2:  DEFW    L1085                   ; 'code field' - create and enclose
 
@@ -5285,14 +5285,14 @@ L0FE4:  DEFW    L0FF5                   ; pad??
 ; ---
 ; ???
 
-x0fea:   DEFB    $DC                     ;;
-x0feb:   DEFB    $FE                     ;;  0feb + fedc = 0Ec7 = CREATE
+x0fea:   DEFB    0DCh                     ;;
+x0feb:   DEFB    0FEh                     ;;  0feb + fedc = 0Ec7 = CREATE
 
 ; ->
 L0FEC:  JR      L0FF0                   ; skip forward
 
-x0fee:  DEFB    $D5                     ;;
-x0fef:   DEFB    $FF                     ;;  0fef + ffd5 = 0fc4 = VARIABLE
+x0fee:  DEFB    0D5h                     ;;
+x0fef:   DEFB    0FFh                     ;;  0fef + ffd5 = 0fc4 = VARIABLE
 
 ; ---
 
@@ -5301,8 +5301,8 @@ L0FF0:  RST     10H                     ; push word DE
 
 ; ---
 
-x0FF3:   DEFB    $E3                     ;;
-x0ff4:   DEFB    $FF                     ;;  0ff4 + ffe3 = 0fd7 = CONSTANT
+x0FF3:   DEFB    0E3h                     ;;
+x0ff4:   DEFB    0FFh                     ;;  0ff4 + ffe3 = 0fd7 = CONSTANT
 
 ; --> pad
 
@@ -5318,14 +5318,14 @@ L0FF5:  EX      DE,HL
 ; ------------------
 ; (n -- )
 ; Compiles the top of the stack into a word definition as a literal.
-; Compiles integers. decimal 4102 = $1006. c.f. $1055
+; Compiles integers. decimal 4102 = 01006h. c.f. 01055h
 
 L0FFC:  DEFM    "LITERA"                ; 'name field'
-        DEFB    'L' + $80
+        DEFB    'L' + 080h
 
         DEFW    L0FE1                   ; 'link field'
 
-L1005:  DEFB    $47                     ; 'name length field'
+L1005:  DEFB    047h                     ; 'name length field'
 
 L1006:  DEFW    L1108                   ; 'code field' - compile
 
@@ -5337,9 +5337,9 @@ L1008:  DEFW    L1011                   ; stack next word
 
 ; ---
 
-x100E:  DEFB    $02                     ;;
-x100f:   DEFB    $FF                     ;; 100f + ff02 = 0f11 nah!
-x1010:   DEFB    $FF                     ;;
+x100E:  DEFB    002h                     ;;
+x100f:   DEFB    0FFh                     ;; 100f + ff02 = 0f11 nah!
+x1010:   DEFB    0FFh                     ;;
 
 ; -----------------------------------
 ; The 'Stack Next Word' Internal Word
@@ -5349,7 +5349,7 @@ L1011:  DEFW    L1013                   ; headerless 'code field'
 
 ; ---
 
-L1013:  LD      B,$01                   ; counter - one word to push
+L1013:  LD      B,001h                   ; counter - one word to push
 
 L1015:  POP     HL                      ; drop the 'Next Word' pointer.
         LD      E,(HL)                  ; low byte to E.
@@ -5379,24 +5379,24 @@ L101E:  JP      (IY)                    ; to 'next'.
 ; (--)                   (if compiling)
 
 L1020:  DEFM    "ASCI"                  ; 'name field'
-        DEFB    'I' + $80
+        DEFB    'I' + 080h
 
         DEFW    L1005                   ; 'link field'
 
-L1027:  DEFB    $45                     ; 'name length field' (immediate mode)
+L1027:  DEFB    045h                     ; 'name length field' (immediate mode)
 
 L1029:  DEFW    L0EC3                   ; 'code field' - docolon
 
 ; ----------------
 
 L102A:  DEFW    L104B                   ; stk_data
-        DEFB    $20                     ; space delimiter
+        DEFB    020h                     ; space delimiter
         DEFW    L05AB                   ; word  to pad
         DEFW    L0E09                   ; 1+
         DEFW    L0896                   ; C@
         DEFW    L1A0E                   ; end-forth.
 
-        BIT     6,(IX+$3E)              ; FLAGS
+        BIT     6,(IX+03Eh)              ; FLAGS
         JR      Z,L101E                 ; back to a jp (iy)
 
         CALL    L04B9                   ; forth
@@ -5409,10 +5409,10 @@ L103E:  DEFW    L1011                   ; stack next word
 
 ; ---
 
-x1048:   DEFB    $01                     ;; ?
+x1048:   DEFB    001h                     ;; ?
 
-x1049:   DEFB    $D6                     ;; ?
-x104a:   DEFB    $FF                     ;; ?  104a + ffd6 = 1020 = ASCII
+x1049:   DEFB    0D6h                     ;; ?
+x104a:   DEFB    0FFh                     ;; ?  104a + ffd6 = 1020 = ASCII
 
 ; ----------------------------
 ; The 'stk-data' Internal Word
@@ -5426,9 +5426,9 @@ L104B:  DEFW    L104D                   ; headerless 'code field'
 L104D:  POP     HL                      ; retrieve the 'Next Word' pointer.
 
         LD      E,(HL)                  ; fetch the single byte from there.
-        LD      D,$00                   ; set high order byte to zero.
+        LD      D,000h                   ; set high order byte to zero.
 
-        LD      B,$01                   ; set counter to 1.
+        LD      B,001h                   ; set counter to 1.
 
         JR      L1019                   ; back to stack one word and
                                         ; put the incremented pointer back on
@@ -5450,9 +5450,9 @@ L1055:  DEFW    L1108                   ; headerless 'code field' - compile
         DEFW    L04B6                   ; exit
 ; ---
 
-x1061:   DEFB    $04                     ;;
-x1062:   DEFB    $FF                     ;; 1062 + ff04 = 0f66 XX
-x1063:   DEFB    $FF                     ;;
+x1061:   DEFB    004h                     ;;
+x1062:   DEFB    0FFh                     ;; 1062 + ff04 = 0f66 XX
+x1063:   DEFB    0FFh                     ;;
 
 ; -----------------------------------
 ; The 'STACK TWO WORDS' Internal Word
@@ -5462,7 +5462,7 @@ L1064:  DEFW    L1066                   ; headerless 'code field'
 
 ; ---
 
-L1066:  LD      B,$02                   ; set counter to two
+L1066:  LD      B,002h                   ; set counter to two
 
         JR      L1015                   ; back to stack 2 words
 
@@ -5484,11 +5484,11 @@ L1066:  LD      B,$02                   ; set counter to two
 ; field will be put on the stack and the action routine will be executed.
 
 L106A:  DEFM    "DEFINE"                ; 'name field'
-        DEFB    'R' + $80
+        DEFB    'R' + 080h
 
         DEFW    L1027                   ; 'link field'
 
-L1073:  DEFB    $07                     ; 'name length field'
+L1073:  DEFB    007h                     ; 'name length field'
 
 L1074:  DEFW    L1085                   ; 'code field' - create and enclose
 
@@ -5499,16 +5499,16 @@ L1076:  DEFW    L1085                   ; create and enclose
 
         DEFW    L104B                   ; stk-data
 
-        DEFB    $0C                     ; 12                    marker byte
+        DEFB    00Ch                     ; 12                    marker byte
 
         DEFW    L0F83                   ; allot2
         DEFW    L1276                   ; branch
-L1081:  DEFW    $FE34                   ; back to L0EB6
+L1081:  DEFW    0FE34h                   ; back to L0EB6
 
 ; ---
 
-x1083:   DEFB    $E6                     ;;
-x1084:   DEFB    $FF                     ;; 1084 + ffe6 = 106a = DEFINER
+x1083:   DEFB    0E6h                     ;;
+x1084:   DEFB    0FFh                     ;; 1084 + ffe6 = 106a = DEFINER
 
 ; ---
 ;; createe and fill
@@ -5553,11 +5553,11 @@ L109C:  RST     18H                     ; unstack Data Word DE
 ; The word EI will enable interrupts.
 
 L10A0:  DEFM    "CAL"                   ; 'name field'
-        DEFB    'L' + $80
+        DEFB    'L' + 080h
 
         DEFW    L1073                   ; 'link field'
 
-L10A6:  DEFB    $04                     ; 'name length field'
+L10A6:  DEFB    004h                     ; 'name length field'
 
 L10A7:  DEFW    L10A9                   ; 'code field'
 
@@ -5574,11 +5574,11 @@ L10A9:  RST     18H
 ; See DEFINER.
 
 L10AC:  DEFM    "DOES"                  ; 'name field'
-        DEFB    '>' + $80
+        DEFB    '>' + 080h
 
         DEFW    L10F4                   ; 'link field'
 
-L10B3:  DEFB    $45                     ; 'name length field' (immediate mode)
+L10B3:  DEFB    045h                     ; 'name length field' (immediate mode)
 
 L10B4:  DEFW    L1108                   ; 'code field' - compile
 
@@ -5586,12 +5586,12 @@ L10B6:  DEFW    L10E8                   ; exit
 
         DEFW    L12D8                   ; check??
 
-        DEFB    $0C                     ; 12
+        DEFB    00Ch                     ; 12    
 
         DEFW    L10CD                   ;
         DEFW    L104B                   ; stk_data
 
-        DEFB    $CD                     ; data                  call ?
+        DEFB    0CDh                     ; data                  call ?
 
         DEFW    L0F5F                   ; C,
         DEFW    L1011                   ; stack next word
@@ -5599,7 +5599,7 @@ L10B6:  DEFW    L10E8                   ; exit
         DEFW    L0F4E                   ; ,
         DEFW    L104B                   ; stk-data
 
-        DEFB    $0A                     ; ten                   marker byte.
+        DEFB    00Ah                     ; ten                   marker byte.
 
         DEFW    L04B6                   ; exit
 
@@ -5625,10 +5625,10 @@ L10CD:  DEFW    L0EC3                   ; headerless 'code field' - docolon
 
 ; ---
 
-x10e5:   DEFB    $05                     ;;
+x10e5:   DEFB    005h                     ;;
 
-x10e6:   DEFB    $C5                     ;;
-x10e7:   DEFB    $FF                     ;; 10e7 + ffc5 = 10ac = DOES>
+x10e6:   DEFB    0C5h                     ;;
+x10e7:   DEFB    0FFh                     ;; 10e7 + ffc5 = 10ac = DOES>
 
 ; ---
 
@@ -5644,11 +5644,11 @@ L10E8:  DEFW    L04B8                   ; exit?
 ; better with EDIT etc.)
 
 L10EA:  DEFM    "COMPILE"               ; 'name field'
-        DEFB    'R' + $80
+        DEFB    'R' + 080h
 
         DEFW    L10A6                   ; 'link field'
 
-L10F4:  DEFB    $08                     ; 'name length field'
+L10F4:  DEFB    008h                     ; 'name length field'
 
 L10F5:  DEFW    L1085                   ; 'code field' - create and enclose
 
@@ -5659,16 +5659,16 @@ L10F5:  DEFW    L1085                   ; 'code field' - create and enclose
         DEFW    L0460                   ; here
         DEFW    L104B                   ; stk_data
 
-L10FF:  DEFB    $0B                     ; 11                    marker byte
+L10FF:  DEFB    00Bh                     ; 11                    marker byte
 
         DEFW    L0F83                   ; allot2
         DEFW    L1276                   ; branch
-L1104:  DEFW    $FDB1                   ; back to L0EB6
+L1104:  DEFW    0FDB1h                   ; back to L0EB6
 
 ; ---
 
-x1106:   DEFB    $E3                     ;;
-x1107:   DEFB    $FF                     ;; 1107 + ffe3 = 10ea = COMPILER
+x1106:   DEFB    0E3h                     ;;
+x1107:   DEFB    0FFh                     ;; 1107 + ffe3 = 10ea = COMPILER
 
 ; ---------------------
 ; THE 'COMPILE' ROUTINE
@@ -5676,11 +5676,11 @@ x1107:   DEFB    $FF                     ;; 1107 + ffe3 = 10ea = COMPILER
 ; Instead of executing code words as they are encountered, lay them down in
 ; the dictionary along with any parameters.
 
-L1108:  BIT     6,(IX+$3E)              ; test FLAGS - compiler mode ?
+L1108:  BIT     6,(IX+03Eh)              ; test FLAGS - compiler mode ?
         JR      NZ,L1110                ; skip error if so.
 
         RST     20H                     ; Error 4.
-        DEFB    $04                     ; Compiling word used in interpret mode.
+        DEFB    004h                     ; Compiling word used in interpret mode.
 
 L1110:  CALL    L0FF0                   ; push word DE (then jp (iy))
 
@@ -5688,7 +5688,7 @@ L1110:  CALL    L0FF0                   ; push word DE (then jp (iy))
         DEFW    L08B3                   ; @
         DEFW    L0F4E                   ; ,
         DEFW    L1276                   ; branch
-L111B:  DEFW    $FF78                   ; to L1094 - definer code
+L111B:  DEFW    0FF78h                   ; to L1094 - definer code
 
 ; ----------------
 ; THE 'RUNS>' WORD
@@ -5696,11 +5696,11 @@ L111B:  DEFW    $FF78                   ; to L1094 - definer code
 ; See COMPILER
 
 L111D:  DEFM    "RUNS"                  ; 'name field'
-        DEFB    '>' + $80
+        DEFB    '>' + 080h
 
         DEFW    L10B3                   ; 'link field'
 
-L1124:  DEFB    $45                     ; 'name length field' (immediate mode)
+L1124:  DEFB    045h                     ; 'name length field' (immediate mode)
 
 L1125:  DEFW    L1108                   ; 'code field' - compile
 
@@ -5708,7 +5708,7 @@ L1125:  DEFW    L1108                   ; 'code field' - compile
 
 L1127:  DEFW    L1140                   ; vv
         DEFW    L12D8                   ; check-for
-        DEFB    $0B                     ; 11                    marker byte.
+        DEFB    00Bh                     ; 11                    marker byte.
         DEFW    L0885                   ; swap
         DEFW    L0F5F                   ; c,
         DEFW    L10CD                   ; ?
@@ -5717,15 +5717,15 @@ L1127:  DEFW    L1140                   ; vv
         DEFW    L0F4E                   ; ,
 
         DEFW    L104B                   ; stk-data
-        DEFB    $0A                     ; ten.                  marker byte.
+        DEFB    00Ah                     ; ten.                  marker byte.
         DEFW    L04B6                   ; exit
 
 ; ---
 
-x113d:   DEFB    $05                     ;;
+x113d:   DEFB    005h                     ;;
 
-x113e:   DEFB    $DE                     ;;
-x113f:   DEFB    $FF                     ;; 113f + ffde = 111d = RUNS>
+x113e:   DEFB    0DEh                     ;;
+x113f:   DEFB    0FFh                     ;; 113f + ffde = 111d = RUNS>
 
 ; ---
 
@@ -5757,11 +5757,11 @@ L1142:  POP     HL
 ; it will execute even in compile mode.
 
 L1154:  DEFM    "IMMEDIAT"              ; 'name field'
-        DEFB    'E' + $80
+        DEFB    'E' + 080h
 
         DEFW    L1124                   ; 'link field'
 
-L115F:  DEFB    $09                     ; 'name length field'
+L115F:  DEFB    009h                     ; 'name length field'
 
 L1160:  DEFW    L0EC3                   ; 'code field' - docolon
 
@@ -5784,11 +5784,11 @@ L116A:  RST     18H                     ; pop word DE
 ; Defines a new vocabulary with the given name.
 
 L1170:  DEFM    "VOCABULAR"             ; 'name field'
-        DEFB    'Y' + $80
+        DEFB    'Y' + 080h
 
         DEFW    L115F                   ; 'link field'
 
-L117C:  DEFB    $0A                     ; 'name length field'
+L117C:  DEFB    00Ah                     ; 'name length field'
 
 L117D:  DEFW    L1085                   ; 'code field' - create and enclose
 
@@ -5803,7 +5803,7 @@ L117F:  DEFW    L11B5                   ; set context
         DEFW    L0F5F                   ; C,
         DEFW    L0460                   ; here
         DEFW    L1011                   ; stack next word
-        DEFW    RAMSTART + $35                   ; (VOCLNK)
+        DEFW    RAMSTART + 035h                   ; (VOCLNK)
         DEFW    L086B                   ; dup
         DEFW    L08B3                   ; @
         DEFW    L0F4E                   ; ,
@@ -5817,23 +5817,23 @@ L117F:  DEFW    L11B5                   ; set context
 ; The CONTEXT vocabulary is made the CURRENT vocabulary as well.
 
 L119D:  DEFM    "DEFINITION"            ; 'name field'
-        DEFB    'S' + $80
+        DEFB    'S' + 080h
 
         DEFW    L117C                   ; 'link field'
 
-L11AA:  DEFB    $0B                     ; 'name length field'
+L11AA:  DEFB    00Bh                     ; 'name length field'
 
 L11AB:  DEFW    L11AD                   ; 'code field'
 
 ; ---
 
-L11AD:  LD      HL,(RAMSTART + $33)              ; CONTEXT
-        LD      (RAMSTART + $31),HL              ; CURRENT
+L11AD:  LD      HL,(RAMSTART + 033h)              ; CONTEXT
+        LD      (RAMSTART + 031h),HL              ; CURRENT
         JP      (IY)                    ; to 'next'.
 
 ; ---
 
-L11B5:  LD      (RAMSTART + $33),DE              ; CONTEXT
+L11B5:  LD      (RAMSTART + 033h),DE              ; CONTEXT
         JP      (IY)                    ; to 'next'.
 
 ; ---
@@ -5854,11 +5854,11 @@ L11B5:  LD      (RAMSTART + $33),DE              ; CONTEXT
 ; between ELSE and THEN are executed.
 
 L11BB:  DEFB    'I'                     ; 'name field'
-        DEFB    'F' + $80
+        DEFB    'F' + 080h
 
         DEFW    L13E0                   ; 'link field'
 
-L11BF:  DEFB    $42                     ; 'name length field' (immediate word)
+L11BF:  DEFB    042h                     ; 'name length field' (immediate word)
 
         DEFW    L1108                   ; 'code field' - compile
 
@@ -5868,7 +5868,7 @@ L11BF:  DEFB    $42                     ; 'name length field' (immediate word)
         DEFW    L0460                   ; here
 
         DEFW    L104B                   ; stk_data
-        DEFB    $02                     ; 2 locations required for jump length
+        DEFB    002h                     ; 2 locations required for jump length
         DEFW    L0F83                   ; allot2
         DEFW    L04B6                   ; exit
 
@@ -5880,11 +5880,11 @@ L11BF:  DEFB    $42                     ; 'name length field' (immediate word)
 ; REPEAT.
 
 L11CD:  DEFM    "WHIL"                  ; 'name field'
-        DEFB    'E' + $80
+        DEFB    'E' + 080h
 
         DEFW    L11BF                   ; 'link field'
 
-L11D4:  DEFB    $45                     ; 'name length field' (immediate mode)
+L11D4:  DEFB    045h                     ; 'name length field' (immediate mode)
 
 L11D5:  DEFW    L1108                   ; 'code field' - compile
 
@@ -5893,10 +5893,10 @@ L11D5:  DEFW    L1108                   ; 'code field' - compile
         DEFW    L1288                   ; ?branch
 
         DEFW    L12D8                   ; check-for
-        DEFB    $01                     ;  1
+        DEFB    001h                     ;  1
         DEFW    L0460                   ; here
         DEFW    L104B                   ; stk-data
-        DEFB    $04                     ;  four
+        DEFB    004h                     ;  four
         DEFW    L0F83                   ; allot
         DEFW    L04B6                   ; exit
 
@@ -5907,11 +5907,11 @@ L11D5:  DEFW    L1108                   ; 'code field' - compile
 ; Used with IF and THEN.
 
 L11E5:  DEFM    "ELS"                   ; 'name field'
-        DEFB    'E' + $80
+        DEFB    'E' + 080h
 
         DEFW    L11D4                   ; 'link field'
 
-L11EB:  DEFB    $44                     ; 'name length field' (immediate mode)
+L11EB:  DEFB    044h                     ; 'name length field' (immediate mode)
 
 L11EC:  DEFW    L1108                   ; 'code field' - compile
 
@@ -5920,13 +5920,13 @@ L11EC:  DEFW    L1108                   ; 'code field' - compile
         DEFW    L1271                   ; branch
 
         DEFW    L12D8                   ; check-for
-        DEFB    $02                     ; two
+        DEFB    002h                     ; two
         DEFW    L0F83                   ; allot2
         DEFW    L1225                   ; ?
         DEFW    L0460                   ; here
         DEFW    L0E29                   ; 2-
         DEFW    L104B                   ; stk-data
-        DEFB    $02                     ; two
+        DEFB    002h                     ; two
         DEFW    L04B6                   ; exit
 
 ; ---------------
@@ -5935,11 +5935,11 @@ L11EC:  DEFW    L1108                   ; 'code field' - compile
 ; Used with IF.
 
 L1200:  DEFM    "THE"                   ; 'name field'
-        DEFB    'N' + $80
+        DEFB    'N' + 080h
 
         DEFW    L11EB                   ; 'link field'
 
-L1206:  DEFB    $44                     ; 'name length field' (immediate mode)
+L1206:  DEFB    044h                     ; 'name length field' (immediate mode)
 
 L1207:  DEFW    L1108                   ; 'code field' - compile
 
@@ -5948,7 +5948,7 @@ L1207:  DEFW    L1108                   ; 'code field' - compile
         DEFW    L12A4                   ; end?
 
         DEFW    L12D8                   ; check-for
-        DEFB    $02
+        DEFB    002h
         DEFW    L1225                   ; ?
         DEFW    L04B6                   ; exit
 
@@ -5959,11 +5959,11 @@ L1207:  DEFW    L1108                   ; 'code field' - compile
 ; Used with either UNTIL or WHILE...REPEAT.
 
 L1212:  DEFM    "BEGI"                  ; 'name field'
-        DEFB    'N' + $80
+        DEFB    'N' + 080h
 
         DEFW    L1206                   ; 'link field'
 
-L1219:  DEFB    $45                     ; 'name length field' (immediate mode)
+L1219:  DEFB    045h                     ; 'name length field' (immediate mode)
 
 L121A:  DEFW    L1108                   ; 'code field' - compile
 
@@ -5972,7 +5972,7 @@ L121A:  DEFW    L1108                   ; 'code field' - compile
         DEFW    L129F
         DEFW    L0460                   ; here
         DEFW    L104B                   ; stk_data
-        DEFB    $01                     ; 1
+        DEFB    001h                     ; 1
         DEFW    L04B6                   ; exit
 
 ; -----------------------
@@ -6016,11 +6016,11 @@ L1237:  DEFW    L0EC3                   ; headerless 'code field' - docolon
 
 
 L1243:  DEFM    "REPEA"                 ; 'name field'
-        DEFB    'T' + $80
+        DEFB    'T' + 080h
 
         DEFW    L1219                   ; 'link field'
 
-L124B:  DEFB    $46                     ; 'name length field' (immediate mode)
+L124B:  DEFB    046h                     ; 'name length field' (immediate mode)
 
 L124C:  DEFW    L1108                   ; 'code field' - compile
 
@@ -6028,7 +6028,7 @@ L124C:  DEFW    L1108                   ; 'code field' - compile
 
 L124E:   DEFW    L1276                   ; branch
 L1250:  DEFW    L12D8                   ; check_for
-        DEFB    $04                     ; four
+        DEFB    004h                     ; four
         DEFW    L0885                   ; swap
         DEFW    L1237                   ; ?
         DEFW    L1225                   ; ?
@@ -6042,11 +6042,11 @@ L1250:  DEFW    L12D8                   ; check_for
 ; Loops back to BEGIN if n = 0
 
 L125B:  DEFM    "UNTI"                  ; 'name field'
-        DEFB    'L' + $80
+        DEFB    'L' + 080h
 
         DEFW    L124B                   ; 'link field'
 
-L1262:  DEFB    $45                     ; 'name length field' (immediate mode)
+L1262:  DEFB    045h                     ; 'name length field' (immediate mode)
 
 L1263:  DEFW    L1108                   ; 'code field' - compile
 
@@ -6054,16 +6054,16 @@ L1263:  DEFW    L1108                   ; 'code field' - compile
 
         DEFW    L128D                   ; ?branch
         DEFW    L12D8                   ; check_for
-        DEFB    $01                     ;
+        DEFB    001h                     ;
         DEFW    L1237                   ; ?
         DEFW    L04B6                   ; exit
 
 ; ---
 
-x126E:   DEFB    $02                     ;;
+x126E:   DEFB    002h                     ;;
 
-x126F:   DEFB    $75                     ;;
-x1270:   DEFB    $FF                     ;; 1270 + ff75 = 11e5 = ELSE
+x126F:   DEFB    075h                     ;;
+x1270:   DEFB    0FFh                     ;; 1270 + ff75 = 11e5 = ELSE
 
 ; ---
 
@@ -6071,10 +6071,10 @@ x1270:   DEFB    $FF                     ;; 1270 + ff75 = 11e5 = ELSE
 L1271:  DEFW    L1278                   ; ?
 
 ; ---
-x1273:   DEFB    $02                     ;;
+x1273:   DEFB    002h                     ;;
 
-x1274:   DEFB    $CE                     ;;
-x1275:   DEFB    $FF                     ;; 1275 + ffce = 1243 = REPEAT
+x1274:   DEFB    0CEh                     ;;
+x1275:   DEFB    0FFh                     ;; 1275 + ffce = 1243 = REPEAT
 
 ; --------------------------
 ; The 'branch' Internal Word
@@ -6086,7 +6086,7 @@ L1276:  DEFW    L1278                   ; headerless 'code field'
 
 L1278:  POP     HL                      ; drop next word pointer
         LD      E,(HL)                  ; read the 16-bit offset
-        INC     HL                      ; that is
+        INC     HL                      ; that is 
         LD      D,(HL)                  ; stored there.
 
 L127C:  ADD     HL,DE                   ; add to current address.
@@ -6096,10 +6096,10 @@ L127C:  ADD     HL,DE                   ; add to current address.
 
 ; ---
 
-x1280:   DEFB    $02                     ;;
+x1280:   DEFB    002h                     ;;
 
-x1281:   DEFB    $39                     ;;
-x1282:   DEFB    $FF                     ;; 1282 + ff39 = 11bb = IF
+x1281:   DEFB    039h                     ;;
+x1282:   DEFB    0FFh                     ;; 1282 + ff39 = 11bb = IF
 
 ; ---
 
@@ -6107,10 +6107,10 @@ L1283:  DEFW    L128F                   ; from IF, convert, line, min, etc.
 
 ; ---
 
-x1285:   DEFB    $02                     ;;
+x1285:   DEFB    002h                     ;;
 
-x1286:   DEFB    $46                     ;;
-x1287:   DEFB    $FF                     ;; 1287 + ff46 = 11cd = WHILE
+x1286:   DEFB    046h                     ;;
+x1287:   DEFB    0FFh                     ;; 1287 + ff46 = 11cd = WHILE
 
 ; ---
 
@@ -6118,10 +6118,10 @@ L1288:  DEFW    L128F                   ; from WHILE
 
 ; ---
 
-x128A:  DEFB    $02                     ;;
+x128A:  DEFB    002h                     ;;
 
-x128B:   DEFB    $CF                     ;;
-x128C:   DEFB    $FF                     ;; 128c + ffcf = 125b = UNTIL
+x128B:   DEFB    0CFh                     ;;
+x128C:   DEFB    0FFh                     ;; 128c + ffcf = 125b = UNTIL
 
 ; ---------------------------
 ; The '?branch' Internal Word
@@ -6147,9 +6147,9 @@ L1294:  JR      Z,L1278                 ; make the jump to "branch" if zero.
 
 ; ---
 
-x129C:   DEFB    $00                     ;;
-x129D:   DEFB    $74                     ;;
-x129E:   DEFB    $FF                     ;; 129e + ff74 = 1212 = BEGIN
+x129C:   DEFB    000h                     ;;
+x129D:   DEFB    074h                     ;;
+x129E:   DEFB    0FFh                     ;; 129e + ff74 = 1212 = BEGIN
 
 ; ---
 
@@ -6157,9 +6157,9 @@ L129F:  DEFW    L04B9                   ; forth
 
 ; ---
 
-x12A1:   DEFB    $00                     ;;
-x12A2:   DEFB    $5D                     ;;
-x12A3:   DEFB    $FF                     ;; 12a3 + ff5d = 1200 = THEN
+x12A1:   DEFB    000h                     ;;
+x12A2:   DEFB    05Dh                     ;;
+x12A3:   DEFB    0FFh                     ;; 12a3 + ff5d = 1200 = THEN
 
 ; ---
 
@@ -6174,11 +6174,11 @@ L12A4:  DEFW    L04B9
 ; See LOOP and +LOOP.
 
 L12A6:  DEFB    'D'                     ; 'name field'
-        DEFB    'O' + $80
+        DEFB    'O' + 080h
 
         DEFW    L1262                   ; 'link field'
 
-L12AA:  DEFB    $42                     ; 'name length field' (immediate mode)
+L12AA:  DEFB    042h                     ; 'name length field' (immediate mode)
 
 L12AB:  DEFW    L1108                   ; 'code field' - compile
 
@@ -6187,7 +6187,7 @@ L12AB:  DEFW    L1108                   ; 'code field' - compile
         DEFW    L1323                   ; shuffle
         DEFW    L0460                   ; here
         DEFW    L104B                   ; stk_data
-        DEFB    $03                     ; 3                     marker byte.
+        DEFB    003h                     ; 3                     marker byte.
         DEFW    L04B6                   ; exit
 
 ; ---------------
@@ -6197,11 +6197,11 @@ L12AB:  DEFW    L1108                   ; 'code field' - compile
 ; Like +LOOP (below) but the number added onto the loop counter is 1.
 
 L12B6:  DEFM    "LOO"                   ; 'name field'
-        DEFB    'P' + $80
+        DEFB    'P' + 080h
 
         DEFW    L12AA                   ; 'link field'
 
-L12BC:  DEFB    $44                     ; 'name length field' (immediate mode)
+L12BC:  DEFB    044h                     ; 'name length field' (immediate mode)
 
 L12BD:  DEFW    L1108                   ; 'code field' - compile
 
@@ -6210,7 +6210,7 @@ L12BD:  DEFW    L1108                   ; 'code field' - compile
         DEFW    L1332                   ; shuffle more
 
 L12C1:  DEFW    L12D8                   ; check-for
-        DEFB    $03                     ; 3                     marker byte
+        DEFB    003h                     ; 3                     marker byte
         DEFW    L1237                   ; ?
         DEFW    L04B6                   ; exit
 
@@ -6222,11 +6222,11 @@ L12C1:  DEFW    L12D8                   ; check-for
 ; is now less than the limit (if n >= 0) or greater than the limit (if n < 0).
 
 L12C8:  DEFM    "+LOO"                  ; 'name field'
-        DEFB    'P' + $80
+        DEFB    'P' + 080h
 
         DEFW    L12BC                   ; 'link field'
 
-L12CF:  DEFB    $45                     ; 'name length field' (immediate mode)
+L12CF:  DEFB    045h                     ; 'name length field' (immediate mode)
 
 L12D0:  DEFW    L1108                   ; 'code field' - compile
 
@@ -6235,7 +6235,7 @@ L12D0:  DEFW    L1108                   ; 'code field' - compile
 L12D2:  DEFW    L133C                   ; ?
         DEFW    L1276                   ; branch
 
-L12D6:  DEFW    $FFEA                   ; back to L12C1
+L12D6:  DEFW    0FFEAh                   ; back to L12C1
 
 ; -----------------------------
 ; The 'check-for' Internal Word
@@ -6260,7 +6260,7 @@ L12DA:  RST     18H                     ; pop word DE
 ; else...
 
         RST     20H                     ; Error 5
-        DEFB    $05                     ; Word is not properly structured.
+        DEFB    005h                     ; Word is not properly structured.
 
 ; ------------
 ; THE 'I' WORD
@@ -6271,11 +6271,11 @@ L12DA:  RST     18H                     ; pop word DE
 ; transferred by >R.
 
 
-L12E5:  DEFB    'I' + $80               ; 'name field'
+L12E5:  DEFB    'I' + 080h               ; 'name field'
 
         DEFW    L11AA                   ; 'link field'
 
-L12E8:  DEFB    $01                     ; 'name length field'
+L12E8:  DEFB    001h                     ; 'name length field'
 
 L12E9:  DEFW    L12EB                   ; 'code field'
 
@@ -6298,18 +6298,18 @@ L12EB:  POP     BC                      ; pop return address
 ; (so in a DO loop it copies  the limit of the loop).
 
 L12F2:  DEFB    'I'                     ; 'name field'
-        DEFB    $A7                     ; "'" + $80
+        DEFB    0A7h                     ; "'" + 080h
 
         DEFW    L12E8                   ; 'link field'
 
-L12F6:  DEFB    $02                     ; 'name length field'
+L12F6:  DEFB    002h                     ; 'name length field'
 
 L12F7:  DEFW    L12F9                   ; 'code field'
 
 ; ---
 
-L12F9:  LD      HL,$0004                ; two bytes per entry.
-        JR      L1307                   ; forward to use the 'J' indexing
+L12F9:  LD      HL,00004h                ; two bytes per entry.
+        JR      L1307                   ; forward to use the 'J' indexing 
                                         ; routine
 
 ; ------------
@@ -6320,17 +6320,17 @@ L12F9:  LD      HL,$0004                ; two bytes per entry.
 ; This will be either the loop counter for the second innermost DO loop
 ; or the number put on the return stack by the most recent >R.
 
-L12FE:  DEFB    'J' + $80               ; 'name field'
+L12FE:  DEFB    'J' + 080h               ; 'name field'
 
         DEFW    L12F6                   ; 'link field'
 
-L1301:  DEFB    $01                     ; 'name length field'
+L1301:  DEFB    001h                     ; 'name length field'
 
 L1302:  DEFW    L1304                   ; 'code field'
 
 ; ---
 
-L1304:  LD      HL,$0006                ; two bytes per entry
+L1304:  LD      HL,00006h                ; two bytes per entry
 
 ; -> I' joins here with HL=4
 
@@ -6352,11 +6352,11 @@ L1307:  ADD     HL,SP                   ; index the stack pointer.
 ; loop counter equal to the limit.
 
 L130E:  DEFM    "LEAV"                  ; 'name field'
-        DEFB    'E' + $80
+        DEFB    'E' + 080h
 
         DEFW    L1301                   ; 'link field'
 
-L1315:  DEFB    $05                     ; 'name length field'
+L1315:  DEFB    005h                     ; 'name length field'
 
 L1316:  DEFW    L1318                   ; 'code field'
 
@@ -6374,9 +6374,9 @@ L1318:  POP     BC                      ; pop return address to BC.
 ; ---
 
 
-x1320:   DEFB    $00                     ;;
-x1321:   DEFB    $84                     ;;
-x1322:   DEFB    $FF                     ;; 1322 + ff84 = 12a6 = DO
+x1320:   DEFB    000h                     ;;
+x1321:   DEFB    084h                     ;;
+x1322:   DEFB    0FFh                     ;; 1322 + ff84 = 12a6 = DO
 
 ; -----------------------
 ; The '???' Internal Word
@@ -6398,9 +6398,9 @@ L132D:  JP      (IY)                    ; to 'next'.
 
 ; ---
 
-x132F:   DEFB    $02                     ;;
-x1330:   DEFB    $85                     ;;
-x1331:   DEFB    $FF                     ;; 1331 + ff85 = 12b6 = LOOP
+x132F:   DEFB    002h                     ;;
+x1330:   DEFB    085h                     ;;
+x1331:   DEFB    0FFh                     ;; 1331 + ff85 = 12b6 = LOOP
 
 ; -----------------------
 ; The '???' Internal Word
@@ -6410,14 +6410,14 @@ L1332:  DEFW    L1334                   ; headerless 'code field'
 
 ; ---
 
-L1334:  LD      DE,$0001
+L1334:  LD      DE,00001h
         JR      L133F                   ; forward =>
 
 ; ---
 
-x1339:   DEFB    $02
-x133A:   DEFB    $8D
-x133B:   DEFB    $FF
+x1339:   DEFB    002h
+x133A:   DEFB    08Dh
+x133B:   DEFB    0FFh
 
 ; -----------------------
 ; The '???' Internal Word
@@ -6440,7 +6440,7 @@ L133F:  POP     BC                      ; pop return address to BC.
         SCF                             ; set carry.
         JP      PE,L1358                ; jump forward with overflow.
 
-        PUSH    DE                      ; push limit
+        PUSH    DE                      ; push limit 
         PUSH    HL                      ; push adjusted counter.
         RLCA                            ; now test sign of number (n)
         JR      NC,L1350                ;
@@ -6465,11 +6465,11 @@ L1358:  PUSH    BC
 ; ------------
 ; Starts a comment terminated by ')'
 
-L135D:  DEFB    '(' + $80               ; 'name field'
+L135D:  DEFB    '(' + 080h               ; 'name field'
 
         DEFW    L13D4                   ; 'link field'
 
-L1360:  DEFB    $41                     ; 'name length field' (immediate mode)
+L1360:  DEFB    041h                     ; 'name length field' (immediate mode)
 
 L1361:  DEFW    L1108                   ; 'code field' - compile
 
@@ -6478,7 +6478,7 @@ L1361:  DEFW    L1108                   ; 'code field' - compile
 L1363:  DEFW    L1379                   ;
         DEFW    L104B                   ; stk_data
 
-        DEFB    $29                     ; character ')'         - delimiter
+        DEFB    029h                     ; character ')'         - delimiter
 
 L1368:  DEFW    L0460                   ; here
         DEFW    L0885                   ; swap
@@ -6491,9 +6491,9 @@ L1368:  DEFW    L0460                   ; here
 
 ; ---
 
-x1376:   DEFB    $FF                     ;;
-x1377:   DEFB    $E5                     ;;
-x1378:   DEFB    $FF                     ;; 1378 + ffe5 = 135d = '('
+x1376:   DEFB    0FFh                     ;;
+x1377:   DEFB    0E5h                     ;;
+x1378:   DEFB    0FFh                     ;; 1378 + ffe5 = 135d = '('
 
 ; -----------------------
 ; The '???' Internal Word
@@ -6519,11 +6519,11 @@ L137B:  POP     HL
 ; Prints the following string terminated by ".
 
 L1383:  DEFB    '.'                     ; 'name field'
-        DEFB    '"' + $80
+        DEFB    '"' + 080h
 
         DEFW    L1360                   ; 'link field'
 
-L1387:  DEFB    $42                     ; 'name length field' (immediate mode)
+L1387:  DEFB    042h                     ; 'name length field' (immediate mode)
 
 L1388:  DEFW    L1108                   ; 'code field' - compile
 
@@ -6531,17 +6531,17 @@ L1388:  DEFW    L1108                   ; 'code field' - compile
 
 L138A:  DEFW    L1396                   ; pr_embedded string.
         DEFW    L104B                   ; stk_data
-        DEFB    $22                     ; '"'                   - delimiter
+        DEFB    022h                     ; '"'                   - delimiter
 
         DEFW    L1276                   ; branch
-L1391:  DEFW    $FFD6                   ; back to 1368 (1392+$FFD6)
+L1391:  DEFW    0FFD6h                   ; back to 1368 (1392+0FFD6h)
                                         ; same routine as for matching comments
 
 ; ---
 
-x1393:   DEFB    $FF                     ;;
-x1394:   DEFB    $EE                     ;;
-x1395:   DEFB    $FF                     ;; 1395 + ffee = 1383 = ."
+x1393:   DEFB    0FFh                     ;;
+x1394:   DEFB    0EEh                     ;;
+x1395:   DEFB    0FFh                     ;; 1395 + ffee = 1383 = ."
 
 ; -----------------------
 ; The '???' Internal Word
@@ -6561,7 +6561,7 @@ L1398:  POP     DE
 ; The '???' Internal Word
 ; -----------------------
 ; enclose comment
-; comments may be multiple
+; comments may be multiple 
 ; e.g. : SV ( system) ( variables) CLS BEGIN 0 0 AT 15360 80 TYPE 0 UNTIL ;
 
 
@@ -6582,9 +6582,9 @@ L13A1:  RST     18H                     ; pop word DE
         CP      L
         JR      Z,L13B8                 ; forward with a match.         =->
 
-        EX      DE,HL                   ;
+        EX      DE,HL                   ; 
         RST     10H                     ; push word DE
-        LD      DE,$0578                ; addr retype?
+        LD      DE,00578h                ; addr retype?
 
         CALL    L1815                   ; pr2
 
@@ -6595,7 +6595,7 @@ L13A1:  RST     18H                     ; pop word DE
 
 L13B8:  PUSH    DE
         PUSH    BC
-        LD      HL,(RAMSTART + $37)              ; STKBOT
+        LD      HL,(RAMSTART + 037h)              ; STKBOT
 
         CALL    L0F9E                   ; routine MAKE ROOM
 
@@ -6621,17 +6621,17 @@ L13B8:  PUSH    DE
 ; (  --  )
 ; Enters interpret mode.
 
-L13D1:  DEFB    '[' + $80               ; 'name field'
+L13D1:  DEFB    '[' + 080h               ; 'name field'
 
         DEFW    L12CF                   ; 'link field'
 
-L13D4:  DEFB    $41                     ; 'name length field' (immediate mode)
+L13D4:  DEFB    041h                     ; 'name length field' (immediate mode)
 
 L13D5:  DEFW    L13D7                   ; 'code field'
 
 ; ---
 
-L13D7:  RES     6,(IX+$3E)              ; FLAGS
+L13D7:  RES     6,(IX+03Eh)              ; FLAGS
         JP      (IY)                    ; to 'next'.
 
 ; ------------
@@ -6640,17 +6640,17 @@ L13D7:  RES     6,(IX+$3E)              ; FLAGS
 ; (  --  )
 ; Enters compile mode.
 
-L13DD:  DEFB    ']' + $80               ; 'name field'
+L13DD:  DEFB    ']' + 080h               ; 'name field'
 
         DEFW    L1315                   ; 'link field'
 
-L13E0:  DEFB    $01                     ; 'name length field'
+L13E0:  DEFB    001h                     ; 'name length field'
 
 L13E1:  DEFW    L13E3                   ; 'code field'
 
 ; ---
 
-L13E3:  SET     6,(IX+$3E)              ; FLAGS
+L13E3:  SET     6,(IX+03Eh)              ; FLAGS
         JP      (IY)                    ; to 'next'.
 
 
@@ -6662,11 +6662,11 @@ L13E3:  SET     6,(IX+$3E)              ; FLAGS
 ; Cannot be used between DO and LOOP or +LOOP, nor between >R and R>.
 
 L13E9:  DEFM    "EXI"                   ; 'name field'
-        DEFB    'T' + $80
+        DEFB    'T' + 080h
 
         DEFW    L1387                   ; 'link field'
 
-L13EF:  DEFB    $04                     ; 'name length field'
+L13EF:  DEFB    004h                     ; 'name length field'
 
 L13F0:  DEFW    L04B8                   ; 'code field'
 
@@ -6682,11 +6682,11 @@ L13F0:  DEFW    L04B8                   ; 'code field'
 ;  REDEFINE name
 
 L13F2:  DEFM    "REDEFIN"               ; 'name field'
-        DEFB    'E' + $80
+        DEFB    'E' + 080h
 
         DEFW    L13EF                   ; 'link field'
 
-L13FC:  DEFB    $08                     ; 'name length field'
+L13FC:  DEFB    008h                     ; 'name length field'
 
 L13FD:  DEFW    L13FF                   ; 'code field'
 
@@ -6694,7 +6694,7 @@ L13FD:  DEFW    L13FF                   ; 'code field'
 
 L13FF:  CALL    L0F2E                   ; blank stack
 
-        LD      HL,(RAMSTART + $31)              ; CURRENT
+        LD      HL,(RAMSTART + 031h)              ; CURRENT
 
         LD      E,(HL)
         INC     HL
@@ -6702,17 +6702,17 @@ L13FF:  CALL    L0F2E                   ; blank stack
 
         EX      DE,HL                   ; transfer value to HL
         INC     HL
-        LD      ($2705),HL              ; store in pad
+        LD      (02705h),HL              ; store in pad
 
         PUSH    HL                      ; (*)
 
         CALL    L15C0                   ; get 'name field' address
 
-        LD      ($270D),HL              ; name field addr
-        LD      ($2707),BC              ; parameter field addr
-        LD      ($270B),DE              ; length field value
+        LD      (0270Dh),HL              ; name field addr
+        LD      (02707h),BC              ; parameter field addr
+        LD      (0270Bh),DE              ; length field value
 
-        LD      HL,(RAMSTART + $37)              ; STKBOT
+        LD      HL,(RAMSTART + 037h)              ; STKBOT
         SBC     HL,DE
         JP      NZ,L14DA                ; forward if not matched to Error 11.
 
@@ -6729,22 +6729,22 @@ L1429:  DEFW    L1610                   ; prvcur
 ; ---
 
 L1425:  RST     18H                     ; pop word DE
-        LD      HL,$C3AF
+        LD      HL,0C3AFh
         ADD     HL,DE
         JP      NC,L14CF                ;
 
         EX      DE,HL
-        LD      ($2703),HL
+        LD      (02703h),HL
 
         CALL    L15C0                   ; get 'name field' address
 
-        LD      ($2701),HL
+        LD      (02701h),HL
 
 L1441:  PUSH    HL
-        LD      ($2709),DE
+        LD      (02709h),DE
         LD      A,B
         OR      C
-        LD      DE,($2707)
+        LD      DE,(02707h)
         JR      Z,L1452                 ;
 
         LD      A,D
@@ -6752,37 +6752,37 @@ L1441:  PUSH    HL
         JR      Z,L14CF                 ;
 
 L1452:  POP     HL
-        LD      BC,($270D)
+        LD      BC,(0270Dh)
         SBC     HL,BC
         EX      DE,HL
         ADD     HL,DE
-        LD      ($2707),HL
-        LD      HL,($270B)
+        LD      (02707h),HL
+        LD      HL,(0270Bh)
         ADD     HL,DE
-        LD      BC,($2709)
+        LD      BC,(02709h)
         AND     A
         SBC     HL,BC
-        LD      ($270B),HL
-        LD      BC,$002E                ; 46d
+        LD      (0270Bh),HL
+        LD      BC,0002Eh                ; 46d
         ADD     HL,BC
         BIT     7,H
         JR      NZ,L147F                ;
 
-        LD      BC,(RAMSTART + $3B)              ; SPARE
+        LD      BC,(RAMSTART + 03Bh)              ; SPARE
         ADD     HL,BC
         JR      C,L14CF                 ;
 
         SBC     HL,SP
         JR      NC,L14CF                ;
 
-L147F:  LD      HL,($2703)
+L147F:  LD      HL,(02703h)
         PUSH    HL
         DEC     HL
         DEC     HL
         LD      B,(HL)
         DEC     HL
         LD      C,(HL)
-        LD      HL,($2705)
+        LD      HL,(02705h)
         PUSH    HL
         DEC     HL
         DEC     HL
@@ -6794,9 +6794,9 @@ L147F:  LD      HL,($2703)
         POP     BC
         AND     A
         SBC     HL,BC
-        LD      ($2705),HL
-        LD      DE,($2701)
-        LD      HL,($2709)
+        LD      (02705h),HL
+        LD      DE,(02701h)
+        LD      HL,(02709h)
         AND     A
         SBC     HL,DE
         LD      B,H
@@ -6806,7 +6806,7 @@ L147F:  LD      HL,($2703)
 
         CALL    L14DC                   ; RECLAIM
 
-        LD      HL,($270B)
+        LD      HL,(0270Bh)
         POP     BC
         ADD     HL,BC
         LD      B,H
@@ -6817,8 +6817,8 @@ L147F:  LD      HL,($2703)
         CALL    L0F9E                   ; routine MAKE ROOM
 
         EX      DE,HL                   ;
-        LD      HL,($270D)              ;
-        LD      BC,($270B)              ;
+        LD      HL,(0270Dh)              ;
+        LD      BC,(0270Bh)              ;
         ADD     HL,BC                   ;
         POP     BC                      ;
         PUSH    BC                      ;
@@ -6836,28 +6836,28 @@ L147F:  LD      HL,($2703)
 
 ; ---
 
-L14CF:  LD      HL,(RAMSTART + $31)              ; CURRENT
-        LD      DE,($2705)
+L14CF:  LD      HL,(RAMSTART + 031h)              ; CURRENT
+        LD      DE,(02705h)
         DEC     DE
         LD      (HL),E
         INC     HL
         LD      (HL),D
 
 L14DA:  RST     20H                     ; Error 11
-        DEFB    $0B                     ; Error in REDEFINE or FORGET
+        DEFB    00Bh                     ; Error in REDEFINE or FORGET
 
 ; ---------------------------
 ; THE 'RECLAIMING' SUBROUTINE
 ; ---------------------------
 
-L14DC:  LD      HL,(RAMSTART + $37)              ; fetch STKBOT
+L14DC:  LD      HL,(RAMSTART + 037h)              ; fetch STKBOT
         AND     A                       ; clear carry flag
         SBC     HL,BC                   ; subtract number of bytes to reclaim.
-        LD      (RAMSTART + $37),HL              ; update STKBOT
+        LD      (RAMSTART + 037h),HL              ; update STKBOT
 
-        LD      HL,(RAMSTART + $3B)              ; fetch SPARE
+        LD      HL,(RAMSTART + 03Bh)              ; fetch SPARE
         SBC     HL,BC                   ; subtract number of bytes to reclaim.
-        LD      (RAMSTART + $3B),HL              ; update SPARE
+        LD      (RAMSTART + 03Bh),HL              ; update SPARE
 
         SBC     HL,DE                   ; subtract
         RET     Z                       ; return if same address.
@@ -6876,14 +6876,14 @@ L14DC:  LD      HL,(RAMSTART + $37)              ; fetch STKBOT
 ;
 ; ---
 
-L14F8:  LD      BC,RAMSTART + $31                ; CURRENT
+L14F8:  LD      BC,RAMSTART + 031h                ; CURRENT
 
         CALL    L1557                   ;
         CALL    L1557                   ;
 
-        LD      BC,RAMSTART + $40                ; addr. of "FORTH" in RAM.
+        LD      BC,RAMSTART + 040h                ; addr. of "FORTH" in RAM.
 
-L1504:  LD      HL,(RAMSTART + $37)              ; STKBOT
+L1504:  LD      HL,(RAMSTART + 037h)              ; STKBOT
         SCF                             ;
         SBC     HL,BC                   ;
         RET     C                       ;
@@ -6904,22 +6904,22 @@ L1519:  CALL    L15FB                   ; routine INDEXER
 ; -------------------------------------------------------
 
         DEFW    L0EC3                   ; DE value
-L151E:  DEFB    $1C                     ; to L153A
+L151E:  DEFB    01Ch                     ; to L153A
 
         DEFW    L1085                   ; DE value
-L1521:  DEFB    $16                     ; to L1537
+L1521:  DEFB    016h                     ; to L1537
 
         DEFW    L1108                   ; DE value
-L1524:  DEFB    $13                     ; to L1537
+L1524:  DEFB    013h                     ; to L1537
 
         DEFW    L11B5                   ; DE value
-L1527:  DEFB    $18                     ; to L153F
+L1527:  DEFB    018h                     ; to L153F
 
-        DEFW    $0000                   ; zero end marker
+        DEFW    00000h                   ; zero end marker
 
 ; -------------------------------------------------------
 
-L152A:  LD      HL,$FFF9
+L152A:  LD      HL,0FFF9h
         ADD     HL,BC
 
         LD      C,(HL)
@@ -6988,7 +6988,7 @@ L1557:  LD      A,(BC)                  ; lo byte
 
 ; ---
 
-L1568:  LD      HL,($2701)              ; first bytes of pad.
+L1568:  LD      HL,(02701h)              ; first bytes of pad.
         AND     A                       ;
         SBC     HL,DE                   ; subtract the DE value read from
                                         ; memory
@@ -6997,34 +6997,34 @@ L1568:  LD      HL,($2701)              ; first bytes of pad.
 
         RET     NC                      ; return if HL was higher than DE
 
-        LD      HL,($2709)              ; tape header
+        LD      HL,(02709h)              ; tape header
         SBC     HL,DE
         JR      NC,L1584                ; forward if higher to
 
-        LD      HL,($270D)
+        LD      HL,(0270Dh)
         SBC     HL,DE
         JR      C,L1592                 ; forward if lower to
 
-        LD      HL,($270B)              ;
+        LD      HL,(0270Bh)              ;
         ADD     HL,DE
         RET                             ; return
 
 ; ---
 
-L1584:  LD      HL,($2703)
+L1584:  LD      HL,(02703h)
         SBC     HL,DE
-        LD      HL,($2707)
+        LD      HL,(02707h)
         RET     C
 
-        LD      HL,($2705)
+        LD      HL,(02705h)
         ADD     HL,DE
         RET
 
 ; ---
 
-L1592:  LD      HL,($2701)
+L1592:  LD      HL,(02701h)
         ADD     HL,DE
-        LD      DE,($270D)
+        LD      DE,(0270Dh)
         AND     A
         SBC     HL,DE
         RET
@@ -7040,8 +7040,8 @@ L15A2:  DEC     DE
         DEC     DE
         LD      A,(DE)
         LD      L,A                     ; low byte
-        LD      H,$00                   ; make high byte zero
-        INC     A                       ; test offset for $FF.
+        LD      H,000h                   ; make high byte zero
+        INC     A                       ; test offset for 0FFh.
         JR      NZ,L15B1                ; forward if not.
 
         LD      A,(BC)
@@ -7091,16 +7091,16 @@ L15C4:  CALL    L15FB                   ; routine INDEXER
 ; -------------------------------------------------------
 
         DEFW    L1108
-L15C9:  DEFB    $0B                     ; to L15D4 - find parameter field
+L15C9:  DEFB    00Bh                     ; to L15D4 - find parameter field
 
         DEFW    L1085
-L15CC:  DEFB    $08                     ; to L15D4 - find parameter field
+L15CC:  DEFB    008h                     ; to L15D4 - find parameter field
 
-        DEFW    $0000                   ; zero end_marker.
+        DEFW    00000h                   ; zero end_marker.
 
 ; -------------------------------------------------------
 
-L15CF:  LD      BC,$0000                ; zero indicates no parameter field.
+L15CF:  LD      BC,00000h                ; zero indicates no parameter field.
         JR      L15DB                   ; forward to consider total length.
 
 ; -------------------------------------------------------
@@ -7139,12 +7139,12 @@ L15E7:  DEC     HL                      ; point to name length field
 ; =>
 L15E8:  LD      A,H                     ; fetch high order byte of the
                                         ; header address.
-        CP      $3C                     ; compare to RAM location
+        CP      03Ch                     ; compare to RAM location
         LD      A,(HL)                  ; fetch length byte.
         RES     6,A                     ; reset the immediate mode bit
         JR      C,L15F2                 ; forward if definition is in ROM.
 
-        ADD     A,$02                   ; else add extra for 'length field'
+        ADD     A,002h                   ; else add extra for 'length field'
 
 L15F2:  DEC     HL                      ; step past the
         DEC     HL                      ; link to previous word.
@@ -7188,7 +7188,7 @@ L15FB:  POP     HL                      ; drop return address - points to byte
 
         PUSH    DE                      ; else preserve DE
 
-        LD      D,$00                   ; a 1 byte relative jump.
+        LD      D,000h                   ; a 1 byte relative jump.
         LD      E,(HL)                  ; read one-byte offset.
         ADD     HL,DE                   ; add to read address.
 
@@ -7224,7 +7224,7 @@ L1625:  DEFW    L1A0E                   ; end-forth.
 
         RST     18H                     ; pop word DE
 
-        LD      HL,$C3AF                ; i.e $0000 - RAMSTART + $51
+        LD      HL,0C3AFh                ; i.e 00000h - RAMSTART + 051h
 
         ADD     HL,DE                   ; add to test value.
         RET     C                       ; carry signals that word exists in RAM.
@@ -7233,7 +7233,7 @@ L1625:  DEFW    L1A0E                   ; end-forth.
 ; else generate an error code.
 
         RST     20H                     ; Error 13
-        DEFB    $0D                     ; Error word not found or is in ROM.
+        DEFB    00Dh                     ; Error word not found or is in ROM.
 
 ; -----------------
 ; THE 'FORGET' WORD
@@ -7242,18 +7242,18 @@ L1625:  DEFW    L1A0E                   ; end-forth.
 ; Erases the word 'name' and all subsequently defined names from the dictionary.
 
 L162F:  DEFM    "FORGE"                 ; 'name field'
-        DEFB    'T' + $80
+        DEFB    'T' + 080h
 
         DEFW    L13FC                   ; 'link field'
 
-L1637:  DEFB    $06                     ; 'name length field'
+L1637:  DEFB    006h                     ; 'name length field'
 
 L1638:  DEFW    L163A                   ; 'code field'
 
 ; ---
 
-L163A:  LD      HL,(RAMSTART + $31)              ; CURRENT
-        LD      DE,(RAMSTART + $33)              ; CONTEXT
+L163A:  LD      HL,(RAMSTART + 031h)              ; CURRENT
+        LD      DE,(RAMSTART + 033h)              ; CONTEXT
         AND     A
         SBC     HL,DE
 
@@ -7261,13 +7261,13 @@ L163A:  LD      HL,(RAMSTART + $31)              ; CURRENT
 
         CALL    L1620                   ; findramword
 
-        LD      HL,$FFFB
+        LD      HL,0FFFBh
         ADD     HL,DE
-        LD      (RAMSTART + $39),HL              ; SPARE
-        SET     2,(IX+$3E)              ; FLAGS
+        LD      (RAMSTART + 039h),HL              ; SPARE
+        SET     2,(IX+03Eh)              ; FLAGS
 
         RST     20H                     ; Invoke error routine.
-        DEFB    $FF                     ; No error
+        DEFB    0FFh                     ; No error
 
 ; ---------------
 ; THE 'EDIT' WORD
@@ -7280,11 +7280,11 @@ L163A:  LD      HL,(RAMSTART + $31)              ; CURRENT
 ; from one line to another. DELETE LINE deletes one line.
 
 L1657:  DEFM    "EDI"                   ; 'name field'
-        DEFB    'T' + $80
+        DEFB    'T' + 080h
 
         DEFW    L1637                   ; 'link field'
 
-L165D:  DEFB    $04                     ; 'name length field'
+L165D:  DEFB    004h                     ; 'name length field'
 
 L165E:  DEFW    L1660                   ; 'code field'
 
@@ -7292,7 +7292,7 @@ L165E:  DEFW    L1660                   ; 'code field'
 
 L1660:  CALL    L1620                   ; findramword
 
-        SET     3,(IX+$3E)              ; update FLAGS output -> input buffer
+        SET     3,(IX+03Eh)              ; update FLAGS output -> input buffer
         JR      L1675                   ; forward to list routine the difference
                                         ; being that the listing will go to the
                                         ; lower screen.
@@ -7307,11 +7307,11 @@ L1660:  CALL    L1620                   ; findramword
 ; (shifted space breaks).
 
 L1669:  DEFM    "LIS"                   ; 'name field'
-        DEFB    'T' + $80
+        DEFB    'T' + 080h
 
         DEFW    L165D                   ; 'link field'
 
-L166F:  DEFB    $04                     ; 'name length field'
+L166F:  DEFB    004h                     ; 'name length field'
 
 L1670:  DEFW    L1672                   ; 'code field'
 
@@ -7321,10 +7321,10 @@ L1672:  CALL    L1620                   ; findramword
 
 ; edit path joins here but carriage returns are printed as zeros.
 
-L1675:  LD      A,$0D                   ; prepare a carriage return.
+L1675:  LD      A,00Dh                   ; prepare a carriage return.
         RST     08H                     ; print_ch
 
-        BIT     3,(IX+$3E)              ; test FLAGS output->input buffer?
+        BIT     3,(IX+03Eh)              ; test FLAGS output->input buffer?
 
         PUSH    DE
 
@@ -7344,32 +7344,32 @@ L1675:  LD      A,$0D                   ; prepare a carriage return.
 ; -------------------------------------------------------
 
 L168A:  DEFW    L0EC3                   ; DE value
-L168C:  DEFB    $0B                     ; offset to L1697
+L168C:  DEFB    00Bh                     ; offset to L1697
 
 L168D:  DEFW    L1108                   ; DE value
-L168F:  DEFB    $0D                     ; offset to L169C
+L168F:  DEFB    00Dh                     ; offset to L169C
 
 L1690:  DEFW    L1085                   ; DE value
-L1692:  DEFB    $1F                     ; offset to L16B1
+L1692:  DEFB    01Fh                     ; offset to L16B1
 
-        DEFW    $0000                   ; zero end-marker
+        DEFW    00000h                   ; zero end-marker
 
 ; -------------------------------------------------------
 
 L1695:  RST     20H                     ; Error 14
-        DEFB    $0E                     ; Word unlistable.
+        DEFB    00Eh                     ; Word unlistable.
 
 ; Only words defined by ':', 'DEFINER' or 'COMPILER' are listable.
 
 ; -------------------------------------------------------
 
 ; ':'
-L1697:  LD      HL,$0002
+L1697:  LD      HL,00002h
         JR      L16B4                   ;
 ; ---
 
 L169C:  PUSH    DE
-        LD      HL,$0002
+        LD      HL,00002h
         ADD     HL,BC
         LD      A,(HL)
         INC     HL
@@ -7389,7 +7389,7 @@ L169C:  PUSH    DE
 
         POP     DE
 
-L16B1:  LD      HL,$0004
+L16B1:  LD      HL,00004h
 
 
 L16B4:  ADD     HL,BC
@@ -7403,24 +7403,24 @@ L16B4:  ADD     HL,BC
 
         CALL    L17E4                   ;
 
-        LD      (IX+$14),$01            ; LISTWSx
+        LD      (IX+014h),001h            ; LISTWSx
 
-L16C3:  LD      (IX+$16),$10            ; LISTWSx
+L16C3:  LD      (IX+016h),010h            ; LISTWSx
 
 L16C7:  CALL    L1708                   ; index_table
 
         JR      C,L16D2                 ;
 
-        DEC     (IX+$16)                ; LISTWSx
+        DEC     (IX+016h)                ; LISTWSx
         JP      P,L16C7                 ;
 
-L16D2:  BIT     3,(IX+$3E)              ; FLAGS
+L16D2:  BIT     3,(IX+03Eh)              ; FLAGS
         JR      NZ,L16E8                ; branch forward  =->
 
         JR      C,L1702                 ;
 
-        LD      HL,RAMSTART + $26                ; KEYCOD
-        LD      (HL),$00                ;
+        LD      HL,RAMSTART + 026h                ; KEYCOD
+        LD      (HL),000h                ;
 
 L16DF:  LD      A,(HL)                  ;
         AND     A                       ;
@@ -7433,7 +7433,7 @@ L16DF:  LD      A,(HL)                  ;
 ; =->
 
 L16E8:  PUSH    AF
-        RES     3,(IX+$3E)              ; FLAGS
+        RES     3,(IX+03Eh)              ; FLAGS
         PUSH    BC
 
         CALL    L04B9                   ; forth
@@ -7443,7 +7443,7 @@ L16E8:  PUSH    AF
         DEFW    L1A0E                   ; end-forth.
 
 
-        SET     3,(IX+$3E)              ; FLAGS
+        SET     3,(IX+03Eh)              ; FLAGS
 
         CALL    L02D8                   ;
 
@@ -7451,17 +7451,17 @@ L16E8:  PUSH    AF
         POP     AF
         JR      NC,L16C3                ;
 
-L1702:  RES     3,(IX+$3E)              ; FLAGS
+L1702:  RES     3,(IX+03Eh)              ; FLAGS
         JP      (IY)                    ; to 'next'.
 
 ; -------------------------------------------------------
 
 ; called once
 
-L1708:  LD      A,(RAMSTART + $14)               ; LISTWS2
-        LD      (RAMSTART + $15),A               ; LISTWS3
+L1708:  LD      A,(RAMSTART + 014h)               ; LISTWS2
+        LD      (RAMSTART + 015h),A               ; LISTWS3
 
-        LD      (IX+$13),$05            ; LISTWS
+        LD      (IX+013h),005h            ; LISTWS
 
 L1712:  LD      A,(BC)
         LD      E,A
@@ -7475,60 +7475,60 @@ L1718:  CALL    L15FB                   ; routine INDEXER
 ; -------------------------------------------------------
 
 L171B:  DEFW    L1283                   ;
-L171D:  DEFB    $40                     ; offset to L175D
+L171D:  DEFB    040h                     ; offset to L175D
 
 L171E:  DEFW    L1271                   ;
-L1720:  DEFB    $44                     ; offset to L1764
+L1720:  DEFB    044h                     ; offset to L1764
 
 L1721:  DEFW    L12A4                   ;
-L1723:  DEFB    $48                     ; offset to L176B
+L1723:  DEFB    048h                     ; offset to L176B
 
 L1724:  DEFW    L129F                   ;
-L1726:  DEFB    $37                     ; offset to L175D
+L1726:  DEFB    037h                     ; offset to L175D
 
 L1727:  DEFW    L128D                   ;
-L1729:  DEFB    $42                     ; offset to L176B
+L1729:  DEFB    042h                     ; offset to L176B
 
 L172A:  DEFW    L1288                   ;
-L172C:  DEFB    $38                     ; offset to L1764
+L172C:  DEFB    038h                     ; offset to L1764
 
 L172D:  DEFW    L1276                   ;
-L172F:  DEFB    $3C                     ; offset to L176B
+L172F:  DEFB    03Ch                     ; offset to L176B
 
 L1730:  DEFW    L1323                   ;
-L1732:  DEFB    $2B                     ; offset to L175D
+L1732:  DEFB    02Bh                     ; offset to L175D
 
 L1733:  DEFW    L1332                   ;
-L1735:  DEFB    $36                     ; offset to L176B
+L1735:  DEFB    036h                     ; offset to L176B
 
 L1736:  DEFW    L133C                   ;
-L1738:  DEFB    $33                     ; offset to L176B
+L1738:  DEFB    033h                     ; offset to L176B
 
 L1739:  DEFW    L10E8                   ;
-L173B:  DEFB    $29                     ; offset to L1764
+L173B:  DEFB    029h                     ; offset to L1764
 
 L173C:  DEFW    L1140                   ;
-L173E:  DEFB    $26                     ; offset to L1764
+L173E:  DEFB    026h                     ; offset to L1764
 
 L173F:  DEFW    L1011                   ;
-L1741:  DEFB    $3B                     ; offset to L177C
+L1741:  DEFB    03Bh                     ; offset to L177C
 
 L1742:  DEFW    L1064                   ;
-L1744:  DEFB    $47                     ; offset to L178B
+L1744:  DEFB    047h                     ; offset to L178B
 
 L1745:  DEFW    L104B                   ;
-L1747:  DEFB    $51                     ; offset to L1798
+L1747:  DEFB    051h                     ; offset to L1798
 
 L1748:  DEFW    L1379                   ;
-L174A:  DEFB    $62                     ; offset to L17AC
+L174A:  DEFB    062h                     ; offset to L17AC
 
 L174B:  DEFW    L1396                   ;
-L174D:  DEFB    $63                     ; offset to L17B0
+L174D:  DEFB    063h                     ; offset to L17B0
 
 L174E:  DEFW    L04B6                   ;
-L1750:  DEFB    $54                     ; offset to L17A4
+L1750:  DEFB    054h                     ; offset to L17A4
 
-L1751:  DEFW    $0000                   ; zero end-marker
+L1751:  DEFW    00000h                   ; zero end-marker
 
 ; -------------------------------------------------------
 
@@ -7536,34 +7536,34 @@ L1751:  DEFW    $0000                   ; zero end-marker
 
 L1753:  CALL    L17E1                   ;
 
-L1756:  DEC     (IX+$13)                ; LISTWS
+L1756:  DEC     (IX+013h)                ; LISTWS
         JR      NZ,L1712                ;
         AND     A
         RET
 
 ; ---
 
-L175D:  LD      HL,(RAMSTART + $14)              ; LISTWS2
+L175D:  LD      HL,(RAMSTART + 014h)              ; LISTWS2
         LD      H,L
         INC     L
         JR      L1770                   ;
 
 ; ---
 
-L1764:  LD      HL,(RAMSTART + $14)              ; LISTWS2
+L1764:  LD      HL,(RAMSTART + 014h)              ; LISTWS2
         LD      H,L
         DEC     H
         JR      L1770                   ;
 
 ; ---
 
-L176B:  LD      HL,(RAMSTART + $14)              ; LISTWS2
+L176B:  LD      HL,(RAMSTART + 014h)              ; LISTWS2
         DEC     L
         LD      H,L
 
-L1770:  LD      (RAMSTART + $14),HL              ; LISTWS2
-        LD      (IX+$13),$01            ; LISTWS
-        DEC     (IX+$16)                ; LISTWSx
+L1770:  LD      (RAMSTART + 014h),HL              ; LISTWS2
+        LD      (IX+013h),001h            ; LISTWS
+        DEC     (IX+016h)                ; LISTWSx
         JR      L1753                   ;
 
 ; ---
@@ -7571,7 +7571,7 @@ L1770:  LD      (RAMSTART + $14),HL              ; LISTWS2
 L177C:  CALL    L17DA                   ;
 
         RST     10H                     ; push word DE
-        LD      DE,$09B3                ; '.' addr
+        LD      DE,009B3h                ; '.' addr
 
 L1783:  CALL    L17C1                   ; routine INDENT
         CALL    L1815                   ; pr2
@@ -7584,7 +7584,7 @@ L178B:  CALL    L17DA                   ;
         RST     10H                     ; push word DE
         CALL    L17DA                   ;
         RST     10H                     ; push word DE
-        LD      DE,$0AAF                ; 'F.' addr
+        LD      DE,00AAFh                ; 'F.' addr
         JR      L1783                   ;
 
 ; ---
@@ -7597,7 +7597,7 @@ L1798:  LD      A,(BC)
         POP     AF
         RST     08H                     ; print_ch
 
-        LD      A,$20                   ; a space character
+        LD      A,020h                   ; a space character
         RST     08H                     ; print_ch
 
         JR      L1756                   ;
@@ -7606,19 +7606,19 @@ L1798:  LD      A,(BC)
 
 L17A4:  CALL    L1808                   ; pr_inline
 
-        DEFB    $0D                     ; newline
+        DEFB    00Dh                     ; newline
         DEFB    ';'                     ; ;
-        DEFB    $8D                     ; inverted newline
+        DEFB    08Dh                     ; inverted newline
 
         SCF                             ;
         RET                             ;
 
 ; ---
 
-L17AC:  LD      A,$29                   ; character ')' - end of comment.
+L17AC:  LD      A,029h                   ; character ')' - end of comment.
         JR      L17B2                   ;
 
-L17B0:  LD      A,$22                   ; character '"' - quote
+L17B0:  LD      A,022h                   ; character '"' - quote
 
 L17B2:  PUSH    AF
         PUSH    BC
@@ -7636,26 +7636,26 @@ L17B2:  PUSH    AF
 
 ; -------------------------------------------------------
 
-L17C1:  LD      A,(RAMSTART + $15)               ; LISTWS3
+L17C1:  LD      A,(RAMSTART + 015h)               ; LISTWS3
         AND     A
         RET     M
 
         PUSH    BC                      ; preserve BC
         LD      B,A                     ; transfer count to B
 
-        LD      A,$0D                   ; carriage return.
+        LD      A,00Dh                   ; carriage return.
         RST     08H                     ; print_ch
 
         INC     B                       ; test indentation.
         DEC     B                       ;
         JR      Z,L17D4                 ;
 
-L17CF:  LD      A,$20                   ; a space character
+L17CF:  LD      A,020h                   ; a space character
         RST     08H                     ; print_ch
 
         DJNZ    L17CF                   ;
 
-L17D4:  LD      (IX+$15),$FF            ; LISTWS3
+L17D4:  LD      (IX+015h),0FFh            ; LISTWS3
 
         POP     BC                      ; restore BC
         RET                             ; return.
@@ -7701,13 +7701,13 @@ L17F0:  EX      DE,HL
 ; pr_string_sp
 
 L17FB:  LD      A,(HL)
-        AND     $7F
+        AND     07Fh
         RST     08H                     ; print_ch
         BIT     7,(HL)
         INC     HL
         JR      Z,L17FB                 ;
 
-        LD      A,$20
+        LD      A,020h
         RST     08H                     ; print_ch
         RET
 
@@ -7727,7 +7727,7 @@ L1808:  EX      (SP),HL
 ; in HL
 
 ; -> called twice
-L180E:  LD      DE,$09B3                ; '.' addr
+L180E:  LD      DE,009B3h                ; '.' addr
         PUSH    DE                      ; but save it as we need DE?
 
         EX      DE,HL                   ; transfer HL to DE.
@@ -7767,33 +7767,33 @@ L1820:  PUSH    IY
         LD      HL,L1892
         PUSH    HL
 
-        LD      HL,$E000
+        LD      HL,0E000h
         BIT     7,C
         JR      Z,L1832                 ;
-        LD      H,$FC
+        LD      H,0FCh
 L1832:  INC     DE
         DEC     IY
         DI
         XOR     A
 
-L1837:  LD      B,$97
+L1837:  LD      B,097h
 
 L1839:  DJNZ    L1839                   ;
-        OUT     ($FE),A
-        XOR     $08
+        OUT     (0FEh),A
+        XOR     008h
         INC     L
         JR      NZ,L1843                ;
         INC     H
 L1843:  JR      NZ,L1837                ;
-        LD      B,$2B
+        LD      B,02Bh
 L1847:  DJNZ    L1847                   ;
-        OUT     ($FE),A
+        OUT     (0FEh),A
         LD      L,C
-        LD      BC,$3B08
+        LD      BC,03B08h
 L184F:  DJNZ    L184F                   ;
         LD      A,C
-        OUT     ($FE),A
-        LD      B,$38
+        OUT     (0FEh),A
+        LD      B,038h
         JP      L188A                   ;
 
 L1859:  LD      A,C
@@ -7803,11 +7803,11 @@ L185C:  DJNZ    L185C                   ;
 
         JR      NC,L1864                ;
 
-        LD      B,$3D
+        LD      B,03Dh
 L1862:  DJNZ    L1862                   ;
 
-L1864:  OUT     ($FE),A
-        LD      B,$3A
+L1864:  OUT     (0FEh),A
+        LD      B,03Ah
         JP      NZ,L1859                ;
         DEC     B
         XOR     A
@@ -7815,21 +7815,21 @@ L186D:  RL      L
         JP      NZ,L185C                ;
         DEC     DE
         INC     IY
-        LD      B,$2E
+        LD      B,02Eh
 
-        LD      A,$7F
-        IN      A,($FE)
+        LD      A,07Fh
+        IN      A,(0FEh)
         RRA
         RET     NC
 
         LD      A,D
-        CP      $FF
+        CP      0FFh
         RET     NC
 
         OR      E
         JR      Z,L188F                 ;
 
-        LD      L,(IY+$00)
+        LD      L,(IY+000h)
 L1887:  LD      A,H
         XOR     L
         LD      H,A
@@ -7846,15 +7846,15 @@ L1892:  POP     IY                      ; restore the original IY value so that
                                         ; words can be used gain.
 
         EX      AF,AF'                  ;;
-        LD      B,$3B                   ;
+        LD      B,03Bh                   ;
 
 L1897:  DJNZ    L1897                   ; self-loop for delay.
 
         XOR     A
-        OUT     ($FE),A
+        OUT     (0FEh),A
 
-        LD      A,$7F                   ; read the port $7FFE
-        IN      A,($FE)                 ; keyrows SPACE to V.
+        LD      A,07Fh                   ; read the port 07FFEh
+        IN      A,(0FEh)                 ; keyrows SPACE to V.
         RRA
         EI                              ; Enable Interrupts.
 
@@ -7881,28 +7881,28 @@ L18A7:  DI
 
 L18B5:  RET     NZ
 
-L18B6:  LD      L,$00
-L18B8:  LD      B,$B8
+L18B6:  LD      L,000h
+L18B8:  LD      B,0B8h
 
         CALL    L1911                   ;
 
         JR      NC,L18B5                ;
 
-        LD      A,$DF
+        LD      A,0DFh
         CP      B
         JR      NC,L18B6                ;
 
         INC     L
         JR      NZ,L18B8                ;
 
-L18C7:  LD      B,$CF
+L18C7:  LD      B,0CFh
 
         CALL    L1915                   ;
 
         JR      NC,L18B5                ;
 
         LD      A,B
-        CP      $D8
+        CP      0D8h
         JR      NC,L18C7                ;
 
         CALL    L1915                   ;
@@ -7920,12 +7920,12 @@ L18C7:  LD      B,$CF
 
 L18DF:  EX      AF,AF'
         JR      NC,L18E7                ;
-        LD      (IY+$00),L
+        LD      (IY+000h),L
         JR      L18EC                   ;
 
 ; ---
 
-L18E7:  LD      A,(IY+$00)
+L18E7:  LD      A,(IY+000h)
         XOR     L
         RET     NZ
 
@@ -7942,19 +7942,19 @@ L18F0:  CALL    L18FC                   ;
         JR      NZ,L18DF                ;
 
         LD      A,H
-        CP      $01
+        CP      001h
 L18FB:  RET
 
 ; ---
 
-L18FC:  LD      L,$01
-L18FE:  LD      B,$C7
+L18FC:  LD      L,001h
+L18FE:  LD      B,0C7h
 
         CALL    L1911                   ;
 
         RET     NC
 
-        LD      A,$E2
+        LD      A,0E2h
         CP      B
         RL      L
         JP      NC,L18FE                ;
@@ -7970,7 +7970,7 @@ L18FE:  LD      B,$C7
 L1911:  CALL    L1915                   ;
         RET     NC
 
-L1915:  LD      A,$14
+L1915:  LD      A,014h
 L1917:  DEC     A
 
         JR      NZ,L1917                ;
@@ -7980,13 +7980,13 @@ L1917:  DEC     A
 L191B:  INC     B
         RET     Z
 
-        LD      A,$7F
-        IN      A,($FE)
+        LD      A,07Fh
+        IN      A,(0FEh)
         RRA
         RET     NC
 
         XOR     C
-        AND     $10
+        AND     010h
         JR      Z,L191B                 ;
 
         LD      A,C
@@ -8003,11 +8003,11 @@ L191B:  INC     B
 ; given name. Makes a noise on the internal loudspeaker.
 
 L192D:  DEFM    "SAV"                   ; 'name field'
-        DEFB    'E' + $80
+        DEFB    'E' + 080h
 
         DEFW    L166F                   ; 'link field'
 
-L1933:  DEFB    $04                     ; 'name length field'
+L1933:  DEFB    004h                     ; 'name length field'
 
 L1934:  DEFW    L0EC3                   ; 'code field' - docolon
 
@@ -8027,11 +8027,11 @@ L1934:  DEFW    L0EC3                   ; 'code field' - docolon
 ;
 
 L193C:  DEFM    "BSAV"                  ; 'name field'
-        DEFB    'E' + $80
+        DEFB    'E' + 080h
 
         DEFW    L1933                   ; 'link field'
 
-L1943:  DEFB    $05                     ; 'name length field'
+L1943:  DEFB    005h                     ; 'name length field'
 
 L1944:  DEFW    L0EC3                   ; 'code field' - docolon
 
@@ -8051,11 +8051,11 @@ L1946:  DEFW    L1A3D                   ; prep_header
 ; address m. ERROR 10 if the file has more than m bytes.
 ;
 L194C:  DEFM    "BLOA"                  ; 'name field'
-        DEFB    'D' + $80
+        DEFB    'D' + 080h
 
         DEFW    L1943                   ; 'link field'
 
-L1953:  DEFB    $05                     ; 'name length field'
+L1953:  DEFB    005h                     ; 'name length field'
 
 L1954:  DEFW    L0EC3                   ; 'code field' - docolon
 
@@ -8074,11 +8074,11 @@ L1954:  DEFW    L0EC3                   ; 'code field' - docolon
 ; Verifies dictionary on tape against dictionary in RAM.
 
 L195E:  DEFM    "VERIF"                 ; 'name field'
-        DEFB    'Y' + $80
+        DEFB    'Y' + 080h
 
         DEFW    L1953                   ; 'link field'
 
-L1966:  DEFB    $06                     ; 'name length field'
+L1966:  DEFB    006h                     ; 'name length field'
 
 L1967:  DEFW    L0EC3                   ; 'code field' - docolon
 
@@ -8086,7 +8086,7 @@ L1967:  DEFW    L0EC3                   ; 'code field' - docolon
 
 L1969:  DEFW    L1A10                   ; word to pad
         DEFW    L1271                   ; branch
-L196D:  DEFW    $000F                   ; 15 bytes forward to L197D
+L196D:  DEFW    0000Fh                   ; 15 bytes forward to L197D
 
 
 ; ------------------
@@ -8101,11 +8101,11 @@ L196D:  DEFW    $000F                   ; 15 bytes forward to L197D
 ;
 
 L196F:  DEFM    "BVERIF"                ; 'name field'
-        DEFB    'Y' + $80
+        DEFB    'Y' + 080h
 
         DEFW    L1966                   ; 'link field'
 
-L1978:  DEFB    $07                     ; 'name length field'
+L1978:  DEFB    007h                     ; 'name length field'
 
 L1979:  DEFW    L0EC3                   ; 'code field' - docolon
 
@@ -8131,11 +8131,11 @@ L197D:  DEFW    L1A74                   ; ld_bytes
 ; maximum.
 
 L1983:  DEFM    "LOA"                   ; 'name field'
-        DEFB    'D' + $80
+        DEFB    'D' + 080h
 
         DEFW    L1978                   ; 'link field'
 
-L1989:  DEFB    $04                     ; 'name length field'
+L1989:  DEFB    004h                     ; 'name length field'
 
 L198A:  DEFW    L0EC3                   ; 'code field' - docolon
 
@@ -8145,14 +8145,14 @@ L198C:  DEFW    L1A10                   ; word to pad
 
         DEFW    L1A0E                   ; end-forth.
 
-        LD      HL,(RAMSTART + $37)              ; STKBOT
-        LD      ($230E),HL
+        LD      HL,(RAMSTART + 037h)              ; STKBOT
+        LD      (0230Eh),HL
         EX      DE,HL
-        LD      HL,$FFCC
+        LD      HL,0FFCCh
         ADD     HL,SP
         AND     A
         SBC     HL,DE
-        LD      ($230C),HL
+        LD      (0230Ch),HL
 
         CALL    L04B9                   ; forth
 
@@ -8160,26 +8160,26 @@ L19A4:  DEFW    L1A74                   ; ld_bytes
         DEFW    L1AB8                   ; tapeFF
         DEFW    L1A0E                   ; end-forth.
 
-        LD      BC,(RAMSTART + $37)              ; STKBOT
-        LD      HL,RAMSTART + $50
-        LD      ($2701),HL
+        LD      BC,(RAMSTART + 037h)              ; STKBOT
+        LD      HL,RAMSTART + 050h
+        LD      (02701h),HL
         INC     HL
-        LD      ($2709),HL
-        LD      HL,($2325)
+        LD      (02709h),HL
+        LD      HL,(02325h)
         ADD     HL,BC
-        LD      (RAMSTART + $37),HL              ; STKBOT
-        LD      HL,$C3AF
+        LD      (RAMSTART + 037h),HL              ; STKBOT
+        LD      HL,0C3AFh
         ADD     HL,BC
-        LD      ($270B),HL
-        LD      DE,($2329)
+        LD      (0270Bh),HL
+        LD      DE,(02329h)
         ADD     HL,DE
-        LD      DE,(RAMSTART + $4C)
-        LD      (RAMSTART + $4C),HL
+        LD      DE,(RAMSTART + 04Ch)
+        LD      (RAMSTART + 04Ch),HL
         PUSH    BC
         PUSH    DE
 
 
-L19D4:  LD      ($270D),SP
+L19D4:  LD      (0270Dh),SP
         CALL    L1504                   ;
         POP     BC
         POP     HL
@@ -8191,17 +8191,17 @@ L19DD:  BIT     7,(HL)
         LD      (HL),C
         INC     HL
         LD      (HL),B
-        LD      HL,(RAMSTART + $37)              ; STKBOT
-        LD      BC,$000C                ; allow twelve bytes for underflow.
+        LD      HL,(RAMSTART + 037h)              ; STKBOT
+        LD      BC,0000Ch                ; allow twelve bytes for underflow.
         ADD     HL,BC
-        LD      (RAMSTART + $3B),HL              ; SPARE
+        LD      (RAMSTART + 03Bh),HL              ; SPARE
         JP      (IY)                    ; to 'next'.
 
 ; ---
 
 L19F3:  DEFW    L0EC3                   ; 'code field' - docolon
         DEFW    L104B                   ; stk_data
-        DEFB    $20                     ; a space delimiter
+        DEFB    020h                     ; a space delimiter
         DEFW    L05AB                   ; word          (to pad)
         DEFW    L1A0E                   ; end-forth.
 
@@ -8211,10 +8211,10 @@ L19FC:  CALL    L0F2E                   ; blank stack
 
 L19FF:  RST     18H                     ; pop word DE
 
-        LD      A,$20                   ;
+        LD      A,020h                   ;
         LD      (DE),A                  ;
-        LD      DE,$270C                ;
-        LD      HL,$27FF                ;
+        LD      DE,0270Ch                ;
+        LD      HL,027FFh                ;
 
         CALL    L07FA                   ; routine SPACE_FILL
 
@@ -8232,19 +8232,19 @@ L1A10:  DEFW    L0EC3                   ; 'code field' - docolon
         DEFW    L1A0E                   ; end-forth.
 
         XOR     A                       ;
-        LD      ($2301),A               ;
-        LD      HL,RAMSTART + $51                ;
-        LD      ($230E),HL              ;
+        LD      (02301h),A               ;
+        LD      HL,RAMSTART + 051h                ;
+        LD      (0230Eh),HL              ;
         EX      DE,HL                   ;
-        LD      HL,(RAMSTART + $37)              ; STKBOT
+        LD      HL,(RAMSTART + 037h)              ; STKBOT
         AND     A                       ;
         SBC     HL,DE
-        LD      ($230C),HL
-        LD      HL,(RAMSTART + $4C)
-        LD      ($2310),HL
-        LD      HL,RAMSTART + $31                ; CURRENT
-        LD      DE,$2312
-        LD      BC,$0008                ;
+        LD      (0230Ch),HL
+        LD      HL,(RAMSTART + 04Ch)
+        LD      (02310h),HL
+        LD      HL,RAMSTART + 031h                ; CURRENT
+        LD      DE,02312h
+        LD      BC,00008h                ;
 
         LDIR                            ;
 
@@ -8256,10 +8256,10 @@ L1A10:  DEFW    L0EC3                   ; 'code field' - docolon
 L1A3D:  DEFW    L0EC3                   ; 'code field' - docolon
         DEFW    L19F3                   ; word to pad
         DEFW    L1011                   ; stack next word
-        DEFW    $230C                   ; header location
+        DEFW    0230Ch                   ; header location
         DEFW    L08C1                   ; !     store int at address
         DEFW    L1011                   ; stack next word
-        DEFW    $230E                   ; header location
+        DEFW    0230Eh                   ; header location
         DEFW    L08C1                   ; !     store int at address
         DEFW    L04B6                   ; exit
 
@@ -8267,25 +8267,25 @@ L1A3D:  DEFW    L0EC3                   ; 'code field' - docolon
 
 L1A4F:  DEFW    L1A51
 
-L1A51:  LD      A,($2302)               ; length of word in pad
+L1A51:  LD      A,(02302h)               ; length of word in pad
         AND     A
         JR      Z,L1AB6                 ; forward if null.
 
-        LD      HL,($230C)
+        LD      HL,(0230Ch)
         LD      A,H
         OR      L
         JR      Z,L1AB6                 ;
 
         PUSH    HL
-        LD      DE,$0019                ;
-        LD      HL,$2301                ; pad using ROM priority
+        LD      DE,00019h                ;
+        LD      HL,02301h                ; pad using ROM priority
         LD      C,D                     ;
 
         CALL    L1820                   ;
 
         POP     DE
-        LD      HL,($230E)              ;
-        LD      C,$FF
+        LD      HL,(0230Eh)              ;
+        LD      C,0FFh
 
         CALL    L1820                   ;
 
@@ -8297,8 +8297,8 @@ L1A51:  LD      A,($2302)               ; length of word in pad
 
 L1A74:  DEFW    L1A76
 
-L1A76:  LD      DE,$0019
-        LD      HL,$231A
+L1A76:  LD      DE,00019h
+        LD      HL,0231Ah
         LD      C,D
 
         SCF
@@ -8307,7 +8307,7 @@ L1A76:  LD      DE,$0019
 
         JR      NC,L1A76                ; loop back until read
 
-        LD      DE,$231A
+        LD      DE,0231Ah
         LD      A,(DE)
         AND     A
         JR      NZ,L1A95                ;
@@ -8316,9 +8316,9 @@ L1A76:  LD      DE,$0019
 
 ; ---
 
-L1A8D:  DEFB    $0D                     ; newline
+L1A8D:  DEFB    00Dh                     ; newline
         DEFM    "Dict"
-        DEFB    ':' + $80               ;
+        DEFB    ':' + 080h               ;
 
 L1A93:  JR      L1A9F                   ;
 
@@ -8326,15 +8326,15 @@ L1A93:  JR      L1A9F                   ;
 
 L1A95:  CALL    L1808                   ; pr_inline
 
-L1A98:  DEFB    $0D                     ; newline
+L1A98:  DEFB    00Dh                     ; newline
 
         DEFM    "Bytes"
-        DEFB    ':' + $80               ;
+        DEFB    ':' + 080h               ;
 
 ; ---
 
-L1A9F:  LD      HL,$2301
-        LD      BC,$0B0B
+L1A9F:  LD      HL,02301h
+        LD      BC,00B0Bh
         JR      L1AA9                   ;
 
 ; ---
@@ -8357,7 +8357,7 @@ L1AAE:  INC     HL
 ; ---
 
 L1AB6:  RST     20H                     ; Error 10
-        DEFB    $0A                     ; Tape error
+        DEFB    00Ah                     ; Tape error
 
 ; ---
 ;
@@ -8365,7 +8365,7 @@ L1AB6:  RST     20H                     ; Error 10
 
 L1AB8:  DEFW    L1ABA                   ; headerless 'code field'
 
-L1ABA:  LD      B,$FF
+L1ABA:  LD      B,0FFh
         JR      L1AD0                   ; forward to +->
 
 ; ---
@@ -8374,9 +8374,9 @@ L1ABA:  LD      B,$FF
 
 L1ABE:  DEFW    L1AC0                   ; headerless 'code field'
 
-L1AC0:  LD      HL,$2312
-        LD      DE,$232B
-        LD      B,$08
+L1AC0:  LD      HL,02312h
+        LD      DE,0232Bh
+        LD      B,008h
 
 L1AC8:  LD      A,(DE)
         INC     DE
@@ -8386,10 +8386,10 @@ L1AC8:  LD      A,(DE)
 
         DJNZ    L1AC8                   ; back for all 8
 
-; common code - B is $00 from above or $FF from previous.
+; common code - B is 000h from above or 0FFh from previous.
 
-L1AD0:  LD      HL,($230C)
-        LD      DE,($2325)
+L1AD0:  LD      HL,(0230Ch)
+        LD      DE,(02325h)
         LD      A,H
         OR      L
         JR      Z,L1ADF                 ; skip if zero
@@ -8397,13 +8397,13 @@ L1AD0:  LD      HL,($230C)
         SBC     HL,DE
         JR      C,L1AB6                 ; back to tape error
 
-L1ADF:  LD      HL,($230E)
+L1ADF:  LD      HL,(0230Eh)
         LD      A,H
         OR      L
         JR      NZ,L1AE9                ; skip if zero
-        LD      HL,($2327)
+        LD      HL,(02327h)
 
-L1AE9:  LD      C,$FF
+L1AE9:  LD      C,0FFh
         RR      B
 
         CALL    L18A7                   ;
@@ -8429,7 +8429,7 @@ L1AE9:  LD      C,$FF
 
 ; Begin by clearing the first part of the workspace.
 
-L1AF4:  LD      BC,RAMSTART + $0F                ; byte 15 of the 19 bytes at FP_WS
+L1AF4:  LD      BC,RAMSTART + 00Fh                ; byte 15 of the 19 bytes at FP_WS
 
         XOR     A                       ; clear accumulator.
 
@@ -8439,8 +8439,8 @@ L1AF8:  LD      (BC),A                  ; clear the workspace.
 
 ;
 
-        LD      HL,(RAMSTART + $3B)              ; fetch end of data stack+1 from SPARE.
-        LD      DE,$FFFC                ; prepare  -4
+        LD      HL,(RAMSTART + 03Bh)              ; fetch end of data stack+1 from SPARE.
+        LD      DE,0FFFCh                ; prepare  -4
 
         DEC     HL                      ; point to last byte of stack.
         LD      C,(HL)                  ; sign/exponent of (f2) to C.
@@ -8451,7 +8451,7 @@ L1AF8:  LD      (BC),A                  ; clear the workspace.
 ; update system variable SPARE - this could be deferred.
 
         INC     HL                      ; point to location after (f1).
-        LD      (RAMSTART + $3B),HL              ; update system variable SPARE
+        LD      (RAMSTART + 03Bh),HL              ; update system variable SPARE
         DEC     HL                      ; point to exponent of (f1)
 
         LD      B,(HL)                  ; sign/exponent of (f1) to B.
@@ -8463,11 +8463,11 @@ L1AF8:  LD      (BC),A                  ; clear the workspace.
 
         LD      A,C                     ; transfer C to A.
         RRCA                            ; rotate sign bit to bit 6.
-        XOR     B                       ; XOR B
-        AND     $7F                     ; mask off bits to restore
+        XOR     B                       ; XOR B       
+        AND     07Fh                     ; mask off bits to restore
         XOR     B                       ; bit 6 as it was, bit 7 of B to A.
 
-L1B13:   LD      (RAMSTART + $02),A               ; FP_WS_02             see L1C2F
+L1B13:   LD      (RAMSTART + 002h),A               ; FP_WS_02             see L1C2F
 
         RES     7,B                     ; make both numbers
         RES     7,C                     ; positive
@@ -8485,13 +8485,13 @@ L1B13:   LD      (RAMSTART + $02),A               ; FP_WS_02             see L1C
 ; THE 'SHIFT_ADDEND' SUBROUTINE
 ; -----------------------------
 
-L1B22:  LD      A,$09
+L1B22:  LD      A,009h
         CP      B
         JR      NC,L1B28                ;
 
         LD      B,A                     ; set shift counter to nine. i.e clear.
 
-L1B28:  LD      C,$04                   ; four bytes
+L1B28:  LD      C,004h                   ; four bytes 
         INC     HL
         INC     HL
         INC     HL                      ; point to highest byte
@@ -8508,7 +8508,7 @@ L1B2E:  RRD                             ; A=0000 XXXX --> 7654->3210 =(HL)
         INC     HL                      ; set pointer to start of number again
         DJNZ    L1B28                   ; decrement the shift counter and loop.
 
-        ADD     A,$FB                   ; add minus five to last nibble lost
+        ADD     A,0FBh                   ; add minus five to last nibble lost
                                         ; will set the carry flag if 5 or more.
 
         PUSH    HL                      ;; preserve pointer to start of addend.
@@ -8517,12 +8517,12 @@ L1B3A:  LD      A,(HL)                  ; fetch the pair of BCD nibbles.
 
         ADC     A,B                     ; increment if carry set (B = 0)
         DAA                             ; Decimal Adjust Accumulator
-                                        ; ($99 becomes $00 with carry set).
+                                        ; (099h becomes 000h with carry set).
 
         LD      (HL),A                  ; put nibbles back.
-        INC     HL                      ; point to next significant pair of
+        INC     HL                      ; point to next significant pair of 
                                         ; binary coded decimal digits.
-        JR      C,L1B3A                 ; and ripple any rounding through.
+        JR      C,L1B3A                 ; and ripple any rounding through.   
 
         POP     HL                      ;; retrieve the pointer to start.
         RET                             ; return.
@@ -8531,23 +8531,23 @@ L1B3A:  LD      A,(HL)                  ; fetch the pair of BCD nibbles.
 ; THE 'BCD NEGATE' SUBROUTINE
 ; ---------------------------
 ; Negates the four byte, 8 nibble, binary coded decimal on the Data Stack.
-; For example -123.456
-; is prepared as $00 $12 $34 $56
-; and negated as $99 $87 $65 $34
+; For example -123.456 
+; is prepared as 000h 012h 034h 056h
+; and negated as 099h 087h 065h 034h
 
 L1B43:  PUSH    BC                      ; preserve the two
         PUSH    HL                      ; main registers used.
 
-        LD      B,$04                   ; set byte counter to four.
+        LD      B,004h                   ; set byte counter to four.
         AND     A                       ; clear carry.
 
-L1B48:  LD      A,$00                   ; set to zero without disturbing carry.
+L1B48:  LD      A,000h                   ; set to zero without disturbing carry.
 
         SBC     A,(HL)                  ; subtract pair of digits
         DAA                             ; Decimal Adjust Accumulator
                                         ; adjusts as if from 100 setting carry
 
-        LD      (HL),A                  ; place adjusted decimals back.
+        LD      (HL),A                  ; place adjusted decimals back. 
 
         INC     HL                      ; next location on Data Stack.
 
@@ -8566,15 +8566,15 @@ L1B48:  LD      A,$00                   ; set to zero without disturbing carry.
 ; The second entry point is used in multiplication.
 
 ; ->
-L1B53:  LD      C,$01                   ; signal the operation is addition.
+L1B53:  LD      C,001h                   ; signal the operation is addition.
 
 ; -> (with c!=0)
-L1B55:  PUSH    HL                      ; preserve the
+L1B55:  PUSH    HL                      ; preserve the 
         PUSH    DE                      ; three main
         PUSH    BC                      ; registers.
 
         LD      A,C                     ; treat C as a binary coded decimal.
-        AND     $0F                     ; isolate the right-hand nibble.
+        AND     00Fh                     ; isolate the right-hand nibble.
         LD      B,A                     ; transfer R.H. nibble to B
 
         XOR     C                       ; A now has L.H. nibble.
@@ -8593,13 +8593,13 @@ L1B55:  PUSH    HL                      ; preserve the
 
 ; note that for simple addition C is unchanged and still contains 1.
 
-        LD      B,$04                   ; four bytes to consider
+        LD      B,004h                   ; four bytes to consider
         XOR     A                       ; clear accumulator ensuring no initial
                                         ; carry is fed into the loop.
 
 ; loop
 
-L1B67:  PUSH    BC                      ; push the counters.
+L1B67:  PUSH    BC                      ; push the counters. 
         PUSH    DE                      ; push the (f2) pointer
 
         PUSH    HL                      ; push the (f1) pointer.
@@ -8611,7 +8611,7 @@ L1B67:  PUSH    BC                      ; push the counters.
 
         LD      L,A                     ; result to L
         LD      A,(DE)                  ; fetch (f2) cell value.
-        LD      H,$00                   ; set high bytes H and D to
+        LD      H,000h                   ; set high bytes H and D to
         LD      D,H                     ; zero without disturbing carry
 
         RL      H                       ; now pick up any carry in H.
@@ -8686,12 +8686,12 @@ L1B91:  EX      DE,HL                   ; transfer result to DE.
 ;
 ; just flip the sign and then do floating point addition.
 
-L1B9F:  DEFB    'F'                     ; 'name field'
-        DEFB    '-' + $80
+L1B9F:  DEFB    'F'                     ; 'name field'  
+        DEFB    '-' + 080h
 
         DEFW    L1989                   ; 'link field'
 
-L1BA3:  DEFB    $02                     ; 'name length field'
+L1BA3:  DEFB    002h                     ; 'name length field'
 
 L1BA4:  DEFW    L0EC3                   ; 'code field' - docolon
 
@@ -8708,12 +8708,12 @@ L1BA6:  DEFW    L1D0F                   ; fnegate
 ; ( f1, f2 -- f1+f2 )
 ; Adds top two floating point numbers.
 
-L1BAC:  DEFB    'F'                     ; 'name field'
-        DEFB    '+' + $80
+L1BAC:  DEFB    'F'                     ; 'name field'   
+        DEFB    '+' + 080h
 
         DEFW    L1BA3                   ; 'link field'
 
-L1BB0:  DEFB    $02                     ; 'name length field'
+L1BB0:  DEFB    002h                     ; 'name length field'
 
 L1BB1:  DEFW    L1BB3                   ; 'code field'
 
@@ -8729,7 +8729,7 @@ L1BB3:  CALL    L1AF4                   ; PREP_FP
 
         EX      DE,HL                   ; else swap the pointers.
         NEG                             ; negate negative result.
-        LD      (IX+$00),B              ; place B in FP_WS_0  (was C).
+        LD      (IX+000h),B              ; place B in FP_WS_0  (was C).
 
 L1BC1:  LD      B,A                     ; put positive subtraction result in B.
 
@@ -8741,9 +8741,9 @@ L1BC1:  LD      B,A                     ; put positive subtraction result in B.
 
         EX      DE,HL                   ; else switch the pointers back.
 
-L1BC9:  LD      B,$02                   ; two floating point numbers to consider
+L1BC9:  LD      B,002h                   ; two floating point numbers to consider
 
-        LD      C,(IX+$02)              ; FP_WS_02
+        LD      C,(IX+002h)              ; FP_WS_02
 
 L1BCE:  RL      C                       ; test sign bit first bit 7 then bit 6.
 
@@ -8759,19 +8759,19 @@ L1BCE:  RL      C                       ; test sign bit first bit 7 then bit 6.
 ; The routine preserves main registers so HL->(f1), DE->(f2) and B is zero.
 
         DEC     DE                      ; point to highest byte of result which
-                                        ; could be $99 if one negative number
-                                        ; involved or $98 if two negatives.
+                                        ; could be 099h if one negative number
+                                        ; involved or 098h if two negatives.
 
         LD      A,(DE)                  ; fetch the result sign byte.
-        ADD     A,$68                   ; add $68 causing carry if negative.
-        RR      B                       ; pick up carry in bit 7 of B, which
+        ADD     A,068h                   ; add 068h causing carry if negative.
+        RR      B                       ; pick up carry in bit 7 of B, which 
                                         ; was zero so zero flag now set if none.
 
-        LD      (IX+$02),B              ; place result sign in  FP_WS_02
+        LD      (IX+002h),B              ; place result sign in  FP_WS_02
 
         CALL    NZ,L1B43                ; routine BCD_NEGATE if negative result.
 
-; if the
+; if the 
 
 L1BE5:  LD      A,(DE)                  ;
         AND     A                       ;
@@ -8780,8 +8780,8 @@ L1BE5:  LD      A,(DE)                  ;
 
 ; else A is zero.
 
-        DEC     (IX+$00)                ; decrement the result exponent FP_WS_00
-        DEC     (IX+$00)                ; as two nibbles will be moved at a time
+        DEC     (IX+000h)                ; decrement the result exponent FP_WS_00
+        DEC     (IX+000h)                ; as two nibbles will be moved at a time
 
         PUSH    DE                      ; save pointer to 4th byte
 
@@ -8789,13 +8789,13 @@ L1BE5:  LD      A,(DE)                  ;
         LD      L,E                     ; equal to DE
         DEC     HL                      ; minus one.
 
-        LD      BC,$03FF                ; counter for three bytes. The $FF
-                                        ; value ensures B is not affected by
+        LD      BC,003FFh                ; counter for three bytes. The 0FFh 
+                                        ; value ensures B is not affected by 
                                         ; the LDD instruction. Also A is 0.
 
 L1BF6:  OR      (HL)                    ; (detects if the three bytes are zero)
 
-        LDD                             ; copy HL contents one location higher
+        LDD                             ; copy HL contents one location higher 
                                         ; to that addressed by DE. Also dec bc.
 
         DJNZ    L1BF6                   ; repeat for all 3 bytes
@@ -8814,7 +8814,7 @@ L1BF6:  OR      (HL)                    ; (detects if the three bytes are zero)
 
 ; ---
 
-; The branch was to here, from the end test above, when the 4th byte had been
+; The branch was to here, from the end test above, when the 4th byte had been 
 ; filled.
 ; Before joining common code, ensure that the initial block move will be
 ; ineffective.
@@ -8826,7 +8826,7 @@ L1C02:  LD      D,H                     ; make DE the same as HL - the source
 
 L1C04:  PUSH    DE                      ; save start location.
 
-        LD      BC,$0004                ; 4 bytes to consider.
+        LD      BC,00004h                ; 4 bytes to consider.
         LDIR                            ; block move sets DE to one past dest.
 
         POP     HL                      ; restore start of source.
@@ -8838,18 +8838,18 @@ L1C0C:  LD      A,(DE)                  ; load the 4th byte to accumulator.
 
         JR      Z,L1C21                 ; skip forward if so.
 
-        CP      $10                     ; test if one or two nibbles populated
+        CP      010h                     ; test if one or two nibbles populated
                                         ; setting carry for a single nibble.
 
-        SBC     A,A                     ; $00 for two nibbles, $FF for one.
-        INC     A                       ; $01                  $00
-        INC     A                       ; $02 for two nibbles, $01 for one :-)
+        SBC     A,A                     ; 000h for two nibbles, 0FFh for one.
+        INC     A                       ; 001h                  000h
+        INC     A                       ; 002h for two nibbles, 001h for one :-)
 
         LD      B,A                     ; nibble count to B.
-        ADD     A,(IX+$00)              ; add count to FP_WS_00 the result
+        ADD     A,(IX+000h)              ; add count to FP_WS_00 the result
         LD      (RAMSTART),A               ; exponent and place back in FP_WS_00.
 
-        CALL    L1B22                   ; routine 'shift_addend' moves all the
+        CALL    L1B22                   ; routine 'shift_addend' moves all the 
                                         ; nibbles to the right.
 
         JR      L1C0C                   ; back to pick up byte and then to
@@ -8857,33 +8857,33 @@ L1C0C:  LD      A,(DE)                  ; load the 4th byte to accumulator.
 
 ; ---
 
-; now test for a result that is too large or too small.
+; now test for a result that is too large or too small. 
 ; Note. these results may have arisen from multiplication or addition.
 
 L1C21:  LD      A,(RAMSTART)               ; fetch result exponent from FP_WS_00
 
         DEC     A                       ; decrement?
-        CP      $BF                     ; compare lower limit
+        CP      0BFh                     ; compare lower limit
         INC     A                       ; increment?
 
         JR      NC,L1C3D                ; forward if less to ZERO_RSLT
 
-        CP      $80                     ; compare upper limit
+        CP      080h                     ; compare upper limit
         JR      NC,L1C3B                ; forward to Error 8 - Overflow
 
         LD      B,A                     ; save unsigned exponent in B.
 
 ; now combine result sign and the exponent.
-; for addition then FP_WS_02 contains either $80 or $00 and most of what
+; for addition then FP_WS_02 contains either 080h or 000h and most of what 
 ; follows does not apply.
 ; for multiplication then bit 7 is sign of (f1) bit 6 is sign of (f2).
 
-L1C2F:   LD      A,(RAMSTART + $02)               ; FP_WS_02           see L1B13
+L1C2F:   LD      A,(RAMSTART + 002h)               ; FP_WS_02           see L1B13
 
         LD      C,A                     ; save a copy in C
         RLA                             ; rotate bit 6 to 7
         XOR     C                       ; XOR bit 7 - minus * minus = a plus.
-        AND     $80                     ; only interested in bit 7.
+        AND     080h                     ; only interested in bit 7.
         XOR     B                       ; combine with exponent.
         LD      (DE),A                  ; and place in sign/exp on Data Stack.
 
@@ -8892,13 +8892,13 @@ L1C2F:   LD      A,(RAMSTART + $02)               ; FP_WS_02           see L1B13
 ; ---
 
 L1C3B:  RST     20H                     ; Error 8.
-        DEFB    $08                     ; Overflow in floating-point arithmetic.
+        DEFB    008h                     ; Overflow in floating-point arithmetic.
 
 ; ------------------------------------
 ; THE 'ZERO RESULT' TERMINATING BRANCH
 ; ------------------------------------
 
-L1C3D:  LD      BC,$0400                ; count 4 bytes, fill byte is zero.
+L1C3D:  LD      BC,00400h                ; count 4 bytes, fill byte is zero.
 
 L1C40:  LD      (HL),C                  ; insert a zero.
         INC     HL                      ; next location.
@@ -8915,12 +8915,12 @@ L1C40:  LD      (HL),C                  ; insert a zero.
 ; (f1, f2 -- f1*f2)
 ; Multiplies top two floating point numbers and leaves result on the stack.
 
-L1C46:  DEFB    'F'                     ; 'name field'
-        DEFB    '*' + $80
+L1C46:  DEFB    'F'                     ; 'name field' 
+        DEFB    '*' + 080h
 
         DEFW    L1BB0                   ; 'link field'
 
-L1C4A:  DEFB    $02                     ; 'name length field'
+L1C4A:  DEFB    002h                     ; 'name length field'
 
 L1C4B:  DEFW    L1C4D                   ; 'code field'
 
@@ -8932,19 +8932,19 @@ L1C4D:  CALL    L1AF4                   ; routine PREP_FP prepares the two
 
         XOR     A                       ; set accumulator to zero.
         CP      B                       ; compare to exponent of (f1).
-        SBC     A,A                     ; $00 if zero or $FF
+        SBC     A,A                     ; 000h if zero or 0FFh
         AND     C                       ; combine with exponent of (f2).
 
         JR      Z,L1C3D                 ; back if zero to exit via ZERO_RSLT.
 
         PUSH    HL                      ; save pointer to first number - result.
 
-        LD      BC,RAMSTART + $02                ; set BC to location before free
+        LD      BC,RAMSTART + 002h                ; set BC to location before free 
                                         ; workspace set to zero by PREP_FP.
 
         PUSH    BC                      ; push onto machine stack.
 
-        LD      B,$03                   ; count three bytes - six nibbles.
+        LD      B,003h                   ; count three bytes - six nibbles.
 
 L1C5D:  LD      C,(HL)                  ; fetch BCD pair to C
         INC     HL                      ; address more significant pair.
@@ -8954,7 +8954,7 @@ L1C5D:  LD      C,(HL)                  ; fetch BCD pair to C
         INC     HL                      ; increment workspace pointer.
 
         CALL    L1B55                   ; routine BCD_OP multiplies C by each
-                                        ; of the 4 bytes of (f2) laying the
+                                        ; of the 4 bytes of (f2) laying the 
                                         ; result down in workspace at HL
 
         EX      (SP),HL                 ; swap in multiplier pointer to HL,
@@ -8966,7 +8966,7 @@ L1C5D:  LD      C,(HL)                  ; fetch BCD pair to C
         LD      A,B                     ; add the exponents
         ADD     A,C                     ; together.
 
-        SUB     $42                     ; adjust for sign
+        SUB     042h                     ; adjust for sign
 
         LD      (RAMSTART),A               ; put the result back in FP_WS_00.
 
@@ -8974,7 +8974,7 @@ L1C5D:  LD      C,(HL)                  ; fetch BCD pair to C
         POP     DE                      ; pop result pointer to DE.
 
         JR      L1C04                   ; back to common code to copy the 4
-                                        ; bytes from the workspace to the
+                                        ; bytes from the workspace to the 
                                         ; Data Stack and then set exponent
                                         ; and sign.
 
@@ -8985,23 +8985,23 @@ L1C5D:  LD      C,(HL)                  ; fetch BCD pair to C
 ; Divides two floating point numbers.
 
 L1C76:  DEFB    'F'                     ; 'name field'
-        DEFB    '/' + $80
+        DEFB    '/' + 080h
 
         DEFW    L1C4A                   ; 'link field'
 
-L1C7A:  DEFB    $02                     ; 'name length field'
+L1C7A:  DEFB    002h                     ; 'name length field'
 
 L1C7B:  DEFW    L1C7D                   ; 'code field'
 
 ;---
 
 L1C7D:  CALL    L1AF4                   ; routine PREP_FP prepares the two
-                                        ; numbers (f1) and (f2) placing the
-                                        ; raw exponents in the first two
+                                        ; numbers (f1) and (f2) placing the 
+                                        ; raw exponents in the first two 
                                         ; locations of workspace, the signs in
                                         ; the next location and clearing the
                                         ; sixteen remaining locations.
-                                        ; This must be the one that uses them
+                                        ; This must be the one that uses them 
                                         ; all.
 
         XOR     A                       ; set accumulator to zero.
@@ -9020,26 +9020,26 @@ L1C7D:  CALL    L1AF4                   ; routine PREP_FP prepares the two
         DEC     DE                      ;
         DEC     DE                      ; back to first
 
-        ADD     A,$01                   ; add one (e.g. 99 would give 9A)
-        DAA                             ; adjust  (e.g. $9A would be $00 carry)
+        ADD     A,001h                   ; add one (e.g. 99 would give 9A)
+        DAA                             ; adjust  (e.g. 09Ah would be 000h carry)
         EX      AF,AF'                  ; save the flags
-        EX      DE,HL                   ; HL now points to divisor
+        EX      DE,HL                   ; HL now points to divisor 
 
         CALL    L1B43                   ; routine BCD negate the divisor
 
         EX      DE,HL                   ; point back again.
         PUSH    HL                      ; save pointer to first - the result.
 
-        LD      DE,RAMSTART + $10                ; destination FP_WS_10
-        LD      BC,$0004                ; four bytes
+        LD      DE,RAMSTART + 010h                ; destination FP_WS_10
+        LD      BC,00004h                ; four bytes
 
-        LDIR                            ; copy to end of FP_WS
+        LDIR                            ; copy to end of FP_WS 
                                         ; (+ one byte of list_ws)
 
         EX      DE,HL                   ; HL points to last cell plus one.
         DEC     HL                      ; Now points to last byte copied.
 
-        LD      B,$05                   ; count 5.
+        LD      B,005h                   ; count 5.
 
 ; loop
 
@@ -9062,9 +9062,9 @@ L1CA2:  PUSH    DE                      ;
 ; ---
 
 L1CB0:  PUSH    BC                      ;
-        LD      B,$02                   ;
+        LD      B,002h                   ;
 
-L1CB3:  LD      D,$10                   ;
+L1CB3:  LD      D,010h                   ;
 
 L1CB5:  SLA     E                       ;
         RLA                             ;
@@ -9102,10 +9102,10 @@ L1CCB:  LD      C,E                     ;
 
         PUSH    DE                      ;
 
-        LD      DE,$FFFB                ; -4
+        LD      DE,0FFFBh                ; -4
         ADD     HL,DE                   ;
 
-        LD      DE,RAMSTART + $03                ; FP_WS_03
+        LD      DE,RAMSTART + 003h                ; FP_WS_03
         LD      A,C                     ;
         LD      (DE),A                  ;
 
@@ -9121,11 +9121,11 @@ L1CE8:  DJNZ    L1CA2                   ;
         LD      HL,(RAMSTART)              ; FP_WS
         LD      A,H                     ;
         SUB     L                       ;
-        ADD     A,$40                   ;
+        ADD     A,040h                   ;
 
-        LD      HL,RAMSTART + $08                ; FP_WS
+        LD      HL,RAMSTART + 008h                ; FP_WS
         LD      B,A                     ;
-        LD      A,(RAMSTART + $0B)               ;
+        LD      A,(RAMSTART + 00Bh)               ;
         AND     A                       ;
         JR      NZ,L1CFE                ;
 
@@ -9133,12 +9133,12 @@ L1CE8:  DJNZ    L1CA2                   ;
         DEC     B                       ;
         DEC     HL                      ;
 
-L1CFE:  LD      (IX+$00),B              ;
+L1CFE:  LD      (IX+000h),B              ;
 
         POP     DE                      ;
 
         JP      L1C04                   ; back to common code to copy the 4
-                                        ; bytes from the workspace to the
+                                        ; bytes from the workspace to the 
                                         ; Data Stack and then set exponent
                                         ; and sign.
 
@@ -9150,11 +9150,11 @@ L1CFE:  LD      (IX+$00),B              ;
 ; Toggle the sign bit unless the number is zero (four zero bytes).
 
 L1D05:  DEFM    "FNEGAT"                ; 'name field'
-        DEFB    'E' + $80
+        DEFB    'E' + 080h
 
         DEFW    L1C7A                   ; 'link field'
 
-L1D0E:  DEFB    $07                     ; 'name length field'
+L1D0E:  DEFB    007h                     ; 'name length field'
 
 L1D0F:  DEFW    L1D11                   ; 'code field'
 
@@ -9166,7 +9166,7 @@ L1D11:  RST     18H                     ; pop word from data stack to DE.
         AND     A                       ; test for zero.
         JR      Z,L1D18                 ; forward if so to leave undisturbed.
 
-        XOR     $80                     ; else toggle the sign bit
+        XOR     080h                     ; else toggle the sign bit
 
 L1D18:  LD      D,A                     ; exponent byte to D.
         RST     10H                     ; push word DE on data stack.
@@ -9182,26 +9182,26 @@ L1D18:  LD      D,A                     ; exponent byte to D.
 ; Result in range -32768 to 32767
 
 L1D1C:  DEFM    "IN"                    ; 'name field'
-        DEFB    'T' + $80
+        DEFB    'T' + 080h
 
         DEFW    L1D0E                   ; 'link field'
 
-L1D21:  DEFB    $03                     ; 'name length field'
+L1D21:  DEFB    003h                     ; 'name length field'
 
 L1D22:  DEFW    L1D24                   ; 'code field'
 
 ; ---
 
-L1D24:  LD      HL,(RAMSTART + $3B)              ; fetch value from SPARE.
+L1D24:  LD      HL,(RAMSTART + 03Bh)              ; fetch value from SPARE.
         DEC     HL                      ; now points to end of data stack.
 
-        LD      DE,$0000                ; initialize 16-bit result.
+        LD      DE,00000h                ; initialize 16-bit result.
 
 L1D2B:  LD      A,(HL)                  ; fetch the exponent byte.
 
         RLCA                            ; double exponent moving sign bit to 0.
 
-        CP      $82                     ; compare exponent to plus 1.
+        CP      082h                     ; compare exponent to plus 1.
         JR      C,L1D45                 ; forward if number is smaller than 1
                                         ; to return the result DE.
 
@@ -9228,7 +9228,7 @@ L1D2B:  LD      A,(HL)                  ; fetch the exponent byte.
         ADD     HL,HL                   ; * 10
 
         LD      C,A                     ; leftmost nibble from mantissa to C.
-        LD      B,$00                   ; prepare to add just the nibble.
+        LD      B,000h                   ; prepare to add just the nibble.
         ADD     HL,BC                   ; add into the result.
         EX      DE,HL                   ; switch back to DE
 
@@ -9253,14 +9253,14 @@ L1D45:  DEC     HL                      ; skip redundant components of Floating
 ; (un -- f)
 ; Converts unsigned single length integer to floating point.
 ; e.g. 65535 16 bit number converted to  32-bit float 8-bit sign/exponent
-; 6-nibble BCD mantissa.    $45  6 5 5 3 5 0
+; 6-nibble BCD mantissa.    045h  6 5 5 3 5 0
 
 L1D50:  DEFM    "UFLOA"                 ; 'name field'
-        DEFB    'T' +$80
+        DEFB    'T' +080h
 
         DEFW    L1D21                   ; 'link field'
 
-L1D58:  DEFB    $06                     ; 'name length field'
+L1D58:  DEFB    006h                     ; 'name length field'
 
 L1D59:  DEFW    L1D5B                   ; 'code field'
 
@@ -9269,7 +9269,7 @@ L1D59:  DEFW    L1D5B                   ; 'code field'
 L1D5B:  RST     18H                     ; pop word off stack to DE
         EX      DE,HL                   ; now HL
 
-        LD      BC,$1000                ; count 16 bits, set C to zero.
+        LD      BC,01000h                ; count 16 bits, set C to zero.
         LD      D,C
         LD      E,C                     ; initialize DE to zero.
 
@@ -9290,7 +9290,7 @@ L1D62:  ADD     HL,HL                   ; double
 
         RST     10H                     ; DE to Data stack.
 
-        LD      D,$46                   ; exponent byte   +6
+        LD      D,046h                   ; exponent byte   +6
         LD      E,C                     ; low byte
 
         RST     10H                     ; higher word of float to stack.
@@ -9313,7 +9313,7 @@ L1D62:  ADD     HL,HL                   ; double
 ; character.
 
 
-; $20 - Character: ' '          CHR$(32)
+; 020h - Character: ' '          CHR0h(32)
 
 L1D7B:  DEFB    00000000B
         DEFB    00000000B
@@ -9323,7 +9323,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00000000B
         DEFB    00000000B
 
-; $21 - Character: '!'          CHR$(33)
+; 021h - Character: '!'          CHR0h(33)
 
         DEFB    00010000B
         DEFB    00010000B
@@ -9333,7 +9333,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00010000B
         DEFB    00000000B
 
-; $22 - Character: '"'          CHR$(34)
+; 022h - Character: '"'          CHR0h(34)
 
         DEFB    00100100B
         DEFB    00100100B
@@ -9343,7 +9343,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00000000B
         DEFB    00000000B
 
-; $23 - Character: '#'          CHR$(35)
+; 023h - Character: '#'          CHR0h(35)
 
         DEFB    00100100B
         DEFB    01111110B
@@ -9353,7 +9353,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00100100B
         DEFB    00000000B
 
-; $24 - Character: '$'          CHR$(36)
+; 024h - Character: '0h'          CHR0h(36)
 
         DEFB    00001000B
         DEFB    00111110B
@@ -9363,7 +9363,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00111110B
         DEFB    00001000B
 
-; $25 - Character: '%'          CHR$(37)
+; 025h - Character: '%'          CHR0h(37)
 
         DEFB    01100010B
         DEFB    01100100B
@@ -9373,7 +9373,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01000110B
         DEFB    00000000B
 
-; $26 - Character: '&'          CHR$(38)
+; 026h - Character: '&'          CHR0h(38)
 
         DEFB    00010000B
         DEFB    00101000B
@@ -9383,7 +9383,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00111010B
         DEFB    00000000B
 
-; $27 - Character: '''          CHR$(39)
+; 027h - Character: '''          CHR0h(39)
 
         DEFB    00001000B
         DEFB    00010000B
@@ -9393,7 +9393,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00000000B
         DEFB    00000000B
 
-; $28 - Character: '('          CHR$(40)
+; 028h - Character: '('          CHR0h(40)
 
         DEFB    00000100B
         DEFB    00001000B
@@ -9403,7 +9403,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00000100B
         DEFB    00000000B
 
-; $29 - Character: ')'          CHR$(42)
+; 029h - Character: ')'          CHR0h(42)
 
         DEFB    00100000B
         DEFB    00010000B
@@ -9413,7 +9413,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00100000B
         DEFB    00000000B
 
-; $2A - Character: '*'          CHR$(42)
+; 02Ah - Character: '*'          CHR0h(42)
 
         DEFB    00000000B
         DEFB    00010100B
@@ -9423,7 +9423,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00010100B
         DEFB    00000000B
 
-; $2B - Character: '+'          CHR$(43)
+; 02Bh - Character: '+'          CHR0h(43)
 
         DEFB    00000000B
         DEFB    00001000B
@@ -9433,7 +9433,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00001000B
         DEFB    00000000B
 
-; $2C - Character: ','          CHR$(44)
+; 02Ch - Character: ','          CHR0h(44)
 
         DEFB    00000000B
         DEFB    00000000B
@@ -9443,7 +9443,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00001000B
         DEFB    00010000B
 
-; $2D - Character: '-'          CHR$(45)
+; 02Dh - Character: '-'          CHR0h(45)
 
         DEFB    00000000B
         DEFB    00000000B
@@ -9453,7 +9453,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00000000B
         DEFB    00000000B
 
-; $2E - Character: '.'          CHR$(46)
+; 02Eh - Character: '.'          CHR0h(46)
 
         DEFB    00000000B
         DEFB    00000000B
@@ -9463,7 +9463,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00011000B
         DEFB    00000000B
 
-; $2F - Character: '/'          CHR$(47)
+; 02Fh - Character: '/'          CHR0h(47)
 
         DEFB    00000000B
         DEFB    00000010B
@@ -9473,7 +9473,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00100000B
         DEFB    00000000B
 
-; $30 - Character: '0'          CHR$(48)
+; 030h - Character: '0'          CHR0h(48)
 
         DEFB    00111100B
         DEFB    01000110B
@@ -9483,7 +9483,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00111100B
         DEFB    00000000B
 
-; $31 - Character: '1'          CHR$(49)
+; 031h - Character: '1'          CHR0h(49)
 
         DEFB    00011000B
         DEFB    00101000B
@@ -9493,7 +9493,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00111110B
         DEFB    00000000B
 
-; $32 - Character: '2'          CHR$(50)
+; 032h - Character: '2'          CHR0h(50)
 
         DEFB    00111100B
         DEFB    01000010B
@@ -9503,7 +9503,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01111110B
         DEFB    00000000B
 
-; $33 - Character: '3'          CHR$(51)
+; 033h - Character: '3'          CHR0h(51)
 
         DEFB    00111100B
         DEFB    01000010B
@@ -9513,7 +9513,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00111100B
         DEFB    00000000B
 
-; $34 - Character: '4'          CHR$(52)
+; 034h - Character: '4'          CHR0h(52)
 
         DEFB    00001000B
         DEFB    00011000B
@@ -9523,7 +9523,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00001000B
         DEFB    00000000B
 
-; $35 - Character: '5'          CHR$(53)
+; 035h - Character: '5'          CHR0h(53)
 
         DEFB    01111110B
         DEFB    01000000B
@@ -9533,7 +9533,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00111100B
         DEFB    00000000B
 
-; $36 - Character: '6'          CHR$(54)
+; 036h - Character: '6'          CHR0h(54)
 
         DEFB    00111100B
         DEFB    01000000B
@@ -9543,7 +9543,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00111100B
         DEFB    00000000B
 
-; $37 - Character: '7'          CHR$(55)
+; 037h - Character: '7'          CHR0h(55)
 
         DEFB    01111110B
         DEFB    00000010B
@@ -9553,7 +9553,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00010000B
         DEFB    00000000B
 
-; $38 - Character: '8'          CHR$(56)
+; 038h - Character: '8'          CHR0h(56)
 
         DEFB    00111100B
         DEFB    01000010B
@@ -9563,7 +9563,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00111100B
         DEFB    00000000B
 
-; $39 - Character: '9'          CHR$(57)
+; 039h - Character: '9'          CHR0h(57)
 
         DEFB    00111100B
         DEFB    01000010B
@@ -9573,7 +9573,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00111100B
         DEFB    00000000B
 
-; $3A - Character: ':'          CHR$(58)
+; 03Ah - Character: ':'          CHR0h(58)
 
         DEFB    00000000B
         DEFB    00000000B
@@ -9583,7 +9583,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00010000B
         DEFB    00000000B
 
-; $3B - Character: ';'          CHR$(59)
+; 03Bh - Character: ';'          CHR0h(59)
 
         DEFB    00000000B
         DEFB    00010000B
@@ -9593,7 +9593,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00010000B
         DEFB    00100000B
 
-; $3C - Character: '<'          CHR$(60)
+; 03Ch - Character: '<'          CHR0h(60)
 
         DEFB    00000000B
         DEFB    00000100B
@@ -9603,7 +9603,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00000100B
         DEFB    00000000B
 
-; $3D - Character: '='          CHR$(61)
+; 03Dh - Character: '='          CHR0h(61)
 
         DEFB    00000000B
         DEFB    00000000B
@@ -9613,7 +9613,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00000000B
         DEFB    00000000B
 
-; $3E - Character: '>'          CHR$(62)
+; 03Eh - Character: '>'          CHR0h(62)
 
         DEFB    00000000B
         DEFB    00010000B
@@ -9623,7 +9623,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00010000B
         DEFB    00000000B
 
-; $3F - Character: '?'          CHR$(63)
+; 03Fh - Character: '?'          CHR0h(63)
 
         DEFB    00111100B
         DEFB    01000010B
@@ -9632,7 +9632,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00000000B
         DEFB    00001000B
 
-; $40 - Character: '@'          CHR$(64)
+; 040h - Character: '@'          CHR0h(64)
 
         DEFB    00111100B
         DEFB    01001010B
@@ -9641,7 +9641,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01000000B
         DEFB    00111100B
 
-; $41 - Character: 'A'          CHR$(65)
+; 041h - Character: 'A'          CHR0h(65)
 
         DEFB    00111100B
         DEFB    01000010B
@@ -9650,7 +9650,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01000010B
         DEFB    01000010B
 
-; $42 - Character: 'B'          CHR$(66)
+; 042h - Character: 'B'          CHR0h(66)
 
         DEFB    01111100B
         DEFB    01000010B
@@ -9659,7 +9659,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01000010B
         DEFB    01111100B
 
-; $43 - Character: 'C'          CHR$(67)
+; 043h - Character: 'C'          CHR0h(67)
 
         DEFB    00111100B
         DEFB    01000010B
@@ -9668,7 +9668,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01000010B
         DEFB    00111100B
 
-; $44 - Character: 'D'          CHR$(68)
+; 044h - Character: 'D'          CHR0h(68)
 
         DEFB    01111000B
         DEFB    01000100B
@@ -9677,7 +9677,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01000100B
         DEFB    01111000B
 
-; $45 - Character: 'E'          CHR$(69)
+; 045h - Character: 'E'          CHR0h(69)
 
         DEFB    01111110B
         DEFB    01000000B
@@ -9686,7 +9686,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01000000B
         DEFB    01111110B
 
-; $46 - Character: 'F'          CHR$(70)
+; 046h - Character: 'F'          CHR0h(70)
 
         DEFB    01111110B
         DEFB    01000000B
@@ -9695,7 +9695,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01000000B
         DEFB    01000000B
 
-; $47 - Character: 'G'          CHR$(71)
+; 047h - Character: 'G'          CHR0h(71)
 
         DEFB    00111100B
         DEFB    01000010B
@@ -9704,7 +9704,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01000010B
         DEFB    00111100B
 
-; $48 - Character: 'H'          CHR$(72)
+; 048h - Character: 'H'          CHR0h(72)
 
         DEFB    01000010B
         DEFB    01000010B
@@ -9713,7 +9713,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01000010B
         DEFB    01000010B
 
-; $49 - Character: 'I'          CHR$(73)
+; 049h - Character: 'I'          CHR0h(73)
 
         DEFB    00111110B
         DEFB    00001000B
@@ -9722,7 +9722,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00001000B
         DEFB    00111110B
 
-; $4A - Character: 'J'          CHR$(74)
+; 04Ah - Character: 'J'          CHR0h(74)
 
         DEFB    00000010B
         DEFB    00000010B
@@ -9731,7 +9731,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01000010B
         DEFB    00111100B
 
-; $4B - Character: 'K'          CHR$(75)
+; 04Bh - Character: 'K'          CHR0h(75)
 
         DEFB    01000100B
         DEFB    01001000B
@@ -9740,7 +9740,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01000100B
         DEFB    01000010B
 
-; $4C - Character: 'L'          CHR$(76)
+; 04Ch - Character: 'L'          CHR0h(76)
 
         DEFB    01000000B
         DEFB    01000000B
@@ -9749,7 +9749,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01000000B
         DEFB    01111110B
 
-; $4D - Character: 'M'          CHR$(77)
+; 04Dh - Character: 'M'          CHR0h(77)
 
         DEFB    01000010B
         DEFB    01100110B
@@ -9758,7 +9758,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01000010B
         DEFB    01000010B
 
-; $4E - Character: 'N'          CHR$(78)
+; 04Eh - Character: 'N'          CHR0h(78)
 
         DEFB    01000010B
         DEFB    01100010B
@@ -9767,7 +9767,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01000110B
         DEFB    01000010B
 
-; $4F - Character: 'O'          CHR$(79)
+; 04Fh - Character: 'O'          CHR0h(79)
 
         DEFB    00111100B
         DEFB    01000010B
@@ -9776,7 +9776,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01000010B
         DEFB    00111100B
 
-; $50 - Character: 'P'          CHR$(80)
+; 050h - Character: 'P'          CHR0h(80)
 
         DEFB    01111100B
         DEFB    01000010B
@@ -9785,7 +9785,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01000000B
         DEFB    01000000B
 
-; $51 - Character: 'Q'          CHR$(81)
+; 051h - Character: 'Q'          CHR0h(81)
 
         DEFB    00111100B
         DEFB    01000010B
@@ -9794,7 +9794,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01001010B
         DEFB    00111100B
 
-; $52 - Character: 'R'          CHR$(82)
+; 052h - Character: 'R'          CHR0h(82)
 
         DEFB    01111100B
         DEFB    01000010B
@@ -9803,7 +9803,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01000100B
         DEFB    01000010B
 
-; $53 - Character: 'S'          CHR$(83)
+; 053h - Character: 'S'          CHR0h(83)
 
         DEFB    00111100B
         DEFB    01000000B
@@ -9812,7 +9812,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01000010B
         DEFB    00111100B
 
-; $54 - Character: 'T'          CHR$(84)
+; 054h - Character: 'T'          CHR0h(84)
 
         DEFB    11111110B
         DEFB    00010000B
@@ -9821,7 +9821,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00010000B
         DEFB    00010000B
 
-; $55 - Character: 'U'          CHR$(85)
+; 055h - Character: 'U'          CHR0h(85)
 
         DEFB    01000010B
         DEFB    01000010B
@@ -9830,7 +9830,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01000010B
         DEFB    00111110B
 
-; $56 - Character: 'V'          CHR$(86)
+; 056h - Character: 'V'          CHR0h(86)
 
         DEFB    01000010B
         DEFB    01000010B
@@ -9839,7 +9839,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00100100B
         DEFB    00011000B
 
-; $57 - Character: 'W'          CHR$(87)
+; 057h - Character: 'W'          CHR0h(87)
 
         DEFB    01000010B
         DEFB    01000010B
@@ -9848,7 +9848,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01011010B
         DEFB    00100100B
 
-; $58 - Character: 'X'          CHR$(88)
+; 058h - Character: 'X'          CHR0h(88)
 
         DEFB    01000010B
         DEFB    00100100B
@@ -9857,7 +9857,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00100100B
         DEFB    01000010B
 
-; $59 - Character: 'Y'          CHR$(89)
+; 059h - Character: 'Y'          CHR0h(89)
 
         DEFB    10000010B
         DEFB    01000100B
@@ -9866,7 +9866,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00010000B
         DEFB    00010000B
 
-; $5A - Character: 'Z'          CHR$(90)
+; 05Ah - Character: 'Z'          CHR0h(90)
 
         DEFB    01111110B
         DEFB    00000100B
@@ -9875,7 +9875,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00100000B
         DEFB    01111110B
 
-; $5B - Character: '['          CHR$(91)
+; 05Bh - Character: '['          CHR0h(91)
 
         DEFB    00001110B
         DEFB    00001000B
@@ -9884,7 +9884,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00001000B
         DEFB    00001110B
 
-; $5C - Character: '\'          CHR$(92)
+; 05Ch - Character: '\'          CHR0h(92)
 
         DEFB    00000000B
         DEFB    01000000B
@@ -9893,7 +9893,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00001000B
         DEFB    00000100B
 
-; $5D - Character: ']'          CHR$(93)
+; 05Dh - Character: ']'          CHR0h(93)
 
         DEFB    01110000B
         DEFB    00010000B
@@ -9902,7 +9902,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00010000B
         DEFB    01110000B
 
-; $5E - Character: '^'          CHR$(94)
+; 05Eh - Character: '^'          CHR0h(94)
 
         DEFB    00010000B
         DEFB    00111000B
@@ -9911,7 +9911,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00010000B
         DEFB    00010000B
 
-; $5F - Character: '_'          CHR$(95)
+; 05Fh - Character: '_'          CHR0h(95)
 
         DEFB    00000000B
         DEFB    00000000B
@@ -9921,7 +9921,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00000000B
         DEFB    11111111B
 
-; $60 - Character:  �           CHR$(96)
+; 060h - Character:  �           CHR0h(96)
 
         DEFB    00011100B
         DEFB    00100010B
@@ -9931,7 +9931,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01111110B
         DEFB    00000000B
 
-; $61 - Character: 'a'          CHR$(97)
+; 061h - Character: 'a'          CHR0h(97)
 
         DEFB    00000000B
         DEFB    00111000B
@@ -9941,7 +9941,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00111110B
         DEFB    00000000B
 
-; $62 - Character: 'b'          CHR$(98)
+; 062h - Character: 'b'          CHR0h(98)
 
         DEFB    00100000B
         DEFB    00100000B
@@ -9951,7 +9951,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00111100B
         DEFB    00000000B
 
-; $63 - Character: 'c'          CHR$(99)
+; 063h - Character: 'c'          CHR0h(99)
 
         DEFB    00000000B
         DEFB    00011100B
@@ -9961,7 +9961,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00011100B
         DEFB    00000000B
 
-; $64 - Character: 'd'          CHR$(100)
+; 064h - Character: 'd'          CHR0h(100)
 
         DEFB    00000100B
         DEFB    00000100B
@@ -9971,7 +9971,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00111110B
         DEFB    00000000B
 
-; $65 - Character: 'e'          CHR$(101)
+; 065h - Character: 'e'          CHR0h(101)
 
         DEFB    00000000B
         DEFB    00111000B
@@ -9981,7 +9981,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00111100B
         DEFB    00000000B
 
-; $66 - Character: 'f'          CHR$(102)
+; 066h - Character: 'f'          CHR0h(102)
 
         DEFB    00001100B
         DEFB    00010000B
@@ -9991,7 +9991,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00010000B
         DEFB    00000000B
 
-; $67 - Character: 'g'          CHR$(103)
+; 067h - Character: 'g'          CHR0h(103)
 
         DEFB    00000000B
         DEFB    00111100B
@@ -10001,7 +10001,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00000100B
         DEFB    00111000B
 
-; $68 - Character: 'h'          CHR$(104)
+; 068h - Character: 'h'          CHR0h(104)
 
         DEFB    01000000B
         DEFB    01000000B
@@ -10011,7 +10011,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01000100B
         DEFB    00000000B
 
-; $69 - Character: 'i'          CHR$(105)
+; 069h - Character: 'i'          CHR0h(105)
 
         DEFB    00010000B
         DEFB    00000000B
@@ -10021,7 +10021,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00111000B
         DEFB    00000000B
 
-; $6A - Character: 'j'          CHR$(106)
+; 06Ah - Character: 'j'          CHR0h(106)
 
         DEFB    00000100B
         DEFB    00000000B
@@ -10031,7 +10031,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00100100B
         DEFB    00011000B
 
-; $6B - Character: 'k'          CHR$(107)
+; 06Bh - Character: 'k'          CHR0h(107)
 
         DEFB    00100000B
         DEFB    00101000B
@@ -10041,7 +10041,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00100100B
         DEFB    00000000B
 
-; $6C - Character: 'l'          CHR$(108)
+; 06Ch - Character: 'l'          CHR0h(108)
 
         DEFB    00010000B
         DEFB    00010000B
@@ -10051,7 +10051,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00001100B
         DEFB    00000000B
 
-; $6D - Character: 'm'          CHR$(109)
+; 06Dh - Character: 'm'          CHR0h(109)
 
         DEFB    00000000B
         DEFB    01101000B
@@ -10061,7 +10061,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01010100B
         DEFB    00000000B
 
-; $6E - Character: 'n'          CHR$(110)
+; 06Eh - Character: 'n'          CHR0h(110)
 
         DEFB    00000000B
         DEFB    01111000B
@@ -10071,7 +10071,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01000100B
         DEFB    00000000B
 
-; $6F - Character: 'o'          CHR$(111)
+; 06Fh - Character: 'o'          CHR0h(111)
 
         DEFB    00000000B
         DEFB    00111000B
@@ -10081,7 +10081,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00111000B
         DEFB    00000000B
 
-; $70 - Character: 'p'          CHR$(112)
+; 070h - Character: 'p'          CHR0h(112)
 
         DEFB    00000000B
         DEFB    01111000B
@@ -10091,7 +10091,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01000000B
         DEFB    01000000B
 
-; $71 - Character: 'q'          CHR$(113)
+; 071h - Character: 'q'          CHR0h(113)
 
         DEFB    00000000B
         DEFB    00111100B
@@ -10101,7 +10101,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00000100B
         DEFB    00000110B
 
-; $72 - Character: 'r'          CHR$(114)
+; 072h - Character: 'r'          CHR0h(114)
 
         DEFB    00000000B
         DEFB    00011100B
@@ -10111,7 +10111,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00100000B
         DEFB    00000000B
 
-; $73 - Character: 's'          CHR$(115)
+; 073h - Character: 's'          CHR0h(115)
 
         DEFB    00000000B
         DEFB    00111000B
@@ -10121,7 +10121,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01111000B
         DEFB    00000000B
 
-; $74 - Character: 't'          CHR$(116)
+; 074h - Character: 't'          CHR0h(116)
 
         DEFB    00010000B
         DEFB    00111000B
@@ -10131,7 +10131,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00001100B
         DEFB    00000000B
 
-; $75 - Character: 'u'          CHR$(117)
+; 075h - Character: 'u'          CHR0h(117)
 
         DEFB    00000000B
         DEFB    01000100B
@@ -10141,7 +10141,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00111100B
         DEFB    00000000B
 
-; $76 - Character: 'v'          CHR$(118)
+; 076h - Character: 'v'          CHR0h(118)
 
         DEFB    00000000B
         DEFB    01000100B
@@ -10151,7 +10151,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00010000B
         DEFB    00000000B
 
-; $77 - Character: 'w'          CHR$(119)
+; 077h - Character: 'w'          CHR0h(119)
 
         DEFB    00000000B
         DEFB    01000100B
@@ -10161,7 +10161,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00101000B
         DEFB    00000000B
 
-; $78 - Character: 'x'          CHR$(120)
+; 078h - Character: 'x'          CHR0h(120)
 
         DEFB    00000000B
         DEFB    01000100B
@@ -10171,7 +10171,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01000100B
         DEFB    00000000B
 
-; $79 - Character: 'y'          CHR$(121)
+; 079h - Character: 'y'          CHR0h(121)
 
         DEFB    00000000B
         DEFB    01000100B
@@ -10181,7 +10181,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00000100B
         DEFB    00111000B
 
-; $7A - Character: 'z'          CHR$(122)
+; 07Ah - Character: 'z'          CHR0h(122)
 
         DEFB    00000000B
         DEFB    01111100B
@@ -10191,7 +10191,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01111100B
         DEFB    00000000B
 
-; $7B - Character: '{'          CHR$(123)
+; 07Bh - Character: '{'          CHR0h(123)
 
         DEFB    00001110B
         DEFB    00001000B
@@ -10201,7 +10201,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00001110B
         DEFB    00000000B
 
-; $7C - Character: '|'          CHR$(124)
+; 07Ch - Character: '|'          CHR0h(124)
 
         DEFB    00001000B
         DEFB    00001000B
@@ -10211,7 +10211,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00001000B
         DEFB    00000000B
 
-; $7D - Character: '}'          CHR$(125)
+; 07Dh - Character: '}'          CHR0h(125)
 
         DEFB    01110000B
         DEFB    00010000B
@@ -10221,7 +10221,7 @@ L1D7B:  DEFB    00000000B
         DEFB    01110000B
         DEFB    00000000B
 
-; $7E - Character: '~'          CHR$(126)
+; 07Eh - Character: '~'          CHR0h(126)
 
         DEFB    00110010B
         DEFB    01001100B
@@ -10231,7 +10231,7 @@ L1D7B:  DEFB    00000000B
         DEFB    00000000B
         DEFB    00000000B
 
-; $7F - Character:  �           CHR$(127)
+; 07Fh - Character:  �           CHR0h(127)
 
         DEFB    00111100B
         DEFB    01000010B
@@ -10248,7 +10248,7 @@ L1FFB:  DEFB    00111100B
 ; THE 'SPARE' ROM
 ; ---------------
 
-L1FFC:  DEFB    $FF                     ; unused
+L1FFC:  DEFB    0FFh                     ; unused
 
 ; ----------
 ; THE 'LINK'
@@ -10257,21 +10257,17 @@ L1FFC:  DEFB    $FF                     ; unused
 ; The FORTH word copied to RAM links back to L1FFF
 
 L1FFD:  DEFW    L1D58                   ; pointer to prev - UFLOAT
-L1FFF:  DEFB    $00                     ; length of dummy word zero
+L1FFF:  DEFB    000h                     ; length of dummy word zero
 
 
 ORG     0x2000
 
-HOLE4VIDRAM: DS  4096
+HOLE4VIDRAM: DS  4096     
 
 ORG     0x3000
 
 NEWROMSTART:
-LD HL,0
-
-ORG     0x3FFF
-
-NEWROMEND: DS   1        ,'Z'
+LD HL,0 
 
 ;.END
 
@@ -10287,86 +10283,86 @@ NEWROMEND: DS   1        ,'Z'
 ; FORTH words in bold type in the usual way."
 ;
 ;
-; FP_WS         RAMSTART + $00 (15360)   19 bytes used as work space for floating point
+; FP_WS         RAMSTART + 000h (15360)   19 bytes used as work space for floating point
 ;                               arithmetic.
 ;
-; LISTWS        RAMSTART + $13 (15379)   5 bytes used as workspace by 'LIST' and 'EDIT'.
+; LISTWS        RAMSTART + 013h (15379)   5 bytes used as workspace by 'LIST' and 'EDIT'.
 ;
-; RAMTOP        RAMSTART + $18 (15384)   2 bytes - the first address past the last
+; RAMTOP        RAMSTART + 018h (15384)   2 bytes - the first address past the last
 ;                               address in RAM.
 ;
-; HLD           RAMSTART + $1A (15386)   2 bytes. The address of the latest character
+; HLD           RAMSTART + 01Ah (15386)   2 bytes. The address of the latest character
 ;                               held in the pad by formatted output.
 ;                               ('#', 'HOLD' and so on).
 ;
-; SCRPOS        RAMSTART + $1C (15388)   2 bytes. The address of the place in video RAM
+; SCRPOS        RAMSTART + 01Ch (15388)   2 bytes. The address of the place in video RAM
 ;                               where the next character is to be printed
 ;                               (i.e. the 'print position').
 ;
-; INSCRN        RAMSTART + $1E (15390)   2 bytes. The address of the start of the
+; INSCRN        RAMSTART + 01Eh (15390)   2 bytes. The address of the start of the
 ;                               current 'logical line' in the input buffer.
 ;
-; CURSOR        RAMSTART + $20 (15392)   2 bytes. The address of the cursor in the
+; CURSOR        RAMSTART + 020h (15392)   2 bytes. The address of the cursor in the
 ;                               input buffer.
 ;
-; ENDBUF        RAMSTART + $22 (15394)   2 bytes. The address of the end of the current
+; ENDBUF        RAMSTART + 022h (15394)   2 bytes. The address of the end of the current
 ;                               logical line in the input buffer.
 ;
-; L_HALF        RAMSTART + $24 (15396)   2 bytes. The address of the start of the the
+; L_HALF        RAMSTART + 024h (15396)   2 bytes. The address of the start of the the
 ;                               input buffer. The input buffer itself is stored
 ;                               in the video RAM, where you see it.
 ;
-; KEYCOD        RAMSTART + $26 (15398)   1 byte. The ASCII code of the last key pressed.
+; KEYCOD        RAMSTART + 026h (15398)   1 byte. The ASCII code of the last key pressed.
 ;
-; KEYCNT        RAMSTART + $27 (15399)   1 byte. Used by the routine that reads the
+; KEYCNT        RAMSTART + 027h (15399)   1 byte. Used by the routine that reads the
 ;                               keyboard.
 ;
-; STATIN        RAMSTART + $28 (15400)   1 byte. Used by the routine that reads the
+; STATIN        RAMSTART + 028h (15400)   1 byte. Used by the routine that reads the
 ;                               keyboard.
 ;
-; EXWRCH        RAMSTART + $29 (15401)   2 bytes. This is normally 0 but it can be
+; EXWRCH        RAMSTART + 029h (15401)   2 bytes. This is normally 0 but it can be
 ;                               changed to allow printing to be sent to some
 ;                               device other than the screen.
 ;
-; FRAMES        RAMSTART + $2B (15403)   4 bytes. These four bytes form a double length
+; FRAMES        RAMSTART + 02Bh (15403)   4 bytes. These four bytes form a double length
 ;                               integer that counts the time since the Ace was
 ;                               switched on in 50ths of a second.
 ;
-; XCOORD        RAMSTART + $2F (15407)   1 byte. The x-coordinate last used by 'PLOT'.
+; XCOORD        RAMSTART + 02Fh (15407)   1 byte. The x-coordinate last used by 'PLOT'.
 ;
-; YCOORD        RAMSTART + $30 (15408)   1 byte. The y-coordinate last used by 'PLOT'.
+; YCOORD        RAMSTART + 030h (15408)   1 byte. The y-coordinate last used by 'PLOT'.
 ;
-; CURRENT       RAMSTART + $31 (15409)   2 bytes. The parameter field address for the
+; CURRENT       RAMSTART + 031h (15409)   2 bytes. The parameter field address for the
 ;                               vocabulary word of the current vocabulary.
 ;
-; CONTEXT       RAMSTART + $33 (15411)   2 bytes. The parameter field address for the
+; CONTEXT       RAMSTART + 033h (15411)   2 bytes. The parameter field address for the
 ;                               vocabulary word of the context vocabulary.
 ;
-; VOCLNK        RAMSTART + $35 (15413)   2 bytes. The address of the fourth byte in the
+; VOCLNK        RAMSTART + 035h (15413)   2 bytes. The address of the fourth byte in the
 ;                               parameter field - the vocabulary linkage - of
 ;                               the vocabulary word of the most recently
 ;                               defined vocabulary.
 ;
-; STKBOT        RAMSTART + $37 (15415)   2 bytes. The address of the next byte into
+; STKBOT        RAMSTART + 037h (15415)   2 bytes. The address of the next byte into
 ;                               which anything will be enclosed in the
 ;                               dictionary, i.e. one byte past the present end
 ;                               of the dictionary.
 ;                               'HERE' is equivalent to 15415 @.
 ;
-; DICT          RAMSTART + $39 (15417)   2 bytes. The address of the length field in the
+; DICT          RAMSTART + 039h (15417)   2 bytes. The address of the length field in the
 ;                               newest word in the dictionary. If that length
 ;                               field is correctly filled in then DICT may
 ;                               be 0.
 ;
-; SPARE         RAMSTART + $3B (15419)   2 bytes. The address of the first byte past the
+; SPARE         RAMSTART + 03Bh (15419)   2 bytes. The address of the first byte past the
 ;                               top of the stack.
 ;
-; ERR_NO        RAMSTART + $3D (15421)   1 byte. This is usually 255, meaning "no error".
+; ERR_NO        RAMSTART + 03Dh (15421)   1 byte. This is usually 255, meaning "no error".
 ;                               If 'ABORT' is used, and ERR_NO is between 0 and
 ;                               127, then "ERROR" will be printed out, followed
 ;                               by the error number ERR_NO.
 ;
-; FLAGS         RAMSTART + $3E (15422)   1 byte. Shows the state of various parts of the
+; FLAGS         RAMSTART + 03Eh (15422)   1 byte. Shows the state of various parts of the
 ;                               system, each bit showing whether something
 ;                               particular is happening or not. Some of these
 ;                               may be useful.
@@ -10383,7 +10379,7 @@ NEWROMEND: DS   1        ,'Z'
 ;                               Bit 6, when 1, shows that the Ace is in compile
 ;                               mode.
 ;
-; BASE          RAMSTART + $3F (15423)   1 byte. The system number base.
+; BASE          RAMSTART + 03Fh (15423)   1 byte. The system number base.
 ;
 ;
 ;
@@ -10395,7 +10391,7 @@ NEWROMEND: DS   1        ,'Z'
 ; ------------                   ---------
 ;
 ;+-----+ +-----+ +-----+ +-----+ +-----+ +-----+ +-----+ +-----+ +-----+ +-----+
-;|   ! | |   @ | |   # | |   $ | |   % | |   & | |   ' | |   ( | |   ) | |   _ |
+;|   ! | |   @ | |   # | |   0h | |   % | |   & | |   ' | |   ( | |   ) | |   _ |
 ;| 1 []| | 2 []| | 3 []| | 4 []| | 5 []| | 6 []| | 7 []| | 8   | | 9   | | 0 []|
 ;+-----+ +-----+ +-----+ +-----+ +-----+ +-----+ +-----+ +-----+ +-----+ +-----+
 ; DELETE   CAPS            INV    <=        ^       v        =>  GRAPHIC  DELETE
@@ -10419,4 +10415,3 @@ NEWROMEND: DS   1        ,'Z'
 ;                     [] mosaic graphic          �  currency symbol
 ;
 ; -----------------------------------------------------------------------------
-

@@ -5,8 +5,8 @@ EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
 Sheet 2 6
-Title "JupiterAceZ180"
-Date "2019-08-26"
+Title "ACE4NOKB"
+Date "2019-10-24"
 Rev "Alpha"
 Comp "Ontobus"
 Comment1 "John Bradley"

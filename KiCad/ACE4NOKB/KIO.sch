@@ -5,8 +5,8 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 6
-Title "JupiterAce Z80 plus KIO and new memory format."
-Date "2019-09-11"
+Title "ACE4NOKB"
+Date "2019-10-24"
 Rev "Alpha"
 Comp "Ontobus"
 Comment1 "John Bradley"

@@ -130,8 +130,6 @@ Connection ~ 5325 3025
 Connection ~ 3550 3025
 Connection ~ 2675 3025
 Wire Wire Line
-	2675 3025 2225 3025
-Wire Wire Line
 	7775 4025 7525 4025
 Connection ~ 7525 4025
 Wire Wire Line
@@ -149,8 +147,6 @@ Connection ~ 5775 4025
 Connection ~ 5325 4025
 Connection ~ 3550 4025
 Connection ~ 2675 4025
-Wire Wire Line
-	2675 4025 2225 4025
 Connection ~ 4925 1825
 Wire Wire Line
 	4925 1825 5175 1825
@@ -229,8 +225,6 @@ Text GLabel 3650 975  1    50   Input ~ 0
 Wire Wire Line
 	3000 1100 3150 1100
 Connection ~ 3000 1100
-Connection ~ 2225 4025
-Connection ~ 2225 3025
 Wire Wire Line
 	2950 1100 3000 1100
 Wire Wire Line
@@ -614,17 +608,6 @@ F 3 "74xx/74ls86.pdf" H 7525 3525 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L 74xx:74LS00 Z19
-U 5 1 66907DE2
-P 2225 3525
-F 0 "Z19" H 2150 4100 50  0000 L CNN
-F 1 "SN74AHCT00N" H 2050 4275 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 2225 3525 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 2225 3525 50  0001 C CNN
-	5    2225 3525
-	-1   0    0    1   
-$EndComp
-$Comp
 L 74xx:74LS11 Z21
 U 4 1 69DE0CE8
 P 7075 3525
@@ -735,11 +718,45 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 6200 3525 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	1325 4025 2225 4025
+	1325 4025 1775 4025
 Wire Wire Line
-	1325 3025 2225 3025
+	1325 3025 1775 3025
 Wire Wire Line
 	3975 4025 4900 4025
 Wire Wire Line
 	3975 3025 4900 3025
+$Comp
+L 74xx:74LS30 Z303
+U 2 1 5DD15719
+P 1775 3525
+F 0 "Z303" H 1650 2975 50  0000 L CNN
+F 1 "SN74AHCT30N" H 1625 2900 50  0000 L CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1775 3525 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS30" H 1775 3525 50  0001 C CNN
+	2    1775 3525
+	1    0    0    -1  
+$EndComp
+Connection ~ 1775 3025
+Connection ~ 1775 4025
+Connection ~ 2225 3025
+Connection ~ 2225 4025
+Wire Wire Line
+	1775 4025 2225 4025
+Wire Wire Line
+	2675 4025 2225 4025
+Wire Wire Line
+	1775 3025 2225 3025
+Wire Wire Line
+	2675 3025 2225 3025
+$Comp
+L 74xx:74LS00 Z19
+U 5 1 66907DE2
+P 2225 3525
+F 0 "Z19" H 2150 4100 50  0000 L CNN
+F 1 "SN74AHCT00N" H 2050 4275 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 2225 3525 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 2225 3525 50  0001 C CNN
+	5    2225 3525
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC

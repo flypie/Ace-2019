@@ -146,7 +146,7 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS138" H 1500 3375 50  0001 C CNN
 $EndComp
 NoConn ~ 1600 4525
 $Sheet
-S 7250 13250 1250 750 
+S 1000 13250 750  750 
 U 5EED81F4
 F0 "psu" 150
 F1 "psu.sch" 150
@@ -1220,7 +1220,7 @@ Wire Wire Line
 Wire Wire Line
 	4300 1175 4200 1175
 $Sheet
-S 900  14725 2750 1000
+S 1000 14750 750  750 
 U 5D9DD1F0
 F0 "IO" 125
 F1 "IO.sch" 125
@@ -1235,7 +1235,7 @@ A1
 Text GLabel 8875 9125 0    50   Input ~ 0
 A0
 $Sheet
-S 3900 14725 2750 1000
+S 2250 14750 750  750 
 U 5D66C06C
 F0 "Tape&SPKR" 125
 F1 "Tape&SPKR.sch" 125
@@ -1262,7 +1262,6 @@ Wire Wire Line
 	8975 9125 8875 9125
 Wire Wire Line
 	8000 9725 8100 9725
-NoConn ~ 5575 14600
 $Comp
 L 74xx:74LS30 Z303
 U 1 1 5FE43ACD
@@ -1281,7 +1280,7 @@ Wire Wire Line
 Wire Wire Line
 	5775 3625 5875 3625
 $Sheet
-S 3900 13225 2750 1000
+S 4250 14750 750  750 
 U 5FA4DA0E
 F0 "CompositeVid" 125
 F1 "CompositeVid.sch" 125
@@ -1528,7 +1527,7 @@ A11
 Text GLabel 4675 3125 0    50   Input ~ 0
 A11
 $Sheet
-S 900  13225 2750 1000
+S 2250 13250 750  750 
 U 5EDE0D3D
 F0 "CompactFlashInterface" 125
 F1 "CompactFlashInterface.sch" 125
@@ -1608,7 +1607,6 @@ Wire Wire Line
 	5475 975  5475 2400
 Wire Wire Line
 	4775 3325 4675 3325
-NoConn ~ 5925 14475
 $Comp
 L power:VCC #~~~PWR0127
 U 1 1 61494561
