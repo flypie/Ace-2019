@@ -231,12 +231,12 @@ $EndComp
 $Comp
 L Graphic:ZilogBack Logo1
 U 1 1 5D88DFF8
-P -650 9100
-F 0 "Logo1" H -225 9325 50  0000 C CNN
-F 1 "ZilogBack" H -225 9225 50  0000 C CNN
-F 2 "Symbol:ZilogInsideBack" H -200 9350 50  0001 C CNN
-F 3 "" H -450 9250 50  0001 C CNN
-	1    -650 9100
+P -700 8800
+F 0 "Logo1" H -275 9025 50  0000 C CNN
+F 1 "ZilogBack" H -275 8925 50  0000 C CNN
+F 2 "Symbol:ZilogInsideBack" H -250 9050 50  0001 C CNN
+F 3 "" H -500 8950 50  0001 C CNN
+	1    -700 8800
 	1    0    0    -1  
 $EndComp
 Text Notes -5475 7250 0    500  ~ 100
@@ -970,7 +970,7 @@ F 3 "" H 1200 5625 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1300 5625 1200 5625
-Text GLabel 3500 9175 3    50   Input ~ 0
+Text GLabel 3500 9225 3    50   Input ~ 0
 ~NMI
 $Comp
 L 74xx:74LS30 Z104
@@ -995,13 +995,13 @@ Text GLabel 8000 9225 0    50   Input ~ 0
 A2
 Wire Wire Line
 	8100 9225 8000 9225
-Text GLabel 10025 9225 2    50   Input ~ 0
+Text GLabel 10025 9225 2    50   Output ~ 0
 ~IOREQ&11111110B
 Wire Wire Line
 	9975 9225 10025 9225
 Wire Wire Line
 	9975 9325 10025 9325
-Text GLabel 10025 9325 2    50   Input ~ 0
+Text GLabel 10025 9325 2    50   Output ~ 0
 ~IOREQ&11111111B
 Wire Wire Line
 	9975 9025 10025 9025
@@ -1031,12 +1031,12 @@ F 3 "" H 1200 5525 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1300 5525 1200 5525
-Text GLabel 3200 9225 3    50   Input ~ 0
+Text GLabel 3200 9225 3    50   Output ~ 0
 ~M1
 Wire Wire Line
 	3200 9125 3200 9225
 Wire Wire Line
-	3500 9125 3500 9175
+	3500 9125 3500 9225
 $Comp
 L 74xx:74HCT04 Z102
 U 1 1 60E75856
@@ -1395,7 +1395,7 @@ Text GLabel 4675 3325 0    50   Input ~ 0
 A13
 Text GLabel 4675 3225 0    50   Input ~ 0
 A12
-Text GLabel 1200 5025 0    50   Input ~ 0
+Text GLabel 1200 5025 0    50   Output ~ 0
 A0
 Text GLabel 1200 5125 0    50   Input ~ 0
 A1
@@ -1435,9 +1435,9 @@ Text GLabel 1200 7525 0    50   Input ~ 0
 A19
 Text GLabel 2800 9225 3    50   Input ~ 0
 ~IOREQ
-Text GLabel 3100 9225 3    50   Input ~ 0
+Text GLabel 3100 9225 3    50   Output ~ 0
 ~WR
-Text GLabel 3000 9225 3    50   Input ~ 0
+Text GLabel 3000 9225 3    50   Output ~ 0
 ~RD
 Text GLabel 9800 1375 0    50   Input ~ 0
 DA6
@@ -1501,7 +1501,7 @@ Text GLabel 2000 9225 3    50   Input ~ 0
 DA2
 Text GLabel 1900 9225 3    50   Input ~ 0
 DA1
-Text GLabel 1800 9225 3    50   Input ~ 0
+Text GLabel 1800 9225 3    50   BiDi ~ 0
 DA0
 $Comp
 L Connector_Generic:Conn_02x26_Odd_Even Z80CPUOUT1
@@ -1758,10 +1758,10 @@ Wire Wire Line
 	7175 5775 7075 5775
 Text GLabel 10500 3275 2    50   Input ~ 0
 ~INT
-Text GLabel 5600 8125 2    50   Input ~ 0
+Text GLabel 5450 8125 2    50   Input ~ 0
 ~INT
 Wire Wire Line
-	5400 8125 5600 8125
+	5400 8125 5450 8125
 Wire Wire Line
 	3300 9125 3300 9225
 Wire Wire Line

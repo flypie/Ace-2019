@@ -1628,6 +1628,6 @@ Wire Wire Line
 	13150 6925 13075 6925
 Wire Wire Line
 	13075 7025 13150 7025
-Text GLabel 6650 5125 2    50   Input ~ 0
+Text GLabel 6650 5125 2    50   Output ~ 0
 ~INT
 $EndSCHEMATC

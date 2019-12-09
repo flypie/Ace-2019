@@ -1,5 +1,5 @@
 EESchema Schematic File Version 4
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -247,232 +247,232 @@ NoConn ~ 2100 4075
 $Comp
 L power:GND #PWR0104
 U 1 1 5D497471
-P 3350 3750
-F 0 "#PWR0104" H 3350 3500 50  0001 C CNN
-F 1 "GND" V 3310 3575 50  0000 R CNN
-F 2 "" H 3350 3750 50  0001 C CNN
-F 3 "" H 3350 3750 50  0001 C CNN
-	1    3350 3750
+P 3350 3950
+F 0 "#PWR0104" H 3350 3700 50  0001 C CNN
+F 1 "GND" V 3310 3775 50  0000 R CNN
+F 2 "" H 3350 3950 50  0001 C CNN
+F 3 "" H 3350 3950 50  0001 C CNN
+	1    3350 3950
 	0    1    1    0   
 $EndComp
 $Comp
 L power:GND #PWR0105
 U 1 1 5D497477
-P 3350 3650
-F 0 "#PWR0105" H 3350 3400 50  0001 C CNN
-F 1 "GND" V 3310 3475 50  0000 R CNN
-F 2 "" H 3350 3650 50  0001 C CNN
-F 3 "" H 3350 3650 50  0001 C CNN
-	1    3350 3650
+P 3350 3850
+F 0 "#PWR0105" H 3350 3600 50  0001 C CNN
+F 1 "GND" V 3310 3675 50  0000 R CNN
+F 2 "" H 3350 3850 50  0001 C CNN
+F 3 "" H 3350 3850 50  0001 C CNN
+	1    3350 3850
 	0    1    1    0   
 $EndComp
-Text GLabel 3350 3550 0    50   Input ~ 0
+Text GLabel 3350 3750 0    50   Input ~ 0
 +9V
-Text GLabel 3350 3450 0    50   Input ~ 0
+Text GLabel 3350 3650 0    50   Input ~ 0
 +5V
-Text GLabel 3350 3350 0    50   Input ~ 0
+Text GLabel 3350 3550 0    50   Input ~ 0
 #CPUCLK
-Text Label 3350 2650 2    70   ~ 0
+Text Label 3350 2850 2    70   ~ 0
 DA3
 Wire Wire Line
-	3450 2650 3350 2650
-Text Label 3350 2550 2    70   ~ 0
+	3450 2850 3350 2850
+Text Label 3350 2750 2    70   ~ 0
 DA5
 Wire Wire Line
-	3450 2550 3350 2550
-Text Label 3350 1850 2    70   ~ 0
+	3450 2750 3350 2750
+Text Label 3350 2050 2    70   ~ 0
 DA1
 Wire Wire Line
-	3450 1850 3350 1850
-Text Label 3350 2750 2    70   ~ 0
+	3450 2050 3350 2050
+Text Label 3350 2950 2    70   ~ 0
 DA4
 Wire Wire Line
-	3450 2750 3350 2750
-Wire Wire Line
-	3450 3550 3350 3550
-Wire Wire Line
-	3450 3450 3350 3450
-Text Label 3350 2250 2    70   ~ 0
-A9
-Wire Wire Line
-	3450 2250 3350 2250
-Wire Wire Line
-	3450 3350 3350 3350
-Text Label 3350 1750 2    70   ~ 0
-DA6
-Wire Wire Line
-	3450 1750 3350 1750
-Text Label 3350 2850 2    70   ~ 0
-A15
-Wire Wire Line
-	3450 2850 3350 2850
-Text Label 3350 2950 2    70   ~ 0
-A14
-Wire Wire Line
 	3450 2950 3350 2950
-Text Label 3350 3050 2    70   ~ 0
-A13
-Wire Wire Line
-	3450 3050 3350 3050
-Text Label 3350 3150 2    70   ~ 0
-A12
-Wire Wire Line
-	3450 3150 3350 3150
-Text Label 3350 3250 2    70   ~ 0
-A11
-Wire Wire Line
-	3450 3250 3350 3250
-Text Label 3350 2350 2    70   ~ 0
-A10
-Wire Wire Line
-	3450 2350 3350 2350
-Text Label 3350 2150 2    70   ~ 0
-A8
-Wire Wire Line
-	3450 2150 3350 2150
-Text Label 3350 2050 2    70   ~ 0
-A7
-Wire Wire Line
-	3450 2050 3350 2050
-Text Label 3350 2450 2    70   ~ 0
-A2
-Wire Wire Line
-	3450 2450 3350 2450
-Text Label 3350 1950 2    70   ~ 0
-A0
-Wire Wire Line
-	3450 1950 3350 1950
 Wire Wire Line
 	3450 3750 3350 3750
 Wire Wire Line
-	3350 3650 3450 3650
-Text Label 3350 1650 2    70   ~ 0
+	3450 3650 3350 3650
+Text Label 3350 2450 2    70   ~ 0
+A9
+Wire Wire Line
+	3450 2450 3350 2450
+Wire Wire Line
+	3450 3550 3350 3550
+Text Label 3350 1950 2    70   ~ 0
+DA6
+Wire Wire Line
+	3450 1950 3350 1950
+Text Label 3350 3050 2    70   ~ 0
+A15
+Wire Wire Line
+	3450 3050 3350 3050
+Text Label 3350 3150 2    70   ~ 0
+A14
+Wire Wire Line
+	3450 3150 3350 3150
+Text Label 3350 3250 2    70   ~ 0
+A13
+Wire Wire Line
+	3450 3250 3350 3250
+Text Label 3350 3350 2    70   ~ 0
+A12
+Wire Wire Line
+	3450 3350 3350 3350
+Text Label 3350 3450 2    70   ~ 0
+A11
+Wire Wire Line
+	3450 3450 3350 3450
+Text Label 3350 2550 2    70   ~ 0
+A10
+Wire Wire Line
+	3450 2550 3350 2550
+Text Label 3350 2350 2    70   ~ 0
+A8
+Wire Wire Line
+	3450 2350 3350 2350
+Text Label 3350 2250 2    70   ~ 0
+A7
+Wire Wire Line
+	3450 2250 3350 2250
+Text Label 3350 2650 2    70   ~ 0
+A2
+Wire Wire Line
+	3450 2650 3350 2650
+Text Label 3350 2150 2    70   ~ 0
+A0
+Wire Wire Line
+	3450 2150 3350 2150
+Wire Wire Line
+	3450 3950 3350 3950
+Wire Wire Line
+	3350 3850 3450 3850
+Text Label 3350 1850 2    70   ~ 0
 #WE
 Wire Wire Line
-	3450 1650 3350 1650
+	3450 1850 3350 1850
 NoConn ~ 3450 4050
-NoConn ~ 3450 3950
-NoConn ~ 3450 3850
 $Comp
 L power:GND #PWR0106
 U 1 1 5D49D444
-P 4050 3750
-F 0 "#PWR0106" H 4050 3500 50  0001 C CNN
-F 1 "GND" V 4055 3595 50  0000 R CNN
-F 2 "" H 4050 3750 50  0001 C CNN
-F 3 "" H 4050 3750 50  0001 C CNN
-	1    4050 3750
+P 4050 3950
+F 0 "#PWR0106" H 4050 3700 50  0001 C CNN
+F 1 "GND" V 4055 3795 50  0000 R CNN
+F 2 "" H 4050 3950 50  0001 C CNN
+F 3 "" H 4050 3950 50  0001 C CNN
+	1    4050 3950
 	0    -1   -1   0   
 $EndComp
-Text GLabel 4050 2650 2    50   Input ~ 0
+Text GLabel 4050 2850 2    50   Input ~ 0
 #RESET
-Text GLabel 4050 3550 2    50   Input ~ 0
+Text GLabel 4050 3750 2    50   Input ~ 0
 #NMI
-Wire Wire Line
-	3950 2850 4050 2850
-Text Label 4050 2850 0    70   ~ 0
-/WAIT
-Wire Wire Line
-	3950 3350 4050 3350
-Text Label 4050 3350 0    70   ~ 0
-/MREQ
 Wire Wire Line
 	3950 3050 4050 3050
 Text Label 4050 3050 0    70   ~ 0
-/WR
+/WAIT
 Wire Wire Line
-	3950 3750 4050 3750
+	3950 3550 4050 3550
+Text Label 4050 3550 0    70   ~ 0
+/MREQ
 Wire Wire Line
 	3950 3250 4050 3250
 Text Label 4050 3250 0    70   ~ 0
-/IOREQ
+/WR
 Wire Wire Line
-	3950 3150 4050 3150
-Text Label 4050 3150 0    70   ~ 0
-/RD
-Wire Wire Line
-	3950 3650 4050 3650
-Wire Wire Line
-	3950 2750 4050 2750
-Text Label 4050 2750 0    70   ~ 0
-/BUSRQ
-Wire Wire Line
-	3950 2650 4050 2650
-Wire Wire Line
-	3950 2550 4050 2550
-Text Label 4050 2550 0    70   ~ 0
-/M1
+	3950 3950 4050 3950
 Wire Wire Line
 	3950 3450 4050 3450
 Text Label 4050 3450 0    70   ~ 0
-/HALT
+/IOREQ
+Wire Wire Line
+	3950 3350 4050 3350
+Text Label 4050 3350 0    70   ~ 0
+/RD
+Wire Wire Line
+	3950 3850 4050 3850
 Wire Wire Line
 	3950 2950 4050 2950
 Text Label 4050 2950 0    70   ~ 0
+/BUSRQ
+Wire Wire Line
+	3950 2850 4050 2850
+Wire Wire Line
+	3950 2750 4050 2750
+Text Label 4050 2750 0    70   ~ 0
+/M1
+Wire Wire Line
+	3950 3650 4050 3650
+Text Label 4050 3650 0    70   ~ 0
+/HALT
+Wire Wire Line
+	3950 3150 4050 3150
+Text Label 4050 3150 0    70   ~ 0
 /BUSAK
 Wire Wire Line
-	3950 2450 4050 2450
-Text Label 4050 2450 0    70   ~ 0
+	3950 2650 4050 2650
+Text Label 4050 2650 0    70   ~ 0
 /REFSH
-Wire Wire Line
-	3950 1950 4050 1950
-Text Label 4050 1950 0    70   ~ 0
-A1
-Wire Wire Line
-	3950 2050 4050 2050
-Text Label 4050 2050 0    70   ~ 0
-A3
-Wire Wire Line
-	3950 2350 4050 2350
-Text Label 4050 2350 0    70   ~ 0
-A6
 Wire Wire Line
 	3950 2150 4050 2150
 Text Label 4050 2150 0    70   ~ 0
-A4
+A1
 Wire Wire Line
 	3950 2250 4050 2250
 Text Label 4050 2250 0    70   ~ 0
+A3
+Wire Wire Line
+	3950 2550 4050 2550
+Text Label 4050 2550 0    70   ~ 0
+A6
+Wire Wire Line
+	3950 2350 4050 2350
+Text Label 4050 2350 0    70   ~ 0
+A4
+Wire Wire Line
+	3950 2450 4050 2450
+Text Label 4050 2450 0    70   ~ 0
 A5
 Wire Wire Line
-	4050 3550 3950 3550
-Wire Wire Line
-	3950 1650 4050 1650
-Text Label 4050 1650 0    70   ~ 0
-DA7
-Wire Wire Line
-	3950 1750 4050 1750
-Text Label 4050 1750 0    70   ~ 0
-DA2
+	4050 3750 3950 3750
 Wire Wire Line
 	3950 1850 4050 1850
 Text Label 4050 1850 0    70   ~ 0
+DA7
+Wire Wire Line
+	3950 1950 4050 1950
+Text Label 4050 1950 0    70   ~ 0
+DA2
+Wire Wire Line
+	3950 2050 4050 2050
+Text Label 4050 2050 0    70   ~ 0
 DA0
-Text GLabel 4050 3650 2    50   Input ~ 0
+Text GLabel 4050 3850 2    50   Input ~ 0
 #INT
-NoConn ~ 3950 3850
-NoConn ~ 3950 3950
 NoConn ~ 3950 4050
 $Comp
 L Mechanical:MountingHole H1
 U 1 1 5D4A97BA
-P 2800 1900
-F 0 "H1" H 2900 1950 50  0000 L CNN
-F 1 "MountingHole" H 2900 1900 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 2800 1900 50  0001 C CNN
-F 3 "~" H 2800 1900 50  0001 C CNN
-	1    2800 1900
+P 2625 700
+F 0 "H1" H 2725 750 50  0000 L CNN
+F 1 "MountingHole" H 2725 700 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 2625 700 50  0001 C CNN
+F 3 "~" H 2625 700 50  0001 C CNN
+	1    2625 700 
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H2
 U 1 1 5D4AAA75
-P 2900 3700
-F 0 "H2" H 3000 3750 50  0000 L CNN
-F 1 "MountingHole" H 3000 3700 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 2900 3700 50  0001 C CNN
-F 3 "~" H 2900 3700 50  0001 C CNN
-	1    2900 3700
+P 2800 4600
+F 0 "H2" H 2900 4650 50  0000 L CNN
+F 1 "MountingHole" H 2900 4600 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 2800 4600 50  0001 C CNN
+F 3 "~" H 2800 4600 50  0001 C CNN
+	1    2800 4600
 	1    0    0    -1  
 $EndComp
+NoConn ~ 3950 1650
+NoConn ~ 3450 1650
+NoConn ~ 3450 1750
+NoConn ~ 3950 1750
 $EndSCHEMATC

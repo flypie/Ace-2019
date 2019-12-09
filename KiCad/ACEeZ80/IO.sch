@@ -17,33 +17,33 @@ $EndDescr
 $Comp
 L power:GND #~~~SUPPLY?
 U 1 1 618F6985
-P 6725 3475
+P 7425 3475
 AR Path="/618F6985" Ref="#~~~SUPPLY?"  Part="1" 
 AR Path="/5D9DD1F0/618F6985" Ref="#~~~SUPPLY0103"  Part="1" 
-F 0 "#~~~SUPPLY0103" H 6725 3475 50  0001 C CNN
-F 1 "GND" V 6600 3450 59  0000 C CNN
-F 2 "" H 6725 3475 50  0001 C CNN
-F 3 "" H 6725 3475 50  0001 C CNN
-	1    6725 3475
+F 0 "#~~~SUPPLY0103" H 7425 3475 50  0001 C CNN
+F 1 "GND" V 7300 3450 59  0000 C CNN
+F 2 "" H 7425 3475 50  0001 C CNN
+F 3 "" H 7425 3475 50  0001 C CNN
+	1    7425 3475
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	6925 3475 6725 3475
+	7600 3475 7425 3475
 Wire Wire Line
-	7605 3475 7525 3475
-NoConn ~ 7525 3575
-NoConn ~ 7525 3375
+	8280 3475 8200 3475
+NoConn ~ 8200 3575
+NoConn ~ 8200 3375
 $Comp
 L Connector:Mini-DIN-6 PS/2
 U 1 1 618F6975
-P 7225 3475
+P 7900 3475
 AR Path="/5D9DD1F0/618F6975" Ref="PS/2"  Part="1" 
 AR Path="/618F6975" Ref="J?"  Part="1" 
-F 0 "PS/2" H 7225 3075 50  0000 C CNN
-F 1 "Mini-DIN-6" H 7225 3175 50  0000 C CNN
-F 2 "Local:5749180-1" H 7225 3475 50  0001 C CNN
-F 3 "http://service.powerdynamics.com/ec/Catalog17/Section%2011.pdf" H 7225 3475 50  0001 C CNN
-	1    7225 3475
+F 0 "PS/2" H 7900 3075 50  0000 C CNN
+F 1 "Mini-DIN-6" H 7900 3175 50  0000 C CNN
+F 2 "Local:5749180-1" H 7900 3475 50  0001 C CNN
+F 3 "http://service.powerdynamics.com/ec/Catalog17/Section%2011.pdf" H 7900 3475 50  0001 C CNN
+	1    7900 3475
 	-1   0    0    1   
 $EndComp
 Text GLabel 1800 2350 2    50   Input ~ 0
@@ -317,43 +317,28 @@ $Comp
 L MCU_ST_STM8:STM8S003F3P Z1100
 U 1 1 5DC55916
 P 5100 3575
-F 0 "Z1100" H 5100 4800 50  0000 C CNN
-F 1 "STM8S003F3P" H 5100 4700 50  0000 C CNN
+F 0 "Z1100" H 4775 4500 50  0000 C CNN
+F 1 "STM8S003F3P" H 5450 4500 50  0000 C CNN
 F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 5150 4675 50  0001 L CNN
 F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00024550.pdf" H 5050 3175 50  0001 C CNN
 	1    5100 3575
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5700 3575 6925 3575
 $Comp
 L power:VCC #~~~P+?
 U 1 1 618F697D
-P 7605 3475
+P 8280 3475
 AR Path="/618F697D" Ref="#~~~P+?"  Part="1" 
 AR Path="/5D9DD1F0/618F697D" Ref="#~~~P+0101"  Part="1" 
-F 0 "#~~~P+0101" H 7605 3475 50  0001 C CNN
-F 1 "VCC" V 7630 3620 59  0000 L CNN
-F 2 "" H 7605 3475 50  0001 C CNN
-F 3 "" H 7605 3475 50  0001 C CNN
-	1    7605 3475
+F 0 "#~~~P+0101" H 8280 3475 50  0001 C CNN
+F 1 "VCC" V 8305 3620 59  0000 L CNN
+F 2 "" H 8280 3475 50  0001 C CNN
+F 3 "" H 8280 3475 50  0001 C CNN
+	1    8280 3475
 	0    1    -1   0   
 $EndComp
 Wire Wire Line
-	6925 3375 6475 3375
-Wire Wire Line
-	6475 3375 6475 3725
-Wire Wire Line
-	6475 3725 5775 3725
-Wire Wire Line
-	5775 3725 5775 3675
-Wire Wire Line
-	5775 3675 5700 3675
-Wire Wire Line
-	5700 3775 5775 3775
-Wire Wire Line
-	5775 3775 5775 3725
-Connection ~ 5775 3725
+	7600 3375 7275 3375
 Wire Wire Line
 	5100 4575 5100 4725
 $Comp
@@ -389,10 +374,6 @@ I2C-Data
 Wire Wire Line
 	4500 3375 4450 3375
 Wire Wire Line
-	4500 2875 4350 2875
-Text Label 4350 2875 2    50   ~ 0
-OSCIN-PA1
-Wire Wire Line
 	4500 2975 4350 2975
 Text Label 4350 2975 2    50   ~ 0
 OSCOUT-PA2
@@ -425,19 +406,15 @@ Wire Wire Line
 Text Label 4350 4175 2    50   ~ 0
 NRST
 Wire Wire Line
-	4500 4275 4350 4275
+	4500 4275 4100 4275
 Text Label 4350 4275 2    50   ~ 0
 VCAP
-Wire Wire Line
-	5700 3275 5850 3275
 Text Label 5850 3275 0    50   ~ 0
 PD1(HS)-SWIM
 Wire Wire Line
 	5700 3375 5850 3375
 Text Label 5850 3375 0    50   ~ 0
 PD2(HS)-AIN3-[TIM2_CH3]
-Wire Wire Line
-	5700 3475 5850 3475
 Text Label 5850 3475 0    50   ~ 0
 PD3-(HS)-AIN4-TIM2_CH2-ADC_ETR
 $Comp
@@ -452,29 +429,19 @@ F 3 "~" H 3375 5200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3175 5000 3025 5000
-Text Label 3025 5000 2    50   ~ 0
-OSCIN-PA1
-Wire Wire Line
 	3175 5100 3025 5100
 Text Label 3025 5100 2    50   ~ 0
 OSCOUT-PA2
-Wire Wire Line
-	3175 5200 3025 5200
 Text Label 3025 5200 2    50   ~ 0
 SPI_NSS-TIM2_CH3-(HS)PA3
 Wire Wire Line
-	3675 5000 3825 5000
-Text Label 3825 5000 0    50   ~ 0
+	3675 5300 3825 5300
+Text Label 3825 5300 0    50   ~ 0
 PD1(HS)-SWIM
-Wire Wire Line
-	3675 5100 3825 5100
-Text Label 3825 5100 0    50   ~ 0
-PD2(HS)-AIN3-[TIM2_CH3]
 Wire Wire Line
 	3675 5200 3825 5200
 Text Label 3825 5200 0    50   ~ 0
-PD3-(HS)-AIN4-TIM2_CH2-ADC_ETR
+PD2(HS)-AIN3-[TIM2_CH3]
 Wire Wire Line
 	3175 5300 3025 5300
 Text Label 3025 5300 2    50   ~ 0
@@ -492,10 +459,72 @@ Wire Wire Line
 Text Label 3825 5400 0    50   ~ 0
 PC7(HS)-SPI_MISO-[TIM1_CH2]
 Wire Wire Line
-	3675 5300 3825 5300
-Text Label 3825 5300 0    50   ~ 0
+	3675 5500 3825 5500
+Text Label 3825 5500 0    50   ~ 0
 PC6(HS)-SPI_MOSI-[TIM1_CH1]
-NoConn ~ 4350 4275
 NoConn ~ 4350 4175
-NoConn ~ 3675 5500
+Wire Wire Line
+	4350 2875 4500 2875
+Wire Wire Line
+	5700 3575 7600 3575
+Wire Wire Line
+	5850 3275 5700 3275
+Wire Wire Line
+	5700 3675 5850 3675
+Wire Wire Line
+	5700 3775 5850 3775
+Text Label 5850 3675 0    50   ~ 0
+UART1_TX-AIN5-(HS)-PD5
+Text Label 5850 3775 0    50   ~ 0
+UART1_RX-AIN6-(HS)-PD6
+Wire Wire Line
+	3675 5100 3825 5100
+Wire Wire Line
+	3675 5000 3825 5000
+Text Label 3825 5100 0    50   ~ 0
+UART1_TX-AIN5-(HS)-PD5
+Text Label 3825 5000 0    50   ~ 0
+UART1_RX-AIN6-(HS)-PD6
+$Comp
+L Device:C C150
+U 1 1 5DE2B980
+P 3950 4275
+F 0 "C150" V 3675 4275 50  0000 C CNN
+F 1 "1uF" V 3775 4275 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 3988 4125 50  0001 C CNN
+F 3 "~" H 3950 4275 50  0001 C CNN
+	1    3950 4275
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3800 4275 3750 4275
+$Comp
+L power:Earth #PWR0104
+U 1 1 5DE2FDCB
+P 3750 4275
+F 0 "#PWR0104" H 3750 4025 50  0001 C CNN
+F 1 "Earth" H 3750 4125 50  0001 C CNN
+F 2 "" H 3750 4275 50  0001 C CNN
+F 3 "~" H 3750 4275 50  0001 C CNN
+	1    3750 4275
+	1    0    0    -1  
+$EndComp
+Text Label 5850 3575 0    50   ~ 0
+UART1_CK-TIM2_CH1-BEEP-(HS)PD4
+Text Label 4350 2875 2    50   ~ 0
+OSCIN-PA1
+Text Label 7275 3375 1    50   ~ 0
+PS2+DATA
+Text Label 7475 3575 3    50   ~ 0
+PS2+CLK
+Wire Wire Line
+	7275 3475 7275 3375
+Wire Wire Line
+	5700 3475 7275 3475
+Wire Wire Line
+	3025 5000 3175 5000
+Text Label 3025 5000 2    50   ~ 0
+OSCIN-PA1
+Wire Wire Line
+	3025 5200 3175 5200
 $EndSCHEMATC
