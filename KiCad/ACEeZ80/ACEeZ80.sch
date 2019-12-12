@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:ACEeZ80-cache
 EELAYER 30 0
 EELAYER END
 $Descr A3 11693 16535 portrait

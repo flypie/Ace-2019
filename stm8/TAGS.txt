@@ -1,0 +1,48 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CLR_SCK	main.c	173;"	macro	file:
+CLR_SDA	main.c	167;"	macro	file:
+CapsLock	main.c	280;"	variable
+DEF_16BIT_REG_AT	..\..\..\..\..\program files (x86)\stmicroelectronics\st_toolset\include\stm8s903f.h	20;"	macro
+DEF_16BIT_REG_AT	..\..\..\..\..\program files (x86)\stmicroelectronics\st_toolset\include\stm8s903f.h	25;"	macro
+DEF_8BIT_REG_AT	..\..\..\..\..\program files (x86)\stmicroelectronics\st_toolset\include\stm8s903f.h	19;"	macro
+DEF_8BIT_REG_AT	..\..\..\..\..\program files (x86)\stmicroelectronics\st_toolset\include\stm8s903f.h	24;"	macro
+DELAY	main.c	179;"	macro	file:
+GET_SCK	main.c	174;"	macro	file:
+GET_SDA	main.c	168;"	macro	file:
+IN_SCK	main.c	176;"	macro	file:
+IN_SDA	main.c	170;"	macro	file:
+NonHandledInterrupt	stm8_interrupt_vector.c	12;"	function	signature:(void)
+OUT_SCK	main.c	175;"	macro	file:
+OUT_SDA	main.c	169;"	macro	file:
+PS2_Init	main.c	187;"	function	signature:(void)
+Receiving	main.c	185;"	variable
+SET_SCK	main.c	172;"	macro	file:
+SET_SDA	main.c	166;"	macro	file:
+STM8S903F	..\..\..\..\..\program files (x86)\stmicroelectronics\st_toolset\include\stm8s903f.h	12;"	macro
+STM8S903F3	..\..\..\..\..\program files (x86)\stmicroelectronics\st_toolset\include\stm8s903f3.h	3;"	macro
+SendByte	main.c	282;"	function	signature:(unsigned char CMD)
+__MODS0__	..\..\..\..\..\program files (x86)\cosmic\fse_compilers\cxstm8\hstm8\mods0.h	11;"	macro
+__STM8S903F__	..\..\..\..\..\program files (x86)\stmicroelectronics\st_toolset\include\stm8s903f.h	6;"	macro
+_stext	stm8_interrupt_vector.c	20;"	prototype	file:
+_vectab	stm8_interrupt_vector.c	22;"	variable
+cbi	main.c	32;"	macro	file:
+check	main.c	192;"	function	signature:(unsigned char* keyVal)
+delay_ms	main.c	3;"	function	signature:(unsigned short ms)
+delay_us	main.c	16;"	function	signature:(unsigned short us)
+false	main.c	181;"	macro	file:
+gbi	main.c	34;"	macro	file:
+interrupt_handler	stm8_interrupt_vector.c	9;"	member	struct:interrupt_vector	file:
+interrupt_handler_t	stm8_interrupt_vector.c	5;"	typedef	file:
+interrupt_instruction	stm8_interrupt_vector.c	8;"	member	struct:interrupt_vector	file:
+interrupt_vector	stm8_interrupt_vector.c	7;"	struct	file:
+keyHandle	main.c	223;"	function	signature:(unsigned char* keyVal)
+main	main.c	345;"	function	signature:(void)
+sbi	main.c	30;"	macro	file:
+shifted	main.c	101;"	variable
+true	main.c	182;"	macro	file:
+unshifted	main.c	37;"	variable

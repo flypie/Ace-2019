@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:ACEeZ80-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -527,4 +526,15 @@ Text Label 3025 5000 2    50   ~ 0
 OSCIN-PA1
 Wire Wire Line
 	3025 5200 3175 5200
+$Comp
+L 74xx:74HCT595 Z1101
+U 1 1 5DF324BE
+P 7500 5050
+F 0 "Z1101" H 7500 5850 50  0000 C CNN
+F 1 "74AHCT595" H 7500 5750 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 7500 5050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74ahct595.pdf" H 7500 5050 50  0001 C CNN
+	1    7500 5050
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
