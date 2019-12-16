@@ -27,6 +27,7 @@ csrc = $(wildcard $(XCDIR)/ACE1/*.dsn) \
 		$(wildcard $(XCDIR)/MultiUniBoard/*.dsn) \
 		$(wildcard $(XCDIR)/eUniBoard/*.dsn) \
 		$(wildcard $(XCDIR)/eMultiUniBoard/*.dsn) \
+		$(wildcard $(XCDIR)/PS2TestCard/*.dsn) \
 		$(wildcard $(XCDIR)/KEYBOARD/*.dsn)
 
 obj = $(csrc:.dsn=.ses)

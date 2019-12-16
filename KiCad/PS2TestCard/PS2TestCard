@@ -1,0 +1,13 @@
+Reference, Quantity, Value, Footprint, Datasheet, Manufacturer_Name, Manufacturer_Part_Number
+C1 ,1,"0.1 uF","Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm","~"
+C150 ,1,"1uF","Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm","~"
+D1 ,1,"C503C-RCN-CYAZaAA1","LED_THT:LED_D3.0mm","https://www.mouser.co.uk/datasheet/2/90/1290-C503C-RCS-RCN-ACS-ACN-1064264.pdf","Cree, Inc. ","C503C-RCN-CYAZaAA1"
+J2 ,1,"Conn_02x06_Counter_Clockwise","Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical","~"
+P1 P2 ,2,"Mini-DIN-6","Local:5749180-1","http://service.powerdynamics.com/ec/Catalog17/Section%2011.pdf","TE Connectivity ","5749180-1"
+R1 ,1,"220","Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical","~"
+Z1 ,1,"SN74AHCT02PWR","Package_SO:SSOP-14_5.3x6.2mm_P0.65mm","http://www.ti.com/lit/gpn/sn74hc02","","SN74AHCT02PWR"
+Z110 ,1,"74AHCT30PW,118","Package_SO:TSSOP-14_4.4x5mm_P0.65mm","http://www.ti.com/lit/ds/symlink/sn74als30a.pdf","Nexperia","74AHCT30PW,118"
+Z1100 ,1,"STM8S003F3P6","Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm","http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00024550.pdf","STMicroelectronics","STM8S003F3P6"
+Z1101 ,1,"74AHCT595PW,118","Package_SO:TSSOP-16_4.4x5mm_P0.65mm","http://www.ti.com/lit/ds/symlink/sn74ahct595.pdf","Nexperia","74AHCT595PW,118"
+Z111 ,1,"SN74AHCT139D","Package_SO:SOP-16_4.4x10.4mm_P1.27mm","http://www.ti.com/lit/gpn/sn74LS139","Texas Instruments","SN74AHCT139D"
+Z80CPUIN1 ,1,"Conn_02x24_Odd_Even","Connector_PinSocket_2.54mm:PinSocket_2x24_P2.54mm_Horizontal","~","samtec","SSQ-112-02-T-D-RA "
