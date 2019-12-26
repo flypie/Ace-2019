@@ -1,199 +1,88 @@
-#include "stdbool.h"
+#include "ACEPS2-4-STM8.h"
 
-#include <STM8S903F3.h>
 
-void delay_ms(unsigned short ms)
+#include "string.h"
+
+
+
+
+
+bool KeyboardFound=false;
+int sprintf(char* str,const char* format,...);
+
+#ifdef USE_FULL_ASSERT
+/**
+  * @brief  Reports the name of the source file and the source line number
+  *   where the assert_param error has occurred.
+  * @param file: pointer to the source file name
+  * @param line: assert_param error line source number
+  * @retval None
+  */
+
+void assert_failed(uint8_t* file,uint32_t line)
 {
-	unsigned char i;
-	while (ms != 0)
+	/* User can add his own implementation to report the file name and line number,
+	   ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+
+	   /* Infinite loop */
+
+	  // char msg[128];
+
+	  // sprintf(msg,"Wrong parameters value: file %s on line %d\r\n", file, line);
+	while(1)
 	{
-		for (i = 0; i < 250; i++)
-		{
-		}
-		for (i = 0; i < 75; i++)
-		{
-		}
-		ms--;
+		OutStr((char*)file);
 	}
 }
 
-void delay_us(unsigned short us)
+#endif
+
+void OutStr(char* Buffer)
 {
-	unsigned char i;
-	while (us != 0)
+	int i;
+
+	for(i=0; i<strlen(Buffer); i++)
 	{
-		for (i = 0; i < 25; i++)
-		{
-		}
-		for (i = 0; i < 7; i++)
-		{
-		}
-		us--;
+#if USEUART					
+		UARTSendChar(Buffer[i]);
+#endif
+
+#if USEI2C
+		I2CSendChar(Buffer[i]);
+#endif
 	}
 }
 
-/* io configs */
-#define sbi(io, bit) (io |= (1 << bit))
-//example:sbi(PA_ODR,0);sbi(PA_DDR,0);
-#define cbi(io, bit) (io &= ~(1 << bit))
-//example:cbi(PA_ODR,0);cbi(PA_DDR,0);
-#define gbi(pin, bit) (pin & (1 << bit))
-//example: gbi(PA_IDR,0);
+typedef enum
+{
+	UNKNOWN,
+	MOUSE,
+	KEYBOARD
+} DeviceType;
 
-@near unsigned char unshifted[][2] =
-	{
-		0x1C, 'a',
-		0x32, 'b',
-		0x21, 'c',
-		0x23, 'd',
-		0x24, 'e',
-		0x2B, 'f',
-		0x34, 'g',
-		0x33, 'h',
-		0x43, 'i',
-		0x3B, 'j',
-		0x42, 'k',
-		0x4B, 'l',
-		0x3A, 'm',
-		0x31, 'n',
-		0x44, 'o',
-		0x4D, 'p',
-		0x15, 'q',
-		0x2D, 'r',
-		0x1B, 's',
-		0x2C, 't',
-		0x3C, 'u',
-		0x2A, 'v',
-		0x1D, 'w',
-		0x22, 'x',
-		0x35, 'y',
-		0x1A, 'z',
-		0x45, '0',
-		0x16, '1',
-		0x1E, '2',
-		0x26, '3',
-		0x25, '4',
-		0x2E, '5',
-		0x36, '6',
-		0x3D, '7',
-		0x3E, '8',
-		0x46, '9',
-		0x0E, '`',
-		0x4E, '-',
-		0x55, '=',
-		0x5D, '\\',
-		0x29, ' ',
-		0x54, '[',
-		0x5B, ']',
-		0x4C, ';',
-		0x52, '\'',
-		0x41, ',',
-		0x49, '.',
-		0x4A, '/',
-		0x71, '.',
-		0x70, '0',
-		0x69, '1',
-		0x72, '2',
-		0x7A, '3',
-		0x6B, '4',
-		0x73, '5',
-		0x74, '6',
-		0x6C, '7',
-		0x75, '8',
-		0x7D, '9',
-		0x66, ' ', // back
-};
+typedef enum
+{
+	UNINTITALISED,
+	INTITALISING,
+	IDLE,
+	READING_1,
+	WRITING_1
+} PortState;
 
-@near unsigned char shifted[][2] =
-	{
-		0x1C, 'A',
-		0x32, 'B',
-		0x21, 'C',
-		0x23, 'D',
-		0x24, 'E',
-		0x2B, 'F',
-		0x34, 'G',
-		0x33, 'H',
-		0x43, 'I',
-		0x3B, 'J',
-		0x42, 'K',
-		0x4B, 'L',
-		0x3A, 'M',
-		0x31, 'N',
-		0x44, 'O',
-		0x4D, 'P',
-		0x15, 'Q',
-		0x2D, 'R',
-		0x1B, 'S',
-		0x2C, 'T',
-		0x3C, 'U',
-		0x2A, 'V',
-		0x1D, 'W',
-		0x22, 'X',
-		0x35, 'Y',
-		0x1A, 'Z',
-		0x45, '0',
-		0x16, '1',
-		0x1E, '2',
-		0x26, '3',
-		0x25, '4',
-		0x2E, '5',
-		0x36, '6',
-		0x3D, '7',
-		0x3E, '8',
-		0x46, '9',
-		0x0E, '~',
-		0x4E, '_',
-		0x55, '+',
-		0x5D, '|',
-		0x29, ' ',
-		0x54, '{',
-		0x5B, '}',
-		0x4C, ':',
-		0x52, '"',
-		0x41, '<',
-		0x49, '>',
-		0x4A, '?',
-		0x71, '.',
-		0x70, '0',
-		0x69, '1',
-		0x72, '2',
-		0x7A, '3',
-		0x6B, '4',
-		0x73, '5',
-		0x74, '6',
-		0x6C, '7',
-		0x75, '8',
-		0x7D, '9',
-		0x66, ' ', // back
-};
 
-#define CAPS 0x58
-#define SCROLL 0x7E
-#define NUM 0x77
+typedef struct
+{
+	DeviceType	Type;
+	PortState	State;
+	unsigned char Number;
+	unsigned char keyVal;
+	unsigned char rcvBits;
+	bool Receiving;
+} Port;
 
-#define EXTENDED 0xE0
-#define BREAK 0xF0
+#define NumberOfPorts	2
 
-#define SET_SDAK sbi(PD_ODR, 3)
-#define CLR_SDAK cbi(PD_ODR, 3)
-#define GET_SDAK gbi(PD_IDR, 3)
-#define OUT_SDAK     \
-	sbi(PD_DDR, 3); \
-	sbi(PD_CR1, 3);
-#define IN_SDAK      \
-	cbi(PD_DDR, 3); \
-	sbi(PD_CR1, 3);
-
-#define SET_SCKK sbi(PD_ODR, 4)
-#define CLR_SCKK cbi(PD_ODR, 4)
-#define GET_SCKK gbi(PD_IDR, 4)
-#define OUT_SCKK     \
-	sbi(PD_DDR, 4); \
-	sbi(PD_CR1, 4);
-#define IN_SCKK      \
-	cbi(PD_DDR, 4); \
-	sbi(PD_CR1, 4);
+Port Ports[NumberOfPorts];
 
 #define DELAY()  \
 	_asm("nop"); \
@@ -202,259 +91,436 @@ void delay_us(unsigned short us)
 	_asm("nop"); \
 	_asm("nop");
 
-bool Receiving = false;
+bool NumLock=false;
+bool ShiftLock=false;
+bool ScrollLock=true;
 
-bool NumLock = false;
-bool ShiftLock = false;
-bool ScrollLock = false;
+bool InStartUp=false;
 
-void PS2_Init(void)
+void delay_us(unsigned short us)
 {
-	IN_SDAK;
+	unsigned char i;
+	while(us!=0)
+	{
+		for(i=0; i<25; i++)
+		{
+		}
+		for(i=0; i<7; i++)
+		{
+		}
+		us--;
+	}
 }
 
-void SendByte(unsigned char CMD)
+void Sdelay_us(u16 us)
+{
+	u8 i;
+	while(us!=0)
+	{
+		for(i=0; i<25; i++)
+		{
+		}
+		for(i=0; i<7; i++)
+		{
+		}
+		us--;
+	}
+}
+void SendByte(Port* PortP,unsigned char CMD)
 {
 	bool Data;
-	bool Odd = false;
+	bool Odd=false;
 	int i;
 
-	OUT_SCKK;
-	OUT_SDAK;
-
-	CLR_SCKK; //Bring the Clock line low for at least 100 microseconds.
-	delay_us(100);
-	CLR_SDAK; // Bring the Data line low.
-
-	IN_SCKK; // Release the Clock line.
-	while (GET_SCKK)
-		; //Wait for the device to bring the Clock line low.
-
-	for (i = 0; i < 9; i++)
+	if(KeyboardFound)
 	{
-		if (i < 8)
+		GPIO_Init(PORTAPORT,PORTACLK,GPIO_MODE_OUT_PP_LOW_FAST);
+		GPIO_Init(PORTAPORT,PORTADATA,GPIO_MODE_OUT_PP_LOW_FAST);
+
+		GPIO_WriteLow(PORTAPORT,PORTACLK); //Bring the Clock line low for at least 100 microseconds.
+		Sdelay_us(100);
+		GPIO_WriteLow(PORTAPORT,PORTADATA); // Bring the Data line low.
+
+		DELAY();
+
+		GPIO_Init(PORTAPORT,PORTACLK,GPIO_MODE_IN_FL_NO_IT); // Release the Clock line. //Swich of ints derunf send;
+
+		while(GPIO_ReadInputPin(PORTAPORT,PORTACLK));//Wait for the device to bring the Clock line low.
+
+		for(i=0; i<9; i++)
 		{
-			Data = CMD & 0x01;
-			CMD >>= 1;
-			if (Data)
+			if(i<8)
 			{
-				Odd = !Odd;
-			}
-		}
-		else
-		{
-			if (Odd)
-			{
-				Data = 0;
+				Data=CMD&0x01;
+				CMD>>=1;
+				if(Data)
+				{
+					Odd=!Odd;
+				}
 			}
 			else
 			{
-				Data = 1;
+				if(Odd)
+				{
+					Data=0;
+				}
+				else
+				{
+					Data=1;
+				}
 			}
+
+			if(Data)
+			{
+				GPIO_WriteHigh(PORTAPORT,PORTADATA); //Set/reset the Data line to send the data bit
+			}
+			else
+			{
+				GPIO_WriteLow(PORTAPORT,PORTADATA); //Set/reset the Data line to send the data bit
+			}
+			while(!GPIO_ReadInputPin(PORTAPORT,PORTACLK))
+				; //Wait for the device to bring Clock high.
+			while(GPIO_ReadInputPin(PORTAPORT,PORTACLK))
+				; //Wait for the device to bring Clock low.				
 		}
 
-		if (Data)
-		{
-			SET_SDAK; //Set/reset the Data line to send the data bit
-		}
-		else
-		{
-			CLR_SDAK; //Set/reset the Data line to send the data bit
-		}
-		while (!GET_SCKK)
-			; //Wait for the device to bring Clock high.
-		while (GET_SCKK)
+		GPIO_Init(PORTAPORT,PORTADATA,GPIO_MODE_IN_FL_NO_IT); // Release the Data line.
+
+		while(GPIO_ReadInputPin(PORTAPORT,PORTADATA))
+			; //Wait for the device to bring Data Low.
+
+		while(GPIO_ReadInputPin(PORTAPORT,PORTACLK))
 			; //Wait for the device to bring Clock low.
+
+		while(!GPIO_ReadInputPin(PORTAPORT,PORTACLK)||!GPIO_ReadInputPin(PORTAPORT,PORTADATA))
+			; //Wait for the device to bring Clock & Data high.
+			/* enable interrupts */
+		GPIO_Init(PORTAPORT,PORTACLK,GPIO_MODE_IN_FL_IT); // Release the Clock line.
 	}
-
-	IN_SDAK; // Release the Data line.
-
-	while (GET_SDAK)
-		; //Wait for the device to bring Data Low.
-	while (GET_SCKK)
-		; //Wait for the device to bring Clock low.
-
-	while (!GET_SDAK || !GET_SCKK)
-		; //Wait for the device to bring Clock high.
 }
 
-bool check(unsigned char *keyVal)
+
+
+#if USEINTER	
+void GPIOIntHandler()
 {
-	static unsigned char rcvBits = 0;
-
-	bool rcvF = 0;
-
-	IN_SCKK;
-	DELAY();
-	if (!GET_SCKK)
+	if((Ports[0].rcvBits>0)&&(Ports[0].rcvBits<9))
 	{
-		if ((rcvBits > 0) && (rcvBits < 9))
-		{
-			*keyVal = *keyVal >> 1;
+		Ports[0].keyVal=Ports[0].keyVal>>1;
 
-			if (GET_SDAK)
-				*keyVal = *keyVal | 0x80;
-		}
-		rcvBits++;
-		Receiving = true;
-		while (!GET_SCKK)
-			;
-		if (rcvBits > 10)
+		if(GPIO_ReadInputPin(PORTAPORT,PORTADATA))
+			Ports[0].keyVal=Ports[0].keyVal|0x80;
+	}
+	Ports[0].rcvBits++;
+	Ports[0].Receiving=true;
+}
+#endif
+
+bool check(Port* PortP)
+{
+	bool rcvF=0;
+
+	if(KeyboardFound)
+	{
+#if !USEINTER
+		GPIO_Init(PORTAPORT,PORTACLK,GPIO_MODE_OUT_PP_LOW_FAST); 		   			//????"SCK_DDR"????
+//		DELAY();
+		GPIO_WriteHigh(PORTAPORT,PORTACLK);					//"SCK_PORT"???"1"
+//		DELAY();
+
+		GPIO_Init(PORTAPORT,PORTACLK,GPIO_MODE_IN_FL_NO_IT);						//????"SCK_DDR"?????
+//		DELAY();
+		if(!GPIO_ReadInputPin(PORTAPORT,PORTACLK))
 		{
-			rcvBits = 0;
-			rcvF = 1;
+			if((PortP->rcvBits>0)&&(PortP->rcvBits<9))
+			{
+				PortP->keyVal=PortP->keyVal>>1; 	//??????LSB???
+				//IN_SDA;			//??????????????????????????????????
+				//DELAY();
+				if(GPIO_ReadInputPin(PORTAPORT,PORTADATA))
+					PortP->keyVal=PortP->keyVal|0x80;
+			}
+			PortP->rcvBits++;
+			PortP->Receiving=true;
+			while(!GPIO_ReadInputPin(PORTAPORT,PORTACLK)); 		//???PS/2CLK????
+#else		
+		if(PortP->Receiving)
+		{
+#endif
+			if(PortP->rcvBits>10)
+			{
+				PortP->rcvBits=0;
+				rcvF=1;
+			}
 		}
 	}
-
 	return rcvF;
 }
 
-void UpdateLEDs(void)
+void UpdateKBLEDs(void)
 {
-	unsigned char Flags = 0;
+	unsigned char Flags=0;
+	if(KeyboardFound)
+	{
+		if(ShiftLock)
+		{
+			Flags=0x04;
+		}
+		if(NumLock)
+		{
+			Flags|=0x02;
+		}
+		if(ScrollLock)
+		{
+			Flags|=0x01;
+		}
 
-	if (ShiftLock)
-	{
-		Flags = 0x04;
+		SendByte(&Ports[0],0xED);
+		SendByte(&Ports[0],Flags);
 	}
-	if (NumLock)
-	{
-		Flags |= 0x02;
-	}
-	if (ScrollLock)
-	{
-		Flags |= 0x01;
-	}
-
-	SendByte(0xED);
-	SendByte(Flags);
 }
 
-unsigned char keyHandle(unsigned char *keyVal)
+unsigned char keyHandle(Port*PortP)
 {
 	unsigned char i;
-	static bool Break = 0;
-	static bool Shift = 0;
-	static bool Extended = 0;
+	static bool Break=0;
+	static bool Shift=0;
+	static bool Extended=0;
 
-	if (!Extended)
+	if(!Extended)
 	{
-		if (!Break)
+		if(!Break)
 		{
-			switch (*keyVal)
+			switch(PortP->keyVal)
 			{
 			case BREAK: // a release action
-				Break = true;
+				Break=true;
 				break;
 
 			case 0x12: // Left shift
-				Shift = true;
+				Shift=true;
 				break;
 			case 0x59: // Right shift
-				Shift = true;
+				Shift=true;
 				break;
 
 			case CAPS:
-				ShiftLock = !ShiftLock;
-				UpdateLEDs();
+				ShiftLock=!ShiftLock;
+				UpdateKBLEDs();
 				break;
 
 			case NUM:
-				NumLock = !NumLock;
-				UpdateLEDs();
+				NumLock=!NumLock;
+				UpdateKBLEDs();
 				break;
 
 			case SCROLL:
-				ScrollLock = !ScrollLock;
-				UpdateLEDs();
+				ScrollLock=!ScrollLock;
+				UpdateKBLEDs();
 				break;
 
 			case EXTENDED:
-				Extended = true;
+				Extended=true;
 				break;
 
 			default:
-				if (!Shift) // If shift not pressed
+				if(!Shift) // If shift not pressed
 				{
-					for (i = 0; unshifted[i][0] != *keyVal && i < 59; i++)
+					for(i=0; unshifted[i][0]!=PortP->keyVal&&i<59; i++)
 						;
-					if (unshifted[i][0] == *keyVal)
+					if(unshifted[i][0]==PortP->keyVal)
 					{
 						//SHIFT_DATA_PORT = val;
-						*keyVal = unshifted[i][1];
-						return *keyVal;
+						PortP->keyVal=unshifted[i][1];
+						return PortP->keyVal;
 					}
 				}
 				else // If shift pressed
 				{
-					for (i = 0; shifted[i][0] != *keyVal && i < 59; i++)
+					for(i=0; shifted[i][0]!=PortP->keyVal&&i<59; i++)
 						;
 
-					if (shifted[i][0] == *keyVal)
+					if(shifted[i][0]==PortP->keyVal)
 					{
-						*keyVal = shifted[i][1];
-						return *keyVal;
+						PortP->keyVal=shifted[i][1];
+						return PortP->keyVal;
 					}
 				}
 			}
 		}
 		else
 		{
-			Break = false;
-			switch (*keyVal)
+			Break=false;
+			switch(PortP->keyVal)
 			{
 			case 0x12: // Left SHIFT
-				Shift = false;
+				Shift=false;
 				break;
 			case 0x59: // Right SHIFT
-				Shift = false;
+				Shift=false;
 				break;
 			}
 		}
 	}
 	else
 	{
-		if (!Break)
+		if(!Break)
 		{
 		}
 		else
 		{
-			Break = false;
+			Break=false;
 		}
-		Extended = false;
+		Extended=false;
 	}
 	return 0xff;
 }
 
-int Ack = 0;
+int Ack=0;
 
-void main(void)
+bool	WaitForPort(Port*PortP,unsigned char* Recv)
 {
-	static unsigned char keyVal = 0;
+	bool Recieved=false;
 
-	PS2_Init();
-
-	UpdateLEDs();
-
-	while (1)
+	do
 	{
-		if (check(&keyVal))
+		if(check(PortP))
 		{
-			if (keyVal != 0xFA)
+			if(PortP->keyVal!=0xFA)
 			{
-				if (keyHandle(&keyVal) != 0xff)
+				if(keyHandle(PortP)!=0xff)
 				{
-					keyVal = -1;
+					I2CSendChar(PortP->keyVal);
+				}
+				else
+				{
 				}
 			}
 			else
 			{
 				Ack++;
 			}
-			keyVal = 0;
-			Receiving = false;
+			PortP->keyVal=0;
+			PortP->Receiving=false;
 		}
-		else if (!Receiving)
+	}
+	while(!Recieved);
+
+	return Recieved;
+}
+
+
+void PS2_Init(void)
+{
+	unsigned char Port1In;
+
+	InStartUp=true;
+	KeyboardFound=true;
+
+	Ports[0].State=UNINTITALISED;
+	Ports[0].Type=UNKNOWN;
+	Ports[0].Number=0;
+	Ports[0].keyVal=0;
+	Ports[0].rcvBits=0;
+
+	Ports[1].State=UNINTITALISED;
+	Ports[1].Type=UNKNOWN;
+	Ports[1].Number=1;
+	Ports[1].keyVal=0;
+	Ports[1].rcvBits=0;
+
+	SendByte(&Ports[0],0xFF);
+	//	WaitForPort(&Ports[0],&Port1In);
+
+	InStartUp=false;
+}
+
+void main(void)
+{
+	WTime 	PauseT;
+	bool	On=false;
+
+	//
+	//  Initialise the system.
+	//
+	disableInterrupts();
+
+	TIM4_Config();
+
+	GPIO_Config();
+
+#if USEUART
+	UART1_Config();
+#endif
+
+#if USEI2C	
+	I2C_Config();
+#endif
+
+	/* enable interrupts */
+	enableInterrupts();
+
+
+	OutStr("Start\r\n");
+
+
+	PS2_Init();
+
+	UpdateKBLEDs();
+
+	OUT_LED;
+
+	OutStr("About Main loop\r\n");
+
+	GetContinueTime(0,&PauseT);
+
+	while(1)
+	{
+#if USEINTER & HALTWHENIDLE		
+		#asm
+			wfi
+			#endasm
+#endif
+			if(IsNowLater(&PauseT))
+			{
+				if(On)
+				{
+					CLR_LED;
+				}
+				else
+				{
+					SET_LED;
+				}
+				On=!On;
+				GetContinueTime(TIM4_TICKSPERS,&PauseT);
+			}
+
+		if(check(&Ports[0]))
+		{
+			if(Ports[0].keyVal!=0xFA)
+			{
+				if(keyHandle(&Ports[0])!=0xff)
+				{
+#if USEUART					
+					UARTSendChar(Ports[0].keyVal);
+#endif
+
+#if USEI2C
+					I2CSendChar(Ports[0].keyVal);
+#endif
+				}
+				else
+				{
+				}
+			}
+			else
+			{
+				Ack++;
+			}
+			Ports[0].keyVal=0;
+			Ports[0].Receiving=false;
+		}
+		else if(!Ports[0].Receiving)
 		{
 			//do any send.
 
@@ -462,3 +528,4 @@ void main(void)
 		}
 	}
 }
+

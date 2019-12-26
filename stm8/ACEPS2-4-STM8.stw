@@ -4,9 +4,9 @@
 Keyword=ST7Workspace-V0.7
 
 [Project0]
-Filename=test1.stp
+Filename=aceps2-4-stm8.stp
 Dependencies=
 [Options]
-ActiveProject=test1
+ActiveProject=ACEPS2-4-STM8
 ActiveConfig=Debug
-AddSortedElements=1
+AddSortedElements=0
