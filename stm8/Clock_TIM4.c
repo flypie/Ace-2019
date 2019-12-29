@@ -58,9 +58,9 @@ void Delay_t(__IO uint32_t nTime)
 {
 	WTime 	PauseT;
 
-	GetContinueTime(nTime,&PauseT);
+	GetTimer(nTime,&PauseT);
 
-	while(!IsNowLater(&PauseT))
+	while(!IsTimeUp(&PauseT))
 	{
 	}
 }
@@ -129,7 +129,7 @@ void Delay_s(unsigned short s)
 
 long int WCount=0;
 
-void GetContinueTime(unsigned long ticks,WTime* ctime)
+void GetTimer(unsigned long ticks,WTime* ctime)
 {
 	if(U32_MAX-TIM4_Clock<ticks)
 	{
@@ -144,7 +144,7 @@ void GetContinueTime(unsigned long ticks,WTime* ctime)
 	}
 }
 
-char IsNowLater(WTime* ctime)
+char IsTimeUp(WTime* ctime)
 {
 	__IO char	Yes1=false;
 

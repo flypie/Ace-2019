@@ -6,12 +6,12 @@ clock_tim4.c
 kblookup.c
 main.c
 stm8_interrupt_vector.c
-..\..\..\documents\cosmic\stm8s-discovery_ide431-lib210-tim1-tim4-io\libraries\stm8s_stdperiph_driver\src\stm8s_i2c.c
-..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_exti.c
-..\..\..\documents\cosmic\stm8s-discovery_ide431-lib210-tim1-tim4-io\libraries\stm8s_stdperiph_driver\src\stm8s_uart1.c
-..\..\..\documents\cosmic\stm8s-discovery_ide431-lib210-tim1-tim4-io\libraries\stm8s_stdperiph_driver\src\stm8s_gpio.c
-..\..\..\documents\cosmic\stm8s-discovery_ide431-lib210-tim1-tim4-io\libraries\stm8s_stdperiph_driver\src\stm8s_clk.c
-..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_tim4.c
+..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_exti.c
+..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_uart1.c
+..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_tim4.c
+..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_i2c.c
+..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_clk.c
+..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_gpio.c
 i2c.h
 uart1.h
 ..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_exti.h
@@ -21,24 +21,27 @@ clock_tim4.h
 kblookup.h
 stm8s_conf.h
 stm8s_it.h
-..\..\..\..\..\program files (x86)\cosmic\fse_compilers\cxstm8\hstm8\iostm8s903.h
-..\..\..\..\..\program files (x86)\cosmic\fse_compilers\cxstm8\hstm8\mods0.h
-..\..\..\..\..\program files (x86)\cosmic\fse_compilers\cxstm8\hstm8\stdbool.h
-..\..\..\..\..\program files (x86)\cosmic\fse_compilers\cxstm8\hstm8\string.h
-..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s.h
-..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_adc1.h
-..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_awu.h
-..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_beep.h
-..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_clk.h
-..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_flash.h
-..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_gpio.h
-..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_i2c.h
-..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_itc.h
-..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_iwdg.h
-..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_rst.h
-..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_spi.h
-..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_tim1.h
-..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_tim2.h
-..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_tim4.h
-..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_uart1.h
-..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_wwdg.h
+..\program files (x86)\cosmic\fse_compilers\cxstm8\hstm8\iostm8s903.h
+..\program files (x86)\cosmic\fse_compilers\cxstm8\hstm8\mods0.h
+..\program files (x86)\cosmic\fse_compilers\cxstm8\hstm8\stdbool.h
+..\program files (x86)\cosmic\fse_compilers\cxstm8\hstm8\stdio.h
+..\program files (x86)\cosmic\fse_compilers\cxstm8\hstm8\stdlib.h
+..\program files (x86)\cosmic\fse_compilers\cxstm8\hstm8\string.h
+..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s.h
+..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_adc1.h
+..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_awu.h
+..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_beep.h
+..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_clk.h
+..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_exti.h
+..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_flash.h
+..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_gpio.h
+..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_i2c.h
+..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_itc.h
+..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_iwdg.h
+..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_rst.h
+..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_spi.h
+..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_tim1.h
+..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_tim2.h
+..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_tim4.h
+..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_uart1.h
+..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_wwdg.h

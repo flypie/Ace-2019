@@ -11,10 +11,12 @@
 #define	PORTAPORT	GPIOD
 #define	PORTADATA	GPIO_PIN_3
 #define	PORTACLK	GPIO_PIN_4
+#define	PORTAEXTI	EXTI_PORT_GPIOD
 
-#define	PORTBPORT	GPIOD
-#define	PORTBDATA	GPIO_PIN_3
-#define	PORTBCLK	GPIO_PIN_4
+#define	PORTBPORT	GPIOC
+#define	PORTBDATA	GPIO_PIN_6
+#define	PORTBCLK	GPIO_PIN_7
+#define	PORTBEXTI	EXTI_PORT_GPIOC
 
 
 
@@ -32,6 +34,7 @@
 extern void GPIO_Config(void);
 
 #if USEINTER	
-void GPIOIntHandler(void);
+void GPIOIntHandlerA(void);
+void GPIOIntHandlerB(void);
 #endif
 

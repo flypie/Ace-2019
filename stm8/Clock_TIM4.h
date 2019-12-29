@@ -29,5 +29,5 @@ typedef struct
 	bool	Wrapped;
 } WTime;
 
-void GetContinueTime(unsigned long ticks,WTime* ctime);
-char IsNowLater(WTime* ctime);
+void GetTimer(unsigned long ticks,WTime* ctime);
+char IsTimeUp(WTime* ctime);

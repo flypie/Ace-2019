@@ -61,7 +61,7 @@ String.100.2=STM8 Cosmic
 String.100.3=ST7 Metrowerks V1.1
 String.100.4=Raisonance
 String.101.0=STM8 Cosmic
-String.102.0=C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8
+String.102.0=C:\Program Files (x86)\COSMIC\FSE_Compilers
 String.103.0=
 String.104.0=Hstm8
 String.105.0=Lib
@@ -74,7 +74,7 @@ String.6.0=2019,12,19,0,47,36
 String.100.0=$(TargetFName)
 String.101.0=
 String.102.0=
-String.103.0=.\;..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src;..\..\..\documents\jupiterace\stm8\kelvinlawson-atomthreads-1a2f9ba\ports\stm8;..\..\..\documents\cosmic\stm8s-discovery_ide431-lib210-tim1-tim4-io\libraries\stm8s_stdperiph_driver\src;..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc;
+String.103.0=.\;program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src;documents\jupiterace\stm8\kelvinlawson-atomthreads-1a2f9ba\ports\stm8;documents\cosmic\stm8s-discovery_ide431-lib210-tim1-tim4-io\libraries\stm8s_stdperiph_driver\src;program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc;..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src;
 
 [Root.Config.0.Settings.2]
 String.2.0=
@@ -83,10 +83,10 @@ String.100.0=STM8S003F3P
 
 [Root.Config.0.Settings.3]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 +mods0 -customDebCompat -customOpt -no +compact +split -pne -ga -customC-pp -customLst -l -dSTM8S003 -i..\..\..\documents\cosmic\stm8s-discovery_ide431-lib210-tim1-tim4-io\libraries\stm8s_stdperiph_driver\src -i"..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc" -i"C:\Users\John Bradley\Documents\COSMIC\STM8S-Discovery_IDE431-LIB210-TIM1-TIM4-IO\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 +mods0 -customDebCompat -customOpt -no +compact +split -pne -ga -customC-pp -customLst -l -dSTM8S003 -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
-String.6.0=2019,12,25,2,47,28
+String.6.0=2019,12,29,0,15,51
 
 [Root.Config.0.Settings.4]
 String.2.0=Assembling $(InputFile)...
@@ -105,8 +105,8 @@ String.2.0=Running Linker
 String.3.0=clnk $(ToolsetLibOpts) -o $(OutputPath)$(TargetSName).sm8 -fakeInteger -fakeOutFile$(ProjectSFile).elf -fakeRunConv -fakeStartupcrtsi0.sm8 -fakeSemiAutoGen -fakeVectFilestm8_interrupt_vector.c -fakeVectAddr0x8000 -customMapFile -customMapFile-m$(OutputPath)$(TargetSName).map -customMapAddress -customCfgFile$(OutputPath)$(TargetSName).lkf 
 String.3.1=cvdwarf $(OutputPath)$(TargetSName).sm8
 String.4.0=$(OutputPath)$(TargetFName)
-String.5.0=$(OutputPath)$(ProjectSFile).elf $(OutputPath)$(TargetSName).map
-String.6.0=2019,12,21,2,0,1
+String.5.0=
+String.6.0=2019,12,27,15,31,14
 String.100.0=
 String.101.0=crtsi.st7
 String.102.0=+seg .const -b 0x8080 -m 0x1f80 -n .const -it
@@ -144,7 +144,7 @@ String.100.2=STM8 Cosmic
 String.100.3=ST7 Metrowerks V1.1
 String.100.4=Raisonance
 String.101.0=STM8 Cosmic
-String.102.0=C:\Program Files (x86)\COSMIC\FSE_Compilers\CXSTM8
+String.102.0=C:\Program Files (x86)\COSMIC\FSE_Compilers
 String.103.0=
 String.104.0=Hstm8
 String.105.0=Lib
@@ -157,7 +157,7 @@ String.6.0=2019,12,19,0,47,36
 String.100.0=$(TargetFName)
 String.101.0=
 String.102.0=
-String.103.0=.\;..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src;..\..\..\documents\jupiterace\stm8\kelvinlawson-atomthreads-1a2f9ba\ports\stm8;..\..\..\documents\cosmic\stm8s-discovery_ide431-lib210-tim1-tim4-io\libraries\stm8s_stdperiph_driver\src;..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc;
+String.103.0=.\;program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src;documents\jupiterace\stm8\kelvinlawson-atomthreads-1a2f9ba\ports\stm8;documents\cosmic\stm8s-discovery_ide431-lib210-tim1-tim4-io\libraries\stm8s_stdperiph_driver\src;program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc;..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src;
 
 [Root.Config.1.Settings.2]
 String.2.0=
@@ -166,10 +166,10 @@ String.100.0=STM8S003F3P
 
 [Root.Config.1.Settings.3]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 +mods0 -customOpt +compact +split -pne -ga -customC-pp -dSTM8S003 -dUSE_STDPERIPH_DRIVER -i..\..\..\documents\cosmic\stm8s-discovery_ide431-lib210-tim1-tim4-io\libraries\stm8s_stdperiph_driver\src -i"..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc" -i"C:\Users\John Bradley\Documents\COSMIC\STM8S-Discovery_IDE431-LIB210-TIM1-TIM4-IO\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 +mods0 -customOpt +compact +split -pne -ga -customC-pp -dSTM8S003 -dUSE_STDPERIPH_DRIVER -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
-String.6.0=2019,12,25,2,28,0
+String.6.0=2019,12,27,15,31,14
 
 [Root.Config.1.Settings.4]
 String.2.0=Assembling $(InputFile)...
@@ -246,10 +246,10 @@ Int.1=0
 
 [Root.Source Files.Config.0.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 +mods0 -customDebCompat -customOpt -no +compact +split -pne -ga -customC-pp -customLst -l -dSTM8S003 -i..\..\..\documents\cosmic\stm8s-discovery_ide431-lib210-tim1-tim4-io\libraries\stm8s_stdperiph_driver\src -i"..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc" -i"C:\Users\John Bradley\Documents\COSMIC\STM8S-Discovery_IDE431-LIB210-TIM1-TIM4-IO\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 +mods0 -customDebCompat -customOpt -no +compact +split -pne -ga -customC-pp -customLst -l -dSTM8S003 -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
-String.6.0=2019,12,25,2,47,28
+String.6.0=2019,12,29,0,15,51
 
 [Root.Source Files.Config.0.Settings.2]
 String.2.0=Assembling $(InputFile)...
@@ -270,10 +270,10 @@ Int.1=0
 
 [Root.Source Files.Config.1.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 +mods0 -customOpt +compact +split -pne -ga -customC-pp -dSTM8S003 -dUSE_STDPERIPH_DRIVER -i..\..\..\documents\cosmic\stm8s-discovery_ide431-lib210-tim1-tim4-io\libraries\stm8s_stdperiph_driver\src -i"..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc" -i"C:\Users\John Bradley\Documents\COSMIC\STM8S-Discovery_IDE431-LIB210-TIM1-TIM4-IO\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 +mods0 -customOpt +compact +split -pne -ga -customC-pp -dSTM8S003 -dUSE_STDPERIPH_DRIVER -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
-String.6.0=2019,12,25,2,28,0
+String.6.0=2019,12,27,15,31,14
 
 [Root.Source Files.Config.1.Settings.2]
 String.2.0=Assembling $(InputFile)...
@@ -290,6 +290,60 @@ String.6.0=2019,12,19,0,47,36
 ElemType=File
 PathName=i2c.c
 Next=Root.Source Files.uart1.c
+Config.0=Root.Source Files.i2c.c.Config.0
+Config.1=Root.Source Files.i2c.c.Config.1
+
+[Root.Source Files.i2c.c.Config.0]
+Settings.0.0=Root.Source Files.i2c.c.Config.0.Settings.0
+Settings.0.1=Root.Source Files.i2c.c.Config.0.Settings.1
+Settings.0.2=Root.Source Files.i2c.c.Config.0.Settings.2
+
+[Root.Source Files.i2c.c.Config.1]
+Settings.1.0=Root.Source Files.i2c.c.Config.1.Settings.0
+Settings.1.1=Root.Source Files.i2c.c.Config.1.Settings.1
+Settings.1.2=Root.Source Files.i2c.c.Config.1.Settings.2
+
+[Root.Source Files.i2c.c.Config.0.Settings.0]
+String.6.0=2019,12,28,23,55,34
+String.8.0=Debug
+Int.0=1
+Int.1=0
+
+[Root.Source Files.i2c.c.Config.0.Settings.1]
+String.2.0=Performing Custom Build on $(InputFile)
+String.3.0=
+String.4.0=
+String.5.0=
+String.6.0=2019,12,19,0,47,36
+
+[Root.Source Files.i2c.c.Config.0.Settings.2]
+String.2.0=Compiling $(InputFile)...
+String.3.0=cxstm8 +mods0 -customDebCompat -customOpt+compact -customC-pp -customLst -l -dSTM8S003 -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
+String.5.0=$(IntermPath)$(InputName).ls
+String.6.0=2019,12,28,23,44,30
+String.8.0=Debug
+
+[Root.Source Files.i2c.c.Config.1.Settings.0]
+String.6.0=2019,12,28,14,55,53
+String.8.0=Release
+Int.0=0
+Int.1=0
+
+[Root.Source Files.i2c.c.Config.1.Settings.1]
+String.2.0=Performing Custom Build on $(InputFile)
+String.3.0=
+String.4.0=
+String.5.0=
+String.6.0=2019,12,19,0,47,36
+
+[Root.Source Files.i2c.c.Config.1.Settings.2]
+String.2.0=Compiling $(InputFile)...
+String.3.0=cxstm8 +mods0 -customOpt +compact +split -pne -ga -customC-pp -dSTM8S003 -dUSE_STDPERIPH_DRIVER -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
+String.5.0=$(IntermPath)$(InputName).ls
+String.6.0=2019,12,27,15,31,14
+String.8.0=Release
 
 [Root.Source Files.uart1.c]
 ElemType=File
@@ -328,7 +382,7 @@ PathName=stm8_interrupt_vector.c
 [Root.StdPeriph_Driver]
 ElemType=Folder
 PathName=StdPeriph_Driver
-Child=Root.StdPeriph_Driver...\..\..\documents\cosmic\stm8s-discovery_ide431-lib210-tim1-tim4-io\libraries\stm8s_stdperiph_driver\src\stm8s_i2c.c
+Child=Root.StdPeriph_Driver...\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_exti.c
 Next=Root.include
 Config.0=Root.StdPeriph_Driver.Config.0
 Config.1=Root.StdPeriph_Driver.Config.1
@@ -353,10 +407,10 @@ Int.1=0
 
 [Root.StdPeriph_Driver.Config.0.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 +mods0 -customDebCompat -customOpt -no +compact +split -pne -ga -customC-pp -customLst -l -dSTM8S003 -i..\..\..\documents\cosmic\stm8s-discovery_ide431-lib210-tim1-tim4-io\libraries\stm8s_stdperiph_driver\src -i"..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc" -i"C:\Users\John Bradley\Documents\COSMIC\STM8S-Discovery_IDE431-LIB210-TIM1-TIM4-IO\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 +mods0 -customDebCompat -customOpt -no +compact +split -pne -ga -customC-pp -customLst -l -dSTM8S003 -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
-String.6.0=2019,12,25,2,47,28
+String.6.0=2019,12,29,0,15,51
 
 [Root.StdPeriph_Driver.Config.0.Settings.2]
 String.2.0=Assembling $(InputFile)...
@@ -377,10 +431,10 @@ Int.1=0
 
 [Root.StdPeriph_Driver.Config.1.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 +mods0 -customOpt +compact +split -pne -ga -customC-pp -dSTM8S003 -dUSE_STDPERIPH_DRIVER -i..\..\..\documents\cosmic\stm8s-discovery_ide431-lib210-tim1-tim4-io\libraries\stm8s_stdperiph_driver\src -i"..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc" -i"C:\Users\John Bradley\Documents\COSMIC\STM8S-Discovery_IDE431-LIB210-TIM1-TIM4-IO\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 +mods0 -customOpt +compact +split -pne -ga -customC-pp -dSTM8S003 -dUSE_STDPERIPH_DRIVER -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
-String.6.0=2019,12,25,2,28,0
+String.6.0=2019,12,27,15,31,14
 
 [Root.StdPeriph_Driver.Config.1.Settings.2]
 String.2.0=Assembling $(InputFile)...
@@ -393,34 +447,88 @@ String.6.0=2019,12,19,0,47,36
 String.2.0=Performing Custom Build on $(InputFile)
 String.6.0=2019,12,19,0,47,36
 
-[Root.StdPeriph_Driver...\..\..\documents\cosmic\stm8s-discovery_ide431-lib210-tim1-tim4-io\libraries\stm8s_stdperiph_driver\src\stm8s_i2c.c]
+[Root.StdPeriph_Driver...\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_exti.c]
 ElemType=File
-PathName=..\..\..\documents\cosmic\stm8s-discovery_ide431-lib210-tim1-tim4-io\libraries\stm8s_stdperiph_driver\src\stm8s_i2c.c
-Next=Root.StdPeriph_Driver...\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_exti.c
+PathName=..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_exti.c
+Next=Root.StdPeriph_Driver...\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_uart1.c
 
-[Root.StdPeriph_Driver...\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_exti.c]
+[Root.StdPeriph_Driver...\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_uart1.c]
 ElemType=File
-PathName=..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_exti.c
-Next=Root.StdPeriph_Driver...\..\..\documents\cosmic\stm8s-discovery_ide431-lib210-tim1-tim4-io\libraries\stm8s_stdperiph_driver\src\stm8s_uart1.c
+PathName=..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_uart1.c
+Next=Root.StdPeriph_Driver...\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_tim4.c
 
-[Root.StdPeriph_Driver...\..\..\documents\cosmic\stm8s-discovery_ide431-lib210-tim1-tim4-io\libraries\stm8s_stdperiph_driver\src\stm8s_uart1.c]
+[Root.StdPeriph_Driver...\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_tim4.c]
 ElemType=File
-PathName=..\..\..\documents\cosmic\stm8s-discovery_ide431-lib210-tim1-tim4-io\libraries\stm8s_stdperiph_driver\src\stm8s_uart1.c
-Next=Root.StdPeriph_Driver...\..\..\documents\cosmic\stm8s-discovery_ide431-lib210-tim1-tim4-io\libraries\stm8s_stdperiph_driver\src\stm8s_gpio.c
+PathName=..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_tim4.c
+Next=Root.StdPeriph_Driver...\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_i2c.c
 
-[Root.StdPeriph_Driver...\..\..\documents\cosmic\stm8s-discovery_ide431-lib210-tim1-tim4-io\libraries\stm8s_stdperiph_driver\src\stm8s_gpio.c]
+[Root.StdPeriph_Driver...\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_i2c.c]
 ElemType=File
-PathName=..\..\..\documents\cosmic\stm8s-discovery_ide431-lib210-tim1-tim4-io\libraries\stm8s_stdperiph_driver\src\stm8s_gpio.c
-Next=Root.StdPeriph_Driver...\..\..\documents\cosmic\stm8s-discovery_ide431-lib210-tim1-tim4-io\libraries\stm8s_stdperiph_driver\src\stm8s_clk.c
+PathName=..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_i2c.c
+Next=Root.StdPeriph_Driver...\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_clk.c
+Config.0=Root.StdPeriph_Driver...\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_i2c.c.Config.0
+Config.1=Root.StdPeriph_Driver...\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_i2c.c.Config.1
 
-[Root.StdPeriph_Driver...\..\..\documents\cosmic\stm8s-discovery_ide431-lib210-tim1-tim4-io\libraries\stm8s_stdperiph_driver\src\stm8s_clk.c]
-ElemType=File
-PathName=..\..\..\documents\cosmic\stm8s-discovery_ide431-lib210-tim1-tim4-io\libraries\stm8s_stdperiph_driver\src\stm8s_clk.c
-Next=Root.StdPeriph_Driver...\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_tim4.c
+[Root.StdPeriph_Driver...\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_i2c.c.Config.0]
+Settings.0.0=Root.StdPeriph_Driver...\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_i2c.c.Config.0.Settings.0
+Settings.0.1=Root.StdPeriph_Driver...\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_i2c.c.Config.0.Settings.1
+Settings.0.2=Root.StdPeriph_Driver...\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_i2c.c.Config.0.Settings.2
 
-[Root.StdPeriph_Driver...\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_tim4.c]
+[Root.StdPeriph_Driver...\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_i2c.c.Config.1]
+Settings.1.0=Root.StdPeriph_Driver...\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_i2c.c.Config.1.Settings.0
+Settings.1.1=Root.StdPeriph_Driver...\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_i2c.c.Config.1.Settings.1
+Settings.1.2=Root.StdPeriph_Driver...\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_i2c.c.Config.1.Settings.2
+
+[Root.StdPeriph_Driver...\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_i2c.c.Config.0.Settings.0]
+String.6.0=2019,12,29,0,2,54
+String.8.0=Debug
+Int.0=1
+Int.1=0
+
+[Root.StdPeriph_Driver...\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_i2c.c.Config.0.Settings.1]
+String.2.0=Performing Custom Build on $(InputFile)
+String.3.0=
+String.4.0=
+String.5.0=
+String.6.0=2019,12,19,0,47,36
+
+[Root.StdPeriph_Driver...\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_i2c.c.Config.0.Settings.2]
+String.2.0=Compiling $(InputFile)...
+String.3.0=cxstm8 +mods0 -customDebCompat -customOpt+compact -customC-pp -customLst -l -dSTM8S003 -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
+String.5.0=$(IntermPath)$(InputName).ls
+String.6.0=2019,12,28,23,44,30
+String.8.0=Debug
+
+[Root.StdPeriph_Driver...\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_i2c.c.Config.1.Settings.0]
+String.6.0=2019,12,28,14,55,53
+String.8.0=Release
+Int.0=0
+Int.1=0
+
+[Root.StdPeriph_Driver...\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_i2c.c.Config.1.Settings.1]
+String.2.0=Performing Custom Build on $(InputFile)
+String.3.0=
+String.4.0=
+String.5.0=
+String.6.0=2019,12,19,0,47,36
+
+[Root.StdPeriph_Driver...\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_i2c.c.Config.1.Settings.2]
+String.2.0=Compiling $(InputFile)...
+String.3.0=cxstm8 +mods0 -customOpt +compact +split -pne -ga -customC-pp -dSTM8S003 -dUSE_STDPERIPH_DRIVER -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
+String.5.0=$(IntermPath)$(InputName).ls
+String.6.0=2019,12,27,15,31,14
+String.8.0=Release
+
+[Root.StdPeriph_Driver...\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_clk.c]
 ElemType=File
-PathName=..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_tim4.c
+PathName=..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_clk.c
+Next=Root.StdPeriph_Driver...\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_gpio.c
+
+[Root.StdPeriph_Driver...\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_gpio.c]
+ElemType=File
+PathName=..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_gpio.c
 
 [Root.include]
 ElemType=Folder
@@ -449,10 +557,10 @@ Int.1=0
 
 [Root.include.Config.0.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 +mods0 -customDebCompat -customOpt -no +compact +split -pne -ga -customC-pp -customLst -l -dSTM8S003 -i..\..\..\documents\cosmic\stm8s-discovery_ide431-lib210-tim1-tim4-io\libraries\stm8s_stdperiph_driver\src -i"..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc" -i"C:\Users\John Bradley\Documents\COSMIC\STM8S-Discovery_IDE431-LIB210-TIM1-TIM4-IO\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 +mods0 -customDebCompat -customOpt -no +compact +split -pne -ga -customC-pp -customLst -l -dSTM8S003 -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
-String.6.0=2019,12,25,2,47,28
+String.6.0=2019,12,29,0,15,51
 
 [Root.include.Config.0.Settings.2]
 String.2.0=Assembling $(InputFile)...
@@ -476,10 +584,10 @@ Int.1=0
 
 [Root.include.Config.1.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 +mods0 -customOpt +compact +split -pne -ga -customC-pp -dSTM8S003 -dUSE_STDPERIPH_DRIVER -i..\..\..\documents\cosmic\stm8s-discovery_ide431-lib210-tim1-tim4-io\libraries\stm8s_stdperiph_driver\src -i"..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc" -i"C:\Users\John Bradley\Documents\COSMIC\STM8S-Discovery_IDE431-LIB210-TIM1-TIM4-IO\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 +mods0 -customOpt +compact +split -pne -ga -customC-pp -dSTM8S003 -dUSE_STDPERIPH_DRIVER -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
-String.6.0=2019,12,25,2,28,0
+String.6.0=2019,12,27,15,31,14
 
 [Root.include.Config.1.Settings.2]
 String.2.0=Assembling $(InputFile)...
@@ -499,6 +607,42 @@ String.6.0=2019,12,19,0,47,36
 ElemType=File
 PathName=i2c.h
 Next=Root.include.uart1.h
+Config.0=Root.include.i2c.h.Config.0
+Config.1=Root.include.i2c.h.Config.1
+
+[Root.include.i2c.h.Config.0]
+Settings.0.0=Root.include.i2c.h.Config.0.Settings.0
+Settings.0.1=Root.include.i2c.h.Config.0.Settings.1
+
+[Root.include.i2c.h.Config.1]
+Settings.1.0=Root.include.i2c.h.Config.1.Settings.0
+Settings.1.1=Root.include.i2c.h.Config.1.Settings.1
+
+[Root.include.i2c.h.Config.0.Settings.0]
+String.6.0=2019,12,28,23,55,43
+String.8.0=Debug
+Int.0=1
+Int.1=0
+
+[Root.include.i2c.h.Config.0.Settings.1]
+String.2.0=Performing Custom Build on $(InputFile)
+String.3.0=
+String.4.0=
+String.5.0=
+String.6.0=2019,12,19,0,47,36
+
+[Root.include.i2c.h.Config.1.Settings.0]
+String.6.0=2019,12,28,14,55,53
+String.8.0=Release
+Int.0=0
+Int.1=0
+
+[Root.include.i2c.h.Config.1.Settings.1]
+String.2.0=Performing Custom Build on $(InputFile)
+String.3.0=
+String.4.0=
+String.5.0=
+String.6.0=2019,12,19,0,47,36
 
 [Root.include.uart1.h]
 ElemType=File

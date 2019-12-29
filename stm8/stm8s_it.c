@@ -32,8 +32,10 @@
 extern __IO uint32_t TIM4_Clock;
 void ClkIntHandler(void);
 
-extern	void  GPIO_D_Handler(void);
-extern	void  I2C_Handler(void);
+extern	void  	GPIO_D_Handler(void);
+extern	void  	GPIO_C_Handler(void);
+extern	void  	I2C_Handler(void);
+extern 	void	UART1_IRQHandler_TX(void);
 
 /* Private functions ---------------------------------------------------------*/
 
@@ -138,6 +140,7 @@ INTERRUPT_HANDLER(EXTI_PORTC_IRQHandler,5)
 	/* In order to detect unexpected events during development,
 	   it is recommended to set a breakpoint on the following instruction.
 	*/
+	GPIO_C_Handler();	
 }
 
 /**
@@ -151,7 +154,6 @@ INTERRUPT_HANDLER(EXTI_PORTD_IRQHandler,6)
 	   it is recommended to set a breakpoint on the following instruction.
 	*/
 	GPIO_D_Handler();
-	/* Clear the IT pending Bit */
 }
 
 /**
@@ -330,6 +332,7 @@ INTERRUPT_HANDLER(UART1_TX_IRQHandler,17)
 	/* In order to detect unexpected events during development,
 	   it is recommended to set a breakpoint on the following instruction.
 	*/
+	UART1_IRQHandler_TX();
 }
 
 /**
