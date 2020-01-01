@@ -221,7 +221,7 @@ String.6.0=2019,12,19,0,47,36
 [Root.Source Files]
 ElemType=Folder
 PathName=Source Files
-Child=Root.Source Files.i2c.c
+Child=Root.Source Files.send.c
 Next=Root.StdPeriph_Driver
 Config.0=Root.Source Files.Config.0
 Config.1=Root.Source Files.Config.1
@@ -285,6 +285,16 @@ String.6.0=2019,12,19,0,47,36
 [Root.Source Files.Config.1.Settings.3]
 String.2.0=Performing Custom Build on $(InputFile)
 String.6.0=2019,12,19,0,47,36
+
+[Root.Source Files.send.c]
+ElemType=File
+PathName=send.c
+Next=Root.Source Files.receive.c
+
+[Root.Source Files.receive.c]
+ElemType=File
+PathName=receive.c
+Next=Root.Source Files.i2c.c
 
 [Root.Source Files.i2c.c]
 ElemType=File
@@ -533,7 +543,7 @@ PathName=..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_
 [Root.include]
 ElemType=Folder
 PathName=include
-Child=Root.include.i2c.h
+Child=Root.include.send.h
 Config.0=Root.include.Config.0
 Config.1=Root.include.Config.1
 
@@ -602,6 +612,21 @@ String.3.0=
 String.4.0=
 String.5.0=
 String.6.0=2019,12,19,0,47,36
+
+[Root.include.send.h]
+ElemType=File
+PathName=send.h
+Next=Root.include.receive.h
+
+[Root.include.receive.h]
+ElemType=File
+PathName=receive.h
+Next=Root.include.main.h
+
+[Root.include.main.h]
+ElemType=File
+PathName=main.h
+Next=Root.include.i2c.h
 
 [Root.include.i2c.h]
 ElemType=File

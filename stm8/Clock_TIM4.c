@@ -9,7 +9,8 @@
 
 static bool TIM4Started=false;
 
-__IO uint32_t TIM4_Clock=0;
+unsigned long TIM4_Clock=0;
+//long int WCount=0;
 
 void TIM4_Config(void)
 {
@@ -127,15 +128,12 @@ void Delay_s(unsigned short s)
 
 
 
-long int WCount=0;
-
 void GetTimer(unsigned long ticks,WTime* ctime)
 {
 	if(U32_MAX-TIM4_Clock<ticks)
 	{
 		ctime->time=ticks-(U32_MAX-TIM4_Clock);
 		ctime->Wrapped=true;
-		WCount++;
 	}
 	else
 	{

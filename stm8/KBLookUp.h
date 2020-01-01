@@ -5,5 +5,15 @@
 #define EXTENDED 0xE0
 #define BREAK 0xF0
 
-extern @near unsigned char unshifted[][2];
-extern @near unsigned char shifted[][2];
+typedef struct
+{
+	unsigned char Code;
+	unsigned char Char;
+} Element;
+
+extern @near Element unshifted[];
+extern @near Element shifted[];
+
+
+unsigned char LookUpChar(Element *Table,unsigned char CharIn);
+
