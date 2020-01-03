@@ -29,7 +29,7 @@
 /* Private function prototypes -----------------------------------------------*/
 
 
-extern __IO uint32_t TIM4_Clock;
+extern __IO unsigned long TIM4_Clock;
 void ClkIntHandler(void);
 
 extern	void  	GPIO_D_Handler(void);

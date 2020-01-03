@@ -73,78 +73,25 @@ void OutStr(unsigned char* Buffer)
 }
 
 
-
-
 #if USEINTER	
+
 void GPIOIntHandler(Port* PortP)
 {
 	bool Data;
 	
-
 	if(PortP->Mode==RECEIVING)
 	{
-		if((PortP->Bits>0)&&(PortP->Bits<9))
-		{
-			PortP->keyVal=PortP->keyVal>>1;
-	
-			if(GPIO_ReadInputPin(PortP->GPIOPort,PortP->GPIODPin))
-				PortP->keyVal=PortP->keyVal|0x80;
-		}
-		PortP->Bits++;
-		PortP->Receiving=true;
+		ReceiveIntHandler(PortP);
 	}
 	else if(PortP->Mode==SENDING)
 	{
-		if(PortP->Bits<9)
-		{
-			if(PortP->Bits<8)
-			{
-				Data=PortP->SendChar&0x01;
-				PortP->SendChar>>=1;
-				if(Data)
-				{
-					PortP->Odd=!PortP->Odd;
-				}
-			}
-			else
-			{
-				if(PortP->Odd)
-				{
-					Data=0;
-				}
-				else
-				{
-					Data=1;
-				}
-			}
-	
-			if(Data)
-			{
-				GPIO_WriteHigh(PortP->GPIOPort,PortP->GPIODPin); //Set/reset the Data line to send the data bit
-			}
-			else
-			{
-				GPIO_WriteLow(PortP->GPIOPort,PortP->GPIODPin); //Set/reset the Data line to send the data bit
-			}
-			PortP->Bits++;
-		}
-		else if(PortP->Bits<10)
-		{
-			PortP->Bits++;
-			GPIO_Init(PortP->GPIOPort,PortP->GPIODPin,GPIO_MODE_IN_FL_NO_IT); // Release the Data line.
-		}
-		else
-		{
-			PortP->SendState=RELEASE;
-		}
+		SendIntHandler(PortP);
+
 	}
 	else
 	{
 	}
 }
-
-
-
 
 void GPIOIntHandlerA()
 {
@@ -182,7 +129,7 @@ void UpdateKBLEDs(Port *PortP)
 	Response=WaitForPort(PortP,&Port1In,TIM4_TICKSPERS);
 	if(Response!=MOK || Port1In!=DACK)
 	{
-//			OutStr("UpdateKBLEDs 1\r\n");
+//		OutStr("UpdateKBLEDs 1\r\n");
 	}
 	else
 	{
@@ -190,7 +137,7 @@ void UpdateKBLEDs(Port *PortP)
 		Response=WaitForPort(PortP,&Port1In,TIM4_TICKSPERS);
 		if(Response!=MOK || Port1In!=DACK)
 		{
-//				OutStr("UpdateKBLEDs 2\r\n");
+//			OutStr("UpdateKBLEDs 2\r\n");
 		}
 	}
 
@@ -212,7 +159,7 @@ void PS2_Init(char PortNum)
 	Ports[PortNum].Bits=0;
 	Ports[PortNum].Mode=RECEIVING;
 	Ports[PortNum].SendState=NOTSTARTED;
-	
+
 	if(PortNum==0)
 	{
 		Ports[PortNum].GPIOPort=PORTAPORT;
@@ -229,25 +176,32 @@ void PS2_Init(char PortNum)
 	{
 //		OutStr("PORT Not Define\r\n");
 	}
-
-
 	SendByte(&Ports[PortNum],KRESET);
-	Response=WaitForPort(&Ports[PortNum],&Port1In,TIM4_TICKSPERS);
+#if USEINTER				
+#else
+	Ports[PortNum].ClkState=true;
+	Ports[PortNum].OldClkState=true;
+#endif
+	Response=WaitForPort(&Ports[PortNum],&Port1In,TIM4_TICKSPERS/4);
 
 	if(Response==MTIMEOUT)
 	{
-//		OutStr("TIMEOUT 1\r\n");
+		OutStr("TIMEOUT 1\r\n");
 	}
 	else if(Response!=MOK)
 	{
-//		OutStr("TIMEOUT 2\r\n");
+		OutStr("Response!=MOK\r\n");
+	}
+	else if(Response==MOK && Port1In==DERR)
+	{
+		OutStr("DERR\r\n");
 	}
 	else if(Port1In==DACK || Port1In==0)
 	{
-		Response=WaitForPort(&Ports[PortNum],&Port1In,TIM4_TICKSPERS);		
+		Response=WaitForPort(&Ports[PortNum],&Port1In,TIM4_TICKSPERS/4);		
 		if(Response==MOK && (Port1In==DSELFTESTPASS || Port1In==0))
 		{
-			Response=WaitForPort(&Ports[PortNum],&Port1In,TIM4_TICKSPERS);		
+			Response=WaitForPort(&Ports[PortNum],&Port1In,TIM4_TICKSPERS/4);		
 			if(Response==MOK)
 			{
 				SendByte(&Ports[PortNum],MREADID);
@@ -295,7 +249,19 @@ void PS2_Init(char PortNum)
 							OutStr("Keyboard Initialised\r\n");
 							Ports[PortNum].Type=TKEYBOARD;
 						}
+						else
+						{
+							OutStr("C\r\n");
+						}						
 					}			
+					else
+					{
+						OutStr("B\r\n");
+					}
+				}
+				else
+				{
+					OutStr("A\r\n");
 				}
 			}
 		}
@@ -316,7 +282,7 @@ void PS2_Init(char PortNum)
 	InStartUp=false;
 }
 
- void main(void)
+void main(void)
 {
 	WTime 	PauseT;
 	bool	On=false;
@@ -352,6 +318,7 @@ void PS2_Init(char PortNum)
 		{
 			UpdateKBLEDs(&Ports[i]);
 		}
+//		Ports[i].Bits=0;
 	}
 
 	OUT_LED;
@@ -389,7 +356,10 @@ void PS2_Init(char PortNum)
 				if(Ports[i].Mode==RECEIVING)
 				{
 					if(ReceiveCheck(&Ports[i]))
-					{	
+					{
+						Ports[i].Bits=0;
+						Ports[i].Receiving=false;
+						Ports[i].Received=false;
 						if(Ports[i].Type==TKEYBOARD)
 						{
 							if(Ports[i].keyVal!=DACK)
@@ -445,7 +415,7 @@ void PS2_Init(char PortNum)
 						//CapsLock=!CapsLock;
 					}
 				}
-#if USEINTERX
+#if USEINTER
 				else if(Ports[i].Mode==SENDING)
 				{
 					if(SendCheck(&Ports[i]))

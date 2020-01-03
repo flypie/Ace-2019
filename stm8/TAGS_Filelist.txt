@@ -1,3 +1,5 @@
+send.c
+receive.c
 i2c.c
 uart1.c
 gpio.c
@@ -12,6 +14,9 @@ stm8_interrupt_vector.c
 ..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_i2c.c
 ..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_clk.c
 ..\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_gpio.c
+send.h
+receive.h
+main.h
 i2c.h
 uart1.h
 ..\..\..\..\..\program files (x86)\stmicroelectronics\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\inc\stm8s_exti.h

@@ -3,10 +3,10 @@ void TIM4_Config(void);
 
 
 
-void Delay_t(__IO uint32_t nTime);
-void Delay_us(__IO unsigned short us);
-void Delay_ms(__IO unsigned short ms);
-void Delay_s(__IO unsigned short s);
+void Delay_t(unsigned long nTime);
+void Delay_us(unsigned long us);
+void Delay_ms(unsigned long ms);
+void Delay_s(unsigned long s);
 
 
 void TimingDelay_Decrement(void);

@@ -55,7 +55,7 @@ void TIM4_Config(void)
 	TIM4Started=true;
 }
 
-void Delay_t(__IO uint32_t nTime)
+void Delay_t(unsigned long nTime)
 {
 	WTime 	PauseT;
 
@@ -66,7 +66,7 @@ void Delay_t(__IO uint32_t nTime)
 	}
 }
 
-void Delay_us(__IO unsigned short us)
+void Delay_us(unsigned long us)
 {
 	unsigned char i;
 
@@ -75,6 +75,7 @@ void Delay_us(__IO unsigned short us)
 		Delay_t((us*TIM4_TICKSPERS)/1000000);
 	}
 	else
+
 	{
 		while(us!=0)
 		{
@@ -89,7 +90,7 @@ void Delay_us(__IO unsigned short us)
 	}
 }
 
-void Delay_ms(unsigned short ms)
+void Delay_ms(unsigned long ms)
 {
 
 	u8 i;
@@ -113,7 +114,7 @@ void Delay_ms(unsigned short ms)
 	}
 }
 
-void Delay_s(unsigned short s)
+void Delay_s(unsigned long s)
 {
 	if(TIM4Started)
 	{
@@ -144,13 +145,13 @@ void GetTimer(unsigned long ticks,WTime* ctime)
 
 char IsTimeUp(WTime* ctime)
 {
-	__IO char	Yes1=false;
+	char	Yes1=false;
 
 	if(TIM4Started)
 	{
 		if(ctime->Wrapped)
 		{
-			if(TIM4_Clock>U32_MAX/2)
+			if(TIM4_Clock>(U32_MAX/2))
 			{
 			}
 			else

@@ -1,35 +1,50 @@
 #include "ACEPS2-4-STM8.h"
 
 
-bool ReceiveCheck(Port* PortP)
+void ReceiveIntHandler(Port *PortP)
 {
+	if((PortP->Bits>0)&&(PortP->Bits<9))
+	{
+		PortP->keyVal>>=1;
+		
+//		if(GETADATA)
+		if(GPIO_ReadInputPin(PortP->GPIOPort,PortP->GPIODPin))
+		{
+			PortP->keyVal|=0x80;
+		}
+	}
+	PortP->Bits++;
+	PortP->Receiving=true;
+}
+
+bool ReceiveCheck(Port* PortP)
+{	
 	if(PortP->State==INTITALISED || PortP->State==INTITALISING)
 	{
-#if !USEINTER
-		GPIO_Init(PortP->GPIOPort,PortP->GPIOCPin,GPIO_MODE_OUT_PP_LOW_FAST); 		   			//????"SCK_DDR"????
-//		DELAY();
-		GPIO_WriteHigh(PortP->GPIOPort,PortP->GPIOCPin);					//"SCK_PORT"???"1"
-//		DELAY();
-
-		GPIO_Init(PortP->GPIOPort,PortP->GPIOCPin,GPIO_MODE_IN_FL_NO_IT);						//????"SCK_DDR"?????
-//		DELAY();
-		if(!GPIO_ReadInputPin(PortP->GPIOPort,PortP->GPIOCPin))
+#if USEINTER		
+#else
+//		if(GETACLK)
+		if(GPIO_ReadInputPin(PortP->GPIOPort,PortP->GPIOCPin))
 		{
-			if((PortP->Bits>0)&&(PortP->Bits<9))
-			{
-				PortP->keyVal=PortP->keyVal>>1; 	//??????LSB???
-				//IN_SDA;			//??????????????????????????????????
-				//DELAY();
-				if(GPIO_ReadInputPin(PortP->GPIOPort,PortP->GPIODPin))
-					PortP->keyVal=PortP->keyVal|0x80;
-			}
-			PortP->Bits++;
-			PortP->Receiving=true;
-			while(!GPIO_ReadInputPin(PortP->GPIOPort,PortP->GPIOCPin)); 		//???PS/2CLK????
-#else		
+			PortP->ClkState=true;
+		}
+		else
+		{
+			PortP->ClkState=false;
+		}
+
+		if(!PortP->ClkState && PortP->OldClkState)
+		{
+			ReceiveIntHandler(PortP);
+			PortP->OldClkState=PortP->ClkState;
+		}
+		else if(PortP->ClkState && !PortP->OldClkState)
+		{
+			PortP->OldClkState=PortP->ClkState;
+		}		
+#endif
 		if(PortP->Receiving)
 		{
-#endif
 			if(PortP->Bits>10)
 			{
 				if(PortP->Bits>11)
@@ -38,8 +53,6 @@ bool ReceiveCheck(Port* PortP)
 				}
 				else
 				{	
-					PortP->Bits=0;
-					PortP->Receiving=false;
 					PortP->Received=true;
 				}
 			}
@@ -54,9 +67,18 @@ MyResponse WaitForPort(Port*PortP,unsigned char* Recv,unsigned long TimeOut)
 {
 	WTime 	PauseT;
 	DeviceResponse	RetVal=MOK;
+	
 	PortP->Received=false;
 	
 	GetTimer(TimeOut,&PauseT);
+	
+	PortP->Receiving=true;
+	PortP->Bits=0;
+
+#if USEINTER				
+#else
+	PortP->ClkState=PortP->OldClkState=true;
+#endif
 
 	do
 	{
@@ -69,9 +91,10 @@ MyResponse WaitForPort(Port*PortP,unsigned char* Recv,unsigned long TimeOut)
 			PortP->Receiving=false;
 			RetVal=MOK;
 			break;
-		}
+		} 
 		else if(IsTimeUp(&PauseT))
 		{
+			*Recv=PortP->keyVal;			
 			PortP->keyVal=0;
 			PortP->Bits=0;
 			PortP->Received=false;
@@ -81,6 +104,8 @@ MyResponse WaitForPort(Port*PortP,unsigned char* Recv,unsigned long TimeOut)
 		}
 	}
 	while(!PortP->Received);
+
+	PortP->Receiving=false;
 
 	return RetVal;
 }
@@ -145,10 +170,6 @@ unsigned char keyHandle(Port *PortP)
 				else // If shift pressed
 				{
 					i=LookUpChar(shifted,PortP->keyVal);
-/*
-					for(i=0; shifted[i][0]!=PortP->keyVal&&i<59; i++)
-						;
-*/
 					if(shifted[i].Code==PortP->keyVal)
 					{
 						PortP->keyVal=shifted[i].Char;

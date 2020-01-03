@@ -1,9 +1,9 @@
 
 
-bool SendCheck(Port* PortP);
+MyResponse SendCheck(Port* PortP);
+MyResponse  SendByte(Port* PortP,const unsigned char CMD);
+void SendIntHandler(Port *PortP);
 
-
-MyResponse  SendByte(Port* PortP,unsigned char CMD);
 
 
 

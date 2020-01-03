@@ -317,9 +317,9 @@ int main(int argc,char* argv[])
 
 unsigned char LookUpChar(Element *Table,unsigned char CharIn)
 {
-	unsigned char	start = 0;
-	unsigned char	end;
-	unsigned char	mid;
+	signed char	start = 0;
+	signed char	end;
+	signed char	mid;
 
 	unsigned short 	size=sizeof(unshifted)/sizeof(unshifted[0]);
 

@@ -6,6 +6,16 @@
 
 #include "Clock_TIM4.h"
 
+#define NumberOfPorts	2
+
+#define USEUART		1	//Talk to CPU via UART
+#define USEI2C		0	//Talk to CPU via I2C
+
+#define	USEINTER	1    //If the Keyboard/Mouse n put is Interup driven.
+
+#define	HALTWHENIDLE 0    //Call wfi when waiting Lowers power usage hard to debug
+
+
 
 typedef enum
 {
@@ -18,14 +28,15 @@ typedef enum
 typedef enum
 {
 	DSELFTESTPASS=0xAA,
-	DKEYBOARDID=0xAB,
+	DKEYBOARDID	=0xAB,
 	DACK		=0xFA,
+	DERR		=0xFE,
 	DTIMEOUT	=0xFF
 } DeviceResponse;
 
 
 typedef enum
-{
+{		MFIN		=0x40,
 	MOK			=0x30,
 //	DACK		=0x10,
 	MTIMEOUT	=0x20
@@ -97,7 +108,8 @@ typedef enum
 	NOTSTARTED,
 	FIRSTWAIT,
 	WAITTILLPORTSENDING,
-	RELEASE,
+	RELEASE1,
+	RELEASE2,
 	PORTTIMEOUT
 }	PortSendState;
 
@@ -108,15 +120,21 @@ typedef struct
 	unsigned char Number;
 	unsigned char keyVal;
 
-	unsigned short Bits;  //so we can buff overrun
+	unsigned char Bits;  //so we can buff overrun
+	
+#if USEINTER	
+#else
+	unsigned char ClkState;
+	unsigned char OldClkState;
+#endif
 
 	PortMode Mode;
 
-	bool Receiving;
-	bool Received;
+	unsigned char Receiving;
+	unsigned char  Received;
 
 	PortSendState	SendState;
-	bool			Odd;
+	unsigned char 	Odd;
 	unsigned char 	SendChar;
 
 	WTime 	PauseT;
@@ -126,16 +144,6 @@ typedef struct
 	GPIO_Pin_TypeDef GPIODPin;
 
 } Port;
-
-#define NumberOfPorts	2
-
-#define USEUART		1	//Talk to CPU via UART
-#define USEI2C		0	//Talk to CPU via I2C
-
-#define	USEINTER	1    //If the Keyboard/Mouse n put is Interup driven. Lowers power use hard to debug.
-
-#define	HALTWHENIDLE 0    //Call wfi when waiting
-
 
 
 #include "GPIO.h"

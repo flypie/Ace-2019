@@ -8,5 +8,5 @@ Filename=aceps2-4-stm8.stp
 Dependencies=
 [Options]
 ActiveProject=ACEPS2-4-STM8
-ActiveConfig=Debug
+ActiveConfig=Release
 AddSortedElements=0

@@ -83,10 +83,10 @@ String.100.0=STM8S003F3P
 
 [Root.Config.0.Settings.3]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 +mods0 -customDebCompat -customOpt -no +compact +split -pne -ga -customC-pp -customLst -l -dSTM8S003 -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 +warn +mods0 -customDebCompat -customOpt -no +compact +split -pne -ga -customC-pp -customLst -l -dSTM8S003 -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
-String.6.0=2019,12,29,0,15,51
+String.6.0=2020,1,3,22,36,56
 
 [Root.Config.0.Settings.4]
 String.2.0=Assembling $(InputFile)...
@@ -166,10 +166,10 @@ String.100.0=STM8S003F3P
 
 [Root.Config.1.Settings.3]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 +mods0 -customOpt +compact +split -pne -ga -customC-pp -dSTM8S003 -dUSE_STDPERIPH_DRIVER -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 +mods0 -customC-pp -dSTM8S003 -dUSE_STDPERIPH_DRIVER -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
-String.6.0=2019,12,27,15,31,14
+String.6.0=2020,1,3,22,36,56
 
 [Root.Config.1.Settings.4]
 String.2.0=Assembling $(InputFile)...
@@ -246,10 +246,10 @@ Int.1=0
 
 [Root.Source Files.Config.0.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 +mods0 -customDebCompat -customOpt -no +compact +split -pne -ga -customC-pp -customLst -l -dSTM8S003 -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 +warn +mods0 -customDebCompat -customOpt -no +compact +split -pne -ga -customC-pp -customLst -l -dSTM8S003 -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
-String.6.0=2019,12,29,0,15,51
+String.6.0=2020,1,3,22,36,56
 
 [Root.Source Files.Config.0.Settings.2]
 String.2.0=Assembling $(InputFile)...
@@ -270,10 +270,10 @@ Int.1=0
 
 [Root.Source Files.Config.1.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 +mods0 -customOpt +compact +split -pne -ga -customC-pp -dSTM8S003 -dUSE_STDPERIPH_DRIVER -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 +mods0 -customC-pp -dSTM8S003 -dUSE_STDPERIPH_DRIVER -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
-String.6.0=2019,12,27,15,31,14
+String.6.0=2020,1,3,22,36,56
 
 [Root.Source Files.Config.1.Settings.2]
 String.2.0=Assembling $(InputFile)...
@@ -349,10 +349,10 @@ String.6.0=2019,12,19,0,47,36
 
 [Root.Source Files.i2c.c.Config.1.Settings.2]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 +mods0 -customOpt +compact +split -pne -ga -customC-pp -dSTM8S003 -dUSE_STDPERIPH_DRIVER -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 +mods0 -customC-pp -dSTM8S003 -dUSE_STDPERIPH_DRIVER -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
-String.6.0=2019,12,27,15,31,14
+String.6.0=2020,1,3,22,36,56
 String.8.0=Release
 
 [Root.Source Files.uart1.c]
@@ -417,10 +417,10 @@ Int.1=0
 
 [Root.StdPeriph_Driver.Config.0.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 +mods0 -customDebCompat -customOpt -no +compact +split -pne -ga -customC-pp -customLst -l -dSTM8S003 -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 +warn +mods0 -customDebCompat -customOpt -no +compact +split -pne -ga -customC-pp -customLst -l -dSTM8S003 -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
-String.6.0=2019,12,29,0,15,51
+String.6.0=2020,1,3,22,36,56
 
 [Root.StdPeriph_Driver.Config.0.Settings.2]
 String.2.0=Assembling $(InputFile)...
@@ -441,10 +441,10 @@ Int.1=0
 
 [Root.StdPeriph_Driver.Config.1.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 +mods0 -customOpt +compact +split -pne -ga -customC-pp -dSTM8S003 -dUSE_STDPERIPH_DRIVER -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 +mods0 -customC-pp -dSTM8S003 -dUSE_STDPERIPH_DRIVER -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
-String.6.0=2019,12,27,15,31,14
+String.6.0=2020,1,3,22,36,56
 
 [Root.StdPeriph_Driver.Config.1.Settings.2]
 String.2.0=Assembling $(InputFile)...
@@ -525,10 +525,10 @@ String.6.0=2019,12,19,0,47,36
 
 [Root.StdPeriph_Driver...\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_i2c.c.Config.1.Settings.2]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 +mods0 -customOpt +compact +split -pne -ga -customC-pp -dSTM8S003 -dUSE_STDPERIPH_DRIVER -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 +mods0 -customC-pp -dSTM8S003 -dUSE_STDPERIPH_DRIVER -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
-String.6.0=2019,12,27,15,31,14
+String.6.0=2020,1,3,22,36,56
 String.8.0=Release
 
 [Root.StdPeriph_Driver...\users\john bradley\documents\stm8_embedded_software\stm8s_stdperiph_lib\libraries\stm8s_stdperiph_driver\src\stm8s_clk.c]
@@ -567,10 +567,10 @@ Int.1=0
 
 [Root.include.Config.0.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 +mods0 -customDebCompat -customOpt -no +compact +split -pne -ga -customC-pp -customLst -l -dSTM8S003 -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 +warn +mods0 -customDebCompat -customOpt -no +compact +split -pne -ga -customC-pp -customLst -l -dSTM8S003 -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
-String.6.0=2019,12,29,0,15,51
+String.6.0=2020,1,3,22,36,56
 
 [Root.include.Config.0.Settings.2]
 String.2.0=Assembling $(InputFile)...
@@ -594,10 +594,10 @@ Int.1=0
 
 [Root.include.Config.1.Settings.1]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 +mods0 -customOpt +compact +split -pne -ga -customC-pp -dSTM8S003 -dUSE_STDPERIPH_DRIVER -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 +mods0 -customC-pp -dSTM8S003 -dUSE_STDPERIPH_DRIVER -i"C:\Users\John Bradley\Documents\STM8_Embedded_Software\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc" $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
-String.6.0=2019,12,27,15,31,14
+String.6.0=2020,1,3,22,36,56
 
 [Root.include.Config.1.Settings.2]
 String.2.0=Assembling $(InputFile)...

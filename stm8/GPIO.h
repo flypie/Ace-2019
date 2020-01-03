@@ -12,6 +12,8 @@
 #define	PORTADATA	GPIO_PIN_3
 #define	PORTACLK	GPIO_PIN_4
 #define	PORTAEXTI	EXTI_PORT_GPIOD
+//#define GETACLK		gbi(PD_IDR, 4)
+//#define GETADATA	gbi(PD_IDR, 3)
 
 #define	PORTBPORT	GPIOC
 #define	PORTBDATA	GPIO_PIN_6
