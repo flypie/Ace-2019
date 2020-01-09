@@ -1,13 +1,9 @@
-
 void TIM4_Config(void);
-
-
 
 void Delay_t(unsigned long nTime);
 void Delay_us(unsigned long us);
 void Delay_ms(unsigned long ms);
 void Delay_s(unsigned long s);
-
 
 void TimingDelay_Decrement(void);
 void CLK_Config(void);
@@ -26,11 +22,11 @@ void CLK_Config(void);
 typedef struct
 {
 	unsigned long time;
-	bool	Wrapped;
+	bool Wrapped;
 } WTime;
 
-void GetTimer(unsigned long ticks,WTime* ctime);
-char IsTimeUp(WTime* ctime);
+void GetTimer(unsigned long ticks, WTime *ctime);
+char IsTimeUp(WTime *ctime);
 
 #define MILLI_SECONDS(In)	(In*TIM4_TICKSPERS)/1000
 #define MICRO_SECONDS(In)	(In*TIM4_TICKSPERS)/1000000

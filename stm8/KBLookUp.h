@@ -14,6 +14,5 @@ typedef struct
 extern @near Element unshifted[];
 extern @near Element shifted[];
 
-
-unsigned char LookUpChar(Element *Table,unsigned char CharIn);
+unsigned char LookUpChar(Element *Table, unsigned char CharIn);
 

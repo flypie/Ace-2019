@@ -1,25 +1,25 @@
 /**
-  ******************************************************************************
-  * @file     stm8s_it.c
-  * @author   MCD Application Team
-  * @version  V2.0.1
-  * @date     18-November-2011
-  * @brief    Main Interrupt Service Routines.
-  ******************************************************************************
-  * @attention
-  *
-  * THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
-  * WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE
-  * TIME. AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY
-  * DIRECT, INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING
-  * FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE
-  * CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
-  *
-  * <h2><center>&copy; COPYRIGHT 2011 STMicroelectronics</center></h2>
-  ******************************************************************************
-  */
+ ******************************************************************************
+ * @file     stm8s_it.c
+ * @author   MCD Application Team
+ * @version  V2.0.1
+ * @date     18-November-2011
+ * @brief    Main Interrupt Service Routines.
+ ******************************************************************************
+ * @attention
+ *
+ * THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
+ * WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE
+ * TIME. AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY
+ * DIRECT, INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING
+ * FROM THE CONTENT OF SUCH FIRMWARE AND/OR THE USE MADE BY CUSTOMERS OF THE
+ * CODING INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
+ *
+ * <h2><center>&copy; COPYRIGHT 2011 STMicroelectronics</center></h2>
+ ******************************************************************************
+ */
 
-  /* Includes ------------------------------------------------------------------*/
+/* Includes ------------------------------------------------------------------*/
 #include "stm8s_it.h"
 
 /* Private typedef -----------------------------------------------------------*/
@@ -28,22 +28,21 @@
 /* Private variables ---------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
 
-
 extern __IO unsigned long TIM4_Clock;
 void ClkIntHandler(void);
 
-extern	void  	GPIO_D_Handler(void);
-extern	void  	GPIO_C_Handler(void);
-extern	void  	I2C_Handler(void);
-extern 	void	UART1_IRQHandler_TX(void);
+extern void GPIO_D_Handler(void);
+extern void GPIO_C_Handler(void);
+extern void I2C_Handler(void);
+extern void UART1_IRQHandler_TX(void);
 
 /* Private functions ---------------------------------------------------------*/
 
 /* Public functions ----------------------------------------------------------*/
 
 /** @addtogroup TIM4_TimeBase
-  * @{
-  */
+ * @{
+ */
 #ifdef _COSMIC_
   /**
 	* @brief  Dummy interrupt routine
@@ -59,113 +58,113 @@ INTERRUPT_HANDLER(NonHandledInterrupt,25)
 #endif /*_COSMIC_*/
 
 /**
-  * @brief  TRAP interrupt routine
-  * @param  None
-  * @retval None
-  */
-INTERRUPT_HANDLER_TRAP(TRAP_IRQHandler)
+ * @brief  TRAP interrupt routine
+ * @param  None
+ * @retval None
+ */
+INTERRUPT_HANDLER_TRAP( TRAP_IRQHandler)
 {
 	/* In order to detect unexpected events during development,
-	   it is recommended to set a breakpoint on the following instruction.
-	*/
+	 it is recommended to set a breakpoint on the following instruction.
+	 */
 }
 /**
-  * @brief  Top Level Interrupt routine
-  * @param  None
-  * @retval None
-  */
+ * @brief  Top Level Interrupt routine
+ * @param  None
+ * @retval None
+ */
 INTERRUPT_HANDLER(TLI_IRQHandler,0)
 {
 	/* In order to detect unexpected events during development,
-	   it is recommended to set a breakpoint on the following instruction.
-	*/
+	 it is recommended to set a breakpoint on the following instruction.
+	 */
 }
 
 /**
-  * @brief  Auto Wake Up Interrupt routine
-  * @param  None
-  * @retval None
-  */
+ * @brief  Auto Wake Up Interrupt routine
+ * @param  None
+ * @retval None
+ */
 INTERRUPT_HANDLER(AWU_IRQHandler,1)
 {
 	/* In order to detect unexpected events during development,
-	   it is recommended to set a breakpoint on the following instruction.
-	*/
+	 it is recommended to set a breakpoint on the following instruction.
+	 */
 }
 
 /**
-  * @brief  Clock Controller Interrupt routine
-  * @param  None
-  * @retval None
-  */
+ * @brief  Clock Controller Interrupt routine
+ * @param  None
+ * @retval None
+ */
 INTERRUPT_HANDLER(CLK_IRQHandler,2)
 {
 	/* In order to detect unexpected events during development,
-	   it is recommended to set a breakpoint on the following instruction.
-	*/
+	 it is recommended to set a breakpoint on the following instruction.
+	 */
 }
 
 /**
-  * @brief  External Interrupt PORTA Interrupt routine
-  * @param  None
-  * @retval None
-  */
+ * @brief  External Interrupt PORTA Interrupt routine
+ * @param  None
+ * @retval None
+ */
 INTERRUPT_HANDLER(EXTI_PORTA_IRQHandler,3)
 {
 	/* In order to detect unexpected events during development,
-	   it is recommended to set a breakpoint on the following instruction.
-	*/
+	 it is recommended to set a breakpoint on the following instruction.
+	 */
 }
 
 /**
-  * @brief  External Interrupt PORTB Interrupt routine
-  * @param  None
-  * @retval None
-  */
+ * @brief  External Interrupt PORTB Interrupt routine
+ * @param  None
+ * @retval None
+ */
 INTERRUPT_HANDLER(EXTI_PORTB_IRQHandler,4)
 {
 	/* In order to detect unexpected events during development,
-	   it is recommended to set a breakpoint on the following instruction.
-	*/
+	 it is recommended to set a breakpoint on the following instruction.
+	 */
 
 }
 
 /**
-  * @brief  External Interrupt PORTC Interrupt routine
-  * @param  None
-  * @retval None
-  */
+ * @brief  External Interrupt PORTC Interrupt routine
+ * @param  None
+ * @retval None
+ */
 INTERRUPT_HANDLER(EXTI_PORTC_IRQHandler,5)
 {
 	/* In order to detect unexpected events during development,
-	   it is recommended to set a breakpoint on the following instruction.
-	*/
-	GPIO_C_Handler();	
+	 it is recommended to set a breakpoint on the following instruction.
+	 */
+	GPIO_C_Handler();
 }
 
 /**
-  * @brief  External Interrupt PORTD Interrupt routine
-  * @param  None
-  * @retval None
-  */
+ * @brief  External Interrupt PORTD Interrupt routine
+ * @param  None
+ * @retval None
+ */
 INTERRUPT_HANDLER(EXTI_PORTD_IRQHandler,6)
 {
 	/* In order to detect unexpected events during development,
-	   it is recommended to set a breakpoint on the following instruction.
-	*/
+	 it is recommended to set a breakpoint on the following instruction.
+	 */
 	GPIO_D_Handler();
 }
 
 /**
-  * @brief  External Interrupt PORTE Interrupt routine
-  * @param  None
-  * @retval None
-  */
+ * @brief  External Interrupt PORTE Interrupt routine
+ * @param  None
+ * @retval None
+ */
 INTERRUPT_HANDLER(EXTI_PORTE_IRQHandler,7)
 {
 	/* In order to detect unexpected events during development,
-	   it is recommended to set a breakpoint on the following instruction.
-	*/
+	 it is recommended to set a breakpoint on the following instruction.
+	 */
 }
 #ifdef STM8S903
 /**
@@ -208,39 +207,39 @@ INTERRUPT_HANDLER(CAN_TX_IRQHandler,9)
 #endif /*STM8S208 || STM8AF52Ax */
 
 /**
-  * @brief  SPI Interrupt routine
-  * @param  None
-  * @retval None
-  */
+ * @brief  SPI Interrupt routine
+ * @param  None
+ * @retval None
+ */
 INTERRUPT_HANDLER(SPI_IRQHandler,10)
 {
 	/* In order to detect unexpected events during development,
-	   it is recommended to set a breakpoint on the following instruction.
-	*/
+	 it is recommended to set a breakpoint on the following instruction.
+	 */
 }
 
 /**
-  * @brief  Timer1 Update/Overflow/Trigger/Break Interrupt routine
-  * @param  None
-  * @retval None
-  */
+ * @brief  Timer1 Update/Overflow/Trigger/Break Interrupt routine
+ * @param  None
+ * @retval None
+ */
 INTERRUPT_HANDLER(TIM1_UPD_OVF_TRG_BRK_IRQHandler,11)
 {
 	/* In order to detect unexpected events during development,
-	   it is recommended to set a breakpoint on the following instruction.
-	*/
+	 it is recommended to set a breakpoint on the following instruction.
+	 */
 }
 
 /**
-  * @brief  Timer1 Capture/Compare Interrupt routine
-  * @param  None
-  * @retval None
-  */
+ * @brief  Timer1 Capture/Compare Interrupt routine
+ * @param  None
+ * @retval None
+ */
 INTERRUPT_HANDLER(TIM1_CAP_COM_IRQHandler,12)
 {
 	/* In order to detect unexpected events during development,
-	   it is recommended to set a breakpoint on the following instruction.
-	*/
+	 it is recommended to set a breakpoint on the following instruction.
+	 */
 }
 
 #ifdef STM8S903
@@ -269,27 +268,27 @@ INTERRUPT_HANDLER(TIM5_CAP_COM_IRQHandler,14)
 
 #else /*STM8S208, STM8S207, STM8S105 or STM8S103 or STM8AF62Ax or STM8AF52Ax or STM8AF626x */
 /**
-  * @brief  Timer2 Update/Overflow/Break Interrupt routine
-  * @param  None
-  * @retval None
-  */
+ * @brief  Timer2 Update/Overflow/Break Interrupt routine
+ * @param  None
+ * @retval None
+ */
 INTERRUPT_HANDLER(TIM2_UPD_OVF_BRK_IRQHandler,13)
 {
 	/* In order to detect unexpected events during development,
-	   it is recommended to set a breakpoint on the following instruction.
-	*/
+	 it is recommended to set a breakpoint on the following instruction.
+	 */
 }
 
 /**
-  * @brief  Timer2 Capture/Compare Interrupt routine
-  * @param  None
-  * @retval None
-  */
+ * @brief  Timer2 Capture/Compare Interrupt routine
+ * @param  None
+ * @retval None
+ */
 INTERRUPT_HANDLER(TIM2_CAP_COM_IRQHandler,14)
 {
 	/* In order to detect unexpected events during development,
-	   it is recommended to set a breakpoint on the following instruction.
-	*/
+	 it is recommended to set a breakpoint on the following instruction.
+	 */
 }
 #endif /*STM8S903*/
 
@@ -323,41 +322,41 @@ INTERRUPT_HANDLER(TIM3_CAP_COM_IRQHandler,16)
 #if defined (STM8S208) || defined(STM8S207) || defined(STM8S007) || defined(STM8S103) || \
     defined(STM8S003) ||  defined (STM8AF62Ax) || defined (STM8AF52Ax) || defined (STM8S903)
 /**
-  * @brief  UART1 TX Interrupt routine
-  * @param  None
-  * @retval None
-  */
+ * @brief  UART1 TX Interrupt routine
+ * @param  None
+ * @retval None
+ */
 INTERRUPT_HANDLER(UART1_TX_IRQHandler,17)
 {
 	/* In order to detect unexpected events during development,
-	   it is recommended to set a breakpoint on the following instruction.
-	*/
+	 it is recommended to set a breakpoint on the following instruction.
+	 */
 	UART1_IRQHandler_TX();
 }
 
 /**
-  * @brief  UART1 RX Interrupt routine
-  * @param  None
-  * @retval None
-  */
+ * @brief  UART1 RX Interrupt routine
+ * @param  None
+ * @retval None
+ */
 INTERRUPT_HANDLER(UART1_RX_IRQHandler,18)
 {
 	/* In order to detect unexpected events during development,
-	   it is recommended to set a breakpoint on the following instruction.
-	*/
+	 it is recommended to set a breakpoint on the following instruction.
+	 */
 }
 #endif /*STM8S105*/
 
 /**
-  * @brief  I2C Interrupt routine
-  * @param  None
-  * @retval None
-  */
+ * @brief  I2C Interrupt routine
+ * @param  None
+ * @retval None
+ */
 INTERRUPT_HANDLER(I2C_IRQHandler,19)
 {
 	/* In order to detect unexpected events during development,
-	   it is recommended to set a breakpoint on the following instruction.
-	*/
+	 it is recommended to set a breakpoint on the following instruction.
+	 */
 #if USEI2C
 	I2C_Handler();
 #endif
@@ -432,16 +431,16 @@ INTERRUPT_HANDLER(ADC2_IRQHandler,22)
 }
 #else /*STM8S105, STM8S103 or STM8S903 or STM8AF626x */
 /**
-  * @brief  ADC1 interrupt routine.
-  * @param  None
-  * @retval None
-  */
+ * @brief  ADC1 interrupt routine.
+ * @param  None
+ * @retval None
+ */
 INTERRUPT_HANDLER(ADC1_IRQHandler,22)
 {
 
 	/* In order to detect unexpected events during development,
-	   it is recommended to set a breakpoint on the following instruction.
-	*/
+	 it is recommended to set a breakpoint on the following instruction.
+	 */
 	return;
 
 }
@@ -461,10 +460,10 @@ INTERRUPT_HANDLER(TIM6_UPD_OVF_TRG_IRQHandler,23)
 }
 #else /*STM8S208, STM8S207, STM8S105 or STM8S103 or STM8AF62Ax or STM8AF52Ax or STM8AF626x */
 /**
-  * @brief  Timer4 Update/Overflow Interrupt routine
-  * @param  None
-  * @retval None
-  */
+ * @brief  Timer4 Update/Overflow Interrupt routine
+ * @param  None
+ * @retval None
+ */
 INTERRUPT_HANDLER(TIM4_UPD_OVF_IRQHandler,23)
 {
 	TIM4_Clock++;
@@ -474,19 +473,19 @@ INTERRUPT_HANDLER(TIM4_UPD_OVF_IRQHandler,23)
 #endif /*STM8S903*/
 
 /**
-  * @brief  Eeprom EEC Interrupt routine
-  * @param  None
-  * @retval None
-  */
+ * @brief  Eeprom EEC Interrupt routine
+ * @param  None
+ * @retval None
+ */
 INTERRUPT_HANDLER(EEPROM_EEC_IRQHandler,24)
 {
 	/* In order to detect unexpected events during development,
-	   it is recommended to set a breakpoint on the following instruction.
-	*/
+	 it is recommended to set a breakpoint on the following instruction.
+	 */
 }
 
 /**
-  * @}
-  */
+ * @}
+ */
 
-  /******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/
+/******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/

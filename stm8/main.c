@@ -1,26 +1,24 @@
 #include "ACEPS2-4-STM8.h"
 
-#include <stdio.h>
-#include <stdlib.h>
-
 #include "string.h"
 
 Port Ports[NumberOfPorts];
 
-bool NumLock=false;
-bool ShiftLock=false;
-bool ScrollLock=false;
-bool InStartUp=false;
+bool NumLock = false;
+bool ShiftLock = false;
+bool ScrollLock = false;
+bool InStartUp = false;
 
-unsigned char CC[16]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
+unsigned char CC[16] =
+		{ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D',
+				'E', 'F' };
 
-void itoh(unsigned char In,unsigned char StrOut[3])
+void itoh(unsigned char In, unsigned char StrOut[3])
 {
-	StrOut[0]=CC[In&0x0F];
-	StrOut[1]=CC[In>>4];
-	StrOut[2]=0;
+	StrOut[0] = CC[In & 0x0F];
+	StrOut[1] = CC[In >> 4];
+	StrOut[2] = 0;
 }
-
 
 #ifdef USE_FULL_ASSERT
 /**
@@ -61,29 +59,28 @@ void OutChr(unsigned char Ch)
 
 }
 
-void OutStr(unsigned char* Buffer)
+void OutStr(unsigned char *Buffer)
 {
 	int i;
-	int Len=strlen(Buffer);
+	int Len = strlen(Buffer);
 
-	for(i=0; i<Len; i++)
+	for (i = 0; i < Len; i++)
 	{
 		OutChr(Buffer[i]);
 	}
 }
 
-
 #if USEINTER	
 
-void GPIOIntHandler(Port* PortP)
+void GPIOIntHandler(Port *PortP)
 {
 	bool Data;
-	
-	if(PortP->Mode==RECEIVING)
+
+	if (PortP->Mode == RECEIVING)
 	{
 		ReceiveIntHandler(PortP);
 	}
-	else if(PortP->Mode==SENDING)
+	else if (PortP->Mode == SENDING)
 	{
 		SendIntHandler(PortP);
 
@@ -107,35 +104,34 @@ void GPIOIntHandlerB()
 
 void UpdateKBLEDs(Port *PortP)
 {
-	unsigned char Flags=0;
+	unsigned char Flags = 0;
 	unsigned char Port1In;
 	MyResponse Response;
 
+	if (ShiftLock)
+	{
+		Flags = 0x04;
+	}
+	if (NumLock)
+	{
+		Flags |= 0x02;
+	}
+	if (ScrollLock)
+	{
+		Flags |= 0x01;
+	}
 
-	if(ShiftLock)
-	{
-		Flags=0x04;
-	}
-	if(NumLock)
-	{
-		Flags|=0x02;
-	}
-	if(ScrollLock)
-	{
-		Flags|=0x01;
-	}
-
-	SendByte(PortP,KSETStateINDICATORS);
-	Response=WaitForPort(PortP,&Port1In,TIM4_TICKSPERS);
-	if(Response!=MOK || Port1In!=DACK)
+	SendByte(PortP, KSETStateINDICATORS);
+	Response = WaitForPort(PortP, &Port1In, TIM4_TICKSPERS);
+	if (Response != MOK || Port1In != DACK)
 	{
 //		OutStr("UpdateKBLEDs 1\r\n");
 	}
 	else
 	{
-		SendByte(PortP,Flags);
-		Response=WaitForPort(PortP,&Port1In,TIM4_TICKSPERS);
-		if(Response!=MOK || Port1In!=DACK)
+		SendByte(PortP, Flags);
+		Response = WaitForPort(PortP, &Port1In, TIM4_TICKSPERS);
+		if (Response != MOK || Port1In != DACK)
 		{
 //			OutStr("UpdateKBLEDs 2\r\n");
 		}
@@ -145,85 +141,90 @@ void UpdateKBLEDs(Port *PortP)
 
 void PS2_Init(char PortNum)
 {
-	unsigned char Port1In,ID1,ID2;
+	unsigned char Port1In, ID1, ID2;
 	MyResponse Response;
 
-	int	i;
+	int i;
 
-	InStartUp=true;
+	InStartUp = true;
 
-	Ports[PortNum].State=INTITALISING;
-	Ports[PortNum].Type=TUNKNOWN;
-	Ports[PortNum].Number=PortNum;
-	Ports[PortNum].keyVal=0;
-	Ports[PortNum].Bits=0;
-	Ports[PortNum].Mode=RECEIVING;
-	Ports[PortNum].SendState=NOTSTARTED;
+	Ports[PortNum].State = INTITALISING;
+	Ports[PortNum].Type = TUNKNOWN;
+	Ports[PortNum].Number = PortNum;
+	Ports[PortNum].keyVal = 0;
+	Ports[PortNum].Bits = 0;
+	Ports[PortNum].Mode = RECEIVING;
+	Ports[PortNum].SendState = NOTSTARTED;
 
-	if(PortNum==0)
+	if (PortNum == 0)
 	{
-		Ports[PortNum].GPIOPort=PORTAPORT;
-		Ports[PortNum].GPIOCPin=PORTACLK;
-		Ports[PortNum].GPIODPin=PORTADATA;
+		Ports[PortNum].GPIOPort = PORTAPORT;
+		Ports[PortNum].GPIOCPin = PORTACLK;
+		Ports[PortNum].GPIODPin = PORTADATA;
 	}
-	else if (PortNum==1)
+	else if (PortNum == 1)
 	{
-		Ports[PortNum].GPIOPort=PORTBPORT;
-		Ports[PortNum].GPIOCPin=PORTBCLK;
-		Ports[PortNum].GPIODPin=PORTBDATA;
+		Ports[PortNum].GPIOPort = PORTBPORT;
+		Ports[PortNum].GPIOCPin = PORTBCLK;
+		Ports[PortNum].GPIODPin = PORTBDATA;
 	}
 	else
 	{
 //		OutStr("PORT Not Define\r\n");
 	}
-	SendByte(&Ports[PortNum],KRESET);
+	SendByte(&Ports[PortNum], KRESET);
 #if USEINTER				
 #else
 	Ports[PortNum].ClkState=true;
 	Ports[PortNum].OldClkState=true;
 #endif
-	Response=WaitForPort(&Ports[PortNum],&Port1In,TIM4_TICKSPERS/4);
+	Response = WaitForPort(&Ports[PortNum], &Port1In, TIM4_TICKSPERS / 4);
 
-	if(Response==MTIMEOUT)
+	if (Response == MTIMEOUT)
 	{
 		OutStr("TIMEOUT 1\r\n");
 	}
-	else if(Response!=MOK)
+	else if (Response != MOK)
 	{
 		OutStr("Response!=MOK\r\n");
 	}
-	else if(Response==MOK && Port1In==DERR)
+	else if (Response == MOK && Port1In == DERR)
 	{
 		OutStr("DERR\r\n");
 	}
-	else if(Port1In==DACK || Port1In==0)
+	else if (Port1In == DACK || Port1In == 0)
 	{
-		Response=WaitForPort(&Ports[PortNum],&Port1In,TIM4_TICKSPERS/4);		
-		if(Response==MOK && (Port1In==DSELFTESTPASS || Port1In==0))
+		Response = WaitForPort(&Ports[PortNum], &Port1In, TIM4_TICKSPERS / 4);
+		if (Response == MOK && (Port1In == DSELFTESTPASS || Port1In == 0))
 		{
-			Response=WaitForPort(&Ports[PortNum],&Port1In,TIM4_TICKSPERS/4);		
-			if(Response==MOK)
+			Response = WaitForPort(&Ports[PortNum], &Port1In,
+			TIM4_TICKSPERS / 4);
+			if (Response == MOK)
 			{
-				SendByte(&Ports[PortNum],MREADID);
-				Response=WaitForPort(&Ports[PortNum],&Port1In,TIM4_TICKSPERS);
-				if(Response==MOK)
+				SendByte(&Ports[PortNum], MREADID);
+				Response = WaitForPort(&Ports[PortNum], &Port1In,
+				TIM4_TICKSPERS);
+				if (Response == MOK)
 				{
-					SendByte(&Ports[PortNum],MSETSAMPLERATE);
-					Response=WaitForPort(&Ports[PortNum],&Port1In,TIM4_TICKSPERS);
-					if(Response==MOK && Port1In==DACK)
+					SendByte(&Ports[PortNum], MSETSAMPLERATE);
+					Response = WaitForPort(&Ports[PortNum], &Port1In,
+					TIM4_TICKSPERS);
+					if (Response == MOK && Port1In == DACK)
 					{
-						SendByte(&Ports[PortNum],200);
-						Response=WaitForPort(&Ports[PortNum],&Port1In,TIM4_TICKSPERS);
-						if(Response==MOK && Port1In==DACK)
+						SendByte(&Ports[PortNum], 200);
+						Response = WaitForPort(&Ports[PortNum], &Port1In,
+						TIM4_TICKSPERS);
+						if (Response == MOK && Port1In == DACK)
 						{
-							if(Response!=0)
+							if (Response != 0)
 							{
-								SendByte(&Ports[PortNum],MENABLEDATAREPORTING);
-								Response=WaitForPort(&Ports[PortNum],&Port1In,TIM4_TICKSPERS);
-								if(Response==MOK && Port1In==DACK)
+								SendByte(&Ports[PortNum], MENABLEDATAREPORTING);
+								Response = WaitForPort(&Ports[PortNum],
+										&Port1In, TIM4_TICKSPERS);
+								if (Response == MOK && Port1In == DACK)
 								{
-									Ports[PortNum].Type=TMOUSE;
-									Ports[PortNum].State=INTITALISED;
+									Ports[PortNum].Type = TMOUSE;
+									Ports[PortNum].State = INTITALISED;
 									OutStr("MOUSE Init Complete\r\n");
 								}
 							}
@@ -233,27 +234,30 @@ void PS2_Init(char PortNum)
 			}
 			else
 			{
-				SendByte(&Ports[PortNum],KSETTYPEMATICRATE);
-				Response=WaitForPort(&Ports[PortNum],&Port1In,TIM4_TICKSPERS);
-				if(Response==MOK && Port1In==DACK)
+				SendByte(&Ports[PortNum], KSETTYPEMATICRATE);
+				Response = WaitForPort(&Ports[PortNum], &Port1In,
+				TIM4_TICKSPERS);
+				if (Response == MOK && Port1In == DACK)
 				{
-					SendByte(&Ports[PortNum],0x20);
-					Response=WaitForPort(&Ports[PortNum],&Port1In,TIM4_TICKSPERS);
-					if(Response==MOK && Port1In==DACK)
+					SendByte(&Ports[PortNum], 0x20);
+					Response = WaitForPort(&Ports[PortNum], &Port1In,
+					TIM4_TICKSPERS);
+					if (Response == MOK && Port1In == DACK)
 					{
-						SendByte(&Ports[PortNum],KENABLE);
-						Response=WaitForPort(&Ports[PortNum],&Port1In,TIM4_TICKSPERS);
-						if(Response==MOK && Port1In==DACK)
+						SendByte(&Ports[PortNum], KENABLE);
+						Response = WaitForPort(&Ports[PortNum], &Port1In,
+						TIM4_TICKSPERS);
+						if (Response == MOK && Port1In == DACK)
 						{
-							Ports[PortNum].State=INTITALISED;
+							Ports[PortNum].State = INTITALISED;
 							OutStr("Keyboard Initialised\r\n");
-							Ports[PortNum].Type=TKEYBOARD;
+							Ports[PortNum].Type = TKEYBOARD;
 						}
 						else
 						{
 							OutStr("C\r\n");
-						}						
-					}			
+						}
+					}
 					else
 					{
 						OutStr("B\r\n");
@@ -274,21 +278,21 @@ void PS2_Init(char PortNum)
 	{
 		OutStr("UNKNOWN 2\r\n");
 	}
-	if(	Ports[PortNum].State==INTITALISING)
+	if (Ports[PortNum].State == INTITALISING)
 	{
-		Ports[PortNum].State=UNINTITALISED;
+		Ports[PortNum].State = UNINTITALISED;
 	}
-	
-	InStartUp=false;
+
+	InStartUp = false;
 }
 
 void main(void)
 {
-	WTime 	PauseT;
-	bool	On=false;
+	WTime PauseT;
+	bool On = false;
 	unsigned char MH[3];
-	static unsigned int MPacket=0;
-	int		i;
+	static unsigned int MPacket = 0;
+	char i;
 	//
 	//  Initialise the system.
 	//
@@ -311,23 +315,22 @@ void main(void)
 
 	OutStr("Start\r\n");
 
-	for(i=0;i<2;i++)
+	for (i = 0; i < 2; i++)
 	{
 		PS2_Init(i);
-		if(Ports[i].Type==TKEYBOARD )
+		if (Ports[i].Type == TKEYBOARD)
 		{
 			UpdateKBLEDs(&Ports[i]);
 		}
-//		Ports[i].Bits=0;
 	}
 
-	OUT_LED;
+	GPIO_Init(PORTLEDPORT, PORTLEDPIN, GPIO_MODE_OUT_PP_LOW_FAST);
 
 	OutStr("Main loop\r\n");
 
-	GetTimer(0,&PauseT);
+	GetTimer(0, &PauseT);
 
-	while(1)
+	while (1)
 	{
 #if USEINTER & HALTWHENIDLE		
 #asm
@@ -335,41 +338,41 @@ void main(void)
 #endasm
 #endif
 
-		if(IsTimeUp(&PauseT))
+		if (IsTimeUp(&PauseT))
 		{
-			if(On)
+			if (On)
 			{
-				CLR_LED;
+				GPIO_WriteLow(PORTLEDPORT, PORTLEDPIN);
 			}
 			else
 			{
-				SET_LED;
+				GPIO_WriteHigh(PORTLEDPORT, PORTLEDPIN);
 			}
-			On=!On;
-			GetTimer(TIM4_TICKSPERS,&PauseT);
+			On = !On;
+			GetTimer(TIM4_TICKSPERS, &PauseT);
 		}
-		
-		for(i=0;i<2;i++)
+
+		for (i = 0; i < 2; i++)
 		{
-			if(Ports[i].Type!=TUNKNOWN)
+			if (Ports[i].Type != TUNKNOWN)
 			{
-				if(Ports[i].Mode==RECEIVING)
+				if (Ports[i].Mode == RECEIVING)
 				{
-					if(ReceiveCheck(&Ports[i]))
+					if (ReceiveCheck(&Ports[i]))
 					{
-						Ports[i].Bits=0;
-						Ports[i].Receiving=false;
-						Ports[i].Received=false;
-						if(Ports[i].Type==TKEYBOARD)
+						Ports[i].Bits = 0;
+						Ports[i].Receiving = false;
+						Ports[i].Received = false;
+						if (Ports[i].Type == TKEYBOARD)
 						{
-							if(Ports[i].keyVal!=DACK)
+							if (Ports[i].keyVal != DACK)
 							{
-								if(keyHandle(&Ports[i])!=0xff)
+								if (keyHandle(&Ports[i]) != 0xff)
 								{
 #if USEUART
 									UARTSendChar(Ports[i].keyVal);
 #endif
-				
+
 #if USEI2C
 									I2CSendChar(Ports[i].keyVal);
 #endif
@@ -384,17 +387,17 @@ void main(void)
 						}
 						else
 						{
-							itoh(Ports[i].keyVal,MH);
-							if(MPacket==0)
+							itoh(Ports[i].keyVal, MH);
+							if (MPacket == 0)
 							{
 								OutChr('M');
 								OutChr(' ');
 							}
 							OutChr(MH[1]);
 							OutChr(MH[0]);
-			
+
 							MPacket++;
-							if(MPacket!=3)
+							if (MPacket != 3)
 							{
 								OutChr(' ');
 							}
@@ -402,23 +405,23 @@ void main(void)
 							{
 								OutChr('\r');
 								OutChr('\n');
-								MPacket=0;
+								MPacket = 0;
 							}
 						}
-						Ports[i].keyVal=0;
-						Ports[i].Received=false;
+						Ports[i].keyVal = 0;
+						Ports[i].Received = false;
 					}
-					else if(!Ports[i].Receiving)
+					else if (!Ports[i].Receiving)
 					{
 						//do any send.
-			
+
 						//CapsLock=!CapsLock;
 					}
 				}
 #if USEINTER
-				else if(Ports[i].Mode==SENDING)
+				else if (Ports[i].Mode == SENDING)
 				{
-					if(SendCheck(&Ports[i]))
+					if (SendCheck(&Ports[i]))
 					{
 						//Finished send.
 					}

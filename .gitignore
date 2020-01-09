@@ -23,3 +23,16 @@ sym-lib-table
 *.csv
 *.zip
 !KiCad/Archive/*.zip
+*.o
+*.ls
+*.sm8
+*.elf
+*.dep
+*.pdb
+*.wdb
+*.wed
+*.lkf
+*.map
+*.s19
+
+
