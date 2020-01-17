@@ -38,3 +38,4 @@ taperelocate/Release/*
 taperelocate/Debug/*
 taperelocate/Tapes/*
 taperelocate/.vs/*
+emu/*
