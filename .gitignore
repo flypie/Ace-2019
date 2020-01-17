@@ -34,5 +34,7 @@ sym-lib-table
 *.lkf
 *.map
 *.s19
-
-
+taperelocate/Release/*
+taperelocate/Debug/*
+taperelocate/Tapes/*
+taperelocate/.vs/*
