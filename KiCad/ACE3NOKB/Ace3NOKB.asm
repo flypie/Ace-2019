@@ -14,9 +14,14 @@
 
 ;#define DEFB    .BYTE
 ;#define DEFW    .WORD
-DEFM    equ DB
+DEFM    MACRO
+DB
+MACEND
+
+DEFM
+
 ;#define EQU     .EQU
-;#define ORG     .ORG
+;define ORG     .ORG
 
 ;RAMSTART equ  03C00h
 RAMSTART equ 04000h

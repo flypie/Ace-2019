@@ -4227,7 +4227,7 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8600 
 F 4 "ON Semiconductor" H 8600 15350 50  0001 C CNN "Manufacturer_Name"
 F 5 "1N4148" H 8600 15350 50  0001 C CNN "Manufacturer_Part_Number"
 	1    8600 15350
-	1    0    0    1   
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Diode:1N4148 D9
@@ -4240,7 +4240,7 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8600 
 F 4 "ON Semiconductor" H 8600 15450 50  0001 C CNN "Manufacturer_Name"
 F 5 "1N4148" H 8600 15450 50  0001 C CNN "Manufacturer_Part_Number"
 	1    8600 15450
-	1    0    0    1   
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Diode:1N4148 D8
@@ -4253,7 +4253,7 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8600 
 F 4 "ON Semiconductor" H 8600 15550 50  0001 C CNN "Manufacturer_Name"
 F 5 "1N4148" H 8600 15550 50  0001 C CNN "Manufacturer_Part_Number"
 	1    8600 15550
-	1    0    0    1   
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Diode:1N4148 D7
@@ -4266,7 +4266,7 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8600 
 F 4 "ON Semiconductor" H 8600 15650 50  0001 C CNN "Manufacturer_Name"
 F 5 "1N4148" H 8600 15650 50  0001 C CNN "Manufacturer_Part_Number"
 	1    8600 15650
-	1    0    0    1   
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Diode:1N4148 D6
@@ -4279,7 +4279,7 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8600 
 F 4 "ON Semiconductor" H 8600 15750 50  0001 C CNN "Manufacturer_Name"
 F 5 "1N4148" H 8600 15750 50  0001 C CNN "Manufacturer_Part_Number"
 	1    8600 15750
-	1    0    0    1   
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Diode:1N4148 D5
@@ -4292,7 +4292,7 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8600 
 F 4 "ON Semiconductor" H 8600 15850 50  0001 C CNN "Manufacturer_Name"
 F 5 "1N4148" H 8600 15850 50  0001 C CNN "Manufacturer_Part_Number"
 	1    8600 15850
-	1    0    0    1   
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Diode:1N4148 D4
@@ -4305,7 +4305,7 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8600 
 F 4 "ON Semiconductor" H 8600 15950 50  0001 C CNN "Manufacturer_Name"
 F 5 "1N4148" H 8600 15950 50  0001 C CNN "Manufacturer_Part_Number"
 	1    8600 15950
-	1    0    0    1   
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Diode:1N4148 D3
@@ -4318,7 +4318,7 @@ F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8600 
 F 4 "ON Semiconductor" H 8600 16050 50  0001 C CNN "Manufacturer_Name"
 F 5 "1N4148" H 8600 16050 50  0001 C CNN "Manufacturer_Part_Number"
 	1    8600 16050
-	1    0    0    1   
+	-1   0    0    -1  
 $EndComp
 Text Label 8900 16050 0    50   ~ 0
 A15

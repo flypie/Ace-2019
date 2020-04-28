@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:ACE4NOKB-cache
 EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
@@ -878,7 +877,7 @@ F 3 "" H 13300 7325 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L ACE4NOKB-rescue:IDT71321-7132la100pdg Z7-8
+L 7132la100pdg:IDT71321-421-52PIN-PLCC Z7-8
 U 1 1 5F80C938
 P 11775 4625
 AR Path="/5F80C938" Ref="Z7-8"  Part="1" 
@@ -896,7 +895,7 @@ F 7 "71321SA55JG8" H 12925 4175 50  0001 L CNN "Manufacturer_Part_Number"
 	1    0    0    -1  
 $EndComp
 $Comp
-L ACE4NOKB-rescue:IDT71321-7132la100pdg Z5-6
+L 7132la100pdg:IDT71321-421-52PIN-PLCC Z5-6
 U 1 1 5F80C942
 P 9175 5225
 AR Path="/5F80C942" Ref="Z5-6"  Part="1" 
@@ -1407,7 +1406,7 @@ F 3 "" H 4950 8175 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6400 8575 6475 8575
+	6400 8475 6475 8475
 Wire Wire Line
 	5100 8475 5500 8475
 $Comp
@@ -1470,28 +1469,6 @@ F 3 "" H 5255 8175 50  0001 C CNN
 	1    5255 8175
 	0    1    1    0   
 $EndComp
-$Comp
-L power:GND #0125
-U 1 1 5F80CE33
-P 5700 8675
-F 0 "#0125" H 5700 8425 50  0001 C CNN
-F 1 "GND" H 5710 8495 50  0000 C CNN
-F 2 "" H 5700 8675 50  0001 C CNN
-F 3 "" H 5700 8675 50  0001 C CNN
-	1    5700 8675
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS86 Z23
-U 3 1 5F80CE2D
-P 6100 8575
-F 0 "Z23" H 6100 8925 50  0000 C CNN
-F 1 "74AHCT86" H 6100 8825 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 6100 8575 50  0001 C CNN
-F 3 "74xx~74AHCT86.pdf" H 6100 8575 50  0001 C CNN
-	3    6100 8575
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4700 8675 5200 8675
 Connection ~ 5500 8475
@@ -1503,8 +1480,6 @@ Wire Wire Line
 	4700 8175 4800 8175
 Wire Wire Line
 	4700 8475 4800 8475
-Wire Wire Line
-	5700 8675 5800 8675
 Wire Wire Line
 	5500 8875 5500 8975
 Wire Wire Line
@@ -1519,7 +1494,7 @@ Wire Wire Line
 	14025 4275 14025 3800
 Wire Wire Line
 	15875 5475 15875 2225
-Text Label 6475 8575 0    50   ~ 0
+Text Label 6475 8475 0    50   ~ 0
 ~VIDEOCLK
 Text Label 9950 3025 2    50   ~ 0
 ~VIDEOCLK
@@ -1628,5 +1603,18 @@ F 2 "Package_DIP:DIP-16_W7.62mm" H 14725 4775 50  0001 C CNN
 F 3 "http:/www.ti.com/lit/gpn/sn74ALS166" H 14725 4775 50  0001 C CNN
 	1    14725 4775
 	0    -1   -1   0   
+$EndComp
+$Comp
+L 74xx:74LS04 Z?
+U 6 1 5E5B189A
+P 6100 8475
+AR Path="/5E5B189A" Ref="Z?"  Part="6" 
+AR Path="/5E2F9A69/5E5B189A" Ref="Z102"  Part="6" 
+F 0 "Z102" H 6100 8825 50  0000 C CNN
+F 1 "SN74AHCT04N" H 6100 8725 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 6100 8475 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 6100 8475 50  0001 C CNN
+	6    6100 8475
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

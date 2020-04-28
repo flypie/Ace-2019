@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:ACE4NOKB-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -42,14 +41,6 @@ Text Label 6100 2050 1    50   ~ 0
 ~DCDA
 Text Label 6000 2050 1    50   ~ 0
 ~CTSA
-Text Label 6700 2050 1    50   ~ 0
-RxDB
-Text Label 6600 2050 1    50   ~ 0
-~RxCB
-Text Label 6500 2050 1    50   ~ 0
-~TxCB
-Text Label 6400 2050 1    50   ~ 0
-TxDB
 Text Label 6200 2050 1    50   ~ 0
 ~DCDB
 Text Label 6300 2050 1    50   ~ 0
@@ -89,13 +80,9 @@ Wire Wire Line
 Wire Wire Line
 	6200 2150 6200 2050
 Wire Wire Line
-	6400 2150 6400 2050
-Wire Wire Line
 	6500 2150 6500 2050
 Wire Wire Line
 	6600 2150 6600 2050
-Wire Wire Line
-	6700 2150 6700 2050
 Wire Wire Line
 	5050 3850 4900 3850
 Wire Wire Line
@@ -106,14 +93,6 @@ Text Label 4950 3250 2    50   ~ 0
 RxDA
 Wire Wire Line
 	5050 3250 4950 3250
-Text Label 4950 3150 2    50   ~ 0
-~RxCA
-Wire Wire Line
-	5050 3150 4950 3150
-Text Label 4950 3050 2    50   ~ 0
-~TxCA
-Wire Wire Line
-	5050 3050 4950 3050
 Wire Wire Line
 	8450 4700 8550 4700
 Text Label 7000 5400 3    50   ~ 0
@@ -404,7 +383,6 @@ F 3 "https://www.mouser.com/datasheet/2/450/ps0118-25896.pdf" H 6400 1250 50  00
 	1    5250 2350
 	1    0    0    -1  
 $EndComp
-NoConn ~ 1350 2850
 NoConn ~ 2325 5900
 Text Label 2225 5600 2    50   ~ 0
 CLK\TRG0
@@ -424,23 +402,23 @@ F 3 "" H 2525 5700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x03_Odd_Even J104
+L Connector_Generic:Conn_02x02_Odd_Even J104
 U 1 1 64A32B0F
-P 2525 5100
-F 0 "J104" H 2575 5450 50  0000 C CNN
-F 1 "Conn_02x03_Odd_Even" H 2575 5350 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 2525 5100 50  0001 C CNN
-F 3 "" H 2525 5100 50  0001 C CNN
-	1    2525 5100
+P 2525 5000
+F 0 "J104" H 2600 5250 50  0000 C CNN
+F 1 "Conn_02x02_Odd_Even" H 2600 5150 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 2525 5000 50  0001 C CNN
+F 3 "" H 2525 5000 50  0001 C CNN
+	1    2525 5000
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x03_Odd_Even J103
+L Connector_Generic:Conn_02x02_Odd_Even J103
 U 1 1 6454B474
 P 2525 4500
-F 0 "J103" H 2600 4850 50  0000 C CNN
-F 1 "Conn_02x03_Odd_Even" H 2600 4750 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 2525 4500 50  0001 C CNN
+F 0 "J103" H 2600 4750 50  0000 C CNN
+F 1 "Conn_02x02_Odd_Even" H 2600 4650 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 2525 4500 50  0001 C CNN
 F 3 "" H 2525 4500 50  0001 C CNN
 	1    2525 4500
 	1    0    0    -1  
@@ -467,30 +445,18 @@ Wire Wire Line
 	2325 5700 2225 5700
 Wire Wire Line
 	2325 5600 2225 5600
-Text Label 2925 5200 0    50   ~ 0
+Text Label 2925 5100 0    50   ~ 0
 ~CTSB
 Wire Wire Line
-	2825 5200 2925 5200
-Text Label 2925 5100 0    50   ~ 0
+	2825 5100 2925 5100
+Text Label 2925 5000 0    50   ~ 0
 ~DCDB
 Wire Wire Line
-	2825 5100 2925 5100
-Text Label 2225 5000 2    50   ~ 0
-TxDB
-Wire Wire Line
-	2325 5000 2225 5000
+	2825 5000 2925 5000
 Text Label 2225 5100 2    50   ~ 0
-~TxCB
-Wire Wire Line
-	2325 5100 2225 5100
-Text Label 2225 5200 2    50   ~ 0
-~RxCB
-Wire Wire Line
-	2325 5200 2225 5200
-Text Label 2925 5000 0    50   ~ 0
 RxDB
 Wire Wire Line
-	2825 5000 2925 5000
+	2325 5100 2225 5100
 Text Label 2925 4600 0    50   ~ 0
 ~CTSA
 Wire Wire Line
@@ -499,22 +465,14 @@ Text Label 2925 4500 0    50   ~ 0
 ~DCDA
 Wire Wire Line
 	2825 4500 2925 4500
-Text Label 2925 4400 0    50   ~ 0
-RxDA
-Wire Wire Line
-	2825 4400 2925 4400
 Text Label 2225 4600 2    50   ~ 0
-~RxCA
+RxDA
 Wire Wire Line
 	2325 4600 2225 4600
 Text Label 2225 4500 2    50   ~ 0
-~TxCA
-Wire Wire Line
-	2325 4500 2225 4500
-Text Label 2225 4400 2    50   ~ 0
 TxDA
 Wire Wire Line
-	2325 4400 2225 4400
+	2325 4500 2225 4500
 $Comp
 L Connector_Generic:Conn_02x05_Odd_Even J100
 U 1 1 5D98E8C9
@@ -606,33 +564,31 @@ Wire Wire Line
 Wire Wire Line
 	2325 3325 2225 3325
 Wire Wire Line
-	2325 3725 2225 3725
-Wire Wire Line
-	2825 3725 2925 3725
-Text Label 2925 3725 0    50   ~ 0
-PC5
-Wire Wire Line
 	2825 3625 2925 3625
-Text Label 2925 3625 0    50   ~ 0
-PC6
 Wire Wire Line
 	2825 3525 2925 3525
 Text Label 2925 3525 0    50   ~ 0
+PC5
+Wire Wire Line
+	2825 3425 2925 3425
+Text Label 2925 3425 0    50   ~ 0
+PC6
+Wire Wire Line
+	2825 3325 2925 3325
+Text Label 2925 3325 0    50   ~ 0
 PC7
 $Comp
-L Connector_Generic:Conn_02x05_Odd_Even J102
+L Connector_Generic:Conn_02x04_Odd_Even J102
 U 1 1 642D46BC
-P 2525 3525
-F 0 "J102" H 2600 3975 50  0000 C CNN
-F 1 "Conn_02x05_Odd_Even" H 2600 3875 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 2525 3525 50  0001 C CNN
-F 3 "" H 2525 3525 50  0001 C CNN
-	1    2525 3525
+P 2525 3425
+F 0 "J102" H 2600 3800 50  0000 C CNN
+F 1 "Conn_02x04_Odd_Even" H 2600 3700 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 2525 3425 50  0001 C CNN
+F 3 "" H 2525 3425 50  0001 C CNN
+	1    2525 3425
 	1    0    0    -1  
 $EndComp
-NoConn ~ 2825 3425
-NoConn ~ 2825 3325
-Text Label 2225 3725 2    50   ~ 0
+Text Label 2925 3625 0    50   ~ 0
 PC4
 Text Label 2225 3325 2    50   ~ 0
 PC0
@@ -800,4 +756,206 @@ Wire Wire Line
 	9750 4000 9650 4000
 Wire Wire Line
 	9650 4300 9750 4300
+$Comp
+L power:VCC #?
+U 1 1 5E3EE2CA
+P 4700 5675
+AR Path="/5E2F9A69/5E3EE2CA" Ref="#?"  Part="1" 
+AR Path="/5D919407/5E3EE2CA" Ref="#0138"  Part="1" 
+F 0 "#0138" H 4700 5525 50  0001 C CNN
+F 1 "VCC" H 4740 5890 50  0000 C CNN
+F 2 "" H 4700 5675 50  0001 C CNN
+F 3 "" H 4700 5675 50  0001 C CNN
+	1    4700 5675
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 7080 3900 6980
+Wire Wire Line
+	3900 6675 3900 6780
+Connection ~ 3900 6675
+Connection ~ 3900 6475
+Wire Wire Line
+	3900 6475 3900 6675
+Wire Wire Line
+	3900 6175 3900 6475
+$Comp
+L power:GND #?
+U 1 1 5E3EE2D6
+P 4700 6975
+AR Path="/5E2F9A69/5E3EE2D6" Ref="#?"  Part="1" 
+AR Path="/5D919407/5E3EE2D6" Ref="#0139"  Part="1" 
+F 0 "#0139" H 4700 6725 50  0001 C CNN
+F 1 "GND" V 4705 6800 50  0000 R CNN
+F 2 "" H 4700 6975 50  0001 C CNN
+F 3 "" H 4700 6975 50  0001 C CNN
+	1    4700 6975
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4355 6175 4300 6175
+$Comp
+L Device:Crystal X?
+U 1 1 5E3EE2DD
+P 4150 6175
+AR Path="/5E2F9A69/5E3EE2DD" Ref="X?"  Part="1" 
+AR Path="/5D919407/5E3EE2DD" Ref="X3"  Part="1" 
+F 0 "X3" H 4150 6400 50  0000 C CNN
+F 1 "CRYSTALHC49U-V 1.8432" H 4160 6335 50  0001 C CNN
+F 2 "Crystal:Crystal_HC49-U_Vertical" H 4150 6175 50  0001 C CNN
+F 3 "" H 4150 6175 50  0001 C CNN
+	1    4150 6175
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 6475 5675 6475
+Wire Wire Line
+	4300 6475 4700 6475
+$Comp
+L power:GND #?
+U 1 1 5E3EE2E5
+P 3900 7080
+AR Path="/5E2F9A69/5E3EE2E5" Ref="#?"  Part="1" 
+AR Path="/5D919407/5E3EE2E5" Ref="#0140"  Part="1" 
+F 0 "#0140" H 3900 6830 50  0001 C CNN
+F 1 "GND" H 3905 6860 50  0000 C CNN
+F 2 "" H 3900 7080 50  0001 C CNN
+F 3 "" H 3900 7080 50  0001 C CNN
+	1    3900 7080
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5E3EE2EB
+P 3900 6880
+AR Path="/5E2F9A69/5E3EE2EB" Ref="C?"  Part="1" 
+AR Path="/5D919407/5E3EE2EB" Ref="C301"  Part="1" 
+F 0 "C301" H 4000 6935 50  0000 L CNN
+F 1 "100p" H 4000 6835 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 3900 6880 50  0001 C CNN
+F 3 "" H 3900 6880 50  0001 C CNN
+	1    3900 6880
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E3EE2F1
+P 4150 6475
+AR Path="/5E2F9A69/5E3EE2F1" Ref="R?"  Part="1" 
+AR Path="/5D919407/5E3EE2F1" Ref="R301"  Part="1" 
+F 0 "R301" V 4000 6460 50  0000 C CNN
+F 1 "47k" V 3900 6460 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 4080 6475 50  0001 C CNN
+F 3 "" H 4150 6475 50  0001 C CNN
+	1    4150 6475
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4700 6075 4700 6175
+Connection ~ 4700 6175
+$Comp
+L Device:R R?
+U 1 1 5E3EE2F9
+P 4700 5925
+AR Path="/5E2F9A69/5E3EE2F9" Ref="R?"  Part="1" 
+AR Path="/5D919407/5E3EE2F9" Ref="R300"  Part="1" 
+F 0 "R300" H 4800 6000 50  0000 L CNN
+F 1 "4k7" H 4800 5900 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 4630 5925 50  0001 C CNN
+F 3 "" H 4700 5925 50  0001 C CNN
+	1    4700 5925
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4555 6175 4700 6175
+$Comp
+L Device:C_Small C?
+U 1 1 5E3EE300
+P 4455 6175
+AR Path="/5E2F9A69/5E3EE300" Ref="C?"  Part="1" 
+AR Path="/5D919407/5E3EE300" Ref="C300"  Part="1" 
+F 0 "C300" V 4205 6220 50  0000 C CNN
+F 1 "30p" V 4305 6220 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 4455 6175 50  0001 C CNN
+F 3 "" H 4455 6175 50  0001 C CNN
+	1    4455 6175
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3900 6675 4400 6675
+Connection ~ 4700 6475
+Wire Wire Line
+	4700 6475 4700 6175
+Wire Wire Line
+	4700 6475 5000 6475
+Wire Wire Line
+	3900 6175 4000 6175
+Wire Wire Line
+	3900 6475 4000 6475
+Wire Wire Line
+	4700 6875 4700 6975
+Wire Wire Line
+	4700 5775 4700 5675
+Text Label 5675 6475 0    50   ~ 0
+~SERIALCLK
+$Comp
+L Transistor_BJT:2N3904 Q?
+U 1 1 5E3EE31C
+P 4600 6675
+AR Path="/5E2F9A69/5E3EE31C" Ref="Q?"  Part="1" 
+AR Path="/5D919407/5E3EE31C" Ref="Q300"  Part="1" 
+F 0 "Q300" H 4405 6585 50  0000 L CNN
+F 1 "2N3904" H 4390 6820 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92L_Inline" H 4800 6600 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/PZT3904-D.pdf" H 4600 6675 50  0001 L CNN
+	1    4600 6675
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS04 Z?
+U 5 1 5E436E03
+P 5300 6475
+AR Path="/5E436E03" Ref="Z?"  Part="5" 
+AR Path="/5D919407/5E436E03" Ref="Z102"  Part="5" 
+F 0 "Z102" H 5300 6825 50  0000 C CNN
+F 1 "SN74AHCT04N" H 5300 6725 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 5300 6475 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 5300 6475 50  0001 C CNN
+	5    5300 6475
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 2050 6550 2050
+Connection ~ 6550 2050
+Wire Wire Line
+	6550 2050 6600 2050
+Text Label 6550 1675 1    50   ~ 0
+~SERIALCLK
+Wire Wire Line
+	6550 1675 6550 2050
+Wire Wire Line
+	2325 5000 2225 5000
+Text Label 2225 5000 2    50   ~ 0
+TxDB
+Text Label 6700 2050 1    50   ~ 0
+RxDB
+Wire Wire Line
+	6700 2150 6700 2050
+Wire Wire Line
+	6400 2150 6400 2050
+Text Label 6400 2050 1    50   ~ 0
+TxDB
+Wire Wire Line
+	5050 3150 4950 3150
+Wire Wire Line
+	5050 3050 4950 3050
+Wire Wire Line
+	4950 3150 4950 3100
+Connection ~ 4950 3100
+Wire Wire Line
+	4950 3100 4950 3050
+Text Label 4575 3100 2    50   ~ 0
+~SERIALCLK
+Wire Wire Line
+	4575 3100 4950 3100
 $EndSCHEMATC

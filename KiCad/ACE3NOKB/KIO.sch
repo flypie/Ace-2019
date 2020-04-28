@@ -425,8 +425,8 @@ F 0 "J105" H 2600 5875 50  0000 C CNN
 F 1 "Conn_02x04_Odd_Even" H 2600 5775 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 2550 5525 50  0001 C CNN
 F 3 "" H 2550 5525 50  0001 C CNN
-F 4 "SAMTEC" H 2550 5525 50  0001 C CNN "Manufacturer_Name"
-F 5 "TSW–104–10–T–D–RA" H 2550 5525 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "TE Connectivity / AMP" H 2550 5525 50  0001 C CNN "Manufacturer_Name"
+F 5 "5-146250-2" H 2550 5525 50  0001 C CNN "Manufacturer_Part_Number"
 	1    2550 5525
 	1    0    0    -1  
 $EndComp
@@ -439,7 +439,7 @@ F 1 "Conn_02x03_Odd_Even" H 2600 5175 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 2550 4925 50  0001 C CNN
 F 3 "" H 2550 4925 50  0001 C CNN
 F 4 "SAMTEC" H 2550 4925 50  0001 C CNN "Manufacturer_Name"
-F 5 "TSW–103–10–T–D–RA" H 2550 4925 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "TSW-103-08-S-D" H 2550 4925 50  0001 C CNN "Manufacturer_Part_Number"
 	1    2550 4925
 	1    0    0    -1  
 $EndComp
@@ -452,7 +452,7 @@ F 1 "Conn_02x03_Odd_Even" H 2625 4575 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 2550 4325 50  0001 C CNN
 F 3 "" H 2550 4325 50  0001 C CNN
 F 4 "SAMTEC" H 2550 4325 50  0001 C CNN "Manufacturer_Name"
-F 5 "TSW–103–10–T–D–RA" H 2550 4325 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "TSW-103-08-S-D" H 2550 4325 50  0001 C CNN "Manufacturer_Part_Number"
 	1    2550 4325
 	1    0    0    -1  
 $EndComp
@@ -535,7 +535,7 @@ F 1 "Conn_02x05_Odd_Even" H 2575 2275 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 2525 1925 50  0001 C CNN
 F 3 "" H 2525 1925 50  0001 C CNN
 F 4 "SAMTEC" H 2525 1925 50  0001 C CNN "Manufacturer_Name"
-F 5 "TSW–105–10–T–D–RA" H 2525 1925 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "HTSW-105-08-S-D" H 2525 1925 50  0001 C CNN "Manufacturer_Part_Number"
 	1    2525 1925
 	1    0    0    -1  
 $EndComp
@@ -608,7 +608,7 @@ F 1 "Conn_02x05_Odd_Even" H 2575 3075 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 2525 2725 50  0001 C CNN
 F 3 "" H 2525 2725 50  0001 C CNN
 F 4 "SAMTEC" H 2525 2725 50  0001 C CNN "Manufacturer_Name"
-F 5 "TSW–105–10–T–D–RA" H 2525 2725 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "HTSW-105-08-S-D" H 2525 2725 50  0001 C CNN "Manufacturer_Part_Number"
 	1    2525 2725
 	1    0    0    -1  
 $EndComp
@@ -643,7 +643,7 @@ F 1 "Conn_02x05_Odd_Even" H 2600 3875 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 2525 3525 50  0001 C CNN
 F 3 "" H 2525 3525 50  0001 C CNN
 F 4 "SAMTEC" H 2525 3525 50  0001 C CNN "Manufacturer_Name"
-F 5 "TSW–105–10–T–D–RA" H 2525 3525 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "HTSW-105-08-S-D" H 2525 3525 50  0001 C CNN "Manufacturer_Part_Number"
 	1    2525 3525
 	1    0    0    -1  
 $EndComp

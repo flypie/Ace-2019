@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:ACE2NOKBV2-cache
 EELAYER 30 0
 EELAYER END
 $Descr User 28000 19000
@@ -352,7 +351,7 @@ Text Label 6400 8800 0    50   ~ 0
 A14
 Wire Wire Line
 	5300 6200 5200 6200
-Text Label 5250 6200 2    50   ~ 0
+Text Label 5200 6200 2    50   ~ 0
 A14
 Wire Wire Line
 	6300 8900 6400 8900
@@ -2506,7 +2505,7 @@ L power:VCC #~P+010
 U 1 1 6665561A
 P 4500 10000
 F 0 "#~P+010" H 4500 10000 50  0001 C CNN
-F 1 "VCC" V 4500 10000 50  0000 L BNN
+F 1 "VCC" H 4500 10000 50  0000 L BNN
 F 2 "" H 4500 10000 50  0001 C CNN
 F 3 "" H 4500 10000 50  0001 C CNN
 	1    4500 10000
@@ -4865,7 +4864,7 @@ F 1 "1N4148DO35-7" H 8800 15259 50  0001 L BNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 15350 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 15350 50  0001 C CNN
 	1    8700 15350
-	1    0    0    1   
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Diode:1N4148 D9
@@ -4876,7 +4875,7 @@ F 1 "1N4148DO35-7" H 8800 15359 50  0001 L BNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 15450 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 15450 50  0001 C CNN
 	1    8700 15450
-	1    0    0    1   
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Diode:1N4148 D8
@@ -4887,7 +4886,7 @@ F 1 "1N4148DO35-7" H 8800 15459 50  0001 L BNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 15550 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 15550 50  0001 C CNN
 	1    8700 15550
-	1    0    0    1   
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Diode:1N4148 D7
@@ -4898,7 +4897,7 @@ F 1 "1N4148DO35-7" H 8800 15559 50  0001 L BNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 15650 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 15650 50  0001 C CNN
 	1    8700 15650
-	1    0    0    1   
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Diode:1N4148 D6
@@ -4909,7 +4908,7 @@ F 1 "1N4148DO35-7" H 8800 15659 50  0001 L BNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 15750 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 15750 50  0001 C CNN
 	1    8700 15750
-	1    0    0    1   
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Diode:1N4148 D5
@@ -4920,7 +4919,7 @@ F 1 "1N4148DO35-7" H 8800 15759 50  0001 L BNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 15850 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 15850 50  0001 C CNN
 	1    8700 15850
-	1    0    0    1   
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Diode:1N4148 D4
@@ -4931,7 +4930,7 @@ F 1 "1N4148DO35-7" H 8800 15859 50  0001 L BNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 15950 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 15950 50  0001 C CNN
 	1    8700 15950
-	1    0    0    1   
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Diode:1N4148 D3
@@ -4942,7 +4941,7 @@ F 1 "1N4148DO35-7" H 8800 15959 50  0001 L BNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8700 16050 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8700 16050 50  0001 C CNN
 	1    8700 16050
-	1    0    0    1   
+	-1   0    0    -1  
 $EndComp
 Text Label 9000 16050 0    50   ~ 0
 A15

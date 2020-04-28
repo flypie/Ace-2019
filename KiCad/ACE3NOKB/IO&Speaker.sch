@@ -110,8 +110,8 @@ F 0 "SPK1" H 9650 3020 51  0000 L BNN
 F 1 "SPk1" H 9520 3105 50  0000 L BNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9550 3050 50  0001 C CNN
 F 3 "" H 9550 3050 50  0001 C CNN
-F 4 "SAMTEC" H 9550 3050 50  0001 C CNN "Manufacturer_Name"
-F 5 "TSW–101–10–T–D–RA" H 9550 3050 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "TE Connectivity / AMP" H 9550 3050 50  0001 C CNN "Manufacturer_Name"
+F 5 "5-146871-1" H 9550 3050 50  0001 C CNN "Manufacturer_Part_Number"
 	1    9550 3050
 	1    0    0    1   
 $EndComp
@@ -282,8 +282,8 @@ F 0 "KEYBOARD1" H 3450 5625 50  0000 C CNN
 F 1 "Conn_02x08_Odd_Even" H 3450 5525 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical" H 3375 5075 50  0001 C CNN
 F 3 "" H 3375 5075 50  0001 C CNN
-F 4 "SAMTEC" H 3375 5075 50  0001 C CNN "Manufacturer_Name"
-F 5 "TSW–108–10–T–D–RA" H 3375 5075 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "HARWIN" H 3375 5075 50  0001 C CNN "Manufacturer_Name"
+F 5 "M20-9980446 " H 3375 5075 50  0001 C CNN "Manufacturer_Part_Number"
 	1    3375 5075
 	1    0    0    -1  
 $EndComp
@@ -399,8 +399,8 @@ F 0 "AUDIO-OUT1" H 9650 2225 51  0000 L CNN
 F 1 "332-02" H 9650 2075 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9550 2175 50  0001 C CNN
 F 3 "" H 9550 2175 50  0001 C CNN
-F 4 "SAMTEC" H 9550 2175 50  0001 C CNN "Manufacturer_Name"
-F 5 "TSW–101–10–T–D–RA" H 9550 2175 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "TE Connectivity / AMP" H 9550 2175 50  0001 C CNN "Manufacturer_Name"
+F 5 "5-146871-1" H 9550 2175 50  0001 C CNN "Manufacturer_Part_Number"
 	1    9550 2175
 	1    0    0    -1  
 $EndComp

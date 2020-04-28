@@ -2872,8 +2872,8 @@ F 0 "Z80CPUOUT1" H 1350 3475 50  0000 C CNN
 F 1 "Conn_02x22_Odd_Even" H 1350 3375 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x22_P2.54mm_Vertical" H 1300 2225 50  0001 C CNN
 F 3 "" H 1300 2225 50  0001 C CNN
-F 4 "SAMTEC" H 1300 2225 50  0001 C CNN "Manufacturer_Name"
-F 5 "TSW-122-10-T-S" H 1300 2225 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "HARWIN" H 1300 2225 50  0001 C CNN "Manufacturer_Name"
+F 5 "M20-9721146 " H 1300 2225 50  0001 C CNN "Manufacturer_Part_Number"
 	1    1300 2225
 	1    0    0    -1  
 $EndComp
@@ -4510,8 +4510,8 @@ F 0 "AUDIO-IN1" H 12915 3900 51  0000 L CNN
 F 1 "332-02" H 12915 3800 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 12795 3875 50  0001 C CNN
 F 3 "" H 12795 3875 50  0001 C CNN
-F 4 "SAMTEC" H 12795 3875 50  0001 C CNN "Manufacturer_Name"
-F 5 "TSW–101–10–T–D–RA" H 12795 3875 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "TE Connectivity / AMP" H 12795 3875 50  0001 C CNN "Manufacturer_Name"
+F 5 "5-146871-1" H 12795 3875 50  0001 C CNN "Manufacturer_Part_Number"
 	1    12795 3875
 	-1   0    0    -1  
 $EndComp
@@ -4807,8 +4807,8 @@ F 0 "COMPOSITE1" H 20775 2170 51  0000 L BNN
 F 1 "332-02" H 20645 2255 50  0000 L BNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 20675 2200 50  0001 C CNN
 F 3 "" H 20675 2200 50  0001 C CNN
-F 4 "SAMTEC" H 20675 2200 50  0001 C CNN "Manufacturer_Name"
-F 5 "TSW–101–10–T–D–RA" H 20675 2200 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "TE Connectivity / AMP" H 20675 2200 50  0001 C CNN "Manufacturer_Name"
+F 5 "5-146871-1" H 20675 2200 50  0001 C CNN "Manufacturer_Part_Number"
 	1    20675 2200
 	1    0    0    1   
 $EndComp

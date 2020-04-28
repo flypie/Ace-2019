@@ -1629,4 +1629,34 @@ Wire Wire Line
 	13075 7025 13150 7025
 Text GLabel 6650 5125 2    50   Output ~ 0
 ~INT
+$Comp
+L SamacSys_Parts:PICASO IC?
+U 1 1 5E36215D
+P 1825 8575
+F 0 "IC?" H 4000 8050 50  0000 L CNN
+F 1 "PICASO" H 4000 7950 50  0000 L CNN
+F 2 "QFP50P1200X1200X120-64N" H 3775 9375 50  0001 L CNN
+F 3 "http://docs-emea.rs-online.com/webdocs/1463/0900766b8146360d.pdf" H 3775 9275 50  0001 L CNN
+F 4 "PICASO, Graphics Controller 64-Pin TQFP" H 3775 9175 50  0001 L CNN "Description"
+F 5 "1.2" H 3775 9075 50  0001 L CNN "Height"
+F 6 "4D Systems" H 3775 8975 50  0001 L CNN "Manufacturer_Name"
+F 7 "PICASO" H 3775 8875 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "971-PICASO" H 3775 8775 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.com/Search/Refine.aspx?Keyword=971-PICASO" H 3775 8675 50  0001 L CNN "Mouser Price/Stock"
+F 10 "9014281P" H 3775 8575 50  0001 L CNN "RS Part Number"
+F 11 "http://uk.rs-online.com/web/p/products/9014281P" H 3775 8475 50  0001 L CNN "RS Price/Stock"
+	1    1825 8575
+	1    0    0    -1  
+$EndComp
+$Comp
+L Memory_RAM:IS61C5128AL-10KLI U?
+U 1 1 5E368119
+P 1250 9900
+F 0 "U?" H 1250 11225 50  0000 C CNN
+F 1 "IS61C5128AL-10KLI" H 1250 11125 50  0000 C CNN
+F 2 "Package_SO:SOJ-36_10.16x23.49mm_P1.27mm" H 1900 11750 50  0001 C CNN
+F 3 "http://www.issi.com/WW/pdf/61-64C5128AL.pdf" H 1250 9700 50  0001 C CNN
+	1    1250 9900
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
