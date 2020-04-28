@@ -1,0 +1,6017 @@
+
+; Byte References
+
+B_FC	equ	0FCh	;  '|'+128  -4
+B_BF	equ	0BFh	;  '?'+128  -65
+B_F0	equ	0F0h	;  'p'+128  -16
+B_5F	equ	5Fh	;  '_'  95
+B_07	equ	07h	;  7
+B_B3	equ	0B3h	;  '3'+128  -77
+B_1A	equ	1Ah	;  26
+B_FF	equ	0FFh	;  -1
+B_00	equ	00h	;  0
+B_3E	equ	3Eh	;  '>'  62
+B_20	equ	20h	;  ' '  32
+B_9F	equ	9Fh	;  -97
+B_80	equ	80h	;  -128
+B_0D	equ	0Dh	;  13
+B_04	equ	04h	;  4
+B_0A	equ	0Ah	;  10
+B_9C	equ	9Ch	;  -100
+B_21	equ	21h	;  33
+B_1F	equ	1Fh	;  31
+B_A0	equ	0A0h	;  ' '+128  -96
+B_97	equ	97h	;  -105
+B_C3	equ	0C3h	;  'C'+128  -61
+B_C7	equ	0C7h	;  'G'+128  -57
+B_1E	equ	1Eh	;  30
+B_D8	equ	0D8h	;  'X'+128  -40
+B_28	equ	28h	;  '('  40
+B_57	equ	57h	;  'W'  87
+B_03	equ	03h	;  3
+B_08	equ	08h	;  8
+B_35	equ	35h	;  '5'  53
+B_25	equ	25h	;  '%'  37
+B_7D	equ	7Dh	;  '}'  125
+B_4D	equ	4Dh	;  'M'  77
+B_BB	equ	0BBh	;  ';'+128  -69
+B_FE	equ	0FEh	;  '~'+128  -2
+B_7F	equ	7Fh	;  127
+B_05	equ	05h	;  5
+B_EE	equ	0EEh	;  'n'+128  -18
+B_40	equ	40h	;  '@'  64
+B_7A	equ	7Ah	;  'z'  122
+B_FD	equ	0FDh	;  '}'+128  -3
+B_CD	equ	0CDh	;  'M'+128  -51
+B_3F	equ	3Fh	;  '?'  63
+B_DF	equ	0DFh	;  '_'+128  -33
+B_AB	equ	0ABh	;  '+'+128  -85
+B_2D	equ	2Dh	;  '-'  45
+B_C5	equ	0C5h	;  'E'+128  -59
+B_30	equ	30h	;  '0'  48
+B_45	equ	45h	;  'E'  69
+B_06	equ	06h	;  6
+B_88	equ	88h	;  -120
+B_6B	equ	6Bh	;  'k'  107
+B_D0	equ	0D0h	;  'P'+128  -48
+B_EF	equ	0EFh	;  'o'+128  -17
+B_61	equ	61h	;  'a'  97
+B_7B	equ	7Bh	;  '{'  123
+B_89	equ	89h	;  -119
+B_17	equ	17h	;  23
+B_D2	equ	0D2h	;  'R'+128  -46
+B_E1	equ	0E1h	;  'a'+128  -31
+B_8D	equ	8Dh	;  -115
+B_CF	equ	0CFh	;  'O'+128  -49
+B_0E	equ	0Eh	;  14
+B_3A	equ	3Ah	;  ':'  58
+B_F6	equ	0F6h	;  'v'+128  -10
+B_9B	equ	9Bh	;  -101
+B_72	equ	72h	;  'r'  114
+B_85	equ	85h	;  -123
+B_49	equ	49h	;  'I'  73
+B_3C	equ	3Ch	;  '<'  60
+B_41	equ	41h	;  'A'  65
+B_2E	equ	2Eh	;  '.'  46
+B_01	equ	01h	;  1
+B_16	equ	16h	;  22
+B_78	equ	78h	;  'x'  120
+B_10	equ	10h	;  16
+B_87	equ	87h	;  -121
+B_02	equ	02h	;  2
+B_DA	equ	0DAh	;  'Z'+128  -38
+B_0C	equ	0Ch	;  12
+B_11	equ	11h	;  17
+B_74	equ	74h	;  't'  116
+B_DD	equ	0DDh	;  ']'+128  -35
+B_4B	equ	4Bh	;  'K'  75
+B_44	equ	44h	;  'D'  68
+B_4E	equ	4Eh	;  'N'  78
+B_C6	equ	0C6h	;  'F'+128  -58
+B_C1	equ	0C1h	;  'A'+128  -63
+B_A5	equ	0A5h	;  '%'+128  -91
+B_96	equ	96h	;  -106
+B_E6	equ	0E6h	;  'f'+128  -26
+B_9A	equ	9Ah	;  -102
+B_B5	equ	0B5h	;  '5'+128  -75
+B_7C	equ	7Ch	;  '|'  124
+B_E0	equ	0E0h	;  '`'+128  -32
+B_EB	equ	0EBh	;  'k'+128  -21
+B_13	equ	13h	;  19
+B_A2	equ	0A2h	;  '"'+128  -94
+B_29	equ	29h	;  ')'  41
+B_2A	equ	2Ah	;  '*'  42
+B_22	equ	22h	;  '"'  34
+B_2B	equ	2Bh	;  '+'  43
+B_38	equ	38h	;  '8'  56
+B_3D	equ	3Dh	;  '='  61
+B_3B	equ	3Bh	;  ';'  59
+B_B8	equ	0B8h	;  '8'+128  -72
+B_E2	equ	0E2h	;  'b'+128  -30
+B_14	equ	14h	;  20
+B_F3	equ	0F3h	;  's'+128  -13
+B_09	equ	09h	;  9
+B_FB	equ	0FBh	;  '{'+128  -5
+B_0F	equ	0Fh	;  15
+B_68	equ	68h	;  'h'  104
+B_42	equ	42h	;  'B'  66
+B_82	equ	82h	;  -126
+B_5B	equ	5Bh	;  '['  91
+B_46	equ	46h	;  'F'  70
+
+; Displacement References
+
+D_3E	equ	62	;  03Eh  '>'
+D_3D	equ	61	;  03Dh  '='
+D_3F	equ	63	;  03Fh  '?'
+D_30	equ	48	;  030h  '0'
+D_2F	equ	47	;  02Fh  '/'
+D_14	equ	20	;  014h
+D_16	equ	22	;  016h
+D_13	equ	19	;  013h
+D_15	equ	21	;  015h
+D_00	equ	0	;  000h
+D_02	equ	2	;  002h
+
+; Word References
+
+W_3C00	equ	3C00h	;  15360
+W_3C3B	equ	3C3Bh	;  15419
+W_3C3D	equ	3C3Dh	;  15421
+W_3C18	equ	3C18h	;  15384
+W_3C24	equ	3C24h	;  15396
+W_002D	equ	002Dh	;  45
+W_2700	equ	2700h	;  9984
+W_2C00	equ	2C00h	;  11264
+W_2FFF	equ	2FFFh	;  12287
+W_0008	equ	0008h	;  8
+W_04B9	equ	04B9h	;  1209
+W_3C37	equ	3C37h	;  15415
+W_3C3E	equ	3C3Eh	;  15422
+W_3710	equ	3710h	;  14096
+W_3D10	equ	3D10h	;  15632
+W_000C	equ	000Ch	;  12
+W_3C49	equ	3C49h	;  15433
+W_3C2B	equ	3C2Bh	;  15403
+W_3C28	equ	3C28h	;  15400
+W_3C22	equ	3C22h	;  15394
+W_3C20	equ	3C20h	;  15392
+W_26E0	equ	26E0h	;  9952
+W_3C1E	equ	3C1Eh	;  15390
+W_D900	equ	0D900h	;  -9984
+W_DBA0	equ	0DBA0h	;  -9312
+W_3C1C	equ	3C1Ch	;  15388
+W_0020	equ	0020h	;  32
+W_01F0	equ	01F0h	;  496
+W_FFE0	equ	0FFE0h	;  -32
+W_3C26	equ	3C26h	;  15398
+W_FEFE	equ	0FEFEh	;  -258
+W_0376	equ	0376h	;  886
+W_7377	equ	7377h	;  29559
+W_4754	equ	4754h	;  18260
+W_5D2D	equ	5D2Dh	;  23853
+W_3D2E	equ	3D2Eh	;  15662
+W_215F	equ	215Fh	;  8543
+W_3C29	equ	3C29h	;  15401
+W_2420	equ	2420h	;  9248
+W_4142	equ	4142h	;  16706
+W_BB27	equ	0BB27h	;  -17625
+W_000B	equ	000Bh	;  11
+W_0000	equ	0000h	;  0
+W_27FE	equ	27FEh	;  10238
+W_00FF	equ	000FFh	;  255
+W_2701	equ	2701h	;  9985
+W_3C33	equ	3C33h	;  15411
+W_1006	equ	1006h	;  4102
+W_4500	equ	4500h	;  17664
+W_DD08	equ	0DD08h	;  -8952
+W_27FF	equ	27FFh	;  10239
+W_3C1A	equ	3C1Ah	;  15386
+W_0EC3	equ	0EC3h	;  3779
+W_26FF	equ	26FFh	;  9983
+W_3C2F	equ	3C2Fh	;  15407
+W_2400	equ	2400h	;  9216
+W_00F9	equ	000F9h	;  249
+W_0C58	equ	0C58h	;  3160
+W_4D2F	equ	4D2Fh	;  19759
+W_6CAF	equ	6CAFh	;  27823
+W_0002	equ	0002h	;  2
+W_0004	equ	0004h	;  4
+W_0DD4	equ	0DD4h	;  3540
+W_EDAB	equ	0EDABh	;  -4693
+W_12AD	equ	12ADh	;  4781
+W_DF0E	equ	0DF0Eh	;  -8434
+W_EC10	equ	0EC10h	;  -5104
+W_3C39	equ	3C39h	;  15417
+W_001E	equ	001Eh	;  30
+W_21EB	equ	21EBh	;  8683
+W_5EE1	equ	5EE1h	;  24289
+W_4B10	equ	4B10h	;  19216
+W_FFD6	equ	0FFD6h	;  -42
+W_F010	equ	0F010h	;  -4080
+W_1140	equ	1140h	;  4416
+W_C309	equ	0C309h	;  -15607
+W_850A	equ	850Ah	;  -31478
+W_3510	equ	3510h	;  13584
+W_AD0B	equ	0AD0Bh	;  -21237
+W_332A	equ	332Ah	;  13098
+W_3C31	equ	3C31h	;  15409
+W_0845	equ	0845h	;  2117
+W_0844	equ	0844h	;  2116
+W_1237	equ	1237h	;  4663
+W_EB01	equ	0EB01h	;  -5375
+W_1304	equ	1304h	;  4868
+W_0006	equ	0006h	;  6
+W_0001	equ	0001h	;  1
+W_2705	equ	2705h	;  9989
+W_270D	equ	270Dh	;  9997
+W_2707	equ	2707h	;  9991
+W_270B	equ	270Bh	;  9995
+W_C3AF	equ	0C3AFh	;  -15441
+W_2703	equ	2703h	;  9987
+W_2709	equ	2709h	;  9993
+W_002E	equ	002Eh	;  46
+W_3C40	equ	3C40h	;  15424
+W_B513	equ	0B513h	;  -19181
+W_0018	equ	0018h	;  24
+W_FFF9	equ	0FFF9h	;  -7
+W_850B	equ	850Bh	;  -31477
+W_ED3C	equ	0ED3Ch	;  -4804
+W_FFFB	equ	0FFFBh	;  -5
+W_850D	equ	850Dh	;  -31475
+W_3C14	equ	3C14h	;  15380
+W_3C15	equ	3C15h	;  15381
+W_3613	equ	3613h	;  13843
+W_09B3	equ	09B3h	;  2483
+W_E000	equ	0E000h	;  -8192
+W_3B08	equ	3B08h	;  15112
+W_230E	equ	230Eh	;  8974
+W_FFCC	equ	0FFCCh	;  -52
+W_230C	equ	230Ch	;  8972
+W_3C50	equ	3C50h	;  15440
+W_2325	equ	2325h	;  8997
+W_2329	equ	2329h	;  9001
+W_3C4C	equ	3C4Ch	;  15436
+W_270C	equ	270Ch	;  9996
+W_2301	equ	2301h	;  8961
+W_3C51	equ	3C51h	;  15441
+W_2310	equ	2310h	;  8976
+W_2312	equ	2312h	;  8978
+W_0C10	equ	0C10h	;  3088
+W_2302	equ	2302h	;  8962
+W_0019	equ	0019h	;  25
+W_231A	equ	231Ah	;  8986
+W_232B	equ	232Bh	;  9003
+W_2327	equ	2327h	;  8999
+W_3C0F	equ	3C0Fh	;  15375
+W_FFFC	equ	0FFFCh	;  -4
+W_3C02	equ	3C02h	;  15362
+W_03FF	equ	03FFh	;  1023
+W_0400	equ	0400h	;  1024
+W_3C10	equ	3C10h	;  15376
+W_3C03	equ	3C03h	;  15363
+W_3C08	equ	3C08h	;  15368
+W_3C0B	equ	3C0Bh	;  15371
+W_DF1D	equ	0DF1Dh	;  -8419
+W_0D94	equ	0D94h	;  3476
+W_004C	equ	004Ch	;  76
+
+; Unclassified Symbols (read from file)
+;   (probably same value as another symbol; or, never used)
+
+
+; Undefined Label References 
+;   (probably from data as program; or, to outside program area)
+
+L_03EE	equ	03EEh	; undefined label
+L_085F	equ	085Fh	; undefined label
+L_00AD	equ	000ADh	; undefined label
+L_013A	equ	013Ah	; undefined label
+L_0000	equ	0000h	; undefined label
+L_04F2	equ	04F2h	; undefined label
+L_0098	equ	0098h	; undefined label
+L_01D3	equ	01D3h	; undefined label
+L_6B0D	equ	6B0Dh	; undefined label
+L_B9CD	equ	0B9CDh	; undefined label
+L_0196	equ	0196h	; undefined label
+L_01E6	equ	01E6h	; undefined label
+L_0305	equ	0305h	; undefined label
+L_0204	equ	0204h	; undefined label
+L_02F4	equ	02F4h	; undefined label
+L_0336	equ	0336h	; undefined label
+L_04CC	equ	04CCh	; undefined label
+L_0472	equ	0472h	; undefined label
+L_C60E	equ	0C60Eh	; undefined label
+L_04BF	equ	04BFh	; undefined label
+L_02EA	equ	02EAh	; undefined label
+L_05E1	equ	05E1h	; undefined label
+L_07DA	equ	07DAh	; undefined label
+L_077B	equ	077Bh	; undefined label
+L_D208	equ	0D208h	; undefined label
+L_06A8	equ	06A8h	; undefined label
+L_9608	equ	9608h	; undefined label
+L_0C21	equ	0C21h	; undefined label
+L_084E	equ	084Eh	; undefined label
+L_DF08	equ	0DF08h	; undefined label
+L_0010	equ	0010h	; undefined label
+L_D20E	equ	0D20Eh	; undefined label
+L_094D	equ	094Dh	; undefined label
+L_880E	equ	880Eh	; undefined label
+L_F70E	equ	0F70Eh	; undefined label
+L_FF0C	equ	0FF0Ch	; undefined label
+L_0A94	equ	0A94h	; undefined label
+L_0AAE	equ	0AAEh	; undefined label
+L_0B28	equ	0B28h	; undefined label
+L_0BC9	equ	0BC9h	; undefined label
+L_0BCB	equ	0BCBh	; undefined label
+L_6B0E	equ	6B0Eh	; undefined label
+L_0C99	equ	0C99h	; undefined label
+L_0CA7	equ	0CA7h	; undefined label
+L_850E	equ	850Eh	; undefined label
+L_E908	equ	0E908h	; undefined label
+L_FF0E	equ	0FF0Eh	; undefined label
+L_000E	equ	000Eh	; undefined label
+L_310E	equ	310Eh	; undefined label
+L_C40E	equ	0C40Eh	; undefined label
+L_2E0E	equ	2E0Eh	; undefined label
+L_B60D	equ	0B60Dh	; undefined label
+L_0FC0	equ	0FC0h	; undefined label
+L_4B0E	equ	4B0Eh	; undefined label
+L_0FF5	equ	0FF5h	; undefined label
+L_1009	equ	1009h	; undefined label
+L_830E	equ	830Eh	; undefined label
+L_0F5E	equ	0F5Eh	; undefined label
+L_1115	equ	1115h	; undefined label
+L_114D	equ	114Dh	; undefined label
+L_1027	equ	1027h	; undefined label
+L_117C	equ	117Ch	; undefined label
+L_1073	equ	1073h	; undefined label
+L_4510	equ	4510h	; undefined label
+L_4B10	equ	4B10h	; undefined label
+L_10A6	equ	10A6h	; undefined label
+L_120B	equ	120Bh	; undefined label
+L_4411	equ	4411h	; undefined label
+L_600E	equ	600Eh	; undefined label
+L_DAFF	equ	0DAFFh	; undefined label
+L_4113	equ	4113h	; undefined label
+L_127C	equ	127Ch	; undefined label
+L_14B1	equ	14B1h	; undefined label
+L_14DA	equ	14DAh	; undefined label
+L_14DC	equ	14DCh	; undefined label
+L_1638	equ	1638h	; undefined label
+L_1568	equ	1568h	; undefined label
+L_15E7	equ	15E7h	; undefined label
+L_1779	equ	1779h	; undefined label
+L_178B	equ	178Bh	; undefined label
+L_0B0E	equ	0B0Eh	; undefined label
+L_17B2	equ	17B2h	; undefined label
+L_17E4	equ	17E4h	; undefined label
+L_1708	equ	1708h	; undefined label
+L_1865	equ	1865h	; undefined label
+L_187D	equ	187Dh	; undefined label
+L_188C	equ	188Ch	; undefined label
+L_17C1	equ	17C1h	; undefined label
+L_188A	equ	188Ah	; undefined label
+L_186D	equ	186Dh	; undefined label
+L_3D0E	equ	3D0Eh	; undefined label
+L_1978	equ	1978h	; undefined label
+L_1504	equ	1504h	; undefined label
+L_1B18	equ	1B18h	; undefined label
+L_F30E	equ	0F30Eh	; undefined label
+L_1AF4	equ	1AF4h	; undefined label
+L_1B22	equ	1B22h	; undefined label
+L_1B43	equ	1B43h	; undefined label
+L_1B53	equ	1B53h	; undefined label
+L_1ECC	equ	1ECCh	; undefined label
+L_201D	equ	201Dh	; undefined label
+L_204B	equ	204Bh	; undefined label
+L_20BB	equ	20BBh	; undefined label
+L_20B9	equ	20B9h	; undefined label
+L_210D	equ	210Dh	; undefined label
+L_210C	equ	210Ch	; undefined label
+L_215C	equ	215Ch	; undefined label
+
+	ORG	0100h
+
+	di
+	ld	hl,W_3C00
+	ld	a,B_FC
+	jr	L_0128
+	exx
+	bit	3,(ix+D_3E)
+W_010D	jp	L_03EE
+	ld	hl,(W_3C3B)
+	ld	(hl),e
+	inc	hl
+	jp	L_085F
+	ld	hl,(W_3C3B)
+	dec	hl
+	ld	d,(hl)
+	jp	L_0859
+	pop	hl
+	ld	a,(hl)
+	ld	(W_3C3D),a
+	jp	L_00AD
+L_0128	inc	h
+	ld	(hl),a
+	cp	(hl)
+	jr	z,L_0128
+	and	h
+	ld	h,a
+	ld	(W_3C18),hl
+	ld	sp,hl
+	ld	hl,W_010D
+	jr	L_013B
+	jp	L_013A
+L_013B	ld	de,W_3C24
+	ld	bc,W_002D
+	ldir
+	ld	ix,W_3C00
+	ld	iy,W_04C8
+	call	L_0A24
+	xor	a
+	ld	(W_2700),a
+	ld	hl,W_2C00
+L_0155	ld	a,l
+	and	B_BF
+	rrca
+	rrca
+	rrca
+	jr	nc,L_015F
+	rrca
+	rrca
+L_015F	rrca
+	ld	b,a
+	sbc	a,a
+	rr	b
+	ld	b,a
+	sbc	a,a
+	xor	b
+	and	B_F0
+	xor	b
+	ld	(hl),a
+	inc	l
+	jr	nz,L_0155
+	ld	de,W_2FFF
+	ld	hl,W_1FFB
+	ld	bc,W_0008
+	lddr
+	ex	de,hl
+	ld	a,B_5F
+L_017C	ld	c,B_07
+L_017E	bit	5,a
+	jr	z,L_0185
+	ld	(hl),b
+	dec	hl
+	dec	c
+L_0185	ex	de,hl
+	lddr
+	ex	de,hl
+	ld	(hl),b
+	dec	hl
+	dec	a
+	jr	nz,L_017C
+	im	1
+	jr	L_019B
+	ld	d,c
+	ld	d,l
+	ld	c,c
+	call	nc,L_0000
+L_0198	inc	b
+	sbc	a,e
+	nop
+L_019B	ld	sp,(W_3C18)
+	ei
+	jp	L_04F2
+	ld	b,c
+	ld	b,d
+	ld	c,a
+	ld	d,d
+	call	nc,L_0098
+	dec	b
+	xor	l
+	nop
+	push	iy
+	ld	iy,W_04B9
+	ld	hl,(W_3C37)
+	ld	(W_3C3B),hl
+	ld	hl,W_3C3E
+	ld	a,(hl)
+	and	B_B3
+	bit	2,(hl)
+	ld	(hl),a
+	jr	z,L_01DE
+	call	L_04B9
+	sub	b
+	inc	b
+	or	e
+	ex	af,af'
+	ld	c,e
+	djnz	L_01D3
+	jp	nc,L_6B0D
+	ex	af,af'
+	djnz	L_01EA
+	or	l
+	dec	d
+	ld	de,W_3710
+	inc	a
+	pop	bc
+	ex	af,af'
+	ld	c,B_1A
+L_01DE	bit	7,(ix+D_3D)
+	jr	nz,L_01FF
+	call	L_1808
+	ld	b,l
+	ld	d,d
+	ld	d,d
+L_01EA	ld	c,a
+	jp	nc,L_B9CD
+	inc	b
+	ld	de,W_3D10
+	inc	a
+	sub	(hl)
+	ex	af,af'
+	or	e
+	add	hl,bc
+	sub	l
+	ld	a,(bc)
+	ld	c,B_1A
+	ld	(ix+D_3D),B_FF
+L_01FF	ld	hl,(W_3C37)
+	ld	bc,W_000C
+	add	hl,bc
+	ld	(W_3C3B),hl
+	pop	iy
+	jr	L_019B
+	ret	po
+	ld	h,B_00
+	nop
+L_0211	nop
+	nop
+	nop
+	nop
+	nop
+	nop
+	nop
+	nop
+	nop
+	ld	c,h
+	inc	a
+	ld	c,h
+	inc	a
+	ld	c,a
+	inc	a
+	ld	d,c
+	inc	a
+	ld	b,l
+	inc	a
+	ld	e,l
+L_0225	inc	a
+	rst	38h
+	nop
+	ld	a,(bc)
+	ld	b,(hl)
+	ld	c,a
+	ld	d,d
+L_022C	ld	d,h
+	ret	z
+	nop
+	nop
+	rst	38h
+	rra
+	dec	b
+	or	l
+	ld	de,W_3C49
+	nop
+	nop
+	nop
+	push	af
+	ex	af,af'
+	push	af
+	push	bc
+	push	de
+	push	hl
+	ld	b,B_3E
+L_0242	djnz	L_0242
+	ld	hl,W_3C2B
+L_0247	inc	(hl)
+	inc	hl
+	jr	z,L_0247
+	call	L_0310
+	ld	hl,W_3C28
+	bit	0,(hl)
+	jr	z,L_0276
+	and	a
+	jr	z,L_0276
+	cp	B_20
+	jr	c,L_0270
+	bit	1,(hl)
+	call	nz,L_0807
+	bit	2,(hl)
+	jr	z,L_0267
+	and	B_9F
+L_0267	bit	3,(hl)
+	jr	z,L_026D
+	or	B_80
+L_026D	call	L_0196
+L_0270	call	L_01E6
+	call	L_0282
+L_0276	pop	hl
+	pop	de
+	pop	bc
+	pop	af
+	ex	af,af'
+	pop	af
+	ei
+	ret
+	cp	B_0D
+	jr	nz,L_0296
+L_0282	ld	hl,W_2700
+	ld	(W_3C22),hl
+	ld	(W_3C20),hl
+	xor	a
+	call	L_0198
+	ld	hl,W_26E0
+	ld	(W_3C1E),hl
+	ret
+L_0296	and	a
+	ret	z
+	ex	af,af'
+	ld	hl,(W_3C22)
+	ld	a,(hl)
+	and	a
+	jr	z,L_02A6
+	ld	de,W_D900
+	add	hl,de
+	jr	nc,L_02CE
+L_02A6	ld	de,(W_3C24)
+	ld	hl,W_DBA0
+	add	hl,de
+	jr	nc,L_02E4
+L_02B0	ld	hl,(W_3C1C)
+	ld	bc,W_0020
+	add	hl,bc
+	sbc	hl,de
+	push	de
+	call	nc,L_0421
+	call	L_02B0
+	pop	de
+	call	L_042F
+	ld	hl,W_3C1E
+	ld	b,B_04
+L_02C9	call	L_0443
+	djnz	L_02C9
+L_02CE	call	L_0302
+	ld	d,h
+	ld	e,l
+	inc	hl
+	ld	(W_3C22),hl
+	dec	hl
+L_02D8	dec	hl
+	jr	z,L_02DD
+	lddr
+L_02DD	ex	af,af'
+	ld	(de),a
+	inc	de
+	ld	(W_3C20),de
+L_02E4	xor	a
+	ret
+	ld	hl,W_01F0
+	ld	d,B_00
+	ld	e,a
+	add	hl,de
+L_02ED	ld	e,(hl)
+	add	hl,de
+	jp	(hl)
+	jr	nz,L_0305
+	inc	c
+	ld	e,B_0A
+	stf
+	ld	a,(de)
+	ld	d,b
+	ld	b,B_9C
+	ret
+	dec	d
+	inc	d
+	out	(B_21),a
+	jr	z,L_033D
+	xor	(hl)
+L_0302	ld	(hl),a
+	ret
+	ld	hl,(W_3C20)
+	dec	hl
+	ld	a,(hl)
+	and	a
+	ret	z
+	ld	(W_3C20),hl
+	inc	hl
+	ld	(hl),a
+L_0310	ret
+	ld	hl,(W_3C20)
+	inc	hl
+	ld	de,(W_3C22)
+	and	a
+	sbc	hl,de
+	ret	z
+	add	hl,de
+	ld	(W_3C20),hl
+	ld	a,(hl)
+	dec	hl
+	ld	(hl),a
+	ret
+	ld	hl,(W_3C20)
+	inc	hl
+	ld	(W_3C20),hl
+	call	L_0302
+	ld	h,d
+	ld	l,e
+	dec	de
+	ld	a,(de)
+	and	a
+	ret	z
+	ld	(W_3C20),de
+	ld	a,b
+	or	c
+	jr	z,L_033F
+L_033D	ldir
+L_033F	dec	hl
+	ld	(hl),B_20
+	ld	(W_3C22),hl
+	inc	c
+	ret
+	call	L_0204
+	jr	z,L_0354
+	ld	b,B_1F
+L_034E	call	L_0204
+	djnz	L_034E
+	ret
+L_0354	ld	hl,(W_3C1E)
+	ld	de,(W_3C24)
+	and	a
+	sbc	hl,de
+	ret	z
+	call	L_0225
+	ld	hl,(W_3C1E)
+	ld	de,W_FFE0
+	xor	a
+L_0369	add	hl,de
+	cp	(hl)
+	jr	nz,L_0369
+	ld	(W_3C1E),hl
+	call	L_02F4
+	ld	(W_3C20),hl
+L_0376	ld	a,B_A0
+	call	L_017E
+	ld	hl,(W_3C20)
+	dec	hl
+	ld	(W_3C20),hl
+	ld	hl,(W_3C20)
+	ld	a,(W_3C28)
+	rra
+	ld	(hl),B_97
+	rra
+	jr	nc,L_0390
+	ld	(hl),B_C3
+L_0390	rra
+	ret	nc
+	ld	(hl),B_C7
+	ret
+	call	L_0211
+	jr	z,L_03A2
+	ld	b,B_1F
+L_039C	call	L_0211
+	djnz	L_039C
+	ret
+L_03A2	call	L_02B0
+	ret	po
+	push	hl
+	call	L_0225
+	pop	hl
+	call	L_02ED
+	jr	L_0376
+	ld	hl,W_2700
+	ld	de,(W_3C1E)
+	and	a
+	sbc	hl,de
+	ld	b,h
+	ld	c,l
+	ex	de,hl
+	inc	hl
+	xor	a
+	cpir
+	dec	hl
+	ret
+	ld	hl,(W_3C22)
+	dec	hl
+	ld	(W_3C20),hl
+L_03CA	call	L_022C
+	jr	nz,L_03CA
+	ret
+	ld	hl,W_3C28
+	set	5,(hl)
+	res	0,(hl)
+	ret
+	ld	hl,W_2700
+	ld	de,(W_3C24)
+	call	L_07FA
+	ld	hl,W_26E0
+	ld	(W_3C24),hl
+	ld	(hl),B_00
+	ld	hl,(W_3C24)
+	ld	(W_3C1E),hl
+	inc	hl
+	ld	(W_3C20),hl
+	call	L_02B0
+	ld	a,B_20
+L_03F9	dec	hl
+	cp	(hl)
+	jr	z,L_03F9
+	inc	hl
+	ld	(W_3C22),hl
+	ret
+	ld	hl,(W_3C22)
+	ld	de,(W_3C20)
+W_0409	and	a
+	sbc	hl,de
+	ld	b,h
+	ld	c,l
+	add	hl,de
+	ret
+	call	L_0336
+	ld	b,a
+	ld	hl,(W_3C26)
+	xor	l
+	jr	z,L_0425
+	xor	l
+	jr	z,L_0420
+	xor	a
+	cp	l
+	ret	nz
+L_0420	ld	l,b
+L_0421	ld	h,B_20
+	jr	L_0432
+L_0425	dec	h
+	ld	a,h
+	cp	B_1E
+	jr	z,L_0431
+	xor	a
+	cp	h
+	jr	nz,L_0432
+L_042F	ld	h,B_04
+L_0431	ld	a,l
+L_0432	ld	(W_3C26),hl
+	ret
+	ld	bc,W_FEFE
+	in	d,(c)
+	ld	e,d
+	srl	d
+	sbc	a,a
+	and	B_D8
+	srl	d
+L_0443	jr	c,L_0447
+	ld	a,B_28
+L_0447	add	a,B_57
+	ld	l,a
+	ld	a,e
+	or	B_03
+	ld	e,B_FF
+L_044F	cpl
+	and	B_1F
+	ld	d,a
+	jr	z,L_0462
+	ld	a,l
+	inc	e
+	jr	nz,L_046B
+L_0459	sub	B_08
+	srl	d
+	jr	nc,L_0459
+L_045F	ld	e,a
+W_0460	jr	nz,L_046B
+L_0462	dec	l
+	rlc	b
+	jr	nc,L_046D
+	in	a,(c)
+	jr	L_044F
+L_046B	ld	e,B_FF
+L_046D	ld	a,e
+	inc	a
+	ret	z
+	ld	hl,W_0376
+	add	hl,de
+	ld	a,(hl)
+	ret
+	halt
+	ld	l,b
+	ld	a,c
+	ld	(hl),B_35
+	ld	(hl),h
+	ld	h,a
+	ld	h,e
+	ld	h,d
+	ld	l,d
+W_0480	ld	(hl),l
+	stf
+	inc	(hl)
+	ld	(hl),d
+	ld	h,(hl)
+	ld	a,b
+	ld	l,(hl)
+	ld	l,e
+	ld	l,c
+L_0489	jr	c,L_04BE
+	ld	h,l
+	ld	h,h
+	ld	a,d
+	ld	l,l
+	ld	l,h
+	ld	l,a
+	add	hl,sp
+	ld	(W_7377),a
+	nop
+	jr	nz,L_04A5
+	ld	(hl),b
+	jr	nc,L_04CC
+	ld	(hl),c
+	ld	h,c
+	nop
+	ld	d,(hl)
+	ld	c,b
+	ld	e,c
+	rlca
+	ld	bc,W_4754
+L_04A5	ld	b,e
+	ld	b,d
+	ld	c,d
+	ld	d,l
+	add	hl,bc
+	ex	af,af'
+	ld	d,d
+	ld	b,(hl)
+	ld	e,b
+	ld	c,(hl)
+	ld	c,e
+	ld	c,c
+	inc	bc
+	inc	sp
+	ld	b,l
+	ld	b,h
+	ld	e,d
+W_04B6	ld	c,l
+	ld	c,h
+	ld	c,a
+L_04B9	inc	b
+L_04BA	ld	(bc),a
+	ld	d,a
+	ld	d,e
+	nop
+L_04BE	jr	nz,L_04CD
+	ld	d,b
+	dec	b
+	ld	a,(bc)
+	ld	d,c
+	ld	b,c
+	nop
+	cpl
+	ld	e,(hl)
+W_04C8	ld	e,e
+	ld	h,B_25
+	ld	a,B_7D
+L_04CD	ccf
+	ld	hl,(W_5D2D)
+	daa
+	inc	h
+	inc	a
+	ld	a,e
+	ld	h,b
+	inc	l
+L_04D7	dec	hl
+	ld	a,a
+	jr	z,L_04FE
+	ld	b,l
+	ld	e,h
+	ld	a,(W_3D2E)
+	dec	sp
+	add	hl,hl
+	ld	b,b
+	ld	d,a
+L_04E4	ld	a,h
+	nop
+	jr	nz,L_04F5
+	ld	(W_215F),hl
+	ld	d,c
+	ld	a,(hl)
+	nop
+	jr	z,L_04F5
+L_04F0	call	L_017E
+	exx
+	ret
+L_04F5	ld	b,a
+	ld	hl,(W_3C29)
+	ld	a,h
+	or	l
+	ld	a,b
+	jr	z,L_04FF
+L_04FE	jp	(hl)
+L_04FF	ld	hl,(W_3C1C)
+	ld	de,(W_3C24)
+	ex	de,hl
+	stf
+	sbc	hl,de
+	ex	de,hl
+	call	c,L_0421
+	cp	B_0D
+	jr	z,L_0516
+	ld	(hl),a
+W_0513	inc	hl
+	jr	L_051C
+L_0516	inc	hl
+	ld	a,l
+	and	B_1F
+	jr	nz,L_0516
+L_051C	ld	(W_3C1C),hl
+	exx
+	ret
+	push	af
+	ld	hl,W_3C1C
+	call	L_0443
+	pop	af
+	ld	hl,(W_3C24)
+	ld	de,W_2420
+	and	a
+	sbc	hl,de
+	ld	b,h
+	ld	c,l
+	ld	hl,W_FFE0
+	add	hl,de
+	ex	de,hl
+	ldir
+	ld	b,B_20
+L_053D	dec	hl
+	ld	(hl),B_20
+	djnz	L_053D
+	ret
+	ld	a,(hl)
+	sub	B_20
+	ld	(hl),a
+	inc	hl
+	jr	nc,L_054B
+	dec	(hl)
+L_054B	inc	hl
+	ret
+	ex	de,hl
+	ld	e,(hl)
+	ld	d,B_00
+	ld	hl,W_3C00
+	add	hl,de
+	ex	de,hl
+	rst	10h
+	jp	(iy)
+	ld	c,b
+	ld	b,l
+	ld	d,d
+	push	bc
+	xor	d
+	nop
+	inc	b
+	ld	h,d
+	inc	b
+	ld	de,(W_3C37)
+	rst	10h
+	jp	(iy)
+	ld	b,e
+	ld	c,a
+	ld	c,(hl)
+	ld	d,h
+	ld	b,l
+	ld	e,b
+	call	nc,L_045F
+	rlca
+	ld	c,l
+	inc	b
+	inc	sp
+	ld	b,e
+L_0577	ld	d,l
+W_0578	ld	d,d
+	ld	d,d
+	ld	b,l
+	ld	c,(hl)
+	call	nc,L_0472
+	rlca
+	ld	c,l
+	inc	b
+	ld	sp,W_4142
+	ld	d,e
+	push	bc
+	ld	a,a
+	inc	b
+	inc	b
+	ld	c,l
+	inc	b
+	ccf
+	ld	c,l
+	inc	b
+	ld	a,B_4D
+	inc	b
+	add	hl,sp
+	ld	d,b
+	ld	b,c
+	call	nz,L_0489
+	inc	bc
+	push	af
+	rrca
+	ld	bc,W_BB27
+	sbc	a,b
+	inc	b
+	ld	b,c
+	ex	af,af'
+	ld	de,W_04B6
+	ret	c
+	ld	(de),a
+	ld	a,(bc)
+	ld	c,B_1A
+L_05AA	ld	hl,W_3C3E
+	ld	a,(hl)
+	and	B_BB
+	ld	(hl),a
+	jp	(iy)
+	nop
+	ret	pe
+	rst	38h
+	cp	b
+	inc	b
+	pop	hl
+L_05B9	pop	hl
+	ld	e,(hl)
+	inc	hl
+	ld	d,(hl)
+	inc	hl
+	push	hl
+	ex	de,hl
+	ld	e,(hl)
+	inc	hl
+	ld	d,(hl)
+	inc	hl
+	ex	de,hl
+	jp	(hl)
+	ret	z
+	inc	b
+	ld	bc,W_000B
+	ld	de,(W_3C3B)
+	ld	hl,(W_3C37)
+	add	hl,bc
+	sbc	hl,de
+	jr	c,L_05D9
+	rst	20h
+	ld	(bc),a
+L_05D9	ld	bc,W_0000
+	call	L_0F8C
+	call	L_04E4
+	jr	L_05B9
+	ld	a,B_FE
+	in	a,(B_FE)
+	rra
+	ret	c
+	ld	a,B_7F
+	in	a,(B_FE)
+	rra
+	ret	c
+	rst	20h
+	inc	bc
+	call	L_04B9
+	adc	a,h
+	dec	b
+	ld	b,B_05
+	ld	(hl),B_05
+	halt
+	ld	(de),a
+	rst	30h
+	rst	38h
+	ld	c,h
+	ld	c,c
+	ld	c,(hl)
+	push	bc
+	and	b
+	inc	b
+	inc	b
+	jp	L_C60E
+	inc	b
+	dec	a
+	ld	b,B_EE
+	ex	af,af'
+	add	a,e
+	ld	(de),a
+	rlca
+	nop
+	ld	c,a
+	dec	b
+L_0614	halt
+	ld	(de),a
+	pop	af
+	rst	38h
+	xor	c
+	ld	b,B_EE
+	ex	af,af'
+	add	a,e
+	ld	(de),a
+	rlca
+	nop
+	ld	h,h
+	dec	b
+	halt
+	ld	(de),a
+	ex	(sp),hl
+	rst	38h
+	dec	de
+	ld	b,B_1A
+	inc	c
+	add	a,e
+	ld	(de),a
+L_062C	inc	bc
+	nop
+	or	(hl)
+	inc	b
+	ld	a,b
+	dec	b
+	halt
+	ld	(de),a
+	out	(B_FF),a
+	jr	c,L_063D
+	ld	a,(W_3C3E)
+	bit	6,a
+L_063D	jr	nz,L_064D
+	bit	4,a
+	jr	nz,L_064D
+	call	L_1808
+	jr	nz,L_0697
+	ld	c,e
+	and	b
+	ld	a,B_0D
+	rst	8h
+L_064D	jp	(iy)
+	ld	d,c
+	dec	b
+	rst	18h
+	dec	de
+	ld	a,(de)
+	cpl
+	and	(ix+D_3E)
+	and	B_40
+	inc	de
+	jr	z,L_0661
+	rst	10h
+	ld	de,W_0F4E
+L_0661	jp	L_04BF
+	ld	h,(hl)
+	dec	b
+	rst	18h
+	bit	6,(ix+D_3E)
+	jr	nz,L_0661
+	jp	(iy)
+	ld	d,d
+	ld	b,l
+	ld	d,h
+	ld	e,c
+	ld	d,b
+	push	bc
+	adc	a,e
+	dec	b
+	ld	b,B_7A
+	dec	b
+	call	L_02EA
+	call	L_0276
+	ld	(hl),B_BF
+	jr	L_0694
+	ld	d,c
+	ld	d,l
+	ld	b,l
+	ld	d,d
+	exx
+	dec	b
+L_068A	dec	b
+	dec	b
+	adc	a,(hl)
+	dec	b
+	call	L_02D8
+	call	L_0276
+L_0694	ld	hl,W_3C28
+L_0697	set	0,(hl)
+L_0699	res	5,(hl)
+L_069B	bit	5,(hl)
+	jr	z,L_069B
+	call	L_0225
+	jp	(iy)
+	ld	d,a
+	ld	c,a
+	ld	d,d
+	call	nz,L_0577
+	inc	b
+	xor	l
+	dec	b
+	rst	18h
+	ld	hl,W_27FE
+	ld	b,B_FD
+L_06B3	ld	(hl),B_20
+	dec	hl
+	djnz	L_06B3
+	push	de
+	ex	de,hl
+	rst	10h
+	pop	de
+	call	L_05E1
+	inc	b
+	dec	b
+	jr	z,L_06C6
+	ld	bc,W_00FF
+L_06C6	ld	hl,W_2701
+	ld	(hl),c
+	inc	hl
+	ld	a,B_FC
+	cp	c
+	jr	nc,L_06D1
+	ld	c,a
+L_06D1	inc	c
+	push	de
+	push	bc
+	ex	de,hl
+	ldir
+	pop	bc
+	pop	de
+	dec	c
+	call	L_07DA
+	jp	(iy)
+	ld	e,B_20
+L_06E1	ld	hl,(W_3C24)
+	ld	(W_3C1E),hl
+	ld	bc,W_0000
+L_06EA	inc	hl
+	ld	a,(hl)
+	cp	e
+	jr	z,L_06EA
+	and	a
+	jr	z,L_0700
+	push	hl
+L_06F3	inc	bc
+	inc	hl
+	ld	a,(hl)
+	and	a
+	jr	z,L_06FC
+	cp	e
+	jr	nz,L_06F3
+L_06FC	pop	de
+	xor	a
+	cp	b
+	ret
+L_0700	push	de
+	call	L_02B0
+	jp	po,L_0614
+	ld	de,(W_3C24)
+	call	L_07FA
+	ld	(W_3C24),hl
+	pop	de
+	jr	L_06E1
+	ex	de,hl
+	pop	bc
+	ld	bc,W_0000
+	stf
+	ret
+	dec	e
+L_071C	ld	b,B_CD
+	rst	18h
+	dec	b
+	ld	d,b
+	ld	e,c
+	rst	10h
+L_0723	jp	(iy)
+	ld	d,(hl)
+	ld	c,h
+	ld	c,c
+	ld	d,e
+	call	nc,L_05AA
+L_072C	dec	b
+	cpl
+	ld	b,B_3E
+	dec	c
+	rst	8h
+L_0732	ld	c,B_00
+	jr	L_0744
+	ld	b,(hl)
+	ld	c,c
+	ld	c,(hl)
+	call	nz,L_062C
+	inc	b
+	ccf
+	ld	b,B_CD
+L_0740	rst	18h
+	dec	b
+	jr	c,L_078A
+L_0744	ld	hl,(W_3C33)
+	ld	a,(hl)
+	inc	hl
+	ld	h,(hl)
+	ld	l,a
+L_074B	ld	a,(hl)
+L_074C	and	B_3F
+	jr	z,L_077F
+	xor	c
+	jr	z,L_0757
+	ld	a,c
+	and	a
+	jr	nz,L_077F
+L_0757	push	de
+	push	hl
+	call	L_15E8
+	or	c
+	jr	z,L_0776
+	ld	b,c
+L_0760	ld	a,(de)
+	call	L_0807
+	inc	de
+	xor	(hl)
+	and	B_7F
+	inc	hl
+	jr	nz,L_077D
+	djnz	L_0760
+	pop	de
+	inc	de
+	rst	10h
+	pop	de
+	call	L_07DA
+	jp	(iy)
+L_0776	call	L_17FB
+	halt
+	call	L_04E4
+L_077D	pop	hl
+	pop	de
+L_077F	dec	hl
+	ld	a,(hl)
+	dec	hl
+	ld	l,(hl)
+	ld	h,a
+	or	l
+	jr	nz,L_074B
+	jp	L_068A
+L_078A	ld	de,W_0000
+	rst	10h
+	jp	(iy)
+	ld	b,l
+	ld	e,b
+	ld	b,l
+	ld	b,e
+	ld	d,l
+	ld	d,h
+	push	bc
+	inc	a
+	ld	b,B_07
+	sbc	a,h
+	ld	b,B_DF
+	jp	L_04BF
+	ld	c,(hl)
+	ld	d,l
+	ld	c,l
+	ld	b,d
+	ld	b,l
+	jp	nc,L_0699
+	ld	b,B_AB
+	ld	b,B_CD
+	rst	18h
+	dec	b
+	jr	c,L_078A
+	push	bc
+	push	de
+	call	L_074C
+	jr	nz,L_07BC
+	ld	de,W_1006
+	jr	L_0814
+L_07BC	rst	18h
+	ld	de,W_0000
+	rst	10h
+	ld	de,W_4500
+	pop	bc
+	push	bc
+	ld	a,(bc)
+	cp	B_2D
+	jr	nz,L_07CE
+	ld	d,B_C5
+	inc	bc
+L_07CE	rst	10h
+	ld	d,b
+	ld	e,c
+	dec	hl
+	dec	hl
+L_07D3	call	L_0723
+	inc	hl
+	inc	(hl)
+	dec	hl
+	jr	nc,L_07D3
+	cp	B_FE
+	jr	nz,L_081C
+L_07DF	call	L_0723
+	jr	nc,L_07DF
+	add	a,B_30
+	call	L_077B
+	jr	nz,L_07EF
+	ld	e,B_00
+	jr	L_07FD
+L_07EF	and	B_DF
+	cp	B_45
+	jr	nz,L_081C
+	push	hl
+	call	L_074C
+	rst	18h
+L_07FA	pop	hl
+	jr	nz,L_081C
+L_07FD	call	L_0740
+W_0800	jr	z,L_0811
+	inc	hl
+	ld	a,(hl)
+	and	B_7F
+	add	a,e
+L_0807	jp	m,L_071C
+	jr	z,L_081C
+	xor	(hl)
+	and	B_7F
+	xor	(hl)
+	ld	(hl),a
+L_0811	ld	de,W_1055
+L_0814	rst	10h
+	pop	de
+	pop	bc
+	call	L_07DA
+	jp	(iy)
+L_081C	pop	hl
+	pop	hl
+	rst	18h
+	rst	18h
+	jp	L_068A
+	ld	a,(de)
+	inc	de
+	sub	B_30
+L_0827	ret	c
+	cp	B_0A
+	ccf
+	ret	c
+	ld	c,a
+	ld	a,(hl)
+	and	B_F0
+	ret	nz
+	ld	a,c
+	dec	hl
+	dec	hl
+	ld	c,B_03
+L_0836	rld
+	inc	hl
+	dec	c
+	jr	nz,L_0836
+	dec	(hl)
+	dec	hl
+	cp	a
+	ret
+	ld	b,B_06
+L_0842	xor	a
+	call	L_072C
+	ret	nz
+	djnz	L_0842
+	inc	hl
+	ld	(hl),b
+	ret
+	rst	10h
+	call	L_04B9
+	ld	l,e
+	ex	af,af'
+	sub	(hl)
+	ex	af,af'
+	ld	c,e
+	djnz	L_0884
+	ld	c,d
+	inc	c
+L_0859	ld	l,e
+	ex	af,af'
+	xor	c
+	dec	c
+	jp	nc,L_D208
+	dec	c
+	rra
+	ld	c,B_88
+	ld	b,B_88
+	ld	b,B_FF
+	ex	af,af'
+	adc	a,d
+	rlca
+	rst	38h
+	ex	af,af'
+	rst	18h
+	ex	af,af'
+	sub	h
+	dec	c
+	rst	38h
+	ex	af,af'
+	ld	a,c
+	ex	af,af'
+	add	a,l
+	ex	af,af'
+	ld	c,B_1A
+	rst	18h
+	ld	a,(de)
+	cp	B_20
+	ret	z
+	and	a
+	ret
+	ld	b,e
+	ld	c,a
+	ld	c,(hl)
+	ld	d,(hl)
+L_0884	ld	b,l
+	ld	d,d
+	call	nc,L_06A8
+	rlca
+	jp	L_090E
+	ld	c,B_6B
+	ex	af,af'
+	jp	nc,L_9608
+	ex	af,af'
+	cp	b
+	rlca
+	add	a,e
+	ld	(de),a
+	dec	de
+	nop
+	add	a,l
+	ex	af,af'
+	adc	a,d
+	inc	b
+	sub	(hl)
+	ex	af,af'
+	xor	b
+	inc	c
+	ld	a,c
+	ex	af,af'
+	rst	38h
+	ex	af,af'
+	adc	a,d
+	inc	b
+	sub	(hl)
+	ex	af,af'
+	xor	b
+W_08AB	inc	c
+	xor	B_0D
+	rst	18h
+	ex	af,af'
+	halt
+	ld	(de),a
+	exx
+	rst	38h
+	rst	18h
+W_08B5	ex	af,af'
+	or	(hl)
+	inc	b
+	cp	d
+	rlca
+	rst	18h
+	ld	a,e
+	call	L_0807
+	add	a,B_D0
+	jr	nc,L_08D7
+W_08C3	cp	B_0A
+	jr	c,L_08CD
+	add	a,B_EF
+	jr	nc,L_08D7
+	add	a,B_0A
+L_08CD	cp	(ix+D_3F)
+	jr	nc,L_08D7
+	ld	d,B_00
+	ld	e,a
+	rst	10h
+	stf
+L_08D7	jp	L_0C21
+	ld	h,d
+	ld	l,e
+	inc	bc
+	add	hl,bc
+	push	hl
+	bit	4,(ix+D_3E)
+	call	z,L_097F
+	call	L_02B0
+	pop	de
+	and	a
+	sbc	hl,de
+L_08ED	ld	b,h
+	ld	c,l
+	ld	hl,(W_3C1E)
+	inc	hl
+	ex	de,hl
+	jr	c,L_08FB
+	jr	z,L_08FA
+	ldir
+L_08FA	and	a
+L_08FB	sbc	hl,de
+	ex	de,hl
+L_08FE	ld	a,d
+	or	e
+	ret	z
+	ld	(hl),B_20
+	inc	hl
+	dec	de
+	jr	L_08FE
+	and	B_7F
+	cp	B_61
+	ret	c
+	cp	B_7B
+L_090E	ret	nc
+	and	B_5F
+	ret
+	ld	d,(hl)
+	ld	c,c
+	out	(B_89),a
+	rlca
+	inc	bc
+	ld	a,(de)
+	ex	af,af'
+	res	4,(ix+D_3E)
+	jp	(iy)
+	ld	c,c
+	ld	c,(hl)
+	ld	d,(hl)
+	ld	c,c
+L_0924	out	(B_17),a
+	ex	af,af'
+	dec	b
+	ld	hl,(W_DD08)
+	srl	(hl)
+	and	B_FD
+	jp	(hl)
+	ld	b,(hl)
+	ld	b,c
+	ld	d,e
+	call	nc,L_0827
+	inc	b
+	add	hl,sp
+	ex	af,af'
+	ld	iy,W_04B9
+	jp	(iy)
+	ld	d,e
+	ld	c,h
+	ld	c,a
+	rst	10h
+	ld	(hl),B_08
+	inc	b
+	ld	c,b
+	ex	af,af'
+	ld	iy,W_04C8
+	jp	(iy)
+	ld	hl,(W_3C3B)
+	dec	hl
+	ld	b,(hl)
+	dec	hl
+	ld	c,(hl)
+	ld	(W_3C3B),hl
+	ret
+	dec	hl
+	ld	e,(hl)
+	ld	(W_3C3B),hl
+	ret
+	ld	(hl),d
+	inc	hl
+	ld	(W_3C3B),hl
+	ret
+	ld	b,h
+	ld	d,l
+	ret	nc
+	ld	b,l
+	ex	af,af'
+	inc	bc
+	ld	l,l
+	ex	af,af'
+	rst	18h
+	rst	10h
+	rst	10h
+	jp	(iy)
+	ld	b,h
+	ld	d,d
+	ld	c,a
+	ret	nc
+	ld	l,d
+	ex	af,af'
+	inc	b
+L_0979	ld	a,e
+	ex	af,af'
+	rst	18h
+	jp	(iy)
+	ld	d,e
+L_097F	ld	d,a
+	ld	b,c
+	ret	nc
+	ld	a,b
+	ex	af,af'
+	inc	b
+	add	a,a
+	ex	af,af'
+	rst	18h
+	call	L_084E
+	rst	10h
+	ld	d,b
+	ld	e,c
+	rst	10h
+	jp	(iy)
+	ld	b,e
+	ret	nz
+	add	a,h
+	ex	af,af'
+	ld	(bc),a
+	sbc	a,b
+	ex	af,af'
+	rst	18h
+	ld	a,(de)
+	ld	e,a
+	ld	d,B_00
+	rst	10h
+	jp	(iy)
+	ld	b,e
+	and	c
+	sub	l
+	ex	af,af'
+	ld	(bc),a
+	and	a
+	ex	af,af'
+	rst	18h
+	call	L_084E
+	ld	a,c
+	ld	(de),a
+	jp	(iy)
+	ret	nz
+	and	h
+	ex	af,af'
+	ld	bc,W_08B5
+	rst	18h
+	ex	de,hl
+	ld	e,(hl)
+	inc	hl
+	ld	d,(hl)
+	rst	10h
+	jp	(iy)
+	and	c
+	or	d
+	ex	af,af'
+	ld	bc,W_08C3
+	rst	18h
+	call	L_084E
+	ex	de,hl
+	ld	(hl),c
+	inc	hl
+	ld	(hl),b
+	jp	(iy)
+	ld	a,B_D2
+	ret	nz
+	ex	af,af'
+	ld	(bc),a
+	call	nc,L_DF08
+	pop	bc
+	push	de
+	push	bc
+	jp	(iy)
+	ld	d,d
+	cp	(hl)
+	pop	de
+	ex	af,af'
+	ld	(bc),a
+	pop	hl
+	ex	af,af'
+	pop	bc
+	pop	de
+	push	bc
+	rst	10h
+	jp	(iy)
+	ccf
+	ld	b,h
+	ld	d,l
+	ret	nc
+	sbc	a,B_08
+	inc	b
+	ret	p
+	ex	af,af'
+	rst	18h
+	rst	10h
+	ld	a,d
+	or	e
+	call	nz,L_0010
+	jp	(iy)
+	ld	d,d
+	ld	c,a
+	call	nc,L_08ED
+	inc	bc
+	jp	L_D20E
+	ex	af,af'
+	add	a,l
+	ex	af,af'
+	rst	18h
+	ex	af,af'
+	add	a,l
+	ex	af,af'
+	or	(hl)
+	inc	b
+	ld	c,a
+	ld	d,(hl)
+	ld	b,l
+	jp	nc,L_08FE
+	inc	b
+	jp	L_D20E
+	ex	af,af'
+	ld	l,e
+	ex	af,af'
+	rst	18h
+	ex	af,af'
+	add	a,l
+	ex	af,af'
+L_0A1C	or	(hl)
+	inc	b
+	ld	d,b
+	ld	c,c
+	ld	b,e
+	rl	c
+	add	hl,bc
+L_0A24	inc	b
+	daa
+	add	hl,bc
+	call	L_094D
+	jp	(iy)
+	ld	d,d
+	ld	c,a
+	ld	c,h
+	call	z,L_0924
+	inc	b
+	dec	(hl)
+	add	hl,bc
+	call	L_094D
+	ex	de,hl
+	ld	hl,(W_3C37)
+	sbc	hl,de
+	jp	nc,L_04D7
+	ld	h,d
+	ld	l,e
+	inc	hl
+	inc	hl
+	ldir
+	ld	(W_3C3B),de
+	jp	(iy)
+	call	L_084E
+	dec	bc
+	sla	c
+	rl	b
+	inc	bc
+	inc	bc
+	jr	nc,L_0A5B
+	rst	20h
+	rlca
+L_0A5B	ld	hl,(W_3C3B)
+	sbc	hl,bc
+	push	hl
+	ld	e,(hl)
+	inc	hl
+	ld	d,(hl)
+	rst	10h
+	pop	hl
+	ret
+	ld	d,h
+	ld	e,c
+	ld	d,b
+	push	bc
+	ld	(W_0409),a
+	ld	(hl),b
+	add	hl,bc
+	call	L_084E
+	rst	18h
+	call	L_097F
+	jp	(iy)
+	ld	a,(de)
+	ld	c,a
+	inc	de
+	ld	a,(de)
+	ld	b,a
+	inc	de
+L_0A7F	ld	a,b
+	or	c
+	ret	z
+L_0A82	ld	a,(de)
+	inc	de
+	dec	bc
+	rst	8h
+	jr	L_0A7F
+	inc	a
+	and	e
+	ld	l,l
+	add	hl,bc
+	ld	(bc),a
+	adc	a,a
+	add	hl,bc
+	ld	hl,W_27FF
+	ld	(W_3C1A),hl
+	jp	(iy)
+	inc	hl
+	cp	(hl)
+	adc	a,h
+	add	hl,bc
+	ld	(bc),a
+	sbc	a,(hl)
+	add	hl,bc
+	rst	18h
+	rst	18h
+	ld	de,(W_3C1A)
+	rst	10h
+	ld	hl,W_27FF
+	and	a
+	sbc	hl,de
+	ex	de,hl
+	rst	10h
+	jp	(iy)
+W_0AAF	xor	(hl)
+	ld	c,c
+	ld	a,(bc)
+	ld	bc,W_0EC3
+	adc	a,l
+	add	hl,bc
+	ld	l,e
+	ex	af,af'
+	dec	c
+	inc	c
+	adc	a,b
+	ld	b,B_E1
+	add	hl,bc
+	rst	38h
+	ex	af,af'
+	ld	c,d
+	ld	a,(bc)
+	sbc	a,h
+	add	hl,bc
+	ld	l,(hl)
+	add	hl,bc
+	ld	(hl),e
+	ld	a,(bc)
+	or	(hl)
+	inc	b
+	ld	d,l
+	xor	(hl)
+	or	d
+	add	hl,bc
+	ld	(bc),a
+	jp	L_880E
+	ld	b,B_8D
+	add	hl,bc
+	pop	hl
+	add	hl,bc
+	halt
+	ld	(de),a
+	ret	pe
+	rst	38h
+	inc	hl
+	out	(B_CF),a
+	add	hl,bc
+	ld	(bc),a
+	jp	L_F70E
+	add	hl,bc
+	ld	(de),a
+	add	hl,bc
+	ld	(de),a
+	add	hl,bc
+	ld	(hl),B_0E
+	ld	a,(de)
+	inc	c
+	adc	a,l
+	ld	(de),a
+	di
+	rst	38h
+	or	(hl)
+	inc	b
+	and	e
+	ret	po
+	add	hl,bc
+	ld	bc,W_0EC3
+	adc	a,d
+	inc	b
+	sub	(hl)
+	ex	af,af'
+	call	nz,L_FF0C
+	ex	af,af'
+	rlca
+	ld	a,(bc)
+	ld	e,h
+	ld	a,(bc)
+	or	(hl)
+	inc	b
+	add	hl,bc
+	ld	a,(bc)
+	rst	18h
+	ld	a,e
+W_0B0B	add	a,B_30
+	cp	B_3A
+	jr	c,L_0B13
+	add	a,B_07
+L_0B13	ld	e,a
+	rst	10h
+	jp	(iy)
+	ld	b,e
+L_0B18	ld	c,h
+	out	(B_F6),a
+	add	hl,bc
+	inc	bc
+	rra
+	ld	a,(bc)
+	call	L_0A24
+	jp	(iy)
+	ld	de,W_26FF
+	ld	hl,(W_3C24)
+	ld	bc,W_0020
+	add	hl,bc
+	dec	hl
+	lddr
+	ld	(W_3C2F),bc
+	ld	hl,W_2400
+	ld	(W_3C1C),hl
+	inc	de
+	ex	de,hl
+	ld	(W_3C24),hl
+	jp	L_07FA
+	ld	d,e
+	ld	c,c
+	ld	b,a
+	adc	a,B_9B
+	add	hl,bc
+	inc	b
+	ld	c,h
+	ld	a,(bc)
+	rst	18h
+	rl	d
+	ld	e,B_2D
+	jr	c,L_0B5F
+	jp	(iy)
+	ld	c,b
+	ld	c,a
+	ld	c,h
+	call	nz,L_0A1C
+	inc	b
+	ld	e,(hl)
+	ld	a,(bc)
+	rst	18h
+L_0B5F	ld	hl,(W_3C1A)
+	dec	l
+	jr	z,L_0B69
+	ld	(W_3C1A),hl
+	ld	(hl),e
+L_0B69	jp	(iy)
+	ld	d,e
+	ld	d,b
+	ld	b,c
+	ld	b,e
+	push	bc
+	ld	e,e
+	ld	a,(bc)
+	dec	b
+	ld	(hl),l
+	ld	a,(bc)
+	ld	a,B_20
+	rst	8h
+L_0B78	jp	(iy)
+	ld	d,e
+	ld	d,b
+	ld	b,c
+	ld	b,e
+	ld	b,l
+	out	(B_72),a
+	ld	a,(bc)
+	ld	b,B_85
+	ld	a,(bc)
+	rst	18h
+L_0B86	dec	de
+	bit	7,d
+	jr	nz,L_0B78
+	ld	a,B_20
+	rst	8h
+	jr	L_0B86
+	ld	b,e
+	jp	nc,L_0A82
+	ld	(bc),a
+	sub	a
+	ld	a,(bc)
+	ld	a,B_0D
+	rst	8h
+	jp	(iy)
+	ld	b,l
+	ld	c,l
+	ld	c,c
+	call	nc,L_0A94
+	inc	b
+	and	l
+	ld	a,(bc)
+	rst	18h
+	ld	a,e
+	rst	8h
+	jp	(iy)
+	ld	b,(hl)
+	xor	(hl)
+	and	d
+	ld	a,(bc)
+	ld	(bc),a
+L_0BAF	or	c
+	ld	a,(bc)
+	ld	hl,(W_3C3B)
+	dec	hl
+	bit	7,(hl)
+	res	7,(hl)
+	jr	z,L_0BBE
+	ld	a,B_2D
+	rst	8h
+L_0BBE	ld	e,B_00
+	ld	a,(hl)
+	dec	a
+	cp	B_49
+	jr	nc,L_0BCA
+	cp	B_3C
+	jr	nc,L_0BCE
+L_0BCA	ld	(hl),B_41
+	inc	a
+	ld	e,a
+L_0BCE	ld	a,B_40
+	sub	(hl)
+	jr	c,L_0BDC
+	ld	b,a
+	inc	b
+	ld	a,B_2E
+L_0BD7	rst	8h
+	ld	a,B_30
+	djnz	L_0BD7
+L_0BDC	ld	a,B_40
+	cp	(hl)
+	sbc	a,a
+	dec	hl
+	or	(hl)
+	dec	hl
+	or	(hl)
+	dec	hl
+	or	(hl)
+	inc	hl
+	inc	hl
+	jr	z,L_0BFC
+L_0BEA	xor	a
+	call	L_0732
+	add	a,B_30
+	rst	8h
+	inc	hl
+	ld	a,(hl)
+	cp	B_40
+	jr	nz,L_0BDC
+	ld	a,B_2E
+	rst	8h
+	jr	L_0BDC
+L_0BFC	ld	a,e
+	and	a
+	jr	nz,L_0C05
+	ld	a,B_20
+	rst	8h
+	jr	L_0C10
+L_0C05	sub	B_41
+	ld	l,a
+	sbc	a,a
+	ld	h,a
+	ld	a,B_45
+	rst	8h
+	call	L_180E
+L_0C10	rst	18h
+	rst	18h
+	jp	(iy)
+	ld	b,c
+	call	nc,L_0AAE
+	ld	(bc),a
+	dec	de
+	dec	bc
+	rst	18h
+	call	L_084E
+	ld	a,c
+	call	L_0B28
+	ld	(W_3C1C),hl
+	jp	(iy)
+	add	a,B_20
+	ld	l,a
+	ld	h,B_01
+	add	hl,hl
+	add	hl,hl
+	add	hl,hl
+	add	hl,hl
+	add	hl,hl
+	ld	d,B_00
+	ld	a,e
+	and	B_1F
+	ld	e,a
+	add	hl,de
+	ld	de,(W_3C24)
+	sbc	hl,de
+	add	hl,de
+	ret	c
+	rst	20h
+	add	hl,bc
+	ld	d,b
+	ld	c,h
+	ld	c,a
+	call	nc,L_0B18
+	inc	b
+	ld	c,h
+	dec	bc
+	call	L_084E
+	rst	18h
+	ld	(ix+D_30),e
+	srl	e
+	rl	c
+	ld	a,B_16
+	sub	e
+	rst	18h
+	ld	(ix+D_2F),e
+	srl	e
+	rl	c
+	call	L_0B28
+	ld	a,(hl)
+	and	B_78
+	cp	B_10
+	ld	a,(hl)
+	jr	z,L_0C6F
+	ld	a,B_10
+L_0C6F	ld	e,a
+	ld	d,B_87
+	ld	a,c
+	and	B_03
+	ld	b,a
+	jr	z,L_0C7F
+	cpl
+	add	a,B_02
+	adc	a,B_03
+	ld	d,a
+	ld	b,e
+L_0C7F	ld	a,c
+	rrca
+	rrca
+	rrca
+	sbc	a,a
+	bit	3,c
+	jr	nz,L_0C8C
+	xor	e
+	rlca
+	sbc	a,a
+	xor	b
+L_0C8C	and	d
+	xor	e
+	ld	(hl),a
+	jp	(iy)
+	ld	b,d
+	ld	b,l
+	ld	b,l
+	ret	nc
+	ld	c,c
+	dec	bc
+	inc	b
+	jp	L_120E
+	add	hl,bc
+	ld	c,e
+	djnz	L_0D1C
+	add	a,l
+L_0CA0	ex	af,af'
+	ld	a,d
+	dec	c
+	ld	c,B_1A
+	rst	18h
+	call	L_084E
+	ld	hl,W_00F9
+	add	hl,bc
+	inc	l
+	di
+	ld	a,B_7F
+	in	a,(B_FE)
+	rrca
+	jr	nc,L_0CC7
+	call	L_0BC9
+	dec	de
+	ld	a,d
+	out	(B_FE),a
+	call	L_0BC9
+	or	e
+	jp	nz,L_0BAF
+	ei
+	jp	(iy)
+L_0CC7	rst	20h
+	inc	bc
+	ld	b,l
+	ld	c,h
+L_0CCB	djnz	L_0CCB
+	dec	b
+	dec	c
+	jp	nz,L_0BCB
+	ret
+	ld	c,c
+L_0CD4	ld	c,(hl)
+	ld	c,e
+	ld	b,l
+	exx
+	sub	a
+	dec	bc
+	dec	b
+	DEFB	']'+128,00Bh
+	call	L_0336
+	ld	e,a
+	ld	d,B_00
+	rst	10h
+	jp	(iy)
+	ld	c,c
+L_0CE7	adc	a,B_DA
+	dec	bc
+	ld	(bc),a
+	DEFB	'm'+128,00Bh
+	call	L_084E
+	ld	d,B_00
+	in	e,(c)
+	rst	10h
+L_0CF5	jp	(iy)
+	ld	c,a
+	ld	d,l
+	call	nc,L_0BEA
+	inc	bc
+	rst	38h
+	dec	bc
+L_0CFF	call	L_084E
+	rst	18h
+	out	(c),e
+	jp	(iy)
+	ld	b,c
+	ld	b,d
+	out	(B_FC),a
+	dec	bc
+	inc	bc
+	jp	L_6B0E
+	ex	af,af'
+	sub	h
+	dec	c
+	or	(hl)
+	inc	b
+	jr	nc,L_0CD4
+	inc	c
+	inc	c
+	ld	(bc),a
+	inc	e
+	inc	c
+L_0D1C	rst	18h
+	ld	a,d
+	or	e
+	cp	B_01
+L_0D21	ld	a,B_00
+	ld	d,a
+	rla
+	ld	e,a
+	rst	10h
+	jp	(iy)
+	jr	nc,L_0CE7
+	add	hl,de
+	inc	c
+	ld	(bc),a
+	jr	nc,L_0D3C
+	rst	18h
+	rl	d
+	jr	L_0D21
+	jr	nc,L_0CF5
+	dec	l
+	inc	c
+	ld	(bc),a
+	inc	a
+	inc	c
+L_0D3C	rst	18h
+	ld	a,d
+	or	e
+	jr	z,L_0D21
+	rl	d
+	ccf
+	jr	L_0D21
+	cp	l
+	add	hl,sp
+	inc	c
+	ld	bc,W_0EC3
+	pop	hl
+	dec	c
+	ld	a,(de)
+	inc	c
+L_0D50	or	(hl)
+	inc	b
+	cp	(hl)
+	ld	c,c
+	inc	c
+	ld	bc,W_0C58
+	rst	18h
+	push	de
+	rst	18h
+	pop	hl
+	call	L_0C99
+	jr	L_0D21
+	cp	h
+	ld	d,l
+	inc	c
+	ld	bc,W_0EC3
+	add	a,l
+	ex	af,af'
+	ld	d,(hl)
+	inc	c
+	or	(hl)
+	inc	b
+	ld	d,l
+	cp	h
+	ld	h,h
+	inc	c
+	ld	(bc),a
+	ld	(hl),h
+	inc	c
+	call	L_084E
+L_0D77	rst	18h
+	ex	de,hl
+L_0D79	and	a
+	sbc	hl,bc
+	jr	L_0D21
+	ld	b,h
+	cp	h
+	ld	(hl),c
+	inc	c
+	ld	(bc),a
+	add	a,l
+	inc	c
+	rst	18h
+	push	de
+	call	L_084E
+	rst	18h
+	pop	hl
+	and	a
+	sbc	hl,de
+	jr	z,L_0D77
+	add	hl,de
+	ex	de,hl
+	call	L_0C99
+	rst	18h
+	jr	L_0D21
+	ld	a,h
+	xor	d
+	jp	m,L_0CA0
+	sbc	hl,de
+	rl	h
+	ret
+	ld	d,l
+	xor	d
+	add	a,d
+	inc	c
+	ld	(bc),a
+	xor	d
+	inc	c
+	rst	18h
+	call	L_084E
+	ld	hl,W_0000
+	ld	a,B_10
+L_0DB3	add	hl,hl
+	ex	de,hl
+	adc	hl,hl
+	ex	de,hl
+	jr	nc,L_0DBE
+	add	hl,bc
+	jr	nc,L_0DBE
+	inc	de
+L_0DBE	dec	a
+	jr	nz,L_0DB3
+	ex	de,hl
+	jr	L_0DF3
+	add	a,B_0C
+	rst	18h
+	exx
+	rst	18h
+	push	de
+	rst	18h
+	pop	hl
+	ld	a,h
+	or	l
+	ld	a,B_21
+	jr	nz,L_0DD5
+	ex	de,hl
+	ld	a,B_11
+L_0DD5	exx
+	ld	b,a
+	xor	a
+	ld	h,a
+	ld	l,a
+	ld	c,a
+L_0DDB	adc	hl,hl
+	sbc	a,a
+	and	a
+	sbc	hl,de
+	sbc	a,c
+	jr	nc,L_0DE5
+	add	hl,de
+L_0DE5	ccf
+	exx
+	ex	de,hl
+	adc	hl,hl
+	ex	de,hl
+	adc	hl,hl
+	exx
+	djnz	L_0DDB
+	ex	de,hl
+	rst	10h
+	exx
+L_0DF3	push	hl
+	rst	10h
+	pop	de
+	rst	10h
+	jp	(iy)
+	cpl
+	ld	c,l
+	ld	c,a
+	call	nz,L_0CA7
+	inc	b
+	jp	L_850E
+	ex	af,af'
+	jp	nc,L_E908
+	ld	(de),a
+	dec	c
+	inc	c
+	ld	c,e
+	djnz	L_0E0D
+L_0E0D	rst	38h
+	ex	af,af'
+	ld	l,e
+W_0E10	ex	af,af'
+	jp	(hl)
+	ld	(de),a
+	ld	h,b
+	ld	c,B_D2
+	ex	af,af'
+	dec	c
+	inc	c
+	adc	a,h
+	dec	c
+	rst	18h
+	ex	af,af'
+	sub	h
+	dec	c
+	add	a,l
+	ex	af,af'
+	rst	18h
+	ex	af,af'
+	sub	h
+	dec	c
+	add	a,l
+	ex	af,af'
+	or	(hl)
+L_0E28	inc	b
+	ld	hl,(W_4D2F)
+	ld	c,a
+	call	nz,L_0CFF
+	dec	b
+	jp	L_FF0E
+	ex	af,af'
+L_0E35	jp	nc,L_E908
+	ld	(de),a
+	dec	c
+	inc	c
+	rst	38h
+	ex	af,af'
+	ld	l,e
+	ex	af,af'
+	rst	18h
+	ex	af,af'
+	ld	h,b
+	ld	c,B_D2
+	ex	af,af'
+	dec	c
+	inc	c
+	xor	b
+	inc	c
+	halt
+L_0E4A	ld	(de),a
+	pop	bc
+	rst	38h
+	xor	a
+	jr	nc,L_0E5D
+	ld	bc,W_0EC3
+	nop
+	dec	c
+	add	a,l
+	ex	af,af'
+	ld	a,c
+	ex	af,af'
+	or	(hl)
+	inc	b
+	ld	c,l
+	ld	c,a
+L_0E5D	call	nz,L_0D50
+	inc	bc
+	jp	L_000E
+	dec	c
+	ld	a,c
+	ex	af,af'
+	or	(hl)
+	inc	b
+	xor	d
+	ld	h,b
+	dec	c
+	ld	bc,W_0EC3
+	xor	b
+	inc	c
+	ld	a,c
+	ex	af,af'
+	or	(hl)
+	inc	b
+	ld	hl,(W_6CAF)
+	dec	c
+	ld	(bc),a
+	jp	L_310E
+	dec	c
+	add	a,l
+	ex	af,af'
+	ld	a,c
+	ex	af,af'
+	or	(hl)
+	inc	b
+	ld	d,l
+	cpl
+L_0E86	ld	c,l
+	ld	c,a
+	call	nz,L_0D79
+	dec	b
+	jp	L_C40E
+	inc	c
+	ld	a,c
+	ex	af,af'
+	or	(hl)
+	inc	b
+	jp	L_2E0E
+	inc	c
+	add	a,e
+	ld	(de),a
+	inc	bc
+	nop
+	xor	c
+	dec	c
+	or	(hl)
+	inc	b
+	ld	c,(hl)
+	ld	b,l
+	ld	b,a
+	ld	b,c
+	ld	d,h
+	push	bc
+	adc	a,e
+	dec	c
+	ld	b,B_AB
+	dec	c
+	ld	bc,W_0002
+	jr	L_0EBF
+	ld	b,h
+	ld	c,(hl)
+	ld	b,l
+	ld	b,a
+	ld	b,c
+	ld	d,h
+	push	bc
+	xor	b
+	dec	c
+	rlca
+	cp	h
+	dec	c
+	ld	bc,W_0004
+L_0EBF	ld	hl,(W_3C3B)
+	and	a
+L_0EC3	sbc	hl,bc
+L_0EC5	ld	a,b
+	sbc	a,(hl)
+	ld	(hl),a
+	inc	hl
+	dec	c
+	jr	nz,L_0EC5
+	jp	(iy)
+	xor	e
+	cp	c
+	dec	c
+	ld	bc,W_0DD4
+	rst	18h
+	push	de
+	rst	18h
+	pop	hl
+	add	hl,de
+	ex	de,hl
+	rst	10h
+	jp	(iy)
+	xor	l
+	pop	de
+	dec	c
+	ld	bc,W_0EC3
+	xor	c
+	dec	c
+	jp	nc,L_B60D
+	inc	b
+	ld	b,h
+	xor	e
+	ret	po
+	dec	c
+	ld	(bc),a
+	ret	p
+	dec	c
+	rst	18h
+	push	de
+	call	L_084E
+	rst	18h
+	push	de
+	rst	18h
+	ex	de,hl
+	add	hl,bc
+	ex	de,hl
+	rst	10h
+	pop	bc
+	pop	hl
+	adc	hl,bc
+	ex	de,hl
+	rst	10h
+	jp	(iy)
+	ld	sp,W_EDAB
+	dec	c
+	ld	(bc),a
+	dec	bc
+	ld	c,B_DF
+	jr	L_0F17
+L_0F0E	ld	(W_08AB),a
+	ld	c,B_02
+	dec	d
+	ld	c,B_DF
+	inc	de
+L_0F17	inc	de
+	jr	L_0F2E
+	ld	sp,W_12AD
+	ld	c,B_02
+	ld	hl,W_DF0E
+	jr	L_0F2D
+	ld	(W_1EAD),a
+	ld	c,B_02
+	dec	hl
+	ld	c,B_DF
+	dec	de
+L_0F2D	dec	de
+L_0F2E	rst	10h
+	jp	(iy)
+	ld	c,a
+	jp	nc,L_0E28
+	ld	(bc),a
+	jr	c,L_0F46
+	rst	18h
+	call	L_084E
+	ld	a,e
+	or	c
+	ld	e,a
+	ld	a,d
+	or	b
+	ld	d,a
+	rst	10h
+	jp	(iy)
+	ld	b,c
+L_0F46	ld	c,(hl)
+	call	nz,L_0E35
+	inc	bc
+	ld	c,l
+	ld	c,B_DF
+W_0F4E	call	L_084E
+	ld	a,e
+	and	c
+	ld	e,a
+	ld	a,d
+	and	b
+	ld	d,a
+	rst	10h
+	jp	(iy)
+	ld	e,b
+	ld	c,a
+	jp	nc,L_0E4A
+	inc	bc
+	ld	h,d
+	ld	c,B_DF
+	call	L_084E
+	ld	a,e
+	xor	c
+	ld	e,a
+	ld	a,d
+	xor	b
+	ld	d,a
+	rst	10h
+	jp	(iy)
+	ld	c,l
+	ld	b,c
+	ret	c
+	ld	e,a
+	ld	c,B_03
+L_0F75	jp	L_120E
+	add	hl,bc
+	ld	(de),a
+	add	hl,bc
+	ld	h,l
+	inc	c
+	ld	(hl),c
+	ld	(de),a
+	rrca
+	nop
+	ld	c,l
+	ld	c,c
+	adc	a,B_74
+	ld	c,B_03
+	jp	L_120E
+	add	hl,bc
+	ld	(de),a
+L_0F8C	add	hl,bc
+	ld	d,(hl)
+	inc	c
+L_0F8F	add	a,e
+	ld	(de),a
+	inc	bc
+	nop
+	add	a,l
+	ex	af,af'
+	ld	a,c
+	ex	af,af'
+	or	(hl)
+	inc	b
+	ld	b,h
+	ld	b,l
+	ld	b,e
+	ld	c,c
+	ld	c,l
+L_0F9E	ld	b,c
+	call	z,L_0E86
+	rlca
+	and	l
+	ld	c,B_DD
+	ld	(hl),B_3F
+	ld	a,(bc)
+	jp	(iy)
+	cp	d
+	and	d
+	ld	c,B_01
+	add	a,l
+	djnz	L_0F75
+	ld	c,B_4B
+	djnz	L_0FC0
+	ld	c,B_1A
+	ld	hl,W_3C3E
+	ld	a,(hl)
+	or	B_44
+	ld	(hl),a
+	jp	(iy)
+	jp	(hl)
+	rst	38h
+	ex	de,hl
+	jp	L_04BA
+	ld	b,e
+	ld	d,d
+	ld	b,l
+	ld	b,c
+	ld	d,h
+	push	bc
+	xor	(hl)
+L_0FCE	ld	c,B_06
+	jp	L_4B0E
+	djnz	L_0FF5
+	xor	e
+	dec	b
+	ei
+	ld	c,B_88
+	ld	b,B_4E
+	rrca
+	add	a,b
+	inc	b
+	or	e
+	ex	af,af'
+L_0FE1	ld	l,e
+	ex	af,af'
+	or	e
+	ex	af,af'
+	ld	c,(hl)
+	rrca
+	ld	h,b
+	inc	b
+	add	a,l
+	ex	af,af'
+	pop	bc
+	ex	af,af'
+	sbc	a,c
+	inc	b
+	sub	(hl)
+L_0FF0	ex	af,af'
+	ld	e,a
+	rrca
+	ld	de,W_EC10
+	rrca
+	ld	c,(hl)
+	rrca
+	or	(hl)
+	inc	b
+	DEFB	'}'+128,00Eh
+	call	L_0F2E
+W_1000	rst	18h
+	ld	a,(de)
+	dec	a
+	cp	B_3F
+	jr	c,L_1009
+	rst	20h
+	ld	b,B_C6
+	ex	af,af'
+	ld	c,a
+	ld	b,B_00
+L_100E	call	L_0F8C
+W_1011	ld	a,(de)
+	ld	c,a
+	ld	hl,(W_3C37)
+	push	de
+	call	L_0F9E
+	pop	de
+	ld	a,(de)
+	ld	b,a
+L_101D	inc	de
+	ld	a,(de)
+	call	L_0807
+	ld	(hl),a
+	inc	hl
+	djnz	L_101D
+	ld	(W_3C39),hl
+	dec	hl
+	set	7,(hl)
+	jp	(iy)
+	bit	2,(ix+D_3E)
+	jr	z,L_1036
+	rst	20h
+	inc	c
+L_1036	ld	hl,(W_3C37)
+	ld	de,(W_3C39)
+	xor	a
+	sbc	hl,de
+	ex	de,hl
+	ld	(hl),e
+	inc	hl
+	ld	(hl),d
+	ld	h,a
+	ld	l,a
+	ld	(W_3C39),hl
+	ret
+	xor	h
+	rst	8h
+	ld	c,B_01
+	jp	L_830E
+	rrca
+	ld	h,b
+	inc	b
+	add	hl,hl
+W_1055	ld	c,B_C1
+	ex	af,af'
+	or	(hl)
+	inc	b
+	ld	b,e
+	xor	h
+	ld	c,l
+	rrca
+	ld	(bc),a
+	jp	L_4B0E
+	djnz	L_1065
+W_1064	halt
+L_1065	rrca
+	ld	h,b
+	inc	b
+	rra
+	ld	c,B_A5
+	ex	af,af'
+	or	(hl)
+	inc	b
+	ld	b,c
+	ld	c,h
+	ld	c,h
+	ld	c,a
+	call	nc,L_0F5E
+	dec	b
+	ld	a,b
+	rrca
+	call	L_084E
+	ld	hl,(W_3C37)
+	call	L_0F9E
+	jp	(iy)
+	jp	L_4B0E
+	djnz	L_108A
+	halt
+	rrca
+L_108A	or	(hl)
+	inc	b
+	ld	hl,W_001E
+	push	bc
+	add	hl,bc
+	ld	bc,(W_3C3B)
+	add	hl,bc
+	pop	bc
+	jr	c,L_109C
+	sbc	hl,sp
+	ret	c
+L_109C	rst	20h
+	ld	bc,W_21EB
+	jr	z,L_10A2
+L_10A2	call	L_0F8F
+	ld	hl,(W_3C37)
+	add	hl,bc
+	ld	(W_3C37),hl
+	ld	hl,(W_3C3B)
+	push	hl
+	add	hl,bc
+	ld	(W_3C3B),hl
+	ex	(sp),hl
+	push	hl
+	and	a
+	sbc	hl,de
+	ld	b,h
+	ld	c,l
+	pop	hl
+	pop	de
+	ret	z
+	dec	hl
+	dec	de
+	lddr
+L_10C2	inc	hl
+	ret
+	ld	d,(hl)
+	ld	b,c
+	ld	d,d
+	ld	c,c
+	ld	b,c
+	ld	b,d
+	ld	c,h
+	push	bc
+	ld	(hl),l
+	rrca
+	ex	af,af'
+	add	a,l
+	djnz	L_10C2
+	rrca
+	ld	c,(hl)
+	rrca
+	or	(hl)
+	inc	b
+	ld	b,e
+	ld	c,a
+	ld	c,(hl)
+L_10DA	ld	d,e
+	ld	d,h
+	ld	b,c
+	ld	c,(hl)
+	call	nc,L_0FCE
+	ex	af,af'
+	add	a,l
+	djnz	L_10DA
+	rrca
+	ld	c,(hl)
+	rrca
+W_10E8	or	(hl)
+	inc	b
+	call	c,L_18FE
+	ld	(bc),a
+	push	de
+	rst	38h
+	rst	10h
+	jp	(iy)
+	ex	(sp),hl
+	rst	38h
+	ex	de,hl
+	ld	e,(hl)
+	inc	hl
+	ld	d,(hl)
+	rst	10h
+	jp	(iy)
+L_10FC	ld	c,h
+	ld	c,c
+	ld	d,h
+	ld	b,l
+	ld	d,d
+	ld	b,c
+	call	z,L_0FE1
+	ld	b,a
+	ex	af,af'
+	ld	de,W_1011
+	ld	c,(hl)
+	rrca
+	or	(hl)
+	inc	b
+	ld	(bc),a
+	rst	38h
+L_1110	rst	38h
+	inc	de
+	djnz	L_111A
+	ld	bc,W_5EE1
+	inc	hl
+	ld	d,(hl)
+L_1119	inc	hl
+L_111A	push	hl
+	rst	10h
+	djnz	L_1115
+L_111E	jp	(iy)
+	ld	b,c
+	ld	d,e
+	ld	b,e
+	ld	c,c
+	ret
+	dec	b
+W_1126	djnz	L_116D
+	jp	L_4B0E
+	djnz	L_114D
+	xor	e
+	dec	b
+L_112F	add	hl,bc
+	ld	c,B_96
+	ex	af,af'
+	ld	c,B_1A
+	bit	6,(ix+D_3E)
+	jr	z,L_111E
+	call	L_04B9
+	ld	de,W_4B10
+	djnz	L_1191
+	rrca
+	ld	e,a
+	rrca
+	or	(hl)
+	inc	b
+	ld	bc,W_FFD6
+	ld	c,l
+	djnz	L_112F
+	ld	e,(hl)
+L_114F	ld	d,B_00
+	ld	b,B_01
+	jr	L_1119
+	ex	af,af'
+	ld	de,W_1064
+	add	a,l
+	ex	af,af'
+	ld	c,(hl)
+	rrca
+	ld	c,(hl)
+	rrca
+	or	(hl)
+W_1160	inc	b
+	inc	b
+	rst	38h
+	rst	38h
+	ld	h,(hl)
+	djnz	L_116D
+	ld	(bc),a
+	jr	L_1115
+	ld	b,h
+	ld	b,l
+	ld	b,(hl)
+L_116D	ld	c,c
+	ld	c,(hl)
+	ld	b,l
+	jp	nc,L_1027
+	rlca
+	add	a,l
+	djnz	L_10FC
+	djnz	L_11D9
+	inc	b
+	ld	c,e
+	djnz	L_1189
+	add	a,e
+	rrca
+	halt
+	ld	(de),a
+	inc	(hl)
+	cp	B_E6
+	rst	38h
+	call	L_0FF0
+	ret	nc
+L_1189	ld	c,B_6B
+	ex	af,af'
+	or	e
+L_118D	ex	af,af'
+	ld	h,b
+	inc	b
+	add	hl,hl
+L_1191	ld	c,B_C1
+	ex	af,af'
+	inc	de
+	ld	c,B_9A
+	djnz	L_114F
+	inc	b
+	sbc	a,h
+	djnz	L_117C
+	jp	L_0EC3
+	ld	b,e
+	ld	b,c
+	ld	c,h
+	call	z,L_1073
+	inc	b
+	xor	c
+	djnz	L_1189
+	ex	de,hl
+	jp	(hl)
+	ld	b,h
+	ld	c,a
+	ld	b,l
+	ld	d,e
+	cp	(hl)
+	call	p,L_4510
+	ex	af,af'
+	ld	de,W_10E8
+	ret	c
+	ld	(de),a
+	inc	c
+	call	L_4B10
+	djnz	L_118D
+	ld	e,a
+	rrca
+	ld	de,W_F010
+	rrca
+	ld	c,(hl)
+	rrca
+	ld	c,e
+	djnz	L_11D5
+	or	(hl)
+	inc	b
+	jp	L_6B0E
+	ex	af,af'
+	add	hl,hl
+	ld	c,B_B5
+	dec	d
+L_11D5	ld	h,b
+	inc	b
+	pop	hl
+	dec	c
+L_11D9	rra
+	ld	c,B_4E
+	rrca
+	ld	h,b
+	inc	b
+	add	a,l
+	ex	af,af'
+	pop	bc
+	ex	af,af'
+	or	(hl)
+	inc	b
+	dec	b
+	push	bc
+	rst	38h
+	cp	b
+	inc	b
+	ld	b,e
+	ld	c,a
+	ld	c,l
+	ld	d,b
+	ld	c,c
+	ld	c,h
+	ld	b,l
+	jp	nc,L_10A6
+	ex	af,af'
+	add	a,l
+	djnz	L_1200
+	ld	de,W_1160
+	ld	h,b
+	inc	b
+	ld	c,e
+	djnz	L_120B
+L_1200	add	a,e
+	rrca
+	halt
+	ld	(de),a
+	or	c
+	ex	(sp),iy
+	rst	38h
+	bit	6,(ix+D_3E)
+	jr	nz,L_1210
+L_120E	rst	20h
+	inc	b
+L_1210	call	L_0FF0
+	ld	l,e
+	ex	af,af'
+	or	e
+	ex	af,af'
+	ld	c,(hl)
+	rrca
+L_1219	halt
+	ld	(de),a
+	ld	a,b
+	rst	38h
+	ld	d,d
+	ld	d,l
+	ld	c,(hl)
+	ld	d,e
+	cp	(hl)
+	or	e
+	djnz	L_126A
+	ex	af,af'
+	ld	de,W_1140
+	ret	c
+	ld	(de),a
+	dec	bc
+	add	a,l
+	ex	af,af'
+	ld	e,a
+	rrca
+	call	L_1110
+	djnz	L_1277
+L_1235	ld	de,W_0F4E
+	ld	c,e
+	djnz	L_1245
+	or	(hl)
+	inc	b
+	dec	b
+	sbc	a,B_FF
+	cp	b
+	inc	b
+	pop	hl
+	push	de
+	ex	de,hl
+L_1245	rst	10h
+	ld	b,d
+	ld	c,e
+	pop	de
+	push	de
+	dec	de
+L_124B	dec	de
+	call	L_159E
+	pop	de
+	push	bc
+	jp	L_0EC3
+	ld	c,c
+	ld	c,l
+	ld	c,l
+	ld	b,l
+	ld	b,h
+	ld	c,c
+	ld	b,c
+	ld	d,h
+	push	bc
+	inc	h
+	ld	de,W_C309
+	ld	c,B_80
+	inc	b
+	or	e
+	ex	af,af'
+	or	e
+	ex	af,af'
+	ld	c,B_1A
+L_126A	rst	18h
+	ex	de,hl
+	set	6,(hl)
+	jp	(iy)
+	ld	d,(hl)
+W_1271	ld	c,a
+	ld	b,e
+	ld	b,c
+	ld	b,d
+	ld	d,l
+W_1276	ld	c,h
+L_1277	ld	b,c
+	ld	d,d
+	exx
+	ld	e,a
+	ld	de,W_850A
+	djnz	L_1235
+	ld	de,W_0480
+W_1283	or	e
+	ex	af,af'
+	inc	de
+	ld	c,B_4E
+W_1288	rrca
+	adc	a,b
+	ld	b,B_5F
+	rrca
+W_128D	ld	h,b
+	inc	b
+	ld	de,W_3510
+	inc	a
+	ld	l,e
+L_1294	ex	af,af'
+	or	e
+	ex	af,af'
+	ld	c,(hl)
+	rrca
+	pop	bc
+	ex	af,af'
+	or	(hl)
+	inc	b
+	ld	b,h
+	ld	b,l
+W_129F	ld	b,(hl)
+	ld	c,c
+	ld	c,(hl)
+	ld	c,c
+	ld	d,h
+W_12A4	ld	c,c
+	ld	c,a
+	ld	c,(hl)
+	out	(B_7C),a
+	ld	de,W_AD0B
+	ld	de,W_332A
+	inc	a
+	ld	(W_3C31),hl
+	jp	(iy)
+	ld	(W_3C33),de
+	jp	(iy)
+	ld	c,c
+	add	a,B_E0
+	inc	de
+	ld	b,d
+	ex	af,af'
+	ld	de,W_1283
+	ld	h,b
+	inc	b
+	ld	c,e
+	djnz	L_12CB
+	add	a,e
+	rrca
+L_12CB	or	(hl)
+	inc	b
+	ld	d,a
+	ld	c,b
+	ld	c,c
+	ld	c,h
+	push	bc
+	cp	a
+	ld	de,W_0845
+	ld	de,W_1288
+	ret	c
+	ld	(de),a
+	ld	bc,W_0460
+	ld	c,e
+	djnz	L_12E5
+	add	a,e
+	rrca
+	or	(hl)
+	inc	b
+L_12E5	ld	b,l
+	ld	c,h
+	ld	d,e
+	push	bc
+	call	nc,L_4411
+	ex	af,af'
+	ld	de,W_1271
+	ret	c
+	ld	(de),a
+	ld	(bc),a
+	add	a,e
+	rrca
+	dec	h
+L_12F6	ld	(de),a
+	ld	h,b
+	inc	b
+	add	hl,hl
+	ld	c,B_4B
+	djnz	L_1300
+	or	(hl)
+	inc	b
+L_1300	ld	d,h
+	ld	c,b
+	ld	b,l
+	adc	a,B_EB
+	ld	de,W_0844
+	ld	de,W_12A4
+	ret	c
+	ld	(de),a
+	ld	(bc),a
+	dec	h
+	ld	(de),a
+	or	(hl)
+	inc	b
+	ld	b,d
+	ld	b,l
+	ld	b,a
+	ld	c,c
+	adc	a,B_06
+	ld	(de),a
+	ld	b,l
+	ex	af,af'
+	ld	de,W_129F
+	ld	h,b
+	inc	b
+	ld	c,e
+	djnz	L_1324
+W_1323	or	(hl)
+L_1324	inc	b
+	jp	L_6B0E
+	ex	af,af'
+	ld	h,b
+	inc	b
+	add	a,l
+	ex	af,af'
+	pop	hl
+	dec	c
+	rra
+	ld	c,B_85
+W_1332	ex	af,af'
+	pop	bc
+	ex	af,af'
+	or	(hl)
+	inc	b
+	jp	L_600E
+	inc	b
+	pop	hl
+W_133C	dec	c
+	rra
+	ld	c,B_4E
+	rrca
+	or	(hl)
+	inc	b
+	ld	d,d
+	ld	b,l
+	ld	d,b
+	ld	b,l
+	ld	b,c
+	call	nc,L_1219
+	ld	b,(hl)
+	ex	af,af'
+	ld	de,W_1276
+	ret	c
+	ld	(de),a
+	inc	b
+	add	a,l
+	ex	af,af'
+	stf
+	ld	(de),a
+	dec	h
+L_1358	ld	(de),a
+	or	(hl)
+	inc	b
+	ld	d,l
+	ld	c,(hl)
+	ld	d,h
+	ld	c,c
+	call	z,L_124B
+	ld	b,l
+	ex	af,af'
+	ld	de,W_128D
+	ret	c
+	ld	(de),a
+	ld	bc,W_1237
+	or	(hl)
+	inc	b
+	ld	(bc),a
+	ld	(hl),l
+	rst	38h
+	ld	a,b
+	ld	(de),a
+	ld	(bc),a
+	adc	a,B_FF
+	ld	a,b
+	ld	(de),a
+L_1378	pop	hl
+W_1379	ld	e,(hl)
+	inc	hl
+	ld	d,(hl)
+	add	hl,de
+	jp	L_04BA
+	ld	(bc),a
+	add	hl,sp
+	rst	38h
+	adc	a,a
+	ld	(de),a
+	ld	(bc),a
+	ld	b,(hl)
+L_1387	rst	38h
+	adc	a,a
+	ld	(de),a
+	ld	(bc),a
+	rst	8h
+	rst	38h
+	adc	a,a
+	ld	(de),a
+	call	L_084E
+	ld	a,b
+	or	c
+	jr	z,L_1378
+W_1396	pop	hl
+	inc	hl
+	inc	hl
+	jp	L_04BA
+	nop
+	ld	(hl),h
+	rst	38h
+	cp	c
+	inc	b
+	nop
+	ld	e,l
+	rst	38h
+	cp	c
+	inc	b
+	ld	b,h
+	rst	8h
+	ld	h,d
+	ld	(de),a
+	ld	b,d
+	ex	af,af'
+	ld	de,W_1323
+	ld	h,b
+	inc	b
+	ld	c,e
+	djnz	L_13B7
+	or	(hl)
+	inc	b
+	ld	c,h
+L_13B7	ld	c,a
+	ld	c,a
+	ret	nc
+	xor	d
+	ld	(de),a
+	ld	b,h
+	ex	af,af'
+	ld	de,W_1332
+	ret	c
+	ld	(de),a
+	inc	bc
+	stf
+	ld	(de),a
+	or	(hl)
+	inc	b
+	dec	hl
+	ld	c,h
+	ld	c,a
+	ld	c,a
+	ret	nc
+	cp	h
+	ld	(de),a
+	ld	b,l
+	ex	af,af'
+	ld	de,W_133C
+	halt
+	ld	(de),a
+	jp	pe,L_DAFF
+	ld	(de),a
+	rst	18h
+	pop	hl
+	ld	a,(hl)
+	inc	hl
+	push	hl
+	sub	e
+	or	d
+	jr	z,L_142D
+W_13E3	rst	20h
+	dec	b
+	ret
+	xor	d
+	ld	de,W_EB01
+	ld	(de),a
+	pop	bc
+	pop	de
+	push	de
+	push	bc
+	rst	10h
+	jp	(iy)
+	ld	c,c
+	and	a
+	ret	pe
+	ld	(de),a
+	ld	(bc),a
+	ld	sp,hl
+	ld	(de),a
+	ld	hl,W_0004
+L_13FC	jr	L_1407
+	jp	z,L_12F6
+	ld	bc,W_1304
+	ld	hl,W_0006
+L_1407	add	hl,sp
+	ld	e,(hl)
+	inc	hl
+	ld	d,(hl)
+	rst	10h
+	jp	(iy)
+	ld	c,h
+	ld	b,l
+	ld	b,c
+	ld	d,(hl)
+	push	bc
+	ld	bc,W_0513
+	jr	L_142B
+	pop	bc
+	pop	hl
+	pop	hl
+	push	hl
+	push	hl
+	push	bc
+	jp	(iy)
+	nop
+	add	a,h
+	rst	38h
+	dec	h
+	inc	de
+	call	L_084E
+	rst	18h
+	pop	hl
+	push	de
+L_142B	push	bc
+	push	hl
+L_142D	jp	(iy)
+	ld	(bc),a
+	add	a,l
+	rst	38h
+	inc	(hl)
+	inc	de
+	ld	de,W_0001
+	jr	L_143F
+	ld	(bc),a
+	adc	a,l
+	rst	38h
+	ld	a,B_13
+	rst	18h
+L_143F	pop	bc
+	pop	hl
+	and	a
+	adc	hl,de
+	ld	a,d
+	pop	de
+	stf
+	jp	pe,L_1358
+	push	de
+	push	hl
+	rlca
+	jr	nc,L_1450
+	ex	de,hl
+L_1450	call	L_0C99
+	ccf
+	jr	nc,L_1458
+	pop	hl
+	pop	hl
+L_1458	push	bc
+	sbc	a,a
+	jp	L_1294
+	xor	b
+	call	nc,L_4113
+	ex	af,af'
+	ld	de,W_1379
+	ld	c,e
+	djnz	L_1491
+	ld	h,b
+	inc	b
+	add	a,l
+	ex	af,af'
+	add	a,e
+	rrca
+	sbc	a,a
+	inc	de
+	add	a,l
+	ex	af,af'
+	pop	bc
+	ex	af,af'
+	or	(hl)
+	inc	b
+	rst	38h
+	push	hl
+	rst	38h
+	ld	a,e
+	inc	de
+	pop	hl
+	ld	e,(hl)
+	inc	hl
+	ld	d,(hl)
+	inc	de
+	jp	L_127C
+	ld	l,B_A2
+	ld	h,b
+	inc	de
+	ld	b,d
+	ex	af,af'
+	ld	de,W_1396
+	ld	c,e
+	djnz	L_14B1
+	halt
+	ld	(de),a
+L_1491	sub	B_FF
+	rst	38h
+	xor	B_FF
+	sbc	a,b
+	inc	de
+	pop	de
+	call	L_0979
+	push	de
+	jp	(iy)
+	and	c
+	inc	de
+L_14A1	rst	18h
+	push	de
+	call	L_05E1
+	ld	h,d
+	ld	l,e
+	add	hl,bc
+	ld	a,(hl)
+	pop	hl
+	cp	l
+	jr	z,L_14B8
+	ex	de,hl
+	rst	10h
+	ld	de,W_0578
+	call	L_1815
+	jr	L_14A1
+L_14B8	push	de
+	push	bc
+	ld	hl,(W_3C37)
+	call	L_0F9E
+	pop	bc
+	pop	de
+	push	de
+	push	bc
+	ex	de,hl
+	ldir
+	pop	bc
+	ld	d,b
+	ld	e,c
+	rst	10h
+	pop	de
+	call	L_07DA
+L_14CF	jp	(iy)
+	in	a,(B_CF)
+	ld	(de),a
+	ld	b,c
+	rst	10h
+	inc	de
+	res	6,(ix+D_3E)
+	jp	(iy)
+	DEFB	']'+128,015h
+	inc	de
+	ld	bc,W_13E3
+	set	6,(ix+D_3E)
+	jp	(iy)
+	ld	b,l
+	ld	e,b
+	ld	c,c
+	call	nc,L_1387
+	inc	b
+	cp	b
+	inc	b
+	ld	d,d
+	ld	b,l
+	ld	b,h
+	ld	b,l
+	ld	b,(hl)
+	ld	c,c
+L_14F8	ld	c,(hl)
+	push	bc
+	rst	28h
+	inc	de
+	ex	af,af'
+	rst	38h
+	inc	de
+	call	L_0F2E
+	ld	hl,(W_3C31)
+	ld	e,(hl)
+	inc	hl
+	ld	d,(hl)
+	ex	de,hl
+	inc	hl
+	ld	(W_2705),hl
+	push	hl
+	call	L_15C0
+	ld	(W_270D),hl
+	ld	(W_2707),bc
+	ld	(W_270B),de
+	ld	hl,(W_3C37)
+	sbc	hl,de
+	jp	nz,L_14DA
+	pop	de
+	rst	10h
+	call	L_04B9
+	djnz	L_1541
+	dec	a
+	ld	b,B_0E
+	ld	a,(de)
+	rst	18h
+	ld	hl,W_C3AF
+	add	hl,de
+	jp	nc,L_14CF
+	ex	de,hl
+	ld	(W_2703),hl
+	call	L_15C0
+	ld	(W_2701),hl
+L_1541	push	hl
+	ld	(W_2709),de
+	ld	a,b
+	or	c
+L_1548	ld	de,(W_2707)
+	jr	z,L_1552
+	ld	a,d
+	or	e
+	jr	z,L_15CF
+L_1552	pop	hl
+	ld	bc,(W_270D)
+L_1557	sbc	hl,bc
+	ex	de,hl
+	add	hl,de
+	ld	(W_2707),hl
+	ld	hl,(W_270B)
+	add	hl,de
+	ld	bc,(W_2709)
+	and	a
+	sbc	hl,bc
+	ld	(W_270B),hl
+	ld	bc,W_002E
+	add	hl,bc
+	bit	7,h
+	jr	nz,L_157F
+	ld	bc,(W_3C3B)
+	add	hl,bc
+	jr	c,L_15CF
+	sbc	hl,sp
+	jr	nc,L_15CF
+L_157F	ld	hl,(W_2703)
+	push	hl
+	dec	hl
+	dec	hl
+	ld	b,(hl)
+	dec	hl
+	ld	c,(hl)
+	ld	hl,(W_2705)
+	push	hl
+	dec	hl
+	dec	hl
+	ld	(hl),b
+	dec	hl
+	ld	(hl),c
+	pop	hl
+	add	hl,de
+	pop	bc
+	and	a
+	sbc	hl,bc
+	ld	(W_2705),hl
+	ld	de,(W_2701)
+L_159E	ld	hl,(W_2709)
+	and	a
+L_15A2	sbc	hl,de
+	ld	b,h
+	ld	c,l
+	push	de
+	push	bc
+	call	L_14DC
+	ld	hl,(W_270B)
+	pop	bc
+	add	hl,bc
+	ld	b,h
+	ld	c,l
+	pop	hl
+	push	bc
+	call	L_0F9E
+	ex	de,hl
+	ld	hl,(W_270D)
+	ld	bc,(W_270B)
+	add	hl,bc
+L_15C0	pop	bc
+	push	bc
+	push	hl
+	ldir
+	pop	de
+	pop	bc
+	call	L_14DC
+	call	L_14F8
+	jp	(iy)
+L_15CF	ld	hl,(W_3C31)
+	ld	de,(W_2705)
+	dec	de
+	ld	(hl),e
+	inc	hl
+	ld	(hl),d
+	rst	20h
+	dec	bc
+	ld	hl,(W_3C37)
+	and	a
+	sbc	hl,bc
+	ld	(W_3C37),hl
+	ld	hl,(W_3C3B)
+L_15E8	sbc	hl,bc
+	ld	(W_3C3B),hl
+	sbc	hl,de
+	ret	z
+	push	bc
+	ld	b,h
+	ld	c,l
+	pop	hl
+	add	hl,de
+	ldir
+	ret
+	ld	bc,W_3C31
+L_15FB	call	L_1557
+	call	L_1557
+	ld	bc,W_3C40
+L_1604	ld	hl,(W_3C37)
+	stf
+	sbc	hl,bc
+	ret	c
+L_160B	ld	a,(bc)
+	rla
+	inc	bc
+	jr	nc,L_160B
+	inc	bc
+	inc	bc
+	call	L_1557
+	inc	bc
+	call	L_1557
+	call	L_15FB
+	jp	L_1C0E
+	add	a,l
+L_1620	djnz	L_1638
+	ex	af,af'
+	ld	de,W_B513
+	ld	de,W_0018
+	nop
+	ld	hl,W_FFF9
+	add	hl,bc
+	ld	c,(hl)
+	inc	hl
+	ld	b,(hl)
+	dec	hl
+	add	hl,bc
+	ld	b,h
+	ld	c,l
+	jr	L_1604
+L_1637	call	L_1557
+	call	L_1548
+	jr	L_1604
+	call	L_1557
+	inc	bc
+	call	L_1557
+	jr	L_1604
+L_1648	call	L_1557
+	ld	hl,W_04B6
+	and	a
+	sbc	hl,de
+	ret	z
+	call	L_159E
+	jr	L_1648
+	ld	a,(bc)
+	ld	e,a
+	inc	bc
+	ld	a,(bc)
+	ld	d,a
+	dec	bc
+L_165D	call	L_1568
+	ex	de,hl
+	ld	a,e
+	ld	(bc),a
+	inc	bc
+	ld	a,d
+	ld	(bc),a
+	inc	bc
+	ret
+	ld	hl,(W_2701)
+	and	a
+	sbc	hl,de
+	ld	h,d
+	ld	l,e
+	ret	nc
+	ld	hl,(W_2709)
+	sbc	hl,de
+	jr	nc,L_1684
+	ld	hl,(W_270D)
+	sbc	hl,de
+	jr	c,L_1692
+	ld	hl,(W_270B)
+	add	hl,de
+	ret
+L_1684	ld	hl,(W_2703)
+	sbc	hl,de
+	ld	hl,(W_2707)
+	ret	c
+	ld	hl,(W_2705)
+	add	hl,de
+	ret
+L_1692	ld	hl,(W_2701)
+	add	hl,de
+	ld	de,(W_270D)
+	and	a
+	sbc	hl,de
+	ret
+	dec	de
+	ld	a,(de)
+	rla
+	ret	nc
+	dec	de
+	dec	de
+	ld	a,(de)
+	ld	l,a
+	ld	h,B_00
+	inc	a
+	jr	nz,L_16B1
+	ld	a,(bc)
+	ld	l,a
+	inc	bc
+	ld	a,(bc)
+	ld	h,a
+	inc	bc
+L_16B1	add	hl,bc
+	ld	b,h
+	ld	c,l
+	ret
+	or	a
+	dec	d
+	rst	18h
+	ex	de,hl
+	call	L_15E7
+	ex	de,hl
+	rst	10h
+	jp	(iy)
+	push	hl
+	ld	e,(hl)
+	inc	hl
+	ld	d,(hl)
+	call	L_15FB
+L_16C7	ex	af,af'
+	ld	de,W_850B
+	djnz	L_16D5
+	nop
+	nop
+	ld	bc,W_0000
+	jr	L_16DB
+	pop	hl
+L_16D5	push	hl
+	inc	hl
+	inc	hl
+	ld	c,(hl)
+	inc	hl
+	ld	b,(hl)
+L_16DB	pop	hl
+	push	hl
+	dec	hl
+	dec	hl
+	dec	hl
+	dec	hl
+	ld	d,(hl)
+	dec	hl
+	ld	e,(hl)
+	add	hl,de
+	ex	de,hl
+	pop	hl
+	dec	hl
+	ld	a,h
+	cp	B_3C
+	ld	a,(hl)
+	res	6,a
+	jr	c,L_16F2
+	add	a,B_02
+L_16F2	dec	hl
+	dec	hl
+L_16F4	dec	hl
+	dec	a
+	jr	nz,L_16F4
+	ret
+L_16F9	inc	hl
+	push	hl
+	pop	hl
+	ld	a,(hl)
+	inc	hl
+	push	hl
+	ld	h,(hl)
+	ld	l,a
+	or	h
+	ret	z
+	sbc	hl,de
+	pop	hl
+	inc	hl
+	jr	nz,L_16F9
+	push	de
+	ld	d,B_00
+	ld	e,(hl)
+	add	hl,de
+	pop	de
+	jp	(hl)
+	jp	L_1F0E
+	ld	c,B_29
+	ld	c,B_B3
+	ex	af,af'
+	add	a,b
+	inc	b
+	or	e
+	ex	af,af'
+	pop	bc
+	ex	af,af'
+	or	(hl)
+	inc	b
+	call	L_04B9
+	dec	a
+	ld	b,B_0E
+	ld	a,(de)
+	rst	18h
+	ld	hl,W_C3AF
+	add	hl,de
+	ret	c
+	rst	20h
+	dec	c
+	ld	b,(hl)
+	ld	c,a
+	ld	d,d
+	ld	b,a
+	ld	b,l
+	call	nc,L_13FC
+	ld	b,B_3A
+	ld	d,B_2A
+	ld	sp,W_ED3C
+	ld	e,e
+	inc	sp
+	inc	a
+	and	a
+	sbc	hl,de
+	jp	nz,L_14DA
+	call	L_1620
+	ld	hl,W_FFFB
+	add	hl,de
+	ld	(W_3C39),hl
+	set	2,(ix+D_3E)
+	rst	20h
+	rst	38h
+	ld	b,l
+	ld	b,h
+	ld	c,c
+	call	nc,L_1637
+	inc	b
+	ld	h,b
+	ld	d,B_CD
+	jr	nz,L_1779
+	set	3,(ix+D_3E)
+	jr	L_1775
+	ld	c,h
+	ld	c,c
+	ld	d,e
+	call	nc,L_165D
+	inc	b
+	ld	(hl),d
+	ld	d,B_CD
+	jr	nz,L_178B
+L_1775	ld	a,B_0D
+	rst	8h
+	bit	3,(ix+D_3E)
+	push	de
+	call	nz,L_02D8
+	pop	bc
+	ld	a,(bc)
+	ld	e,a
+	inc	bc
+	ld	a,(bc)
+	ld	d,a
+	dec	bc
+	call	L_15FB
+	jp	L_0B0E
+	ex	af,af'
+	ld	de,W_850D
+	djnz	L_17B2
+	nop
+	nop
+	rst	20h
+	ld	c,B_21
+	ld	(bc),a
+	nop
+	jr	L_17B4
+	push	de
+	ld	hl,W_0002
+	add	hl,bc
+	ld	a,(hl)
+	inc	hl
+	ld	h,(hl)
+	ld	l,a
+	dec	hl
+	dec	hl
+	dec	hl
+	ld	l,(hl)
+	ld	a,l
+	rlca
+	sbc	a,a
+	ld	h,a
+	call	L_180E
+	pop	de
+	ld	hl,W_0004
+L_17B4	add	hl,bc
+	push	hl
+	push	bc
+	call	L_17E4
+	pop	de
+	pop	bc
+	call	L_17E4
+	ld	(ix+D_14),B_01
+L_17C3	ld	(ix+D_16),B_10
+	call	L_1708
+	jr	c,L_17D2
+	dec	(ix+D_16)
+	jp	p,L_16C7
+L_17D2	bit	3,(ix+D_3E)
+	jr	nz,L_17E8
+	jr	c,L_1802
+L_17DA	ld	hl,W_3C26
+	ld	(hl),B_00
+L_17DF	ld	a,(hl)
+	and	a
+L_17E1	jr	z,L_17DF
+	call	L_04E4
+	jr	L_17C3
+L_17E8	push	af
+	res	3,(ix+D_3E)
+	push	bc
+	call	L_04B9
+	ld	a,b
+	dec	b
+	ld	b,B_05
+	ld	c,B_1A
+	set	3,(ix+D_3E)
+L_17FB	call	L_02D8
+	pop	bc
+	pop	af
+	jr	nc,L_17C3
+L_1802	res	3,(ix+D_3E)
+	jp	(iy)
+L_1808	ld	a,(W_3C14)
+	ld	(W_3C15),a
+L_180E	ld	(ix+D_13),B_05
+L_1812	ld	a,(bc)
+	ld	e,a
+	inc	bc
+L_1815	ld	a,(bc)
+	ld	d,a
+	inc	bc
+	call	L_15FB
+	add	a,e
+	ld	(de),a
+	ld	b,b
+	ld	(hl),c
+	ld	(de),a
+L_1820	ld	b,h
+	and	h
+	ld	(de),a
+	ld	c,b
+	sbc	a,a
+	ld	(de),a
+	stf
+	adc	a,l
+	ld	(de),a
+	ld	b,d
+	adc	a,b
+	ld	(de),a
+	jr	c,L_18A4
+	ld	(de),a
+	inc	a
+	inc	hl
+	inc	de
+	dec	hl
+	ld	(W_3613),a
+	inc	a
+	inc	de
+	inc	sp
+	ret	pe
+	djnz	L_1865
+	ld	b,b
+	ld	de,W_1126
+	djnz	L_187D
+	ld	h,h
+	djnz	L_188C
+	ld	c,e
+	djnz	L_1899
+	ld	a,c
+	inc	de
+	ld	h,d
+	sub	(hl)
+	inc	de
+	ld	h,e
+	or	(hl)
+	inc	b
+	ld	d,h
+	nop
+	nop
+L_1853	call	L_17E1
+L_1856	dec	(ix+D_13)
+L_1859	jr	nz,L_1812
+	and	a
+L_185C	ret
+	ld	hl,(W_3C14)
+	ld	h,l
+	inc	l
+	jr	L_1870
+	ld	hl,(W_3C14)
+	ld	h,l
+	dec	h
+	jr	L_1870
+	ld	hl,(W_3C14)
+	dec	l
+	ld	h,l
+L_1870	ld	(W_3C14),hl
+	ld	(ix+D_13),B_01
+	dec	(ix+D_16)
+	jr	L_1853
+	call	L_17DA
+	rst	10h
+	ld	de,W_09B3
+L_1883	call	L_17C1
+	call	L_1815
+	jr	L_1856
+	call	L_17DA
+	rst	10h
+	call	L_17DA
+W_1892	rst	10h
+	ld	de,W_0AAF
+	jr	L_1883
+	ld	a,(bc)
+L_1899	push	af
+	call	L_17E1
+	pop	af
+	rst	8h
+	ld	a,B_20
+	rst	8h
+	jr	L_1856
+L_18A4	call	L_1808
+L_18A7	dec	c
+	dec	sp
+	adc	a,l
+	stf
+	ret
+	ld	a,B_29
+	jr	L_18B2
+	ld	a,B_22
+L_18B2	push	af
+	push	bc
+	call	L_17E1
+	pop	de
+	call	L_0979
+	ld	b,d
+	ld	c,e
+	pop	af
+	rst	8h
+	and	a
+	ret
+	ld	a,(W_3C15)
+	and	a
+	ret	m
+	push	bc
+	ld	b,a
+	ld	a,B_0D
+	rst	8h
+	inc	b
+	dec	b
+	jr	z,L_18D4
+L_18CF	ld	a,B_20
+	rst	8h
+	djnz	L_18CF
+L_18D4	ld	(ix+D_15),B_FF
+	pop	bc
+	ret
+	ld	a,(bc)
+	ld	e,a
+	inc	bc
+	ld	a,(bc)
+	ld	d,a
+L_18DF	inc	bc
+	ret
+	call	L_17C1
+	ex	de,hl
+	dec	hl
+	ld	a,(hl)
+	bit	7,a
+	jr	nz,L_18F0
+	call	L_15E8
+	jr	L_18FB
+L_18F0	ex	de,hl
+	call	L_15A2
+	inc	de
+	ld	a,(de)
+	ld	l,a
+	inc	de
+	ld	a,(de)
+	ld	h,a
+	add	hl,de
+L_18FB	ld	a,(hl)
+L_18FC	and	B_7F
+L_18FE	rst	8h
+	bit	7,(hl)
+	inc	hl
+	jr	z,L_18FB
+	ld	a,B_20
+	rst	8h
+	ret
+	ex	(sp),hl
+	call	L_17FB
+	ex	(sp),hl
+	ret
+	ld	de,W_09B3
+L_1911	push	de
+	ex	de,hl
+	rst	10h
+	pop	de
+L_1915	push	bc
+	call	L_04BF
+	dec	de
+	jr	L_1939
+	jr	L_18DF
+	pop	bc
+	ret
+	push	iy
+	push	hl
+	pop	iy
+	ld	hl,W_1892
+	push	hl
+	ld	hl,W_E000
+	bit	7,c
+	jr	z,L_1932
+	ld	h,B_FC
+L_1932	inc	de
+	dec	iy
+	di
+	xor	a
+L_1937	ld	b,B_97
+L_1939	djnz	L_1939
+	out	(B_FE),a
+	xor	B_08
+	inc	l
+	jr	nz,L_1943
+	inc	h
+L_1943	jr	nz,L_1937
+	ld	b,B_2B
+L_1947	djnz	L_1947
+	out	(B_FE),a
+	ld	l,c
+	ld	bc,W_3B08
+L_194F	djnz	L_194F
+	ld	a,c
+	out	(B_FE),a
+	ld	b,B_38
+	jp	L_188A
+	ld	a,c
+	bit	7,b
+L_195C	djnz	L_195C
+	jr	nc,L_1964
+	ld	b,B_3D
+L_1962	djnz	L_1962
+L_1964	out	(B_FE),a
+	ld	b,B_3A
+	jp	nz,L_1859
+	dec	b
+	xor	a
+	rl	l
+	jp	nz,L_185C
+	dec	de
+	inc	iy
+	ld	b,B_2E
+	ld	a,B_7F
+	in	a,(B_FE)
+	rra
+	ret	nc
+	ld	a,d
+	cp	B_FF
+	ret	nc
+	or	e
+	jr	z,L_198F
+	ld	l,(iy+D_00)
+L_1987	ld	a,h
+	xor	l
+	ld	h,a
+	xor	a
+	stf
+	jp	L_186D
+L_198F	ld	l,h
+	jr	L_1987
+	pop	iy
+	ex	af,af'
+	ld	b,B_3B
+L_1997	djnz	L_1997
+	xor	a
+	out	(B_FE),a
+	ld	a,B_7F
+	in	a,(B_FE)
+	rra
+	ei
+	jp	nc,L_04F0
+	ex	af,af'
+	ret
+	di
+	push	iy
+	push	hl
+	pop	iy
+	ld	hl,W_1892
+	push	hl
+	ld	h,c
+	ex	af,af'
+	xor	a
+	ld	c,a
+L_19B5	ret	nz
+L_19B6	ld	l,B_00
+L_19B8	ld	b,B_B8
+	call	L_1911
+	jr	nc,L_19B5
+	ld	a,B_DF
+	cp	b
+	jr	nc,L_19B6
+	inc	l
+	jr	nz,L_19B8
+L_19C7	ld	b,B_CF
+	call	L_1915
+	jr	nc,L_19B5
+	ld	a,b
+	cp	B_D8
+	jr	nc,L_19C7
+	call	L_1915
+	ret	nc
+	call	L_18FC
+	ret	nc
+	ccf
+	ret	nz
+	jr	L_19F0
+L_19DF	ex	af,af'
+	jr	nc,L_19E7
+	ld	(iy+D_00),l
+	jr	L_19EC
+L_19E7	ld	a,(iy+D_00)
+	xor	l
+	ret	nz
+L_19EC	inc	iy
+	dec	de
+	ex	af,af'
+L_19F0	call	L_18FC
+	ret	nc
+	ld	a,d
+	or	e
+	jr	nz,L_19DF
+	ld	a,h
+	cp	B_01
+	ret
+	ld	l,B_01
+	ld	b,B_C7
+	call	L_1911
+	ret	nc
+	ld	a,B_E2
+	cp	b
+	rl	l
+	jp	nc,L_18FE
+	ld	a,h
+	xor	l
+	ld	h,a
+	stf
+	ret
+	call	L_1915
+	ret	nc
+	ld	a,B_14
+L_1A17	dec	a
+	jr	nz,L_1A17
+	and	a
+L_1A1B	inc	b
+	ret	z
+	ld	a,B_7F
+	in	a,(B_FE)
+	rra
+	ret	nc
+	xor	c
+	and	B_10
+	jr	z,L_1A1B
+	ld	a,c
+	cpl
+	ld	c,a
+	stf
+	ret
+	ld	d,e
+	ld	b,c
+	ld	d,(hl)
+	push	bc
+	ld	l,a
+	ld	d,B_04
+	jp	L_100E
+	ld	a,(de)
+	ld	c,a
+	ld	a,(de)
+	or	(hl)
+	inc	b
+	ld	b,d
+	ld	d,e
+	ld	b,c
+	ld	d,(hl)
+	push	bc
+	inc	sp
+	add	hl,de
+	dec	b
+	jp	L_3D0E
+	ld	a,(de)
+	ld	c,a
+	ld	a,(de)
+	or	(hl)
+	inc	b
+	ld	b,d
+	ld	c,h
+	ld	c,a
+	ld	b,c
+	call	nz,L_1943
+	dec	b
+	jp	L_3D0E
+	ld	a,(de)
+	ld	(hl),h
+	ld	a,(de)
+	cp	b
+	ld	a,(de)
+	or	(hl)
+	inc	b
+	ld	d,(hl)
+	ld	b,l
+	ld	d,d
+	ld	c,c
+	ld	b,(hl)
+	exx
+	ld	d,e
+	add	hl,de
+	ld	b,B_C3
+	ld	c,B_10
+	ld	a,(de)
+	ld	(hl),c
+	ld	(de),a
+	rrca
+	nop
+	ld	b,d
+	ld	d,(hl)
+	ld	b,l
+	ld	d,d
+	ld	c,c
+	ld	b,(hl)
+	exx
+	ld	h,(hl)
+	add	hl,de
+	rlca
+	jp	L_3D0E
+	ld	a,(de)
+	ld	(hl),h
+	ld	a,(de)
+	cp	(hl)
+	ld	a,(de)
+	or	(hl)
+	inc	b
+	ld	c,h
+	ld	c,a
+	ld	b,c
+	call	nz,L_1978
+	inc	b
+	jp	L_100E
+	ld	a,(de)
+	ld	c,B_1A
+	ld	hl,(W_3C37)
+	ld	(W_230E),hl
+	ex	de,hl
+	ld	hl,W_FFCC
+	add	hl,sp
+	and	a
+	sbc	hl,de
+	ld	(W_230C),hl
+	call	L_04B9
+	ld	(hl),h
+	ld	a,(de)
+	cp	b
+	ld	a,(de)
+	ld	c,B_1A
+	ld	bc,(W_3C37)
+	ld	hl,W_3C50
+	ld	(W_2701),hl
+	inc	hl
+	ld	(W_2709),hl
+	ld	hl,(W_2325)
+	add	hl,bc
+	ld	(W_3C37),hl
+	ld	hl,W_C3AF
+	add	hl,bc
+	ld	(W_270B),hl
+	ld	de,(W_2329)
+	add	hl,de
+	ld	de,(W_3C4C)
+	ld	(W_3C4C),hl
+	push	bc
+	push	de
+L_1AD4	ld	(W_270D),sp
+	call	L_1504
+	pop	bc
+	pop	hl
+L_1ADD	bit	7,(hl)
+	inc	hl
+	jr	z,L_1ADD
+	inc	hl
+	inc	hl
+	ld	(hl),c
+	inc	hl
+	ld	(hl),b
+	ld	hl,(W_3C37)
+	ld	bc,W_000C
+	add	hl,bc
+	ld	(W_3C3B),hl
+	jp	(iy)
+	jp	L_4B0E
+	djnz	L_1B18
+	xor	e
+	dec	b
+	ld	c,B_1A
+	call	L_0F2E
+	rst	18h
+	ld	a,B_20
+	ld	(de),a
+	ld	de,W_270C
+	ld	hl,W_27FF
+	call	L_07FA
+	jp	(iy)
+	ei
+	jr	L_1AD4
+	ld	c,B_F3
+	add	hl,de
+	ld	c,B_1A
+	xor	a
+	ld	(W_2301),a
+	ld	hl,W_3C51
+	ld	(W_230E),hl
+	ex	de,hl
+	ld	hl,(W_3C37)
+	and	a
+	sbc	hl,de
+	ld	(W_230C),hl
+	ld	hl,(W_3C4C)
+	ld	(W_2310),hl
+	ld	hl,W_3C31
+	ld	de,W_2312
+	ld	bc,W_0008
+	ldir
+	jp	(iy)
+	jp	L_F30E
+	add	hl,de
+	ld	de,W_0C10
+	inc	hl
+	pop	bc
+	ex	af,af'
+	ld	de,W_0E10
+	inc	hl
+	pop	bc
+	ex	af,af'
+	or	(hl)
+	inc	b
+	ld	d,c
+	ld	a,(de)
+	ld	a,(W_2302)
+	and	a
+L_1B55	jr	z,L_1BB6
+	ld	hl,(W_230C)
+	ld	a,h
+	or	l
+	jr	z,L_1BB6
+	push	hl
+	ld	de,W_0019
+	ld	hl,W_2301
+	ld	c,d
+	call	L_1820
+	pop	de
+	ld	hl,(W_230E)
+	ld	c,B_FF
+	call	L_1820
+	jp	(iy)
+	halt
+	ld	a,(de)
+L_1B76	ld	de,W_0019
+	ld	hl,W_231A
+	ld	c,d
+	stf
+	call	L_18A7
+	jr	nc,L_1B76
+	ld	de,W_231A
+	ld	a,(de)
+	and	a
+	jr	nz,L_1B95
+	call	L_1808
+	dec	c
+	ld	b,h
+	ld	l,c
+	ld	h,e
+	ld	(hl),h
+	cp	d
+	jr	L_1B9F
+L_1B95	call	L_1808
+	dec	c
+	ld	b,d
+	ld	a,c
+	ld	(hl),h
+	ld	h,l
+	ld	(hl),e
+	cp	d
+L_1B9F	ld	hl,W_2301
+	ld	bc,W_0B0B
+	jr	L_1BA9
+L_1BA7	ld	a,(de)
+	rst	8h
+L_1BA9	ld	a,(de)
+	cp	(hl)
+	jr	nz,L_1BAE
+	dec	c
+L_1BAE	inc	hl
+	inc	de
+	djnz	L_1BA7
+	jr	nz,L_1B76
+	jp	(iy)
+L_1BB6	rst	20h
+	ld	a,(bc)
+	cp	d
+	ld	a,(de)
+	ld	b,B_FF
+	jr	L_1BD0
+	ret	nz
+	ld	a,(de)
+	ld	hl,W_2312
+	ld	de,W_232B
+	ld	b,B_08
+L_1BC8	ld	a,(de)
+	inc	de
+	cp	(hl)
+	inc	hl
+	jr	nz,L_1BB6
+	djnz	L_1BC8
+L_1BD0	ld	hl,(W_230C)
+	ld	de,(W_2325)
+	ld	a,h
+	or	l
+	jr	z,L_1BDF
+	sbc	hl,de
+	jr	c,L_1BB6
+L_1BDF	ld	hl,(W_230E)
+	ld	a,h
+	or	l
+	jr	nz,L_1BE9
+	ld	hl,(W_2327)
+L_1BE9	ld	c,B_FF
+	rr	b
+	call	L_18A7
+	jr	nc,L_1BB6
+	jp	(iy)
+	ld	bc,W_3C0F
+	xor	a
+L_1BF8	ld	(bc),a
+	dec	c
+	jr	nz,L_1BF8
+	ld	hl,(W_3C3B)
+	ld	de,W_FFFC
+	dec	hl
+	ld	c,(hl)
+L_1C04	ld	(hl),a
+	add	hl,de
+	inc	hl
+	ld	(W_3C3B),hl
+	dec	hl
+	ld	b,(hl)
+	ld	(hl),a
+	ld	a,c
+L_1C0E	rrca
+	xor	b
+	and	B_7F
+	xor	b
+	ld	(W_3C02),a
+	res	7,b
+	res	7,c
+	ld	(W_3C00),bc
+	inc	hl
+	ex	de,hl
+	add	hl,de
+	ret
+	ld	a,B_09
+	cp	b
+	jr	nc,L_1C28
+	ld	b,a
+L_1C28	ld	c,B_04
+	inc	hl
+	inc	hl
+	inc	hl
+	xor	a
+L_1C2E	rrd
+	dec	hl
+	dec	c
+	jr	nz,L_1C2E
+	inc	hl
+	djnz	L_1C28
+	add	a,B_FB
+	push	hl
+L_1C3A	ld	a,(hl)
+	adc	a,b
+	daa
+	ld	(hl),a
+	inc	hl
+	jr	c,L_1C3A
+	pop	hl
+	ret
+	push	bc
+	push	hl
+	ld	b,B_04
+	and	a
+L_1C48	ld	a,B_00
+	sbc	a,(hl)
+	daa
+	ld	(hl),a
+	inc	hl
+	djnz	L_1C48
+	pop	hl
+	pop	bc
+	ret
+	ld	c,B_01
+	push	hl
+	push	de
+	push	bc
+	ld	a,c
+	and	B_0F
+	ld	b,a
+	xor	c
+	ld	c,a
+	rrca
+	rrca
+	add	a,c
+	rrca
+	add	a,b
+	ld	c,a
+	ld	b,B_04
+	xor	a
+L_1C67	push	bc
+	push	de
+	push	hl
+	add	a,(hl)
+	daa
+	ld	l,a
+	ld	a,(de)
+	ld	h,B_00
+	ld	d,h
+	rl	h
+	and	a
+	jr	z,L_1C91
+	ld	e,a
+L_1C77	srl	c
+	jr	nc,L_1C83
+	ld	a,l
+	add	a,e
+	daa
+	ld	l,a
+	ld	a,h
+	adc	a,d
+	daa
+	ld	h,a
+L_1C83	inc	c
+	dec	c
+	jr	z,L_1C91
+	ld	a,e
+	add	a,a
+	daa
+	ld	e,a
+	ld	a,d
+	adc	a,a
+	daa
+	ld	d,a
+	jr	L_1C77
+L_1C91	ex	de,hl
+	pop	hl
+	ld	(hl),e
+	ld	a,d
+	pop	de
+	pop	bc
+	inc	de
+	inc	hl
+	djnz	L_1C67
+	pop	bc
+	pop	de
+	pop	hl
+	ret
+	ld	b,(hl)
+	xor	l
+	adc	a,c
+	add	hl,de
+	ld	(bc),a
+	jp	L_0F0E
+	dec	e
+	ld	c,B_1A
+	jr	L_1CB3
+	ld	b,(hl)
+	xor	e
+	and	e
+	dec	de
+	ld	(bc),a
+	or	e
+	dec	de
+L_1CB3	call	L_1AF4
+	ld	a,c
+	sub	b
+	push	af
+	jr	nc,L_1CC1
+	ex	de,hl
+	neg
+	ld	(ix+D_00),b
+L_1CC1	ld	b,a
+	call	nz,L_1B22
+	pop	af
+	jr	nc,L_1CC9
+	ex	de,hl
+L_1CC9	ld	b,B_02
+	ld	c,(ix+D_02)
+L_1CCE	rl	c
+	call	c,L_1B43
+	ex	de,hl
+	djnz	L_1CCE
+	call	L_1B53
+	dec	de
+	ld	a,(de)
+	add	a,B_68
+	rr	b
+	ld	(ix+D_02),b
+	call	nz,L_1B43
+L_1CE5	ld	a,(de)
+	and	a
+	jr	nz,L_1D02
+	dec	(ix+D_00)
+	dec	(ix+D_00)
+	push	de
+	ld	h,d
+	ld	l,e
+	dec	hl
+	ld	bc,W_03FF
+L_1CF6	or	(hl)
+	ldd
+	djnz	L_1CF6
+	ex	de,hl
+	ld	(hl),b
+	pop	de
+	jr	nz,L_1CE5
+	jp	(iy)
+L_1D02	ld	d,h
+	ld	e,l
+L_1D04	push	de
+	ld	bc,W_0004
+	ldir
+	pop	hl
+	dec	de
+L_1D0C	ld	a,(de)
+	and	a
+L_1D0E	jr	z,L_1D21
+	cp	B_10
+	sbc	a,a
+	inc	a
+	inc	a
+	ld	b,a
+	add	a,(ix+D_00)
+	ld	(W_3C00),a
+	call	L_1B22
+	jr	L_1D0C
+L_1D21	ld	a,(W_3C00)
+	dec	a
+	cp	B_BF
+	inc	a
+	jr	nc,L_1D3D
+	cp	B_80
+	jr	nc,L_1D3B
+	ld	b,a
+	ld	a,(W_3C02)
+	ld	c,a
+	rla
+	xor	c
+	and	B_80
+	xor	b
+	ld	(de),a
+	jp	(iy)
+L_1D3B	rst	20h
+	ex	af,af'
+L_1D3D	ld	bc,W_0400
+L_1D40	ld	(hl),c
+	inc	hl
+	djnz	L_1D40
+	jp	(iy)
+	ld	b,(hl)
+	xor	d
+	or	b
+	dec	de
+	ld	(bc),a
+	ld	c,l
+	inc	e
+	call	L_1AF4
+	xor	a
+	cp	b
+	sbc	a,a
+	and	c
+	jr	z,L_1D3D
+	push	hl
+	ld	bc,W_3C02
+	push	bc
+	ld	b,B_03
+L_1D5D	ld	c,(hl)
+	inc	hl
+	ex	(sp),hl
+	inc	hl
+	call	L_1B55
+	ex	(sp),hl
+	djnz	L_1D5D
+	ld	bc,(W_3C00)
+	ld	a,b
+	add	a,c
+	sub	B_42
+	ld	(W_3C00),a
+	pop	hl
+	pop	de
+	jr	L_1D04
+	ld	b,(hl)
+	xor	a
+	ld	c,d
+	inc	e
+	ld	(bc),a
+	ld	a,l
+	inc	e
+	call	L_1AF4
+	xor	a
+	cp	b
+	jr	z,L_1D3D
+	cp	c
+	jr	z,L_1D3B
+	inc	de
+	inc	de
+	ld	a,(de)
+	dec	de
+	dec	de
+	add	a,B_01
+	daa
+	ex	af,af'
+	ex	de,hl
+	call	L_1B43
+	ex	de,hl
+	push	hl
+	ld	de,W_3C10
+	ld	bc,W_0004
+	ldir
+	ex	de,hl
+	dec	hl
+	ld	b,B_05
+L_1DA2	push	de
+	ld	a,(hl)
+	dec	hl
+	ld	e,(hl)
+	ex	af,af'
+	ld	c,a
+	ex	af,af'
+	inc	c
+	dec	c
+	jr	nz,L_1DB0
+	ld	e,a
+	jr	L_1DCB
+L_1DB0	push	bc
+	ld	b,B_02
+L_1DB3	ld	d,B_10
+L_1DB5	sla	e
+	rla
+	rl	d
+	jr	nc,L_1DB5
+	inc	d
+L_1DBD	sub	c
+	daa
+	inc	e
+	jr	nc,L_1DBD
+	dec	d
+	jr	nz,L_1DBD
+	add	a,c
+	daa
+	dec	e
+	djnz	L_1DB3
+	pop	bc
+L_1DCB	ld	c,e
+	pop	de
+	inc	c
+	dec	c
+	jr	z,L_1DE8
+	push	hl
+	dec	hl
+	dec	hl
+	call	L_1B55
+	push	de
+	ld	de,W_FFFB
+	add	hl,de
+	ld	de,W_3C03
+	ld	a,c
+	ld	(de),a
+	call	L_1B53
+	pop	de
+	pop	hl
+	inc	hl
+	inc	b
+L_1DE8	djnz	L_1DA2
+	ld	hl,(W_3C00)
+	ld	a,h
+	sub	l
+	add	a,B_40
+	ld	hl,W_3C08
+	ld	b,a
+	ld	a,(W_3C0B)
+	and	a
+	jr	nz,L_1DFE
+	dec	b
+	dec	b
+	dec	hl
+L_1DFE	ld	(ix+D_00),b
+	pop	de
+	jp	L_1C04
+	ld	b,(hl)
+	ld	c,(hl)
+	ld	b,l
+	ld	b,a
+	ld	b,c
+	ld	d,h
+	push	bc
+	ld	a,d
+	inc	e
+	rlca
+	ld	de,W_DF1D
+	ld	a,d
+	and	a
+	jr	z,L_1E18
+	xor	B_80
+L_1E18	ld	d,a
+	rst	10h
+	jp	(iy)
+	ld	c,c
+	ld	c,(hl)
+	call	nc,L_1D0E
+	inc	bc
+	inc	h
+	dec	e
+	ld	hl,(W_3C3B)
+	dec	hl
+	ld	de,W_0000
+L_1E2B	ld	a,(hl)
+	rlca
+	cp	B_82
+	jr	c,L_1E45
+	xor	a
+	dec	hl
+	call	L_0732
+	inc	hl
+	ex	de,hl
+	ld	b,h
+	ld	c,l
+	add	hl,hl
+	add	hl,hl
+	add	hl,bc
+	add	hl,hl
+	ld	c,a
+	ld	b,B_00
+	add	hl,bc
+	ex	de,hl
+	jr	L_1E2B
+L_1E45	dec	hl
+	dec	hl
+	ld	(hl),d
+	dec	hl
+	ld	(hl),e
+	ld	de,W_0D94
+	jp	L_04BF
+	ld	d,l
+	ld	b,(hl)
+	ld	c,h
+	ld	c,a
+	ld	b,c
+	call	nc,L_1D21
+	ld	b,B_5B
+	dec	e
+	rst	18h
+	ex	de,hl
+	ld	bc,W_1000
+	ld	d,c
+	ld	e,c
+L_1E62	add	hl,hl
+	ld	a,e
+	adc	a,a
+	daa
+	ld	e,a
+	ld	a,d
+	adc	a,a
+	daa
+	ld	d,a
+	rl	c
+	djnz	L_1E62
+	rst	10h
+	ld	d,B_46
+	ld	e,c
+	rst	10h
+	dec	hl
+	dec	hl
+	call	L_0740
+	jp	(iy)
+	nop
+	nop
+	nop
+	nop
+	nop
+	nop
+	nop
+	djnz	L_1E94
+	djnz	L_1E96
+	nop
+	djnz	L_1E89
+L_1E89	inc	h
+	inc	h
+	nop
+	nop
+	nop
+	nop
+	nop
+	inc	h
+	ld	a,(hl)
+	inc	h
+	inc	h
+L_1E94	ld	a,(hl)
+	inc	h
+L_1E96	nop
+	ex	af,af'
+	ld	a,B_28
+	ld	a,B_0A
+	ld	a,B_08
+	ld	h,d
+	ld	h,h
+	ex	af,af'
+	djnz	L_1EC9
+	ld	b,(hl)
+	nop
+	djnz	L_1ECF
+	djnz	L_1ED3
+	ld	b,h
+	ld	a,(W_0800)
+W_1EAD	djnz	L_1EAF
+L_1EAF	nop
+	nop
+	nop
+	nop
+	inc	b
+	ex	af,af'
+	ex	af,af'
+	ex	af,af'
+	ex	af,af'
+	inc	b
+	nop
+	jr	nz,L_1ECC
+	djnz	L_1ECE
+	djnz	L_1EE0
+	nop
+	nop
+	inc	d
+	ex	af,af'
+	ld	a,B_08
+	inc	d
+	nop
+	nop
+L_1EC9	ex	af,af'
+	ex	af,af'
+	ld	a,B_08
+	ex	af,af'
+L_1ECE	nop
+L_1ECF	nop
+	nop
+	nop
+	nop
+L_1ED3	ex	af,af'
+	ex	af,af'
+	djnz	L_1ED7
+L_1ED7	nop
+	nop
+	ld	a,B_00
+	nop
+	nop
+	nop
+	nop
+	nop
+L_1EE0	nop
+	jr	L_1EFB
+	nop
+	nop
+	ld	(bc),a
+	inc	b
+	ex	af,af'
+	djnz	L_1F0A
+	nop
+	inc	a
+	ld	b,(hl)
+	ld	c,d
+	ld	d,d
+	ld	h,d
+	inc	a
+	nop
+	jr	L_1F1C
+	ex	af,af'
+	ex	af,af'
+	ex	af,af'
+	ld	a,B_00
+	inc	a
+	ld	b,d
+L_1EFB	ld	(bc),a
+	inc	a
+	ld	b,b
+	ld	a,(hl)
+	nop
+	inc	a
+	ld	b,d
+	inc	c
+	ld	(bc),a
+	ld	b,d
+	inc	a
+	nop
+	ex	af,af'
+	jr	L_1F32
+L_1F0A	ld	c,b
+	ld	a,(hl)
+	ex	af,af'
+	nop
+L_1F0E	ld	a,(hl)
+	ld	b,b
+	ld	a,h
+	ld	(bc),a
+	ld	b,d
+	inc	a
+	nop
+	inc	a
+	ld	b,b
+	ld	a,h
+	ld	b,d
+	ld	b,d
+	inc	a
+	nop
+L_1F1C	ld	a,(hl)
+	ld	(bc),a
+	inc	b
+	ex	af,af'
+	djnz	L_1F32
+	nop
+	inc	a
+	ld	b,d
+	inc	a
+	ld	b,d
+	ld	b,d
+	inc	a
+	nop
+	inc	a
+	ld	b,d
+	ld	b,d
+	ld	a,B_02
+	inc	a
+	nop
+	nop
+L_1F32	nop
+	djnz	L_1F35
+L_1F35	nop
+	djnz	L_1F38
+L_1F38	nop
+	djnz	L_1F3B
+L_1F3B	nop
+	djnz	L_1F4E
+	jr	nz,L_1F40
+L_1F40	inc	b
+	ex	af,af'
+	djnz	L_1F4C
+	inc	b
+	nop
+	nop
+	nop
+	ld	a,B_00
+	ld	a,B_00
+L_1F4C	nop
+	nop
+L_1F4E	djnz	L_1F58
+	inc	b
+	ex	af,af'
+	djnz	L_1F54
+L_1F54	inc	a
+	ld	b,d
+	inc	b
+	ex	af,af'
+L_1F58	nop
+	ex	af,af'
+	inc	a
+	ld	c,d
+	ld	d,(hl)
+	ld	e,(hl)
+	ld	b,b
+	inc	a
+	inc	a
+	ld	b,d
+	ld	b,d
+	ld	a,(hl)
+	ld	b,d
+	ld	b,d
+	ld	a,h
+	ld	b,d
+	ld	a,h
+	ld	b,d
+	ld	b,d
+	ld	a,h
+	inc	a
+	ld	b,d
+	ld	b,b
+	ld	b,b
+	ld	b,d
+	inc	a
+	ld	a,b
+	ld	b,h
+	ld	b,d
+	ld	b,d
+	ld	b,h
+	ld	a,b
+	ld	a,(hl)
+	ld	b,b
+	ld	a,h
+	ld	b,b
+	ld	b,b
+	ld	a,(hl)
+	ld	a,(hl)
+	ld	b,b
+	ld	a,h
+	ld	b,b
+	ld	b,b
+	ld	b,b
+	inc	a
+	ld	b,d
+	ld	b,b
+	ld	c,(hl)
+	ld	b,d
+	inc	a
+	ld	b,d
+	ld	b,d
+	ld	a,(hl)
+	ld	b,d
+	ld	b,d
+	ld	b,d
+	ld	a,B_08
+	ex	af,af'
+	ex	af,af'
+	ex	af,af'
+	ld	a,B_02
+	ld	(bc),a
+	ld	(bc),a
+	ld	b,d
+	ld	b,d
+	inc	a
+	ld	b,h
+	ld	c,b
+	ld	(hl),b
+	ld	c,b
+	ld	b,h
+	ld	b,d
+	ld	b,b
+	ld	b,b
+	ld	b,b
+	ld	b,b
+	ld	b,b
+	ld	a,(hl)
+	ld	b,d
+	ld	h,(hl)
+	ld	e,d
+	ld	b,d
+	ld	b,d
+	ld	b,d
+	ld	b,d
+	ld	h,d
+	ld	d,d
+	ld	c,d
+	ld	b,(hl)
+	ld	b,d
+	inc	a
+	ld	b,d
+	ld	b,d
+	ld	b,d
+	ld	b,d
+	inc	a
+	ld	a,h
+	ld	b,d
+	ld	b,d
+	ld	a,h
+	ld	b,b
+	ld	b,b
+	inc	a
+	ld	b,d
+	ld	b,d
+	ld	d,d
+	ld	c,d
+	inc	a
+	ld	a,h
+	ld	b,d
+	ld	b,d
+	ld	a,h
+	ld	b,h
+	ld	b,d
+	inc	a
+	ld	b,b
+	inc	a
+	ld	(bc),a
+	ld	b,d
+	inc	a
+	cp	B_10
+	djnz	L_1FE6
+	djnz	L_1FE8
+	ld	b,d
+	ld	b,d
+	ld	b,d
+	ld	b,d
+	ld	b,d
+	ld	a,B_42
+	ld	b,d
+	ld	b,d
+	ld	b,d
+	inc	h
+	jr	L_2027
+	ld	b,d
+L_1FE6	ld	b,d
+	ld	b,d
+L_1FE8	ld	e,d
+	inc	h
+	ld	b,d
+	inc	h
+	jr	L_2006
+	inc	h
+	ld	b,d
+	add	a,d
+	ld	b,h
+	jr	z,L_2004
+	djnz	L_2006
+	ld	a,(hl)
+	inc	b
+	ex	af,af'
+	djnz	L_201B
+W_1FFB	ld	a,(hl)
+	ld	c,B_08
+	ex	af,af'
+	ex	af,af'
+	ex	af,af'
+	ld	c,B_00
+	ld	b,b
+L_2004	jr	nz,L_2016
+L_2006	ex	af,af'
+	inc	b
+	ld	(hl),b
+	djnz	L_201B
+	djnz	L_201D
+	ld	(hl),b
+	djnz	L_2048
+	ld	d,h
+	djnz	L_2023
+	djnz	L_2015
+L_2015	nop
+L_2016	nop
+	nop
+	nop
+	nop
+	rst	38h
+L_201B	inc	e
+	ld	(W_2078),hl
+	jr	nz,L_209F
+	nop
+	nop
+L_2023	jr	c,L_2029
+	inc	a
+	ld	b,h
+L_2027	ld	a,B_00
+L_2029	jr	nz,L_204B
+	inc	a
+	ld	(W_3C22),hl
+	nop
+	nop
+	inc	e
+	jr	nz,L_2054
+	jr	nz,L_2052
+	nop
+	inc	b
+	inc	b
+	inc	a
+	ld	b,h
+	ld	b,h
+	ld	a,B_00
+	nop
+	jr	c,L_2085
+	ld	a,b
+	ld	b,b
+	inc	a
+	nop
+	inc	c
+	djnz	L_2060
+L_2048	djnz	L_205A
+	djnz	L_204C
+L_204C	nop
+	inc	a
+	ld	b,h
+	ld	b,h
+	inc	a
+	inc	b
+L_2052	jr	c,L_2094
+L_2054	ld	b,b
+	ld	a,b
+	ld	b,h
+	ld	b,h
+	ld	b,h
+	nop
+L_205A	djnz	L_205C
+L_205C	jr	nc,L_206E
+	djnz	L_2098
+L_2060	nop
+	inc	b
+	nop
+	inc	b
+	inc	b
+	inc	b
+	inc	h
+	jr	L_2089
+	jr	z,L_209B
+	jr	nc,L_2095
+	inc	h
+L_206E	nop
+	djnz	L_2081
+	djnz	L_2083
+	djnz	L_2081
+	nop
+	nop
+	ld	l,b
+W_2078	ld	d,h
+	ld	d,h
+	ld	d,h
+	ld	d,h
+	nop
+	nop
+	ld	a,b
+	ld	b,h
+	ld	b,h
+L_2081	ld	b,h
+	ld	b,h
+L_2083	nop
+	nop
+L_2085	jr	c,L_20CB
+	ld	b,h
+	ld	b,h
+L_2089	jr	c,L_208B
+L_208B	nop
+	ld	a,b
+	ld	b,h
+	ld	b,h
+	ld	a,b
+	ld	b,b
+	ld	b,b
+	nop
+	inc	a
+L_2094	ld	b,h
+L_2095	ld	b,h
+	inc	a
+	inc	b
+L_2098	ld	b,B_00
+	inc	e
+L_209B	jr	nz,L_20BD
+	jr	nz,L_20BF
+L_209F	nop
+	nop
+	jr	c,L_20E3
+	jr	c,L_20A9
+	ld	a,b
+	nop
+	djnz	L_20E1
+L_20A9	djnz	L_20BB
+	djnz	L_20B9
+	nop
+	nop
+	ld	b,h
+	ld	b,h
+	ld	b,h
+	ld	b,h
+	inc	a
+	nop
+	nop
+	ld	b,h
+	ld	b,h
+	jr	z,L_20E2
+	djnz	L_20BC
+L_20BC	nop
+L_20BD	ld	b,h
+	ld	d,h
+L_20BF	ld	d,h
+	ld	d,h
+	jr	z,L_20C3
+L_20C3	nop
+	ld	b,h
+	jr	z,L_20D7
+	jr	z,L_210D
+	nop
+	nop
+L_20CB	ld	b,h
+	ld	b,h
+	ld	b,h
+	inc	a
+	inc	b
+	jr	c,L_20D2
+L_20D2	ld	a,h
+	ex	af,af'
+	djnz	L_20F6
+	ld	a,h
+L_20D7	nop
+	ld	c,B_08
+	jr	nc,L_210C
+	ex	af,af'
+	ld	c,B_00
+	ex	af,af'
+	ex	af,af'
+L_20E1	ex	af,af'
+L_20E2	ex	af,af'
+L_20E3	ex	af,af'
+	ex	af,af'
+	nop
+	ld	(hl),b
+	djnz	L_20F5
+	inc	c
+	djnz	L_215C
+	nop
+	ld	(W_004C),a
+	nop
+	nop
+	nop
+	nop
+	inc	a
+L_20F5	ld	b,d
+L_20F6	sbc	a,c
+	and	c
+	and	c
+	sbc	a,c
+	ld	b,d
+	inc	a
+	rst	38h
+	ld	e,b
+	dec	e
+	nop
+	nop

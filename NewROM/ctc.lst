@@ -1,0 +1,260 @@
+Zilog Macro Assembler.  Version K2.14    27-Jan-120    21:57:14    Page:    1
+
+
+c:\users\john bradley\dropbox\ace-2019\newrom\ctc.asm
+
+Location Object              Type  Line Source
+                             A        1 	INCLUDE "iodefs.inc"
+                   000000FC  B        1 KIOBASE	equ	0FCh
+                             B        2 
+                   00000000  B        3 PIOIOBASE	equ	00B
+                   00000001  B        4 CTCIOBASE	equ	01B
+                   00000002  B        5 SIOIOBASE	equ	10B
+                   00000003  B        6 PIAIOBASE	equ	11B
+                   00000003  B        7 KIOIOBASE	equ	11B
+                             B        8 
+                   00000000  B        9 PIOPORTADATA	equ	00b
+                   00000001  B       10 PIOPORTACMD		equ	01b
+                   00000000  B       11 PIOPORTBDATA	equ	00b
+                   00000001  B       12 PIOPORTBCMD		equ	01b
+                             B       13 
+                   00000000  B       14 CTCCHANNEL0		equ	00b
+                   00000001  B       15 CTCCHANNEL1		equ	01b
+                   00000002  B       16 CTCCHANNEL2		equ	10b
+                   00000003  B       17 CTCCHANNEL3		equ	11b
+                             B       18 
+                   00000000  B       19 SIOPORTADATA	equ	00b
+                   00000001  B       20 SIOPORTACMD		equ	01b
+                   00000000  B       21 SIOPORTBDATA	equ	00b
+                   00000001  B       22 SIOPORTBCMD		equ	01b
+                             B       23 
+                   00000000  B       24 PIAPORTCDATA	equ	00b
+                   00000001  B       25 PIAPORTCCMD		equ	01b
+                             B       26 
+                   00000002  B       27 KIOCOMMANDA		equ	10b
+                   00000003  B       28 KIOCOMMANDB		equ	11b
+                             B       29 
+                             B       30 MAKEPORT	MACRO	Name,Base,Device,Register
+                             B       31 Name equ Base|(Device<<8)|(Register<<10)
+                             B       32 	endmac 
+                             B       33 
+                             B       34 
+                             B       35 	MAKEPORT PIOADATA,KIOBASE,PIOIOBASE,PIOPORTADATA
+                   000000FC  B+      35 Name equ Base|(Device<<8)|(Register<<10)
+                             B       36 	MAKEPORT PIOACMD,KIOBASE,PIOIOBASE,PIOPORTACMD
+                   000004FC  B+      36 Name equ Base|(Device<<8)|(Register<<10)
+                             B       37 	MAKEPORT PIOBDATA,KIOBASE,PIOIOBASE,PIOPORTBDATA
+                   000000FC  B+      37 Name equ Base|(Device<<8)|(Register<<10)
+                             B       38 	MAKEPORT PIOBCMD,KIOBASE,PIOIOBASE,PIOPORTBCMD
+                   000004FC  B+      38 Name equ Base|(Device<<8)|(Register<<10)
+                             B       39 
+                             B       40 	MAKEPORT CTCCH0,KIOBASE,CTCIOBASE,CTCCHANNEL0
+                   000001FC  B+      40 Name equ Base|(Device<<8)|(Register<<10)
+                             B       41 	MAKEPORT CTCCH1,KIOBASE,CTCIOBASE,CTCCHANNEL1
+                   000005FC  B+      41 Name equ Base|(Device<<8)|(Register<<10)
+                             B       42 	MAKEPORT CTCCH2,KIOBASE,CTCIOBASE,CTCCHANNEL2
+                   000009FC  B+      42 Name equ Base|(Device<<8)|(Register<<10)
+                             B       43 	MAKEPORT CTCCH3,KIOBASE,CTCIOBASE,CTCCHANNEL3
+                   00000DFC  B+      43 Name equ Base|(Device<<8)|(Register<<10)
+                             B       44 
+                             B       45 	MAKEPORT SIOADATA,KIOBASE,SIOIOBASE,SIOPORTADATA
+                   000002FC  B+      45 Name equ Base|(Device<<8)|(Register<<10)
+                             B       46 	MAKEPORT SIOACMD,KIOBASE,SIOIOBASE,SIOPORTACMD
+                   000006FC  B+      46 Name equ Base|(Device<<8)|(Register<<10)
+                             B       47 	MAKEPORT SIOBDATA,KIOBASE,SIOIOBASE,SIOPORTBDATA
+Zilog Macro Assembler.  Version K2.14    27-Jan-120    21:57:14    Page:    2
+
+
+iodefs.inc
+
+Location Object              Type  Line Source
+                   000002FC  B+      47 Name equ Base|(Device<<8)|(Register<<10)
+                             B       48 	MAKEPORT SIOBCMD,KIOBASE,SIOIOBASE,SIOPORTBCMD
+                   000006FC  B+      48 Name equ Base|(Device<<8)|(Register<<10)
+                             B       49 
+                             B       50 	MAKEPORT PIOCDATA,KIOBASE,PIAIOBASE,PIAPORTCDATA
+                   000003FC  B+      50 Name equ Base|(Device<<8)|(Register<<10)
+                             B       51 	MAKEPORT PIOCCMD,KIOBASE,PIAIOBASE,PIAPORTCCMD
+                   000007FC  B+      51 Name equ Base|(Device<<8)|(Register<<10)
+                             B       52 
+                             B       53 	MAKEPORT KIOCMDA,KIOBASE,KIOIOBASE,KIOCOMMANDA
+                   00000BFC  B+      53 Name equ Base|(Device<<8)|(Register<<10)
+                             B       54 	MAKEPORT KIOCMDB,KIOBASE,KIOIOBASE,KIOCOMMANDB
+                   00000FFC  B+      54 Name equ Base|(Device<<8)|(Register<<10)
+                             B       55 
+                             B       56 	
+                   000000F0  B       57 WDTMT	equ	0F0h
+                   000000F1  B       58 WDTCR	equ	0F1h
+                             B       59 
+                   000000F4  B       60 IPR		equ	0F4h
+                             B       61 
+                   000000EE  B       62 SCRP	equ	0EEh
+                   000000EF  B       63 SCDP	equ	0EFh
+                             B       64 
+                   00000020  B       65 SERIALTXBUFFLEN	equ	020h	;must be power of 2
+                             B       66 
+                             B       67 DEFB MACRO P1
+                             B       68 	DB P1
+                             B       69 	MACEND
+                             B       70 
+                             B       71 DEFW MACRO P1
+                             B       72 	DW P1
+                             B       73 	MACEND
+                             B       74 
+                             B       75 DEFM MACRO P1
+                             B       76 	DB P1
+                             B       77 	MACEND
+                             B       78 
+                             B       79 
+                             A        2 	.DEFINE DEUCEROM
+                             A        3 	.SECTION DEUCEROM
+                             A        4 	PUBLIC CTC0INT,CTC1INT,CTC2INT,CTC3INT,INIT_CTC
+                             A        5 
+                             A        6 	EXTERN IM1INTHANDLER,FRAMES,SIOASendChar
+                             A        7 
+                   00000080  A        8 INTON	equ 10000000b
+                   FFFFFF7F  A        9 INTOFF	equ ~INTON
+                             A       10 
+                   00000040  A       11 COUNTMODE	equ 01000000b
+                   FFFFFFBF  A       12 TIMEMODE	equ ~COUNTMODE
+                             A       13 
+                   00000020  A       14 PRE256	equ 00100000b
+                   FFFFFFDF  A       15 PRE16	equ ~PRE256
+                             A       16 
+                   00000010  A       17 RISING	equ 00010000b
+                   FFFFFFEF  A       18 FALLING	equ ~RISING
+                             A       19 
+                   00000008  A       20 PULSESTARTS	equ 00001000b
+                   FFFFFFF7  A       21 LOADSTARTS	equ ~PULSESTARTS
+Zilog Macro Assembler.  Version K2.14    27-Jan-120    21:57:14    Page:    3
+
+
+c:\users\john bradley\dropbox\ace-2019\newrom\ctc.asm
+
+Location Object              Type  Line Source
+                             A       22 
+                   00000004  A       23 TIMECONST	equ 00000100b
+                   FFFFFFFB  A       24 NOTIMECONST	equ ~TIMECONST
+                             A       25 
+                   00000002  A       26 RESET		equ 00000010b
+                   FFFFFFFD  A       27 CONSTINU	equ ~RESET
+                             A       28 
+                   00000001  A       29 CONTROL		equ 00000001b
+                   FFFFFFFE  A       30 VCTOR		equ ~CONTROL
+                             A       31 
+                             A       32 
+00000000                     A       33 INIT_CTC:
+00000000 3E 10               A       34 	ld	A,0  | (2<<3) ;use int 2,3,4,5
+00000002 01 FC 01            A       35 	ld	BC,CTCCH0
+00000005 ED 79               A       36 	out	(BC),A
+                             A       37 
+00000007 3E C9               A       38 	ld	A,11001001b
+00000009 01 FC 01            A       39 	ld	BC,CTCCH0
+0000000C ED 79               A       40 	out	(BC),A
+                             A       41 
+                             A       42 
+0000000E 3E C9               A       43 	ld	A,11001001b
+00000010 01 FC 05            A       44 	ld	BC,CTCCH1
+00000013 ED 79               A       45 	out	(BC),A
+                             A       46 
+                             A       47 
+00000015 3E C9               A       48 	ld	A,11001001b
+00000017 01 FC 09            A       49 	ld	BC,CTCCH2
+0000001A ED 79               A       50 	out	(BC),A
+                             A       51 
+0000001C                     A       52 INIT_CTC3:
+                             A       53 
+0000001C 3E 14               A       54 	ld	A,0|INTON&COUNTMODE|RISING|TIMECONST ;Set the CTC 3 to decrment when rising signal recived. Ints on. Time const follows
+0000001E 01 FC 0D            A       55 	ld	BC,CTCCH3
+00000021 ED 79               A       56 	out	(BC),A
+                             A       57 
+00000023 3E 01               A       58 	ld	A,0|00000001b ;Time Count this is the number of Trgs to receive before Int set to 1.
+00000025 01 FC 0D            A       59 	ld	BC,CTCCH3
+00000028 ED 79               A       60 	out	(BC),A
+                             A       61 
+0000002A C9                  A       62 	ret
+                             A       63 
+                             A       64 
+0000002B                     A       65 CTC0INT:
+                             A       66 ;	...	interrupt	routine
+0000002B F3                  A       67 	di
+0000002C F5                  A       68 	push af
+0000002D F1                  A       69 	pop af
+0000002E FB                  A       70 	ei
+0000002F ED 4D               A       71 	RETI
+                             A       72 
+00000031                     A       73 CTC1INT:
+                             A       74 ;	...	interrupt	routine
+00000031 F3                  A       75 	di
+00000032 F5                  A       76 	push af
+00000033 F1                  A       77 	pop af
+00000034 FB                  A       78 	ei
+00000035 ED 4D               A       79 	RETI
+Zilog Macro Assembler.  Version K2.14    27-Jan-120    21:57:14    Page:    4
+
+
+c:\users\john bradley\dropbox\ace-2019\newrom\ctc.asm
+
+Location Object              Type  Line Source
+                             A       80 
+00000037                     A       81 CTC2INT:
+                             A       82 
+00000037 F3                  A       83 	di
+00000038 F5                  A       84 	push af
+                             A       85 
+00000039 F1                  A       86 	pop af
+0000003A FB                  A       87 	ei
+0000003B ED 4D               A       88 	RETI
+                             A       89 
+0000003D                     A       90 CTC3INT:
+                             A       91 	;Set up to simulate IM 1
+0000003D CD 00 00            A       92 	call IM1INTHANDLER  ;We call and then to a RETI as the RETI caulses inretupt chain reset.
+00000040 F5                  A       93 	push	af
+00000041 E5                  A       94 	push	hl
+                             A       95 
+00000042 21 00 00            A       96 	LD		HL,FRAMES				; FRAMES1
+00000045 7E                  A       97 	LD		a,(HL)
+00000046 20 1A               A       98 	jr 		nz,NOSEND
+00000048 3E 58               A       99 	ld		a,'X'
+0000004A CD 00 00            A      100 	call	SIOASendChar
+                             A      101 
+0000004D 2A 00 30            A      102 	ld		hl,(03000h)
+00000050 36 2D               A      103 	ld		(hl),'-'
+00000052 21 00 30            A      104 	ld		hl,03000h
+00000055 34                  A      105 	inc		(hl)
+00000056 3E FF               A      106 	ld		a,0FFh
+00000058 A6                  A      107 	and		(hl)
+00000059 20 02               A      108 	jr		nz,WIPE
+0000005B 36 02               A      109 	ld		(hl),00002h
+0000005D                     A      110 WIPE:
+0000005D 2A 00 30            A      111 	ld		hl,(03000h)
+00000060 36 49               A      112 	ld		(hl),'I'
+                             A      113 
+00000062                     A      114 NOSEND:
+00000062 E1                  A      115 	pop		hl;
+00000063 F1                  A      116 	pop		af
+00000064 ED 4D               A      117 	RETI
+                             A      118 
+                             A      119 
+                             A      120 
+                             A      121 ;-------------------------------------------------
+00000066                     A      122 delay:  ; routine to add a programmable delay (set by value stored in D)
+00000066 C5                  A      123 	push bc
+00000067                     A      124 loop1:
+00000067 06 FF               A      125 	ld b,0ffh
+00000069                     A      126 loop2:
+00000069 10 FE               A      127 	djnz loop2
+0000006B 15                  A      128 	dec d
+0000006C C2 67 00            A      129 	jp nz, loop1
+0000006F C1                  A      130 	pop bc
+00000070 C9                  A      131 	ret
+                             A      132 
+                             A      133 
+Zilog Macro Assembler.  Version K2.14    27-Jan-120    21:57:14    Page:    5
+
+
+c:\users\john bradley\dropbox\ace-2019\newrom\ctc.asm
+
+
+    0 Warnings
+    0 Errors
