@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 6
+Sheet 5 8
 Title "ACE4NOKB"
-Date "2019-10-24"
+Date "2020-04-30"
 Rev "Alpha"
 Comp "Ontobus"
 Comment1 "John Bradley"
@@ -271,10 +271,10 @@ U 1 1 5E446247
 P 3375 5075
 F 0 "KEYBOARD1" H 3450 5625 50  0000 C CNN
 F 1 "Conn_02x08_Odd_Even" H 3450 5525 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical" H 3375 5075 50  0001 C CNN
+F 2 "Connector_IDC:IDC-Header_2x08_P2.54mm_Vertical" H 3375 5075 50  0001 C CNN
 F 3 "" H 3375 5075 50  0001 C CNN
-F 4 "SAMTEC" H 3375 5075 50  0001 C CNN "Manufacturer_Name"
-F 5 "TSW–108–10–T–D–RA" H 3375 5075 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "IDC" H 3375 5075 50  0001 C CNN "Manufacturer_Name"
+F 5 "" H 3375 5075 50  0001 C CNN "Manufacturer_Part_Number"
 	1    3375 5075
 	1    0    0    -1  
 $EndComp

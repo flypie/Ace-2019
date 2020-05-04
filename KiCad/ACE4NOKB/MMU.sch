@@ -3,9 +3,9 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 6
+Sheet 5 8
 Title "ACE4NOKB"
-Date "2019-10-24"
+Date "2020-04-30"
 Rev "Alpha"
 Comp "Ontobus"
 Comment1 "John Bradley"
