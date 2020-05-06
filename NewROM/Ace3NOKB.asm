@@ -35,7 +35,8 @@ L0000:
 	DI								; disable interrupts.
 	LD		HL,RAMSTART				; start of 'User' RAM
 	LD		A,0FCh					; a test byte and 1K masking byte.
-	JR		L0028					; forward to continue at Part 2.
+;	JR		L0028					; forward to continue at Part 2. //ontobus
+	JP		NEWROMSTART
 
 ; -------------------
 ; THE 'PRINT' RESTART
@@ -2578,7 +2579,9 @@ L07FE:  LD		A,D						; check if the
 	OR		E						; counter is zero.
 	RET		Z						; return if so.					>>
 
-	LD		(HL),020h				; insert a space character.
+;	LD		(HL),020h				; insert a space character.
+	LD		(HL),L				; insert a space character. //Ontobus
+
 	INC		HL						; next address.
 	DEC		DE						; decrement byte counter.
 	JR		L07FE					; loop back to exit on zero.

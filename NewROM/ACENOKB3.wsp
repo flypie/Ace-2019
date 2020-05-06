@@ -706,7 +706,7 @@ ptn_Child1=MainFrame
 ptn_Child2=ChildFrames
 [WorkState_v1_1.Frames.MainFrame]
 WindowPlacement=MCAAAAAACAAAAAAADAAAAAAAAADIPPPPAADIPPPPPPPPPPPPPPPPPPPPKOAAAAAAPJAAAAAAKIGAAAAAGJDAAAAA
-Title=ZiLOG Developer Studio - [CTC.asm]
+Title=ZiLOG Developer Studio - [ace3nokb.asm]
 [WorkState_v1_1.Frames.ChildFrames]
 ptn_Child1=Document-0
 ptn_Child2=Document-1
@@ -720,15 +720,15 @@ ptn_Child1=ViewFrame-0
 DocPathName=c:\users\john bradley\dropbox\ace-2019\newrom\ace3nokb.asm
 DocumentString=ZDS Document
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPFOPPPPPPANAAAAAAANAAAAAACOFAAAAAFPCAAAAA
-IsActiveChildFrame=False
+WindowPlacement=MCAAAAAACAAAAAAADAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPFOPPPPPPMMAAAAAADEAAAAAAONFAAAAAIGCAAAAA
+IsActiveChildFrame=True
 [WorkState_v1_1.Frames.ChildFrames.Document-1]
 ptn_Child1=ViewFrame-0
 [WorkState_v1_1.Frames.ChildFrames.Document-1.ViewFrame-0]
 DocPathName=C:\Users\John Bradley\Dropbox\Ace-2019\NewROM\IODEFS.inc
 DocumentString=ZDS Document
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPFOPPPPPPFCAAAAAAFFAAAAAANEFAAAAAKFCAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAACAAAAAAAAOBAAAAADNCAAAAAMPPPPPPPFOPPPPPPFCAAAAAAFFAAAAAANEFAAAAAKFCAAAAA
 IsActiveChildFrame=False
 [WorkState_v1_1.Frames.ChildFrames.Document-2]
 ptn_Child1=ViewFrame-0
@@ -736,15 +736,15 @@ ptn_Child1=ViewFrame-0
 DocPathName=C:\Users\John Bradley\Dropbox\Ace-2019\NewROM\CTC.asm
 DocumentString=ZDS Document
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAACAAAAAAADAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPFOPPPPPPGLAAAAAAGLAAAAAACOFAAAAAPLCAAAAA
-IsActiveChildFrame=True
+WindowPlacement=MCAAAAAAAAAAAAAACAAAAAAAAAAAAAAADNCAAAAAMPPPPPPPFOPPPPPPGLAAAAAAGLAAAAAACOFAAAAAPLCAAAAA
+IsActiveChildFrame=False
 [WorkState_v1_1.Frames.ChildFrames.Document-3]
 ptn_Child1=ViewFrame-0
 [WorkState_v1_1.Frames.ChildFrames.Document-3.ViewFrame-0]
 DocPathName=c:\users\john bradley\dropbox\ace-2019\newrom\pio.asm
 DocumentString=ZDS Document
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPFOPPPPPPCIAAAAAACIAAAAAAOKFAAAAALICAAAAA
+WindowPlacement=MCAAAAAACAAAAAAACAAAAAAAAKAAAAAAHNCAAAAAMPPPPPPPFOPPPPPPCIAAAAAACIAAAAAAOKFAAAAALICAAAAA
 IsActiveChildFrame=False
 [WorkState_v1_1.Frames.ChildFrames.Document-4]
 ptn_Child1=ViewFrame-0
@@ -752,7 +752,7 @@ ptn_Child1=ViewFrame-0
 DocPathName=C:\Users\John Bradley\Dropbox\Ace-2019\NewROM\Extended.asm
 DocumentString=ZDS Document
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPFOPPPPPPPHAAAAAADHAAAAAALKFAAAAAMHCAAAAA
+WindowPlacement=MCAAAAAACAAAAAAACAAAAAAAAEBAAAAAHNCAAAAAMPPPPPPPFOPPPPPPPHAAAAAADHAAAAAALKFAAAAAMHCAAAAA
 IsActiveChildFrame=False
 [WorkState_v1_1.Frames.ChildFrames.Document-5]
 ptn_Child1=ViewFrame-0

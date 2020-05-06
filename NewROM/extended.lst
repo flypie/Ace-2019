@@ -1,4 +1,4 @@
-Zilog Macro Assembler.  Version K2.14    27-Jan-120    21:37:00    Page:    1
+Zilog Macro Assembler.  Version K2.14    05-May-120    00:29:13    Page:    1
 
 
 c:\users\john bradley\dropbox\ace-2019\newrom\extended.asm
@@ -62,7 +62,7 @@ Location Object              Type  Line Source
                    000002FC  B+      45 Name equ Base|(Device<<8)|(Register<<10)
                              B       46 	MAKEPORT SIOACMD,KIOBASE,SIOIOBASE,SIOPORTACMD
                    000006FC  B+      46 Name equ Base|(Device<<8)|(Register<<10)
-Zilog Macro Assembler.  Version K2.14    27-Jan-120    21:37:00    Page:    2
+Zilog Macro Assembler.  Version K2.14    05-May-120    00:29:13    Page:    2
 
 
 iodefs.inc
@@ -126,7 +126,7 @@ Location Object              Type  Line Source
 00003000 00 00               A       19 	DW  PIOAINT ;int 0
                              A       20 
                              A       21 	org	03008H
-Zilog Macro Assembler.  Version K2.14    27-Jan-120    21:37:00    Page:    3
+Zilog Macro Assembler.  Version K2.14    05-May-120    00:29:13    Page:    3
 
 
 c:\users\john bradley\dropbox\ace-2019\newrom\extended.asm
@@ -154,26 +154,34 @@ Location Object              Type  Line Source
                              A       41 
 00000000                     A       42 NEWROMSTART:
                              A       43 
-00000000 CD 06 00            A       44 	call INIT_KIO
-00000003 C3 00 00            A       45 	JP	L009B
-                             A       46 
-                             A       47 
-00000006                     A       48 INIT_KIO:
-00000006 3A 83 00            A       49 	ld	A,(1<<7)|011B	; SIOPIA Moude = SIP & Daischain = CTC,SIO,PIO 
-00000009 01 FC 0B            A       50 	ld	BC,KIOCMDA
-0000000C ED 79               A       51 	out	(BC),A
-                             A       52 
-0000000E CD 00 00            A       53 	call INIT_CTC
-00000011 CD 00 00            A       54 	call INIT_PIO
-00000014 CD 00 00            A       55 	call INIT_SIO
-                             A       56 
-00000017 ED 5E               A       57 	IM	2
-00000019 3E 30               A       58 	LD	A,INTTBL/256
-0000001B ED 47               A       59 	LD	I, A
-0000001D FB                  A       60 	EI
-                             A       61 
-                             A       62 
-Zilog Macro Assembler.  Version K2.14    27-Jan-120    21:37:00    Page:    4
+                             A       44 
+00000000 21 00 20            A       45 	LD		HL,02000h
+00000003                     A       46 Looper:
+00000003 4E                  A       47 	LD		C,(HL)
+00000004 0C                  A       48 	INC		C
+00000005 71                  A       49 	LD		(HL),C
+00000006 C3 03 00            A       50 	JP Looper
+                             A       51 
+00000009 CD 0F 00            A       52 	call INIT_KIO
+0000000C C3 00 00            A       53 	JP	L009B
+                             A       54 
+                             A       55 
+0000000F                     A       56 INIT_KIO:
+0000000F 3A 83 00            A       57 	ld	A,(1<<7)|011B	; SIOPIA Moude = SIP & Daischain = CTC,SIO,PIO 
+00000012 01 FC 0B            A       58 	ld	BC,KIOCMDA
+00000015 ED 79               A       59 	out	(BC),A
+                             A       60 
+00000017 CD 00 00            A       61 	call INIT_CTC
+0000001A CD 00 00            A       62 	call INIT_PIO
+0000001D CD 00 00            A       63 	call INIT_SIO
+                             A       64 
+00000020 ED 5E               A       65 	IM	2
+00000022 3E 30               A       66 	LD	A,INTTBL/256
+00000024 ED 47               A       67 	LD	I, A
+00000026 FB                  A       68 	EI
+                             A       69 
+                             A       70 
+Zilog Macro Assembler.  Version K2.14    05-May-120    00:29:13    Page:    4
 
 
 c:\users\john bradley\dropbox\ace-2019\newrom\extended.asm

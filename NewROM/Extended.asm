@@ -41,6 +41,14 @@ SIOINTTBL:
 
 NEWROMSTART:
 
+
+	LD		HL,02000h
+Looper:
+	LD		C,(HL)
+	INC		C
+	LD		(HL),C
+	JP Looper
+
 	call INIT_KIO
 	JP	L009B
 
