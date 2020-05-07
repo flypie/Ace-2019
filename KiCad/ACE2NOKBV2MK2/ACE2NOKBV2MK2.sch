@@ -5638,4 +5638,40 @@ Wire Wire Line
 Wire Wire Line
 	7500 8850 7500 9875
 Connection ~ 8500 9875
+Text Label 15100 7400 0    50   ~ 0
+VA0
+Text Label 15300 7500 0    50   ~ 0
+VA1
+Text Label 15500 7600 0    50   ~ 0
+VA2
+Text Label 15700 7700 0    50   ~ 0
+VA3
+Text Label 15900 7800 0    50   ~ 0
+VA4
+Text Label 16100 7900 0    50   ~ 0
+VA5
+Text Label 16300 8000 0    50   ~ 0
+VA6
+Text Label 16500 8100 0    50   ~ 0
+VA7
+Text Label 16700 8200 0    50   ~ 0
+VA8
+Text Label 16750 8300 0    50   ~ 0
+VA9
+Text Label 19400 8100 0    50   ~ 0
+VD4
+Text Label 19400 7800 0    50   ~ 0
+VD1
+Text Label 19400 8000 0    50   ~ 0
+VD3
+Text Label 19400 8200 0    50   ~ 0
+VD5
+Text Label 19400 8300 0    50   ~ 0
+VD6
+Text Label 19400 8400 0    50   ~ 0
+VD7
+Text Label 19400 7700 0    50   ~ 0
+VD0
+Text Label 19400 7900 0    50   ~ 0
+VD2
 $EndSCHEMATC
