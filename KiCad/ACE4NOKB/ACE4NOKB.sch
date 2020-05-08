@@ -464,8 +464,8 @@ Wire Wire Line
 Wire Wire Line
 	7125 6425 7025 6425
 Wire Wire Line
-	5000 2675 5000 2600
-Text Label 5000 2600 1    50   ~ 0
+	8500 5675 8575 5675
+Text Label 8575 5675 0    50   ~ 0
 ~WE
 Wire Wire Line
 	2425 7700 2400 7700
@@ -557,9 +557,7 @@ F1 "CompositeVid.sch" 150
 $EndSheet
 Wire Wire Line
 	4400 1200 4600 1200
-Wire Wire Line
-	4400 1300 4600 1300
-Text GLabel 4600 1300 2    50   Input ~ 0
+Text GLabel 6200 1400 2    50   Input ~ 0
 ~CHARRAMSEL
 Text GLabel 4600 1200 2    50   Input ~ 0
 ~VIDEORAMSEL
@@ -891,15 +889,7 @@ Connection ~ 2825 3375
 Wire Wire Line
 	2825 3375 2825 3275
 Wire Wire Line
-	4350 4250 4350 2575
-Wire Wire Line
-	4350 2575 2825 2575
-Wire Wire Line
-	4450 4250 4450 1500
-Wire Wire Line
 	4450 1500 4400 1500
-Wire Wire Line
-	4550 4250 4550 1400
 Wire Wire Line
 	4550 1400 4400 1400
 Wire Wire Line
@@ -910,15 +900,7 @@ Wire Wire Line
 	6975 6275 7025 6275
 Connection ~ 7025 6275
 Wire Wire Line
-	3450 3075 5000 3075
-Wire Wire Line
-	7425 5675 8100 5675
-Wire Wire Line
-	5000 3075 5000 2975
-Wire Wire Line
 	5325 6075 4450 6075
-Wire Wire Line
-	4450 4850 4450 6075
 Wire Wire Line
 	5725 6275 5725 6350
 Wire Wire Line
@@ -1088,13 +1070,13 @@ $EndComp
 $Comp
 L 74xx:74LS11 Z22
 U 3 1 69893729
-P 4450 4550
-F 0 "Z22" V 4400 4750 50  0000 L CNN
-F 1 "74AHCT11" V 4450 4750 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 4450 4550 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 4450 4550 50  0001 C CNN
-	3    4450 4550
-	0    1    1    0   
+P 5675 3125
+F 0 "Z22" V 5625 3325 50  0000 L CNN
+F 1 "74AHCT11" V 5675 3325 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 5675 3125 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 5675 3125 50  0001 C CNN
+	3    5675 3125
+	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R110
@@ -1110,13 +1092,13 @@ $EndComp
 $Comp
 L Device:R R32
 U 1 1 5DE23231
-P 5000 2825
-F 0 "R32" V 4775 2825 50  0000 C CNN
-F 1 "1k0" V 4875 2825 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 4930 2825 50  0001 C CNN
-F 3 "" H 5000 2825 50  0001 C CNN
-	1    5000 2825
-	1    0    0    -1  
+P 8350 5675
+F 0 "R32" V 8125 5675 50  0000 C CNN
+F 1 "1k0" V 8225 5675 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 8280 5675 50  0001 C CNN
+F 3 "" H 8350 5675 50  0001 C CNN
+	1    8350 5675
+	0    1    1    0   
 $EndComp
 $Comp
 L SamacSys_Parts:CY62158-TSOP-II-44-PIN Z3-4
@@ -1233,20 +1215,17 @@ $EndComp
 $Comp
 L 74xx:74LS02 Z25
 U 3 1 624D0B8B
-P -1800 3000
-F 0 "Z25" H -1800 3350 50  0000 C CNN
-F 1 "74AHCT02" H -1800 3250 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H -1800 3000 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H -1800 3000 50  0001 C CNN
-	3    -1800 3000
+P 4125 2950
+F 0 "Z25" H 4125 3300 50  0000 C CNN
+F 1 "74AHCT02" H 4125 3200 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 4125 2950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 4125 2950 50  0001 C CNN
+	3    4125 2950
 	1    0    0    -1  
 $EndComp
 NoConn ~ -1500 2250
 NoConn ~ -2100 2350
 NoConn ~ -2100 2150
-NoConn ~ -1500 3000
-NoConn ~ -2100 3100
-NoConn ~ -2100 2900
 $Comp
 L 74xx:74LS86 Z23
 U 1 1 6A7508F4
@@ -1272,9 +1251,6 @@ $EndComp
 NoConn ~ -750 1500
 NoConn ~ -1350 1400
 NoConn ~ -1350 1600
-Connection ~ 5000 3075
-Wire Wire Line
-	5000 3075 8100 3075
 Wire Wire Line
 	7025 6275 7025 6425
 Wire Wire Line
@@ -1294,8 +1270,6 @@ Wire Wire Line
 NoConn ~ -1500 1500
 NoConn ~ -2100 1600
 NoConn ~ -2100 1400
-Wire Wire Line
-	8100 3075 8100 5675
 $Comp
 L power:GND #~PWR0126
 U 1 1 5EB33AD4
@@ -1366,4 +1340,248 @@ $EndComp
 NoConn ~ 25   1500
 NoConn ~ -575 1600
 NoConn ~ -575 1400
+$Comp
+L 74xx:74LS32 Z350
+U 1 1 623F214A
+P 5800 1400
+F 0 "Z350" H 5800 1700 50  0000 C CNN
+F 1 "74HCT32" H 5800 1600 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 5800 1400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 5800 1400 50  0001 C CNN
+	1    5800 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS32 Z350
+U 2 1 6240C4AF
+P 5775 1925
+F 0 "Z350" H 5775 2225 50  0000 C CNN
+F 1 "74HCT32" H 5775 2125 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 5775 1925 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 5775 1925 50  0001 C CNN
+	2    5775 1925
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS32 Z350
+U 3 1 6240D982
+P 3800 2025
+F 0 "Z350" H 3800 2325 50  0000 C CNN
+F 1 "74HCT32" H 3800 2225 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 3800 2025 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 3800 2025 50  0001 C CNN
+	3    3800 2025
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS32 Z350
+U 4 1 6240D98C
+P 4825 2850
+F 0 "Z350" H 4825 3150 50  0000 C CNN
+F 1 "74HCT32" H 4825 3050 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 4825 2850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 4825 2850 50  0001 C CNN
+	4    4825 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS32 Z350
+U 5 1 62458DA1
+P 10875 7800
+F 0 "Z350" H 11125 7850 50  0000 L CNN
+F 1 "74HCT32" H 11125 7750 50  0000 L CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 10875 7800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 10875 7800 50  0001 C CNN
+	5    10875 7800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 1300 5000 1300
+Wire Wire Line
+	6100 1400 6200 1400
+Wire Wire Line
+	5500 1500 5400 1500
+Text GLabel 5400 1500 0    50   Input ~ 0
+~WR
+Wire Wire Line
+	4550 1400 4550 2375
+Text Label 4450 6075 0    50   ~ 0
+ROM_SELECT
+Text GLabel 6175 1925 2    50   Input ~ 0
+~CHARROMSEL
+Wire Wire Line
+	6075 1925 6150 1925
+Wire Wire Line
+	5475 2025 5375 2025
+Text GLabel 5375 2025 0    50   Input ~ 0
+~RD
+Wire Wire Line
+	5000 1825 5000 1300
+Wire Wire Line
+	5000 1825 5475 1825
+Connection ~ 5000 1300
+Wire Wire Line
+	5000 1300 5500 1300
+Wire Wire Line
+	2825 2575 6375 2575
+Wire Wire Line
+	4550 2375 6375 2375
+Wire Wire Line
+	4450 1500 4450 1725
+Wire Wire Line
+	4450 1725 3125 1725
+Wire Wire Line
+	3125 1725 3125 1925
+Wire Wire Line
+	3125 1925 3500 1925
+Text Label 3400 2125 2    50   ~ 0
+A10
+Wire Wire Line
+	3500 2125 3475 2125
+Wire Wire Line
+	4100 2025 4450 2025
+Wire Wire Line
+	4450 2025 4450 2475
+Wire Wire Line
+	4450 2475 6375 2475
+$Comp
+L 74xx:74LS21 Z351
+U 1 1 6293999B
+P 6675 2425
+F 0 "Z351" H 6700 2775 50  0000 C CNN
+F 1 "74HCT21" H 6700 2675 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 6675 2425 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS21" H 6675 2425 50  0001 C CNN
+	1    6675 2425
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS21 Z351
+U 2 1 6293A4E8
+P -275 2225
+F 0 "Z351" H -200 2650 50  0000 C CNN
+F 1 "74HCT21" H -200 2550 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H -275 2225 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS21" H -275 2225 50  0001 C CNN
+	2    -275 2225
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS21 Z351
+U 3 1 6293B80C
+P 11675 7800
+F 0 "Z351" H 11925 7850 50  0000 L CNN
+F 1 "74HCT21" H 11925 7750 50  0000 L CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 11675 7800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS21" H 11675 7800 50  0001 C CNN
+	3    11675 7800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 1925 6150 2275
+Wire Wire Line
+	6150 2275 6375 2275
+Connection ~ 6150 1925
+Wire Wire Line
+	6150 1925 6175 1925
+Wire Wire Line
+	7150 2425 6975 2425
+Text Label 7150 2425 0    50   ~ 0
+ROM_SELECT
+Wire Wire Line
+	7425 5675 8100 5675
+Wire Wire Line
+	8100 5675 8100 5800
+Connection ~ 8100 5675
+Wire Wire Line
+	8100 5675 8200 5675
+Wire Wire Line
+	8100 5800 8575 5800
+Text Label 8575 5800 0    50   ~ 0
+RAM_SELECT
+Connection ~ 3125 1925
+Wire Wire Line
+	3475 2125 3475 2850
+Wire Wire Line
+	3475 2850 3825 2850
+Connection ~ 3475 2125
+Wire Wire Line
+	3475 2125 3400 2125
+$Comp
+L power:GND #~PWR0114
+U 1 1 62D219C0
+P 3700 2950
+F 0 "#~PWR0114" H 3700 2700 50  0001 C CNN
+F 1 "GND" H 3730 2745 50  0000 C CNN
+F 2 "" H 3700 2950 50  0001 C CNN
+F 3 "" H 3700 2950 50  0001 C CNN
+	1    3700 2950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3825 3050 3825 2950
+Wire Wire Line
+	3700 2950 3825 2950
+Wire Wire Line
+	4425 2950 4525 2950
+Wire Wire Line
+	3450 3075 3450 3225
+Wire Wire Line
+	5975 3125 6150 3125
+Text Label 6150 3125 0    50   ~ 0
+RAM_SELECT
+Wire Wire Line
+	3450 3225 5375 3225
+Wire Wire Line
+	5125 2850 5300 2850
+Wire Wire Line
+	5300 3125 5375 3125
+Wire Wire Line
+	5375 3025 5300 3025
+Wire Wire Line
+	5300 2850 5300 3025
+Connection ~ 5300 3025
+Wire Wire Line
+	5300 3025 5300 3125
+Wire Wire Line
+	4525 2750 3125 2750
+Wire Wire Line
+	3125 1925 3125 2750
+Wire Wire Line
+	11675 7300 10875 7300
+Connection ~ 10875 7300
+Wire Wire Line
+	10875 7300 10500 7300
+Wire Wire Line
+	11675 8300 10875 8300
+Connection ~ 10875 8300
+Wire Wire Line
+	10875 8300 10500 8300
+$Comp
+L power:GND #~PWR0125
+U 1 1 62FE0192
+P 10500 8300
+F 0 "#~PWR0125" H 10500 8050 50  0001 C CNN
+F 1 "GND" H 10530 8095 50  0000 C CNN
+F 2 "" H 10500 8300 50  0001 C CNN
+F 3 "" H 10500 8300 50  0001 C CNN
+	1    10500 8300
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VCC #~PWR0127
+U 1 1 62FE3366
+P 10500 7300
+F 0 "#~PWR0127" H 10500 7150 50  0001 C CNN
+F 1 "VCC" V 10525 7475 50  0000 L CNN
+F 2 "" H 10500 7300 50  0001 C CNN
+F 3 "" H 10500 7300 50  0001 C CNN
+	1    10500 7300
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 25   2225
+NoConn ~ -575 2375
+NoConn ~ -575 2275
+NoConn ~ -575 2175
+NoConn ~ -575 2075
 $EndSCHEMATC
