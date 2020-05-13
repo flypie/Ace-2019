@@ -1,10 +1,18 @@
-[WorkState_v1_1.Frames.ChildFrames.Document-6]
+[WorkState_v1_1.Frames.ChildFrames.Document-9]
 ptn_Child1=ViewFrame-0
-[WorkState_v1_1.Frames.ChildFrames.Document-6.ViewFrame-0]
-DocPathName=C:\Users\John Bradley\Dropbox\Ace-2019\NewROM\sio.asm
+[WorkState_v1_1.Frames.ChildFrames.Document-9.ViewFrame-0]
+DocPathName=C:\Users\John Bradley\Dropbox\Ace-2019\NewROM\INTTABLE.ASM
 DocumentString=ZDS Document
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAACAAAAAAADAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPFOPPPPPPKOAAAAAAKOAAAAAAGBGAAAAADPCAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPFOPPPPPPAAAAAAAAAAAAAAAAPDDAAAAABLBAAAAA
+IsActiveChildFrame=False
+[WorkState_v1_1.Frames.ChildFrames.Document-8]
+ptn_Child1=ViewFrame-0
+[WorkState_v1_1.Frames.ChildFrames.Document-8.ViewFrame-0]
+DocPathName=C:\Users\John Bradley\Dropbox\Ace-2019\NewROM\INTTABLE.ASM
+DocumentString=ZDS Document
+DocTemplateIndex=0
+WindowPlacement=MCAAAAAACAAAAAAADAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPFOPPPPPPAAAAAAAAAAAAAAAAPDDAAAAABLBAAAAA
 IsActiveChildFrame=True
 [WorkState_v1_1]
 ptn_Child1=DockState
@@ -236,8 +244,8 @@ Docking=True
 MRUDockID=0
 MRUDockLeftPos=1
 MRUDockTopPos=5
-MRUDockRightPos=1920
-MRUDockBottomPos=189
+MRUDockRightPos=1375
+MRUDockBottomPos=264
 MRUFloatStyle=4
 MRUFloatXPos=-2147483648
 MRUFloatYPos=0
@@ -248,8 +256,8 @@ MDIChild=False
 PctWidth=1000000
 MRUFloatCX=300
 MRUFloatCY=180
-MRUHorzDockCX=1919
-MRUHorzDockCY=184
+MRUHorzDockCX=1374
+MRUHorzDockCY=259
 MRUVertDockCX=300
 MRUVertDockCY=180
 MRUDockingState=0
@@ -267,7 +275,7 @@ MRUDockID=59420
 MRUDockLeftPos=0
 MRUDockTopPos=-2
 MRUDockRightPos=356
-MRUDockBottomPos=755
+MRUDockBottomPos=391
 MRUFloatStyle=4
 MRUFloatXPos=-2147483648
 MRUFloatYPos=0
@@ -281,7 +289,7 @@ MRUFloatCY=180
 MRUHorzDockCX=300
 MRUHorzDockCY=180
 MRUVertDockCX=356
-MRUVertDockCY=757
+MRUVertDockCY=393
 MRUDockingState=0
 DockingStyle=61440
 TypeID=0
@@ -705,7 +713,7 @@ LargeButtons=False
 ptn_Child1=MainFrame
 ptn_Child2=ChildFrames
 [WorkState_v1_1.Frames.MainFrame]
-WindowPlacement=MCAAAAAACAAAAAAADAAAAAAAAADIPPPPAADIPPPPPPPPPPPPPPPPPPPPKOAAAAAAPJAAAAAAKIGAAAAAGJDAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPNOAAAAAAGIAAAAAAEFGAAAAANHDAAAAA
 Title=ZiLOG Developer Studio - [ace3nokb.asm]
 [WorkState_v1_1.Frames.ChildFrames]
 ptn_Child1=Document-0
@@ -714,51 +722,69 @@ ptn_Child3=Document-2
 ptn_Child4=Document-3
 ptn_Child5=Document-4
 ptn_Child6=Document-5
+ptn_Child7=Document-6
+ptn_Child8=Document-7
 [WorkState_v1_1.Frames.ChildFrames.Document-0]
 ptn_Child1=ViewFrame-0
 [WorkState_v1_1.Frames.ChildFrames.Document-0.ViewFrame-0]
 DocPathName=c:\users\john bradley\dropbox\ace-2019\newrom\ace3nokb.asm
 DocumentString=ZDS Document
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAACAAAAAAADAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPFOPPPPPPMMAAAAAADEAAAAAAONFAAAAAIGCAAAAA
+WindowPlacement=MCAAAAAACAAAAAAADAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPFOPPPPPPOEAAAAAAOEAAAAAANLDAAAAAKJBAAAAA
 IsActiveChildFrame=True
 [WorkState_v1_1.Frames.ChildFrames.Document-1]
 ptn_Child1=ViewFrame-0
 [WorkState_v1_1.Frames.ChildFrames.Document-1.ViewFrame-0]
-DocPathName=C:\Users\John Bradley\Dropbox\Ace-2019\NewROM\IODEFS.inc
+DocPathName=c:\users\john bradley\dropbox\ace-2019\newrom\ctc.asm
 DocumentString=ZDS Document
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAACAAAAAAAAOBAAAAADNCAAAAAMPPPPPPPFOPPPPPPFCAAAAAAFFAAAAAANEFAAAAAKFCAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPFOPPPPPPEDAAAAAAEDAAAAAADHDAAAAAFOBAAAAA
 IsActiveChildFrame=False
 [WorkState_v1_1.Frames.ChildFrames.Document-2]
 ptn_Child1=ViewFrame-0
 [WorkState_v1_1.Frames.ChildFrames.Document-2.ViewFrame-0]
-DocPathName=C:\Users\John Bradley\Dropbox\Ace-2019\NewROM\CTC.asm
+DocPathName=c:\users\john bradley\dropbox\ace-2019\newrom\gvariables.asm
 DocumentString=ZDS Document
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAACAAAAAAAAAAAAAAADNCAAAAAMPPPPPPPFOPPPPPPGLAAAAAAGLAAAAAACOFAAAAAPLCAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPFOPPPPPPOEAAAAAAOEAAAAAANIDAAAAAPPBAAAAA
 IsActiveChildFrame=False
 [WorkState_v1_1.Frames.ChildFrames.Document-3]
 ptn_Child1=ViewFrame-0
 [WorkState_v1_1.Frames.ChildFrames.Document-3.ViewFrame-0]
-DocPathName=c:\users\john bradley\dropbox\ace-2019\newrom\pio.asm
+DocPathName=c:\users\john bradley\dropbox\ace-2019\newrom\extended.asm
 DocumentString=ZDS Document
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAACAAAAAAACAAAAAAAAKAAAAAAHNCAAAAAMPPPPPPPFOPPPPPPCIAAAAAACIAAAAAAOKFAAAAALICAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPFOPPPPPPIGAAAAAAIGAAAAAAHKDAAAAAJBCAAAAA
 IsActiveChildFrame=False
 [WorkState_v1_1.Frames.ChildFrames.Document-4]
 ptn_Child1=ViewFrame-0
 [WorkState_v1_1.Frames.ChildFrames.Document-4.ViewFrame-0]
-DocPathName=C:\Users\John Bradley\Dropbox\Ace-2019\NewROM\Extended.asm
+DocPathName=c:\users\john bradley\dropbox\ace-2019\newrom\sio.asm
 DocumentString=ZDS Document
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAACAAAAAAACAAAAAAAAEBAAAAAHNCAAAAAMPPPPPPPFOPPPPPPPHAAAAAADHAAAAAALKFAAAAAMHCAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPFOPPPPPPKBAAAAAAKBAAAAAANIDAAAAAKGBAAAAA
 IsActiveChildFrame=False
 [WorkState_v1_1.Frames.ChildFrames.Document-5]
 ptn_Child1=ViewFrame-0
 [WorkState_v1_1.Frames.ChildFrames.Document-5.ViewFrame-0]
-DocPathName=c:\users\john bradley\dropbox\ace-2019\newrom\sio.asm
+DocPathName=c:\users\john bradley\dropbox\ace-2019\newrom\pio.asm
 DocumentString=ZDS Document
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPFOPPPPPPAAAAAAAAAAAAAAAAIIAAAAAAHCAAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPFOPPPPPPEDAAAAAAEDAAAAAAHKDAAAAAEIBAAAAA
+IsActiveChildFrame=False
+[WorkState_v1_1.Frames.ChildFrames.Document-6]
+ptn_Child1=ViewFrame-0
+[WorkState_v1_1.Frames.ChildFrames.Document-6.ViewFrame-0]
+DocPathName=c:\users\john bradley\dropbox\ace-2019\newrom\endend.asm
+DocumentString=ZDS Document
+DocTemplateIndex=0
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPFOPPPPPPOEAAAAAAOEAAAAAABMDAAAAAOJBAAAAA
+IsActiveChildFrame=False
+[WorkState_v1_1.Frames.ChildFrames.Document-7]
+ptn_Child1=ViewFrame-0
+[WorkState_v1_1.Frames.ChildFrames.Document-7.ViewFrame-0]
+DocPathName=c:\users\john bradley\dropbox\ace-2019\newrom\inttable.asm
+DocumentString=ZDS Document
+DocTemplateIndex=0
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPFOPPPPPPIGAAAAAAIGAAAAAALNDAAAAANGBAAAAA
 IsActiveChildFrame=False

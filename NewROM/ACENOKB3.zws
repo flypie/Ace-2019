@@ -40,6 +40,9 @@ SOURCE = extended.asm
 SOURCE = ctc.asm
 SOURCE = pio.asm
 SOURCE = sio.asm
+SOURCE = endend.asm
+SOURCE = gvariables.asm
+SOURCE = inttable.asm
 #end
 
 [WEB FILES]
@@ -64,10 +67,14 @@ ASM =  -l -g -j -q
 [LNK SETTINGS]
 #begin
 LNK =  -Z -g -m
-LNK =  -l DEUCEROM '%3000'
-LNK =  -r EXTIO %0 : %FFFFF
-LNK =  -r INTIO %0 : %FF
-LNK =  -r ROM %0 : %3FFF
+LNK =  -A ACEROM ROM
+LNK =  -A DEUCEROM ROM
+LNK =  -A ACERAM EXTIO
+LNK =  -R ACERAM %3C00 , %1000
+LNK =  -o ROM DEUCEROM,INTTABLE,ENDROMS
+LNK =  -r EXTIO %0 , %100000
+LNK =  -r INTIO %0 , %100
+LNK =  -r ROM %0 , %1FFF
 #end
 
 [REALOS LIBRARIES]
@@ -222,7 +229,7 @@ TabId = 3
 [OVERRIDE SETTINGS]
 #begin
 STATUS = 0
-SIZE = 16384
+SIZE = 8191
 
 #end
 

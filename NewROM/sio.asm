@@ -1,15 +1,19 @@
 	INCLUDE "iodefs.inc"
-	.DEFINE DEUCEROM
-	.SECTION DEUCEROM
+
+	.ifndef SIOINTTBL
+
+;	.DEFINE DEUCEROM
+;	.SECTION DEUCEROM
 
 ;--------------------------
-
-
 	PUBLIC INIT_SIO, SIOASendChar
 	PUBLIC SIOAINT_TBE,SIOAINT_ESC,SIOAINT_RCA,SIOAINT_SRC,SIOBINT_TBE,SIOBINT_ESC,SIOBINT_RCA,SIOBINT_SRC
 
-	EXTERN SIOINTTBL
-	EXTERN SIOATXQ, SIOANEXTIN, SIOANEXTOUT,SIOATXBUFF
+;	EXTERN SIOINTTBL
+;	EXTERN SIOATXQ, SIOANEXTIN, SIOANEXTOUT,SIOATXBUFF
+
+	.endif
+
 
 INIT_SIO:
 	ld	a,0
@@ -47,7 +51,7 @@ setSIO:
 
 	ld a,00000010b	; write into WR0: select WR2
 	out (BC),A
-	ld a,SIOINTTBL	; write into WR2: set interrupt vector, but bits D3/D2/D1 of this vector
+;	ld a,SIOINTTBL	; write into WR2: set interrupt vector, but bits D3/D2/D1 of this vector
 	; will be affected by the channel & condition that raised the interrupt
 	; (see datasheet): in our example, 00Ch for Ch.A receiving a char, 0x0E
 	; for special conditions
@@ -266,4 +270,4 @@ FLAGSET:
 EXITTHIS:
 	ret
 
-	
+
