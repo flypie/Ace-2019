@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<Atanua Version="Atanua/Win32 1.3.141220 - [No user name set]" ChipCount="13" WireCount="13" key="63432" scale="16">
+    <Chip Name="External Pin" xpos="1277952" ypos="622592" rot="0" key="1328361">00FFFFFF0000000B3E53454C412F2153454C42</Chip>
+    <Chip Name="External Pin" xpos="2588672" ypos="622592" rot="0" key="1326905">00FFFFFF000000023E42</Chip>
+    <Chip Name="External Pin" xpos="1933312" ypos="622592" rot="0" key="1312778">00FFFFFF000000023E41</Chip>
+    <Chip Name="External Pin" xpos="2326528" ypos="3244032" rot="0" key="1433634">00FFFFFF000000023C51</Chip>
+    <Chip Name="logic AND (fi)" xpos="1835008" ypos="1900544" rot="1" key="1427438" />
+    <Chip Name="logic AND (fi)" xpos="2457600" ypos="1900544" rot="1" key="1407821" />
+    <Chip Name="logic NOT (fi)" xpos="1179648" ypos="1376256" rot="1" key="1392988" />
+    <Chip Name="Connection Pin" xpos="2523136" ypos="1540096" rot="0" key="1504755" />
+    <Chip Name="logic OR (fi)" xpos="2195456" ypos="2490368" rot="1" key="1468044" />
+    <Chip Name="LED (red)" xpos="2326528" ypos="3866624" rot="2" key="1444696" />
+    <Chip Name="switch (&apos;s&apos;)" xpos="1245184" ypos="163840" rot="0" key="1529350" />
+    <Chip Name="switch (&apos;a&apos;)" xpos="1900544" ypos="163840" rot="0" key="1524766" />
+    <Chip Name="switch (&apos;b&apos;)" xpos="2555904" ypos="163840" rot="0" key="1525819" />
+    <Wire chip1="0" pad1="0" chip2="4" pad2="1" key="1400652" />
+    <Wire chip1="0" pad1="0" chip2="6" pad2="0" key="1382296" />
+    <Wire chip1="6" pad1="1" chip2="7" pad2="0" key="1377022" />
+    <Wire chip1="7" pad1="0" chip2="5" pad2="1" key="1504755" />
+    <Wire chip1="4" pad1="2" chip2="8" pad2="1" key="1458986" />
+    <Wire chip1="8" pad1="0" chip2="5" pad2="2" key="1460622" />
+    <Wire chip1="8" pad1="2" chip2="3" pad2="0" key="1449976" />
+    <Wire chip1="9" pad1="0" chip2="3" pad2="0" key="1557441" />
+    <Wire chip1="4" pad1="0" chip2="2" pad2="0" key="1554829" />
+    <Wire chip1="5" pad1="0" chip2="1" pad2="0" key="1551508" />
+    <Wire chip1="0" pad1="0" chip2="10" pad2="0" key="1518879" />
+    <Wire chip1="2" pad1="0" chip2="11" pad2="0" key="1512006" />
+    <Wire chip1="1" pad1="0" chip2="12" pad2="0" key="1513679" />
+</Atanua>
