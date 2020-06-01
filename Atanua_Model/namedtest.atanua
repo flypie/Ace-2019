@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<Atanua Version="Atanua/Win32 1?4(JB!JK) (debug) - [No user name set]" ChipCount="4" WireCount="2" key="30466" scale="16">
+    <Chip Name="Named Pin" xpos="1802240" ypos="1343488" rot="0" key="14005">00FFFFFF00000003416161</Chip>
+    <Chip Name="Named Pin" xpos="3702784" ypos="1310720" rot="0" key="1940">00FFFFFF0000000141</Chip>
+    <Chip Name="button (&apos;0&apos;)" xpos="950272" ypos="950272" rot="0" key="56751" />
+    <Chip Name="LED (br.blue)" xpos="4685824" ypos="983040" rot="0" key="43017" />
+    <Wire chip1="2" pad1="0" chip2="0" pad2="0" key="45294" />
+    <Wire chip1="1" pad1="0" chip2="3" pad2="0" key="33643" />
+</Atanua>
