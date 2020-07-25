@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 4
+Sheet 3 4
 Title "JupiterAce Z80 plus KIO and new memory format."
 Date "2020-05-12"
 Rev "Alpha"
@@ -211,7 +211,7 @@ BASECLK_DIV_4
 Text GLabel 3575 2025 2    50   Input ~ 0
 BASECLK_DIV_2
 Text GLabel 2480 2025 0    50   Input ~ 0
-BASECLK
+SHIFTCLK
 Text GLabel 2475 3125 0    50   Input ~ 0
 XRESET
 Text GLabel 3600 4425 2    50   Input ~ 0
