@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 5
+Sheet 4 7
 Title "JupiterAce Z80 plus KIO and new memory format."
 Date "2020-05-12"
 Rev "Alpha"
@@ -386,19 +386,6 @@ $EndComp
 Wire Wire Line
 	7600 5450 7600 5300
 NoConn ~ 7700 5300
-$Comp
-L Zilog_Z80_Peripherals:KIO-PLCC-84 Z112
-U 1 1 5D84861B
-P 5250 2350
-F 0 "Z112" H 4900 2600 50  0000 L CNN
-F 1 "Z84-KIO-PLCC-84" H 4350 2475 50  0000 L CNN
-F 2 "Package_LCC:PLCC-84_THT-Socket" H 7100 3750 50  0001 C CNN
-F 3 "" H 6400 1250 50  0001 C CNN
-F 4 "Zilog" H 5250 2350 50  0001 C CNN "Manufacturer_Name"
-F 5 "Z84C9010VEG" H 5250 2350 50  0001 C CNN "Manufacturer_Part_Number"
-	1    5250 2350
-	1    0    0    -1  
-$EndComp
 NoConn ~ 1100 3850
 Text Label 1000 3550 2    50   ~ 0
 CLK\TRG0
@@ -406,45 +393,6 @@ Text Label 1000 3650 2    50   ~ 0
 CLK\TRG1
 Text Label 1000 3750 2    50   ~ 0
 CLK\TRG2
-$Comp
-L Connector_Generic:Conn_02x05_Odd_Even J105
-U 1 1 6602BBD4
-P 1300 3750
-F 0 "J105" H 1350 4100 50  0000 C CNN
-F 1 "Conn_02x05_Odd_Even" H 1350 4000 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 1300 3750 50  0001 C CNN
-F 3 "" H 1300 3750 50  0001 C CNN
-F 4 "TE Connectivity / AMP" H 1300 3750 50  0001 C CNN "Manufacturer_Name"
-F 5 "HTSW-105-08-S-D " H 1300 3750 50  0001 C CNN "Manufacturer_Part_Number"
-	1    1300 3750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_02x04_Odd_Even J104
-U 1 1 64A32B0F
-P 2800 2650
-F 0 "J104" H 2850 3000 50  0000 C CNN
-F 1 "Conn_02x04_Odd_Even" H 2850 2900 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 2800 2650 50  0001 C CNN
-F 3 "" H 2800 2650 50  0001 C CNN
-F 4 "SAMTEC" H 2800 2650 50  0001 C CNN "Manufacturer_Name"
-F 5 "TSW-104-08-S-D" H 2800 2650 50  0001 C CNN "Manufacturer_Part_Number"
-	1    2800 2650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_02x04_Odd_Even J103
-U 1 1 6454B474
-P 1300 2650
-F 0 "J103" H 1375 3000 50  0000 C CNN
-F 1 "Conn_02x04_Odd_Even" H 1375 2900 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 1300 2650 50  0001 C CNN
-F 3 "" H 1300 2650 50  0001 C CNN
-F 4 "SAMTEC" H 1300 2650 50  0001 C CNN "Manufacturer_Name"
-F 5 "TSW-104-08-S-D" H 1300 2650 50  0001 C CNN "Manufacturer_Part_Number"
-	1    1300 2650
-	1    0    0    -1  
-$EndComp
 Text Label 1700 3850 0    50   ~ 0
 ZC\TO3
 Wire Wire Line
@@ -515,19 +463,6 @@ Text Label 1000 2550 2    50   ~ 0
 TxDA
 Wire Wire Line
 	1100 2550 1000 2550
-$Comp
-L Connector_Generic:Conn_02x06_Odd_Even J100
-U 1 1 5D98E8C9
-P 1300 1500
-F 0 "J100" H 1350 1950 50  0000 C CNN
-F 1 "Conn_02x06_Odd_Even" H 1350 1850 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical" H 1300 1500 50  0001 C CNN
-F 3 "" H 1300 1500 50  0001 C CNN
-F 4 "SAMTEC" H 1300 1500 50  0001 C CNN "Manufacturer_Name"
-F 5 "HTSW-106-08-S-D " H 1300 1500 50  0001 C CNN "Manufacturer_Part_Number"
-	1    1300 1500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1100 1300 1000 1300
 Wire Wire Line
@@ -588,19 +523,6 @@ Wire Wire Line
 	3100 1300 3200 1300
 Text Label 3200 1300 0    50   ~ 0
 ~BSTB
-$Comp
-L Connector_Generic:Conn_02x06_Odd_Even J101
-U 1 1 5E870071
-P 2800 1500
-F 0 "J101" H 2850 1950 50  0000 C CNN
-F 1 "Conn_02x06_Odd_Even" H 2850 1850 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical" H 2800 1500 50  0001 C CNN
-F 3 "" H 2800 1500 50  0001 C CNN
-F 4 "SAMTEC" H 2800 1500 50  0001 C CNN "Manufacturer_Name"
-F 5 "HTSW-106-08-S-D " H 2800 1500 50  0001 C CNN "Manufacturer_Part_Number"
-	1    2800 1500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4100 1400 4000 1400
 Wire Wire Line
@@ -623,19 +545,6 @@ Wire Wire Line
 	4600 1500 4700 1500
 Text Label 4700 1500 0    50   ~ 0
 PC7
-$Comp
-L Connector_Generic:Conn_02x06_Odd_Even J102
-U 1 1 642D46BC
-P 4300 1500
-F 0 "J102" H 4375 1950 50  0000 C CNN
-F 1 "Conn_02x06_Odd_Even" H 4375 1850 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical" H 4300 1500 50  0001 C CNN
-F 3 "" H 4300 1500 50  0001 C CNN
-F 4 "SAMTEC" H 4300 1500 50  0001 C CNN "Manufacturer_Name"
-F 5 "HTSW-106-08-S-D" H 4300 1500 50  0001 C CNN "Manufacturer_Part_Number"
-	1    4300 1500
-	1    0    0    -1  
-$EndComp
 NoConn ~ 4600 1400
 NoConn ~ 4600 1300
 Text Label 4000 1700 2    50   ~ 0
@@ -881,4 +790,95 @@ Wire Wire Line
 	1600 3950 1700 3950
 Wire Wire Line
 	1000 3950 1100 3950
+$Comp
+L Connector_Generic:Conn_02x06_Odd_Even J302
+U 1 1 642D46BC
+P 4300 1500
+F 0 "J302" H 4375 1950 50  0000 C CNN
+F 1 "Conn_02x06_Odd_Even" H 4375 1850 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical" H 4300 1500 50  0001 C CNN
+F 3 "" H 4300 1500 50  0001 C CNN
+F 4 "SAMTEC" H 4300 1500 50  0001 C CNN "Manufacturer_Name"
+F 5 "HTSW-106-08-S-D" H 4300 1500 50  0001 C CNN "Manufacturer_Part_Number"
+	1    4300 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x06_Odd_Even J301
+U 1 1 5E870071
+P 2800 1500
+F 0 "J301" H 2850 1950 50  0000 C CNN
+F 1 "Conn_02x06_Odd_Even" H 2850 1850 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical" H 2800 1500 50  0001 C CNN
+F 3 "" H 2800 1500 50  0001 C CNN
+F 4 "SAMTEC" H 2800 1500 50  0001 C CNN "Manufacturer_Name"
+F 5 "HTSW-106-08-S-D " H 2800 1500 50  0001 C CNN "Manufacturer_Part_Number"
+	1    2800 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x06_Odd_Even J300
+U 1 1 5D98E8C9
+P 1300 1500
+F 0 "J300" H 1350 1950 50  0000 C CNN
+F 1 "Conn_02x06_Odd_Even" H 1350 1850 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical" H 1300 1500 50  0001 C CNN
+F 3 "" H 1300 1500 50  0001 C CNN
+F 4 "SAMTEC" H 1300 1500 50  0001 C CNN "Manufacturer_Name"
+F 5 "HTSW-106-08-S-D " H 1300 1500 50  0001 C CNN "Manufacturer_Part_Number"
+	1    1300 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x04_Odd_Even J303
+U 1 1 6454B474
+P 1300 2650
+F 0 "J303" H 1375 3000 50  0000 C CNN
+F 1 "Conn_02x04_Odd_Even" H 1375 2900 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 1300 2650 50  0001 C CNN
+F 3 "" H 1300 2650 50  0001 C CNN
+F 4 "SAMTEC" H 1300 2650 50  0001 C CNN "Manufacturer_Name"
+F 5 "TSW-104-08-S-D" H 1300 2650 50  0001 C CNN "Manufacturer_Part_Number"
+	1    1300 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x04_Odd_Even J304
+U 1 1 64A32B0F
+P 2800 2650
+F 0 "J304" H 2850 3000 50  0000 C CNN
+F 1 "Conn_02x04_Odd_Even" H 2850 2900 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 2800 2650 50  0001 C CNN
+F 3 "" H 2800 2650 50  0001 C CNN
+F 4 "SAMTEC" H 2800 2650 50  0001 C CNN "Manufacturer_Name"
+F 5 "TSW-104-08-S-D" H 2800 2650 50  0001 C CNN "Manufacturer_Part_Number"
+	1    2800 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J305
+U 1 1 6602BBD4
+P 1300 3750
+F 0 "J305" H 1350 4100 50  0000 C CNN
+F 1 "Conn_02x05_Odd_Even" H 1350 4000 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 1300 3750 50  0001 C CNN
+F 3 "" H 1300 3750 50  0001 C CNN
+F 4 "TE Connectivity / AMP" H 1300 3750 50  0001 C CNN "Manufacturer_Name"
+F 5 "HTSW-105-08-S-D " H 1300 3750 50  0001 C CNN "Manufacturer_Part_Number"
+	1    1300 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Zilog_Z80_Peripherals:KIO-PLCC-84 Z300
+U 1 1 5D84861B
+P 5250 2350
+F 0 "Z300" H 4900 2600 50  0000 L CNN
+F 1 "Z84-KIO-PLCC-84" H 4350 2475 50  0000 L CNN
+F 2 "Package_LCC:PLCC-84_THT-Socket" H 7100 3750 50  0001 C CNN
+F 3 "" H 6400 1250 50  0001 C CNN
+F 4 "Zilog" H 5250 2350 50  0001 C CNN "Manufacturer_Name"
+F 5 "Z84C9010VEG" H 5250 2350 50  0001 C CNN "Manufacturer_Part_Number"
+	1    5250 2350
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

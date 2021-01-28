@@ -1,10 +1,9 @@
 EESchema Schematic File Version 4
-LIBS:ACE5-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 6
+Sheet 5 7
 Title "ACE4NOKB"
 Date "2019-10-24"
 Rev "Alpha"
@@ -178,7 +177,7 @@ U 1 1 5DC05EE5
 P 3425 2625
 F 0 "Z105" H 3425 3650 50  0000 C CNN
 F 1 "SN74LS670N" H 3425 3550 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm" H 3425 2625 50  0001 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 3425 2625 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS670" H 3425 2625 50  0001 C CNN
 	1    3425 2625
 	1    0    0    -1  
@@ -253,7 +252,7 @@ U 1 1 6567AE36
 P 4425 5050
 F 0 "Z106" H 4200 5700 50  0000 C CNN
 F 1 "SN74AHCT541N" H 4750 5700 50  0000 C CNN
-F 2 "Package_DIP:DIP-20_W7.62mm" H 4425 5050 50  0001 C CNN
+F 2 "Package_DIP:DIP-20_W7.62mm_Socket" H 4425 5050 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/sn74ahct541.pdf" H 4425 5050 50  0001 C CNN
 F 4 "Texas Instruments" H 4425 5050 50  0001 C CNN "Manufacturer_Name"
 F 5 "SN74AHCT541N" H 4425 5050 50  0001 C CNN "Manufacturer_Part_Number"
@@ -343,7 +342,7 @@ U 1 1 5DC59E5E
 P 5475 2700
 F 0 "Z107" H 5500 3700 50  0000 C CNN
 F 1 "SN74LS670N" H 5500 3600 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm" H 5475 2700 50  0001 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 5475 2700 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS770" H 5475 2700 50  0001 C CNN
 	1    5475 2700
 	1    0    0    -1  

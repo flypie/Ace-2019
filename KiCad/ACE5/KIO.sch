@@ -1,10 +1,9 @@
 EESchema Schematic File Version 4
-LIBS:ACE5-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 6
+Sheet 2 7
 Title "JupiterAce Z80 plus KIO and new memory format."
 Date "2019-09-11"
 Rev "Alpha"
@@ -15,109 +14,109 @@ Comment3 "Attribution-NonCommercial-ShareAlike 4.0 International License."
 Comment4 "This work is licensed under a Creative Commons "
 $EndDescr
 NoConn ~ 7450 11300
-NoConn ~ 3275 3375
+NoConn ~ 3250 3400
 $Comp
-L Connector_Generic:Conn_02x04_Odd_Even J105
+L Connector_Generic:Conn_02x05_Odd_Even J305
 U 1 1 6602BBD4
-P 3475 3175
-F 0 "J105" H 3525 3525 50  0000 C CNN
-F 1 "Conn_02x04_Odd_Even" H 3525 3425 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 3475 3175 50  0001 C CNN
-F 3 "~" H 3475 3175 50  0001 C CNN
-	1    3475 3175
+P 3450 3300
+F 0 "J305" H 3500 3750 50  0000 C CNN
+F 1 "Conn_02x05_Odd_Even" H 3500 3650 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 3450 3300 50  0001 C CNN
+F 3 "~" H 3450 3300 50  0001 C CNN
+	1    3450 3300
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x03_Odd_Even J104
+L Connector_Generic:Conn_02x04_Odd_Even J304
 U 1 1 64A32B0F
-P 10425 4150
-F 0 "J104" H 10475 4500 50  0000 C CNN
-F 1 "Conn_02x03_Odd_Even" H 10475 4400 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 10425 4150 50  0001 C CNN
-F 3 "~" H 10425 4150 50  0001 C CNN
-	1    10425 4150
+P 10450 4200
+F 0 "J304" H 10500 4550 50  0000 C CNN
+F 1 "Conn_02x04_Odd_Even" H 10500 4450 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 10450 4200 50  0001 C CNN
+F 3 "~" H 10450 4200 50  0001 C CNN
+	1    10450 4200
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x03_Odd_Even J103
+L Connector_Generic:Conn_02x04_Odd_Even J303
 U 1 1 6454B474
-P 10375 2500
-F 0 "J103" H 10450 2850 50  0000 C CNN
-F 1 "Conn_02x03_Odd_Even" H 10450 2750 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 10375 2500 50  0001 C CNN
-F 3 "~" H 10375 2500 50  0001 C CNN
-	1    10375 2500
+P 10400 2550
+F 0 "J303" H 10475 2900 50  0000 C CNN
+F 1 "Conn_02x04_Odd_Even" H 10475 2800 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 10400 2550 50  0001 C CNN
+F 3 "~" H 10400 2550 50  0001 C CNN
+	1    10400 2550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3775 3375 3875 3375
+	3750 3400 3850 3400
 Wire Wire Line
-	3775 3275 3875 3275
+	3750 3300 3850 3300
 Wire Wire Line
-	3775 3175 3875 3175
+	3750 3200 3850 3200
 Wire Wire Line
-	3775 3075 3875 3075
+	3750 3100 3850 3100
 Wire Wire Line
-	3275 3275 3175 3275
+	3250 3300 3150 3300
 Wire Wire Line
-	3275 3175 3175 3175
+	3250 3200 3150 3200
 Wire Wire Line
-	3275 3075 3175 3075
+	3250 3100 3150 3100
 Wire Wire Line
-	10725 4250 10825 4250
+	10750 4300 10850 4300
 Wire Wire Line
-	10725 4150 10825 4150
+	10750 4200 10850 4200
 Wire Wire Line
-	10225 4050 10125 4050
+	10250 4100 10150 4100
 Wire Wire Line
-	10225 4150 10125 4150
+	10250 4200 10150 4200
 Wire Wire Line
-	10225 4250 10125 4250
+	10250 4300 10150 4300
 Wire Wire Line
-	10725 4050 10825 4050
+	10750 4100 10850 4100
 Wire Wire Line
-	10675 2600 10775 2600
+	10700 2650 10800 2650
 Wire Wire Line
-	10675 2500 10775 2500
+	10700 2550 10800 2550
 Wire Wire Line
-	10675 2400 10775 2400
+	10700 2450 10800 2450
 Wire Wire Line
-	10175 2600 10075 2600
+	10200 2650 10100 2650
 Wire Wire Line
-	10175 2500 10075 2500
+	10200 2550 10100 2550
 Wire Wire Line
-	10175 2400 10075 2400
+	10200 2450 10100 2450
 $Comp
-L Connector_Generic:Conn_02x05_Odd_Even J100
+L Connector_Generic:Conn_02x06_Odd_Even J300
 U 1 1 5D98E8C9
-P 7400 2625
-F 0 "J100" H 7450 3075 50  0000 C CNN
-F 1 "Conn_02x05_Odd_Even" H 7450 2975 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 7400 2625 50  0001 C CNN
-F 3 "~" H 7400 2625 50  0001 C CNN
-	1    7400 2625
+P 7400 2500
+F 0 "J300" H 7450 2950 50  0000 C CNN
+F 1 "Conn_02x06_Odd_Even" H 7450 2850 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical" H 7400 2500 50  0001 C CNN
+F 3 "~" H 7400 2500 50  0001 C CNN
+	1    7400 2500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7200 2425 7100 2425
+	7200 2300 7100 2300
 Wire Wire Line
-	7200 2525 7100 2525
+	7200 2400 7100 2400
 Wire Wire Line
-	7200 2625 7100 2625
+	7200 2500 7100 2500
 Wire Wire Line
-	7200 2725 7100 2725
+	7200 2600 7100 2600
 Wire Wire Line
-	7200 2825 7100 2825
+	7200 2700 7100 2700
 Wire Wire Line
-	7700 2825 7800 2825
+	7700 2700 7800 2700
 Wire Wire Line
-	7700 2725 7800 2725
+	7700 2600 7800 2600
 Wire Wire Line
-	7700 2625 7800 2625
+	7700 2500 7800 2500
 Wire Wire Line
-	7700 2425 7800 2425
+	7700 2300 7800 2300
 Wire Wire Line
-	7700 2525 7800 2525
+	7700 2400 7800 2400
 Wire Wire Line
 	7700 4050 7800 4050
 Wire Wire Line
@@ -139,12 +138,12 @@ Wire Wire Line
 Wire Wire Line
 	7700 3850 7800 3850
 $Comp
-L Connector_Generic:Conn_02x05_Odd_Even J101
+L Connector_Generic:Conn_02x06_Odd_Even J301
 U 1 1 5E870071
 P 7400 4050
-F 0 "J101" H 7450 4500 50  0000 C CNN
-F 1 "Conn_02x05_Odd_Even" H 7450 4400 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 7400 4050 50  0001 C CNN
+F 0 "J301" H 7450 4500 50  0000 C CNN
+F 1 "Conn_02x06_Odd_Even" H 7450 4400 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical" H 7400 4050 50  0001 C CNN
 F 3 "~" H 7400 4050 50  0001 C CNN
 	1    7400 4050
 	1    0    0    -1  
@@ -218,17 +217,6 @@ Wire Wire Line
 	9000 4575 9100 4575
 Wire Wire Line
 	9100 4575 9100 4475
-$Comp
-L Zilog_Z80:Z84C15-QFP Z0
-U 4 1 09F6B208
-P 5450 1925
-F 0 "Z0" H 5775 2150 50  0000 C CNN
-F 1 "Z84C15QFP100" H 5775 2050 50  0000 C CNN
-F 2 "Package_QFP:PQFP-100_14x20mm_P0.65mm" H 5450 1925 50  0001 C CNN
-F 3 "" H 5450 1925 50  0001 C CNN
-	4    5450 1925
-	1    0    0    -1  
-$EndComp
 $Comp
 L Zilog_Z80:Z84C15-QFP Z0
 U 5 1 09F6B20C
@@ -338,25 +326,25 @@ Wire Wire Line
 	1970 3300 2250 3300
 Wire Wire Line
 	1865 3200 2250 3200
-Text Label 7800 2425 0    50   ~ 0
+Text Label 7800 2300 0    50   ~ 0
 ~ASTB
-Text Label 7800 2525 0    50   ~ 0
+Text Label 7800 2400 0    50   ~ 0
 ARDY
-Text Label 7800 2625 0    50   ~ 0
+Text Label 7800 2500 0    50   ~ 0
 PA7
-Text Label 7800 2725 0    50   ~ 0
+Text Label 7800 2600 0    50   ~ 0
 PA6
-Text Label 7800 2825 0    50   ~ 0
+Text Label 7800 2700 0    50   ~ 0
 PA5
-Text Label 7100 2425 2    50   ~ 0
+Text Label 7100 2300 2    50   ~ 0
 PA0
-Text Label 7100 2525 2    50   ~ 0
+Text Label 7100 2400 2    50   ~ 0
 PA1
-Text Label 7100 2625 2    50   ~ 0
+Text Label 7100 2500 2    50   ~ 0
 PA2
-Text Label 7100 2725 2    50   ~ 0
+Text Label 7100 2600 2    50   ~ 0
 PA3
-Text Label 7100 2825 2    50   ~ 0
+Text Label 7100 2700 2    50   ~ 0
 PA4
 Text Label 6375 2125 0    50   ~ 0
 ~ASTB
@@ -458,17 +446,17 @@ Wire Wire Line
 	6150 3725 6375 3725
 Wire Wire Line
 	6250 3625 6375 3625
-Text Label 10775 2400 0    50   ~ 0
+Text Label 10800 2450 0    50   ~ 0
 RxDA
-Text Label 10775 2500 0    50   ~ 0
+Text Label 10800 2550 0    50   ~ 0
 ~DCDA
-Text Label 10775 2600 0    50   ~ 0
+Text Label 10800 2650 0    50   ~ 0
 ~CTSA
-Text Label 10075 2400 2    50   ~ 0
+Text Label 10100 2450 2    50   ~ 0
 TxDA
-Text Label 10075 2500 2    50   ~ 0
+Text Label 10100 2550 2    50   ~ 0
 ~TxCA
-Text Label 10075 2600 2    50   ~ 0
+Text Label 10100 2650 2    50   ~ 0
 ~RxCA
 Text Label 9450 2900 0    50   ~ 0
 RxDA
@@ -480,19 +468,19 @@ Text Label 9450 3000 0    50   ~ 0
 TxDA
 Text Label 9450 2100 0    50   ~ 0
 ~TxCA
-Text Label 3175 3075 2    50   ~ 0
+Text Label 3150 3100 2    50   ~ 0
 CLK\TRG0
-Text Label 3175 3175 2    50   ~ 0
+Text Label 3150 3200 2    50   ~ 0
 CLK\TRG1
-Text Label 3175 3275 2    50   ~ 0
+Text Label 3150 3300 2    50   ~ 0
 CLK\TRG2
-Text Label 3875 3075 0    50   ~ 0
+Text Label 3850 3100 0    50   ~ 0
 ZC\TO0
-Text Label 3875 3175 0    50   ~ 0
+Text Label 3850 3200 0    50   ~ 0
 ZC\TO1
-Text Label 3875 3275 0    50   ~ 0
+Text Label 3850 3300 0    50   ~ 0
 ZC\TO2
-Text Label 3875 3375 0    50   ~ 0
+Text Label 3850 3400 0    50   ~ 0
 ZC\TO3
 Text Label 9450 2200 0    50   ~ 0
 ~RxCA
@@ -508,17 +496,17 @@ Wire Wire Line
 	9000 2500 9450 2500
 Wire Wire Line
 	9050 2700 9450 2700
-Text Label 10125 4050 2    50   ~ 0
+Text Label 10150 4100 2    50   ~ 0
 TxDB
-Text Label 10125 4150 2    50   ~ 0
+Text Label 10150 4200 2    50   ~ 0
 ~TxCB
-Text Label 10125 4250 2    50   ~ 0
+Text Label 10150 4300 2    50   ~ 0
 ~RxCB
-Text Label 10825 4050 0    50   ~ 0
+Text Label 10850 4100 0    50   ~ 0
 RxDB
-Text Label 10825 4150 0    50   ~ 0
+Text Label 10850 4200 0    50   ~ 0
 ~DCDB
-Text Label 10825 4250 0    50   ~ 0
+Text Label 10850 4300 0    50   ~ 0
 ~CTSB
 Text Label 9575 3875 0    50   ~ 0
 ~RxCB
@@ -558,4 +546,145 @@ Wire Wire Line
 	9000 4875 9300 4875
 Wire Wire Line
 	1825 2800 2250 2800
+$Comp
+L Zilog_Z80:Z84C15-QFP Z0
+U 4 1 09F6B208
+P 5450 1925
+F 0 "Z0" H 5775 2150 50  0000 C CNN
+F 1 "Z84C15QFP100" H 5775 2050 50  0000 C CNN
+F 2 "Package_QFP:PQFP-100_14x20mm_P0.65mm" H 5450 1925 50  0001 C CNN
+F 3 "" H 5450 1925 50  0001 C CNN
+	4    5450 1925
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 3500 3850 3500
+Wire Wire Line
+	3250 3500 3150 3500
+$Comp
+L power:VCC #PWR0101
+U 1 1 603F1AA9
+P 3150 3500
+F 0 "#PWR0101" H 3150 3350 50  0001 C CNN
+F 1 "VCC" V 3200 3650 50  0000 L CNN
+F 2 "" H 3150 3500 50  0001 C CNN
+F 3 "" H 3150 3500 50  0001 C CNN
+	1    3150 3500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 603F2132
+P 3850 3500
+F 0 "#PWR0102" H 3850 3250 50  0001 C CNN
+F 1 "GND" V 3900 3350 50  0000 R CNN
+F 2 "" H 3850 3500 50  0001 C CNN
+F 3 "" H 3850 3500 50  0001 C CNN
+	1    3850 3500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7200 2800 7100 2800
+$Comp
+L power:VCC #PWR0103
+U 1 1 603F2A99
+P 7100 2800
+F 0 "#PWR0103" H 7100 2650 50  0001 C CNN
+F 1 "VCC" V 7150 2950 50  0000 L CNN
+F 2 "" H 7100 2800 50  0001 C CNN
+F 3 "" H 7100 2800 50  0001 C CNN
+	1    7100 2800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7700 2800 7800 2800
+$Comp
+L power:GND #PWR0104
+U 1 1 603FBB54
+P 7800 2800
+F 0 "#PWR0104" H 7800 2550 50  0001 C CNN
+F 1 "GND" V 7850 2650 50  0000 R CNN
+F 2 "" H 7800 2800 50  0001 C CNN
+F 3 "" H 7800 2800 50  0001 C CNN
+	1    7800 2800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7200 4350 7100 4350
+$Comp
+L power:VCC #PWR0105
+U 1 1 6040407B
+P 7100 4350
+F 0 "#PWR0105" H 7100 4200 50  0001 C CNN
+F 1 "VCC" V 7150 4500 50  0000 L CNN
+F 2 "" H 7100 4350 50  0001 C CNN
+F 3 "" H 7100 4350 50  0001 C CNN
+	1    7100 4350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7700 4350 7800 4350
+$Comp
+L power:GND #PWR0106
+U 1 1 60404086
+P 7800 4350
+F 0 "#PWR0106" H 7800 4100 50  0001 C CNN
+F 1 "GND" V 7850 4200 50  0000 R CNN
+F 2 "" H 7800 4350 50  0001 C CNN
+F 3 "" H 7800 4350 50  0001 C CNN
+	1    7800 4350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10200 2750 10100 2750
+$Comp
+L power:VCC #PWR0107
+U 1 1 6042C10E
+P 10100 2750
+F 0 "#PWR0107" H 10100 2600 50  0001 C CNN
+F 1 "VCC" V 10150 2900 50  0000 L CNN
+F 2 "" H 10100 2750 50  0001 C CNN
+F 3 "" H 10100 2750 50  0001 C CNN
+	1    10100 2750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10700 2750 10800 2750
+$Comp
+L power:GND #PWR0108
+U 1 1 6042C119
+P 10800 2750
+F 0 "#PWR0108" H 10800 2500 50  0001 C CNN
+F 1 "GND" V 10850 2600 50  0000 R CNN
+F 2 "" H 10800 2750 50  0001 C CNN
+F 3 "" H 10800 2750 50  0001 C CNN
+	1    10800 2750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10250 4400 10150 4400
+$Comp
+L power:VCC #PWR0109
+U 1 1 604C18EC
+P 10150 4400
+F 0 "#PWR0109" H 10150 4250 50  0001 C CNN
+F 1 "VCC" V 10200 4550 50  0000 L CNN
+F 2 "" H 10150 4400 50  0001 C CNN
+F 3 "" H 10150 4400 50  0001 C CNN
+	1    10150 4400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10750 4400 10850 4400
+$Comp
+L power:GND #PWR0110
+U 1 1 604C18F7
+P 10850 4400
+F 0 "#PWR0110" H 10850 4150 50  0001 C CNN
+F 1 "GND" V 10900 4250 50  0000 R CNN
+F 2 "" H 10850 4400 50  0001 C CNN
+F 3 "" H 10850 4400 50  0001 C CNN
+	1    10850 4400
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
