@@ -821,23 +821,23 @@ Text Label 11075 6050 3    50   ~ 0
 $Comp
 L 74xx:74LS00 Z19
 U 3 1 61287264
-P -1800 2250
-F 0 "Z19" H -1800 2600 50  0000 C CNN
-F 1 "74AHCT00" H -1800 2500 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -1800 2250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H -1800 2250 50  0001 C CNN
-	3    -1800 2250
+P -1800 2050
+F 0 "Z19" H -1800 2400 50  0000 C CNN
+F 1 "74AHCT00" H -1800 2300 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -1800 2050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H -1800 2050 50  0001 C CNN
+	3    -1800 2050
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74LS00 Z19
 U 4 1 6128AC88
-P -1050 2250
-F 0 "Z19" H -1050 2600 50  0000 C CNN
-F 1 "74AHCT00" H -1050 2500 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -1050 2250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H -1050 2250 50  0001 C CNN
-	4    -1050 2250
+P -1050 2050
+F 0 "Z19" H -1050 2400 50  0000 C CNN
+F 1 "74AHCT00" H -1050 2300 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -1050 2050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H -1050 2050 50  0001 C CNN
+	4    -1050 2050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1042,9 +1042,9 @@ F 3 "" H 3850 2850 50  0001 C CNN
 	1    3850 2850
 	1    0    0    -1  
 $EndComp
-NoConn ~ -1500 2250
-NoConn ~ -2100 2350
+NoConn ~ -1500 2050
 NoConn ~ -2100 2150
+NoConn ~ -2100 1950
 $Comp
 L 74xx:74LS86 Z23
 U 1 1 6A7508F4
@@ -1097,9 +1097,9 @@ F 3 "" H 11375 3250 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	11200 3250 11375 3250
-NoConn ~ -750 2250
-NoConn ~ -1350 2350
+NoConn ~ -750 2050
 NoConn ~ -1350 2150
+NoConn ~ -1350 1950
 Wire Wire Line
 	6250 2800 6350 2800
 Wire Wire Line
@@ -1151,14 +1151,14 @@ NoConn ~ 25   1500
 NoConn ~ -575 1600
 NoConn ~ -575 1400
 $Comp
-L 74xx:74LS21 Z301
+L 74xx:74LS21 Z404
 U 2 1 6293A4E8
-P -275 2225
-F 0 "Z301" H -200 2650 50  0000 C CNN
-F 1 "74HCT21" H -200 2550 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -275 2225 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS21" H -275 2225 50  0001 C CNN
-	2    -275 2225
+P -1800 2675
+F 0 "Z404" H -1800 3100 50  0000 C CNN
+F 1 "74HCT21" H -1800 3000 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -1800 2675 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS21" H -1800 2675 50  0001 C CNN
+	2    -1800 2675
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1170,11 +1170,11 @@ Wire Wire Line
 	11875 3350 11975 3350
 Wire Wire Line
 	11875 3475 12350 3475
-NoConn ~ 25   2225
-NoConn ~ -575 2375
-NoConn ~ -575 2275
-NoConn ~ -575 2175
-NoConn ~ -575 2075
+NoConn ~ -1500 2675
+NoConn ~ -2100 2825
+NoConn ~ -2100 2725
+NoConn ~ -2100 2625
+NoConn ~ -2100 2525
 $Comp
 L power:VCC #?
 U 1 1 607AE71D
@@ -1510,18 +1510,18 @@ Text GLabel 1950 3240 2    50   Input ~ 0
 $Comp
 L 74xx:74LS11 Z?
 U 3 1 6349E29A
-P -300 3000
+P -1825 3300
 AR Path="/6242B13B/6349E29A" Ref="Z?"  Part="3" 
 AR Path="/6349E29A" Ref="Z22"  Part="3" 
-F 0 "Z22" H -300 3350 50  0000 C CNN
-F 1 "74AHCT11" H -300 3250 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -300 3000 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS11" H -300 3000 50  0001 C CNN
-	3    -300 3000
+F 0 "Z22" H -1825 3650 50  0000 C CNN
+F 1 "74AHCT11" H -1825 3550 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H -1825 3300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS11" H -1825 3300 50  0001 C CNN
+	3    -1825 3300
 	1    0    0    -1  
 $EndComp
-NoConn ~ 0    3000
-NoConn ~ -600 2900
-NoConn ~ -600 3000
-NoConn ~ -600 3100
+NoConn ~ -1525 3300
+NoConn ~ -2125 3200
+NoConn ~ -2125 3300
+NoConn ~ -2125 3400
 $EndSCHEMATC

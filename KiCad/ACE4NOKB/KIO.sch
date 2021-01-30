@@ -41,14 +41,10 @@ Text Label 6100 2050 1    50   ~ 0
 ~DCDA
 Text Label 6000 2050 1    50   ~ 0
 ~CTSA
-Text Label 6700 2050 1    50   ~ 0
-RxDB
 Text Label 6600 2050 1    50   ~ 0
 ~RxCB
 Text Label 6500 2050 1    50   ~ 0
 ~TxCB
-Text Label 6400 2050 1    50   ~ 0
-TxDB
 Text Label 6200 2050 1    50   ~ 0
 ~DCDB
 Text Label 6300 2050 1    50   ~ 0
@@ -415,30 +411,6 @@ Wire Wire Line
 	1100 3650 1000 3650
 Wire Wire Line
 	1100 3550 1000 3550
-Text Label 3200 2750 0    50   ~ 0
-~CTSB
-Wire Wire Line
-	3100 2750 3200 2750
-Text Label 3200 2650 0    50   ~ 0
-~DCDB
-Wire Wire Line
-	3100 2650 3200 2650
-Text Label 2500 2550 2    50   ~ 0
-TxDB
-Wire Wire Line
-	2600 2550 2500 2550
-Text Label 2500 2650 2    50   ~ 0
-~TxCB
-Wire Wire Line
-	2600 2650 2500 2650
-Text Label 2500 2750 2    50   ~ 0
-~RxCB
-Wire Wire Line
-	2600 2750 2500 2750
-Text Label 3200 2550 0    50   ~ 0
-RxDB
-Wire Wire Line
-	3100 2550 3200 2550
 Text Label 1700 2750 0    50   ~ 0
 ~CTSA
 Wire Wire Line
@@ -738,32 +710,6 @@ F 3 "" H 1000 2850 50  0001 C CNN
 	1    1000 2850
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	2500 2850 2600 2850
-Wire Wire Line
-	3100 2850 3200 2850
-$Comp
-L power:GND #~PWR0164
-U 1 1 5FAE4690
-P 3200 2850
-F 0 "#~PWR0164" H 3200 2600 50  0001 C CNN
-F 1 "GND" V 3200 2700 50  0000 R CNN
-F 2 "" H 3200 2850 50  0001 C CNN
-F 3 "" H 3200 2850 50  0001 C CNN
-	1    3200 2850
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:VCC #~PWR0175
-U 1 1 5FAE469A
-P 2500 2850
-F 0 "#~PWR0175" H 2500 2700 50  0001 C CNN
-F 1 "VCC" V 2550 3000 50  0000 L CNN
-F 2 "" H 2500 2850 50  0001 C CNN
-F 3 "" H 2500 2850 50  0001 C CNN
-	1    2500 2850
-	0    -1   -1   0   
-$EndComp
 $Comp
 L power:VCC #~PWR0176
 U 1 1 5FA70692
@@ -843,19 +789,6 @@ F 5 "TSW-104-08-S-D" H 1300 2650 50  0001 C CNN "Manufacturer_Part_Number"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x04_Odd_Even J304
-U 1 1 64A32B0F
-P 2800 2650
-F 0 "J304" H 2850 3000 50  0000 C CNN
-F 1 "Conn_02x04_Odd_Even" H 2850 2900 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 2800 2650 50  0001 C CNN
-F 3 "" H 2800 2650 50  0001 C CNN
-F 4 "SAMTEC" H 2800 2650 50  0001 C CNN "Manufacturer_Name"
-F 5 "TSW-104-08-S-D" H 2800 2650 50  0001 C CNN "Manufacturer_Part_Number"
-	1    2800 2650
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector_Generic:Conn_02x05_Odd_Even J305
 U 1 1 6602BBD4
 P 1300 3750
@@ -881,4 +814,8 @@ F 5 "Z84C9010VEG" H 5250 2350 50  0001 C CNN "Manufacturer_Part_Number"
 	1    5250 2350
 	1    0    0    -1  
 $EndComp
+Text GLabel 6400 2050 1    50   Input ~ 0
+TxDB
+Text GLabel 6700 2050 1    50   Input ~ 0
+RxDB
 $EndSCHEMATC

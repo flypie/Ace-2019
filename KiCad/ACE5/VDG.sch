@@ -1,0 +1,1268 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 3 8
+Title "JupiterAceZ180"
+Date "2019-08-26"
+Rev "Alpha"
+Comp "Ontobus"
+Comment1 "John Bradley"
+Comment2 "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+Comment3 "Attribution-NonCommercial-ShareAlike 4.0 International License."
+Comment4 "This work is licensed under a Creative Commons "
+$EndDescr
+Wire Wire Line
+	6775 2500 6675 2500
+Wire Wire Line
+	6775 2300 6675 2300
+Wire Wire Line
+	6675 2400 6775 2400
+Wire Wire Line
+	4375 2000 4275 2000
+Wire Wire Line
+	4375 2200 4275 2200
+Wire Wire Line
+	4375 2600 4275 2600
+Wire Wire Line
+	4375 2800 4275 2800
+Wire Wire Line
+	4975 2100 5575 2100
+Wire Wire Line
+	4975 2700 5575 2700
+Wire Wire Line
+	5575 2700 5575 2500
+Wire Wire Line
+	6275 2800 6375 2800
+Wire Wire Line
+	6275 2400 6275 2800
+Wire Wire Line
+	6175 2400 6275 2400
+Connection ~ 6275 2400
+Wire Wire Line
+	6275 2400 6275 1900
+Wire Wire Line
+	5575 2100 5575 2300
+Wire Wire Line
+	6375 3000 6275 3000
+Text Label 6275 3000 2    50   ~ 0
+INVERTCHAR
+$Comp
+L 74xx:74HCT00 Z19
+U 1 1 5F80C862
+P 4675 2100
+F 0 "Z19" H 4680 2470 50  0000 C CNN
+F 1 "74AHCT00" H 4680 2370 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 4675 2100 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT00" H 4675 2100 50  0001 C CNN
+	1    4675 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HCT02 Z25
+U 1 1 5F80C86E
+P 4675 2700
+F 0 "Z25" H 4675 3050 50  0000 C CNN
+F 1 "74AHCT02" H 4675 2950 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 4675 2700 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT02" H 4675 2700 50  0001 C CNN
+	1    4675 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 Z20
+U 2 1 5F80C874
+P 5875 2400
+F 0 "Z20" H 5900 2755 50  0000 C CNN
+F 1 "74AHCT08" H 5900 2655 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 5875 2400 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT08" H 5875 2400 50  0001 C CNN
+	2    5875 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 Z20
+U 4 1 5F80C880
+P 6675 2900
+F 0 "Z20" H 6695 3260 50  0000 C CNN
+F 1 "74AHCT08" H 6695 3160 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6675 2900 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT08" H 6675 2900 50  0001 C CNN
+	4    6675 2900
+	1    0    0    -1  
+$EndComp
+Text GLabel 7100 7300 0    50   Input ~ 0
+~RD
+Text GLabel 7100 7100 0    50   Input ~ 0
+~WR
+Text GLabel 9700 6500 0    50   Input ~ 0
+~WR
+Text GLabel 11480 4900 2    50   Input ~ 0
+DA7
+Text GLabel 11480 4800 2    50   Input ~ 0
+DA6
+Text GLabel 11480 4700 2    50   Input ~ 0
+DA5
+Text GLabel 11480 4600 2    50   Input ~ 0
+DA4
+Text GLabel 11480 4500 2    50   Input ~ 0
+DA3
+Text GLabel 11480 4400 2    50   Input ~ 0
+DA2
+Text GLabel 11480 4300 2    50   Input ~ 0
+DA1
+Text GLabel 11480 4200 2    50   Input ~ 0
+DA0
+Text GLabel 9700 5100 0    50   Input ~ 0
+A9
+Text GLabel 9700 5000 0    50   Input ~ 0
+A8
+Text GLabel 9700 4900 0    50   Input ~ 0
+A7
+Text GLabel 9700 4800 0    50   Input ~ 0
+A6
+Text GLabel 9700 4700 0    50   Input ~ 0
+A5
+Text GLabel 9700 4600 0    50   Input ~ 0
+A4
+Text GLabel 9700 4500 0    50   Input ~ 0
+A3
+Text GLabel 9700 4400 0    50   Input ~ 0
+A2
+Text GLabel 9700 4300 0    50   Input ~ 0
+A1
+Text GLabel 9700 4200 0    50   Input ~ 0
+A0
+Text GLabel 8575 5500 2    50   Input ~ 0
+DA7
+Text GLabel 8575 5400 2    50   Input ~ 0
+DA6
+Text GLabel 8575 5300 2    50   Input ~ 0
+DA5
+Text GLabel 8575 5200 2    50   Input ~ 0
+DA4
+Text GLabel 8575 5100 2    50   Input ~ 0
+DA3
+Text GLabel 8575 5000 2    50   Input ~ 0
+DA2
+Text GLabel 8575 4900 2    50   Input ~ 0
+DA1
+Text GLabel 8575 4800 2    50   Input ~ 0
+DA0
+Text GLabel 7100 5700 0    50   Input ~ 0
+A9
+Text GLabel 7100 5600 0    50   Input ~ 0
+A8
+Text GLabel 7100 5500 0    50   Input ~ 0
+A7
+Text GLabel 7100 5400 0    50   Input ~ 0
+A6
+Text GLabel 7100 5300 0    50   Input ~ 0
+A5
+Text GLabel 7100 5200 0    50   Input ~ 0
+A4
+Text GLabel 7100 5100 0    50   Input ~ 0
+A3
+Text GLabel 7100 5000 0    50   Input ~ 0
+A2
+Text GLabel 7100 4900 0    50   Input ~ 0
+A1
+Text GLabel 7100 4800 0    50   Input ~ 0
+A0
+Wire Wire Line
+	13000 2950 12925 2950
+Wire Wire Line
+	12575 2700 12575 2650
+$Comp
+L Device:R R17
+U 1 1 5D703F80
+P 12425 3100
+F 0 "R17" V 12525 3100 50  0000 C CNN
+F 1 "100" V 12625 3100 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 12355 3100 50  0001 C CNN
+F 3 "~" H 12425 3100 50  0001 C CNN
+	1    12425 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VCC #0126
+U 1 1 5D703F77
+P 12575 2650
+F 0 "#0126" H 12575 2650 50  0001 C CNN
+F 1 "VCC" H 12625 2875 50  0000 C CNN
+F 2 "" H 12575 2650 50  0001 C CNN
+F 3 "" H 12575 2650 50  0001 C CNN
+	1    12575 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #0102
+U 1 1 5D703F71
+P 12275 3100
+F 0 "#0102" H 12275 3100 50  0001 C CNN
+F 1 "GND" H 12200 2975 50  0000 L BNN
+F 2 "" H 12275 3100 50  0001 C CNN
+F 3 "" H 12275 3100 50  0001 C CNN
+	1    12275 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_BJT:2N3904 Q100
+U 1 1 5D703F6A
+P 12475 2900
+F 0 "Q100" H 12700 2950 50  0000 L CNN
+F 1 "2N3904" H 12700 2900 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92L_HandSolder" H 12475 2900 50  0001 C CNN
+F 3 "" H 12475 2900 50  0001 C CNN
+	1    12475 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 COMPOSITE-OUT1
+U 1 1 5D703F64
+P 13200 2950
+F 0 "COMPOSITE-OUT1" H 13300 2875 50  0000 L CNN
+F 1 "COMPOSITE-OUT1" H 13150 2700 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 13200 2950 50  0001 C CNN
+F 3 "~" H 13200 2950 50  0001 C CNN
+	1    13200 2950
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #0103
+U 1 1 5D703F5E
+P 13000 2750
+F 0 "#0103" H 13000 2750 50  0001 C CNN
+F 1 "GND" H 12925 2625 50  0000 L BNN
+F 2 "" H 13000 2750 50  0001 C CNN
+F 3 "" H 13000 2750 50  0001 C CNN
+	1    13000 2750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	13000 2850 13000 2750
+Wire Wire Line
+	12750 4850 12750 5700
+Wire Wire Line
+	11575 2475 11575 2400
+Wire Wire Line
+	9675 2600 9675 2525
+NoConn ~ 9975 3000
+Wire Wire Line
+	7850 4500 7850 4450
+Wire Wire Line
+	8500 6300 8600 6300
+Wire Wire Line
+	10975 2900 10775 2900
+Wire Wire Line
+	11700 4350 11700 4275
+Wire Wire Line
+	11750 4350 11700 4350
+Wire Wire Line
+	13750 4350 13800 4350
+Wire Wire Line
+	13450 4850 13450 4900
+Wire Wire Line
+	11100 5700 12750 5700
+Wire Wire Line
+	11100 5600 12650 5600
+Wire Wire Line
+	11100 5500 12550 5500
+Wire Wire Line
+	11100 5400 12450 5400
+Wire Wire Line
+	11100 5300 12350 5300
+Wire Wire Line
+	11100 5200 12250 5200
+Wire Wire Line
+	11100 5100 12150 5100
+Wire Wire Line
+	11100 5000 12050 5000
+Wire Wire Line
+	10450 3900 10450 3825
+Wire Wire Line
+	8500 7500 8575 7500
+Wire Wire Line
+	8500 7600 8575 7600
+Wire Wire Line
+	11100 7000 11175 7000
+Wire Wire Line
+	11100 6900 11175 6900
+Wire Wire Line
+	11475 7000 11475 7100
+Connection ~ 11475 7000
+$Comp
+L Device:R R107
+U 1 1 5F80C8E6
+P 11325 7000
+F 0 "R107" V 11450 7000 50  0000 C CNN
+F 1 "270" V 11550 7000 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 11255 7000 50  0001 C CNN
+F 3 "~" H 11325 7000 50  0001 C CNN
+	1    11325 7000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	13250 4850 13250 4950
+Wire Wire Line
+	12850 4850 12850 4950
+Wire Wire Line
+	13050 4850 13050 5050
+Wire Wire Line
+	13150 4850 13150 4950
+Wire Wire Line
+	12050 4850 12050 5000
+Wire Wire Line
+	12150 4850 12150 5100
+Wire Wire Line
+	12250 4850 12250 5200
+Wire Wire Line
+	12350 4850 12350 5300
+Wire Wire Line
+	12550 4850 12550 5500
+Wire Wire Line
+	12650 4850 12650 5600
+Wire Wire Line
+	12450 4850 12450 5400
+Wire Wire Line
+	11100 4800 11480 4800
+Wire Wire Line
+	11100 4600 11480 4600
+Wire Wire Line
+	11100 4300 11480 4300
+Wire Wire Line
+	11100 4900 11480 4900
+Wire Wire Line
+	11100 4400 11480 4400
+Wire Wire Line
+	11100 4200 11480 4200
+Wire Wire Line
+	11100 4700 11480 4700
+Wire Wire Line
+	11100 4500 11480 4500
+Wire Wire Line
+	7850 8000 7850 7850
+Wire Wire Line
+	8500 6200 9800 6200
+Wire Wire Line
+	8500 6100 9800 6100
+Wire Wire Line
+	8500 6000 9800 6000
+Wire Wire Line
+	8500 5900 9800 5900
+Wire Wire Line
+	8500 5800 9800 5800
+Wire Wire Line
+	8500 5700 9800 5700
+Wire Wire Line
+	8500 5600 9800 5600
+Wire Wire Line
+	7375 2400 7575 2400
+Wire Wire Line
+	7575 2400 8075 2400
+Connection ~ 7575 2400
+Wire Wire Line
+	7575 2400 7575 1700
+Wire Wire Line
+	7575 1700 8075 1700
+Text Label 7575 1700 2    50   ~ 0
+VIDEN
+Wire Wire Line
+	9675 3200 9675 3300
+Wire Wire Line
+	8775 2500 8775 2900
+Wire Wire Line
+	6975 2900 8505 2900
+Wire Wire Line
+	9975 2800 10175 2800
+Text Label 11850 2900 1    50   ~ 0
+VIDEO
+Wire Wire Line
+	8075 2600 7975 2600
+Wire Wire Line
+	6275 1900 8075 1900
+Wire Wire Line
+	9375 2800 8505 2800
+Wire Wire Line
+	8505 2800 8505 2900
+Wire Wire Line
+	9375 2900 8775 2900
+Wire Wire Line
+	8675 2500 8775 2500
+Wire Wire Line
+	8675 1800 13900 1800
+Wire Wire Line
+	11275 2900 11575 2900
+Wire Wire Line
+	11575 2775 11575 2900
+Wire Wire Line
+	11575 2950 11575 2900
+Connection ~ 11575 2900
+Wire Wire Line
+	11575 2900 12275 2900
+Wire Wire Line
+	13550 4900 13450 4900
+$Comp
+L power:VCC #0104
+U 1 1 5F80C587
+P 13550 4900
+F 0 "#0104" H 13550 4750 50  0001 C CNN
+F 1 "VCC" V 13540 5070 50  0000 L CNN
+F 2 "" H 13550 4900 50  0001 C CNN
+F 3 "" H 13550 4900 50  0001 C CNN
+	1    13550 4900
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #0105
+U 1 1 5F80C58D
+P 12850 4950
+F 0 "#0105" H 12850 4700 50  0001 C CNN
+F 1 "GND" H 12870 4755 50  0000 C CNN
+F 2 "" H 12850 4950 50  0001 C CNN
+F 3 "" H 12850 4950 50  0001 C CNN
+	1    12850 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #0106
+U 1 1 5F80C593
+P 13250 4950
+F 0 "#0106" H 13250 4700 50  0001 C CNN
+F 1 "GND" H 13300 4730 50  0000 C CNN
+F 2 "" H 13250 4950 50  0001 C CNN
+F 3 "" H 13250 4950 50  0001 C CNN
+	1    13250 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #0107
+U 1 1 5F80C59F
+P 11700 4275
+F 0 "#0107" H 11700 4125 50  0001 C CNN
+F 1 "VCC" H 11745 4490 50  0000 C CNN
+F 2 "" H 11700 4275 50  0001 C CNN
+F 3 "" H 11700 4275 50  0001 C CNN
+	1    11700 4275
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #0108
+U 1 1 5F80C5A5
+P 13800 4350
+F 0 "#0108" H 13800 4100 50  0001 C CNN
+F 1 "GND" H 13775 4150 50  0000 C CNN
+F 2 "" H 13800 4350 50  0001 C CNN
+F 3 "" H 13800 4350 50  0001 C CNN
+	1    13800 4350
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VCC #0109
+U 1 1 5F80C5B7
+P 9675 2525
+F 0 "#0109" H 9675 2375 50  0001 C CNN
+F 1 "VCC" H 9740 2725 50  0000 C CNN
+F 2 "" H 9675 2525 50  0001 C CNN
+F 3 "" H 9675 2525 50  0001 C CNN
+	1    9675 2525
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #0110
+U 1 1 5F80C5BD
+P 9675 3300
+F 0 "#0110" H 9675 3150 50  0001 C CNN
+F 1 "VCC" H 9675 3505 50  0000 C CNN
+F 2 "" H 9675 3300 50  0001 C CNN
+F 3 "" H 9675 3300 50  0001 C CNN
+	1    9675 3300
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VCC #0111
+U 1 1 5F80C5C3
+P 11575 2400
+F 0 "#0111" H 11575 2250 50  0001 C CNN
+F 1 "VCC" H 11600 2585 50  0000 C CNN
+F 2 "" H 11575 2400 50  0001 C CNN
+F 3 "" H 11575 2400 50  0001 C CNN
+	1    11575 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 4800 7100 4800
+Wire Wire Line
+	7200 4900 7100 4900
+Wire Wire Line
+	7200 5000 7100 5000
+Wire Wire Line
+	7200 5100 7100 5100
+Wire Wire Line
+	7200 5400 7100 5400
+Wire Wire Line
+	7200 5500 7100 5500
+Wire Wire Line
+	7200 5600 7100 5600
+Wire Wire Line
+	7200 5200 7100 5200
+Wire Wire Line
+	7200 5300 7100 5300
+Wire Wire Line
+	7200 5700 7100 5700
+Wire Wire Line
+	9800 4200 9700 4200
+Wire Wire Line
+	9800 4300 9700 4300
+Wire Wire Line
+	9800 4400 9700 4400
+Wire Wire Line
+	9800 4500 9700 4500
+Wire Wire Line
+	9800 4800 9700 4800
+Wire Wire Line
+	9800 4900 9700 4900
+Wire Wire Line
+	9800 5000 9700 5000
+Wire Wire Line
+	9800 4600 9700 4600
+Wire Wire Line
+	9800 4700 9700 4700
+Wire Wire Line
+	9800 5100 9700 5100
+Wire Wire Line
+	8500 5100 8575 5100
+Wire Wire Line
+	8500 5300 8575 5300
+Wire Wire Line
+	8500 4800 8575 4800
+Wire Wire Line
+	8500 5000 8575 5000
+Wire Wire Line
+	8500 5500 8575 5500
+Wire Wire Line
+	8500 4900 8575 4900
+Wire Wire Line
+	8500 5200 8575 5200
+Wire Wire Line
+	8500 5400 8575 5400
+Wire Wire Line
+	7200 7100 7100 7100
+Wire Wire Line
+	7200 7300 7100 7300
+Wire Wire Line
+	7200 7500 7095 7500
+Text Label 7095 7500 2    50   ~ 0
+SH~LD
+Wire Wire Line
+	7200 7600 7095 7600
+Text Label 7095 7600 2    50   ~ 0
+SH~LD
+Wire Wire Line
+	7200 7400 7095 7400
+$Comp
+L power:VCC #0112
+U 1 1 5F80C63D
+P 7095 7400
+F 0 "#0112" H 7095 7250 50  0001 C CNN
+F 1 "VCC" V 7125 7555 50  0000 L CNN
+F 2 "" H 7095 7400 50  0001 C CNN
+F 3 "" H 7095 7400 50  0001 C CNN
+	1    7095 7400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9800 6500 9700 6500
+Wire Wire Line
+	9800 6700 9700 6700
+Wire Wire Line
+	9800 6900 9695 6900
+Text Label 9695 6900 2    50   ~ 0
+SH~LD
+Wire Wire Line
+	9800 7000 9695 7000
+Text Label 9695 7000 2    50   ~ 0
+SH~LD
+Wire Wire Line
+	9800 6800 9695 6800
+$Comp
+L power:VCC #0113
+U 1 1 5F80C64C
+P 9695 6800
+F 0 "#0113" H 9695 6650 50  0001 C CNN
+F 1 "VCC" V 9745 6950 50  0000 L CNN
+F 2 "" H 9695 6800 50  0001 C CNN
+F 3 "" H 9695 6800 50  0001 C CNN
+	1    9695 6800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9330 7445 9475 7445
+Wire Wire Line
+	9330 7445 9330 8000
+$Comp
+L power:GND #0114
+U 1 1 5F80C65C
+P 9475 7445
+F 0 "#0114" H 9475 7195 50  0001 C CNN
+F 1 "GND" V 9520 7315 50  0000 R CNN
+F 2 "" H 9475 7445 50  0001 C CNN
+F 3 "" H 9475 7445 50  0001 C CNN
+	1    9475 7445
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7000 5900 7200 5900
+Wire Wire Line
+	7000 6000 7200 6000
+Wire Wire Line
+	7000 6100 7200 6100
+Wire Wire Line
+	7000 6200 7200 6200
+Wire Wire Line
+	7000 6300 7200 6300
+Wire Wire Line
+	7000 6400 7200 6400
+Wire Wire Line
+	7000 6500 7200 6500
+Wire Wire Line
+	7000 6600 7200 6600
+Wire Wire Line
+	7000 6700 7200 6700
+Wire Wire Line
+	7000 6800 7200 6800
+$Comp
+L power:VCC #0115
+U 1 1 5F80C686
+P 7850 4450
+F 0 "#0115" H 7850 4300 50  0001 C CNN
+F 1 "VCC" H 7915 4645 50  0000 C CNN
+F 2 "" H 7850 4450 50  0001 C CNN
+F 3 "" H 7850 4450 50  0001 C CNN
+	1    7850 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #0116
+U 1 1 5F80C68D
+P 10450 3825
+F 0 "#0116" H 10450 3675 50  0001 C CNN
+F 1 "VCC" H 10475 4050 50  0000 C CNN
+F 2 "" H 10450 3825 50  0001 C CNN
+F 3 "" H 10450 3825 50  0001 C CNN
+	1    10450 3825
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9800 5300 9695 5300
+Wire Wire Line
+	9800 5400 9695 5400
+Wire Wire Line
+	9800 5500 9695 5500
+Text Label 8600 6300 0    50   ~ 0
+INVERTCHAR
+Wire Wire Line
+	10450 7250 10450 8000
+Text Label 8675 1800 1    50   ~ 0
+SH~LD
+$Comp
+L power:VCC #0117
+U 1 1 5F80C796
+P 8875 7700
+F 0 "#0117" H 8875 7550 50  0001 C CNN
+F 1 "VCC" H 8855 7880 50  0000 C CNN
+F 2 "" H 8875 7700 50  0001 C CNN
+F 3 "" H 8875 7700 50  0001 C CNN
+	1    8875 7700
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VCC #0118
+U 1 1 5F80C7A1
+P 11475 7100
+F 0 "#0118" H 11475 6950 50  0001 C CNN
+F 1 "VCC" H 11455 7280 50  0000 C CNN
+F 2 "" H 11475 7100 50  0001 C CNN
+F 3 "" H 11475 7100 50  0001 C CNN
+	1    11475 7100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 5F80C83E
+P 11125 2900
+F 0 "R11" V 10875 2925 50  0000 C CNN
+F 1 "1K5" V 10975 2925 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" H 11125 2900 50  0001 C CNN
+F 3 "~" H 11125 2900 50  0001 C CNN
+	1    11125 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R16
+U 1 1 5F80C844
+P 11575 2625
+F 0 "R16" H 11425 2684 50  0000 L BNN
+F 1 "1K5" H 11425 2495 50  0000 L BNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" H 11575 2625 50  0001 C CNN
+F 3 "~" H 11575 2625 50  0001 C CNN
+	1    11575 2625
+	-1   0    0    1   
+$EndComp
+$Comp
+L 74xx:74LS74 Z27
+U 2 1 5F80C856
+P 9675 2900
+AR Path="/5F80C856" Ref="Z27"  Part="2" 
+AR Path="/5FA4DA0E/5F80C856" Ref="Z27"  Part="2" 
+AR Path="/5E2F9A69/5F80C856" Ref="Z27"  Part="2" 
+AR Path="/5DAF6158/5F80C856" Ref="Z27"  Part="2" 
+F 0 "Z27" H 9885 3250 50  0000 C CNN
+F 1 "SN74AHCT74N" H 9900 3155 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 9675 2900 50  0001 C CNN
+F 3 "74xx~74hc_AHCT74.pdf" H 9675 2900 50  0001 C CNN
+	2    9675 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4148 D11
+U 1 1 5F80C85C
+P 11575 3100
+F 0 "D11" V 11495 3050 50  0000 L CNN
+F 1 "1N4148" V 11575 3185 50  0001 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 11575 2925 50  0001 C CNN
+F 3 "https:~/assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 11575 3100 50  0001 C CNN
+	1    11575 3100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L 74xx:74HCT00 Z19
+U 2 1 5F80C868
+P 8375 1800
+F 0 "Z19" H 8410 2170 50  0000 C CNN
+F 1 "74AHCT00" H 8410 2070 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 8375 1800 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT00" H 8375 1800 50  0001 C CNN
+	2    8375 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 Z20
+U 3 1 5F80C87A
+P 8375 2500
+F 0 "Z20" H 8390 2850 50  0000 C CNN
+F 1 "74AHCT08" H 8390 2750 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 8375 2500 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT08" H 8375 2500 50  0001 C CNN
+	3    8375 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS11 Z22
+U 2 1 5F80C886
+P 7075 2400
+F 0 "Z22" H 7075 2780 50  0000 C CNN
+F 1 "74AHCT11" H 7075 2680 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 7075 2400 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT11" H 7075 2400 50  0001 C CNN
+	2    7075 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 Z23
+U 4 1 5F80C88C
+P 10475 2900
+F 0 "Z23" H 10515 3240 50  0000 C CNN
+F 1 "74AHCT86" H 10515 3140 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 10475 2900 50  0001 C CNN
+F 3 "74xx~74AHCT86.pdf" H 10475 2900 50  0001 C CNN
+	4    10475 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS166 Z28
+U 1 1 5F80C89E
+P 12750 4350
+F 0 "Z28" V 13475 4345 50  0000 C CNN
+F 1 "74AHCT166" V 13375 4345 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 12750 4350 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT166" H 12750 4350 50  0001 C CNN
+	1    12750 4350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R108
+U 1 1 5F80C8DA
+P 8725 7500
+F 0 "R108" V 8500 7500 50  0000 C CNN
+F 1 "270" V 8600 7500 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 8655 7500 50  0001 C CNN
+F 3 "~" H 8725 7500 50  0001 C CNN
+	1    8725 7500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8875 7500 8875 7600
+Wire Wire Line
+	8875 7600 8875 7700
+Connection ~ 8875 7600
+$Comp
+L Device:R R103
+U 1 1 5F80C8E0
+P 8725 7600
+F 0 "R103" V 8850 7600 50  0000 C CNN
+F 1 "270" V 8950 7600 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 8655 7600 50  0001 C CNN
+F 3 "~" H 8725 7600 50  0001 C CNN
+	1    8725 7600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	11475 6900 11475 7000
+$Comp
+L Device:R R106
+U 1 1 5F80C8EC
+P 11325 6900
+F 0 "R106" V 11100 6900 50  0000 C CNN
+F 1 "270" V 11200 6900 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 11255 6900 50  0001 C CNN
+F 3 "~" H 11325 6900 50  0001 C CNN
+	1    11325 6900
+	0    1    1    0   
+$EndComp
+Text GLabel 9700 6600 0    50   Input ~ 0
+~CPUFONTRAM
+Text GLabel 7100 7200 0    50   Input ~ 0
+~CPUVIDEORAM
+Wire Wire Line
+	7200 7200 7100 7200
+Wire Wire Line
+	9800 6600 9700 6600
+Text GLabel 9700 6700 0    50   Input ~ 0
+~RD
+Wire Wire Line
+	10175 3375 10175 3000
+Wire Wire Line
+	10175 3375 12050 3375
+Wire Wire Line
+	4575 4700 4675 4700
+$Comp
+L 74xx:74HCT04 Z306
+U 4 1 5F80CB5F
+P 3850 4700
+F 0 "Z306" H 3850 5050 50  0000 C CNN
+F 1 "74AHCT04" H 3850 4950 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3850 4700 50  0001 C CNN
+F 3 "https:~/assets.nexperia.com/documents/data-sheet/74HC_AHCT04.pdf" H 3850 4700 50  0001 C CNN
+	4    3850 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 2500 2650 2500
+Wire Wire Line
+	4150 4700 4275 4700
+Wire Wire Line
+	3350 4700 3550 4700
+Wire Wire Line
+	3350 3800 3450 3800
+Wire Wire Line
+	3350 3600 3450 3600
+$Comp
+L 74xx:74LS11 Z22
+U 1 1 5F80CB97
+P 2950 2500
+F 0 "Z22" H 2955 2880 50  0000 C CNN
+F 1 "74AHCT11" H 2955 2780 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2950 2500 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT11" H 2950 2500 50  0001 C CNN
+	1    2950 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 2600 1855 2600
+Wire Wire Line
+	1950 2400 1855 2400
+Wire Wire Line
+	2650 2600 2650 3000
+Wire Wire Line
+	3350 4700 3350 3800
+Connection ~ 3350 4700
+Wire Wire Line
+	3250 4700 3350 4700
+Wire Wire Line
+	2650 2400 2650 2000
+Text Label 2650 2000 1    50   ~ 0
+SCREENX3
+Wire Wire Line
+	3250 2500 3350 2500
+Wire Wire Line
+	3350 2500 3350 3600
+$Comp
+L 74xx:74HCT02 Z25
+U 2 1 5F80CB73
+P 3750 3700
+F 0 "Z25" H 3755 4060 50  0000 C CNN
+F 1 "74AHCT02" H 3755 3960 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3750 3700 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT02" H 3750 3700 50  0001 C CNN
+	2    3750 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HCT02 Z25
+U 4 1 5F80CB79
+P 2250 2500
+F 0 "Z25" H 2290 2885 50  0000 C CNN
+F 1 "74AHCT02" H 2290 2785 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2250 2500 50  0001 C CNN
+F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT02" H 2250 2500 50  0001 C CNN
+	4    2250 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:BAT54W D100
+U 1 1 5E84D6D1
+P 4425 4700
+F 0 "D100" H 4425 5020 50  0000 C CNN
+F 1 "BAT54W" H 4425 4920 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 4425 4525 50  0001 C CNN
+F 3 "https:~/assets.nexperia.com/documents/data-sheet/BAT54W_SER.pdf" H 4425 4700 50  0001 C CNN
+	1    4425 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11575 3250 11575 3700
+Wire Wire Line
+	4050 3700 11575 3700
+$Comp
+L power:VCC #0122
+U 1 1 5F80CE39
+P 1750 9250
+F 0 "#0122" H 1750 9100 50  0001 C CNN
+F 1 "VCC" H 1790 9465 50  0000 C CNN
+F 2 "" H 1750 9250 50  0001 C CNN
+F 3 "" H 1750 9250 50  0001 C CNN
+	1    1750 9250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	950  10655 950  10555
+Wire Wire Line
+	950  10250 950  10355
+Connection ~ 950  10250
+Connection ~ 950  10050
+Wire Wire Line
+	950  10050 950  10250
+Wire Wire Line
+	950  9750 950  10050
+$Comp
+L power:GND #0123
+U 1 1 5F80CE6C
+P 1750 10550
+F 0 "#0123" H 1750 10300 50  0001 C CNN
+F 1 "GND" V 1755 10375 50  0000 R CNN
+F 2 "" H 1750 10550 50  0001 C CNN
+F 3 "" H 1750 10550 50  0001 C CNN
+	1    1750 10550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1405 9750 1350 9750
+$Comp
+L Device:Crystal X1
+U 1 1 5F80CE65
+P 1200 9750
+F 0 "X1" H 1200 9950 50  0000 C CNN
+F 1 "CRYSTALHC49U-V 6.556MHz" H 1210 9910 50  0001 C CNN
+F 2 "Crystal:Crystal_HC49-U_Vertical" H 1200 9750 50  0001 C CNN
+F 3 "~" H 1200 9750 50  0001 C CNN
+	1    1200 9750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 10050 2725 10050
+Wire Wire Line
+	1350 10050 1750 10050
+$Comp
+L power:GND #0124
+U 1 1 5F80CE5A
+P 950 10655
+F 0 "#0124" H 950 10405 50  0001 C CNN
+F 1 "GND" H 955 10435 50  0000 C CNN
+F 2 "" H 950 10655 50  0001 C CNN
+F 3 "" H 950 10655 50  0001 C CNN
+	1    950  10655
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5F80CE54
+P 950 10455
+F 0 "C2" H 1050 10510 50  0000 L CNN
+F 1 "100p" H 1050 10410 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 950 10455 50  0001 C CNN
+F 3 "~" H 950 10455 50  0001 C CNN
+	1    950  10455
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5F80CE4E
+P 1200 10050
+F 0 "R2" V 1050 10035 50  0000 C CNN
+F 1 "47k" V 950 10035 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 1130 10050 50  0001 C CNN
+F 3 "~" H 1200 10050 50  0001 C CNN
+	1    1200 10050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1750 9650 1750 9750
+Connection ~ 1750 9750
+$Comp
+L Device:R R1
+U 1 1 5F80CE46
+P 1750 9500
+F 0 "R1" H 1850 9575 50  0000 L CNN
+F 1 "4k7" H 1850 9475 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 1680 9500 50  0001 C CNN
+F 3 "~" H 1750 9500 50  0001 C CNN
+	1    1750 9500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1605 9750 1750 9750
+$Comp
+L Device:C_Small C1
+U 1 1 5F80CE3F
+P 1505 9750
+F 0 "C1" V 1255 9795 50  0000 C CNN
+F 1 "30p" V 1355 9795 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm" H 1505 9750 50  0001 C CNN
+F 3 "~" H 1505 9750 50  0001 C CNN
+	1    1505 9750
+	0    1    1    0   
+$EndComp
+$Comp
+L 74xx:74AHCT04 Z306
+U 6 1 5F80CE2D
+P 2350 10050
+F 0 "Z306" H 2350 10400 50  0000 C CNN
+F 1 "74AHCT04" H 2350 10300 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2350 10050 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT04.pdf" H 2350 10050 50  0001 C CNN
+	6    2350 10050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	950  10250 1450 10250
+Connection ~ 1750 10050
+Wire Wire Line
+	1750 10050 1750 9750
+Wire Wire Line
+	1750 10050 2050 10050
+Wire Wire Line
+	950  9750 1050 9750
+Wire Wire Line
+	950  10050 1050 10050
+Wire Wire Line
+	1750 10450 1750 10550
+Wire Wire Line
+	1750 9350 1750 9250
+Wire Wire Line
+	7850 8000 9330 8000
+Connection ~ 9330 8000
+Wire Wire Line
+	9330 8000 10450 8000
+Wire Wire Line
+	12050 3850 12050 3375
+Wire Wire Line
+	13900 5050 13900 1800
+Text Label 7975 2600 2    50   ~ 0
+~VIDEOCLK
+Wire Wire Line
+	12575 3100 12775 3100
+Connection ~ 12575 3100
+$Comp
+L Device:R_POT_TRIM RV1
+U 1 1 5F7D6EDD
+P 12925 3100
+F 0 "RV1" V 12800 3100 50  0000 C CNN
+F 1 "100" V 12700 3100 50  0000 C CNN
+F 2 "Potentiometer_THT:3362H1103LF" H 12925 3100 50  0001 C CNN
+F 3 "~" H 12925 3100 50  0001 C CNN
+	1    12925 3100
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 13075 3100
+Text Label 13150 4950 3    50   ~ 0
+~VIDEOCLK
+Text GLabel 4675 4700 2    50   Input ~ 0
+CLK\TRG3
+$Comp
+L Device:R R100
+U 1 1 5DEEED88
+P 8725 7100
+F 0 "R100" V 8500 7100 50  0000 C CNN
+F 1 "270" V 8600 7100 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 8655 7100 50  0001 C CNN
+F 3 "~" H 8725 7100 50  0001 C CNN
+	1    8725 7100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8875 7100 8875 7200
+Connection ~ 8875 7200
+$Comp
+L Device:R R101
+U 1 1 5DEEED91
+P 8725 7200
+F 0 "R101" V 8500 7200 50  0000 C CNN
+F 1 "270" V 8600 7200 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 8655 7200 50  0001 C CNN
+F 3 "~" H 8725 7200 50  0001 C CNN
+	1    8725 7200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8875 7200 8875 7500
+Connection ~ 8875 7500
+$Comp
+L Device:R R104
+U 1 1 5DF62BE4
+P 11325 6500
+F 0 "R104" V 11100 6500 50  0000 C CNN
+F 1 "270" V 11200 6500 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 11255 6500 50  0001 C CNN
+F 3 "~" H 11325 6500 50  0001 C CNN
+	1    11325 6500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	11475 6500 11475 6600
+Connection ~ 11475 6600
+$Comp
+L Device:R R105
+U 1 1 5DF62BEC
+P 11325 6600
+F 0 "R105" V 11100 6600 50  0000 C CNN
+F 1 "270" V 11200 6600 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 11255 6600 50  0001 C CNN
+F 3 "~" H 11325 6600 50  0001 C CNN
+	1    11325 6600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	11475 6600 11475 6900
+Wire Wire Line
+	13050 5050 13900 5050
+$Comp
+L Transistor_BJT:2N3904 Q1
+U 1 1 5F80CE24
+P 1650 10250
+F 0 "Q1" H 1455 10160 50  0000 L CNN
+F 1 "2N3904" H 1440 10395 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92L_Inline" H 1850 10175 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 1650 10250 50  0001 L CNN
+	1    1650 10250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11175 6600 11100 6600
+Wire Wire Line
+	11100 6500 11175 6500
+Wire Wire Line
+	8575 7200 8500 7200
+Wire Wire Line
+	8500 7100 8575 7100
+$Comp
+L 7132la100pdg:IDT7130-40-52PIN Z7-8
+U 1 1 5F80C938
+P 9800 4200
+AR Path="/5F80C938" Ref="Z7-8"  Part="1" 
+AR Path="/5FA4DA0E/5F80C938" Ref="Z7-8"  Part="1" 
+AR Path="/5E2F9A69/5F80C938" Ref="Z7-8"  Part="1" 
+AR Path="/5DAF6158/5F80C938" Ref="Z7-8"  Part="1" 
+F 0 "Z7-8" H 10125 4375 50  0000 C CNN
+F 1 "IDT7130" H 10475 4625 50  0000 C CNN
+F 2 "Package_LCC:PLCC-52_THT-Socket" H 10600 4850 50  0001 L CNN
+F 3 "https:~/www.idt.com/document/dst/71321421-datasheet" H 10600 4750 50  0001 L CNN
+F 4 "IC SRAM 16K PARALLEL 52PLCC" H 10600 4950 50  0001 L CNN "Description"
+F 5 "3.63" H 10950 4150 50  0001 L CNN "Height"
+F 6 "IDT, Integrated Device Technology Inc" H 10600 5050 50  0001 L CNN "Manufacturer_Name"
+F 7 "71321SA55JG8" H 10950 3750 50  0001 L CNN "Manufacturer_Part_Number"
+	1    9800 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L 7132la100pdg:IDT7130-40-52PIN Z5-6
+U 1 1 5F80C942
+P 7200 4800
+AR Path="/5F80C942" Ref="Z5-6"  Part="1" 
+AR Path="/5FA4DA0E/5F80C942" Ref="Z5-6"  Part="1" 
+AR Path="/5E2F9A69/5F80C942" Ref="Z5-6"  Part="1" 
+AR Path="/5DAF6158/5F80C942" Ref="Z5-6"  Part="1" 
+F 0 "Z5-6" H 8180 5085 50  0000 C CNN
+F 1 "IDT7130" H 7490 5095 50  0000 C CNN
+F 2 "Package_LCC:PLCC-52_THT-Socket" H 8000 5450 50  0001 L CNN
+F 3 "https:~/www.idt.com/document/dst/71321421-datasheet" H 8000 5350 50  0001 L CNN
+F 4 "IC SRAM 16K PARALLEL 52PLCC" H 8000 5550 50  0001 L CNN "Description"
+F 5 "3.63" H 8350 4750 50  0001 L CNN "Height"
+F 6 "IDT, Integrated Device Technology Inc" H 8000 5650 50  0001 L CNN "Manufacturer_Name"
+F 7 "71321SA55JG8" H 8350 4350 50  0001 L CNN "Manufacturer_Part_Number"
+	1    7200 4800
+	1    0    0    -1  
+$EndComp
+Text GLabel 3250 4700 0    50   Input ~ 0
+50Hz
+Connection ~ 11475 6900
+Text GLabel 7000 5900 0    50   Input ~ 0
+SCREENX0
+Text GLabel 7000 6000 0    50   Input ~ 0
+SCREENX1
+Text GLabel 7000 6100 0    50   Input ~ 0
+SCREENX2
+Text GLabel 7000 6200 0    50   Input ~ 0
+SCREENX3
+Text GLabel 7000 6300 0    50   Input ~ 0
+SCREENX4
+Text GLabel 7000 6400 0    50   Input ~ 0
+SCREENY0
+Text GLabel 7000 6500 0    50   Input ~ 0
+SCREENY1
+Text GLabel 7000 6600 0    50   Input ~ 0
+SCREENY2
+Text GLabel 7000 6700 0    50   Input ~ 0
+SCREENY3
+Text GLabel 7000 6800 0    50   Input ~ 0
+SCREENY4
+Text GLabel 9695 5300 0    50   Input ~ 0
+FONTCHAR0
+Text GLabel 9695 5400 0    50   Input ~ 0
+FONTCHAR1
+Text GLabel 9695 5500 0    50   Input ~ 0
+FONTCHAR2
+Text GLabel 2650 3000 3    50   Input ~ 0
+EOL
+Text GLabel 1855 2400 0    50   Input ~ 0
+SCREENX2
+Text GLabel 1855 2600 0    50   Input ~ 0
+SCREENX4
+Text GLabel 4275 2600 0    50   Input ~ 0
+ENDOFSCR
+Text GLabel 4275 2800 0    50   Input ~ 0
+EOL
+Text GLabel 4275 2000 0    50   Input ~ 0
+SCREENY4
+Text GLabel 4275 2200 0    50   Input ~ 0
+SCREENY3
+Text GLabel 6675 2300 0    50   Input ~ 0
+CNT2
+Text GLabel 6675 2400 0    50   Input ~ 0
+CNT1
+Text GLabel 6675 2500 0    50   Input ~ 0
+CNT0
+Text GLabel 2725 10050 2    50   Input ~ 0
+~VIDEOCLK
+$EndSCHEMATC

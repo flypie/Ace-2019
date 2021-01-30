@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 7
+Sheet 4 8
 Title "JupiterAce Z80 plus KIO and new memory format."
 Date "2019-09-11"
 Rev "Alpha"
@@ -479,11 +479,11 @@ Connection ~ 7195 3175
 Wire Wire Line
 	7195 2375 7195 3175
 $Comp
-L 74xx:74LS04 Z102
+L 74xx:74LS04 Z306
 U 3 1 64E6C736
 P 7050 4575
-F 0 "Z102" V 6975 4800 50  0000 L CNN
-F 1 "SN74AHCT04N" V 7075 4800 50  0000 L CNN
+F 0 "Z306" V 6975 4800 50  0000 L CNN
+F 1 "74AHCT04" V 7075 4800 50  0000 L CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 7050 4575 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/snSN74AHCT04" H 7050 4575 50  0001 C CNN
 F 4 "SN74AHCT04N" H 7050 4575 50  0001 C CNN "Manufacturer_Part_Number"
