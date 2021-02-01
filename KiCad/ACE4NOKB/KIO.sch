@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 8
+Sheet 5 9
 Title "JupiterAce Z80 plus KIO and new memory format."
 Date "2020-05-12"
 Rev "Alpha"
@@ -41,8 +41,6 @@ Text Label 6100 2050 1    50   ~ 0
 ~DCDA
 Text Label 6000 2050 1    50   ~ 0
 ~CTSA
-Text Label 6600 2050 1    50   ~ 0
-~RxCB
 Text Label 6500 2050 1    50   ~ 0
 ~TxCB
 Text Label 6200 2050 1    50   ~ 0
@@ -818,4 +816,10 @@ Text GLabel 6400 2050 1    50   Input ~ 0
 TxDB
 Text GLabel 6700 2050 1    50   Input ~ 0
 RxDB
+Text Label 6600 2050 1    50   ~ 0
+~RxCB
+NoConn ~ 6200 2050
+NoConn ~ 6300 2050
+NoConn ~ 6500 2050
+NoConn ~ 6600 2050
 $EndSCHEMATC

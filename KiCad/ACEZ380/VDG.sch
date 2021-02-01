@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 9
+Sheet 5 9
 Title "JupiterAceZ180"
 Date "2019-08-26"
 Rev "Alpha"
@@ -846,16 +846,14 @@ L 74xx:74HCT04 Z306
 U 4 1 5F80CB5F
 P 2900 3750
 F 0 "Z306" H 2900 4100 50  0000 C CNN
-F 1 "74AHCT04" H 2900 4000 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2900 3750 50  0001 C CNN
+F 1 "SN74AHCT04N" H 2900 4000 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 2900 3750 50  0001 C CNN
 F 3 "https:~/assets.nexperia.com/documents/data-sheet/74HC_AHCT04.pdf" H 2900 3750 50  0001 C CNN
 	4    2900 3750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	1600 1550 1700 1550
-Wire Wire Line
-	3200 3750 3325 3750
 Wire Wire Line
 	2400 2850 2500 2850
 Wire Wire Line
@@ -915,12 +913,12 @@ $EndComp
 $Comp
 L Diode:BAT54W D100
 U 1 1 5E84D6D1
-P 3475 3750
-F 0 "D100" H 3475 4070 50  0000 C CNN
-F 1 "BAT54W" H 3475 3970 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 3475 3575 50  0001 C CNN
-F 3 "https:~/assets.nexperia.com/documents/data-sheet/BAT54W_SER.pdf" H 3475 3750 50  0001 C CNN
-	1    3475 3750
+P 3500 3750
+F 0 "D100" H 3500 4070 50  0000 C CNN
+F 1 "BAT54W" H 3500 3970 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 3500 3575 50  0001 C CNN
+F 3 "https:~/assets.nexperia.com/documents/data-sheet/BAT54W_SER.pdf" H 3500 3750 50  0001 C CNN
+	1    3500 3750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1041,8 +1039,8 @@ L 74xx:74AHCT04 Z306
 U 6 1 5F80CE2D
 P 2200 4475
 F 0 "Z306" H 2200 4825 50  0000 C CNN
-F 1 "74AHCT04" H 2200 4725 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2200 4475 50  0001 C CNN
+F 1 "SN74AHCT04N" H 2200 4725 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 2200 4475 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT04.pdf" H 2200 4475 50  0001 C CNN
 	6    2200 4475
 	1    0    0    -1  
@@ -1086,7 +1084,7 @@ NoConn ~ 10150 2150
 Text Label 10375 4200 3    50   ~ 0
 ~VIDEOCLK
 Text GLabel 3750 3750 2    50   Input ~ 0
-CLK\TRG3
+~INT3
 Wire Wire Line
 	6375 6150 6375 6250
 Connection ~ 6375 6250
@@ -1250,15 +1248,15 @@ $EndSheet
 Wire Wire Line
 	2400 3750 2600 3750
 Wire Wire Line
-	6800 6400 7950 6400
+	6600 6400 7950 6400
 Wire Wire Line
-	7300 5350 6800 5350
+	7300 5350 6600 5350
 Wire Wire Line
-	6800 5350 6800 6400
+	6600 5350 6600 6400
 Wire Wire Line
 	5350 7050 3750 7050
 Wire Wire Line
-	3750 7050 3750 4850
+	3750 7050 3750 5950
 Wire Wire Line
 	3750 4850 4700 4850
 Wire Wire Line
@@ -1267,17 +1265,17 @@ Connection ~ 5350 7050
 $Comp
 L power:GND #0119
 U 1 1 60749C0A
-P 6800 6475
-F 0 "#0119" H 6800 6225 50  0001 C CNN
-F 1 "GND" V 6845 6345 50  0000 R CNN
-F 2 "" H 6800 6475 50  0001 C CNN
-F 3 "" H 6800 6475 50  0001 C CNN
-	1    6800 6475
+P 6600 6475
+F 0 "#0119" H 6600 6225 50  0001 C CNN
+F 1 "GND" V 6645 6345 50  0000 R CNN
+F 2 "" H 6600 6475 50  0001 C CNN
+F 3 "" H 6600 6475 50  0001 C CNN
+	1    6600 6475
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6800 6475 6800 6400
-Connection ~ 6800 6400
+	6600 6475 6600 6400
+Connection ~ 6600 6400
 $Comp
 L Device:R R100
 U 1 1 5DEEED88
@@ -1289,4 +1287,18 @@ F 3 "~" H 6225 6150 50  0001 C CNN
 	1    6225 6150
 	0    1    1    0   
 $EndComp
+Wire Wire Line
+	4700 5950 3750 5950
+Connection ~ 3750 5950
+Wire Wire Line
+	3750 5950 3750 4850
+Wire Wire Line
+	7300 4250 6600 4250
+Wire Wire Line
+	6600 4250 6600 5350
+Connection ~ 6600 5350
+Wire Wire Line
+	3750 3750 3650 3750
+Wire Wire Line
+	3200 3750 3350 3750
 $EndSCHEMATC

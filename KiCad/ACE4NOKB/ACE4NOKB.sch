@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 1 8
+Sheet 1 9
 Title "ACE4NOKB"
 Date "2020-04-30"
 Rev "Alpha"
@@ -490,10 +490,10 @@ Text GLabel 4750 2800 0    50   Input ~ 0
 Text GLabel 4750 1600 0    50   Input ~ 0
 ~M1
 $Sheet
-S 13550 2300 1500 1000
+S 2000 9500 950  1050
 U 5E2F9A69
-F0 "VDG" 150
-F1 "VDG.sch" 150
+F0 "VDG" 118
+F1 "VDG.sch" 118
 $EndSheet
 Text GLabel 4750 2000 0    50   Input ~ 0
 ~WR
@@ -516,10 +516,10 @@ A7
 Text GLabel 4750 3600 0    50   Input ~ 0
 PHI
 $Sheet
-S 13600 3800 1500 1000
+S 3500 9500 1000 1000
 U 60462D93
-F0 "IO&Speaker" 150
-F1 "IO&Speaker.sch" 150
+F0 "IO&Speaker" 118
+F1 "IO&Speaker.sch" 118
 $EndSheet
 Text GLabel 6350 2800 2    50   Input ~ 0
 A12
@@ -530,10 +530,10 @@ A14
 Text GLabel 6350 3100 2    50   Input ~ 0
 A15
 $Sheet
-S 13600 800  1500 1000
+S 500  9500 1000 1000
 U 5D919407
-F0 "KIO" 150
-F1 "KIO.sch" 150
+F0 "KIO" 118
+F1 "KIO.sch" 118
 $EndSheet
 Text Label 8275 5750 2    50   ~ 0
 ~IOREQ
@@ -1105,10 +1105,10 @@ Wire Wire Line
 Wire Wire Line
 	8350 -75  8400 -75 
 $Sheet
-S 13600 5300 1500 1000
+S 5000 9500 1000 1000
 U 5DC9EBF8
-F0 "MMU" 150
-F1 "MMU.sch" 150
+F0 "MMU" 118
+F1 "MMU.sch" 118
 $EndSheet
 Text GLabel 11075 5850 2    50   Input ~ 0
 ~PAGING
@@ -1129,10 +1129,10 @@ MA18
 Text GLabel 10300 3500 0    50   Input ~ 0
 MA19
 $Sheet
-S 13600 6800 1500 1000
+S 6500 9500 1000 1000
 U 5E5AD6B1
-F0 "PSU" 150
-F1 "PSU.sch" 150
+F0 "PSU" 118
+F1 "PSU.sch" 118
 $EndSheet
 $Comp
 L 74xx:74LS86 Z?
@@ -1285,19 +1285,6 @@ F 3 "" H 2000 5500 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1855 5750 2000 5750
-$Comp
-L Device:C_Small C?
-U 1 1 607AE753
-P 1755 5750
-AR Path="/5E2F9A69/607AE753" Ref="C?"  Part="1" 
-AR Path="/607AE753" Ref="C400"  Part="1" 
-F 0 "C400" V 1505 5795 50  0000 C CNN
-F 1 "30p" V 1605 5795 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 1755 5750 50  0001 C CNN
-F 3 "" H 1755 5750 50  0001 C CNN
-	1    1755 5750
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	1200 6250 1700 6250
 Connection ~ 2000 6050
@@ -1492,7 +1479,7 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 2600 6050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Sheet
-S 13600 8300 1500 1000
+S 8000 9500 1000 1000
 U 6242B13B
 F0 "ADDRDECODE" 118
 F1 "ADDRDECODE.sch" 118
@@ -1524,4 +1511,23 @@ NoConn ~ -1525 3300
 NoConn ~ -2125 3200
 NoConn ~ -2125 3300
 NoConn ~ -2125 3400
+$Sheet
+S 9500 9500 1000 1000
+U 601B15FC
+F0 "STM8SUBSYS" 118
+F1 "STM8SUBSYS.sch" 118
+$EndSheet
+$Comp
+L Device:C_Small C?
+U 1 1 607AE753
+P 1755 5750
+AR Path="/5E2F9A69/607AE753" Ref="C?"  Part="1" 
+AR Path="/607AE753" Ref="C400"  Part="1" 
+F 0 "C400" V 1505 5795 50  0000 C CNN
+F 1 "30p" V 1605 5795 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 1755 5750 50  0001 C CNN
+F 3 "" H 1755 5750 50  0001 C CNN
+	1    1755 5750
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC

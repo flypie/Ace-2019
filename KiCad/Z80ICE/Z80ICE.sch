@@ -285,7 +285,7 @@ Wire Wire Line
 Text Label 17300 3700 0    50   ~ 0
 D7
 $Comp
-L Zilog_Z80:Z80CPU-LCC IC1
+L Zilog_Z80:Z80CPU-LCC-PASSIVE IC1
 U 1 1 5EBE8282
 P 1275 775
 F 0 "IC1" H 1775 975 59  0000 C CNN
@@ -698,19 +698,13 @@ SPI_MOSI
 Text Label 3850 6700 0    50   ~ 0
 SPI_~SS
 Wire Wire Line
-	2450 6500 2275 6500
+	2450 6500 2375 6500
 Wire Wire Line
-	2275 6500 2275 6400
+	2375 6500 2075 6400
 Wire Wire Line
-	2275 6400 1875 6400
+	2075 6400 1875 6400
 Wire Wire Line
 	2450 6400 2375 6400
-Wire Wire Line
-	2375 6400 2375 6550
-Wire Wire Line
-	2375 6550 2075 6550
-Wire Wire Line
-	2075 6550 2075 6500
 Wire Wire Line
 	2075 6500 1875 6500
 $Comp
@@ -724,81 +718,8 @@ F 3 "" H 4300 1050 50  0001 C CNN
 	1    4300 1050
 	1    0    0    -1  
 $EndComp
-$Comp
-L 74xx:74LS86 U10
-U 1 1 5F21856E
-P 3700 4175
-F 0 "U10" H 3700 4475 50  0000 C CNN
-F 1 "74LS86" H 3700 4375 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 3700 4175 50  0001 C CNN
-F 3 "74xx/74ls86.pdf" H 3700 4175 50  0001 C CNN
-	1    3700 4175
-	1    0    0    -1  
-$EndComp
-Text Label 2650 4175 2    50   ~ 0
-CLK
-$Comp
-L Device:R R1
-U 1 1 5F21B3BB
-P 3000 4275
-F 0 "R1" V 3100 4275 50  0000 C CNN
-F 1 "10k" V 3175 4275 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 2930 4275 50  0001 C CNN
-F 3 "~" H 3000 4275 50  0001 C CNN
-	1    3000 4275
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:C C1
-U 1 1 5F21BE84
-P 3275 4425
-F 0 "C1" H 3400 4475 50  0000 L CNN
-F 1 "1uf" H 3400 4375 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W2.0mm_P2.50mm" H 3313 4275 50  0001 C CNN
-F 3 "~" H 3275 4425 50  0001 C CNN
-	1    3275 4425
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3400 4275 3275 4275
-Connection ~ 3275 4275
-Wire Wire Line
-	3275 4275 3150 4275
-Wire Wire Line
-	2850 4275 2775 4275
-Wire Wire Line
-	2775 4275 2775 4175
-Wire Wire Line
-	2775 4075 3400 4075
-$Comp
-L power:GND #PWR0101
-U 1 1 5F224FDF
-P 3275 4575
-F 0 "#PWR0101" H 3275 4325 50  0001 C CNN
-F 1 "GND" H 3300 4350 50  0000 C CNN
-F 2 "" H 3275 4575 50  0001 C CNN
-F 3 "" H 3275 4575 50  0001 C CNN
-	1    3275 4575
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2775 4175 2650 4175
-Connection ~ 2775 4175
-Wire Wire Line
-	2775 4175 2775 4075
-Text Label 4000 4175 0    50   ~ 0
+Text Label 4525 5000 0    50   ~ 0
 DBLCLK
-$Comp
-L 74xx:74LS86 U10
-U 2 1 5F22C0F4
-P 5350 -300
-F 0 "U10" H 5350 0   50  0000 C CNN
-F 1 "74LS86" H 5350 -100 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 5350 -300 50  0001 C CNN
-F 3 "74xx/74ls86.pdf" H 5350 -300 50  0001 C CNN
-	2    5350 -300
-	1    0    0    -1  
-$EndComp
 $Comp
 L 74xx:74LS86 U10
 U 3 1 5F22D148
@@ -995,17 +916,6 @@ F 1 "VCC" H 5950 6300 50  0000 C CNN
 F 2 "" H 5950 6125 50  0001 C CNN
 F 3 "" H 5950 6125 50  0001 C CNN
 	1    5950 6125
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0117
-U 1 1 5F330859
-P 1575 6800
-F 0 "#PWR0117" H 1575 6550 50  0001 C CNN
-F 1 "GND" H 1600 6575 50  0000 C CNN
-F 2 "" H 1575 6800 50  0001 C CNN
-F 3 "" H 1575 6800 50  0001 C CNN
-	1    1575 6800
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1491,12 +1401,12 @@ Text Label 12575 4175 2    50   ~ 0
 $Comp
 L Connector_Generic:Conn_02x08_Counter_Clockwise J2
 U 1 1 5F6B360E
-P 5975 5175
-F 0 "J2" H 6050 5750 50  0000 C CNN
-F 1 "Conn_02x08_Counter_Clockwise" H 6050 5650 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x08_P2.54mm_Vertical" H 5975 5175 50  0001 C CNN
-F 3 "~" H 5975 5175 50  0001 C CNN
-	1    5975 5175
+P 1450 5450
+F 0 "J2" H 1525 6025 50  0000 C CNN
+F 1 "Conn_02x08_Counter_Clockwise" H 1525 5925 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x08_P2.54mm_Vertical" H 1450 5450 50  0001 C CNN
+F 3 "~" H 1450 5450 50  0001 C CNN
+	1    1450 5450
 	1    0    0    -1  
 $EndComp
 Text Label 12575 6600 2    50   ~ 0
@@ -1583,33 +1493,33 @@ Text Label 6575 3400 2    50   ~ 0
 PI2
 Text Label 6575 3500 2    50   ~ 0
 PI3
-Text Label 5775 4875 2    50   ~ 0
+Text Label 1250 5150 2    50   ~ 0
 PH0
-Text Label 5775 4975 2    50   ~ 0
+Text Label 1250 5250 2    50   ~ 0
 PH1
-Text Label 5775 5075 2    50   ~ 0
+Text Label 1250 5350 2    50   ~ 0
 PH2
-Text Label 5775 5175 2    50   ~ 0
+Text Label 1250 5450 2    50   ~ 0
 PH3
-Text Label 5775 5275 2    50   ~ 0
+Text Label 1250 5550 2    50   ~ 0
 PH4
-Text Label 5775 5375 2    50   ~ 0
+Text Label 1250 5650 2    50   ~ 0
 PH5
-Text Label 5775 5475 2    50   ~ 0
+Text Label 1250 5750 2    50   ~ 0
 PH6
-Text Label 5775 5575 2    50   ~ 0
+Text Label 1250 5850 2    50   ~ 0
 PH7
 Text Label 4000 3500 2    50   ~ 0
 PI1
 Text Label 4000 3400 2    50   ~ 0
 PI0
-Text Label 6275 4975 0    50   ~ 0
+Text Label 1750 5250 0    50   ~ 0
 PI1
-Text Label 6275 4875 0    50   ~ 0
+Text Label 1750 5150 0    50   ~ 0
 PI0
-Text Label 6275 5075 0    50   ~ 0
+Text Label 1750 5350 0    50   ~ 0
 PI2
-Text Label 6275 5175 0    50   ~ 0
+Text Label 1750 5450 0    50   ~ 0
 PI3
 Text Label 8925 3200 2    50   ~ 0
 PI4
@@ -1619,13 +1529,13 @@ Text Label 8925 3400 2    50   ~ 0
 PI6
 Text Label 8925 3500 2    50   ~ 0
 PI7
-Text Label 6275 5275 0    50   ~ 0
+Text Label 1750 5550 0    50   ~ 0
 PI4
-Text Label 6275 5375 0    50   ~ 0
+Text Label 1750 5650 0    50   ~ 0
 PI5
-Text Label 6275 5475 0    50   ~ 0
+Text Label 1750 5750 0    50   ~ 0
 PI6
-Text Label 6275 5575 0    50   ~ 0
+Text Label 1750 5850 0    50   ~ 0
 PI7
 NoConn ~ 7250 -300
 NoConn ~ 6650 -200
@@ -1633,9 +1543,6 @@ NoConn ~ 6650 -400
 NoConn ~ 5775 -400
 NoConn ~ 5775 -200
 NoConn ~ 6375 -300
-NoConn ~ 5650 -300
-NoConn ~ 5050 -400
-NoConn ~ 5050 -200
 NoConn ~ 8075 1550
 NoConn ~ 8075 1450
 NoConn ~ 8075 1350
@@ -1654,8 +1561,8 @@ $Comp
 L Device:C C3
 U 1 1 5F925AB8
 P 12425 8775
-F 0 "C3" H 12550 8825 50  0000 L CNN
-F 1 "1uf" H 12550 8725 50  0000 L CNN
+F 0 "C3" V 12150 8800 50  0000 C CNN
+F 1 "1uf" V 12250 8800 50  0000 C CNN
 F 2 "Capacitor_THT:C_Disc_D3.0mm_W2.0mm_P2.50mm" H 12463 8625 50  0001 C CNN
 F 3 "~" H 12425 8775 50  0001 C CNN
 	1    12425 8775
@@ -1666,7 +1573,7 @@ L power:GND #PWR0140
 U 1 1 5F925AC2
 P 12275 8775
 F 0 "#PWR0140" H 12275 8525 50  0001 C CNN
-F 1 "GND" H 12300 8550 50  0000 C CNN
+F 1 "GND" V 12250 8600 50  0000 R CNN
 F 2 "" H 12275 8775 50  0001 C CNN
 F 3 "" H 12275 8775 50  0001 C CNN
 	1    12275 8775
@@ -1677,14 +1584,12 @@ L power:VCC #PWR0141
 U 1 1 5F934AB4
 P 12575 8675
 F 0 "#PWR0141" H 12575 8525 50  0001 C CNN
-F 1 "VCC" H 12600 8875 50  0000 C CNN
+F 1 "VCC" V 12600 8850 50  0000 L CNN
 F 2 "" H 12575 8675 50  0001 C CNN
 F 3 "" H 12575 8675 50  0001 C CNN
 	1    12575 8675
 	0    -1   -1   0   
 $EndComp
-NoConn ~ 12575 8975
-NoConn ~ 12575 8875
 Wire Wire Line
 	975  3075 1075 3075
 Wire Wire Line
@@ -1704,7 +1609,6 @@ Connection ~ 3150 5800
 Wire Wire Line
 	3150 5800 3050 5800
 NoConn ~ 1875 6200
-NoConn ~ 1475 6800
 Wire Wire Line
 	5950 6125 5575 6125
 Wire Wire Line
@@ -1732,5 +1636,117 @@ F 2 "" H 5575 7125 50  0001 C CNN
 F 3 "~" H 5575 7125 50  0001 C CNN
 	1    5575 7125
 	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2075 6500 2375 6400
+Wire Wire Line
+	3300 4900 3925 4900
+Wire Wire Line
+	3925 5100 3800 5100
+$Comp
+L power:GND #PWR0101
+U 1 1 5F224FDF
+P 3800 5400
+F 0 "#PWR0101" H 3800 5150 50  0001 C CNN
+F 1 "GND" H 3825 5175 50  0000 C CNN
+F 2 "" H 3800 5400 50  0001 C CNN
+F 3 "" H 3800 5400 50  0001 C CNN
+	1    3800 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3375 5100 3300 5100
+Wire Wire Line
+	3800 5100 3675 5100
+Connection ~ 3800 5100
+$Comp
+L Device:C C1
+U 1 1 5F21BE84
+P 3800 5250
+F 0 "C1" H 3925 5300 50  0000 L CNN
+F 1 "1uf" H 3925 5200 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W2.0mm_P2.50mm" H 3838 5100 50  0001 C CNN
+F 3 "~" H 3800 5250 50  0001 C CNN
+	1    3800 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5F21B3BB
+P 3525 5100
+F 0 "R1" V 3625 5100 50  0000 C CNN
+F 1 "10k" V 3700 5100 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 3455 5100 50  0001 C CNN
+F 3 "~" H 3525 5100 50  0001 C CNN
+	1    3525 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L 74xx:74LS86 U10
+U 1 1 5F21856E
+P 4225 5000
+F 0 "U10" H 4225 5300 50  0000 C CNN
+F 1 "74LS86" H 4225 5200 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 4225 5000 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 4225 5000 50  0001 C CNN
+	1    4225 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 5100 3300 5000
+Wire Wire Line
+	3300 5000 3300 4900
+Connection ~ 3300 5000
+Wire Wire Line
+	3300 5000 3175 5000
+Text Label 3175 5000 2    50   ~ 0
+CLK
+NoConn ~ 5050 -200
+NoConn ~ 5050 -400
+NoConn ~ 5650 -300
+$Comp
+L 74xx:74LS86 U10
+U 2 1 5F22C0F4
+P 5350 -300
+F 0 "U10" H 5350 0   50  0000 C CNN
+F 1 "74LS86" H 5350 -100 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 5350 -300 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H 5350 -300 50  0001 C CNN
+	2    5350 -300
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1575 6800
+$Comp
+L power:GND #PWR0117
+U 1 1 5F31F6DC
+P 1475 6800
+F 0 "#PWR0117" H 1475 6550 50  0001 C CNN
+F 1 "GND" H 1500 6575 50  0000 C CNN
+F 2 "" H 1475 6800 50  0001 C CNN
+F 3 "" H 1475 6800 50  0001 C CNN
+	1    1475 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0142
+U 1 1 5F32D08E
+P 12575 8975
+F 0 "#PWR0142" H 12575 8725 50  0001 C CNN
+F 1 "GND" V 12750 8950 50  0000 C CNN
+F 2 "" H 12575 8975 50  0001 C CNN
+F 3 "" H 12575 8975 50  0001 C CNN
+	1    12575 8975
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VCC #PWR0143
+U 1 1 5F32D99D
+P 12575 8875
+F 0 "#PWR0143" H 12575 8725 50  0001 C CNN
+F 1 "VCC" V 12600 9050 50  0000 L CNN
+F 2 "" H 12575 8875 50  0001 C CNN
+F 3 "" H 12575 8875 50  0001 C CNN
+	1    12575 8875
+	0    -1   -1   0   
 $EndComp
 $EndSCHEMATC

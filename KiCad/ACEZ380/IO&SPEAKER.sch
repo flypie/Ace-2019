@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 9
+Sheet 3 9
 Title "JupiterAce Z80 plus KIO and new memory format."
 Date "2019-09-11"
 Rev "Alpha"
@@ -30,9 +30,9 @@ F 5 "Texas Instruments" H 4375 4175 50  0001 C CNN "Manufacturer_Name"
 	0    -1   -1   0   
 $EndComp
 Text GLabel 6225 4275 0    50   Input ~ 0
-~RD
+~IORD
 Text GLabel 6225 3275 0    50   Input ~ 0
-~WR
+~IOWR
 Text GLabel 2575 5475 0    50   Input ~ 0
 A15
 Text GLabel 2675 5375 0    50   Input ~ 0
@@ -483,8 +483,8 @@ L 74xx:74LS04 Z306
 U 3 1 64E6C736
 P 7050 4575
 F 0 "Z306" V 6975 4800 50  0000 L CNN
-F 1 "74AHCT04" V 7075 4800 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 7050 4575 50  0001 C CNN
+F 1 "SN74AHCT04N" V 7075 4800 50  0000 L CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 7050 4575 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/snSN74AHCT04" H 7050 4575 50  0001 C CNN
 F 4 "SN74AHCT04N" H 7050 4575 50  0001 C CNN "Manufacturer_Part_Number"
 F 5 "Texas Instruments" H 7050 4575 50  0001 C CNN "Manufacturer_Name"

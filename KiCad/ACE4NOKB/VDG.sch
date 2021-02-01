@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 8
+Sheet 2 9
 Title "ACE4NOKB"
 Date "2020-04-30"
 Rev "Alpha"
@@ -736,24 +736,6 @@ F 3 "" H 8525 6000 50  0001 C CNN
 	1    8525 6000
 	0    1    1    0   
 $EndComp
-$Comp
-L 7132la100pdg:IDT71321-421-52PIN-PLCC Z7-8
-U 1 1 5F80C938
-P 7000 3300
-AR Path="/5F80C938" Ref="Z7-8"  Part="1" 
-AR Path="/5FA4DA0E/5F80C938" Ref="Z7-8"  Part="1" 
-AR Path="/5E2F9A69/5F80C938" Ref="Z7-8"  Part="1" 
-F 0 "Z7-8" H 7325 3475 50  0000 C CNN
-F 1 "71321SA55JG8" H 7675 3725 50  0000 C CNN
-F 2 "Package_LCC:PLCC-52_THT-Socket" H 7800 3950 50  0001 L CNN
-F 3 "https:/www.idt.com/document/dst/71321421-datasheet" H 7800 3850 50  0001 L CNN
-F 4 "IC SRAM 16K PARALLEL 52PLCC" H 7800 4050 50  0001 L CNN "Description"
-F 5 "3.63" H 8150 3250 50  0001 L CNN "Height"
-F 6 "IDT, Integrated Device Technology Inc" H 7800 4150 50  0001 L CNN "Manufacturer_Name"
-F 7 "71321SA55JG8" H 8150 2850 50  0001 L CNN "Manufacturer_Part_Number"
-	1    7000 3300
-	1    0    0    -1  
-$EndComp
 Text GLabel 6900 5700 0    50   Input ~ 0
 ~CPUFONTRAM
 Text GLabel 4300 6300 0    50   Input ~ 0
@@ -1212,14 +1194,14 @@ P 4400 3900
 AR Path="/5F80C942" Ref="Z5-6"  Part="1" 
 AR Path="/5FA4DA0E/5F80C942" Ref="Z5-6"  Part="1" 
 AR Path="/5E2F9A69/5F80C942" Ref="Z5-6"  Part="1" 
-F 0 "Z5-6" H 5380 4185 50  0000 C CNN
-F 1 "71321SA55JG8" H 4690 4195 50  0000 C CNN
-F 2 "Package_LCC:PLCC-52_THT-Socket" H 5200 4550 50  0001 L CNN
-F 3 "https:/www.idt.com/document/dst/71321421-datasheet" H 5200 4450 50  0001 L CNN
-F 4 "IC SRAM 16K PARALLEL 52PLCC" H 5200 4650 50  0001 L CNN "Description"
-F 5 "3.63" H 5550 3850 50  0001 L CNN "Height"
-F 6 "IDT, Integrated Device Technology Inc" H 5200 4750 50  0001 L CNN "Manufacturer_Name"
-F 7 "71321SA55JG8" H 5550 3450 50  0001 L CNN "Manufacturer_Part_Number"
+F 0 "Z5-6" H 5400 4050 50  0000 C CNN
+F 1 "IDT71321" H 4750 4050 50  0000 C CNN
+F 2 "Package_LCC:PLCC-52" H 5200 4550 50  0001 L CNN
+F 3 "https://www.idt.com/document/dst/71321421-datasheet" H 5200 4450 50  0001 L CNN
+F 4 "SRAM 2K x 8 Dual-Port RAM Memory & Logic/ Master" H 5200 4650 50  0001 L CNN "Description"
+F 5 "3.8" H 5550 3850 50  0001 L CNN "Height"
+F 6 "IDT (Integrated Device Technology)" H 5200 4750 50  0001 L CNN "Manufacturer_Name"
+F 7 "7132LA100PDG" H 5550 3450 50  0001 L CNN "Manufacturer_Part_Number"
 	1    4400 3900
 	1    0    0    -1  
 $EndComp
@@ -1274,8 +1256,6 @@ Wire Wire Line
 Wire Wire Line
 	6400 900  11150 900 
 Wire Wire Line
-	7650 3000 7650 2900
-Wire Wire Line
 	4400 6500 4300 6500
 Connection ~ 2275 3800
 Wire Wire Line
@@ -1294,4 +1274,24 @@ Wire Wire Line
 Connection ~ 6450 6250
 Wire Wire Line
 	6450 6250 6450 5400
+Wire Wire Line
+	7650 3000 7650 2900
+$Comp
+L 7132la100pdg:IDT71321-421-52PIN-PLCC Z7-8
+U 1 1 5F80C938
+P 7000 3300
+AR Path="/5F80C938" Ref="Z7-8"  Part="1" 
+AR Path="/5FA4DA0E/5F80C938" Ref="Z7-8"  Part="1" 
+AR Path="/5E2F9A69/5F80C938" Ref="Z7-8"  Part="1" 
+F 0 "Z7-8" H 8000 3450 50  0000 C CNN
+F 1 "IDT71321" H 7350 3450 50  0000 C CNN
+F 2 "Package_LCC:PLCC-52" H 7800 3950 50  0001 L CNN
+F 3 "https://www.idt.com/document/dst/71321421-datasheet" H 7800 3850 50  0001 L CNN
+F 4 "SRAM 2K x 8 Dual-Port RAM Memory & Logic/ Master" H 7800 4050 50  0001 L CNN "Description"
+F 5 "3.8" H 8150 3250 50  0001 L CNN "Height"
+F 6 "IDT (Integrated Device Technology)" H 7800 4150 50  0001 L CNN "Manufacturer_Name"
+F 7 "7132LA100PDG" H 8150 2850 50  0001 L CNN "Manufacturer_Part_Number"
+	1    7000 3300
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
