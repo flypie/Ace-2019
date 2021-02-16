@@ -17,8 +17,6 @@ $Comp
 L Connector_Generic:Conn_02x04_Odd_Even PIOA?
 U 1 1 61871FF8
 P 4900 1800
-AR Path="/61871FF8" Ref="PIOA?"  Part="1" 
-AR Path="/5D9DD1F0/61871FF8" Ref="PIOA1"  Part="1" 
 F 0 "PIOA1" H 4975 2050 59  0000 C CNN
 F 1 "2510-" H 4750 1905 59  0001 L BNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 4900 1800 50  0001 C CNN
@@ -44,8 +42,6 @@ $Comp
 L Connector_Generic:Conn_02x04_Odd_Even PIOB?
 U 1 1 61872040
 P 4900 2400
-AR Path="/61872040" Ref="PIOB?"  Part="1" 
-AR Path="/5D9DD1F0/61872040" Ref="PIOB1"  Part="1" 
 F 0 "PIOB1" H 4975 2650 59  0000 C CNN
 F 1 "2510-" H 4750 2505 59  0001 L BNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 4900 2400 50  0001 C CNN
@@ -71,8 +67,6 @@ $Comp
 L Connector_Generic:Conn_02x05_Odd_Even SIOB?
 U 1 1 61872035
 P 4900 3775
-AR Path="/61872035" Ref="SIOB?"  Part="1" 
-AR Path="/5D9DD1F0/61872035" Ref="SIOB1"  Part="1" 
 F 0 "SIOB1" H 4975 4150 59  0000 C CNN
 F 1 "2510-" H 4750 3880 59  0001 L BNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 4900 3775 50  0001 C CNN
@@ -100,8 +94,6 @@ $Comp
 L Connector_Generic:Conn_02x05_Odd_Even SIOA?
 U 1 1 6187201B
 P 4900 3100
-AR Path="/6187201B" Ref="SIOA?"  Part="1" 
-AR Path="/5D9DD1F0/6187201B" Ref="SIOA1"  Part="1" 
 F 0 "SIOA1" H 4975 3450 59  0000 C CNN
 F 1 "2510-" H 4750 3205 59  0001 L BNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 4900 3100 50  0001 C CNN
@@ -133,8 +125,6 @@ $Comp
 L Connector:Mini-DIN-6 PS/2
 U 1 1 618F6975
 P 4950 4625
-AR Path="/5D9DD1F0/618F6975" Ref="PS/2"  Part="1" 
-AR Path="/618F6975" Ref="J?"  Part="1" 
 F 0 "PS/2" H 4950 4225 50  0000 C CNN
 F 1 "Mini-DIN-6" H 4950 4325 50  0000 C CNN
 F 2 "Local:5749180-1" H 4950 4625 50  0001 C CNN
@@ -148,8 +138,6 @@ $Comp
 L power:VCC #~~~P+?
 U 1 1 618F697D
 P 5330 4625
-AR Path="/618F697D" Ref="#~~~P+?"  Part="1" 
-AR Path="/5D9DD1F0/618F697D" Ref="#~~~P+0101"  Part="1" 
 F 0 "#~~~P+0101" H 5330 4625 50  0001 C CNN
 F 1 "VCC" V 5330 4625 59  0000 L BNN
 F 2 "" H 5330 4625 50  0001 C CNN
@@ -165,8 +153,6 @@ $Comp
 L power:GND #~~~SUPPLY?
 U 1 1 618F6985
 P 4450 4625
-AR Path="/618F6985" Ref="#~~~SUPPLY?"  Part="1" 
-AR Path="/5D9DD1F0/618F6985" Ref="#~~~SUPPLY0103"  Part="1" 
 F 0 "#~~~SUPPLY0103" H 4450 4625 50  0001 C CNN
 F 1 "GND" H 4375 4500 59  0000 L BNN
 F 2 "" H 4450 4625 50  0001 C CNN
@@ -267,3 +253,4 @@ NoConn ~ 5200 2300
 NoConn ~ 5200 3875
 NoConn ~ 5200 3975
 $EndSCHEMATC
+

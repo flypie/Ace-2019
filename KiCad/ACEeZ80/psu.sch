@@ -759,3 +759,5 @@ F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 2225 3525 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $EndSCHEMATC
+
+

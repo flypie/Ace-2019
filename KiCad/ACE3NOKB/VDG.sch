@@ -1358,8 +1358,6 @@ F 3 "" H 8825 7500 50  0001 C CNN
 	1    8825 7500
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	9350 8250 9300 8250
 $Comp
 L Device:R R133
 U 1 1 6D6A651A

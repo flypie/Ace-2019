@@ -329,8 +329,6 @@ $Comp
 L 74xx:74LS74 Z27
 U 1 1 5F80CB50
 P 11075 3200
-AR Path="/5F80CB50" Ref="Z27"  Part="1" 
-AR Path="/5D66C06C/5F80CB50" Ref="Z27"  Part="1" 
 F 0 "Z27" H 11285 3460 50  0000 C CNN
 F 1 "SN74AHCT74N" H 10845 3450 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 11075 3200 50  0001 C CNN
@@ -759,3 +757,5 @@ F 3 "https:~/assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 2450 
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
+
+

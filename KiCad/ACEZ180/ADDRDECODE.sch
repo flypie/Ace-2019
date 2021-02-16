@@ -225,12 +225,9 @@ Wire Wire Line
 Wire Wire Line
 	7650 3150 7800 3150
 $Comp
-L 74xx:74LS30 Z?
+L 74xx:74LS30 Z407
 U 1 1 6024C8EB
 P 7350 3150
-AR Path="/6024C8EB" Ref="Z?"  Part="1" 
-AR Path="/601C6FA0/6024C8EB" Ref="Z407"  Part="1" 
-AR Path="/601B22CC/6024C8EB" Ref="Z407"  Part="1" 
 F 0 "Z407" H 7375 3575 50  0000 C CNN
 F 1 "74AHCT30D" H 7375 3475 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 7350 3150 50  0001 C CNN
@@ -278,12 +275,9 @@ Text GLabel 9450 2600 0    50   Input ~ 0
 Text GLabel 10450 2450 2    50   Input ~ 0
 ~ROMSEL
 $Comp
-L 74xx:74LS21 U?
+L 74xx:74LS21 Z404
 U 1 1 605A9444
 P 9950 2450
-AR Path="/605A9444" Ref="U?"  Part="1" 
-AR Path="/601C6FA0/605A9444" Ref="Z404"  Part="1" 
-AR Path="/601B22CC/605A9444" Ref="Z404"  Part="1" 
 F 0 "Z404" H 9950 2800 50  0000 C CNN
 F 1 "74LS21" H 9950 2750 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 9950 2450 50  0001 C CNN
@@ -351,11 +345,9 @@ Wire Wire Line
 Wire Wire Line
 	3700 1650 3700 1550
 $Comp
-L power:GND #~~~PWR?
+L power:GND #~~~PWR0101
 U 1 1 605721B4
 P 3700 1650
-AR Path="/605721B4" Ref="#~~~PWR?"  Part="1" 
-AR Path="/601B22CC/605721B4" Ref="#~~~PWR0101"  Part="1" 
 F 0 "#~~~PWR0101" H 3700 1400 50  0001 C CNN
 F 1 "GND" V 3735 1515 50  0000 R CNN
 F 2 "" H 3700 1650 50  0001 C CNN
@@ -365,12 +357,9 @@ F 3 "" H 3700 1650 50  0001 C CNN
 $EndComp
 Connection ~ 3700 1250
 $Comp
-L Diode:1N4148 D?
+L Diode:1N4148 D602
 U 1 1 605721BB
 P 3225 850
-AR Path="/5D66C06C/605721BB" Ref="D?"  Part="1" 
-AR Path="/605721BB" Ref="D?"  Part="1" 
-AR Path="/601B22CC/605721BB" Ref="D602"  Part="1" 
 F 0 "D602" V 3145 800 50  0000 L CNN
 F 1 "1N4148" V 3225 935 50  0001 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 3225 675 50  0001 C CNN
@@ -379,12 +368,9 @@ F 3 "https:~/assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3225 
 	-1   0    0    1   
 $EndComp
 $Comp
-L Diode:1N4148 D?
+L Diode:1N4148 D601
 U 1 1 605721C1
 P 3475 750
-AR Path="/5D66C06C/605721C1" Ref="D?"  Part="1" 
-AR Path="/605721C1" Ref="D?"  Part="1" 
-AR Path="/601B22CC/605721C1" Ref="D601"  Part="1" 
 F 0 "D601" V 3395 700 50  0000 L CNN
 F 1 "1N4148" V 3475 835 50  0001 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 3475 575 50  0001 C CNN
@@ -393,12 +379,9 @@ F 3 "https:~/assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3475 
 	-1   0    0    1   
 $EndComp
 $Comp
-L Diode:1N4148 D?
+L Diode:1N4148 D603
 U 1 1 605721C7
 P 3475 950
-AR Path="/5D66C06C/605721C7" Ref="D?"  Part="1" 
-AR Path="/605721C7" Ref="D?"  Part="1" 
-AR Path="/601B22CC/605721C7" Ref="D603"  Part="1" 
 F 0 "D603" V 3395 900 50  0000 L CNN
 F 1 "1N4148" V 3475 1035 50  0001 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 3475 775 50  0001 C CNN
@@ -407,12 +390,9 @@ F 3 "https:~/assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3475 
 	-1   0    0    1   
 $EndComp
 $Comp
-L Diode:1N4148 D?
+L Diode:1N4148 D604
 U 1 1 605721CD
 P 3225 1050
-AR Path="/5D66C06C/605721CD" Ref="D?"  Part="1" 
-AR Path="/605721CD" Ref="D?"  Part="1" 
-AR Path="/601B22CC/605721CD" Ref="D604"  Part="1" 
 F 0 "D604" V 3145 1000 50  0000 L CNN
 F 1 "1N4148" V 3225 1135 50  0001 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 3225 875 50  0001 C CNN
@@ -421,12 +401,9 @@ F 3 "https:~/assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3225 
 	-1   0    0    1   
 $EndComp
 $Comp
-L Diode:1N4148 D?
+L Diode:1N4148 D605
 U 1 1 605721D3
 P 3475 1150
-AR Path="/5D66C06C/605721D3" Ref="D?"  Part="1" 
-AR Path="/605721D3" Ref="D?"  Part="1" 
-AR Path="/601B22CC/605721D3" Ref="D605"  Part="1" 
 F 0 "D605" V 3395 1100 50  0000 L CNN
 F 1 "1N4148" V 3475 1235 50  0001 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 3475 975 50  0001 C CNN
@@ -435,12 +412,9 @@ F 3 "https:~/assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3475 
 	-1   0    0    1   
 $EndComp
 $Comp
-L Diode:1N4148 D?
+L Diode:1N4148 D606
 U 1 1 605721D9
 P 3225 1250
-AR Path="/5D66C06C/605721D9" Ref="D?"  Part="1" 
-AR Path="/605721D9" Ref="D?"  Part="1" 
-AR Path="/601B22CC/605721D9" Ref="D606"  Part="1" 
 F 0 "D606" V 3145 1200 50  0000 L CNN
 F 1 "1N4148" V 3225 1335 50  0001 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 3225 1075 50  0001 C CNN
@@ -449,11 +423,9 @@ F 3 "https:~/assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3225 
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R621
 U 1 1 605721DF
 P 3700 1400
-AR Path="/605721DF" Ref="R?"  Part="1" 
-AR Path="/601B22CC/605721DF" Ref="R621"  Part="1" 
 F 0 "R621" H 3775 1475 59  0000 L CNN
 F 1 "10" H 3775 1375 59  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 3700 1400 50  0001 C CNN
@@ -462,11 +434,9 @@ F 3 "~" H 3700 1400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74HCT04 Z?
+L 74xx:74HCT04 Z306
 U 1 1 605721E5
 P 4200 1000
-AR Path="/605721E5" Ref="Z?"  Part="6" 
-AR Path="/601B22CC/605721E5" Ref="Z306"  Part="1" 
 F 0 "Z306" H 4245 1340 50  0000 C CNN
 F 1 "SN74AHCT04N" H 4245 1240 50  0000 C CNN
 F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 4200 1000 50  0001 C CNN

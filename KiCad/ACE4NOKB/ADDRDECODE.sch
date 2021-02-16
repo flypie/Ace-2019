@@ -13,8 +13,6 @@ Comment2 "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 Comment3 "Attribution-NonCommercial-ShareAlike 4.0 International License."
 Comment4 "This work is licensed under a Creative Commons "
 $EndDescr
-Wire Wire Line
-	3100 4600 3000 4600
 $Comp
 L power:VCC #~PWR0104
 U 1 1 60368F85
@@ -26,12 +24,6 @@ F 3 "" H 1725 4700 50  0001 C CNN
 	1    1725 4700
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	1975 6050 1900 6050
-Wire Wire Line
-	1900 4750 1900 4700
-Wire Wire Line
-	1725 4700 1900 4700
 $Comp
 L power:VCC #~PWR0139
 U 1 1 6A07A24C
@@ -43,28 +35,6 @@ F 3 "" H 1301 5550 50  0001 C CNN
 	1    1301 5550
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	1301 5650 1400 5650
-Wire Wire Line
-	1301 5550 1400 5550
-Wire Wire Line
-	1301 5750 1400 5750
-Wire Wire Line
-	2400 5150 3025 5150
-Wire Wire Line
-	1301 5250 1400 5250
-Wire Wire Line
-	1301 5150 1400 5150
-Wire Wire Line
-	1301 5050 1400 5050
-Wire Wire Line
-	3100 4500 3000 4500
-Wire Wire Line
-	4100 4500 4300 4500
-Wire Wire Line
-	3025 5150 3025 4800
-Wire Wire Line
-	3025 4800 3100 4800
 $Comp
 L power:GND #~PWR0115
 U 1 1 661C71D5
@@ -76,20 +46,6 @@ F 3 "" H 1975 6050 50  0001 C CNN
 	1    1975 6050
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	2400 5650 4150 5650
-Wire Wire Line
-	2400 5550 4150 5550
-Wire Wire Line
-	2400 5450 4150 5450
-Wire Wire Line
-	2400 5350 4150 5350
-Wire Wire Line
-	2400 5250 4150 5250
-Wire Wire Line
-	2400 5750 2600 5750
-Wire Wire Line
-	4150 5850 2600 5850
 $Comp
 L 74xx:74LS04 Z306
 U 1 1 659CE7DB
@@ -139,74 +95,66 @@ $EndComp
 $Comp
 L 74xx:74LS02 Z25
 U 3 1 624D0B8B
-P 1900 2700
-F 0 "Z25" H 1900 3050 50  0000 C CNN
-F 1 "74AHCT02" H 1900 2950 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 1900 2700 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 1900 2700 50  0001 C CNN
-	3    1900 2700
+P 1950 2950
+F 0 "Z25" H 1950 3300 50  0000 C CNN
+F 1 "74AHCT02" H 1950 3200 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 1950 2950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 1950 2950 50  0001 C CNN
+	3    1950 2950
 	1    0    0    -1  
 $EndComp
 Text GLabel 2600 7250 2    50   Input ~ 0
-PAGED8K
+CPURWPAGED8K
 Text GLabel 2600 6275 0    50   Input ~ 0
-~PAGED8K
+~CPURWPAGED8K
 $Comp
 L 74xx:74LS32 Z302
 U 1 1 623F214A
-P 2600 950
-F 0 "Z302" H 2600 1250 50  0000 C CNN
-F 1 "74HCT32" H 2600 1150 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2600 950 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 2600 950 50  0001 C CNN
-	1    2600 950 
+P 2650 1100
+F 0 "Z302" H 2650 1400 50  0000 C CNN
+F 1 "74HCT32" H 2650 1300 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2650 1100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 2650 1100 50  0001 C CNN
+	1    2650 1100
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74LS32 Z302
 U 2 1 6240C4AF
-P 2600 1500
-F 0 "Z302" H 2600 1800 50  0000 C CNN
-F 1 "74HCT32" H 2600 1700 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2600 1500 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 2600 1500 50  0001 C CNN
-	2    2600 1500
+P 2650 1750
+F 0 "Z302" H 2650 2050 50  0000 C CNN
+F 1 "74HCT32" H 2650 1950 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2650 1750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 2650 1750 50  0001 C CNN
+	2    2650 1750
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74LS32 Z302
 U 3 1 6240D982
-P 2600 2050
-F 0 "Z302" H 2600 2350 50  0000 C CNN
-F 1 "74HCT32" H 2600 2250 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2600 2050 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 2600 2050 50  0001 C CNN
-	3    2600 2050
+P 2650 2300
+F 0 "Z302" H 2650 2600 50  0000 C CNN
+F 1 "74HCT32" H 2650 2500 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2650 2300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 2650 2300 50  0001 C CNN
+	3    2650 2300
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74LS32 Z302
 U 4 1 6240D98C
-P 2600 2600
-F 0 "Z302" H 2600 2900 50  0000 C CNN
-F 1 "74HCT32" H 2600 2800 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2600 2600 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 2600 2600 50  0001 C CNN
-	4    2600 2600
+P 2650 2850
+F 0 "Z302" H 2650 3150 50  0000 C CNN
+F 1 "74HCT32" H 2650 3050 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2650 2850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 2650 2850 50  0001 C CNN
+	4    2650 2850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2900 950  3000 950 
-Wire Wire Line
-	2300 1050 2200 1050
-Text GLabel 2200 1050 0    50   Input ~ 0
+Text GLabel 2250 1200 0    50   Input ~ 0
 ~WR
-Wire Wire Line
-	2300 1600 2200 1600
-Text GLabel 2200 1600 0    50   Input ~ 0
+Text GLabel 2250 1850 0    50   Input ~ 0
 ~RD
-Wire Wire Line
-	2900 2050 3000 2050
 $Comp
 L 74xx:74LS21 Z404
 U 1 1 6293999B
@@ -218,23 +166,6 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS21" H 4500 6350 50  0001 C CNN
 	1    4500 6350
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4875 6350 4800 6350
-$Comp
-L power:GND #~PWR0114
-U 1 1 62D219C0
-P 1500 2800
-F 0 "#~PWR0114" H 1500 2550 50  0001 C CNN
-F 1 "GND" H 1530 2595 50  0000 C CNN
-F 2 "" H 1500 2800 50  0001 C CNN
-F 3 "" H 1500 2800 50  0001 C CNN
-	1    1500 2800
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2200 2700 2300 2700
-Wire Wire Line
-	4750 5450 4825 5450
 NoConn ~ -13575 11150
 NoConn ~ -975 11500
 Text GLabel 1301 5050 0    50   Input ~ 0
@@ -255,12 +186,104 @@ Text GLabel 3000 4500 0    50   Input ~ 0
 A12
 Text GLabel 3000 4600 0    50   Input ~ 0
 A11
-Text GLabel 2200 2150 0    50   Input ~ 0
+Text GLabel 2250 2400 0    50   Input ~ 0
 A10
-Wire Wire Line
-	2400 5050 2500 5050
 Text GLabel 2500 5050 2    50   Input ~ 0
 ~0000-FFFF
+Text GLabel 1550 2850 0    50   Input ~ 0
+A10
+Text GLabel 4100 6200 0    50   Input ~ 0
+~0000-FFFF
+Text Label 5050 4600 0    50   ~ 0
+~CPUFONT
+Text Label 2250 1000 2    50   ~ 0
+~CPUFONT
+Text Label 2250 1650 2    50   ~ 0
+~CPUFONT
+Text GLabel 3050 1750 2    50   Input ~ 0
+~CPUFONTROM
+Text GLabel 4100 6300 0    50   Input ~ 0
+~CPUFONTROM
+Text GLabel 4300 4700 2    50   Input ~ 0
+~3000-37FF
+Text GLabel 4100 6400 0    50   Input ~ 0
+~3000-37FF
+Text GLabel 4300 4800 2    50   Input ~ 0
+~3800-3FFF
+Text GLabel 2250 2200 0    50   Input ~ 0
+~3800-3FFF
+Text GLabel 2250 2750 0    50   Input ~ 0
+~3800-3FFF
+Text GLabel 3050 2300 2    50   Input ~ 0
+~3800-3BFF
+Text GLabel 4100 6500 0    50   Input ~ 0
+~3800-3BFF
+Text Label 4000 5150 2    50   ~ 0
+~3C00-3FFF
+Text Label 3050 2850 0    50   ~ 0
+~3C00-3FFF
+Text GLabel 3050 1100 2    50   Input ~ 0
+~CPUFONTRAM
+Text GLabel 4300 4500 2    50   Input ~ 0
+~CPUVIDEORAM
+Wire Wire Line
+	3100 4600 3000 4600
+Wire Wire Line
+	1975 6050 1900 6050
+Wire Wire Line
+	1900 4750 1900 4700
+Wire Wire Line
+	1725 4700 1900 4700
+Wire Wire Line
+	1301 5650 1400 5650
+Wire Wire Line
+	1301 5550 1400 5550
+Wire Wire Line
+	1301 5750 1400 5750
+Wire Wire Line
+	2400 5150 3025 5150
+Wire Wire Line
+	1301 5250 1400 5250
+Wire Wire Line
+	1301 5150 1400 5150
+Wire Wire Line
+	1301 5050 1400 5050
+Wire Wire Line
+	3100 4500 3000 4500
+Wire Wire Line
+	4100 4500 4300 4500
+Wire Wire Line
+	3025 5150 3025 4800
+Wire Wire Line
+	3025 4800 3100 4800
+Wire Wire Line
+	2400 5650 4150 5650
+Wire Wire Line
+	2400 5550 4150 5550
+Wire Wire Line
+	2400 5450 4150 5450
+Wire Wire Line
+	2400 5350 4150 5350
+Wire Wire Line
+	2400 5250 4150 5250
+Wire Wire Line
+	2400 5750 2600 5750
+Wire Wire Line
+	4150 5850 2600 5850
+Wire Wire Line
+	2350 1200 2250 1200
+Wire Wire Line
+	2350 1850 2250 1850
+Wire Wire Line
+	2950 2300 3050 2300
+Wire Wire Line
+	4875 6350 4800 6350
+Wire Wire Line
+	2250 2950 2350 2950
+Wire Wire Line
+	4750 5450 4825 5450
+Wire Wire Line
+	2400 5050 2500 5050
 Connection ~ 2600 5850
 Wire Wire Line
 	2600 5750 2600 5850
@@ -268,77 +291,67 @@ Connection ~ 2600 5750
 Wire Wire Line
 	2600 5750 4150 5750
 Wire Wire Line
-	2200 2150 2300 2150
+	2250 2400 2350 2400
 Wire Wire Line
-	1600 2800 1500 2800
-Text GLabel 1500 2600 0    50   Input ~ 0
-A10
-Wire Wire Line
-	1600 2600 1500 2600
-Text GLabel 4100 6500 0    50   Input ~ 0
-~0000-FFFF
+	1650 2850 1550 2850
 Wire Wire Line
 	4200 6500 4100 6500
 Wire Wire Line
-	3050 2600 2900 2600
+	3050 2850 2950 2850
 Wire Wire Line
 	4200 6200 4100 6200
 Wire Wire Line
-	2900 1500 3000 1500
+	2950 1750 3050 1750
 Wire Wire Line
-	2200 2500 2300 2500
+	2250 2750 2350 2750
 Wire Wire Line
 	4100 4600 5050 4600
-Text Label 5050 4600 0    50   ~ 0
-~CPUFONT
 Wire Wire Line
-	2300 850  2200 850 
-Text Label 2200 850  2    50   ~ 0
-~CPUFONT
+	2350 1000 2250 1000
 Wire Wire Line
-	2300 1400 2200 1400
-Text Label 2200 1400 2    50   ~ 0
-~CPUFONT
-Text GLabel 3000 1500 2    50   Input ~ 0
-~CPUFONTROM
-Text GLabel 4100 6200 0    50   Input ~ 0
-~CPUFONTROM
-Text GLabel 4300 4700 2    50   Input ~ 0
-~3000-37FF
+	2350 1650 2250 1650
 Wire Wire Line
 	4100 4700 4300 4700
-Text GLabel 4100 6300 0    50   Input ~ 0
-~3000-37FF
 Wire Wire Line
 	4200 6300 4100 6300
-Text GLabel 4300 4800 2    50   Input ~ 0
-~3800-3FFF
 Wire Wire Line
 	4100 4800 4300 4800
-Text GLabel 2200 1950 0    50   Input ~ 0
-~3800-3FFF
 Wire Wire Line
-	2300 1950 2200 1950
-Text GLabel 2200 2500 0    50   Input ~ 0
-~3800-3FFF
-Text GLabel 3000 2050 2    50   Input ~ 0
-~3800-3BFF
+	2350 2200 2250 2200
 Wire Wire Line
 	4200 6400 4100 6400
-Text GLabel 4100 6400 0    50   Input ~ 0
-~3800-3BFF
 Wire Wire Line
 	2600 5850 2600 6400
 Wire Wire Line
 	4150 5150 4000 5150
-Text Label 4000 5150 2    50   ~ 0
-~3C00-3FFF
-Text Label 3050 2600 0    50   ~ 0
-~3C00-3FFF
 Wire Wire Line
 	2600 7000 2600 7250
-Text GLabel 3000 950  2    50   Input ~ 0
-~CPUFONTRAM
-Text GLabel 4300 4500 2    50   Input ~ 0
-~CPUVIDEORAM
+Wire Wire Line
+	2950 1100 3050 1100
+$Comp
+L power:GND #0133
+U 1 1 602F15DF
+P 1050 3050
+F 0 "#0133" H 1050 2800 50  0001 C CNN
+F 1 "GND" H 1100 2850 50  0000 C CNN
+F 2 "" H 1050 3050 50  0001 C CNN
+F 3 "" H 1050 3050 50  0001 C CNN
+	1    1050 3050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1150 3050 1050 3050
+$Comp
+L Device:R R426
+U 1 1 602F15E6
+P 1300 3050
+F 0 "R426" V 1450 3050 50  0000 C CNN
+F 1 "400k" V 1550 3050 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 1230 3050 50  0001 C CNN
+F 3 "" H 1300 3050 50  0001 C CNN
+	1    1300 3050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1450 3050 1650 3050
 $EndSCHEMATC

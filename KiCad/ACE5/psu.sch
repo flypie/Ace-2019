@@ -175,18 +175,13 @@ Wire Wire Line
 	5175 1000 5175 1175
 Wire Wire Line
 	3975 1000 3975 1175
-Wire Wire Line
-	3300 2800 3300 2700
-Connection ~ 3300 2700
-Wire Wire Line
-	4850 3600 4850 3700
 $Comp
 L 74xx:74LS74 Z27
 U 3 1 62A1CDDB
 P 7400 3200
 F 0 "Z27" H 7150 3150 50  0000 R CNN
 F 1 "SN74AHCT74N" H 7150 3200 50  0000 R CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 7400 3200 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7400 3200 50  0001 C CNN
 F 3 "74xx/74hc_hct74.pdf" H 7400 3200 50  0001 C CNN
 	3    7400 3200
 	-1   0    0    -1  
@@ -210,7 +205,7 @@ U 3 1 5F6848F5
 P 2550 5150
 F 0 "Z307" H 2425 5725 50  0000 L CNN
 F 1 "74AHCT139" H 2325 5975 50  0000 L CNN
-F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 2550 5150 50  0001 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 2550 5150 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS139" H 2550 5150 50  0001 C CNN
 	3    2550 5150
 	-1   0    0    -1  
@@ -221,7 +216,7 @@ U 4 1 6989826C
 P 3800 3200
 F 0 "Z22" H 3550 3150 50  0000 R CNN
 F 1 "74AHCT11" H 3550 3200 50  0000 R CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3800 3200 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 3800 3200 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 3800 3200 50  0001 C CNN
 	4    3800 3200
 	-1   0    0    -1  
@@ -232,7 +227,7 @@ U 1 1 5FC78850
 P 3275 1325
 F 0 "C11" V 3440 1490 50  0000 L CNN
 F 1 "100nf" V 3540 1490 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 3625 1375 50  0001 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 3625 1375 50  0001 L CNN
 F 3 "" H 3625 1275 50  0001 L CNN
 F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 3625 1175 50  0001 L CNN "Description"
 F 5 "3" H 3625 1075 50  0001 L CNN "Height"
@@ -250,7 +245,7 @@ U 1 1 5F0A734F
 P 3000 1325
 F 0 "C10" H 2850 1230 50  0000 R CNN
 F 1 "100uf" H 2850 1330 50  0000 R CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 3038 1175 50  0001 C CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x5.3" H 3038 1175 50  0001 C CNN
 F 3 "" H 3000 1325 50  0001 C CNN
 	1    3000 1325
 	-1   0    0    -1  
@@ -261,7 +256,7 @@ U 1 1 5D878331
 P 4925 1325
 F 0 "C18" V 5090 1490 50  0000 L CNN
 F 1 "100nf" V 5190 1490 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 5275 1375 50  0001 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 5275 1375 50  0001 L CNN
 F 3 "" H 5275 1275 50  0001 L CNN
 F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 5275 1175 50  0001 L CNN "Description"
 F 5 "3" H 5275 1075 50  0001 L CNN "Height"
@@ -279,7 +274,7 @@ U 1 1 5D6BE2CF
 P 4425 1325
 F 0 "C16" V 4590 1490 50  0000 L CNN
 F 1 "100nf" V 4690 1490 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 4775 1375 50  0001 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 4775 1375 50  0001 L CNN
 F 3 "" H 4775 1275 50  0001 L CNN
 F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 4775 1175 50  0001 L CNN "Description"
 F 5 "3" H 4775 1075 50  0001 L CNN "Height"
@@ -297,7 +292,7 @@ U 1 1 5D5E2433
 P 4200 1325
 F 0 "C15" V 4365 1490 50  0000 L CNN
 F 1 "100nf" V 4465 1490 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 4550 1375 50  0001 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 4550 1375 50  0001 L CNN
 F 3 "" H 4550 1275 50  0001 L CNN
 F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 4550 1175 50  0001 L CNN "Description"
 F 5 "3" H 4550 1075 50  0001 L CNN "Height"
@@ -315,7 +310,7 @@ U 1 1 618E9BE1
 P 5175 1325
 F 0 "C19" V 5340 1475 50  0000 L CNN
 F 1 "100nf" V 5440 1475 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 5525 1375 50  0001 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 5525 1375 50  0001 L CNN
 F 3 "" H 5525 1275 50  0001 L CNN
 F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 5525 1175 50  0001 L CNN "Description"
 F 5 "3" H 5525 1075 50  0001 L CNN "Height"
@@ -333,7 +328,7 @@ U 1 1 5D79AD57
 P 4675 1325
 F 0 "C17" V 4840 1490 50  0000 L CNN
 F 1 "100nf" V 4940 1490 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 5025 1375 50  0001 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 5025 1375 50  0001 L CNN
 F 3 "" H 5025 1275 50  0001 L CNN
 F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 5025 1175 50  0001 L CNN "Description"
 F 5 "3" H 5025 1075 50  0001 L CNN "Height"
@@ -351,7 +346,7 @@ U 1 1 5D956C31
 P 3525 1325
 F 0 "C12" V 3690 1490 50  0000 L CNN
 F 1 "100nf" V 3790 1490 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 3875 1375 50  0001 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 3875 1375 50  0001 L CNN
 F 3 "" H 3875 1275 50  0001 L CNN
 F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 3875 1175 50  0001 L CNN "Description"
 F 5 "3" H 3875 1075 50  0001 L CNN "Height"
@@ -369,7 +364,7 @@ U 1 1 5D42C6C3
 P 3750 1325
 F 0 "C13" V 3915 1490 50  0000 L CNN
 F 1 "100nf" V 4015 1490 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 4100 1375 50  0001 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 4100 1375 50  0001 L CNN
 F 3 "" H 4100 1275 50  0001 L CNN
 F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 4100 1175 50  0001 L CNN "Description"
 F 5 "3" H 4100 1075 50  0001 L CNN "Height"
@@ -387,7 +382,7 @@ U 1 1 5D506FED
 P 3975 1325
 F 0 "C14" V 4140 1490 50  0000 L CNN
 F 1 "100nf" V 4240 1490 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 4325 1375 50  0001 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 4325 1375 50  0001 L CNN
 F 3 "" H 4325 1275 50  0001 L CNN
 F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 4325 1175 50  0001 L CNN "Description"
 F 5 "3" H 4325 1075 50  0001 L CNN "Height"
@@ -405,21 +400,21 @@ U 1 1 5EA75086
 P 2050 1000
 F 0 "L1" V 2275 970 50  0000 C CNN
 F 1 "100 nH" V 2175 970 50  0000 C CNN
-F 2 "SamacSys_Parts:KEMET_SBT_0260T" H 2050 1000 50  0001 C CNN
-F 3 "" H 2050 1000 50  0001 C CNN
+F 2 "Inductor_SMD:L_1812_4532Metric_Pad1.30x3.40mm_HandSolder" H 2050 1000 50  0001 C CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/54/pm1812_series-778052.pdf" H 2050 1000 50  0001 C CNN
 	1    2050 1000
 	0    -1   -1   0   
 $EndComp
 $Comp
-L SamacSys_Parts:163-179PH-EX POWER-9V-DC1
+L SamacSys_Parts:PJ-036AH-SMT-TR POWER-9V-DC1
 U 1 1 613486B0
-P 600 1400
-F 0 "POWER-9V-DC1" H 795 1190 50  0000 C CNN
-F 1 "Conn_01x02" H 745 1515 50  0000 C CNN
-F 2 "SamacSys_Parts:163179PHEX" H 600 1400 50  0001 C CNN
-F 3 "" H 600 1400 50  0001 C CNN
-	1    600  1400
-	1    0    0    1   
+P 800 1200
+F 0 "POWER-9V-DC1" H 1000 800 50  0000 C CNN
+F 1 "Conn_01x02" H 1000 700 50  0000 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_CUI_PJ-036AH-SMT_Horizontal" H 800 1200 50  0001 C CNN
+F 3 "" H 800 1200 50  0001 C CNN
+	1    800  1200
+	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74LS02 Z24
@@ -427,32 +422,27 @@ U 5 1 629F3A79
 P 5550 3200
 F 0 "Z24" H 5300 3150 50  0000 R CNN
 F 1 "SN74AHCT02N" H 5300 3200 50  0000 R CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 5550 3200 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5550 3200 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 5550 3200 50  0001 C CNN
 	5    5550 3200
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Regulator_Linear:LM7805_TO220 IC1
+L SamacSys_Parts:LM7805MPX_NOPB IC1
 U 1 1 735D1281
-P 2650 1000
-F 0 "IC1" H 2675 1275 50  0000 C CNN
-F 1 "LM7805_TO220" H 2675 1175 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 2650 1225 50  0001 C CIN
-F 3 "http://www.fairchildsemi.com/ds/LM/LM7805.pdf" H 2650 950 50  0001 C CNN
-	1    2650 1000
+P 2450 900
+F 0 "IC1" H 2475 1175 50  0000 C CNN
+F 1 "LM7805MPX_NOPB" H 2750 950 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-223" H 3600 1000 50  0001 L CNN
+F 3 "https://www.arrow.com/en/products/lm7805mpxnopb/texas-instruments" H 3600 900 50  0001 L CNN
+F 4 "Linear Voltage Regulators 1.5-A, Wide VIN Fixed Voltage Regulators 4-SOT-223 0 to 0" H 3600 800 50  0001 L CNN "Description"
+F 5 "1.8" H 3600 700 50  0001 L CNN "Height"
+F 6 "Texas Instruments" H 3600 400 50  0001 L CNN "Manufacturer_Name"
+F 7 "LM7805MPX/NOPB" H 3600 300 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "595-LM7805MPX/NOPB" H 3600 600 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/LM7805MPX-NOPB/?qs=gO6GG99qvRCSwIVAoVKHPw%3D%3D" H 3600 500 50  0001 L CNN "Mouser Price/Stock"
+	1    2450 900 
 	1    0    0    -1  
-$EndComp
-$Comp
-L 74xx:74LS86 Z23
-U 5 1 6A760723
-P 4650 3200
-F 0 "Z23" H 4375 3125 50  0000 R CNN
-F 1 "74AHCT86" H 4375 3225 50  0000 R CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 4650 3200 50  0001 C CNN
-F 3 "74xx/74ls86.pdf" H 4650 3200 50  0001 C CNN
-	5    4650 3200
-	-1   0    0    -1  
 $EndComp
 $Comp
 L 74xx:74LS11 Z21
@@ -460,7 +450,7 @@ U 4 1 69DE0CE8
 P 2950 3200
 F 0 "Z21" H 2700 3150 50  0000 R CNN
 F 1 "74AHCT11" H 2700 3200 50  0000 R CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2950 3200 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2950 3200 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 2950 3200 50  0001 C CNN
 	4    2950 3200
 	-1   0    0    -1  
@@ -471,7 +461,7 @@ U 7 1 64E78705
 P 1950 5150
 F 0 "Z306" H 1825 5725 50  0000 L CNN
 F 1 "74AHCT04" H 1700 5975 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 1950 5150 50  0001 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 1950 5150 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 1950 5150 50  0001 C CNN
 	7    1950 5150
 	-1   0    0    -1  
@@ -482,7 +472,7 @@ U 1 1 5F75CDD3
 P 2250 1350
 F 0 "C9" H 2375 1425 50  0000 L CNN
 F 1 "100uf" H 2375 1325 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D4.0mm_P1.50mm" H 2600 1400 50  0001 L CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x5.3" H 2600 1400 50  0001 L CNN
 F 3 "" H 2600 1300 50  0001 L CNN
 F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 2600 1200 50  0001 L CNN "Description"
 F 5 "3" H 2600 1100 50  0001 L CNN "Height"
@@ -500,7 +490,7 @@ U 1 1 5E828036
 P 1825 1350
 F 0 "C8" V 2065 1490 50  0000 L CNN
 F 1 "100nf" V 2080 1500 50  0001 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 2175 1400 50  0001 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 2175 1400 50  0001 L CNN
 F 3 "" H 2175 1300 50  0001 L CNN
 F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 2175 1200 50  0001 L CNN "Description"
 F 5 "3" H 2175 1100 50  0001 L CNN "Height"
@@ -520,7 +510,7 @@ U 5 1 68B9DD2C
 P 2050 3200
 F 0 "Z20" H 1800 3150 50  0000 R CNN
 F 1 "74AHCT08" H 1800 3200 50  0000 R CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2050 3200 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2050 3200 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 2050 3200 50  0001 C CNN
 	5    2050 3200
 	-1   0    0    -1  
@@ -541,7 +531,7 @@ U 1 1 5EDD7FFE
 P 1600 1350
 F 0 "C4" H 1475 1285 50  0000 R CNN
 F 1 "100uf" H 1475 1385 50  0000 R CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 1638 1200 50  0001 C CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x5.3" H 1638 1200 50  0001 C CNN
 F 3 "" H 1600 1350 50  0001 C CNN
 	1    1600 1350
 	-1   0    0    -1  
@@ -561,15 +551,12 @@ Wire Wire Line
 Wire Wire Line
 	2250 1000 2350 1000
 $Comp
-L 74xx:74LS21 Z?
+L 74xx:74LS21 Z404
 U 3 1 60D36F44
 P 1900 6900
-AR Path="/60D36F44" Ref="Z?"  Part="1" 
-AR Path="/601C6FA0/60D36F44" Ref="Z?"  Part="1" 
-AR Path="/5DE39253/60D36F44" Ref="Z404"  Part="3" 
 F 0 "Z404" H 2150 6950 50  0000 L CNN
 F 1 "74LS21" H 2150 6900 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 1900 6900 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1900 6900 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS21" H 1900 6900 50  0001 C CNN
 	3    1900 6900
 	1    0    0    -1  
@@ -632,12 +619,9 @@ Connection ~ 3150 1700
 Wire Wire Line
 	3150 1700 3275 1700
 $Comp
-L 74xx:74LS30 Z?
+L 74xx:74LS30 Z407
 U 2 1 60DE13AC
 P 1250 6900
-AR Path="/60DE13AC" Ref="Z?"  Part="1" 
-AR Path="/601C6FA0/60DE13AC" Ref="Z?"  Part="1" 
-AR Path="/5DE39253/60DE13AC" Ref="Z407"  Part="2" 
 F 0 "Z407" H 1000 6950 50  0000 R CNN
 F 1 "74AHCT30D" H 1000 6900 50  0000 R CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1250 6900 50  0001 C CNN
@@ -697,7 +681,7 @@ U 5 1 6029E208
 P 1200 5150
 F 0 "Z302" H 1075 5725 50  0000 L CNN
 F 1 "74AHCT32" H 950 5975 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 1200 5150 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1200 5150 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 1200 5150 50  0001 C CNN
 	5    1200 5150
 	-1   0    0    -1  
@@ -713,22 +697,18 @@ Wire Wire Line
 Wire Wire Line
 	2550 5650 3150 5650
 $Comp
-L 74xx:74LS00 Z?
-U 5 1 6032EF4C
-P 1200 3200
-AR Path="/601C6FA0/6032EF4C" Ref="Z?"  Part="3" 
-AR Path="/6032EF4C" Ref="Z?"  Part="3" 
-AR Path="/5DE39253/6032EF4C" Ref="Z19"  Part="5" 
-F 0 "Z19" H 1450 3250 50  0000 L CNN
-F 1 "74AHCT00" H 1450 3200 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 1200 3200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 1200 3200 50  0001 C CNN
-F 4 "SN74AHCT00N" H 1200 3200 50  0001 C CNN "Manufacturer_Part_Number"
-F 5 "Texas Instruments" H 1200 3200 50  0001 C CNN "Manufacturer_Name"
-	5    1200 3200
+L ExtraSymbols:74AHCT2G00 Z19
+U 3 1 6032EF4C
+P 1000 2900
+F 0 "Z19" H 950 2650 50  0000 R CNN
+F 1 "74AHCT2G00" H 950 2600 50  0000 R CNN
+F 2 "Package_SO:TSSOP-8_3x3mm_P0.65mm" H 1000 2900 50  0001 C CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/916/74AHC_AHCT2G00-1597531.pdf" H 1000 2900 50  0001 C CNN
+F 4 "SN74AHCT00N" H 1000 2900 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "Texas Instruments" H 1000 2900 50  0001 C CNN "Manufacturer_Name"
+	3    1000 2900
 	1    0    0    -1  
 $EndComp
-Connection ~ 4850 3700
 Wire Wire Line
 	1000 3700 1200 3700
 Wire Wire Line
@@ -746,45 +726,26 @@ Wire Wire Line
 Wire Wire Line
 	2050 3700 2950 3700
 Connection ~ 2950 2700
-Wire Wire Line
-	2950 2700 3300 2700
 Connection ~ 2950 3700
 Connection ~ 3800 2700
 Connection ~ 3800 3700
-Connection ~ 4650 2700
-Connection ~ 4650 3700
-Wire Wire Line
-	4650 3700 4850 3700
-Wire Wire Line
-	3300 2700 3800 2700
 Wire Wire Line
 	2950 3700 3800 3700
-Wire Wire Line
-	3800 3700 4650 3700
-Wire Wire Line
-	3800 2700 4650 2700
-Wire Wire Line
-	4650 2700 5550 2700
 Connection ~ 5550 2700
 Wire Wire Line
 	5550 2700 6550 2700
 Wire Wire Line
 	7400 3600 7400 3700
-Wire Wire Line
-	4850 3700 5550 3700
 Connection ~ 5550 3700
 Wire Wire Line
 	5550 3700 6550 3700
 $Comp
-L 74xx:74HCT02 Z?
+L 74xx:74HCT02 Z25
 U 5 1 603C7895
 P 6550 3200
-AR Path="/601C6FA0/603C7895" Ref="Z?"  Part="3" 
-AR Path="/603C7895" Ref="Z?"  Part="3" 
-AR Path="/5DE39253/603C7895" Ref="Z25"  Part="5" 
 F 0 "Z25" H 6800 3250 50  0000 L CNN
 F 1 "74AHCT02" H 6800 3200 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6550 3200 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6550 3200 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 6550 3200 50  0001 C CNN
 F 4 "SN74AHCT00N" H 6550 3200 50  0001 C CNN "Manufacturer_Part_Number"
 F 5 "Texas Instruments" H 6550 3200 50  0001 C CNN "Manufacturer_Name"
@@ -799,4 +760,15 @@ Wire Wire Line
 	6550 3700 7400 3700
 Wire Wire Line
 	7400 2700 7400 2800
+Wire Wire Line
+	3800 2700 5550 2700
+Wire Wire Line
+	3800 3700 5550 3700
+Wire Wire Line
+	2950 2700 3800 2700
+Wire Wire Line
+	2600 1300 2650 1300
+Connection ~ 2650 1300
+Wire Wire Line
+	2650 1300 2700 1300
 $EndSCHEMATC

@@ -52,21 +52,6 @@ F 3 "" H 6550 4900 50  0001 C CNN
 	1    6550 4900
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4100 3000 4100 2800
-$Comp
-L power:GND #~PWR0144
-U 1 1 6025F5D6
-P 4100 2800
-F 0 "#~PWR0144" H 4100 2550 50  0001 C CNN
-F 1 "GND" H 4120 2600 50  0000 C CNN
-F 2 "" H 4100 2800 50  0001 C CNN
-F 3 "" H 4100 2800 50  0001 C CNN
-	1    4100 2800
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	4200 3900 4200 4000
 $Comp
 L power:VCC #~PWR0145
 U 1 1 6026A245
@@ -78,8 +63,6 @@ F 3 "" H 4600 4000 50  0001 C CNN
 	1    4600 4000
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	4600 3900 4600 4000
 $Comp
 L power:VCC #~PWR0146
 U 1 1 602727AC
@@ -91,44 +74,16 @@ F 3 "" H 4600 2800 50  0001 C CNN
 	1    4600 2800
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4600 3000 4600 2800
-Wire Wire Line
-	4200 3000 4200 2800
 $Comp
 L power:GND #~PWR0148
 U 1 1 602818B7
-P 4200 2800
-F 0 "#~PWR0148" H 4200 2550 50  0001 C CNN
-F 1 "GND" H 4220 2600 50  0000 C CNN
-F 2 "" H 4200 2800 50  0001 C CNN
-F 3 "" H 4200 2800 50  0001 C CNN
-	1    4200 2800
+P 4200 2700
+F 0 "#~PWR0148" H 4200 2450 50  0001 C CNN
+F 1 "GND" H 4220 2500 50  0000 C CNN
+F 2 "" H 4200 2700 50  0001 C CNN
+F 3 "" H 4200 2700 50  0001 C CNN
+	1    4200 2700
 	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #~PWR0149
-U 1 1 602874B7
-P 4200 4000
-F 0 "#~PWR0149" H 4200 3750 50  0001 C CNN
-F 1 "GND" H 4220 3800 50  0000 C CNN
-F 2 "" H 4200 4000 50  0001 C CNN
-F 3 "" H 4200 4000 50  0001 C CNN
-	1    4200 4000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4100 3900 4100 4000
-$Comp
-L power:GND #~PWR0152
-U 1 1 602877B2
-P 4100 4000
-F 0 "#~PWR0152" H 4100 3750 50  0001 C CNN
-F 1 "GND" H 4120 3800 50  0000 C CNN
-F 2 "" H 4100 4000 50  0001 C CNN
-F 3 "" H 4100 4000 50  0001 C CNN
-	1    4100 4000
-	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	5950 3100 5750 3100
@@ -146,23 +101,6 @@ Wire Wire Line
 	5350 4050 5350 3600
 Wire Wire Line
 	5350 3600 5950 3600
-$Comp
-L SamacSys_Parts:48409-0003 J400
-U 1 1 60165D46
-P 4600 3000
-F 0 "J400" H 5350 3300 50  0000 L CNN
-F 1 "48409-0003" H 5350 3200 50  0000 L CNN
-F 2 "SamacSys_Parts:48409-0003" H 5350 3100 50  0001 L CNN
-F 3 "http://www.molex.com/pdm_docs/sd/484090003_sd.pdf" H 5350 3000 50  0001 L CNN
-F 4 "2 port Vertical Through Hole Version 3 Type A USB Connector" H 5350 2900 50  0001 L CNN "Description"
-F 5 "" H 5350 2800 50  0001 L CNN "Height"
-F 6 "538-48409-0003" H 5350 2700 50  0001 L CNN "Mouser Part Number"
-F 7 "https://www.mouser.co.uk/ProductDetail/Molex/48409-0003/?qs=KpdAywxU012gZlXxUSovmw%3D%3D" H 5350 2600 50  0001 L CNN "Mouser Price/Stock"
-F 8 "Molex" H 5350 2500 50  0001 L CNN "Manufacturer_Name"
-F 9 "48409-0003" H 5350 2400 50  0001 L CNN "Manufacturer_Part_Number"
-	1    4600 3000
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	4850 2550 4850 2700
 Wire Wire Line
@@ -172,55 +110,17 @@ Wire Wire Line
 Wire Wire Line
 	4950 2450 4400 2450
 Wire Wire Line
-	4400 2450 4400 3000
-Wire Wire Line
 	4950 2600 5750 2600
 Wire Wire Line
-	4500 2550 4500 3000
-Wire Wire Line
 	4850 3950 4850 4300
-Wire Wire Line
-	4850 4300 4500 4300
-Wire Wire Line
-	4500 4300 4500 3900
 Wire Wire Line
 	4850 3950 5250 3950
 Wire Wire Line
 	4950 4050 4950 4450
 Wire Wire Line
-	4950 4450 4400 4450
-Wire Wire Line
-	4400 4450 4400 3900
-Wire Wire Line
 	4950 4050 5350 4050
 Wire Wire Line
 	4500 2550 4850 2550
-Wire Wire Line
-	4300 3000 4300 2800
-$Comp
-L power:GND #~PWR0163
-U 1 1 6021458D
-P 4300 2800
-F 0 "#~PWR0163" H 4300 2550 50  0001 C CNN
-F 1 "GND" H 4320 2600 50  0000 C CNN
-F 2 "" H 4300 2800 50  0001 C CNN
-F 3 "" H 4300 2800 50  0001 C CNN
-	1    4300 2800
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	4300 3900 4300 4000
-$Comp
-L power:GND #~PWR0165
-U 1 1 602439CD
-P 4300 4000
-F 0 "#~PWR0165" H 4300 3750 50  0001 C CNN
-F 1 "GND" H 4320 3800 50  0000 C CNN
-F 2 "" H 4300 4000 50  0001 C CNN
-F 3 "" H 4300 4000 50  0001 C CNN
-	1    4300 4000
-	1    0    0    -1  
-$EndComp
 Text GLabel 5850 3800 0    50   Input ~ 0
 RxDB
 Text GLabel 5850 3900 0    50   Input ~ 0
@@ -230,58 +130,13 @@ Wire Wire Line
 Wire Wire Line
 	5950 3900 5850 3900
 Wire Wire Line
-	4300 3000 4200 3000
-Connection ~ 4300 3000
-Connection ~ 3700 3000
-Wire Wire Line
-	3700 3000 3600 3000
-Connection ~ 3800 3000
-Wire Wire Line
-	3800 3000 3700 3000
-Connection ~ 3900 3000
-Wire Wire Line
-	3900 3000 3800 3000
-Connection ~ 4000 3000
-Wire Wire Line
-	4000 3000 3900 3000
-Connection ~ 4100 3000
-Wire Wire Line
-	4100 3000 4000 3000
-Connection ~ 4200 3000
-Wire Wire Line
-	4200 3000 4100 3000
-Wire Wire Line
-	4300 3900 4200 3900
-Connection ~ 4300 3900
-Connection ~ 3700 3900
-Wire Wire Line
-	3700 3900 3600 3900
-Connection ~ 3800 3900
-Wire Wire Line
-	3800 3900 3700 3900
-Connection ~ 3900 3900
-Wire Wire Line
-	3900 3900 3800 3900
-Connection ~ 4000 3900
-Wire Wire Line
-	4000 3900 3900 3900
-Connection ~ 4100 3900
-Wire Wire Line
-	4100 3900 4000 3900
-Connection ~ 4200 3900
-Wire Wire Line
-	4200 3900 4100 3900
-Wire Wire Line
 	6200 5900 6300 5900
 Wire Wire Line
 	6800 5900 6900 5900
 $Comp
-L power:GND #~PWR?
+L power:GND #~PWR0164
 U 1 1 602D5919
 P 6900 5900
-AR Path="/5D919407/602D5919" Ref="#~PWR?"  Part="1" 
-AR Path="/601B15FC/602D5919" Ref="#~PWR0164"  Part="1" 
-AR Path="/604875AE/602D5919" Ref="#~PWR0164"  Part="1" 
 F 0 "#~PWR0164" H 6900 5650 50  0001 C CNN
 F 1 "GND" V 6950 5750 50  0000 R CNN
 F 2 "" H 6900 5900 50  0001 C CNN
@@ -290,12 +145,9 @@ F 3 "" H 6900 5900 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:VCC #~PWR?
+L power:VCC #~PWR0166
 U 1 1 602D591F
 P 6200 5900
-AR Path="/5D919407/602D591F" Ref="#~PWR?"  Part="1" 
-AR Path="/601B15FC/602D591F" Ref="#~PWR0166"  Part="1" 
-AR Path="/604875AE/602D591F" Ref="#~PWR0166"  Part="1" 
 F 0 "#~PWR0166" H 6200 5750 50  0001 C CNN
 F 1 "VCC" V 6250 6050 50  0000 L CNN
 F 2 "" H 6200 5900 50  0001 C CNN
@@ -304,15 +156,12 @@ F 3 "" H 6200 5900 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x06_Odd_Even J?
+L Connector_Generic:Conn_02x06_Odd_Even J402
 U 1 1 602D5927
 P 6500 5600
-AR Path="/5D919407/602D5927" Ref="J?"  Part="1" 
-AR Path="/601B15FC/602D5927" Ref="J402"  Part="1" 
-AR Path="/604875AE/602D5927" Ref="J402"  Part="1" 
 F 0 "J402" H 6550 5150 50  0000 C CNN
 F 1 "Conn_02x06_Odd_Even" H 6550 5050 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical" H 6500 5600 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical_SMD" H 6500 5600 50  0001 C CNN
 F 3 "" H 6500 5600 50  0001 C CNN
 F 4 "SAMTEC" H 6500 5600 50  0001 C CNN "Manufacturer_Name"
 F 5 "HTSW-106-08-S-D " H 6500 5600 50  0001 C CNN "Manufacturer_Part_Number"
@@ -377,7 +226,7 @@ U 1 1 60322333
 P 5200 4750
 F 0 "C404" H 5050 4800 50  0000 R CNN
 F 1 "1u" H 5050 4750 50  0000 R CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 5200 4750 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 5200 4750 50  0001 C CNN
 F 3 "~" H 5200 4750 50  0001 C CNN
 	1    5200 4750
 	1    0    0    -1  
@@ -415,4 +264,62 @@ Wire Wire Line
 	5550 3300 5550 5700
 Wire Wire Line
 	5550 5700 6300 5700
+Connection ~ 4200 3950
+Wire Wire Line
+	4300 3950 4200 3950
+$Comp
+L power:GND #~PWR0149
+U 1 1 602874B7
+P 4200 4050
+F 0 "#~PWR0149" H 4200 3800 50  0001 C CNN
+F 1 "GND" H 4220 3850 50  0000 C CNN
+F 2 "" H 4200 4050 50  0001 C CNN
+F 3 "" H 4200 4050 50  0001 C CNN
+	1    4200 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 3950 4200 4050
+Wire Wire Line
+	4100 3950 4200 3950
+Wire Wire Line
+	4600 3950 4600 4000
+Wire Wire Line
+	4950 4450 4400 4450
+Wire Wire Line
+	4850 4300 4500 4300
+Wire Wire Line
+	4200 2900 4100 2900
+Connection ~ 4200 2900
+Wire Wire Line
+	4200 2900 4200 2700
+Wire Wire Line
+	4400 4450 4400 3950
+Wire Wire Line
+	4500 4300 4500 3950
+Wire Wire Line
+	4300 2900 4200 2900
+Wire Wire Line
+	4400 2450 4400 2900
+Wire Wire Line
+	4500 2550 4500 2900
+Wire Wire Line
+	4600 2900 4600 2800
+$Comp
+L SamacSys_Parts:614008235023 J400
+U 1 1 6023FC0E
+P 4650 3100
+F 0 "J400" V 4900 2450 50  0000 R CNN
+F 1 "614008235023" V 5000 2450 50  0000 R CNN
+F 2 "SamacSys_Parts:614008235023" H 6900 2750 50  0001 L CNN
+F 3 "http://katalog.we-online.de/em/datasheet/614008235023.pdf" H 6900 2650 50  0001 L CNN
+F 4 "Wurth Elektronik WR-COM Series, Type A USB Connector, Receptacle" H 6900 2550 50  0001 L CNN "Description"
+F 5 "16" H 7050 2450 50  0001 L CNN "Height"
+F 6 "710-614008235023" H 6900 2350 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Wurth-Elektronik/614008235023/?qs=rS3zZhy2AQP6TSxAYKTnAw%3D%3D" H 6900 2250 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Wurth Elektronik" H 6900 2150 50  0001 L CNN "Manufacturer_Name"
+F 9 "614008235023" H 6900 2050 50  0001 L CNN "Manufacturer_Part_Number"
+	1    4650 3100
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC

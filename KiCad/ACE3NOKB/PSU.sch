@@ -84,14 +84,14 @@ $EndComp
 $Comp
 L Regulator_Linear:LM7805_TO220 LVR1
 U 1 1 735D1281
-P 5000 800
-F 0 "LVR1" H 5025 1075 50  0000 C CNN
-F 1 "LM7805_TO220" H 5025 975 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5000 1025 50  0001 C CIN
-F 3 "" H 5000 750 50  0001 C CNN
-F 4 "texas instruments" H 5000 800 50  0001 C CNN "Manufacturer_Name"
-F 5 "LM7805CT/NOPB" H 5000 800 50  0001 C CNN "Manufacturer_Part_Number"
-	1    5000 800 
+P 4800 700
+F 0 "LVR1" H 4825 975 50  0000 C CNN
+F 1 "LM7805_TO220" H 4825 875 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 4800 925 50  0001 C CIN
+F 3 "" H 4800 650 50  0001 C CNN
+F 4 "texas instruments" H 4800 700 50  0001 C CNN "Manufacturer_Name"
+F 5 "LM7805CT/NOPB" H 4800 700 50  0001 C CNN "Manufacturer_Part_Number"
+	1    4800 700 
 	1    0    0    -1  
 $EndComp
 $Comp

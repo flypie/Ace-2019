@@ -17,8 +17,6 @@ $Comp
 L power:GND #~~~SUPPLY?
 U 1 1 618F6985
 P 7425 3475
-AR Path="/618F6985" Ref="#~~~SUPPLY?"  Part="1" 
-AR Path="/5D9DD1F0/618F6985" Ref="#~~~SUPPLY0103"  Part="1" 
 F 0 "#~~~SUPPLY0103" H 7425 3475 50  0001 C CNN
 F 1 "GND" V 7300 3450 59  0000 C CNN
 F 2 "" H 7425 3475 50  0001 C CNN
@@ -36,8 +34,6 @@ $Comp
 L Connector:Mini-DIN-6 PS/2
 U 1 1 618F6975
 P 7900 3475
-AR Path="/5D9DD1F0/618F6975" Ref="PS/2"  Part="1" 
-AR Path="/618F6975" Ref="J?"  Part="1" 
 F 0 "PS/2" H 7900 3075 50  0000 C CNN
 F 1 "Mini-DIN-6" H 7900 3175 50  0000 C CNN
 F 2 "Local:5749180-1" H 7900 3475 50  0001 C CNN
@@ -53,8 +49,6 @@ $Comp
 L Connector_Generic:Conn_02x09_Odd_Even SIOA?
 U 1 1 5ED93C32
 P 1450 1075
-AR Path="/5ED93C32" Ref="SIOA?"  Part="1" 
-AR Path="/5D9DD1F0/5ED93C32" Ref="EMAC1"  Part="1" 
 F 0 "EMAC1" H 1500 1650 59  0000 C CNN
 F 1 "2510-" H 1300 1180 59  0001 L BNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x09_P2.54mm_Vertical" H 1450 1075 50  0001 C CNN
@@ -212,8 +206,6 @@ $Comp
 L Connector_Generic:Conn_02x05_Odd_Even SIOA?
 U 1 1 6187201B
 P 1450 3150
-AR Path="/6187201B" Ref="SIOA?"  Part="1" 
-AR Path="/5D9DD1F0/6187201B" Ref="SIOA1"  Part="1" 
 F 0 "SIOA1" H 1525 3500 59  0000 C CNN
 F 1 "2510-" H 1300 3255 59  0001 L BNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 1450 3150 50  0001 C CNN
@@ -241,8 +233,6 @@ $Comp
 L Connector_Generic:Conn_02x05_Odd_Even SIOB?
 U 1 1 61872035
 P 1450 3825
-AR Path="/61872035" Ref="SIOB?"  Part="1" 
-AR Path="/5D9DD1F0/61872035" Ref="SIOB1"  Part="1" 
 F 0 "SIOB1" H 1525 4200 59  0000 C CNN
 F 1 "2510-" H 1300 3930 59  0001 L BNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 1450 3825 50  0001 C CNN
@@ -268,8 +258,6 @@ $Comp
 L Connector_Generic:Conn_02x04_Odd_Even PIOB?
 U 1 1 61872040
 P 1450 2450
-AR Path="/61872040" Ref="PIOB?"  Part="1" 
-AR Path="/5D9DD1F0/61872040" Ref="PIOB1"  Part="1" 
 F 0 "PIOB1" H 1525 2700 59  0000 C CNN
 F 1 "2510-" H 1300 2555 59  0001 L BNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 1450 2450 50  0001 C CNN
@@ -295,8 +283,6 @@ $Comp
 L Connector_Generic:Conn_02x04_Odd_Even PIOA?
 U 1 1 61871FF8
 P 1450 1850
-AR Path="/61871FF8" Ref="PIOA?"  Part="1" 
-AR Path="/5D9DD1F0/61871FF8" Ref="PIOA1"  Part="1" 
 F 0 "PIOA1" H 1525 2100 59  0000 C CNN
 F 1 "2510-" H 1300 1955 59  0001 L BNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 1450 1850 50  0001 C CNN
@@ -327,8 +313,6 @@ $Comp
 L power:VCC #~~~P+?
 U 1 1 618F697D
 P 8280 3475
-AR Path="/618F697D" Ref="#~~~P+?"  Part="1" 
-AR Path="/5D9DD1F0/618F697D" Ref="#~~~P+0101"  Part="1" 
 F 0 "#~~~P+0101" H 8280 3475 50  0001 C CNN
 F 1 "VCC" V 8305 3620 59  0000 L CNN
 F 2 "" H 8280 3475 50  0001 C CNN
@@ -538,3 +522,5 @@ F 3 "http://www.ti.com/lit/ds/symlink/sn74ahct595.pdf" H 7500 5050 50  0001 C CN
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
+
+
