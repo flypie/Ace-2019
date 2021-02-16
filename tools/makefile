@@ -18,8 +18,8 @@ csrc = $(wildcard $(XCDIR)/ACE1/*.dsn) \
 		$(wildcard $(XCDIR)/ACE3NOKB/*.dsn) \
 		$(wildcard $(XCDIR)/ACE4NOKB/*.dsn) \
 		$(wildcard $(XCDIR)/ACE5/*.dsn) \
-		$(wildcard $(XCDIR)/ACE5SMD/*.dsn) \
 		$(wildcard $(XCDIR)/ACEZ180/*.dsn) \
+		$(wildcard $(XCDIR)/ACEZ380/*.dsn) \
 		$(wildcard $(XCDIR)/ACEeZ80/*.dsn) \
 		$(wildcard $(XCDIR)/Edgeboard/*.dsn) \
 		$(wildcard $(XCDIR)/eBigRam/*.dsn) \
@@ -29,6 +29,9 @@ csrc = $(wildcard $(XCDIR)/ACE1/*.dsn) \
 		$(wildcard $(XCDIR)/eMultiUniBoard/*.dsn) \
 		$(wildcard $(XCDIR)/PS2TestCard/*.dsn) \
 		$(wildcard $(XCDIR)/PS2/*.dsn) \
+		$(wildcard $(XCDIR)/ACEDIAGBOARD/*.dsn) \
+		$(wildcard $(XCDIR)/Z80ICE/*.dsn) \
+		$(wildcard $(XCDIR)/Z80PLCC-DIP/*.dsn) \
 		$(wildcard $(XCDIR)/KEYBOARD/*.dsn)
 
 obj = $(csrc:.dsn=.ses)
