@@ -35,7 +35,7 @@ F 0 "Z302" H 2200 2650 50  0000 C CNN
 F 1 "74AHCT32" H 2200 2550 50  0000 C CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2200 2300 50  0001 C CNN
 F 3 "" H 2200 2300 50  0001 C CNN
-F 4 "SN74AHCT32N" H 2200 2300 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "SN74AHCT32DR " H 2200 2300 50  0001 C CNN "Manufacturer_Part_Number"
 F 5 "Texas Instruments" H 2200 2300 50  0001 C CNN "Manufacturer_Name"
 	3    2200 2300
 	1    0    0    -1  
@@ -96,8 +96,8 @@ F 0 "Z307" H 3600 5325 50  0000 C CNN
 F 1 "74AHCT139" H 3600 5225 50  0000 C CNN
 F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 3600 4900 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS139" H 3600 4900 50  0001 C CNN
-F 4 "Texas Instruments" H 3600 4900 50  0001 C CNN "Manufacturer_Name"
-F 5 "SN74AHCT139N" H 3600 4900 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "Nexperia" H 3600 4900 50  0001 C CNN "Manufacturer_Name"
+F 5 "74AHCT139D,118" H 3600 4900 50  0001 C CNN "Manufacturer_Part_Number"
 	1    3600 4900
 	1    0    0    -1  
 $EndComp
@@ -123,7 +123,7 @@ F 0 "Z302" H 2200 2100 50  0000 C CNN
 F 1 "74AHCT32" H 2200 2000 50  0000 C CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2200 1750 50  0001 C CNN
 F 3 "" H 2200 1750 50  0001 C CNN
-F 4 "SN74AHCT32N" H 2200 1750 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "SN74AHCT32DR " H 2200 1750 50  0001 C CNN "Manufacturer_Part_Number"
 F 5 "Texas Instruments" H 2200 1750 50  0001 C CNN "Manufacturer_Name"
 	4    2200 1750
 	1    0    0    -1  
@@ -136,7 +136,7 @@ F 0 "Z302" H 2200 3850 50  0000 C CNN
 F 1 "74AHCT32" H 2200 3750 50  0000 C CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2200 3500 50  0001 C CNN
 F 3 "" H 2200 3500 50  0001 C CNN
-F 4 "SN74AHCT32N" H 2200 3500 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "SN74AHCT32DR " H 2200 3500 50  0001 C CNN "Manufacturer_Part_Number"
 F 5 "Texas Instruments" H 2200 3500 50  0001 C CNN "Manufacturer_Name"
 	2    2200 3500
 	1    0    0    -1  
@@ -149,7 +149,7 @@ F 0 "Z302" H 2200 3250 50  0000 C CNN
 F 1 "74AHCT32" H 2200 3150 50  0000 C CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2200 2900 50  0001 C CNN
 F 3 "" H 2200 2900 50  0001 C CNN
-F 4 "SN74AHCT32N" H 2200 2900 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "SN74AHCT32DR " H 2200 2900 50  0001 C CNN "Manufacturer_Part_Number"
 F 5 "Texas Instruments" H 2200 2900 50  0001 C CNN "Manufacturer_Name"
 	1    2200 2900
 	1    0    0    -1  
@@ -170,9 +170,9 @@ U 5 1 60FCF032
 P 1550 3600
 F 0 "Z306" H 1550 3350 50  0000 C CNN
 F 1 "74AHCT04" H 1550 3250 50  0000 C CNN
-F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 1550 3600 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1550 3600 50  0001 C CNN
 F 3 "http:~/www.ti.com/lit/gpn/sn74LS04" H 1550 3600 50  0001 C CNN
-F 4 "SN74AHCT04N" H 1550 3600 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "SN74AHCT04DR" H 1550 3600 50  0001 C CNN "Manufacturer_Part_Number"
 F 5 "Texas Instruments" H 1550 3600 50  0001 C CNN "Manufacturer_Name"
 	5    1550 3600
 	1    0    0    -1  
@@ -248,9 +248,11 @@ L 74xx:74LS30 Z407
 U 1 1 6024C8EB
 P 3750 5850
 F 0 "Z407" H 3775 6275 50  0000 C CNN
-F 1 "74AHCT30D" H 3775 6175 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 3750 5850 50  0001 C CNN
+F 1 "74AHCT30" H 3775 6175 50  0000 C CNN
+F 2 "Package_SO:SO-14_3.9x8.65mm_P1.27mm" H 3750 5850 50  0001 C CNN
 F 3 "http:~/www.ti.com/lit/gpn/sn74LS21" H 3750 5850 50  0001 C CNN
+F 4 "Nexperia" H 3750 5850 50  0001 C CNN "Manufacturer_Name"
+F 5 "74AHCT30D-Q100J" H 3750 5850 50  0001 C CNN "Manufacturer_Part_Number"
 	1    3750 5850
 	1    0    0    -1  
 $EndComp
@@ -275,8 +277,10 @@ U 1 1 6024C8F1
 P 2550 6675
 F 0 "Z306" V 2500 6875 50  0000 L CNN
 F 1 "74AHCT04" V 2550 6875 50  0000 L CNN
-F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 2550 6675 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2550 6675 50  0001 C CNN
 F 3 "http:~/www.ti.com/lit/gpn/sn74LS04" H 2550 6675 50  0001 C CNN
+F 4 "Texas Instruments" H 2550 6675 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT04DR" H 2550 6675 50  0001 C CNN "Manufacturer_Part_Number"
 	1    2550 6675
 	0    1    1    0   
 $EndComp
@@ -287,10 +291,10 @@ L 74xx:74LS138 Z29
 U 1 1 7397220B
 P 2000 5650
 F 0 "Z29" H 2005 6450 50  0000 C CNN
-F 1 "SN74AHCT138N" H 2005 6350 50  0000 C CNN
-F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 2000 5650 50  0001 C CNN
+F 1 "74AHCT138" H 2005 6350 50  0000 C CNN
+F 2 "Package_SO:SOP-16_3.9x9.9mm_P1.27mm" H 2000 5650 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS138" H 2000 5650 50  0001 C CNN
-F 4 "SN74AHCT138N" H 2000 5650 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "SN74AHCT138DR" H 2000 5650 50  0001 C CNN "Manufacturer_Part_Number"
 F 5 "Texas Instruments" H 2000 5650 50  0001 C CNN "Manufacturer_Name"
 	1    2000 5650
 	1    0    0    -1  
@@ -329,9 +333,11 @@ L 74xx:74LS21 Z404
 U 1 1 605A9444
 P 6350 5150
 F 0 "Z404" H 6350 5500 50  0000 C CNN
-F 1 "74LS21" H 6350 5450 50  0000 C CNN
+F 1 "74HCT21" H 6350 5450 50  0000 C CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6350 5150 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS21" H 6350 5150 50  0001 C CNN
+F 4 "Texas Instruments" H 6350 5150 50  0001 C CNN "Manufacturer_Name"
+F 5 "CD74HCT21M96" H 6350 5150 50  0001 C CNN "Manufacturer_Part_Number"
 	1    6350 5150
 	1    0    0    -1  
 $EndComp

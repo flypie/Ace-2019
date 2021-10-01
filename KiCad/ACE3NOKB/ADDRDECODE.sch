@@ -344,10 +344,8 @@ Wire Wire Line
 	1900 4550 1750 4550
 Text Label 1750 4550 2    50   ~ 0
 A10
-Text Label 3500 900  0    50   ~ 0
+Text Label 2600 900  0    50   ~ 0
 ~CPUINVDGRAM
-Wire Wire Line
-	3200 900  3500 900 
 Wire Wire Line
 	6875 1450 7375 1450
 Wire Wire Line
@@ -455,7 +453,7 @@ Wire Wire Line
 	3300 5900 3300 6350
 Wire Wire Line
 	3800 6350 3900 6350
-Text GLabel 2700 2400 2    50   Input ~ 0
+Text GLabel 2700 2200 2    50   Input ~ 0
 ~CSVIDEORAM
 Text GLabel 1750 4950 0    50   Input ~ 0
 ~3800-3FFF
@@ -466,110 +464,60 @@ Wire Wire Line
 Text Label 4450 5700 0    50   ~ 0
 ~CPUFONT
 $Comp
-L 74xx:74LS00 Z19
-U 4 1 631ECF0D
-P 2150 900
-F 0 "Z19" H 2175 1250 50  0000 C CNN
-F 1 "SN74AHCT00N" H 2175 1150 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 2150 900 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 2150 900 50  0001 C CNN
-F 4 "SN74AHCT00N" H 2150 900 50  0001 C CNN "Manufacturer_Part_Number"
-F 5 "Texas Instruments" H 2150 900 50  0001 C CNN "Manufacturer_Name"
-	4    2150 900 
-	1    0    0    -1  
-$EndComp
-$Comp
 L 74xx:74LS04 Z306
 U 1 1 631F47D3
-P 2900 900
-F 0 "Z306" H 2925 1250 50  0000 C CNN
-F 1 "SN74AHCT04N" H 2925 1150 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 2900 900 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/snSN74AHCT04" H 2900 900 50  0001 C CNN
-F 4 "SN74AHCT04N" H 2900 900 50  0001 C CNN "Manufacturer_Part_Number"
-F 5 "Texas Instruments" H 2900 900 50  0001 C CNN "Manufacturer_Name"
-	1    2900 900 
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2600 900  2450 900 
-$Comp
-L 74xx:74LS86 Z23
-U 1 1 602A84E8
 P 2150 1600
-F 0 "Z23" H 2150 1950 50  0000 C CNN
-F 1 "SN74AHCT86N" H 2150 1850 50  0000 C CNN
+F 0 "Z306" H 2175 1950 50  0000 C CNN
+F 1 "SN74AHCT04N" H 2175 1850 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm" H 2150 1600 50  0001 C CNN
-F 3 "74xx/74ls86.pdf" H 2150 1600 50  0001 C CNN
-F 4 "SN74AHCT86N" H 2150 1600 50  0001 C CNN "Manufacturer_Part_Number"
+F 3 "http://www.ti.com/lit/gpn/snSN74AHCT04" H 2150 1600 50  0001 C CNN
+F 4 "SN74AHCT04N" H 2150 1600 50  0001 C CNN "Manufacturer_Part_Number"
 F 5 "Texas Instruments" H 2150 1600 50  0001 C CNN "Manufacturer_Name"
 	1    2150 1600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
+	2600 900  2450 900 
+Wire Wire Line
 	4350 5600 4450 5600
 Wire Wire Line
 	2450 1600 2700 1600
-$Comp
-L Device:R R300
-U 1 1 6032E0C4
-P 900 1350
-F 0 "R300" H 800 1300 50  0000 R CNN
-F 1 "5K" H 800 1350 50  0000 R CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 830 1350 50  0001 C CNN
-F 3 "" H 900 1350 50  0001 C CNN
-F 4 "Vishay" H 900 1350 50  0001 C CNN "Manufacturer_Name"
-F 5 "MBA02040C1002FRP00 " H 900 1350 50  0001 C CNN "Manufacturer_Part_Number"
-	1    900  1350
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
-	1850 1500 900  1500
-Wire Wire Line
-	900  1200 750  1200
-$Comp
-L power:VCC #~PWR0116
-U 1 1 6032E0CC
-P 750 1200
-F 0 "#~PWR0116" H 750 1050 50  0001 C CNN
-F 1 "VCC" V 800 1345 50  0000 L CNN
-F 2 "" H 750 1200 50  0001 C CNN
-F 3 "" H 750 1200 50  0001 C CNN
-	1    750  1200
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	1850 1700 1700 1700
+	1850 1600 1700 1600
 Text Label 4450 5600 0    50   ~ 0
 ~CPUVRAM
-Text Label 1700 1700 2    50   ~ 0
+Text Label 1700 1600 2    50   ~ 0
 ~CPUVRAM
-$Comp
-L 74xx:74LS86 Z23
-U 2 1 6034DB6A
-P 2150 2400
-F 0 "Z23" H 2150 2750 50  0000 C CNN
-F 1 "SN74AHCT86N" H 2150 2650 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H 2150 2400 50  0001 C CNN
-F 3 "74xx/74ls86.pdf" H 2150 2400 50  0001 C CNN
-F 4 "SN74AHCT86N" H 2150 2400 50  0001 C CNN "Manufacturer_Part_Number"
-F 5 "Texas Instruments" H 2150 2400 50  0001 C CNN "Manufacturer_Name"
-	2    2150 2400
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	2450 2400 2700 2400
+	2450 2200 2700 2200
 Wire Wire Line
-	1850 2500 1700 2500
-Wire Notes Line
-	1050 1800 3450 1800
+	1850 2200 1700 2200
 Text GLabel 7400 1250 0    50   Input ~ 0
 ~WR
+Text Label 1700 2200 2    50   ~ 0
+~CPU2FONTRAM
+Text Label 1700 1000 2    50   ~ 0
+~CPU2FONTRAM
+Text Label 1700 800  2    50   ~ 0
+~CPUVRAM
+Wire Notes Line
+	1050 2400 600  2400
+Wire Notes Line
+	1050 3300 1050 2400
+Wire Notes Line
+	3450 1150 3450 3300
+Wire Notes Line
+	3450 3300 1050 3300
+Text GLabel 1700 3100 0    50   Input ~ 0
+~WR
 Wire Wire Line
-	900  2300 900  1500
+	2450 3000 2700 3000
 Wire Wire Line
-	900  2300 1850 2300
-Connection ~ 900  1500
+	1850 2900 1700 2900
+Text Label 1700 2900 2    50   ~ 0
+~CPUFONT
+Wire Wire Line
+	1850 3100 1700 3100
 $Comp
 L 74xx:74LS32 Z302
 U 4 1 604C8213
@@ -583,28 +531,42 @@ F 5 "Texas Instruments" H 2150 3000 50  0001 C CNN "Manufacturer_Name"
 	4    2150 3000
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1850 3100 1700 3100
-Text Label 1700 2900 2    50   ~ 0
-~CPUFONT
-Wire Wire Line
-	1850 2900 1700 2900
-Wire Wire Line
-	2450 3000 2700 3000
-Text GLabel 1700 3100 0    50   Input ~ 0
-~WR
-Text Label 2700 3000 0    50   ~ 0
-~CPUFONTRAM
-Text Label 1700 2500 2    50   ~ 0
-~CPUFONTRAM
 Wire Notes Line
-	3450 3300 1050 3300
+	600  500  4200 500 
 Wire Notes Line
-	3450 1800 3450 3300
+	4200 500  4200 1150
 Wire Notes Line
-	1050 1800 1050 3300
-Text Label 1700 1000 2    50   ~ 0
-~CPUFONTRAM
-Text Label 1700 800  2    50   ~ 0
-~CPUVRAM
+	600  500  600  2400
+Wire Notes Line
+	600  1150 4200 1150
+Text GLabel 2700 3000 2    50   Input ~ 0
+~CPU2FONTRAM
+$Comp
+L 74xx:74LS08 Z310
+U 1 1 617C56C3
+P 2150 900
+F 0 "Z310" H 2165 1250 50  0000 C CNN
+F 1 "SN74AHCT08N" H 2165 1150 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 2150 900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 2150 900 50  0001 C CNN
+F 4 "74xx:74LS08" H 2150 900 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "Texas Instruments" H 2150 900 50  0001 C CNN "Manufacturer_Name"
+	1    2150 900 
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1450 -1050
+NoConn ~ -2100 -100
+$Comp
+L 74xx:74LS04 Z306
+U 6 1 618F659B
+P 2150 2200
+F 0 "Z306" H 2175 2550 50  0000 C CNN
+F 1 "SN74AHCT04N" H 2175 2450 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H 2150 2200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/snSN74AHCT04" H 2150 2200 50  0001 C CNN
+F 4 "SN74AHCT04N" H 2150 2200 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "Texas Instruments" H 2150 2200 50  0001 C CNN "Manufacturer_Name"
+	6    2150 2200
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

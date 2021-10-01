@@ -24,10 +24,12 @@ NEWROMSTART:
 
 
 	LD		hl,02000h
+	LD		a,055h
 Looper:
 	LD		C,(hl)
 	INC		C
 	LD		(HL),C
+	OUT		(0FFh),a
 	JP Looper
 
 	call INIT_KIO

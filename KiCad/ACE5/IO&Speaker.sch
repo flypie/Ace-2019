@@ -21,10 +21,10 @@ L 74xx:74LS367 Z14
 U 1 1 70940791
 P 4375 4175
 F 0 "Z14" V 4205 3635 50  0000 R CNN
-F 1 "SN74LS367AN" V 4725 3970 50  0000 R CNN
-F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 4375 4175 50  0001 C CNN
+F 1 "74LS367" V 4725 3970 50  0000 R CNN
+F 2 "Package_SO:SO-16_3.9x9.9mm_P1.27mm" H 4375 4175 50  0001 C CNN
 F 3 "" H 4375 4175 50  0001 C CNN
-F 4 "SN74LS367AN" H 4375 4175 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "74HCT367D,653" H 4375 4175 50  0001 C CNN "Manufacturer_Part_Number"
 F 5 "Texas Instruments" H 4375 4175 50  0001 C CNN "Manufacturer_Name"
 	1    4375 4175
 	0    -1   -1   0   
@@ -92,7 +92,7 @@ F 1 "200" V 8900 3250 50  0000 C CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" H 9150 3275 50  0001 C CNN
 F 3 "" H 9150 3275 50  0001 C CNN
 F 4 "Vishay" H 9150 3275 50  0001 C CNN "Manufacturer_Name"
-F 5 "MBA02040C2000FRP00 " H 9150 3275 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "CRCW1206200RFKEAC" H 9150 3275 50  0001 C CNN "Manufacturer_Part_Number"
 	1    9150 3275
 	0    -1   -1   0   
 $EndComp
@@ -101,15 +101,15 @@ Wire Wire Line
 Wire Wire Line
 	9350 2950 9350 2775
 $Comp
-L Connector_Generic:Conn_01x02 SPK1
+L Connector_Generic:Conn_01x02 JSPK1
 U 1 1 5DD9F9BA
 P 9550 3050
-F 0 "SPK1" H 9650 3020 51  0000 L BNN
+F 0 "JSPK1" H 9650 3020 51  0000 L BNN
 F 1 "SPk1" H 9520 3105 50  0000 L BNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical_SMD_Pin1Left" H 9550 3050 50  0001 C CNN
 F 3 "" H 9550 3050 50  0001 C CNN
-F 4 "SAMTEC" H 9550 3050 50  0001 C CNN "Manufacturer_Name"
-F 5 "TSW–101–10–T–D–RA" H 9550 3050 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "Molex" H 9550 3050 50  0001 C CNN "Manufacturer_Name"
+F 5 "87898-0204" H 9550 3050 50  0001 C CNN "Manufacturer_Part_Number"
 	1    9550 3050
 	1    0    0    1   
 $EndComp
@@ -123,10 +123,10 @@ L 74xx:74LS74 Z27
 U 1 1 62A1631E
 P 7650 2375
 F 0 "Z27" H 7860 2635 50  0000 C CNN
-F 1 "SN74AHCT74N" H 7420 2625 50  0000 C CNN
+F 1 "74AHCT74" H 7420 2625 50  0000 C CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7650 2375 50  0001 C CNN
 F 3 "74xx/74hc_hct74.pdf" H 7650 2375 50  0001 C CNN
-F 4 "SN74AHCT74N" H 7650 2375 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "SN74AHCT74DR" H 7650 2375 50  0001 C CNN "Manufacturer_Part_Number"
 F 5 "Texas Instruments" H 7650 2375 50  0001 C CNN "Manufacturer_Name"
 	1    7650 2375
 	1    0    0    -1  
@@ -271,15 +271,15 @@ Wire Wire Line
 Wire Wire Line
 	3175 4775 3075 4775
 $Comp
-L Connector_Generic:Conn_02x08_Odd_Even KEYBOARD1
+L Connector_Generic:Conn_02x08_Odd_Even JKEYBOARD1
 U 1 1 5E446247
 P 3375 5075
-F 0 "KEYBOARD1" H 3450 5625 50  0000 C CNN
+F 0 "JKEYBOARD1" H 3450 5625 50  0000 C CNN
 F 1 "Conn_02x08_Odd_Even" H 3450 5525 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x08_P2.54mm_Vertical_SMD" H 3375 5075 50  0001 C CNN
 F 3 "" H 3375 5075 50  0001 C CNN
-F 4 "SAMTEC" H 3375 5075 50  0001 C CNN "Manufacturer_Name"
-F 5 "TSW–108–10–T–D–RA" H 3375 5075 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "Molex" H 3375 5075 50  0001 C CNN "Manufacturer_Name"
+F 5 "15-91-0160" H 3375 5075 50  0001 C CNN "Manufacturer_Part_Number"
 	1    3375 5075
 	1    0    0    -1  
 $EndComp
@@ -370,7 +370,7 @@ F 1 "10k" V 8325 2275 50  0000 C CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" H 8175 2275 50  0001 C CNN
 F 3 "" H 8175 2275 50  0001 C CNN
 F 4 "Vishay" H 8175 2275 50  0001 C CNN "Manufacturer_Name"
-F 5 "MBA02040C1002FRP00 " H 8175 2275 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "CRCW120610K0FKEAC" H 8175 2275 50  0001 C CNN "Manufacturer_Part_Number"
 	1    8175 2275
 	0    -1   -1   0   
 $EndComp
@@ -383,20 +383,20 @@ F 1 "22k" V 8025 4075 50  0000 C CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" H 8175 4075 50  0001 C CNN
 F 3 "" H 8175 4075 50  0001 C CNN
 F 4 "Vishay" H 8175 4075 50  0001 C CNN "Manufacturer_Name"
-F 5 "MBA02040C2202FRP00" H 8175 4075 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "CRCW120622K0FKEA" H 8175 4075 50  0001 C CNN "Manufacturer_Part_Number"
 	1    8175 4075
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 AUDIO-OUT1
+L Connector_Generic:Conn_01x02 JAUDIO-OUT1
 U 1 1 C18BD510
 P 9550 2175
-F 0 "AUDIO-OUT1" H 9650 2225 51  0000 L CNN
+F 0 "JAUDIO-OUT1" H 9650 2225 51  0000 L CNN
 F 1 "332-02" H 9650 2075 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical_SMD_Pin1Left" H 9550 2175 50  0001 C CNN
 F 3 "" H 9550 2175 50  0001 C CNN
-F 4 "SAMTEC" H 9550 2175 50  0001 C CNN "Manufacturer_Name"
-F 5 "TSW–101–10–T–D–RA" H 9550 2175 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "Molex" H 9550 2175 50  0001 C CNN "Manufacturer_Name"
+F 5 "87898-0204" H 9550 2175 50  0001 C CNN "Manufacturer_Part_Number"
 	1    9550 2175
 	1    0    0    -1  
 $EndComp
@@ -418,10 +418,10 @@ L 74xx:74LS02 Z24
 U 2 1 620E3DB8
 P 6625 4175
 F 0 "Z24" H 6650 4550 50  0000 C CNN
-F 1 "SN74AHCT02N" H 6650 4450 50  0000 C CNN
+F 1 "74AHCT02" H 6650 4450 50  0000 C CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6625 4175 50  0001 C CNN
 F 3 "" H 6625 4175 50  0001 C CNN
-F 4 "SN74AHCT02N" H 6625 4175 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "SN74AHCT02DR" H 6625 4175 50  0001 C CNN "Manufacturer_Part_Number"
 F 5 "Texas Instruments" H 6625 4175 50  0001 C CNN "Manufacturer_Name"
 	2    6625 4175
 	1    0    0    -1  
@@ -431,10 +431,10 @@ L 74xx:74LS02 Z24
 U 3 1 620EA48A
 P 7650 3275
 F 0 "Z24" H 7675 3650 50  0000 C CNN
-F 1 "SN74AHCT02N" H 7675 3550 50  0000 C CNN
+F 1 "74AHCT02" H 7675 3550 50  0000 C CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7650 3275 50  0001 C CNN
 F 3 "" H 7650 3275 50  0001 C CNN
-F 4 "SN74AHCT02N" H 7650 3275 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "SN74AHCT02DR" H 7650 3275 50  0001 C CNN "Manufacturer_Part_Number"
 F 5 "Texas Instruments" H 7650 3275 50  0001 C CNN "Manufacturer_Name"
 	3    7650 3275
 	1    0    0    -1  
@@ -444,10 +444,10 @@ L 74xx:74LS02 Z24
 U 4 1 620F1165
 P 7650 4075
 F 0 "Z24" H 7675 3800 50  0000 C CNN
-F 1 "SN74AHCT02N" H 7675 3700 50  0000 C CNN
+F 1 "74AHCT02" H 7675 3700 50  0000 C CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7650 4075 50  0001 C CNN
 F 3 "" H 7650 4075 50  0001 C CNN
-F 4 "SN74AHCT02N" H 7650 4075 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "SN74AHCT02DR" H 7650 4075 50  0001 C CNN "Manufacturer_Part_Number"
 F 5 "Texas Instruments" H 7650 4075 50  0001 C CNN "Manufacturer_Name"
 	4    7650 4075
 	1    0    0    -1  
@@ -461,10 +461,10 @@ L 74xx:74LS02 Z24
 U 1 1 620DC700
 P 6625 3175
 F 0 "Z24" H 6650 3550 50  0000 C CNN
-F 1 "SN74AHCT02N" H 6650 3450 50  0000 C CNN
+F 1 "74AHCT02" H 6650 3450 50  0000 C CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6625 3175 50  0001 C CNN
 F 3 "" H 6625 3175 50  0001 C CNN
-F 4 "SN74AHCT02N" H 6625 3175 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "SN74AHCT02DR" H 6625 3175 50  0001 C CNN "Manufacturer_Part_Number"
 F 5 "Texas Instruments" H 6625 3175 50  0001 C CNN "Manufacturer_Name"
 	1    6625 3175
 	1    0    0    -1  
@@ -484,9 +484,9 @@ U 3 1 64E6C736
 P 7050 4575
 F 0 "Z306" V 6975 4800 50  0000 L CNN
 F 1 "74AHCT04" V 7075 4800 50  0000 L CNN
-F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 7050 4575 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7050 4575 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/snSN74AHCT04" H 7050 4575 50  0001 C CNN
-F 4 "SN74AHCT04N" H 7050 4575 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "SN74AHCT04DR" H 7050 4575 50  0001 C CNN "Manufacturer_Part_Number"
 F 5 "Texas Instruments" H 7050 4575 50  0001 C CNN "Manufacturer_Name"
 	3    7050 4575
 	0    1    1    0   
@@ -609,8 +609,8 @@ F 0 "C5" H 8575 3125 50  0000 R CNN
 F 1 "47pF" H 8575 3075 50  0000 R CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric" H 8675 3075 50  0001 C CNN
 F 3 "" H 8675 3075 50  0001 C CNN
-F 4 "tdk" H 8675 3075 50  0001 C CNN "Manufacturer_Name"
-F 5 "FA18C0G1H470JNU00" H 8675 3075 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "vishay" H 8675 3075 50  0001 C CNN "Manufacturer_Name"
+F 5 "VJ1206A470KXJPW1BC" H 8675 3075 50  0001 C CNN "Manufacturer_Part_Number"
 	1    8675 3075
 	1    0    0    -1  
 $EndComp
@@ -630,7 +630,7 @@ F 1 "47nF" V 8325 2275 50  0000 C CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric" H 8475 2275 50  0001 C CNN
 F 3 "" H 8475 2275 50  0001 C CNN
 F 4 "vishay" H 8475 2275 50  0001 C CNN "Manufacturer_Name"
-F 5 "K473K15X7RF5TL2" H 8475 2275 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "VJ1206V473MXJCW1BC" H 8475 2275 50  0001 C CNN "Manufacturer_Part_Number"
 F 6 "4" H 8475 2275 50  0001 C CNN "Height"
 	1    8475 2275
 	0    1    1    0   
@@ -696,11 +696,11 @@ L Device:R R5
 U 1 1 64D54441
 P 4725 6100
 F 0 "R5" H 4650 6025 50  0000 R CNN
-F 1 "1K" H 4650 6125 50  0000 R CNN
+F 1 "1k0" H 4650 6125 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" H 4725 6100 50  0001 C CNN
 F 3 "" H 4725 6100 50  0001 C CNN
 F 4 "Vishay" H 4725 6100 50  0001 C CNN "Manufacturer_Name"
-F 5 "MBA02040C1202FRP00" H 4725 6100 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "CRCW12061K00JNEAC" H 4725 6100 50  0001 C CNN "Manufacturer_Part_Number"
 	1    4725 6100
 	0    1    1    0   
 $EndComp
@@ -713,7 +713,7 @@ F 1 "12k" H 4650 5625 50  0000 R CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" H 4725 5600 50  0001 C CNN
 F 3 "" H 4725 5600 50  0001 C CNN
 F 4 "Vishay" H 4725 5600 50  0001 C CNN "Manufacturer_Name"
-F 5 "MBA02040C1202FRP00" H 4725 5600 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "CRCW120612K0FKEAC" H 4725 5600 50  0001 C CNN "Manufacturer_Part_Number"
 	1    4725 5600
 	0    1    1    0   
 $EndComp
@@ -726,21 +726,21 @@ F 1 "47nF" V 4600 5875 50  0000 C CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric" H 4475 5900 50  0001 C CNN
 F 3 "" H 4475 5900 50  0001 C CNN
 F 4 "vishay" H 4475 5900 50  0001 C CNN "Manufacturer_Name"
-F 5 "K473K15X7RF5TL2" H 4475 5900 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "VJ1206V473MXJCW1BC" H 4475 5900 50  0001 C CNN "Manufacturer_Part_Number"
 F 6 "4" H 4475 5900 50  0001 C CNN "Height"
 	1    4475 5900
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 AUDIO-IN1
+L Connector_Generic:Conn_01x02 JAUDIO-IN1
 U 1 1 10A0DA0D
 P 4475 6655
-F 0 "AUDIO-IN1" H 4595 6680 51  0000 L CNN
+F 0 "JAUDIO-IN1" H 4595 6680 51  0000 L CNN
 F 1 "332-02" H 4595 6580 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical_SMD_Pin1Left" H 4475 6655 50  0001 C CNN
 F 3 "" H 4475 6655 50  0001 C CNN
-F 4 "SAMTEC" H 4475 6655 50  0001 C CNN "Manufacturer_Name"
-F 5 "TSW–101–10–T–D–RA" H 4475 6655 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "Molex" H 4475 6655 50  0001 C CNN "Manufacturer_Name"
+F 5 "87898-0204" H 4475 6655 50  0001 C CNN "Manufacturer_Part_Number"
 	1    4475 6655
 	0    -1   1    0   
 $EndComp

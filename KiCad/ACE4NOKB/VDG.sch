@@ -56,6 +56,8 @@ F 0 "Z19" H 3355 1570 50  0000 C CNN
 F 1 "74AHCT00" H 3355 1470 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3350 1200 50  0001 C CNN
 F 3 "http:/www.ti.com/lit/gpn/sn74AHCT00" H 3350 1200 50  0001 C CNN
+F 4 "Texas Instruments" H 3350 1200 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT00NE4" H 3350 1200 50  0001 C CNN "Manufacturer_Part_Number"
 	1    3350 1200
 	1    0    0    -1  
 $EndComp
@@ -67,6 +69,8 @@ F 0 "Z25" H 3350 2150 50  0000 C CNN
 F 1 "74AHCT02" H 3350 2050 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3350 1800 50  0001 C CNN
 F 3 "http:/www.ti.com/lit/gpn/sn74AHCT02" H 3350 1800 50  0001 C CNN
+F 4 "Texas Instruments" H 3350 1800 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT02N" H 3350 1800 50  0001 C CNN "Manufacturer_Part_Number"
 	1    3350 1800
 	1    0    0    -1  
 $EndComp
@@ -78,6 +82,8 @@ F 0 "Z20" H 4075 1855 50  0000 C CNN
 F 1 "74AHCT08" H 4075 1755 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 4050 1500 50  0001 C CNN
 F 3 "http:/www.ti.com/lit/gpn/sn74AHCT08" H 4050 1500 50  0001 C CNN
+F 4 "Texas Instruments" H 4050 1500 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT08N" H 4050 1500 50  0001 C CNN "Manufacturer_Part_Number"
 	2    4050 1500
 	1    0    0    -1  
 $EndComp
@@ -89,6 +95,8 @@ F 0 "Z20" H 4850 1750 50  0000 C CNN
 F 1 "74AHCT08" H 4850 1650 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 4850 2000 50  0001 C CNN
 F 3 "http:/www.ti.com/lit/gpn/sn74AHCT08" H 4850 2000 50  0001 C CNN
+F 4 "Texas Instruments" H 4850 2000 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT08N" H 4850 2000 50  0001 C CNN "Manufacturer_Part_Number"
 	4    4850 2000
 	1    0    0    -1  
 $EndComp
@@ -184,8 +192,10 @@ U 1 1 5D703F80
 P 9300 2200
 F 0 "R17" V 9400 2200 50  0000 C CNN
 F 1 "100" V 9500 2200 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 9230 2200 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 9230 2200 50  0001 C CNN
 F 3 "" H 9300 2200 50  0001 C CNN
+F 4 "Vishay" H 9300 2200 50  0001 C CNN "Manufacturer_Name"
+F 5 "PR01000101000JA500" H 9300 2200 50  0001 C CNN "Manufacturer_Part_Number"
 	1    9300 2200
 	0    1    1    0   
 $EndComp
@@ -219,17 +229,21 @@ F 0 "Q100" H 9150 2000 50  0000 L BNN
 F 1 "2N3904" H 8950 1900 50  0000 L BNN
 F 2 "Package_TO_SOT_THT:TO-92L_Inline" H 9350 2000 50  0001 C CNN
 F 3 "https://www.onsemi.com/pub/Collateral/PZT3904-D.pdf" H 9350 2000 50  0001 C CNN
+F 4 "Rectron" H 9350 2000 50  0001 C CNN "Manufacturer_Name"
+F 5 "2N3904" H 9350 2000 50  0001 C CNN "Manufacturer_Part_Number"
 	1    9350 2000
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 COMPOSITE-OUT1
+L Connector_Generic:Conn_01x02 JCOMPOSITE-OUT1
 U 1 1 5D703F64
 P 10075 2050
-F 0 "COMPOSITE-OUT1" H 10175 1975 50  0000 L CNN
+F 0 "JCOMPOSITE-OUT1" H 10175 1975 50  0000 L CNN
 F 1 "COMPOSITE-OUT1" H 10025 1800 50  0001 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10075 2050 50  0001 C CNN
 F 3 "" H 10075 2050 50  0001 C CNN
+F 4 "Amphenol FCI" H 10075 2050 50  0001 C CNN "Manufacturer_Name"
+F 5 "G800W306018EU" H 10075 2050 50  0001 C CNN "Manufacturer_Part_Number"
 	1    10075 2050
 	1    0    0    1   
 $EndComp
@@ -524,9 +538,11 @@ L 74xx:74LS74 Z27
 U 2 1 5F80C856
 P 6900 2000
 F 0 "Z27" H 7110 2350 50  0000 C CNN
-F 1 "SN74AHCT74N" H 7125 2255 50  0000 C CNN
+F 1 "74AHCT74" H 7125 2255 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6900 2000 50  0001 C CNN
 F 3 "74xx~74hc_AHCT74.pdf" H 6900 2000 50  0001 C CNN
+F 4 "Texas Instruments" H 6900 2000 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT74N" H 6900 2000 50  0001 C CNN "Manufacturer_Part_Number"
 	2    6900 2000
 	1    0    0    -1  
 $EndComp
@@ -538,6 +554,8 @@ F 0 "D11" V 8720 2150 50  0000 L CNN
 F 1 "1N4148" V 8800 2285 50  0001 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 8800 2025 50  0001 C CNN
 F 3 "https:/assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8800 2200 50  0001 C CNN
+F 4 "Vishay Semiconductors" H 8800 2200 50  0001 C CNN "Manufacturer_Name"
+F 5 "1N4148TR" H 8800 2200 50  0001 C CNN "Manufacturer_Part_Number"
 	1    8800 2200
 	0    -1   -1   0   
 $EndComp
@@ -549,6 +567,8 @@ F 0 "Z19" H 6135 1270 50  0000 C CNN
 F 1 "74AHCT00" H 6135 1170 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6100 900 50  0001 C CNN
 F 3 "http:/www.ti.com/lit/gpn/sn74AHCT00" H 6100 900 50  0001 C CNN
+F 4 "Texas Instruments" H 6100 900 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT00NE4" H 6100 900 50  0001 C CNN "Manufacturer_Part_Number"
 	2    6100 900 
 	1    0    0    -1  
 $EndComp
@@ -560,6 +580,8 @@ F 0 "Z20" H 6115 1950 50  0000 C CNN
 F 1 "74AHCT08" H 6115 1850 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6100 1600 50  0001 C CNN
 F 3 "http:/www.ti.com/lit/gpn/sn74AHCT08" H 6100 1600 50  0001 C CNN
+F 4 "Texas Instruments" H 6100 1600 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT08N" H 6100 1600 50  0001 C CNN "Manufacturer_Part_Number"
 	3    6100 1600
 	1    0    0    -1  
 $EndComp
@@ -568,9 +590,11 @@ L 74xx:74LS11 Z22
 U 2 1 5F80C886
 P 5250 1500
 F 0 "Z22" H 5250 1880 50  0000 C CNN
-F 1 "74AHCT11" H 5250 1780 50  0000 C CNN
+F 1 "74HCT11" H 5250 1780 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 5250 1500 50  0001 C CNN
 F 3 "http:/www.ti.com/lit/gpn/sn74AHCT11" H 5250 1500 50  0001 C CNN
+F 4 "Texas Instruments" H 5250 1500 50  0001 C CNN "Manufacturer_Name"
+F 5 "CD74HCT11M" H 5250 1500 50  0001 C CNN "Manufacturer_Part_Number"
 	2    5250 1500
 	1    0    0    -1  
 $EndComp
@@ -591,9 +615,11 @@ L 74xx:74HCT04 Z306
 U 4 1 5F80CB5F
 P 2575 3800
 F 0 "Z306" H 2575 4150 50  0000 C CNN
-F 1 "SN74AHCT04N" H 2575 4050 50  0000 C CNN
+F 1 "74AHCT04" H 2575 4050 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2575 3800 50  0001 C CNN
 F 3 "https:/assets.nexperia.com/documents/data-sheet/74HC_AHCT04.pdf" H 2575 3800 50  0001 C CNN
+F 4 "Texas Instruments" H 2575 3800 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT04N" H 2575 3800 50  0001 C CNN "Manufacturer_Part_Number"
 	4    2575 3800
 	1    0    0    -1  
 $EndComp
@@ -608,9 +634,11 @@ L 74xx:74LS11 Z22
 U 1 1 5F80CB97
 P 2025 1600
 F 0 "Z22" H 2030 1980 50  0000 C CNN
-F 1 "74AHCT11" H 2030 1880 50  0000 C CNN
+F 1 "74HCT11" H 2030 1880 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2025 1600 50  0001 C CNN
 F 3 "http:/www.ti.com/lit/gpn/sn74AHCT11" H 2025 1600 50  0001 C CNN
+F 4 "Texas Instruments" H 2025 1600 50  0001 C CNN "Manufacturer_Name"
+F 5 "CD74HCT11M" H 2025 1600 50  0001 C CNN "Manufacturer_Part_Number"
 	1    2025 1600
 	1    0    0    -1  
 $EndComp
@@ -638,6 +666,8 @@ F 0 "Z25" H 2830 3160 50  0000 C CNN
 F 1 "74AHCT02" H 2830 3060 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2825 2800 50  0001 C CNN
 F 3 "http:/www.ti.com/lit/gpn/sn74AHCT02" H 2825 2800 50  0001 C CNN
+F 4 "Texas Instruments" H 2825 2800 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT02N" H 2825 2800 50  0001 C CNN "Manufacturer_Part_Number"
 	2    2825 2800
 	1    0    0    -1  
 $EndComp
@@ -649,6 +679,8 @@ F 0 "Z25" H 1365 1985 50  0000 C CNN
 F 1 "74AHCT02" H 1365 1885 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 1325 1600 50  0001 C CNN
 F 3 "http:/www.ti.com/lit/gpn/sn74AHCT02" H 1325 1600 50  0001 C CNN
+F 4 "Texas Instruments" H 1325 1600 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT02N" H 1325 1600 50  0001 C CNN "Manufacturer_Part_Number"
 	4    1325 1600
 	1    0    0    -1  
 $EndComp
@@ -657,9 +689,11 @@ L Diode:BAT54W D100
 U 1 1 5E84D6D1
 P 3150 3800
 F 0 "D100" H 3150 4120 50  0000 C CNN
-F 1 "BAT54W" H 3150 4020 50  0000 C CNN
+F 1 "BAT54W,115" H 3150 4020 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 3150 3625 50  0001 C CNN
 F 3 "https:/assets.nexperia.com/documents/data-sheet/BAT54W_SER.pdf" H 3150 3800 50  0001 C CNN
+F 4 "Nexperia" H 3150 3800 50  0001 C CNN "Manufacturer_Name"
+F 5 "BAT54W,115" H 3150 3800 50  0001 C CNN "Manufacturer_Part_Number"
 	1    3150 3800
 	1    0    0    -1  
 $EndComp
@@ -709,6 +743,8 @@ F 0 "X1" H 1100 4475 50  0000 C CNN
 F 1 "CRYSTALHC49U-V 6.5MHz" H 1110 4410 50  0001 C CNN
 F 2 "Crystal:Crystal_HC49-U_Vertical" H 1100 4250 50  0001 C CNN
 F 3 "" H 1100 4250 50  0001 C CNN
+F 4 "ECS" H 1100 4250 50  0001 C CNN "Manufacturer_Name"
+F 5 "ECS-65-20-4X" H 1100 4250 50  0001 C CNN "Manufacturer_Part_Number"
 	1    1100 4250
 	1    0    0    -1  
 $EndComp
@@ -733,8 +769,10 @@ U 1 1 5F80CE54
 P 850 4955
 F 0 "C2" H 950 5010 50  0000 L CNN
 F 1 "100p" H 950 4910 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 850 4955 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 850 4955 50  0001 C CNN
 F 3 "" H 850 4955 50  0001 C CNN
+F 4 "Vishay / BC Components " H 850 4955 50  0001 C CNN "Manufacturer_Name"
+F 5 "K101J15C0GH5UH5" H 850 4955 50  0001 C CNN "Manufacturer_Part_Number"
 	1    850  4955
 	1    0    0    -1  
 $EndComp
@@ -744,8 +782,10 @@ U 1 1 5F80CE4E
 P 1100 4550
 F 0 "R2" V 950 4535 50  0000 C CNN
 F 1 "47k" V 850 4535 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 1030 4550 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 1030 4550 50  0001 C CNN
 F 3 "" H 1100 4550 50  0001 C CNN
+F 4 "Vishay" H 1100 4550 50  0001 C CNN "Manufacturer_Name"
+F 5 "CCF0747K0GKE36" H 1100 4550 50  0001 C CNN "Manufacturer_Part_Number"
 	1    1100 4550
 	0    -1   -1   0   
 $EndComp
@@ -760,6 +800,8 @@ F 0 "R1" H 1750 4075 50  0000 L CNN
 F 1 "4k7" H 1750 3975 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 1580 4000 50  0001 C CNN
 F 3 "" H 1650 4000 50  0001 C CNN
+F 4 "Vishay" H 1650 4000 50  0001 C CNN "Manufacturer_Name"
+F 5 "MBA02040C4701FC100" H 1650 4000 50  0001 C CNN "Manufacturer_Part_Number"
 	1    1650 4000
 	1    0    0    -1  
 $EndComp
@@ -771,8 +813,10 @@ U 1 1 5F80CE3F
 P 1405 4250
 F 0 "C1" V 1155 4295 50  0000 C CNN
 F 1 "30p" V 1255 4295 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 1405 4250 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 1405 4250 50  0001 C CNN
 F 3 "" H 1405 4250 50  0001 C CNN
+F 4 "AVX" H 1405 4250 50  0001 C CNN "Manufacturer_Name"
+F 5 "SR151A300JAR" H 1405 4250 50  0001 C CNN "Manufacturer_Part_Number"
 	1    1405 4250
 	0    1    1    0   
 $EndComp
@@ -802,8 +846,10 @@ U 1 1 5F7D6EDD
 P 9800 2200
 F 0 "RV1" V 9675 2200 50  0000 C CNN
 F 1 "100" V 9575 2200 50  0000 C CNN
-F 2 "Potentiometer_THT:3362H1103LF" H 9800 2200 50  0001 C CNN
+F 2 "SamacSys_Parts:3306W1101" H 9800 2200 50  0001 C CNN
 F 3 "" H 9800 2200 50  0001 C CNN
+F 4 "Bourns" H 9800 2200 50  0001 C CNN "Manufacturer_Name"
+F 5 "3306W-1-101" H 9800 2200 50  0001 C CNN "Manufacturer_Part_Number"
 	1    9800 2200
 	0    -1   -1   0   
 $EndComp
@@ -818,6 +864,8 @@ F 0 "Q1" H 1355 4660 50  0000 L CNN
 F 1 "2N3904" H 1340 4895 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-92L_Inline" H 1750 4675 50  0001 L CIN
 F 3 "https://www.onsemi.com/pub/Collateral/PZT3904-D.pdf" H 1550 4750 50  0001 L CNN
+F 4 "Rectron" H 1550 4750 50  0001 C CNN "Manufacturer_Name"
+F 5 "2N3904" H 1550 4750 50  0001 C CNN "Manufacturer_Part_Number"
 	1    1550 4750
 	1    0    0    -1  
 $EndComp
@@ -826,9 +874,11 @@ L 74xx:74LS04 Z306
 U 6 1 5E5B189A
 P 2250 4550
 F 0 "Z306" H 2250 4900 50  0000 C CNN
-F 1 "SN74AHCT04N" H 2250 4800 50  0000 C CNN
+F 1 "74AHCT04" H 2250 4800 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2250 4550 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 2250 4550 50  0001 C CNN
+F 4 "Texas Instruments" H 2250 4550 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT04N" H 2250 4550 50  0001 C CNN "Manufacturer_Part_Number"
 	6    2250 4550
 	1    0    0    -1  
 $EndComp
@@ -961,9 +1011,11 @@ L 74xx:74LS166 Z28
 U 1 1 5F80C89E
 P 9850 3450
 F 0 "Z28" V 10575 3445 50  0000 C CNN
-F 1 "74LS166" V 10475 3445 50  0000 C CNN
+F 1 "74HCT166" V 10475 3445 50  0000 C CNN
 F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 9850 3450 50  0001 C CNN
 F 3 "http:/www.ti.com/lit/gpn/sn74ALS166" H 9850 3450 50  0001 C CNN
+F 4 "Texas Instruments" H 9850 3450 50  0001 C CNN "Manufacturer_Name"
+F 5 "CD74HCT166E" H 9850 3450 50  0001 C CNN "Manufacturer_Part_Number"
 	1    9850 3450
 	0    -1   -1   0   
 $EndComp
@@ -989,8 +1041,8 @@ F 2 "Package_LCC:PLCC-52_THT-Socket" H 7800 3950 50  0001 L CNN
 F 3 "https://www.idt.com/document/dst/71321421-datasheet" H 7800 3850 50  0001 L CNN
 F 4 "SRAM 2K x 8 Dual-Port RAM Memory & Logic/ Master" H 7800 4050 50  0001 L CNN "Description"
 F 5 "3.8" H 8150 3250 50  0001 L CNN "Height"
-F 6 "IDT (Integrated Device Technology)" H 7800 4150 50  0001 L CNN "Manufacturer_Name"
-F 7 "7132LA100PDG" H 8150 2850 50  0001 L CNN "Manufacturer_Part_Number"
+F 6 "Renesas / IDT" H 7800 4150 50  0001 L CNN "Manufacturer_Name"
+F 7 "71321SA55JG8" H 8150 2850 50  0001 L CNN "Manufacturer_Part_Number"
 	1    7000 3300
 	1    0    0    -1  
 $EndComp
@@ -1027,8 +1079,10 @@ U 1 1 60228911
 P 4150 6600
 F 0 "R416" V 4275 6600 50  0000 C CNN
 F 1 "75k" V 4375 6600 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 4080 6600 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 4080 6600 50  0001 C CNN
 F 3 "" H 4150 6600 50  0001 C CNN
+F 4 "Vishay" H 4150 6600 50  0001 C CNN "Manufacturer_Name"
+F 5 "CCF0775K0GKE36" H 4150 6600 50  0001 C CNN "Manufacturer_Part_Number"
 	1    4150 6600
 	0    1    1    0   
 $EndComp
@@ -1040,8 +1094,10 @@ U 1 1 60238461
 P 6750 6000
 F 0 "R417" V 6875 6000 50  0000 C CNN
 F 1 "75k" V 6975 6000 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 6680 6000 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 6680 6000 50  0001 C CNN
 F 3 "" H 6750 6000 50  0001 C CNN
+F 4 "Vishay" H 6750 6000 50  0001 C CNN "Manufacturer_Name"
+F 5 "CCF0775K0GKE36" H 6750 6000 50  0001 C CNN "Manufacturer_Part_Number"
 	1    6750 6000
 	0    1    1    0   
 $EndComp
@@ -1053,8 +1109,10 @@ U 1 1 6027BF30
 P 4150 6000
 F 0 "R418" V 4275 6000 50  0000 C CNN
 F 1 "1k0" V 4375 6000 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 4080 6000 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 4080 6000 50  0001 C CNN
 F 3 "" H 4150 6000 50  0001 C CNN
+F 4 "Vishay" H 4150 6000 50  0001 C CNN "Manufacturer_Name"
+F 5 "MBB02070C1001FC100" H 4150 6000 50  0001 C CNN "Manufacturer_Part_Number"
 	1    4150 6000
 	0    1    1    0   
 $EndComp
@@ -1072,8 +1130,8 @@ F 2 "Package_LCC:PLCC-52_THT-Socket" H 5200 4550 50  0001 L CNN
 F 3 "https://www.idt.com/document/dst/71321421-datasheet" H 5200 4450 50  0001 L CNN
 F 4 "SRAM 2K x 8 Dual-Port RAM Memory & Logic/ Master" H 5200 4650 50  0001 L CNN "Description"
 F 5 "3.8" H 5550 3850 50  0001 L CNN "Height"
-F 6 "IDT (Integrated Device Technology)" H 5200 4750 50  0001 L CNN "Manufacturer_Name"
-F 7 "7132LA100PDG" H 5550 3450 50  0001 L CNN "Manufacturer_Part_Number"
+F 6 "Renesas / IDT" H 5200 4750 50  0001 L CNN "Manufacturer_Name"
+F 7 "71321SA55JG8" H 5550 3450 50  0001 L CNN "Manufacturer_Part_Number"
 	1    4400 3900
 	1    0    0    -1  
 $EndComp
@@ -1092,8 +1150,10 @@ U 1 1 603106CE
 P 6750 5400
 F 0 "R419" V 6875 5400 50  0000 C CNN
 F 1 "1k0" V 6975 5400 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 6680 5400 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 6680 5400 50  0001 C CNN
 F 3 "" H 6750 5400 50  0001 C CNN
+F 4 "Vishay" H 6750 5400 50  0001 C CNN "Manufacturer_Name"
+F 5 "MBB02070C1001FC100" H 6750 5400 50  0001 C CNN "Manufacturer_Part_Number"
 	1    6750 5400
 	0    1    1    0   
 $EndComp
@@ -1120,8 +1180,10 @@ U 1 1 601EB98A
 P 10550 5100
 F 0 "R421" H 10650 5150 50  0000 L CNN
 F 1 "10k" H 10650 5100 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 10480 5100 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 10480 5100 50  0001 C CNN
 F 3 "" H 10550 5100 50  0001 C CNN
+F 4 "Vishay" H 10550 5100 50  0001 C CNN "Manufacturer_Name"
+F 5 "MBA02040C1002FRP00 " H 10550 5100 50  0001 C CNN "Manufacturer_Part_Number"
 	1    10550 5100
 	1    0    0    -1  
 $EndComp
@@ -1133,8 +1195,10 @@ U 1 1 60332E9F
 P 10350 5100
 F 0 "R420" H 10250 5150 50  0000 R CNN
 F 1 "1k0" H 10250 5100 50  0000 R CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 10280 5100 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 10280 5100 50  0001 C CNN
 F 3 "" H 10350 5100 50  0001 C CNN
+F 4 "Vishay" H 10350 5100 50  0001 C CNN "Manufacturer_Name"
+F 5 "MBB02070C1001FC100" H 10350 5100 50  0001 C CNN "Manufacturer_Part_Number"
 	1    10350 5100
 	1    0    0    -1  
 $EndComp
@@ -1159,8 +1223,10 @@ U 1 1 6023AD77
 P 9150 5100
 F 0 "R422" H 9250 5150 50  0000 L CNN
 F 1 "1k0" H 9250 5100 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 9080 5100 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 9080 5100 50  0001 C CNN
 F 3 "" H 9150 5100 50  0001 C CNN
+F 4 "Vishay" H 9150 5100 50  0001 C CNN "Manufacturer_Name"
+F 5 "MBB02070C1001FC100" H 9150 5100 50  0001 C CNN "Manufacturer_Part_Number"
 	1    9150 5100
 	1    0    0    -1  
 $EndComp
@@ -1191,8 +1257,10 @@ U 1 1 5F80C844
 P 8800 1525
 F 0 "R16" H 8650 1584 50  0000 L BNN
 F 1 "1K5" H 8650 1395 50  0000 L BNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" H 8800 1525 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 8800 1525 50  0001 C CNN
 F 3 "" H 8800 1525 50  0001 C CNN
+F 4 "Vishay" H 8800 1525 50  0001 C CNN "Manufacturer_Name"
+F 5 "CCF071K50GKE36" H 8800 1525 50  0001 C CNN "Manufacturer_Part_Number"
 	1    8800 1525
 	-1   0    0    1   
 $EndComp
@@ -1209,8 +1277,10 @@ U 1 1 5F80C83E
 P 8600 1900
 F 0 "R11" H 8450 1959 50  0000 L BNN
 F 1 "1K5" H 8450 1770 50  0000 L BNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" H 8600 1900 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" H 8600 1900 50  0001 C CNN
 F 3 "" H 8600 1900 50  0001 C CNN
+F 4 "Vishay" H 8600 1900 50  0001 C CNN "Manufacturer_Name"
+F 5 "CCF071K50GKE36" H 8600 1900 50  0001 C CNN "Manufacturer_Part_Number"
 	1    8600 1900
 	0    1    1    0   
 $EndComp
@@ -1258,7 +1328,7 @@ U 1 1 6025E432
 P 7700 1850
 F 0 "Z23" H 7900 2050 50  0000 C CNN
 F 1 "74AHCT1G86GW,125" H 7900 1950 50  0000 C CNN
-F 2 "SOT65P212X110-5N" H 8550 1950 50  0001 L CNN
+F 2 "Strange:TSSOP5" H 8550 1950 50  0001 L CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT1G86.pdf" H 8550 1850 50  0001 L CNN
 F 4 "NXP 74AHCT1G86GW,125, 2-Input XOR Logic Gate, 2  5.5 V, 5-Pin TSSOP" H 8550 1750 50  0001 L CNN "Description"
 F 5 "1.1" H 8550 1650 50  0001 L CNN "Height"
@@ -1296,8 +1366,10 @@ U 1 1 60371D7A
 P 5850 6950
 F 0 "R404" H 5950 7000 50  0000 L CNN
 F 1 "270" H 5950 6950 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 5780 6950 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 5780 6950 50  0001 C CNN
 F 3 "" H 5850 6950 50  0001 C CNN
+F 4 "Vishay" H 5850 6950 50  0001 C CNN "Manufacturer_Name"
+F 5 "CCF07270RGKE36" H 5850 6950 50  0001 C CNN "Manufacturer_Part_Number"
 	1    5850 6950
 	1    0    0    -1  
 $EndComp
@@ -1325,8 +1397,10 @@ U 1 1 603A5DA4
 P 8550 6400
 F 0 "R406" V 8675 6400 50  0000 C CNN
 F 1 "270" V 8775 6400 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 8480 6400 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 8480 6400 50  0001 C CNN
 F 3 "" H 8550 6400 50  0001 C CNN
+F 4 "Vishay" H 8550 6400 50  0001 C CNN "Manufacturer_Name"
+F 5 "CCF07270RGKE36" H 8550 6400 50  0001 C CNN "Manufacturer_Part_Number"
 	1    8550 6400
 	0    -1   -1   0   
 $EndComp
@@ -1354,8 +1428,10 @@ U 1 1 603FBD12
 P 5950 6600
 F 0 "R405" V 5700 6600 50  0000 C CNN
 F 1 "270" V 5800 6600 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 5880 6600 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 5880 6600 50  0001 C CNN
 F 3 "" H 5950 6600 50  0001 C CNN
+F 4 "Vishay" H 5950 6600 50  0001 C CNN "Manufacturer_Name"
+F 5 "CCF07270RGKE36" H 5950 6600 50  0001 C CNN "Manufacturer_Part_Number"
 	1    5950 6600
 	0    -1   1    0   
 $EndComp
@@ -1380,8 +1456,10 @@ U 1 1 60411027
 P 8550 6000
 F 0 "R407" V 8300 6000 50  0000 C CNN
 F 1 "270" V 8400 6000 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 8480 6000 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 8480 6000 50  0001 C CNN
 F 3 "" H 8550 6000 50  0001 C CNN
+F 4 "Vishay" H 8550 6000 50  0001 C CNN "Manufacturer_Name"
+F 5 "CCF07270RGKE36" H 8550 6000 50  0001 C CNN "Manufacturer_Part_Number"
 	1    8550 6000
 	0    -1   1    0   
 $EndComp

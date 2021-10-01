@@ -23,6 +23,8 @@ F 0 "Z408" H 6550 5000 50  0000 C CNN
 F 1 "STM8S003F3P" H 6550 4900 50  0000 C CNN
 F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 6600 4900 50  0001 L CNN
 F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00024550.pdf" H 6500 3400 50  0001 C CNN
+F 4 "STMicroelectronics" H 6550 3800 50  0001 C CNN "Manufacturer_Name"
+F 5 "STM8S003F3P6TR" H 6550 3800 50  0001 C CNN "Manufacturer_Part_Number"
 	1    6550 3800
 	1    0    0    -1  
 $EndComp
@@ -163,8 +165,8 @@ F 0 "J402" H 6550 5150 50  0000 C CNN
 F 1 "Conn_02x06_Odd_Even" H 6550 5050 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical_SMD" H 6500 5600 50  0001 C CNN
 F 3 "" H 6500 5600 50  0001 C CNN
-F 4 "SAMTEC" H 6500 5600 50  0001 C CNN "Manufacturer_Name"
-F 5 "HTSW-106-08-S-D " H 6500 5600 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "Molex" H 6500 5600 50  0001 C CNN "Manufacturer_Name"
+F 5 "15-91-0120 " H 6500 5600 50  0001 C CNN "Manufacturer_Part_Number"
 	1    6500 5600
 	1    0    0    -1  
 $EndComp
@@ -225,9 +227,11 @@ L Device:C C404
 U 1 1 60322333
 P 5200 4750
 F 0 "C404" H 5050 4800 50  0000 R CNN
-F 1 "1u" H 5050 4750 50  0000 R CNN
+F 1 "1uF" H 5050 4750 50  0000 R CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric" H 5200 4750 50  0001 C CNN
 F 3 "~" H 5200 4750 50  0001 C CNN
+F 4 "Vishay / Vitramon" H 5200 4750 50  0001 C CNN "Manufacturer_Name"
+F 5 "VJ1206Y105KXATW1BC" H 5200 4750 50  0001 C CNN "Manufacturer_Part_Number"
 	1    5200 4750
 	1    0    0    -1  
 $EndComp

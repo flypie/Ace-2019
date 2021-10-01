@@ -26,28 +26,25 @@ Text Label 2300 900  0    50   ~ 0
 CNT:CNT0,CNT1,CNT2,SCREENX0,SCREENX1,SCREENX2,SCREENX3,SCREENX4,EOL,FONTCHAR0,FONTCHAT1,FONTCHAT2,SCREENY0,SCREENY1,SCREENY2,SCREENY3,SCREENY4,ENDOFSCR
 Text Label 2300 800  0    50   ~ 0
 ADDRESS:A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15
-NoConn ~ -500 2700
 $Comp
 L 74xx:74LS86 Z23
 U 3 1 6A75883C
-P -900 1950
-F 0 "Z23" H -900 2300 50  0000 C CNN
-F 1 "SN74AHCT86N" H -900 2200 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H -900 1950 50  0001 C CNN
-F 3 "74xx/74ls86.pdf" H -900 1950 50  0001 C CNN
-F 4 "SN74AHCT86N" H -900 1950 50  0001 C CNN "Manufacturer_Part_Number"
-F 5 "Texas Instruments" H -900 1950 50  0001 C CNN "Manufacturer_Name"
-	3    -900 1950
+P -300 3200
+F 0 "Z23" H -300 3550 50  0000 C CNN
+F 1 "SN74AHCT86N" H -300 3450 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H -300 3200 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H -300 3200 50  0001 C CNN
+F 4 "SN74AHCT86N" H -300 3200 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "Texas Instruments" H -300 3200 50  0001 C CNN "Manufacturer_Name"
+	3    -300 3200
 	1    0    0    -1  
 $EndComp
-NoConn ~ -1200 1850
-NoConn ~ -1200 2050
-NoConn ~ -600 1950
-NoConn ~ -1100 2800
-NoConn ~ -1100 2600
-NoConn ~ -350 2600
-NoConn ~ -350 2800
-NoConn ~ 250  2700
+NoConn ~ -600 3100
+NoConn ~ -600 3300
+NoConn ~ 0    3200
+NoConn ~ -600 4900
+NoConn ~ -600 5100
+NoConn ~ 0    5000
 $Comp
 L Connector_Generic:Conn_02x22_Odd_Even Z80CPUOUT1
 U 1 1 612D2D50
@@ -263,27 +260,27 @@ $EndComp
 $Comp
 L 74xx:74LS32 Z26
 U 2 1 61629CD9
-P -800 2700
-F 0 "Z26" H -790 3050 50  0000 C CNN
-F 1 "SN74AHCT32N" H -790 2950 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H -800 2700 50  0001 C CNN
-F 3 "" H -800 2700 50  0001 C CNN
-F 4 "SN74AHCT32N" H -800 2700 50  0001 C CNN "Manufacturer_Part_Number"
-F 5 "Texas Instruments" H -800 2700 50  0001 C CNN "Manufacturer_Name"
-	2    -800 2700
+P -1000 6400
+F 0 "Z26" H -990 6750 50  0000 C CNN
+F 1 "SN74AHCT32N" H -990 6650 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H -1000 6400 50  0001 C CNN
+F 3 "" H -1000 6400 50  0001 C CNN
+F 4 "SN74AHCT32N" H -1000 6400 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "Texas Instruments" H -1000 6400 50  0001 C CNN "Manufacturer_Name"
+	2    -1000 6400
 	1    0    0    -1  
 $EndComp
 $Comp
 L 74xx:74LS32 Z26
 U 3 1 62A0CD7B
-P -50 2700
-F 0 "Z26" H -50 3050 50  0000 C CNN
-F 1 "SN74AHCT32N" H -50 2950 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm" H -50 2700 50  0001 C CNN
-F 3 "" H -50 2700 50  0001 C CNN
-F 4 "SN74AHCT32N" H -50 2700 50  0001 C CNN "Manufacturer_Part_Number"
-F 5 "Texas Instruments" H -50 2700 50  0001 C CNN "Manufacturer_Name"
-	3    -50  2700
+P -300 5000
+F 0 "Z26" H -300 5350 50  0000 C CNN
+F 1 "SN74AHCT32N" H -300 5250 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H -300 5000 50  0001 C CNN
+F 3 "" H -300 5000 50  0001 C CNN
+F 4 "SN74AHCT32N" H -300 5000 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "Texas Instruments" H -300 5000 50  0001 C CNN "Manufacturer_Name"
+	3    -300 5000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -302,14 +299,14 @@ $EndComp
 $Comp
 L zilogback:ZilogBack Logo2
 U 1 1 5D8F145F
-P -500 1300
-F 0 "Logo2" H -150 1525 50  0000 C CNN
-F 1 "ZilogBack" H -150 1425 50  0000 C CNN
-F 2 "Symbol:ZilogInsideBack" H -450 1500 50  0001 C CNN
-F 3 "" H -500 1300 50  0001 C CNN
-F 4 "logo" H -500 1300 50  0001 C CNN "Manufacturer_Name"
-F 5 "logo" H -500 1300 50  0001 C CNN "Manufacturer_Part_Number"
-	1    -500 1300
+P -500 1350
+F 0 "Logo2" H -150 1575 50  0000 C CNN
+F 1 "ZilogBack" H -150 1475 50  0000 C CNN
+F 2 "Symbol:ZilogInsideBack" H -450 1550 50  0001 C CNN
+F 3 "" H -500 1350 50  0001 C CNN
+F 4 "logo" H -500 1350 50  0001 C CNN "Manufacturer_Name"
+F 5 "logo" H -500 1350 50  0001 C CNN "Manufacturer_Part_Number"
+	1    -500 1350
 	1    0    0    -1  
 $EndComp
 Text GLabel 4250 6550 2    50   Input ~ 0
@@ -1487,315 +1484,309 @@ Text GLabel 7525 2575 1    50   Input ~ 0
 Text GLabel 7425 2575 1    50   Input ~ 0
 ~0000-1FFF
 Wire Wire Line
-	11125 1050 13375 1050
+	11250 750  13250 750 
 Wire Wire Line
-	11125 800  13125 800 
-Wire Wire Line
-	11725 1750 11625 1750
-Text Label 11625 1750 2    50   ~ 0
+	11850 1700 11750 1700
+Text Label 11750 1700 2    50   ~ 0
 A2
-Text Label 12925 1750 0    50   ~ 0
+Text Label 13050 1700 0    50   ~ 0
 DA2
 Wire Wire Line
-	12825 1750 12925 1750
+	12950 1700 13050 1700
 Wire Wire Line
-	12825 1650 12925 1650
-Text Label 12925 1650 0    50   ~ 0
+	12950 1600 13050 1600
+Text Label 13050 1600 0    50   ~ 0
 DA1
 Wire Wire Line
-	12825 1550 12925 1550
-Text Label 12925 1550 0    50   ~ 0
+	12950 1500 13050 1500
+Text Label 13050 1500 0    50   ~ 0
 DA0
-Text Label 11625 1650 2    50   ~ 0
+Text Label 11750 1600 2    50   ~ 0
 A1
 Wire Wire Line
-	11725 1650 11625 1650
-Text Label 11625 1550 2    50   ~ 0
+	11850 1600 11750 1600
+Text Label 11750 1500 2    50   ~ 0
 A0
 Wire Wire Line
-	11725 1550 11625 1550
+	11850 1500 11750 1500
 $Comp
 L power:VCC #~PWR0128
 U 1 1 6830EF88
-P 11825 1250
-F 0 "#~PWR0128" H 11825 1100 50  0001 C CNN
-F 1 "VCC" V 11860 1390 50  0000 L CNN
-F 2 "" H 11825 1250 50  0001 C CNN
-F 3 "" H 11825 1250 50  0001 C CNN
-	1    11825 1250
+P 11950 1200
+F 0 "#~PWR0128" H 11950 1050 50  0001 C CNN
+F 1 "VCC" V 11985 1340 50  0000 L CNN
+F 2 "" H 11950 1200 50  0001 C CNN
+F 3 "" H 11950 1200 50  0001 C CNN
+	1    11950 1200
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	12275 1250 11825 1250
+	12400 1200 11950 1200
 Wire Wire Line
-	12275 1250 12275 1300
+	12400 1200 12400 1250
 $Comp
 L SamacSys_Parts:IS62C256AL Z309
 U 1 1 60A7EF9A
-P 12025 4050
-F 0 "Z309" H 12325 4475 50  0000 C CNN
-F 1 "IS62C256AL-45ULI" H 12325 4375 50  0000 C CNN
-F 2 "ExtraFootprints:SOP-28_8.3x18.15mm_P1.27mm" H 12025 4150 50  0001 C CNN
-F 3 "http://www.issi.com/WW/pdf/62-65C256AL.pdf" H 12025 4150 50  0001 C CNN
-F 4 "Integrated Silicon Solution Inc." H 12025 4050 50  0001 C CNN "Manufacturer_Name"
-F 5 "IS62C256AL-45ULI" H 12025 4050 50  0001 C CNN "Manufacturer_Part_Number"
-F 6 "IS62C256AL-45ULI" H 12025 4050 50  0001 C CNN "Arrow Part Number"
-F 7 "https://www.arrow.com/en/products/is62c256al-45uli/integrated-silicon-solution-inc" H 12025 4050 50  0001 C CNN "Arrow Price/Stock"
-F 8 "ISSI, IS62C256AL-45ULI SRAM, 256kbit, 45ns, 5 28-Pin SOP" H 12025 4050 50  0001 C CNN "Description"
-F 9 "3.05" H 12025 4050 50  0001 C CNN "Height"
-F 10 "870-IS62C256AL-45ULI" H 12025 4050 50  0001 C CNN "Mouser Part Number"
-F 11 "https://www.mouser.co.uk/ProductDetail/ISSI/IS62C256AL-45ULI?qs=tFgq3%2FJV4HjucbViu0jghQ%3D%3D" H 12025 4050 50  0001 C CNN "Mouser Price/Stock"
-	1    12025 4050
+P 12150 4000
+F 0 "Z309" H 12450 4425 50  0000 C CNN
+F 1 "IS62C256AL-45ULI" H 12450 4325 50  0000 C CNN
+F 2 "ExtraFootprints:SOP-28_8.3x18.15mm_P1.27mm" H 12150 4100 50  0001 C CNN
+F 3 "http://www.issi.com/WW/pdf/62-65C256AL.pdf" H 12150 4100 50  0001 C CNN
+F 4 "Integrated Silicon Solution Inc." H 12150 4000 50  0001 C CNN "Manufacturer_Name"
+F 5 "IS62C256AL-45ULI" H 12150 4000 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "IS62C256AL-45ULI" H 12150 4000 50  0001 C CNN "Arrow Part Number"
+F 7 "https://www.arrow.com/en/products/is62c256al-45uli/integrated-silicon-solution-inc" H 12150 4000 50  0001 C CNN "Arrow Price/Stock"
+F 8 "ISSI, IS62C256AL-45ULI SRAM, 256kbit, 45ns, 5 28-Pin SOP" H 12150 4000 50  0001 C CNN "Description"
+F 9 "3.05" H 12150 4000 50  0001 C CNN "Height"
+F 10 "870-IS62C256AL-45ULI" H 12150 4000 50  0001 C CNN "Mouser Part Number"
+F 11 "https://www.mouser.co.uk/ProductDetail/ISSI/IS62C256AL-45ULI?qs=tFgq3%2FJV4HjucbViu0jghQ%3D%3D" H 12150 4000 50  0001 C CNN "Mouser Price/Stock"
+	1    12150 4000
 	1    0    0    -1  
 $EndComp
 $Comp
 L SamacSys_Parts:IS62C256AL Z3-4
 U 1 1 5D17A78F
-P 12025 1500
-F 0 "Z3-4" H 12275 1900 50  0000 C CNN
-F 1 "IS62C256AL-45ULI" H 12275 1800 50  0000 C CNN
-F 2 "ExtraFootprints:SOP-28_8.3x18.15mm_P1.27mm" H 12025 1600 50  0001 C CNN
-F 3 "https://www.mouser.co.uk/datasheet/2/198/62-65C256AL-258444.pdf" H 12025 1600 50  0001 C CNN
-F 4 "Integrated Silicon Solution Inc." H 12025 1500 50  0001 C CNN "Manufacturer_Name"
-F 5 "IS62C256AL-45ULI" H 12025 1500 50  0001 C CNN "Manufacturer_Part_Number"
-F 6 "IS62C256AL-45ULI" H 12025 1500 50  0001 C CNN "Arrow Part Number"
-F 7 "https://www.arrow.com/en/products/is62c256al-45uli/integrated-silicon-solution-inc" H 12025 1500 50  0001 C CNN "Arrow Price/Stock"
-F 8 "ISSI, IS62C256AL-45ULI SRAM, 256kbit, 45ns, 5 28-Pin SOP" H 12025 1500 50  0001 C CNN "Description"
-F 9 "3.05" H 12025 1500 50  0001 C CNN "Height"
-F 10 "870-IS62C256AL-45ULI" H 12025 1500 50  0001 C CNN "Mouser Part Number"
-F 11 "https://www.mouser.co.uk/ProductDetail/ISSI/IS62C256AL-45ULI?qs=tFgq3%2FJV4HjucbViu0jghQ%3D%3D" H 12025 1500 50  0001 C CNN "Mouser Price/Stock"
-	1    12025 1500
+P 12150 1450
+F 0 "Z3-4" H 12400 1850 50  0000 C CNN
+F 1 "IS62C256AL-45ULI" H 12400 1750 50  0000 C CNN
+F 2 "ExtraFootprints:SOP-28_8.3x18.15mm_P1.27mm" H 12150 1550 50  0001 C CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/198/62-65C256AL-258444.pdf" H 12150 1550 50  0001 C CNN
+F 4 "Integrated Silicon Solution Inc." H 12150 1450 50  0001 C CNN "Manufacturer_Name"
+F 5 "IS62C256AL-45ULI" H 12150 1450 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "IS62C256AL-45ULI" H 12150 1450 50  0001 C CNN "Arrow Part Number"
+F 7 "https://www.arrow.com/en/products/is62c256al-45uli/integrated-silicon-solution-inc" H 12150 1450 50  0001 C CNN "Arrow Price/Stock"
+F 8 "ISSI, IS62C256AL-45ULI SRAM, 256kbit, 45ns, 5 28-Pin SOP" H 12150 1450 50  0001 C CNN "Description"
+F 9 "3.05" H 12150 1450 50  0001 C CNN "Height"
+F 10 "870-IS62C256AL-45ULI" H 12150 1450 50  0001 C CNN "Mouser Part Number"
+F 11 "https://www.mouser.co.uk/ProductDetail/ISSI/IS62C256AL-45ULI?qs=tFgq3%2FJV4HjucbViu0jghQ%3D%3D" H 12150 1450 50  0001 C CNN "Mouser Price/Stock"
+	1    12150 1450
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	13375 1050 13375 5025
-Text Label 12925 4100 0    50   ~ 0
+Text Label 13050 4050 0    50   ~ 0
 DA0
-Text Label 12925 4200 0    50   ~ 0
+Text Label 13050 4150 0    50   ~ 0
 DA1
 Wire Wire Line
-	12275 3800 12275 3850
+	12400 3750 12400 3800
 Wire Wire Line
-	12825 2150 12925 2150
+	12950 2100 13050 2100
 Wire Wire Line
-	11725 5500 11625 5500
-Text Label 11625 5500 2    50   ~ 0
+	11850 5450 11750 5450
+Text Label 11750 5450 2    50   ~ 0
 A14
 Wire Wire Line
-	11725 2950 11625 2950
-Text Label 11625 2950 2    50   ~ 0
+	11850 2900 11750 2900
+Text Label 11750 2900 2    50   ~ 0
 A14
 Wire Wire Line
-	12825 5050 13375 5025
+	12400 5700 12400 5750
 Wire Wire Line
-	12275 5750 12275 5800
-Wire Wire Line
-	12275 3800 12175 3800
+	12400 3750 12300 3750
 $Comp
 L power:VCC #~PWR0146
 U 1 1 60A7EFA0
-P 12175 3800
-F 0 "#~PWR0146" H 12175 3650 50  0001 C CNN
-F 1 "VCC" V 12210 3940 50  0000 L CNN
-F 2 "" H 12175 3800 50  0001 C CNN
-F 3 "" H 12175 3800 50  0001 C CNN
-	1    12175 3800
+P 12300 3750
+F 0 "#~PWR0146" H 12300 3600 50  0001 C CNN
+F 1 "VCC" V 12335 3890 50  0000 L CNN
+F 2 "" H 12300 3750 50  0001 C CNN
+F 3 "" H 12300 3750 50  0001 C CNN
+	1    12300 3750
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	12825 5250 12925 5250
-Text Label 12925 5250 0    50   ~ 0
+	12950 5200 13050 5200
+Text Label 13050 5200 0    50   ~ 0
 ~WR
 Wire Wire Line
-	12825 5150 12925 5150
-Text Label 12925 5150 0    50   ~ 0
+	12950 5100 13050 5100
+Text Label 13050 5100 0    50   ~ 0
 ~RD
 Wire Wire Line
-	11725 4100 11625 4100
-Text Label 11625 4100 2    50   ~ 0
+	11850 4050 11750 4050
+Text Label 11750 4050 2    50   ~ 0
 A0
 Wire Wire Line
-	11725 4200 11625 4200
-Text Label 11625 4200 2    50   ~ 0
+	11850 4150 11750 4150
+Text Label 11750 4150 2    50   ~ 0
 A1
 Wire Wire Line
-	11725 4300 11625 4300
-Text Label 11625 4300 2    50   ~ 0
+	11850 4250 11750 4250
+Text Label 11750 4250 2    50   ~ 0
 A2
 Wire Wire Line
-	11725 4400 11625 4400
-Text Label 11625 4400 2    50   ~ 0
+	11850 4350 11750 4350
+Text Label 11750 4350 2    50   ~ 0
 A3
 Wire Wire Line
-	11725 4700 11625 4700
-Text Label 11625 4700 2    50   ~ 0
+	11850 4650 11750 4650
+Text Label 11750 4650 2    50   ~ 0
 A6
 Wire Wire Line
-	11725 4800 11625 4800
-Text Label 11625 4800 2    50   ~ 0
+	11850 4750 11750 4750
+Text Label 11750 4750 2    50   ~ 0
 A7
 Wire Wire Line
-	11725 4900 11625 4900
-Text Label 11625 4900 2    50   ~ 0
+	11850 4850 11750 4850
+Text Label 11750 4850 2    50   ~ 0
 A8
 Wire Wire Line
-	11725 5100 11625 5100
-Text Label 11625 5100 2    50   ~ 0
+	11850 5050 11750 5050
+Text Label 11750 5050 2    50   ~ 0
 A10
 Wire Wire Line
-	11725 5200 11625 5200
-Text Label 11625 5200 2    50   ~ 0
+	11850 5150 11750 5150
+Text Label 11750 5150 2    50   ~ 0
 A11
 Wire Wire Line
-	11725 5300 11625 5300
-Text Label 11625 5300 2    50   ~ 0
+	11850 5250 11750 5250
+Text Label 11750 5250 2    50   ~ 0
 A12
 Wire Wire Line
-	11725 5400 11625 5400
-Text Label 11625 5400 2    50   ~ 0
+	11850 5350 11750 5350
+Text Label 11750 5350 2    50   ~ 0
 A13
 Wire Wire Line
-	11725 4500 11625 4500
-Text Label 11625 4500 2    50   ~ 0
+	11850 4450 11750 4450
+Text Label 11750 4450 2    50   ~ 0
 A4
 Wire Wire Line
-	11725 4600 11625 4600
-Text Label 11625 4600 2    50   ~ 0
+	11850 4550 11750 4550
+Text Label 11750 4550 2    50   ~ 0
 A5
 Wire Wire Line
-	11725 5000 11625 5000
-Text Label 11625 5000 2    50   ~ 0
+	11850 4950 11750 4950
+Text Label 11750 4950 2    50   ~ 0
 A9
-Text Label 12925 4400 0    50   ~ 0
+Text Label 13050 4350 0    50   ~ 0
 DA3
 Wire Wire Line
-	12825 4400 12925 4400
-Text Label 12925 4600 0    50   ~ 0
+	12950 4350 13050 4350
+Text Label 13050 4550 0    50   ~ 0
 DA5
 Wire Wire Line
-	12825 4600 12925 4600
+	12950 4550 13050 4550
 Wire Wire Line
-	12825 4100 12925 4100
-Text Label 12925 4300 0    50   ~ 0
+	12950 4050 13050 4050
+Text Label 13050 4250 0    50   ~ 0
 DA2
 Wire Wire Line
-	12825 4300 12925 4300
-Text Label 12925 4800 0    50   ~ 0
+	12950 4250 13050 4250
+Text Label 13050 4750 0    50   ~ 0
 DA7
 Wire Wire Line
-	12825 4800 12925 4800
+	12950 4750 13050 4750
 Wire Wire Line
-	12825 4200 12925 4200
-Text Label 12925 4500 0    50   ~ 0
+	12950 4150 13050 4150
+Text Label 13050 4450 0    50   ~ 0
 DA4
 Wire Wire Line
-	12825 4500 12925 4500
-Text Label 12925 4700 0    50   ~ 0
+	12950 4450 13050 4450
+Text Label 13050 4650 0    50   ~ 0
 DA6
 Wire Wire Line
-	12825 4700 12925 4700
+	12950 4650 13050 4650
 $Comp
 L power:GND #~PWR0105
 U 1 1 60A7EF64
-P 12275 5800
-F 0 "#~PWR0105" H 12275 5550 50  0001 C CNN
-F 1 "GND" H 12305 5595 50  0000 C CNN
-F 2 "" H 12275 5800 50  0001 C CNN
-F 3 "" H 12275 5800 50  0001 C CNN
-	1    12275 5800
+P 12400 5750
+F 0 "#~PWR0105" H 12400 5500 50  0001 C CNN
+F 1 "GND" H 12430 5545 50  0000 C CNN
+F 2 "" H 12400 5750 50  0001 C CNN
+F 3 "" H 12400 5750 50  0001 C CNN
+	1    12400 5750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	12825 2500 13125 2500
+	12950 2450 13250 2450
 Wire Wire Line
-	12275 3200 12275 3300
+	12400 3150 12400 3250
 Wire Wire Line
-	12825 2700 12925 2700
-Text Label 12925 2700 0    50   ~ 0
+	12950 2650 13050 2650
+Text Label 13050 2650 0    50   ~ 0
 ~WR
 Wire Wire Line
-	12825 2600 12925 2600
-Text Label 12925 2600 0    50   ~ 0
+	12950 2550 13050 2550
+Text Label 13050 2550 0    50   ~ 0
 ~RD
 Wire Wire Line
-	11725 1850 11625 1850
-Text Label 11625 1850 2    50   ~ 0
+	11850 1800 11750 1800
+Text Label 11750 1800 2    50   ~ 0
 A3
 Wire Wire Line
-	11725 2150 11625 2150
-Text Label 11625 2150 2    50   ~ 0
+	11850 2100 11750 2100
+Text Label 11750 2100 2    50   ~ 0
 A6
 Wire Wire Line
-	11725 2250 11625 2250
-Text Label 11625 2250 2    50   ~ 0
+	11850 2200 11750 2200
+Text Label 11750 2200 2    50   ~ 0
 A7
 Wire Wire Line
-	11725 2350 11625 2350
-Text Label 11625 2350 2    50   ~ 0
+	11850 2300 11750 2300
+Text Label 11750 2300 2    50   ~ 0
 A8
 Wire Wire Line
-	11725 2550 11625 2550
-Text Label 11625 2550 2    50   ~ 0
+	11850 2500 11750 2500
+Text Label 11750 2500 2    50   ~ 0
 A10
 Wire Wire Line
-	11725 2650 11625 2650
-Text Label 11625 2650 2    50   ~ 0
+	11850 2600 11750 2600
+Text Label 11750 2600 2    50   ~ 0
 A11
 Wire Wire Line
-	11725 2750 11625 2750
-Text Label 11625 2750 2    50   ~ 0
+	11850 2700 11750 2700
+Text Label 11750 2700 2    50   ~ 0
 A12
 Wire Wire Line
-	11725 2850 11625 2850
-Text Label 11625 2850 2    50   ~ 0
+	11850 2800 11750 2800
+Text Label 11750 2800 2    50   ~ 0
 A13
 Wire Wire Line
-	11725 1950 11625 1950
-Text Label 11625 1950 2    50   ~ 0
+	11850 1900 11750 1900
+Text Label 11750 1900 2    50   ~ 0
 A4
 Wire Wire Line
-	11725 2050 11625 2050
-Text Label 11625 2050 2    50   ~ 0
+	11850 2000 11750 2000
+Text Label 11750 2000 2    50   ~ 0
 A5
 Wire Wire Line
-	11725 2450 11625 2450
-Text Label 11625 2450 2    50   ~ 0
+	11850 2400 11750 2400
+Text Label 11750 2400 2    50   ~ 0
 A9
-Text Label 12925 1850 0    50   ~ 0
+Text Label 13050 1800 0    50   ~ 0
 DA3
 Wire Wire Line
-	12825 1850 12925 1850
-Text Label 12925 2050 0    50   ~ 0
+	12950 1800 13050 1800
+Text Label 13050 2000 0    50   ~ 0
 DA5
 Wire Wire Line
-	12825 2050 12925 2050
-Text Label 12925 2250 0    50   ~ 0
+	12950 2000 13050 2000
+Text Label 13050 2200 0    50   ~ 0
 DA7
 Wire Wire Line
-	12825 2250 12925 2250
-Text Label 12925 1950 0    50   ~ 0
+	12950 2200 13050 2200
+Text Label 13050 1900 0    50   ~ 0
 DA4
 Wire Wire Line
-	12825 1950 12925 1950
-Text Label 12925 2150 0    50   ~ 0
+	12950 1900 13050 1900
+Text Label 13050 2100 0    50   ~ 0
 DA6
 $Comp
 L power:GND #~PWR0118
 U 1 1 6A070911
-P 12275 3300
-F 0 "#~PWR0118" H 12275 3050 50  0001 C CNN
-F 1 "GND" H 12325 3075 50  0000 C CNN
-F 2 "" H 12275 3300 50  0001 C CNN
-F 3 "" H 12275 3300 50  0001 C CNN
-	1    12275 3300
+P 12400 3250
+F 0 "#~PWR0118" H 12400 3000 50  0001 C CNN
+F 1 "GND" H 12450 3025 50  0000 C CNN
+F 2 "" H 12400 3250 50  0001 C CNN
+F 3 "" H 12400 3250 50  0001 C CNN
+	1    12400 3250
 	1    0    0    -1  
 $EndComp
-Text GLabel 11125 800  0    50   Input ~ 0
+Text GLabel 11250 750  0    50   Input ~ 0
 ~BOTTOM32K
-Text GLabel 11125 1050 0    50   Input ~ 0
+Text GLabel 11250 1000 0    50   Input ~ 0
 ~TOP32K
 Wire Wire Line
-	13125 800  13125 2500
+	13250 750  13250 2450
 $Sheet
 S 10500 9500 1500 1500
 U 61905B33
@@ -1861,4 +1852,133 @@ Wire Wire Line
 NoConn ~ 8300 3350
 NoConn ~ 8300 3250
 NoConn ~ 5250 10250
+Wire Wire Line
+	11250 1000 13500 1000
+Wire Wire Line
+	12950 5000 13500 5000
+Wire Wire Line
+	13500 1000 13500 5000
+$Comp
+L 74xx:74LS00 Z?
+U 4 1 613188C2
+P -1000 5800
+AR Path="/606B9078/613188C2" Ref="Z?"  Part="4" 
+AR Path="/613188C2" Ref="Z19"  Part="4" 
+F 0 "Z19" H -975 6150 50  0000 C CNN
+F 1 "SN74AHCT00N" H -975 6050 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H -1000 5800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H -1000 5800 50  0001 C CNN
+F 4 "SN74AHCT00N" H -1000 5800 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "Texas Instruments" H -1000 5800 50  0001 C CNN "Manufacturer_Name"
+	4    -1000 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 Z?
+U 1 1 613188CA
+P -300 2000
+AR Path="/606B9078/613188CA" Ref="Z?"  Part="1" 
+AR Path="/613188CA" Ref="Z23"  Part="1" 
+F 0 "Z23" H -300 2350 50  0000 C CNN
+F 1 "SN74AHCT86N" H -300 2250 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H -300 2000 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H -300 2000 50  0001 C CNN
+F 4 "SN74AHCT86N" H -300 2000 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "Texas Instruments" H -300 2000 50  0001 C CNN "Manufacturer_Name"
+	1    -300 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS86 Z?
+U 2 1 613188D2
+P -300 2600
+AR Path="/606B9078/613188D2" Ref="Z?"  Part="2" 
+AR Path="/613188D2" Ref="Z23"  Part="2" 
+F 0 "Z23" H -300 2950 50  0000 C CNN
+F 1 "SN74AHCT86N" H -300 2850 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H -300 2600 50  0001 C CNN
+F 3 "74xx/74ls86.pdf" H -300 2600 50  0001 C CNN
+F 4 "SN74AHCT86N" H -300 2600 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "Texas Instruments" H -300 2600 50  0001 C CNN "Manufacturer_Name"
+	2    -300 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 Z?
+U 2 1 613188DA
+P -300 3850
+AR Path="/606B9078/613188DA" Ref="Z?"  Part="2" 
+AR Path="/613188DA" Ref="Z310"  Part="2" 
+F 0 "Z310" H -285 4200 50  0000 C CNN
+F 1 "SN74AHCT08N" H -285 4100 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H -300 3850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H -300 3850 50  0001 C CNN
+F 4 "74xx:74LS08" H -300 3850 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "Texas Instruments" H -300 3850 50  0001 C CNN "Manufacturer_Name"
+	2    -300 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 Z?
+U 3 1 613188E2
+P -300 6100
+AR Path="/606B9078/613188E2" Ref="Z?"  Part="3" 
+AR Path="/613188E2" Ref="Z310"  Part="3" 
+F 0 "Z310" H -285 6450 50  0000 C CNN
+F 1 "SN74AHCT08N" H -285 6350 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H -300 6100 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H -300 6100 50  0001 C CNN
+F 4 "74xx:74LS08" H -300 6100 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "Texas Instruments" H -300 6100 50  0001 C CNN "Manufacturer_Name"
+	3    -300 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS08 Z?
+U 4 1 613188EA
+P -300 4500
+AR Path="/606B9078/613188EA" Ref="Z?"  Part="4" 
+AR Path="/613188EA" Ref="Z310"  Part="4" 
+F 0 "Z310" H -285 4850 50  0000 C CNN
+F 1 "SN74AHCT08N" H -285 4750 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm" H -300 4500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74ls00" H -300 4500 50  0001 C CNN
+F 4 "74xx:74LS08" H -300 4500 50  0001 C CNN "Manufacturer_Part_Number"
+F 5 "Texas Instruments" H -300 4500 50  0001 C CNN "Manufacturer_Name"
+	4    -300 4500
+	1    0    0    -1  
+$EndComp
+NoConn ~ -600 3750
+NoConn ~ -600 3950
+NoConn ~ 0    3850
+NoConn ~ -600 4400
+NoConn ~ -600 4600
+NoConn ~ 0    4500
+NoConn ~ -50  3850
+NoConn ~ -2250 3250
+NoConn ~ 0    2600
+NoConn ~ 0    2000
+NoConn ~ -600 2500
+NoConn ~ -600 2700
+NoConn ~ -600 1900
+NoConn ~ -600 2100
+NoConn ~ 0    6100
+Wire Notes Line
+	-1750 6650 -1750 5350
+Wire Notes Line
+	-1750 5350 150  5350
+Wire Notes Line
+	150  5350 150  6650
+Wire Notes Line
+	-1750 6650 200  6650
+Text Notes -350 5550 0    50   ~ 0
+XOR
+NoConn ~ -600 6000
+NoConn ~ -600 6200
+NoConn ~ -1300 6500
+NoConn ~ -1300 6300
+NoConn ~ -1300 5900
+NoConn ~ -1300 5700
+NoConn ~ -700 5800
+NoConn ~ -700 6400
 $EndSCHEMATC

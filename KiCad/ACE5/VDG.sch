@@ -54,8 +54,10 @@ U 1 1 5F80C862
 P 3350 1150
 F 0 "Z19" H 3355 1520 50  0000 C CNN
 F 1 "74AHCT2G00" H 3355 1420 50  0000 C CNN
-F 2 "Package_SO:TSSOP-8_3x3mm_P0.65mm" H 3350 1150 50  0001 C CNN
+F 2 "Package_SO:VSSOP-8_2.4x2.1mm_P0.5mm" H 3350 1150 50  0001 C CNN
 F 3 "https://www.mouser.co.uk/datasheet/2/916/74AHC_AHCT2G00-1597531.pdf" H 3350 1150 50  0001 C CNN
+F 4 "Texas Instruments" H 3350 1150 50  0001 C CNN "Manufacturer_Name"
+F 5 "74AHCT2G00DC,125" H 3350 1150 50  0001 C CNN "Manufacturer_Part_Number"
 	1    3350 1150
 	1    0    0    -1  
 $EndComp
@@ -67,6 +69,8 @@ F 0 "Z25" H 3350 2100 50  0000 C CNN
 F 1 "74AHCT02" H 3350 2000 50  0000 C CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 3350 1750 50  0001 C CNN
 F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT02" H 3350 1750 50  0001 C CNN
+F 4 "Texas Instruments" H 3350 1750 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT02DR" H 3350 1750 50  0001 C CNN "Manufacturer_Part_Number"
 	1    3350 1750
 	1    0    0    -1  
 $EndComp
@@ -78,6 +82,8 @@ F 0 "Z20" H 4125 1805 50  0000 C CNN
 F 1 "74AHCT08" H 4125 1705 50  0000 C CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4100 1450 50  0001 C CNN
 F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT08" H 4100 1450 50  0001 C CNN
+F 4 "Texas Instruments" H 4100 1450 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT08DR" H 4100 1450 50  0001 C CNN "Manufacturer_Part_Number"
 	2    4100 1450
 	1    0    0    -1  
 $EndComp
@@ -89,6 +95,8 @@ F 0 "Z20" H 4920 2310 50  0000 C CNN
 F 1 "74AHCT08" H 4920 2210 50  0000 C CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4900 1950 50  0001 C CNN
 F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT08" H 4900 1950 50  0001 C CNN
+F 4 "Texas Instruments" H 4900 1950 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT08DR" H 4900 1950 50  0001 C CNN "Manufacturer_Part_Number"
 	4    4900 1950
 	1    0    0    -1  
 $EndComp
@@ -182,6 +190,8 @@ F 0 "R17" V 9575 2150 50  0000 C CNN
 F 1 "100" V 9675 2150 50  0000 C CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 9405 2150 50  0001 C CNN
 F 3 "~" H 9475 2150 50  0001 C CNN
+F 4 "Vishay" H 9475 2150 50  0001 C CNN "Manufacturer_Name"
+F 5 "CRCW1206100RJNEA" H 9475 2150 50  0001 C CNN "Manufacturer_Part_Number"
 	1    9475 2150
 	0    1    1    0   
 $EndComp
@@ -215,17 +225,21 @@ F 0 "Q100" H 9750 2000 50  0000 L CNN
 F 1 "2SC1623 " H 9750 1950 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-223" H 9525 1950 50  0001 C CNN
 F 3 "" H 9525 1950 50  0001 C CNN
+F 4 "Micro Commercial Components (MCC) " H 9525 1950 50  0001 C CNN "Manufacturer_Name"
+F 5 "2SC1623-L6-TP " H 9525 1950 50  0001 C CNN "Manufacturer_Part_Number"
 	1    9525 1950
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 COMPOSITE-OUT1
+L Connector_Generic:Conn_01x02 JCOMPOSITE-OUT1
 U 1 1 5D703F64
 P 10250 2000
-F 0 "COMPOSITE-OUT1" H 10350 1925 50  0000 L CNN
+F 0 "JCOMPOSITE-OUT1" H 10350 1925 50  0000 L CNN
 F 1 "COMPOSITE-OUT1" H 10200 1750 50  0001 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical_SMD_Pin1Left" H 10250 2000 50  0001 C CNN
 F 3 "~" H 10250 2000 50  0001 C CNN
+F 4 "Molex" H 10250 2000 50  0001 C CNN "Manufacturer_Name"
+F 5 "87898-0204" H 10250 2000 50  0001 C CNN "Manufacturer_Part_Number"
 	1    10250 2000
 	1    0    0    1   
 $EndComp
@@ -298,6 +312,8 @@ F 0 "R107" V 8950 6050 50  0000 C CNN
 F 1 "270" V 9050 6050 50  0000 C CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 8755 6050 50  0001 C CNN
 F 3 "~" H 8825 6050 50  0001 C CNN
+F 4 "Vishay" H 8825 6050 50  0001 C CNN "Manufacturer_Name"
+F 5 "CRCW1206270RFKEA" H 8825 6050 50  0001 C CNN "Manufacturer_Part_Number"
 	1    8825 6050
 	0    1    1    0   
 $EndComp
@@ -681,9 +697,11 @@ L Device:R R11
 U 1 1 5F80C83E
 P 8800 1950
 F 0 "R11" V 8550 1975 50  0000 C CNN
-F 1 "1K5" V 8650 1975 50  0000 C CNN
+F 1 "1k5" V 8650 1975 50  0000 C CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" H 8800 1950 50  0001 C CNN
 F 3 "~" H 8800 1950 50  0001 C CNN
+F 4 "Vishay" H 8800 1950 50  0001 C CNN "Manufacturer_Name"
+F 5 "CRCW12061K50JNEA" H 8800 1950 50  0001 C CNN "Manufacturer_Part_Number"
 	1    8800 1950
 	0    1    1    0   
 $EndComp
@@ -692,9 +710,11 @@ L Device:R R16
 U 1 1 5F80C844
 P 9050 1675
 F 0 "R16" H 8900 1734 50  0000 L BNN
-F 1 "1K5" H 8900 1545 50  0000 L BNN
+F 1 "1k5" H 8900 1545 50  0000 L BNN
 F 2 "Resistor_SMD:R_1206_3216Metric" H 9050 1675 50  0001 C CNN
 F 3 "~" H 9050 1675 50  0001 C CNN
+F 4 "Vishay" H 9050 1675 50  0001 C CNN "Manufacturer_Name"
+F 5 "CRCW12061K50JNEA" H 9050 1675 50  0001 C CNN "Manufacturer_Part_Number"
 	1    9050 1675
 	-1   0    0    1   
 $EndComp
@@ -703,9 +723,11 @@ L 74xx:74LS74 Z27
 U 2 1 5F80C856
 P 7150 1950
 F 0 "Z27" H 7150 2450 50  0000 C CNN
-F 1 "SN74AHCT74N" H 7150 2350 50  0000 C CNN
+F 1 "74AHCT74" H 7150 2350 50  0000 C CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7150 1950 50  0001 C CNN
 F 3 "74xx~74hc_AHCT74.pdf" H 7150 1950 50  0001 C CNN
+F 4 "Texas Instruments" H 7150 1950 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT74DR" H 7150 1950 50  0001 C CNN "Manufacturer_Part_Number"
 	2    7150 1950
 	1    0    0    -1  
 $EndComp
@@ -717,6 +739,8 @@ F 0 "D11" V 8970 2100 50  0000 L CNN
 F 1 "1N4148" V 9050 2235 50  0001 L CNN
 F 2 "Diode_SMD:D_SOD-110" H 9050 1975 50  0001 C CNN
 F 3 "https:~/assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 9050 2150 50  0001 C CNN
+F 4 "ON Semiconductor" H 9050 2150 50  0001 C CNN "Manufacturer_Name"
+F 5 "1N4148" H 9050 2150 50  0001 C CNN "Manufacturer_Part_Number"
 	1    9050 2150
 	0    -1   -1   0   
 $EndComp
@@ -726,8 +750,10 @@ U 2 1 5F80C868
 P 6250 850
 F 0 "Z19" H 6285 1220 50  0000 C CNN
 F 1 "74AHCT2G00" H 6285 1120 50  0000 C CNN
-F 2 "Package_SO:TSSOP-8_3x3mm_P0.65mm" H 6250 850 50  0001 C CNN
+F 2 "Package_SO:VSSOP-8_2.4x2.1mm_P0.5mm" H 6250 850 50  0001 C CNN
 F 3 "https://www.mouser.co.uk/datasheet/2/916/74AHC_AHCT2G00-1597531.pdf" H 6250 850 50  0001 C CNN
+F 4 "Texas Instruments" H 6250 850 50  0001 C CNN "Manufacturer_Name"
+F 5 "74AHCT2G00DC,125" H 6250 850 50  0001 C CNN "Manufacturer_Part_Number"
 	2    6250 850 
 	1    0    0    -1  
 $EndComp
@@ -739,6 +765,8 @@ F 0 "Z20" H 6265 1900 50  0000 C CNN
 F 1 "74AHCT08" H 6265 1800 50  0000 C CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6250 1550 50  0001 C CNN
 F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT08" H 6250 1550 50  0001 C CNN
+F 4 "Texas Instruments" H 6250 1550 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT08DR" H 6250 1550 50  0001 C CNN "Manufacturer_Part_Number"
 	3    6250 1550
 	1    0    0    -1  
 $EndComp
@@ -747,9 +775,11 @@ L 74xx:74LS11 Z22
 U 2 1 5F80C886
 P 5300 1450
 F 0 "Z22" H 5300 1830 50  0000 C CNN
-F 1 "74AHCT11" H 5300 1730 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5300 1450 50  0001 C CNN
+F 1 "74HCT11" H 5300 1730 50  0000 C CNN
+F 2 "Package_SO:SO-14_3.9x8.65mm_P1.27mm" H 5300 1450 50  0001 C CNN
 F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT11" H 5300 1450 50  0001 C CNN
+F 4 "Nexperia" H 5300 1450 50  0001 C CNN "Manufacturer_Name"
+F 5 "74HCT11D,653" H 5300 1450 50  0001 C CNN "Manufacturer_Part_Number"
 	2    5300 1450
 	1    0    0    -1  
 $EndComp
@@ -759,12 +789,12 @@ U 1 1 5F80C88C
 P 7950 1900
 F 0 "Z23" H 8150 2100 50  0000 C CNN
 F 1 "74AHCT1G86GW " H 8150 2000 50  0000 C CNN
-F 2 "SamacSys_Parts:SOT95P275X110-5N" H 7950 1900 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 7950 1900 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT1G86.pdf" H 7950 1900 50  0001 C CNN
 F 4 "74AHCT1G86GW " H 7950 1900 50  0001 C CNN "Description"
 F 5 "1.1" H 7950 1900 50  0001 C CNN "Height"
-F 6 "Nexperia" H 7950 1900 50  0001 C CNN "Manufacturer_Name"
-F 7 "74AHC1G86GW,125" H 7950 1900 50  0001 C CNN "Manufacturer_Part_Number"
+F 6 "Texas Instruments" H 7950 1900 50  0001 C CNN "Manufacturer_Name"
+F 7 "SN74AHCT1G86DBVR" H 7950 1900 50  0001 C CNN "Manufacturer_Part_Number"
 F 8 "771-AHC1G86GW125" H 7950 1900 50  0001 C CNN "Mouser Part Number"
 F 9 "https://www.mouser.co.uk/ProductDetail/Nexperia/74AHC1G86GW125/?qs=P62ublwmbi%252BiHhNU1JAfFg%3D%3D" H 7950 1900 50  0001 C CNN "Mouser Price/Stock"
 	1    7950 1900
@@ -775,9 +805,11 @@ L 74xx:74LS166 Z28
 U 1 1 5F80C89E
 P 10000 3400
 F 0 "Z28" V 10725 3395 50  0000 C CNN
-F 1 "74AHCT166" V 10625 3395 50  0000 C CNN
-F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 10000 3400 50  0001 C CNN
+F 1 "74HCT166" V 10625 3395 50  0000 C CNN
+F 2 "Package_SO:SOP-16_3.9x9.9mm_P1.27mm" H 10000 3400 50  0001 C CNN
 F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT166" H 10000 3400 50  0001 C CNN
+F 4 "Texas Instruments" H 10000 3400 50  0001 C CNN "Manufacturer_Name"
+F 5 "CD74HCT166M96" H 10000 3400 50  0001 C CNN "Manufacturer_Part_Number"
 	1    10000 3400
 	0    -1   -1   0   
 $EndComp
@@ -789,6 +821,8 @@ F 0 "R108" V 6000 6550 50  0000 C CNN
 F 1 "270" V 6100 6550 50  0000 C CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 6155 6550 50  0001 C CNN
 F 3 "~" H 6225 6550 50  0001 C CNN
+F 4 "Vishay" H 6225 6550 50  0001 C CNN "Manufacturer_Name"
+F 5 "CRCW1206270RFKEA" H 6225 6550 50  0001 C CNN "Manufacturer_Part_Number"
 	1    6225 6550
 	0    1    1    0   
 $EndComp
@@ -805,6 +839,8 @@ F 0 "R103" V 6350 6650 50  0000 C CNN
 F 1 "270" V 6450 6650 50  0000 C CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 6155 6650 50  0001 C CNN
 F 3 "~" H 6225 6650 50  0001 C CNN
+F 4 "Vishay" H 6225 6650 50  0001 C CNN "Manufacturer_Name"
+F 5 "CRCW1206270RFKEA" H 6225 6650 50  0001 C CNN "Manufacturer_Part_Number"
 	1    6225 6650
 	0    1    1    0   
 $EndComp
@@ -818,6 +854,8 @@ F 0 "R106" V 8600 5950 50  0000 C CNN
 F 1 "270" V 8700 5950 50  0000 C CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 8755 5950 50  0001 C CNN
 F 3 "~" H 8825 5950 50  0001 C CNN
+F 4 "Vishay" H 8825 5950 50  0001 C CNN "Manufacturer_Name"
+F 5 "CRCW1206270RFKEA" H 8825 5950 50  0001 C CNN "Manufacturer_Part_Number"
 	1    8825 5950
 	0    1    1    0   
 $EndComp
@@ -837,8 +875,10 @@ U 4 1 5F80CB5F
 P 2900 3750
 F 0 "Z306" H 2900 4100 50  0000 C CNN
 F 1 "74AHCT04" H 2900 4000 50  0000 C CNN
-F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 2900 3750 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2900 3750 50  0001 C CNN
 F 3 "https:~/assets.nexperia.com/documents/data-sheet/74HC_AHCT04.pdf" H 2900 3750 50  0001 C CNN
+F 4 "Texas Instruments" H 2900 3750 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT04DR" H 2900 3750 50  0001 C CNN "Manufacturer_Part_Number"
 	4    2900 3750
 	1    0    0    -1  
 $EndComp
@@ -853,9 +893,11 @@ L 74xx:74LS11 Z22
 U 1 1 5F80CB97
 P 2000 1550
 F 0 "Z22" H 2005 1930 50  0000 C CNN
-F 1 "74AHCT11" H 2005 1830 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2000 1550 50  0001 C CNN
+F 1 "74HCT11" H 2005 1830 50  0000 C CNN
+F 2 "Package_SO:SO-14_3.9x8.65mm_P1.27mm" H 2000 1550 50  0001 C CNN
 F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT11" H 2000 1550 50  0001 C CNN
+F 4 "Nexperia" H 2000 1550 50  0001 C CNN "Manufacturer_Name"
+F 5 "74HCT11D,653" H 2000 1550 50  0001 C CNN "Manufacturer_Part_Number"
 	1    2000 1550
 	1    0    0    -1  
 $EndComp
@@ -886,6 +928,8 @@ F 0 "Z25" H 2805 3110 50  0000 C CNN
 F 1 "74AHCT02" H 2805 3010 50  0000 C CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2800 2750 50  0001 C CNN
 F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT02" H 2800 2750 50  0001 C CNN
+F 4 "Texas Instruments" H 2800 2750 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT02DR" H 2800 2750 50  0001 C CNN "Manufacturer_Part_Number"
 	2    2800 2750
 	1    0    0    -1  
 $EndComp
@@ -897,6 +941,8 @@ F 0 "Z25" H 1340 1935 50  0000 C CNN
 F 1 "74AHCT02" H 1340 1835 50  0000 C CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1300 1550 50  0001 C CNN
 F 3 "http:~/www.ti.com/lit/gpn/sn74AHCT02" H 1300 1550 50  0001 C CNN
+F 4 "Texas Instruments" H 1300 1550 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT02DR" H 1300 1550 50  0001 C CNN "Manufacturer_Part_Number"
 	4    1300 1550
 	1    0    0    -1  
 $EndComp
@@ -908,6 +954,8 @@ F 0 "D100" H 3500 4070 50  0000 C CNN
 F 1 "BAT54W" H 3500 3970 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 3500 3575 50  0001 C CNN
 F 3 "https:~/assets.nexperia.com/documents/data-sheet/BAT54W_SER.pdf" H 3500 3750 50  0001 C CNN
+F 4 "Nexperia" H 3500 3750 50  0001 C CNN "Manufacturer_Name"
+F 5 "BAT54W,115" H 3500 3750 50  0001 C CNN "Manufacturer_Part_Number"
 	1    3500 3750
 	1    0    0    -1  
 $EndComp
@@ -954,9 +1002,11 @@ L Device:Crystal X1
 U 1 1 5F80CE65
 P 1050 4175
 F 0 "X1" H 1050 4375 50  0000 C CNN
-F 1 "CRYSTALHC49U-V 6.556MHz" H 1060 4335 50  0001 C CNN
-F 2 "Crystal:Crystal_SMD_7050-2Pin_7.0x5.0mm" H 1050 4175 50  0001 C CNN
+F 1 "HC49S 6.5MHz" H 1060 4335 50  0001 C CNN
+F 2 "Crystal:Crystal_SMD_HC49-SD" H 1050 4175 50  0001 C CNN
 F 3 "~" H 1050 4175 50  0001 C CNN
+F 4 "TXC Corporation " H 1050 4175 50  0001 C CNN "Manufacturer_Name"
+F 5 "ECS-65-18-5PXEN" H 1050 4175 50  0001 C CNN "Manufacturer_Part_Number"
 	1    1050 4175
 	1    0    0    -1  
 $EndComp
@@ -980,9 +1030,11 @@ L Device:C_Small C2
 U 1 1 5F80CE54
 P 800 4880
 F 0 "C2" H 900 4935 50  0000 L CNN
-F 1 "100p" H 900 4835 50  0000 L CNN
+F 1 "100pF" H 900 4835 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric" H 800 4880 50  0001 C CNN
 F 3 "~" H 800 4880 50  0001 C CNN
+F 4 "KEMET" H 800 4880 50  0001 C CNN "Manufacturer_Name"
+F 5 "C1206C101K1HACTU" H 800 4880 50  0001 C CNN "Manufacturer_Part_Number"
 	1    800  4880
 	1    0    0    -1  
 $EndComp
@@ -994,6 +1046,8 @@ F 0 "R2" V 900 4460 50  0000 C CNN
 F 1 "47k" V 800 4460 50  0000 C CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 980 4475 50  0001 C CNN
 F 3 "~" H 1050 4475 50  0001 C CNN
+F 4 "Vishay" H 1050 4475 50  0001 C CNN "Manufacturer_Name"
+F 5 "CRCW120647K0FKEAC" H 1050 4475 50  0001 C CNN "Manufacturer_Part_Number"
 	1    1050 4475
 	0    -1   -1   0   
 $EndComp
@@ -1008,6 +1062,8 @@ F 0 "R1" H 1700 4000 50  0000 L CNN
 F 1 "4k7" H 1700 3900 50  0000 L CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 1530 3925 50  0001 C CNN
 F 3 "~" H 1600 3925 50  0001 C CNN
+F 4 "Vishay" H 1600 3925 50  0001 C CNN "Manufacturer_Name"
+F 5 "CRCW12064K70FKEAC" H 1600 3925 50  0001 C CNN "Manufacturer_Part_Number"
 	1    1600 3925
 	1    0    0    -1  
 $EndComp
@@ -1018,9 +1074,11 @@ L Device:C_Small C1
 U 1 1 5F80CE3F
 P 1355 4175
 F 0 "C1" V 1105 4220 50  0000 C CNN
-F 1 "30p" V 1205 4220 50  0000 C CNN
+F 1 "30pF" V 1205 4220 50  0000 C CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric" H 1355 4175 50  0001 C CNN
 F 3 "~" H 1355 4175 50  0001 C CNN
+F 4 "Walsin" H 1355 4175 50  0001 C CNN "Manufacturer_Name"
+F 5 "1206N300K501CT" H 1355 4175 50  0001 C CNN "Manufacturer_Part_Number"
 	1    1355 4175
 	0    1    1    0   
 $EndComp
@@ -1030,8 +1088,10 @@ U 6 1 5F80CE2D
 P 2200 4475
 F 0 "Z306" H 2200 4825 50  0000 C CNN
 F 1 "74AHCT04" H 2200 4725 50  0000 C CNN
-F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 2200 4475 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2200 4475 50  0001 C CNN
 F 3 "https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT04.pdf" H 2200 4475 50  0001 C CNN
+F 4 "Texas Instruments" H 2200 4475 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT04DR" H 2200 4475 50  0001 C CNN "Manufacturer_Part_Number"
 	6    2200 4475
 	1    0    0    -1  
 $EndComp
@@ -1055,17 +1115,6 @@ Text Label 5850 1650 2    50   ~ 0
 Wire Wire Line
 	9625 2150 9825 2150
 Connection ~ 9625 2150
-$Comp
-L Device:R_POT_TRIM RV1
-U 1 1 5F7D6EDD
-P 9975 2150
-F 0 "RV1" V 9850 2150 50  0000 C CNN
-F 1 "100" V 9750 2150 50  0000 C CNN
-F 2 "SamacSys_Parts:35WR100LFTR" H 9975 2150 50  0001 C CNN
-F 3 "~" H 9975 2150 50  0001 C CNN
-	1    9975 2150
-	0    -1   -1   0   
-$EndComp
 NoConn ~ 10125 2150
 Text Label 10400 4200 3    50   ~ 0
 ~VIDEOCLK
@@ -1082,6 +1131,8 @@ F 0 "R101" V 6000 6250 50  0000 C CNN
 F 1 "270" V 6100 6250 50  0000 C CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 6155 6250 50  0001 C CNN
 F 3 "~" H 6225 6250 50  0001 C CNN
+F 4 "Vishay" H 6225 6250 50  0001 C CNN "Manufacturer_Name"
+F 5 "CRCW1206270RFKEA" H 6225 6250 50  0001 C CNN "Manufacturer_Part_Number"
 	1    6225 6250
 	0    1    1    0   
 $EndComp
@@ -1096,6 +1147,8 @@ F 0 "R104" V 8600 5550 50  0000 C CNN
 F 1 "270" V 8700 5550 50  0000 C CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 8755 5550 50  0001 C CNN
 F 3 "~" H 8825 5550 50  0001 C CNN
+F 4 "Vishay" H 8825 5550 50  0001 C CNN "Manufacturer_Name"
+F 5 "CRCW1206270RFKEA" H 8825 5550 50  0001 C CNN "Manufacturer_Part_Number"
 	1    8825 5550
 	0    1    1    0   
 $EndComp
@@ -1110,6 +1163,8 @@ F 0 "R105" V 8600 5650 50  0000 C CNN
 F 1 "270" V 8700 5650 50  0000 C CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 8755 5650 50  0001 C CNN
 F 3 "~" H 8825 5650 50  0001 C CNN
+F 4 "Vishay" H 8825 5650 50  0001 C CNN "Manufacturer_Name"
+F 5 "CRCW1206270RFKEA" H 8825 5650 50  0001 C CNN "Manufacturer_Part_Number"
 	1    8825 5650
 	0    1    1    0   
 $EndComp
@@ -1123,6 +1178,8 @@ F 0 "Q1" H 1305 4585 50  0000 L CNN
 F 1 "2SC1623" H 1290 4820 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 1700 4600 50  0001 L CIN
 F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 1500 4675 50  0001 L CNN
+F 4 "Micro Commercial Components (MCC) " H 1500 4675 50  0001 C CNN "Manufacturer_Name"
+F 5 "2SC1623-L6-TP " H 1500 4675 50  0001 C CNN "Manufacturer_Part_Number"
 	1    1500 4675
 	1    0    0    -1  
 $EndComp
@@ -1230,6 +1287,8 @@ F 0 "R100" V 6000 6150 50  0000 C CNN
 F 1 "270" V 6100 6375 50  0000 C CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 6155 6150 50  0001 C CNN
 F 3 "~" H 6225 6150 50  0001 C CNN
+F 4 "Vishay" H 6225 6150 50  0001 C CNN "Manufacturer_Name"
+F 5 "CRCW1206270RFKEA" H 6225 6150 50  0001 C CNN "Manufacturer_Part_Number"
 	1    6225 6150
 	0    1    1    0   
 $EndComp
@@ -1298,33 +1357,46 @@ Wire Wire Line
 	6800 4250 7300 4250
 Connection ~ 6800 5350
 $Comp
-L 7132la100pdg:IDT71321-421-64PIN Z7-8
+L 7132la100pdg:IDT71321-421-52PIN-PLCC Z7-8
 U 1 1 5F80C938
 P 7300 3250
 F 0 "Z7-8" H 7625 3425 50  0000 C CNN
-F 1 "IDT71321-421-64PIN" H 7975 3675 50  0000 C CNN
-F 2 "SamacSys_Parts:QFP50P1200X1200X160-64N" H 8100 3900 50  0001 L CNN
+F 1 "IDT71321" H 7975 3675 50  0000 C CNN
+F 2 "Package_LCC:PLCC-52" H 8100 3900 50  0001 L CNN
 F 3 "https://www.idt.com/document/dst/71321421-datasheet" H 8100 3800 50  0001 L CNN
 F 4 "SRAM 2K x 8 Dual-Port RAM Memory & Logic/ Master" H 8100 4000 50  0001 L CNN "Description"
 F 5 "3.8" H 8450 3200 50  0001 L CNN "Height"
-F 6 "IDT (Integrated Device Technology)" H 8100 4100 50  0001 L CNN "Manufacturer_Name"
-F 7 "7132LA100PDG" H 8450 2800 50  0001 L CNN "Manufacturer_Part_Number"
+F 6 "Renesas / IDT" H 8100 4100 50  0001 L CNN "Manufacturer_Name"
+F 7 "71321SA55JG8" H 8450 2800 50  0001 L CNN "Manufacturer_Part_Number"
 	1    7300 3250
 	1    0    0    -1  
 $EndComp
 $Comp
-L 7132la100pdg:IDT71321-421-64PIN Z5-6
+L 7132la100pdg:IDT71321-421-52PIN-PLCC Z5-6
 U 1 1 5F80C942
 P 4700 3850
 F 0 "Z5-6" H 5680 4135 50  0000 C CNN
-F 1 "IDT71321-421-64PIN" H 4990 4145 50  0000 C CNN
-F 2 "SamacSys_Parts:QFP50P1200X1200X160-64N" H 5500 4500 50  0001 L CNN
+F 1 "IDT71321" H 4990 4145 50  0000 C CNN
+F 2 "Package_LCC:PLCC-52" H 5500 4500 50  0001 L CNN
 F 3 "https://www.idt.com/document/dst/71321421-datasheet" H 5500 4400 50  0001 L CNN
 F 4 "SRAM 2K x 8 Dual-Port RAM Memory & Logic/ Master" H 5500 4600 50  0001 L CNN "Description"
 F 5 "3.8" H 5850 3800 50  0001 L CNN "Height"
-F 6 "IDT (Integrated Device Technology)" H 5500 4700 50  0001 L CNN "Manufacturer_Name"
-F 7 "7132LA100PDG" H 5850 3400 50  0001 L CNN "Manufacturer_Part_Number"
+F 6 "Renesas / IDT" H 5500 4700 50  0001 L CNN "Manufacturer_Name"
+F 7 "71321SA55JG8" H 5850 3400 50  0001 L CNN "Manufacturer_Part_Number"
 	1    4700 3850
 	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT_TRIM RV1
+U 1 1 5F7D6EDD
+P 9975 2150
+F 0 "RV1" V 9850 2150 50  0000 C CNN
+F 1 "100" V 9750 2150 50  0000 C CNN
+F 2 "SamacSys_Parts:35WR100LFTR" H 9975 2150 50  0001 C CNN
+F 3 "~" H 9975 2150 50  0001 C CNN
+F 4 "BI Technologies / TT Electronics " H 9975 2150 50  0001 C CNN "Manufacturer_Name"
+F 5 "35WR100LFTR " H 9975 2150 50  0001 C CNN "Manufacturer_Part_Number"
+	1    9975 2150
+	0    -1   -1   0   
 $EndComp
 $EndSCHEMATC

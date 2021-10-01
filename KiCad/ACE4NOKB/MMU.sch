@@ -140,9 +140,11 @@ L 74xx:74LS670 Z401
 U 1 1 5DC05EE5
 P 2850 2250
 F 0 "Z401" H 2850 3275 50  0000 C CNN
-F 1 "CD74HCT670E " H 2850 3175 50  0000 C CNN
+F 1 "74HCT670" H 2850 3175 50  0000 C CNN
 F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 2850 2250 50  0001 C CNN
 F 3 "https://www.ti.com/lit/ds/symlink/cd74hct670.pdf?HQS=dis-mous-null-mousermode-dsf-pf-null-wwe&ts=1612295958455&ref_url=https%253A%252F%252Fwww.mouser.co.uk%252F" H 2850 2250 50  0001 C CNN
+F 4 "Texas Instruments" H 2850 2250 50  0001 C CNN "Manufacturer_Name"
+F 5 "CD74HCT670M" H 2850 2250 50  0001 C CNN "Manufacturer_Part_Number"
 	1    2850 2250
 	1    0    0    -1  
 $EndComp
@@ -186,7 +188,7 @@ L 74xx:74LS541 Z403
 U 1 1 6567AE36
 P 3700 4750
 F 0 "Z403" H 3475 5400 50  0000 C CNN
-F 1 "SN74AHCT541N" H 4025 5400 50  0000 C CNN
+F 1 "74AHCT541" H 4025 5400 50  0000 C CNN
 F 2 "Package_DIP:DIP-20_W7.62mm_Socket" H 3700 4750 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/sn74ahct541.pdf" H 3700 4750 50  0001 C CNN
 F 4 "Texas Instruments" H 3700 4750 50  0001 C CNN "Manufacturer_Name"
@@ -237,9 +239,11 @@ L 74xx:74LS670 Z402
 U 1 1 5DC59E5E
 P 6200 2250
 F 0 "Z402" H 6225 3250 50  0000 C CNN
-F 1 "CD74HCT670" H 6225 3150 50  0000 C CNN
+F 1 "74HCT670" H 6225 3150 50  0000 C CNN
 F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 6200 2250 50  0001 C CNN
 F 3 "https://www.ti.com/lit/ds/symlink/cd74hct670.pdf?HQS=dis-mous-null-mousermode-dsf-pf-null-wwe&ts=1612295958455&ref_url=https%253A%252F%252Fwww.mouser.co.uk%252F" H 6200 2250 50  0001 C CNN
+F 4 "Texas Instruments" H 6200 2250 50  0001 C CNN "Manufacturer_Name"
+F 5 "CD74HCT670M" H 6200 2250 50  0001 C CNN "Manufacturer_Part_Number"
 	1    6200 2250
 	1    0    0    -1  
 $EndComp
@@ -320,8 +324,10 @@ U 1 1 6029D2C0
 P 1550 2550
 F 0 "R423" V 1300 2550 50  0000 C CNN
 F 1 "200k" V 1400 2550 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 1480 2550 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 1480 2550 50  0001 C CNN
 F 3 "" H 1550 2550 50  0001 C CNN
+F 4 "Vishay" H 1550 2550 50  0001 C CNN "Manufacturer_Name"
+F 5 "CCF07200KGKE36" H 1550 2550 50  0001 C CNN "Manufacturer_Part_Number"
 	1    1550 2550
 	0    1    1    0   
 $EndComp
@@ -400,8 +406,10 @@ U 1 1 602B26B9
 P 4850 2450
 F 0 "R424" V 4600 2450 50  0000 C CNN
 F 1 "200k" V 4700 2450 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 4780 2450 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 4780 2450 50  0001 C CNN
 F 3 "" H 4850 2450 50  0001 C CNN
+F 4 "Vishay" H 4850 2450 50  0001 C CNN "Manufacturer_Name"
+F 5 "CCF07200KGKE36" H 4850 2450 50  0001 C CNN "Manufacturer_Part_Number"
 	1    4850 2450
 	0    1    1    0   
 $EndComp
@@ -411,8 +419,10 @@ U 1 1 602C9838
 P 2350 4800
 F 0 "R425" V 2100 4800 50  0000 C CNN
 F 1 "100k" V 2200 4800 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 2280 4800 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 2280 4800 50  0001 C CNN
 F 3 "" H 2350 4800 50  0001 C CNN
+F 4 "Vishay" H 2350 4800 50  0001 C CNN "Manufacturer_Name"
+F 5 "CCF07100KJKE36" H 2350 4800 50  0001 C CNN "Manufacturer_Part_Number"
 	1    2350 4800
 	0    1    1    0   
 $EndComp

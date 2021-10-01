@@ -154,6 +154,8 @@ F 0 "Z408" H 5950 3850 50  0000 C CNN
 F 1 "STM8S003K3T" H 5950 3750 50  0000 C CNN
 F 2 "Package_QFP:LQFP-32_7x7mm_P0.8mm" H 6000 3750 50  0001 L CNN
 F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00024550.pdf" H 5950 2250 50  0001 C CNN
+F 4 "STMicroelectronics" H 5950 2250 50  0001 C CNN "Manufacturer_Name"
+F 5 "STM8S003K3T6CTR" H 5950 2250 50  0001 C CNN "Manufacturer_Part_Number"
 	1    5950 2250
 	1    0    0    -1  
 $EndComp
@@ -277,6 +279,8 @@ F 0 "J403" H 1350 3800 50  0000 L CNN
 F 1 "STLink2" H 1350 3700 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1250 3800 50  0001 C CNN
 F 3 "~" H 1250 3800 50  0001 C CNN
+F 4 "Samtec" H 1250 3800 50  0001 C CNN "Manufacturer_Name"
+F 5 "HTSW-104-24-F-S" H 1250 3800 50  0001 C CNN "Manufacturer_Part_Number"
 	1    1250 3800
 	1    0    0    -1  
 $EndComp
@@ -329,9 +333,11 @@ L Device:C C404
 U 1 1 60322333
 P 5100 3600
 F 0 "C404" H 4950 3650 50  0000 R CNN
-F 1 "1u" H 4950 3600 50  0000 R CNN
+F 1 "1uf" H 4950 3600 50  0000 R CNN
 F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 5100 3600 50  0001 C CNN
 F 3 "~" H 5100 3600 50  0001 C CNN
+F 4 "Lelon" H 5100 3600 50  0001 C CNN "Manufacturer_Name"
+F 5 "REA010M2CBK-0511P" H 5100 3600 50  0001 C CNN "Manufacturer_Part_Number"
 	1    5100 3600
 	1    0    0    -1  
 $EndComp
@@ -422,8 +428,8 @@ F 0 "J402" H 3450 2150 50  0000 C CNN
 F 1 "Conn_02x05_Odd_Even" H 3450 2050 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 3400 1700 50  0001 C CNN
 F 3 "" H 3400 1700 50  0001 C CNN
-F 4 "SAMTEC" H 3400 1700 50  0001 C CNN "Manufacturer_Name"
-F 5 "HTSW-106-08-S-D " H 3400 1700 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "Amphenol FCI" H 3400 1700 50  0001 C CNN "Manufacturer_Name"
+F 5 "10129381-910001BLF" H 3400 1700 50  0001 C CNN "Manufacturer_Part_Number"
 	1    3400 1700
 	1    0    0    -1  
 $EndComp
@@ -501,8 +507,8 @@ F 0 "J408" H 3450 3150 50  0000 C CNN
 F 1 "Conn_02x05_Odd_Even" H 3450 3050 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 3400 2700 50  0001 C CNN
 F 3 "" H 3400 2700 50  0001 C CNN
-F 4 "SAMTEC" H 3400 2700 50  0001 C CNN "Manufacturer_Name"
-F 5 "HTSW-106-08-S-D " H 3400 2700 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "Amphenol FCI" H 3400 2700 50  0001 C CNN "Manufacturer_Name"
+F 5 "10129381-910001BLF" H 3400 2700 50  0001 C CNN "Manufacturer_Part_Number"
 	1    3400 2700
 	1    0    0    -1  
 $EndComp

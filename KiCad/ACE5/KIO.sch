@@ -23,6 +23,8 @@ F 0 "J305" H 3500 3750 50  0000 C CNN
 F 1 "Conn_02x05_Odd_Even" H 3500 3650 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical_SMD" H 3450 3300 50  0001 C CNN
 F 3 "~" H 3450 3300 50  0001 C CNN
+F 4 "Molex" H 3450 3300 50  0001 C CNN "Manufacturer_Name"
+F 5 "15-91-0100 " H 3450 3300 50  0001 C CNN "Manufacturer_Part_Number"
 	1    3450 3300
 	1    0    0    -1  
 $EndComp
@@ -34,6 +36,8 @@ F 0 "J304" H 10550 4750 50  0000 C CNN
 F 1 "Conn_02x06_Odd_Even" H 10550 4650 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical_SMD" H 10500 4300 50  0001 C CNN
 F 3 "~" H 10500 4300 50  0001 C CNN
+F 4 "Molex" H 10500 4300 50  0001 C CNN "Manufacturer_Name"
+F 5 "15-91-0120 " H 10500 4300 50  0001 C CNN "Manufacturer_Part_Number"
 	1    10500 4300
 	1    0    0    -1  
 $EndComp
@@ -77,6 +81,8 @@ F 0 "J300" H 7450 2950 50  0000 C CNN
 F 1 "Conn_02x06_Odd_Even" H 7450 2850 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical_SMD" H 7400 2500 50  0001 C CNN
 F 3 "~" H 7400 2500 50  0001 C CNN
+F 4 "Molex" H 7400 2500 50  0001 C CNN "Manufacturer_Name"
+F 5 "15-91-0120 " H 7400 2500 50  0001 C CNN "Manufacturer_Part_Number"
 	1    7400 2500
 	1    0    0    -1  
 $EndComp
@@ -128,6 +134,8 @@ F 0 "J301" H 7450 4500 50  0000 C CNN
 F 1 "Conn_02x06_Odd_Even" H 7450 4400 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical_SMD" H 7400 4050 50  0001 C CNN
 F 3 "~" H 7400 4050 50  0001 C CNN
+F 4 "Molex" H 7400 4050 50  0001 C CNN "Manufacturer_Name"
+F 5 "15-91-0120 " H 7400 4050 50  0001 C CNN "Manufacturer_Part_Number"
 	1    7400 4050
 	1    0    0    -1  
 $EndComp
@@ -147,6 +155,8 @@ F 0 "Z0" H 1475 2900 50  0000 C CNN
 F 1 "Z84C15QFP100" H 1475 2800 50  0000 C CNN
 F 2 "Package_QFP:LQFP-100_14x14mm_P0.5mm" H 1025 2700 50  0001 C CNN
 F 3 "" H 1025 2700 50  0001 C CNN
+F 4 "zilog" H 1025 2700 50  0001 C CNN "Manufacturer_Name"
+F 5 "Z84C1510AEG" H 1025 2700 50  0001 C CNN "Manufacturer_Part_Number"
 	3    1025 2700
 	1    0    0    -1  
 $EndComp
@@ -208,6 +218,8 @@ F 0 "Z0" H 5625 3650 50  0000 C CNN
 F 1 "Z84C15QFP100" H 5625 3550 50  0000 C CNN
 F 2 "Package_QFP:LQFP-100_14x14mm_P0.5mm" H 5450 3425 50  0001 C CNN
 F 3 "" H 5450 3425 50  0001 C CNN
+F 4 "zilog" H 5450 3425 50  0001 C CNN "Manufacturer_Name"
+F 5 "Z84C1510AEG" H 5450 3425 50  0001 C CNN "Manufacturer_Part_Number"
 	5    5450 3425
 	1    0    0    -1  
 $EndComp
@@ -219,6 +231,8 @@ F 0 "Z0" H 8675 3825 50  0000 C CNN
 F 1 "Z84C15QFP100" H 8675 3725 50  0000 C CNN
 F 2 "Package_QFP:LQFP-100_14x14mm_P0.5mm" H 8300 3600 50  0001 C CNN
 F 3 "" H 8300 3600 50  0001 C CNN
+F 4 "zilog" H 8300 3600 50  0001 C CNN "Manufacturer_Name"
+F 5 "Z84C1510AEG" H 8300 3600 50  0001 C CNN "Manufacturer_Part_Number"
 	7    8300 3600
 	1    0    0    -1  
 $EndComp
@@ -262,6 +276,8 @@ F 0 "Z0" H 8675 2100 50  0000 C CNN
 F 1 "Z84C15QFP100" H 8675 2000 50  0000 C CNN
 F 2 "Package_QFP:LQFP-100_14x14mm_P0.5mm" H 8300 1900 50  0001 C CNN
 F 3 "" H 8300 1900 50  0001 C CNN
+F 4 "zilog" H 8300 1900 50  0001 C CNN "Manufacturer_Name"
+F 5 "Z84C1510AEG" H 8300 1900 50  0001 C CNN "Manufacturer_Part_Number"
 	6    8300 1900
 	1    0    0    -1  
 $EndComp
@@ -507,6 +523,8 @@ F 0 "Z0" H 5775 2150 50  0000 C CNN
 F 1 "Z84C15QFP100" H 5775 2050 50  0000 C CNN
 F 2 "Package_QFP:LQFP-100_14x14mm_P0.5mm" H 5450 1925 50  0001 C CNN
 F 3 "" H 5450 1925 50  0001 C CNN
+F 4 "zilog" H 5450 1925 50  0001 C CNN "Manufacturer_Name"
+F 5 "Z84C1510AEG" H 5450 1925 50  0001 C CNN "Manufacturer_Part_Number"
 	4    5450 1925
 	1    0    0    -1  
 $EndComp
@@ -658,6 +676,8 @@ F 0 "J303" H 10575 2950 50  0000 C CNN
 F 1 "Conn_02x06_Odd_Even" H 10575 2850 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical_SMD" H 10500 2600 50  0001 C CNN
 F 3 "~" H 10500 2600 50  0001 C CNN
+F 4 "Molex" H 10500 2600 50  0001 C CNN "Manufacturer_Name"
+F 5 "15-91-0120 " H 10500 2600 50  0001 C CNN "Manufacturer_Part_Number"
 	1    10500 2600
 	1    0    0    -1  
 $EndComp

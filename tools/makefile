@@ -1,12 +1,12 @@
 ifeq  ($(OS),Windows_NT)
 
-FREEROUTING := C:\ProgramFiles\Java\jdk-11.0.4\bin\java.exe -jar C:\home\JohnB\source\freeRoutingProj\dist\freeRouting.jar -s -asx -moi 20 -de  
-XCDIR := C:/home/JohnB/Dropbox/Ace-2019/KiCad
+FREEROUTING := C:\ProgramFiles\Java\jdk-11.0.4\bin\java.exe -jar C:\home\JohnB\source\freeRoutingProj\dist\freeRouting.jar -s -asx -moi 20 -fan -de
+XCDIR := "G:\My Drive/Ace-2019/KiCad"
 
 else
 
-FREEROUTING = java -jar $(HOME)/freeRoutingProj/dist/freeRouting.jar -s -asx -moi 20 -de  
-XCDIR = $(HOME)/Dropbox/Ace-2019/KiCad
+FREEROUTING = java -jar $(HOME)/freeRoutingProj/dist/freeRouting.jar -s -asx -moi 20 -fan -de
+XCDIR = $(HOME)/Google_Drive/Ace-2019/KiCad
 
 endif
 

@@ -51,9 +51,11 @@ L 74xx:74LS04 Z306
 U 1 1 659CE7DB
 P 2600 6700
 F 0 "Z306" H 2640 6425 50  0000 C CNN
-F 1 "SN74AHCT04N" H 2640 6325 50  0000 C CNN
+F 1 "74AHCT04" H 2640 6325 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2600 6700 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 2600 6700 50  0001 C CNN
+F 4 "Texas Instruments" H 2600 6700 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT04N" H 2600 6700 50  0001 C CNN "Manufacturer_Part_Number"
 	1    2600 6700
 	0    1    1    0   
 $EndComp
@@ -62,11 +64,11 @@ L 74xx:74LS30 Z407
 U 1 1 637166EE
 P 4450 5450
 F 0 "Z407" H 4475 5875 50  0000 C CNN
-F 1 "74AHCT30D" H 4475 5775 50  0000 C CNN
+F 1 "74HCT30" H 4475 5775 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 4450 5450 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS21" H 4450 5450 50  0001 C CNN
-F 4 "NEXPERIA" H 4450 5450 50  0001 C CNN "Manufacturer_Name"
-F 5 "74AHCT30D" H 4450 5450 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "Texas Instruments" H 4450 5450 50  0001 C CNN "Manufacturer_Name"
+F 5 "CD74HC30E" H 4450 5450 50  0001 C CNN "Manufacturer_Part_Number"
 	1    4450 5450
 	1    0    0    -1  
 $EndComp
@@ -78,6 +80,8 @@ F 0 "Z307" H 3600 5025 50  0000 C CNN
 F 1 "74AHCT139" H 3600 4925 50  0000 C CNN
 F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 3600 4600 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS139" H 3600 4600 50  0001 C CNN
+F 4 "Texas Instruments" H 3600 4600 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT139N " H 3600 4600 50  0001 C CNN "Manufacturer_Part_Number"
 	1    3600 4600
 	1    0    0    -1  
 $EndComp
@@ -89,6 +93,8 @@ F 0 "Z29" H 1905 6150 50  0000 C CNN
 F 1 "74AHCT138" H 1905 6050 50  0000 C CNN
 F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 1900 5350 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS138" H 1900 5350 50  0001 C CNN
+F 4 "Texas Instruments" H 1900 5350 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT138N" H 1900 5350 50  0001 C CNN "Manufacturer_Part_Number"
 	1    1900 5350
 	1    0    0    -1  
 $EndComp
@@ -100,6 +106,8 @@ F 0 "Z25" H 1950 3300 50  0000 C CNN
 F 1 "74AHCT02" H 1950 3200 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 1950 2950 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 1950 2950 50  0001 C CNN
+F 4 "Texas Instruments" H 1950 2950 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT02N" H 1950 2950 50  0001 C CNN "Manufacturer_Part_Number"
 	3    1950 2950
 	1    0    0    -1  
 $EndComp
@@ -115,6 +123,8 @@ F 0 "Z302" H 2650 1400 50  0000 C CNN
 F 1 "74HCT32" H 2650 1300 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2650 1100 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 2650 1100 50  0001 C CNN
+F 4 "Texas Instruments" H 2650 1100 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74HCT32NE4" H 2650 1100 50  0001 C CNN "Manufacturer_Part_Number"
 	1    2650 1100
 	1    0    0    -1  
 $EndComp
@@ -126,6 +136,8 @@ F 0 "Z302" H 2650 2050 50  0000 C CNN
 F 1 "74HCT32" H 2650 1950 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2650 1750 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 2650 1750 50  0001 C CNN
+F 4 "Texas Instruments" H 2650 1750 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74HCT32NE4" H 2650 1750 50  0001 C CNN "Manufacturer_Part_Number"
 	2    2650 1750
 	1    0    0    -1  
 $EndComp
@@ -137,6 +149,8 @@ F 0 "Z302" H 2650 2600 50  0000 C CNN
 F 1 "74HCT32" H 2650 2500 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2650 2300 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 2650 2300 50  0001 C CNN
+F 4 "Texas Instruments" H 2650 2300 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74HCT32NE4" H 2650 2300 50  0001 C CNN "Manufacturer_Part_Number"
 	3    2650 2300
 	1    0    0    -1  
 $EndComp
@@ -148,6 +162,8 @@ F 0 "Z302" H 2650 3150 50  0000 C CNN
 F 1 "74HCT32" H 2650 3050 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2650 2850 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 2650 2850 50  0001 C CNN
+F 4 "Texas Instruments" H 2650 2850 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74HCT32NE4" H 2650 2850 50  0001 C CNN "Manufacturer_Part_Number"
 	4    2650 2850
 	1    0    0    -1  
 $EndComp
@@ -163,6 +179,8 @@ F 0 "Z404" H 4525 6700 50  0000 C CNN
 F 1 "74HCT21" H 4525 6600 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 4500 6350 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS21" H 4500 6350 50  0001 C CNN
+F 4 "Texas Instruments" H 4500 6350 50  0001 C CNN "Manufacturer_Name"
+F 5 "CD74HCT21E" H 4500 6350 50  0001 C CNN "Manufacturer_Part_Number"
 	1    4500 6350
 	1    0    0    -1  
 $EndComp
@@ -347,8 +365,10 @@ U 1 1 602F15E6
 P 1300 3050
 F 0 "R426" V 1450 3050 50  0000 C CNN
 F 1 "400k" V 1550 3050 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 1230 3050 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P1.90mm_Vertical" V 1230 3050 50  0001 C CNN
 F 3 "" H 1300 3050 50  0001 C CNN
+F 4 "Vishay" H 1300 3050 50  0001 C CNN "Manufacturer_Name"
+F 5 "RN55D4003FB14" H 1300 3050 50  0001 C CNN "Manufacturer_Part_Number"
 	1    1300 3050
 	0    1    1    0   
 $EndComp

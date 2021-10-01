@@ -89,6 +89,8 @@ F 0 "Z20" H 5475 5155 50  0000 C CNN
 F 1 "74AHCT08" H 5475 5055 50  0000 C CNN
 F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5450 4800 50  0001 C CNN
 F 3 "http:/www.ti.com/lit/gpn/sn74AHCT08" H 5450 4800 50  0001 C CNN
+F 4 "Texas Instruments" H 5450 4800 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT08DR" H 5450 4800 50  0001 C CNN "Manufacturer_Part_Number"
 	1    5450 4800
 	1    0    0    -1  
 $EndComp
@@ -152,9 +154,11 @@ L 74xx:74LS11 Z21
 U 3 1 5F81D64B
 P 4550 2350
 F 0 "Z21" H 4560 2715 50  0000 C CNN
-F 1 "74AHCT11" H 4560 2615 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4550 2350 50  0001 C CNN
+F 1 "74HCT11" H 4560 2615 50  0000 C CNN
+F 2 "Package_SO:SO-14_3.9x8.65mm_P1.27mm" H 4550 2350 50  0001 C CNN
 F 3 "http:/www.ti.com/lit/gpn/sn74AHCT11" H 4550 2350 50  0001 C CNN
+F 4 "Nexperia" H 4550 2350 50  0001 C CNN "Manufacturer_Name"
+F 5 "74HCT11D,653" H 4550 2350 50  0001 C CNN "Manufacturer_Part_Number"
 	3    4550 2350
 	1    0    0    -1  
 $EndComp
@@ -234,13 +238,13 @@ L 4xxx:4040 Z303
 U 1 1 5F81D62F
 P 3050 2150
 F 0 "Z303" H 3050 3150 50  0000 C CNN
-F 1 "CD74HCT4040E" H 3050 3050 50  0000 C CNN
-F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 4300 2000 50  0001 L CNN
+F 1 "74HCT4040" H 3050 3050 50  0000 C CNN
+F 2 "Package_SO:SOP-16_3.9x9.9mm_P1.27mm" H 4300 2000 50  0001 L CNN
 F 3 "http://www.ti.com/lit/ds/symlink/cd74hct4040.pdf" H 4300 1900 50  0001 L CNN
 F 4 "CD74HCT4040E, 12-stage Binary Counter, Up Counter 5V, 16-Pin PDIP" H 4300 1800 50  0001 L CNN "Description"
 F 5 "5.08" H 4300 1500 50  0001 L CNN "Height"
 F 6 "Texas Instruments" H 4300 1600 50  0001 L CNN "Manufacturer_Name"
-F 7 "CD74HCT4040E" H 4300 2100 50  0001 L CNN "Manufacturer_Part_Number"
+F 7 "CD74HCT4040M96 " H 4300 2100 50  0001 L CNN "Manufacturer_Part_Number"
 F 8 "595-CD74HCT4040E" H 4300 1400 50  0001 L CNN "Mouser Part Number"
 F 9 "https://www.mouser.com/Search/Refine.aspx?Keyword=595-CD74HCT4040E" H 4300 1300 50  0001 L CNN "Mouser Price/Stock"
 F 10 "0635252P" H 4300 1700 50  0001 L CNN "RS Part Number"
@@ -253,13 +257,13 @@ L 4xxx:4040 Z304
 U 1 1 5F81D659
 P 3050 4800
 F 0 "Z304" H 3050 5800 50  0000 C CNN
-F 1 "CD74HCT4040E" H 3050 5700 50  0000 C CNN
-F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 4300 4650 50  0001 L CNN
+F 1 "74HCT4040" H 3050 5700 50  0000 C CNN
+F 2 "Package_SO:SOP-16_3.9x9.9mm_P1.27mm" H 4300 4650 50  0001 L CNN
 F 3 "http://www.ti.com/lit/ds/symlink/cd74hct4040.pdf" H 4300 4550 50  0001 L CNN
 F 4 "CD74HCT4040E, 12-stage Binary Counter, Up Counter 5V, 16-Pin PDIP" H 4300 4450 50  0001 L CNN "Description"
 F 5 "5.08" H 4300 4150 50  0001 L CNN "Height"
 F 6 "Texas Instruments" H 4300 4250 50  0001 L CNN "Manufacturer_Name"
-F 7 "CD74HCT4040E" H 4300 4750 50  0001 L CNN "Manufacturer_Part_Number"
+F 7 "CD74HCT4040M96 " H 4300 4750 50  0001 L CNN "Manufacturer_Part_Number"
 F 8 "595-CD74HCT4040E" H 4300 4050 50  0001 L CNN "Mouser Part Number"
 F 9 "https://www.mouser.com/Search/Refine.aspx?Keyword=595-CD74HCT4040E" H 4300 3950 50  0001 L CNN "Mouser Price/Stock"
 F 10 "0635252P" H 4300 4350 50  0001 L CNN "RS Part Number"
@@ -272,9 +276,11 @@ L 74xx:74LS11 Z21
 U 1 1 5F81D676
 P 4650 4700
 F 0 "Z21" H 4650 5040 50  0000 C CNN
-F 1 "74AHCT11" H 4650 4940 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4650 4700 50  0001 C CNN
+F 1 "74HCT11" H 4650 4940 50  0000 C CNN
+F 2 "Package_SO:SO-14_3.9x8.65mm_P1.27mm" H 4650 4700 50  0001 C CNN
 F 3 "http:/www.ti.com/lit/gpn/sn74AHCT11" H 4650 4700 50  0001 C CNN
+F 4 "Nexperia" H 4650 4700 50  0001 C CNN "Manufacturer_Name"
+F 5 "74HCT11D,653" H 4650 4700 50  0001 C CNN "Manufacturer_Part_Number"
 	1    4650 4700
 	1    0    0    -1  
 $EndComp
@@ -283,9 +289,11 @@ L 74xx:74LS11 Z21
 U 2 1 5F81D694
 P 6250 4300
 F 0 "Z21" H 6270 4670 50  0000 C CNN
-F 1 "74AHCT11" H 6270 4570 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6250 4300 50  0001 C CNN
+F 1 "74HCT11" H 6270 4570 50  0000 C CNN
+F 2 "Package_SO:SO-14_3.9x8.65mm_P1.27mm" H 6250 4300 50  0001 C CNN
 F 3 "http:/www.ti.com/lit/gpn/sn74AHCT11" H 6250 4300 50  0001 C CNN
+F 4 "Nexperia" H 6250 4300 50  0001 C CNN "Manufacturer_Name"
+F 5 "74HCT11D,653" H 6250 4300 50  0001 C CNN "Manufacturer_Part_Number"
 	2    6250 4300
 	1    0    0    -1  
 $EndComp

@@ -18,9 +18,11 @@ L SamacSys_Parts:163-179PH-EX POWER-9V-DC1
 U 1 1 613486B0
 P 600 1500
 F 0 "POWER-9V-DC1" H 700 1100 50  0000 C CNN
-F 1 "Conn_01x02" H 700 1250 50  0000 C CNN
+F 1 "POWERIN" H 700 1250 50  0000 C CNN
 F 2 "SamacSys_Parts:163179PHEX" H 600 1500 50  0001 C CNN
 F 3 "" H 600 1500 50  0001 C CNN
+F 4 "Kobiconn" H 600 1500 50  0001 C CNN "Manufacturer_Name"
+F 5 "163-179PH-EX " H 600 1500 50  0001 C CNN "Manufacturer_Part_Number"
 	1    600  1500
 	1    0    0    1   
 $EndComp
@@ -129,9 +131,11 @@ L 74xx:74LS74 Z27
 U 3 1 62A1CDDB
 P 7350 3500
 F 0 "Z27" H 7100 3550 50  0000 R CNN
-F 1 "SN74AHCT74N" H 7100 3500 50  0000 R CNN
+F 1 "74AHCT74" H 7100 3500 50  0000 R CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 7350 3500 50  0001 C CNN
 F 3 "74xx/74hc_hct74.pdf" H 7350 3500 50  0001 C CNN
+F 4 "Texas Instruments" H 7350 3500 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT74N" H 7350 3500 50  0001 C CNN "Manufacturer_Part_Number"
 	3    7350 3500
 	-1   0    0    -1  
 $EndComp
@@ -140,11 +144,11 @@ L 74xx:74LS30 Z407
 U 2 1 6372EB23
 P 2500 6150
 F 0 "Z407" H 2250 6200 50  0000 R CNN
-F 1 "74AHCT30D" H 2250 6150 50  0000 R CNN
+F 1 "74HCT30" H 2250 6150 50  0000 R CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2500 6150 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS21" H 2500 6150 50  0001 C CNN
-F 4 "NEXPERIA" H 2500 6150 50  0001 C CNN "Manufacturer_Name"
-F 5 "74AHCT30D" H 2500 6150 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "Texas Instruments" H 2500 6150 50  0001 C CNN "Manufacturer_Name"
+F 5 "CD74HC30E" H 2500 6150 50  0001 C CNN "Manufacturer_Part_Number"
 	2    2500 6150
 	-1   0    0    -1  
 $EndComp
@@ -156,6 +160,8 @@ F 0 "Z307" H 2450 4850 50  0000 R CNN
 F 1 "74AHCT139" H 2450 4800 50  0000 R CNN
 F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 2700 4800 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS139" H 2700 4800 50  0001 C CNN
+F 4 "Texas Instruments" H 2700 4800 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT139N " H 2700 4800 50  0001 C CNN "Manufacturer_Part_Number"
 	3    2700 4800
 	-1   0    0    -1  
 $EndComp
@@ -164,9 +170,11 @@ L 74xx:74LS11 Z22
 U 4 1 6989826C
 P 3600 3500
 F 0 "Z22" H 3350 3450 50  0000 R CNN
-F 1 "74AHCT11" H 3350 3500 50  0000 R CNN
+F 1 "74HCT11" H 3350 3500 50  0000 R CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3600 3500 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 3600 3500 50  0001 C CNN
+F 4 "Texas Instruments" H 3600 3500 50  0001 C CNN "Manufacturer_Name"
+F 5 "CD74HCT11M" H 3600 3500 50  0001 C CNN "Manufacturer_Part_Number"
 	4    3600 3500
 	-1   0    0    -1  
 $EndComp
@@ -196,6 +204,8 @@ F 0 "C12" H 2850 1380 50  0000 R CNN
 F 1 "100uf" H 2850 1480 50  0000 R CNN
 F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 3038 1325 50  0001 C CNN
 F 3 "" H 3000 1475 50  0001 C CNN
+F 4 "Wurth Elektronik" H 3000 1475 50  0001 C CNN "Manufacturer_Name"
+F 5 "860010372006" H 3000 1475 50  0001 C CNN "Manufacturer_Part_Number"
 	1    3000 1475
 	-1   0    0    -1  
 $EndComp
@@ -351,6 +361,8 @@ F 0 "L1" V 2250 1070 50  0000 C CNN
 F 1 "100 nH" V 2150 1070 50  0000 C CNN
 F 2 "SamacSys_Parts:KEMET_SBT_0260T" H 2025 1100 50  0001 C CNN
 F 3 "" H 2025 1100 50  0001 C CNN
+F 4 "KEMET" H 2025 1100 50  0001 C CNN "Manufacturer_Name"
+F 5 "SBT-0260TF" H 2025 1100 50  0001 C CNN "Manufacturer_Part_Number"
 	1    2025 1100
 	0    -1   -1   0   
 $EndComp
@@ -359,9 +371,11 @@ L 74xx:74LS02 Z24
 U 5 1 629F3A79
 P 5350 3500
 F 0 "Z24" H 5100 3450 50  0000 R CNN
-F 1 "SN74AHCT02N" H 5100 3500 50  0000 R CNN
+F 1 "74AHCT02" H 5100 3500 50  0000 R CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 5350 3500 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 5350 3500 50  0001 C CNN
+F 4 "Texas Instruments" H 5350 3500 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT02N" H 5350 3500 50  0001 C CNN "Manufacturer_Part_Number"
 	5    5350 3500
 	-1   0    0    -1  
 $EndComp
@@ -373,6 +387,8 @@ F 0 "PR1" H 2475 1275 50  0000 C CNN
 F 1 "LM7805_TO220" H 2475 1175 50  0000 C CNN
 F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 2450 1225 50  0001 C CIN
 F 3 "http://www.fairchildsemi.com/ds/LM/LM7805.pdf" H 2450 950 50  0001 C CNN
+F 4 "Texas Instruments" H 2450 1000 50  0001 C CNN "Manufacturer_Name"
+F 5 "LM7805CT/NOPB" H 2450 1000 50  0001 C CNN "Manufacturer_Part_Number"
 	1    2450 1000
 	1    0    0    -1  
 $EndComp
@@ -384,6 +400,8 @@ F 0 "Z19" H 750 3450 50  0000 R CNN
 F 1 "74AHCT00" H 750 3500 50  0000 R CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 1000 3500 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74ls00" H 1000 3500 50  0001 C CNN
+F 4 "Texas Instruments" H 1000 3500 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT00NE4" H 1000 3500 50  0001 C CNN "Manufacturer_Part_Number"
 	5    1000 3500
 	-1   0    0    -1  
 $EndComp
@@ -392,9 +410,11 @@ L 74xx:74LS11 Z21
 U 4 1 69DE0CE8
 P 2750 3500
 F 0 "Z21" H 2500 3450 50  0000 R CNN
-F 1 "74AHCT11" H 2500 3500 50  0000 R CNN
+F 1 "74HCT11" H 2500 3500 50  0000 R CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 2750 3500 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 2750 3500 50  0001 C CNN
+F 4 "Texas Instruments" H 2750 3500 50  0001 C CNN "Manufacturer_Name"
+F 5 "CD74HCT11M" H 2750 3500 50  0001 C CNN "Manufacturer_Part_Number"
 	4    2750 3500
 	-1   0    0    -1  
 $EndComp
@@ -406,6 +426,8 @@ F 0 "Z25" H 6100 3550 50  0000 R CNN
 F 1 "74AHCT02" H 6100 3500 50  0000 R CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 6350 3500 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74ls02" H 6350 3500 50  0001 C CNN
+F 4 "Texas Instruments" H 6350 3500 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT02N" H 6350 3500 50  0001 C CNN "Manufacturer_Part_Number"
 	5    6350 3500
 	-1   0    0    -1  
 $EndComp
@@ -414,9 +436,11 @@ L 74xx:74LS04 Z306
 U 7 1 64E78705
 P 1700 4800
 F 0 "Z306" H 1450 4850 50  0000 R CNN
-F 1 "SN74AHCT04N" H 1450 4800 50  0000 R CNN
+F 1 "74AHCT04" H 1450 4800 50  0000 R CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 1700 4800 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS04" H 1700 4800 50  0001 C CNN
+F 4 "Texas Instruments" H 1700 4800 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT04N" H 1700 4800 50  0001 C CNN "Manufacturer_Part_Number"
 	7    1700 4800
 	-1   0    0    -1  
 $EndComp
@@ -426,14 +450,14 @@ U 1 1 5F75CDD3
 P 2250 1500
 F 0 "C11" H 2375 1575 50  0000 L CNN
 F 1 "100uf" H 2375 1475 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D4.0mm_P1.50mm" H 2600 1550 50  0001 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 2600 1550 50  0001 L CNN
 F 3 "" H 2600 1450 50  0001 L CNN
 F 4 "Vishay 100nF Multilayer Ceramic Capacitor MLCC 50V dc +~-10% X7R Dielectric Radial, Max. Temp. +125C" H 2600 1350 50  0001 L CNN "Description"
 F 5 "3" H 2600 1250 50  0001 L CNN "Height"
 F 6 "8523267" H 2600 1150 50  0001 L CNN "RS Part Number"
 F 7 "http:/uk.rs-online.com/web/p/products/8523267" H 2600 1050 50  0001 L CNN "RS Price/Stock"
-F 8 "Vishay" H 2600 950 50  0001 L CNN "Manufacturer_Name"
-F 9 "K104K10X7RF53H5" H 2600 850 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "Wurth Elektronik" H 2600 950 50  0001 L CNN "Manufacturer_Name"
+F 9 "860010372006" H 2600 850 50  0001 L CNN "Manufacturer_Part_Number"
 F 10 "70122995" H 2600 750 50  0001 L CNN "Allied_Number"
 	1    2250 1500
 	1    0    0    -1  
@@ -464,6 +488,8 @@ F 0 "C9" H 1450 1435 50  0000 R CNN
 F 1 "100uf" H 1450 1535 50  0000 R CNN
 F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 1613 1350 50  0001 C CNN
 F 3 "" H 1575 1500 50  0001 C CNN
+F 4 "Wurth Elektronik" H 1575 1500 50  0001 C CNN "Manufacturer_Name"
+F 5 "860010372006" H 1575 1500 50  0001 C CNN "Manufacturer_Part_Number"
 	1    1575 1500
 	-1   0    0    -1  
 $EndComp
@@ -480,6 +506,8 @@ F 0 "Z20" H 1600 3450 50  0000 R CNN
 F 1 "74AHCT08" H 1600 3500 50  0000 R CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 1875 3500 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS08" H 1875 3500 50  0001 C CNN
+F 4 "Texas Instruments" H 1875 3500 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74AHCT08N" H 1875 3500 50  0001 C CNN "Manufacturer_Part_Number"
 	5    1875 3500
 	-1   0    0    -1  
 $EndComp
@@ -488,11 +516,11 @@ L 74xx:74LS30 Z308
 U 2 1 60D32FBA
 P 3600 4800
 F 0 "Z308" H 3350 4850 50  0000 R CNN
-F 1 "74AHCT30D" H 3350 4800 50  0000 R CNN
+F 1 "74HCT30" H 3350 4800 50  0000 R CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3600 4800 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS30" H 3600 4800 50  0001 C CNN
-F 4 "NEXPERIA" H 3600 4800 50  0001 C CNN "Manufacturer_Name"
-F 5 "74AHCT30D" H 3600 4800 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "Texas Instruments" H 3600 4800 50  0001 C CNN "Manufacturer_Name"
+F 5 "CD74HC30E" H 3600 4800 50  0001 C CNN "Manufacturer_Part_Number"
 	2    3600 4800
 	-1   0    0    -1  
 $EndComp
@@ -532,6 +560,8 @@ F 0 "Z302" H 900 4850 50  0000 R CNN
 F 1 "74HCT32" H 900 4800 50  0000 R CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 1150 4800 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 1150 4800 50  0001 C CNN
+F 4 "Texas Instruments" H 1150 4800 50  0001 C CNN "Manufacturer_Name"
+F 5 "SN74HCT32NE4" H 1150 4800 50  0001 C CNN "Manufacturer_Part_Number"
 	5    1150 4800
 	1    0    0    -1  
 $EndComp
@@ -593,6 +623,8 @@ F 0 "Z404" H 1950 6200 50  0000 L CNN
 F 1 "74HCT21" H 1950 6150 50  0000 L CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 1700 6150 50  0001 C CNN
 F 3 "74xx\\74LS393.pdf" H 1700 6150 50  0001 C CNN
+F 4 "Texas Instruments" H 1700 6150 50  0001 C CNN "Manufacturer_Name"
+F 5 "CD74HCT21E" H 1700 6150 50  0001 C CNN "Manufacturer_Part_Number"
 	3    1700 6150
 	1    0    0    -1  
 $EndComp
@@ -607,9 +639,11 @@ L 74xx:74LS393 Z400
 U 3 1 60C7F376
 P 1150 6150
 F 0 "Z400" H 900 6200 50  0000 R CNN
-F 1 "74LS393" H 900 6150 50  0000 R CNN
+F 1 "74HCT393" H 900 6150 50  0000 R CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 1150 6150 50  0001 C CNN
 F 3 "74xx\\74LS393.pdf" H 1150 6150 50  0001 C CNN
+F 4 "Texas Instruments" H 1150 6150 50  0001 C CNN "Manufacturer_Name"
+F 5 "CD74HCT393E " H 1150 6150 50  0001 C CNN "Manufacturer_Part_Number"
 	3    1150 6150
 	1    0    0    -1  
 $EndComp

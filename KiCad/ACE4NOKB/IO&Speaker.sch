@@ -21,10 +21,10 @@ L 74xx:74LS367 Z14
 U 1 1 70940791
 P 4750 4050
 F 0 "Z14" V 4580 3510 50  0000 R CNN
-F 1 "SN74LS367AN" V 5100 3845 50  0000 R CNN
-F 2 "Package_DIP:DIP-16_W7.62mm" H 4750 4050 50  0001 C CNN
+F 1 "74HCT367" V 5100 3845 50  0000 R CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket" H 4750 4050 50  0001 C CNN
 F 3 "" H 4750 4050 50  0001 C CNN
-F 4 "SN74LS367AN" H 4750 4050 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "CD74HCT367M96" H 4750 4050 50  0001 C CNN "Manufacturer_Part_Number"
 F 5 "Texas Instruments" H 4750 4050 50  0001 C CNN "Manufacturer_Name"
 	1    4750 4050
 	0    -1   -1   0   
@@ -101,15 +101,15 @@ Wire Wire Line
 Wire Wire Line
 	9725 2825 9725 2650
 $Comp
-L Connector_Generic:Conn_01x02 SPK1
+L Connector_Generic:Conn_01x02 JSPK1
 U 1 1 5DD9F9BA
 P 9925 2925
-F 0 "SPK1" H 10025 2895 51  0000 L BNN
-F 1 "SPk1" H 9895 2980 50  0000 L BNN
+F 0 "JSPK1" H 10025 2895 51  0000 L BNN
+F 1 "SPK1" H 9895 2980 50  0000 L BNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9925 2925 50  0001 C CNN
 F 3 "" H 9925 2925 50  0001 C CNN
-F 4 "SAMTEC" H 9925 2925 50  0001 C CNN "Manufacturer_Name"
-F 5 "TSW–101–10–T–D–RA" H 9925 2925 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "Amphenol FCI" H 9925 2925 50  0001 C CNN "Manufacturer_Name"
+F 5 "G800W306018EU" H 9925 2925 50  0001 C CNN "Manufacturer_Part_Number"
 	1    9925 2925
 	1    0    0    1   
 $EndComp
@@ -123,7 +123,7 @@ L 74xx:74LS74 Z27
 U 1 1 62A1631E
 P 8025 2250
 F 0 "Z27" H 8235 2510 50  0000 C CNN
-F 1 "SN74AHCT74N" H 7795 2500 50  0000 C CNN
+F 1 "74AHCT74" H 7795 2500 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 8025 2250 50  0001 C CNN
 F 3 "74xx/74hc_hct74.pdf" H 8025 2250 50  0001 C CNN
 F 4 "SN74AHCT74N" H 8025 2250 50  0001 C CNN "Manufacturer_Part_Number"
@@ -152,8 +152,8 @@ F 0 "D9" V 3220 4700 50  0000 L CNN
 F 1 "1N4148" V 3300 4835 50  0001 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 3300 4575 50  0001 C CNN
 F 3 "" H 3300 4750 50  0001 C CNN
-F 4 "ON Semiconductor" H 3300 4750 50  0001 C CNN "Manufacturer_Name"
-F 5 "1N4148" H 3300 4750 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "Vishay Semiconductors" H 3300 4750 50  0001 C CNN "Manufacturer_Name"
+F 5 "1N4148TR" H 3300 4750 50  0001 C CNN "Manufacturer_Part_Number"
 	1    3300 4750
 	1    0    0    -1  
 $EndComp
@@ -165,8 +165,8 @@ F 0 "D8" V 3220 4800 50  0000 L CNN
 F 1 "1N4148" V 3300 4935 50  0001 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 3300 4675 50  0001 C CNN
 F 3 "" H 3300 4850 50  0001 C CNN
-F 4 "ON Semiconductor" H 3300 4850 50  0001 C CNN "Manufacturer_Name"
-F 5 "1N4148" H 3300 4850 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "Vishay Semiconductors" H 3300 4850 50  0001 C CNN "Manufacturer_Name"
+F 5 "1N4148TR" H 3300 4850 50  0001 C CNN "Manufacturer_Part_Number"
 	1    3300 4850
 	1    0    0    -1  
 $EndComp
@@ -194,7 +194,7 @@ Wire Wire Line
 Wire Wire Line
 	9500 2650 9500 2550
 Wire Wire Line
-	9350 2050 9300 2050
+	9700 2050 9300 2050
 Wire Wire Line
 	6700 4150 6600 4150
 Wire Wire Line
@@ -273,8 +273,8 @@ F 0 "KEYBOARD1" H 3825 5500 50  0000 C CNN
 F 1 "Conn_02x08_Odd_Even" H 3825 5400 50  0000 C CNN
 F 2 "Connector_IDC:IDC-Header_2x08_P2.54mm_Vertical" H 3750 4950 50  0001 C CNN
 F 3 "" H 3750 4950 50  0001 C CNN
-F 4 "IDC" H 3750 4950 50  0001 C CNN "Manufacturer_Name"
-F 5 "" H 3750 4950 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "Amphenol FCI" H 3750 4950 50  0001 C CNN "Manufacturer_Name"
+F 5 "10129381-908002BLF" H 3750 4950 50  0001 C CNN "Manufacturer_Part_Number"
 	1    3750 4950
 	1    0    0    -1  
 $EndComp
@@ -286,8 +286,8 @@ F 0 "D3" H 3325 5175 50  0000 C CNN
 F 1 "1N4148" V 3300 5435 50  0001 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 3300 5175 50  0001 C CNN
 F 3 "" H 3300 5350 50  0001 C CNN
-F 4 "ON Semiconductor" H 3300 5350 50  0001 C CNN "Manufacturer_Name"
-F 5 "1N4148" H 3300 5350 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "Vishay Semiconductors" H 3300 5350 50  0001 C CNN "Manufacturer_Name"
+F 5 "1N4148TR" H 3300 5350 50  0001 C CNN "Manufacturer_Part_Number"
 	1    3300 5350
 	1    0    0    -1  
 $EndComp
@@ -299,8 +299,8 @@ F 0 "D4" V 3220 5200 50  0000 L CNN
 F 1 "1N4148" V 3300 5335 50  0001 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 3300 5075 50  0001 C CNN
 F 3 "" H 3300 5250 50  0001 C CNN
-F 4 "ON Semiconductor" H 3300 5250 50  0001 C CNN "Manufacturer_Name"
-F 5 "1N4148" H 3300 5250 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "Vishay Semiconductors" H 3300 5250 50  0001 C CNN "Manufacturer_Name"
+F 5 "1N4148TR" H 3300 5250 50  0001 C CNN "Manufacturer_Part_Number"
 	1    3300 5250
 	1    0    0    -1  
 $EndComp
@@ -312,8 +312,8 @@ F 0 "D5" V 3220 5100 50  0000 L CNN
 F 1 "1N4148" V 3300 5235 50  0001 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 3300 4975 50  0001 C CNN
 F 3 "" H 3300 5150 50  0001 C CNN
-F 4 "ON Semiconductor" H 3300 5150 50  0001 C CNN "Manufacturer_Name"
-F 5 "1N4148" H 3300 5150 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "Vishay Semiconductors" H 3300 5150 50  0001 C CNN "Manufacturer_Name"
+F 5 "1N4148TR" H 3300 5150 50  0001 C CNN "Manufacturer_Part_Number"
 	1    3300 5150
 	1    0    0    -1  
 $EndComp
@@ -325,8 +325,8 @@ F 0 "D6" V 3220 5000 50  0000 L CNN
 F 1 "1N4148" V 3300 5135 50  0001 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 3300 4875 50  0001 C CNN
 F 3 "" H 3300 5050 50  0001 C CNN
-F 4 "ON Semiconductor" H 3300 5050 50  0001 C CNN "Manufacturer_Name"
-F 5 "1N4148" H 3300 5050 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "Vishay Semiconductors" H 3300 5050 50  0001 C CNN "Manufacturer_Name"
+F 5 "1N4148TR" H 3300 5050 50  0001 C CNN "Manufacturer_Part_Number"
 	1    3300 5050
 	1    0    0    -1  
 $EndComp
@@ -338,8 +338,8 @@ F 0 "D7" V 3220 4900 50  0000 L CNN
 F 1 "1N4148" V 3300 5035 50  0001 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 3300 4775 50  0001 C CNN
 F 3 "" H 3300 4950 50  0001 C CNN
-F 4 "ON Semiconductor" H 3300 4950 50  0001 C CNN "Manufacturer_Name"
-F 5 "1N4148" H 3300 4950 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "Vishay Semiconductors" H 3300 4950 50  0001 C CNN "Manufacturer_Name"
+F 5 "1N4148TR" H 3300 4950 50  0001 C CNN "Manufacturer_Part_Number"
 	1    3300 4950
 	1    0    0    -1  
 $EndComp
@@ -351,8 +351,8 @@ F 0 "D10" H 3325 4825 50  0000 C CNN
 F 1 "1N4148" V 3300 4735 50  0001 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 3300 4475 50  0001 C CNN
 F 3 "" H 3300 4650 50  0001 C CNN
-F 4 "ON Semiconductor" H 3300 4650 50  0001 C CNN "Manufacturer_Name"
-F 5 "1N4148" H 3300 4650 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "Vishay Semiconductors" H 3300 4650 50  0001 C CNN "Manufacturer_Name"
+F 5 "1N4148TR" H 3300 4650 50  0001 C CNN "Manufacturer_Part_Number"
 	1    3300 4650
 	1    0    0    -1  
 $EndComp
@@ -383,16 +383,16 @@ F 5 "MBA02040C2202FRP00" H 8550 3950 50  0001 C CNN "Manufacturer_Part_Number"
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 AUDIO-OUT1
+L Connector_Generic:Conn_01x02 JAUDIO-OUT1
 U 1 1 C18BD510
-P 9550 2050
-F 0 "AUDIO-OUT1" H 9650 2100 51  0000 L CNN
-F 1 "332-02" H 9650 1950 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9550 2050 50  0001 C CNN
-F 3 "" H 9550 2050 50  0001 C CNN
-F 4 "SAMTEC" H 9550 2050 50  0001 C CNN "Manufacturer_Name"
-F 5 "TSW–101–10–T–D–RA" H 9550 2050 50  0001 C CNN "Manufacturer_Part_Number"
-	1    9550 2050
+P 9900 2050
+F 0 "JAUDIO-OUT1" H 10000 2100 51  0000 L CNN
+F 1 "332-02" H 10000 1950 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 9900 2050 50  0001 C CNN
+F 3 "" H 9900 2050 50  0001 C CNN
+F 4 "Amphenol FCI" H 9900 2050 50  0001 C CNN "Manufacturer_Name"
+F 5 "G800W306018EU" H 9900 2050 50  0001 C CNN "Manufacturer_Part_Number"
+	1    9900 2050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -403,8 +403,8 @@ F 0 "D2" V 9175 3025 50  0000 L CNN
 F 1 "1N4148" V 9275 3025 50  0000 L CNN
 F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_AnodeUp" H 9250 2725 50  0001 C CNN
 F 3 "" H 9250 2900 50  0001 C CNN
-F 4 "ON Semiconductor" H 9250 2900 50  0001 C CNN "Manufacturer_Name"
-F 5 "1N4148" H 9250 2900 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "Vishay Semiconductors" H 9250 2900 50  0001 C CNN "Manufacturer_Name"
+F 5 "1N4148TR" H 9250 2900 50  0001 C CNN "Manufacturer_Part_Number"
 	1    9250 2900
 	0    1    1    0   
 $EndComp
@@ -413,7 +413,7 @@ L 74xx:74LS02 Z24
 U 2 1 620E3DB8
 P 7000 4050
 F 0 "Z24" H 7025 4425 50  0000 C CNN
-F 1 "SN74AHCT02N" H 7025 4325 50  0000 C CNN
+F 1 "74AHCT02" H 7025 4325 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 7000 4050 50  0001 C CNN
 F 3 "" H 7000 4050 50  0001 C CNN
 F 4 "SN74AHCT02N" H 7000 4050 50  0001 C CNN "Manufacturer_Part_Number"
@@ -426,7 +426,7 @@ L 74xx:74LS02 Z24
 U 3 1 620EA48A
 P 8025 3150
 F 0 "Z24" H 8050 3525 50  0000 C CNN
-F 1 "SN74AHCT02N" H 8050 3425 50  0000 C CNN
+F 1 "74AHCT02" H 8050 3425 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 8025 3150 50  0001 C CNN
 F 3 "" H 8025 3150 50  0001 C CNN
 F 4 "SN74AHCT02N" H 8025 3150 50  0001 C CNN "Manufacturer_Part_Number"
@@ -439,7 +439,7 @@ L 74xx:74LS02 Z24
 U 4 1 620F1165
 P 8025 3950
 F 0 "Z24" H 8050 3675 50  0000 C CNN
-F 1 "SN74AHCT02N" H 8050 3575 50  0000 C CNN
+F 1 "74AHCT02" H 8050 3575 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 8025 3950 50  0001 C CNN
 F 3 "" H 8025 3950 50  0001 C CNN
 F 4 "SN74AHCT02N" H 8025 3950 50  0001 C CNN "Manufacturer_Part_Number"
@@ -456,7 +456,7 @@ L 74xx:74LS02 Z24
 U 1 1 620DC700
 P 7000 3050
 F 0 "Z24" H 7025 3425 50  0000 C CNN
-F 1 "SN74AHCT02N" H 7025 3325 50  0000 C CNN
+F 1 "74AHCT02" H 7025 3325 50  0000 C CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 7000 3050 50  0001 C CNN
 F 3 "" H 7000 3050 50  0001 C CNN
 F 4 "SN74AHCT02N" H 7000 3050 50  0001 C CNN "Manufacturer_Part_Number"
@@ -478,7 +478,7 @@ L 74xx:74LS04 Z306
 U 3 1 64E6C736
 P 7425 4450
 F 0 "Z306" V 7350 4675 50  0000 L CNN
-F 1 "SN74AHCT04N" V 7450 4675 50  0000 L CNN
+F 1 "74AHCT04" V 7450 4675 50  0000 L CNN
 F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 7425 4450 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/snSN74AHCT04" H 7425 4450 50  0001 C CNN
 F 4 "SN74AHCT04N" H 7425 4450 50  0001 C CNN "Manufacturer_Part_Number"
@@ -604,13 +604,13 @@ F 0 "C5" H 8950 3000 50  0000 R CNN
 F 1 "47pF" H 8950 2950 50  0000 R CNN
 F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 9050 2950 50  0001 C CNN
 F 3 "" H 9050 2950 50  0001 C CNN
-F 4 "tdk" H 9050 2950 50  0001 C CNN "Manufacturer_Name"
-F 5 "FA18C0G1H470JNU00" H 9050 2950 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "Vishay" H 9050 2950 50  0001 C CNN "Manufacturer_Name"
+F 5 "1C10C0G470J050B" H 9050 2950 50  0001 C CNN "Manufacturer_Part_Number"
 	1    9050 2950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9050 2150 9350 2150
+	9050 2150 9700 2150
 Wire Wire Line
 	8950 2150 9050 2150
 Connection ~ 9050 2150
@@ -622,7 +622,7 @@ U 1 1 5E9F8ADD
 P 8850 2150
 F 0 "C6" V 8600 2150 50  0000 C CNN
 F 1 "47nF" V 8700 2150 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 8850 2150 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 8850 2150 50  0001 C CNN
 F 3 "" H 8850 2150 50  0001 C CNN
 F 4 "vishay" H 8850 2150 50  0001 C CNN "Manufacturer_Name"
 F 5 "K473K15X7RF5TL2" H 8850 2150 50  0001 C CNN "Manufacturer_Part_Number"
@@ -718,7 +718,7 @@ U 1 1 2D83036D
 P 4850 6125
 F 0 "C3" V 5075 6100 50  0000 C CNN
 F 1 "47nF" V 4975 6100 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 4850 6125 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 4850 6125 50  0001 C CNN
 F 3 "" H 4850 6125 50  0001 C CNN
 F 4 "vishay" H 4850 6125 50  0001 C CNN "Manufacturer_Name"
 F 5 "K473K15X7RF5TL2" H 4850 6125 50  0001 C CNN "Manufacturer_Part_Number"
@@ -727,15 +727,15 @@ F 6 "4" H 4850 6125 50  0001 C CNN "Height"
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 AUDIO-IN1
+L Connector_Generic:Conn_01x02 JAUDIO-IN1
 U 1 1 10A0DA0D
 P 4850 6880
-F 0 "AUDIO-IN1" H 4970 6905 51  0000 L CNN
+F 0 "JAUDIO-IN1" H 4970 6905 51  0000 L CNN
 F 1 "332-02" H 4970 6805 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4850 6880 50  0001 C CNN
 F 3 "" H 4850 6880 50  0001 C CNN
-F 4 "SAMTEC" H 4850 6880 50  0001 C CNN "Manufacturer_Name"
-F 5 "TSW–101–10–T–D–RA" H 4850 6880 50  0001 C CNN "Manufacturer_Part_Number"
+F 4 "Amphenol FCI" H 4850 6880 50  0001 C CNN "Manufacturer_Name"
+F 5 "G800W306018EU" H 4850 6880 50  0001 C CNN "Manufacturer_Part_Number"
 	1    4850 6880
 	0    -1   1    0   
 $EndComp
