@@ -399,11 +399,11 @@ Wire Wire Line
 Text Label 1700 4150 2    50   ~ 0
 ~M1
 Wire Wire Line
-	1700 4150 1550 4150
+	1700 4150 750  4150
 Wire Wire Line
-	1550 4150 1550 4550
+	750  4150 750  4550
 Wire Wire Line
-	1550 4550 1700 4550
+	750  4550 1700 4550
 Wire Wire Line
 	1700 4350 1450 4350
 $Comp
