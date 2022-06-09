@@ -1,0 +1,39 @@
+1     0000  F3          	di
+2     0001  21 00 2C    	ld hl,02C00h
+3     0004  3E 00       	ld a,0
+4     0006              char2:
+5     0006  06 08       	ld b,8
+6     0008              char1:
+7     0008  77          	ld (hl),a
+8     0009  23          	inc hl
+9     000A  10 FC       	djnz char1
+10    000C  3C          	inc a
+11    000D  FE 80       	cp 080h
+12    000F  20 F5       	jr nz,char2
+13    0011              
+14    0011  21 00 24    	ld hl,2400h
+15    0014  0E 18       	ld c,24
+16    0016              scry:
+17    0016  06 20       	ld b,32
+18    0018              scrx:
+19    0018  75          	ld (hl),l
+20    0019  23          	inc hl
+21    001A  10 FC       	djnz scrx
+22    001C  0D          	dec c
+23    001D  20 F7       	jr nz,scry
+24    001F              
+25    001F  01 0A 00    	ld	bc,10
+26    0022  21 00 24    	ld hl,2400h
+27    0025              noper:
+28    0025  03          	inc bc
+29    0026  3E 00       	ld  a,0
+30    0028  B8          	cp b
+31    0029  20 04       	jr nz,skip
+32    002B  B9          	cp c
+33    002C  20 01       	jr nz,skip
+34    002E  34          	inc (hl)
+35    002F              skip:
+36    002F  00          	nop
+37    0030  18 F3       	jr noper
+38    0032              
+39    0032              

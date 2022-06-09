@@ -1,0 +1,111 @@
+	INCLUDE "IODEFS.H"
+
+	PUBLIC 	FAOUT,FHOUTA,FQUADOUT,FXY2SCR
+	SEGMENT CODE ; MAKE IT THE CURRENT SECTION
+
+FAOUT:	; POS in IX
+	CP 0AH
+	JR C,$DIGIT
+	SUB 0AH
+	ADD 'A'
+	JR $COUT
+$DIGIT
+	ADD '0'
+$COUT
+;	LD IX,POS
+	LD (IX),A
+
+	ret
+
+
+FHOUTA: ;POS in IX, DIN in B
+	PUSH 	AF
+	PUSH	IX
+
+	LD	A,B
+
+	SRL A
+	SRL A
+	SRL A
+	SRL A
+
+	call FAOUT
+
+	LD A,B
+	AND 0FH
+
+	inc IX
+	call FAOUT	
+
+	POP	IX
+	POP AF
+	ret
+
+FXY2SCR:	;MACRO XPOS in B, YPOS in C
+	PUSH AF
+	PUSH HL
+
+	LD 	A,C
+	SRL A
+	SRL A
+	SRL A
+	ADD VIDSTARTLOC>>8 ; add screen start
+	LD	H,A
+
+
+	LD 	A,C
+	SLA A
+	SLA A
+	SLA A
+	SLA A
+	SLA A
+
+	ADD B
+	LD	L,A
+
+	push	HL
+	pop		IX
+
+	POP HL
+	POP AF
+	ret	
+
+
+FQUADOUT:	;MACRO XPOS in B , POS in C, PTR in HL
+	PUSH 	AF
+	PUSH	BC
+	PUSH	IX
+	PUSH	IY
+
+	CALL FXY2SCR
+
+;	LD		IY,BC
+	PUSH	HL
+	POP		IY
+
+	LD		B,(IY+3)
+	CALL	FHOUTA	
+
+	LD		B,(IY+2)
+	INC		IX
+	INC		IX
+	CALL	FHOUTA
+
+	LD		B,(IY+1)
+	INC		IX
+	INC		IX
+	CALL	FHOUTA
+	
+	LD		B,(IY)
+	INC		IX
+	INC		IX
+	CALL	FHOUTA
+
+	POP		IY
+	POP		IX
+	POP		BC
+	POP 	AF
+
+	ret
+
+

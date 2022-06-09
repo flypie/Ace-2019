@@ -1,0 +1,2936 @@
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:    1
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+                             A        1 	INCLUDE "IODEFS.H"
+                             B        1 ;	CPU  Z80
+                             B        2 
+                             B        3 	.IFNDEF RAMSTARTLOC
+                             B        4 
+                             B        5 	
+                             B        6 	DEFINE BOOT;,ALIGN=1; Define a section
+                             B        7 	DEFINE IM1INTSEG ;Define a section
+                             B        8 	DEFINE NMIIM1INTSEG
+                             B        9 	DEFINE CODE;,ALIGN=1
+                             B       10 
+                             B       11 	DEFINE RST08SEG
+                             B       12 	DEFINE RST10SEG
+                             B       13 	DEFINE RST18SEG
+                             B       14 	DEFINE RST20SEG
+                             B       15 	DEFINE RST28SEG
+                             B       16 	DEFINE RST30SEG
+                             B       17 	DEFINE RST38SEG
+                             B       18 
+                             B       19 	DEFINE RST66SEG
+                             B       20 
+                             B       21 	DEFINE INTTABLE, 	ALIGN=256 ; Define a section
+                             B       22 	
+                   00004000  B       23 RAMSTARTLOC equ 04000h
+                   00002400  B       24 VIDSTARTLOC equ 2400h
+                   00002C00  B       25 FONTSTARTLOC equ	2C00H
+                             B       26 
+                   00000018  B       27 SCRLINES	equ		18h
+                   00000020  B       28 SCRWIDTH	equ		20h
+                             B       29 
+                             B       30 
+                             B       31 ;Z84C15 equ 1 ;Uncomment when building for Z84C15
+                             B       32 
+                             B       33 
+                             B       34 
+                             B       35 	.ifdef Z84C15
+                             B       36 
+                             B       37 KIOBASE	equ	10h
+                             B       38 
+                             B       39 CTCIOBASE	equ	00h
+                             B       40 SIOIOBASE	equ	18h
+                             B       41 PIOIOBASE	equ	1Ch
+                             B       42 PIAIOBASE	equ	11B
+                             B       43 KIOIOBASE	equ	11B
+                             B       44 
+                             B       45 PIOPORTADATA	equ	00b
+                             B       46 PIOPORTACMD		equ	01b
+                             B       47 PIOPORTBDATA	equ	10b
+                             B       48 PIOPORTBCMD		equ	11b
+                             B       49 
+                             B       50 CTCCHANNEL0		equ	00b
+                             B       51 CTCCHANNEL1		equ	01b
+                             B       52 CTCCHANNEL2		equ	10b
+                             B       53 CTCCHANNEL3		equ	11b
+                             B       54 
+                             B       55 SIOPORTADATA	equ	00b
+                             B       56 SIOPORTACMD		equ	01b
+                             B       57 SIOPORTBDATA	equ	10b
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:    2
+
+
+IODEFS.H
+
+Location Object              Type  Line Source
+                             B       58 SIOPORTBCMD		equ	11b
+                             B       59 
+                             B       60 MAKEPORT	MACRO	Name,Base,Device,Register
+                             B       61 Name equ Base|(Device<<2)|(Register)
+                             B       62 	ENDMAC 
+                             B       63 
+                             B       64 	.else
+                   000000FC  B       65 KIOBASE	equ	0FCh
+                             B       66 
+                   00000000  B       67 PIOIOBASE	equ	00B
+                   00000001  B       68 CTCIOBASE	equ	01B
+                   00000002  B       69 SIOIOBASE	equ	10B
+                   00000003  B       70 PIAIOBASE	equ	11B
+                   00000003  B       71 KIOIOBASE	equ	11B
+                             B       72 
+                   00000000  B       73 PIOPORTADATA	equ	00b
+                   00000001  B       74 PIOPORTACMD		equ	01b
+                   00000002  B       75 PIOPORTBDATA	equ	10b
+                   00000003  B       76 PIOPORTBCMD		equ	11b
+                             B       77 
+                   00000000  B       78 CTCCHANNEL0		equ	00b
+                   00000001  B       79 CTCCHANNEL1		equ	01b
+                   00000002  B       80 CTCCHANNEL2		equ	10b
+                   00000003  B       81 CTCCHANNEL3		equ	11b
+                             B       82 
+                   00000000  B       83 SIOPORTADATA	equ	00b
+                   00000001  B       84 SIOPORTACMD		equ	01b
+                   00000002  B       85 SIOPORTBDATA	equ	10b
+                   00000003  B       86 SIOPORTBCMD		equ	11b
+                             B       87 
+                   00000000  B       88 PIAPORTCDATA	equ	00b
+                   00000001  B       89 PIAPORTCCMD		equ	01b
+                             B       90 
+                   00000002  B       91 KIOCOMMANDA		equ	10b
+                   00000003  B       92 KIOCOMMANDB		equ	11b
+                             B       93 
+                             B       94 MAKEPORT	MACRO	Name,Base,Device,Register
+                             B       95 Name equ Base|(Device<<10)|(Register<<8)
+                             B       96 	ENDMAC 
+                             B       97 
+                             B       98 	.endif
+                             B       99 
+                             B      100 
+                             B      101 	MAKEPORT PIOADATA,KIOBASE,PIOIOBASE,PIOPORTADATA
+                   000000FC  B+     101 Name equ Base|(Device<<10)|(Register<<8)
+                             B      102 	MAKEPORT PIOACMD,KIOBASE,PIOIOBASE,PIOPORTACMD
+                   000001FC  B+     102 Name equ Base|(Device<<10)|(Register<<8)
+                             B      103 	MAKEPORT PIOBDATA,KIOBASE,PIOIOBASE,PIOPORTBDATA
+                   000002FC  B+     103 Name equ Base|(Device<<10)|(Register<<8)
+                             B      104 	MAKEPORT PIOBCMD,KIOBASE,PIOIOBASE,PIOPORTBCMD
+                   000003FC  B+     104 Name equ Base|(Device<<10)|(Register<<8)
+                             B      105 
+                             B      106 	MAKEPORT CTCCH0,KIOBASE,CTCIOBASE,CTCCHANNEL0
+                   000004FC  B+     106 Name equ Base|(Device<<10)|(Register<<8)
+                             B      107 	MAKEPORT CTCCH1,KIOBASE,CTCIOBASE,CTCCHANNEL1
+                   000005FC  B+     107 Name equ Base|(Device<<10)|(Register<<8)
+                             B      108 	MAKEPORT CTCCH2,KIOBASE,CTCIOBASE,CTCCHANNEL2
+                   000006FC  B+     108 Name equ Base|(Device<<10)|(Register<<8)
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:    3
+
+
+IODEFS.H
+
+Location Object              Type  Line Source
+                             B      109 	MAKEPORT CTCCH3,KIOBASE,CTCIOBASE,CTCCHANNEL3
+                   000007FC  B+     109 Name equ Base|(Device<<10)|(Register<<8)
+                             B      110 
+                             B      111 	MAKEPORT SIOADATA,KIOBASE,SIOIOBASE,SIOPORTADATA
+                   000008FC  B+     111 Name equ Base|(Device<<10)|(Register<<8)
+                             B      112 	MAKEPORT SIOACMD,KIOBASE,SIOIOBASE,SIOPORTACMD
+                   000009FC  B+     112 Name equ Base|(Device<<10)|(Register<<8)
+                             B      113 	MAKEPORT SIOBDATA,KIOBASE,SIOIOBASE,SIOPORTBDATA
+                   00000AFC  B+     113 Name equ Base|(Device<<10)|(Register<<8)
+                             B      114 	MAKEPORT SIOBCMD,KIOBASE,SIOIOBASE,SIOPORTBCMD
+                   00000BFC  B+     114 Name equ Base|(Device<<10)|(Register<<8)
+                             B      115 
+                             B      116 	.ifdef Z84C15
+                             B      117 	.else
+                             B      118 	MAKEPORT PIACDATA,KIOBASE,PIAIOBASE,PIAPORTCDATA
+                   00000CFC  B+     118 Name equ Base|(Device<<10)|(Register<<8)
+                             B      119 	MAKEPORT PIACCMD,KIOBASE,PIAIOBASE,PIAPORTCCMD
+                   00000DFC  B+     119 Name equ Base|(Device<<10)|(Register<<8)
+                             B      120 
+                             B      121 	MAKEPORT KIOCMDA,KIOBASE,KIOIOBASE,KIOCOMMANDA
+                   00000EFC  B+     121 Name equ Base|(Device<<10)|(Register<<8)
+                             B      122 	MAKEPORT KIOCMDB,KIOBASE,KIOIOBASE,KIOCOMMANDB
+                   00000FFC  B+     122 Name equ Base|(Device<<10)|(Register<<8)
+                             B      123 	.endif
+                             B      124 	
+                   000000F0  B      125 WDTMT	equ	0F0h
+                   000000F1  B      126 WDTCR	equ	0F1h
+                             B      127 
+                   000000F4  B      128 IPR		equ	0F4h
+                             B      129 
+                   000000EE  B      130 SCRP	equ	0EEh
+                   000000EF  B      131 SCDP	equ	0EFh
+                             B      132 
+                   00000020  B      133 SERIALTXBUFFLEN	equ	020h	;must be power of 2
+                             B      134 
+                             B      135 DEFB MACRO P1
+                             B      136 	DB P1
+                             B      137 	ENDMAC
+                             B      138 
+                             B      139 DEFW MACRO P1
+                             B      140 	DW P1
+                             B      141 	ENDMAC
+                             B      142 
+                             B      143 DEFM MACRO P1
+                             B      144 	DB P1
+                             B      145 	ENDMAC
+                             B      146 
+                             B      147 DOOUT	MACRO	ADDR,VALUE
+                             B      148 	push 	AF
+                             B      149 	push 	BC
+                             B      150 
+                             B      151 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             B      152 	.ifdef Z84C15
+                             B      153 	out (ADDR),A
+                             B      154 	.else
+                             B      155 	ld BC,ADDR
+                             B      156 	out (BC),A
+                             B      157 	.endif
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:    4
+
+
+IODEFS.H
+
+Location Object              Type  Line Source
+                             B      158 
+                             B      159 	pop 	BC
+                             B      160 	pop 	AF
+                             B      161 	
+                             B      162 	ENDMAC 
+                             B      163 
+                             B      164 DOIN	MACRO	ADDR,DEST
+                             B      165 	push 	AF
+                             B      166 	push 	BC
+                             B      167 
+                             B      168 	.ifdef Z84C15
+                             B      169 	in a,(ADDR)
+                             B      170 	.else
+                             B      171 	ld BC,ADDR
+                             B      172 	in 	a,(BC)
+                             B      173 	.endif
+                             B      174 
+                             B      175 	ld	DEST,a
+                             B      176 	pop BC
+                             B      177 	POP	AF
+                             B      178 	
+                             B      179 	ENDMAC 
+                             B      180 
+                             B      181 	.endif
+                             B      182 
+                             A        2 	INCLUDE "SYSVARS.H"
+                             B        1 ;	CPU  Z80
+                             B        2 
+                   00000010  B        3 BufferSize equ 16
+                             B        4 
+                             B        5 	EXTERN SIOINTTBL
+                   00004000  B        6 RAMTOP equ RAMSTARTLOC
+                             B        7 
+                   00004000  B        8 TxQA equ RAMSTARTLOC	;Needs to be 16 bytle aligned
+                   00004010  B        9 RxQA equ TxQA + BufferSize		;Needs to be 16 bytle aligned
+                   00004020  B       10 TxQB equ RxQA + BufferSize		;Needs to be 16 bytle aligned
+                   00004030  B       11 RxQB equ TxQB + BufferSize		;Needs to be 16 bytle aligned
+                   00004040  B       12 KeyB equ RxQB + BufferSize		;Needs to be 16 bytle aligned
+                             B       13 
+                   00004060  B       14 TxQAWritePos equ KeyB + BufferSize*2
+                   00004061  B       15 TxQAReadPos equ TxQAWritePos + 1
+                             B       16 
+                   00004062  B       17 RxQAWritePos equ TxQAReadPos + 1
+                   00004063  B       18 RxQAReadPos equ RxQAWritePos + 1
+                             B       19 
+                   00004064  B       20 TxQBWritePos equ RxQAReadPos + 1
+                   00004065  B       21 TxQBReadPos equ TxQBWritePos + 1
+                   00004066  B       22 TxBIdle equ TxQBReadPos + 1
+                             B       23 
+                   00004067  B       24 RxQBWritePos equ TxBIdle + 1
+                   00004068  B       25 RxQBReadPos equ RxQBWritePos + 1
+                             B       26 
+                   00004069  B       27 KeyBWritePos equ RxQBReadPos + 1
+                   0000406A  B       28 KeyBReadPos equ KeyBWritePos + 1
+                             B       29 
+                   0000406B  B       30 SYSCLOCK equ KeyBReadPos + 1
+                             B       31 
+                   0000406F  B       32 FLASHCOUNT equ SYSCLOCK+4
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:    5
+
+
+SYSVARS.H
+
+Location Object              Type  Line Source
+                   00004071  B       33 LOOPCOUNT equ FLASHCOUNT+2
+                             B       34 
+                   00004075  B       35 LOOPCOUNT2 equ LOOPCOUNT+4
+                             B       36 
+                   00004076  B       37 KeyBWPos	equ	LOOPCOUNT2+1 
+                             B       38 
+                   00004077  B       39 NEXTMEM equ KeyBWPos+1
+                             B       40 
+                             B       41 
+                             B       42 
+                             A        3 	INCLUDE "DEBUGMACROS.H"
+                             B        1 ;	PUBLIC 	UNDEFINT0,UNDEFINT1,UNDEFINT2,UNDEFINT3,UNDEFINT4,UNDEFINT5,UNDEFINT6,UNDEFINT7
+                             B        2 
+                             B        3 	EXTERN 	FAOUT,FQUADOUT,FXY2SCR,FHOUTA
+                             B        4 
+                             B        5 
+                   00000000  B        6 DONTUSEFUNCS equ 0
+                             B        7 
+                             B        8 
+                             B        9 COUT MACRO MADDR , CHR
+                             B       10 	PUSH HL
+                             B       11 
+                             B       12 	LD	HL,MADDR
+                             B       13 	LD 	(HL),CHR
+                             B       14 
+                             B       15 	POP HL
+                             B       16 	ENDMAC
+                             B       17 
+                             B       18 COUTXY MACRO XPOS, YPOS , CHR
+                             B       19 	PUSH IX
+                             B       20 
+                             B       21 	XY2SCR	XPOS, YPOS
+                             B       22 
+                             B       23 	LD 	(IX),CHR
+                             B       24 
+                             B       25 	POP	IX
+                             B       26 
+                             B       27 	ENDMAC
+                             B       28 
+                             B       29 
+                             B       30 SP2SCR	MACRO XPOS, YPOS
+                             B       31 	PUSH	HL
+                             B       32 
+                             B       33 	XY2SCR	XPOS, YPOS
+                             B       34 
+                             B       35 	LD HL,0
+                             B       36 	ADD HL,SP
+                             B       37 	LD A,H
+                             B       38 
+                             B       39 	SRL A
+                             B       40 	SRL A
+                             B       41 	SRL A
+                             B       42 	SRL A
+                             B       43 
+                             B       44 	CALL FAOUT
+                             B       45 
+                             B       46 	LD HL,0
+                             B       47 	ADD HL,SP
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:    6
+
+
+DEBUGMACROS.H
+
+Location Object              Type  Line Source
+                             B       48 	LD A,H
+                             B       49 
+                             B       50 	AND 0FH
+                             B       51 
+                             B       52 	INC		IX
+                             B       53 	CALL FAOUT
+                             B       54 
+                             B       55 	LD HL,0
+                             B       56 	ADD HL,SP
+                             B       57 	LD A,L
+                             B       58 
+                             B       59 	SRL A
+                             B       60 	SRL A
+                             B       61 	SRL A
+                             B       62 	SRL A
+                             B       63 
+                             B       64 	INC		IX
+                             B       65 	CALL FAOUT
+                             B       66 
+                             B       67 	LD HL,0
+                             B       68 	ADD HL,SP
+                             B       69 	LD A,L
+                             B       70 
+                             B       71 	AND 0FH
+                             B       72 
+                             B       73 	INC		IX
+                             B       74 	CALL FAOUT
+                             B       75 
+                             B       76 	POP		HL
+                             B       77 	
+                             B       78 	ENDMAC
+                             B       79  
+                             B       80 XY2SCR	MACRO XPOS, YPOS
+                             B       81 	PUSH BC
+                             B       82 
+                             B       83 	LD 	B,XPOS
+                             B       84 	LD 	C,YPOS
+                             B       85 
+                             B       86 	CALL	FXY2SCR
+                             B       87 
+                             B       88 	POP BC
+                             B       89 
+                             B       90 	ENDMAC
+                             B       91  
+                             B       92 
+                             B       93 HOUT	MACRO POS, DIN
+                             B       94 	PUSH BC
+                             B       95 	PUSH IX
+                             B       96 
+                             B       97 	LD	IX,POS
+                             B       98 	LD	B,DIN
+                             B       99 	call FHOUTA
+                             B      100 
+                             B      101 	POP	IX
+                             B      102 	POP BC
+                             B      103 
+                             B      104 	ENDMAC
+                             B      105 
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:    7
+
+
+DEBUGMACROS.H
+
+Location Object              Type  Line Source
+                             B      106 HOUTXY	MACRO XPOS,YPOS, DIN
+                             B      107 	PUSH BC
+                             B      108 	PUSH IX
+                             B      109 
+                             B      110 	XY2SCR	XPOS, YPOS
+                             B      111 
+                             B      112 	LD	B,DIN
+                             B      113 	call FHOUTA
+                             B      114 
+                             B      115 	POP	IX
+                             B      116 	POP BC
+                             B      117 
+                             B      118 	ENDMAC
+                             B      119 	
+                             B      120 QUADOUT	MACRO XPOS, YPOS, PTR
+                             B      121 	PUSH BC
+                             B      122 	PUSH HL
+                             B      123 
+                             B      124 	LD B,XPOS 
+                             B      125 	LD C,YPOS
+                             B      126  	LD HL,PTR
+                             B      127 
+                             B      128 	call FQUADOUT
+                             B      129 
+                             B      130 	POP HL
+                             B      131 	POP BC
+                             B      132 
+                             B      133 	ENDMAC
+                             B      134 	   
+                             B      135 STROUTXY	MACRO XPOS,YPOS,STR,STRLEN
+                             B      136 	PUSH BC
+                             B      137 	PUSH DE
+                             B      138 	PUSH HL
+                             B      139 	PUSH IX
+                             B      140 
+                             B      141 	XY2SCR	XPOS, YPOS
+                             B      142 
+                             B      143 	LD	HL,$STRSTR
+                             B      144 	PUSH	IX
+                             B      145 	POP		DE
+                             B      146 	LD	BC,STRLEN
+                             B      147 
+                             B      148 	LDIR
+                             B      149 	JR $LEAVE
+                             B      150 
+                             B      151 $STRSTR
+                             B      152 	DB STR
+                             B      153 $LEAVE
+                             B      154 	POP	IX
+                             B      155 	POP HL
+                             B      156 	POP DE
+                             B      157 	POP BC
+                             B      158 
+                             B      159 	ENDMAC
+                             B      160 
+                             A        4 
+                             A        5 	INCLUDE "QUEUEMACRO.H"
+                             B        1 
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:    8
+
+
+QUEUEMACRO.H
+
+Location Object              Type  Line Source
+                             B        2 
+                             B        3 
+                             B        4 AddtoQueue MACRO InChar,Queue,RPosPtr,WPosPtr
+                             B        5 	push	bc
+                             B        6 	push	de
+                             B        7 	push	hl
+                             B        8 
+                             B        9 	ld b,InChar
+                             B       10 	ld hl,Queue
+                             B       11 	ld a,(RPosPtr)
+                             B       12 	ld c,a
+                             B       13 	ld de,WPosPtr
+                             B       14 
+                             B       15 	call FAddtoQueue
+                             B       16 
+                             B       17 	pop		hl
+                             B       18 	pop		de
+                             B       19 	pop		bc
+                             B       20 
+                             B       21 	ENDMAC
+                             B       22 
+                             B       23 ReadfromQueue MACRO Queue,RPosPtr,WPosPtr	;Return in bc If b!=0 then C contains value.
+                             B       24 
+                             B       25 	push	af
+                             B       26 	push	de
+                             B       27 	push	hl
+                             B       28 
+                             B       29 	ld hl,Queue
+                             B       30 	ld bc,RPosPtr
+                             B       31 	ld a,(WPosPtr)
+                             B       32 	ld	e,a
+                             B       33 
+                             B       34 	call FReadfromQueue
+                             B       35 
+                             B       36 	pop		hl
+                             B       37 	pop		de
+                             B       38 	pop		af
+                             B       39 
+                             B       40 	ENDMAC
+                             B       41 
+                             B       42 QueueEmpty MACRO RPosPtr,WPos	;Return in bc If b!=0 then C contains value.
+                             B       43 
+                             B       44 	ld bc,RPosPtr
+                             B       45 	ld a,(WPos)
+                             B       46 	ld	e,a
+                             B       47 
+                             B       48 	ld	a,(BC)
+                             B       49 	cp	e
+                             B       50 	jr	nz,QNotEmpty
+                             B       51 	ld	a,1
+                             B       52 	jp Exit
+                             B       53 QNotEmpty:
+                             B       54 	ld	a,0
+                             B       55 Exit:
+                             B       56 
+                             B       57 	ENDMAC
+                             B       58 
+                             B       59 
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:    9
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+                             A        6 
+                             A        7 	SEGMENT CODE ; MAKE IT THE CURRENT SECTION
+                             A        8 
+                             A        9 ;--------------------------
+                             A       10 	PUBLIC 	INIT_SIO
+                             A       11 
+                             A       12 	PUBLIC 	SIOAINT_TBE,SIOAINT_ESC,SIOAINT_RCA,SIOAINT_SRC,SEND_STR_A
+                             A       13 	
+                             A       14 	PUBLIC 	SIOBINT_TBE,SIOBINT_ESC,SIOBINT_RCA,SIOBINT_SRC,SEND_STR_B
+                             A       15 	PUBLIC	SIOTOTXBUFFB,SIORCVCHARB
+                             A       16 
+                             A       17 	EXTERN 	SIOINTTBL,INTTBL, TxQB2Scr
+                             A       18 
+                             A       19 	extern FAddtoQueue,FReadfromQueue
+                             A       20 
+                             A       21 	; FOR RR0
+                             A       22 	
+                   00000001  A       23 RX_CHR_AVAILABLE		EQU	00000001B
+                   00000002  A       24 INT_PENDING				EQU	00000010B ;
+                   00000004  A       25 TX_BUFFER_EMPTY			EQU	00000100B
+                   00000008  A       26 DCD						EQU	00001000B
+                   00000010  A       27 SYNC_HUNT				EQU	00010000B
+                   00000020  A       28 CTS						EQU	00100000B
+                   00000040  A       29 TX_UNDERRUN_EOM			EQU	01000000B
+                   00000080  A       30 BREAK_ABORT				EQU	10000000B
+                             A       31 
+                             A       32 	;FOR RR1
+                   00000001  A       33 ALL_SENT				EQU	00000001B
+                   00000002  A       34 X1						EQU	00000010B
+                   00000004  A       35 X2						EQU	00000100B
+                   00000008  A       36 X3						EQU	00001000B
+                   00000010  A       37 PARITY_ERROR			EQU	00010000B
+                   00000020  A       38 RX_OVERRUN_ERROR		EQU	00100000B
+                   00000040  A       39 CRC_FRAMING_ERROR		EQU	01000000B
+                   00000080  A       40 END_OF_FRAME			EQU	10000000B
+                             A       41 
+                             A       42 ; FOR WR0
+                             A       43 
+                   00000000  A       44 REGISTER_0				EQU	00000000B
+                   00000001  A       45 REGISTER_1				EQU	00000001B
+                   00000002  A       46 REGISTER_2				EQU	00000010B
+                   00000003  A       47 REGISTER_3				EQU	00000011B
+                   00000004  A       48 REGISTER_4				EQU	00000100B
+                   00000005  A       49 REGISTER_5				EQU	00000101B
+                   00000006  A       50 REGISTER_6				EQU	00000110B
+                   00000007  A       51 REGISTER_7				EQU	00000111B
+                             A       52 
+                             A       53 
+                   00000038  A       54 NULL_CMD				EQU	00111000B
+                   00000008  A       55 SEND_ABORT				EQU	00001000B
+                   00000010  A       56 RESET_EXT_STATUS_INTS	EQU	00010000B
+                   00000018  A       57 CHANNEL_RESET			EQU	00011000B
+                   00000020  A       58 ENABLE_INT_NEXT_RX_CHR	EQU	00100000B
+                   00000028  A       59 RESET_TXINT_PENDING		EQU	00101000B
+                   00000030  A       60 ERROR_RESET_LATCHES		EQU	00110000B
+                   00000038  A       61 RETURN_FROM_INT			EQU	00111000B
+                             A       62 
+                   00000040  A       63 RESET_RX_CRC_CHECKER	EQU	01000000B
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   10
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+                   00000080  A       64 RESET_TX_CRC_GENERATOR	EQU	10000000B
+                   000000C0  A       65 RESET_TX_UNDERRUN		EQU	11000000B
+                             A       66 
+                             A       67 ; FOR WR1
+                             A       68 
+                   00000001  A       69 EXT_INT_ENABLE			EQU	00000001B
+                   00000002  A       70 TX_INT_ENABLE			EQU	00000010B
+                   00000004  A       71 STATUS_AFFECTS_VECTOR	EQU	00000100B
+                             A       72 
+                   00000000  A       73 RX_INT_DISABLE			EQU	00000000B
+                   00000008  A       74 RX_INT_ON_FIRST_CHR		EQU 00001000B
+                   00000010  A       75 INT_ON_ALL_RX_CHR_P		EQU 00010000B ; (PARITY AFFECTS VECTOR
+                   00000018  A       76 INT_ON_ALL_RX_CHR		EQU 00011000B ; (PARITY DOES NOT AFFECT
+                   00000020  A       77 WAIT_READY_ON_R_T		EQU 00100000B
+                   00000040  A       78 WAIT_READY_FUNCTION		EQU 01000000B
+                   00000080  A       79 WAIT_READY_ENABLE		EQU 10000000B
+                             A       80 
+                             A       81 ; FOR WR2
+                             A       82 
+                             A       83 ;THIS  IS ONLY USED ON CHANNEL B TO SET THE INT VECTOR
+                             A       84 
+                             A       85 ; FOR WR3
+                             A       86 
+                   00000001  A       87 RX_ENABLE				EQU 00000001B
+                   00000002  A       88 SYNC_CHR_LOAD_INHIBIT	EQU	00000010B
+                   00000004  A       89 ADDRESS_SEARCH_MODE		EQU	00000100B
+                   00000008  A       90 RX_CRC_ENABLE			EQU	00001000B
+                   00000010  A       91 ENTER_HUNT_PHASE		EQU	00010000B
+                   00000020  A       92 AUTO_ENABLES			EQU	00100000B
+                   00000000  A       93 RX_5_BITS_PER_CHR		EQU	00000000B
+                   00000040  A       94 RX_7_BITS_PER_CHR		EQU	01000000B
+                   00000080  A       95 RX_6_BITS_PER_CHR		EQU	10000000B
+                   000000C0  A       96 RX_8_BITS_PER_CHR		EQU	11000000B
+                             A       97 
+                             A       98 
+                             A       99 ; FOR WR4
+                             A      100 
+                   00000000  A      101 NO_PARITY				EQU 00000000B
+                   00000001  A      102 PARITY_ENABLE			EQU 00000001B
+                   00000002  A      103 PARITY_EVEN_ODD			EQU	00000010B
+                             A      104 
+                   00000000  A      105 SYNC_MODES_ENABLE		EQU	00000000B
+                   00000004  A      106 RT1_STOP_BIT_CHR		EQU	00000100B
+                   00000008  A      107 RT1_2_STOP_BIT_CHR		EQU	00001000B
+                   0000000C  A      108 RT2_STOP_BIT_CHR		EQU	00001100B
+                             A      109 
+                   00000000  A      110 RT8_BIT_SYNC_CHR		EQU	00000000B
+                   00000010  A      111 RT16_BIT_SYNC_CHR		EQU	00010000B
+                   00000020  A      112 SDLC_MODE				EQU	00100000B
+                   00000030  A      113 EXT_SYNC_MODE			EQU	00110000B
+                             A      114 
+                   00000000  A      115 X1_CLOCK_MODE			EQU	00000000B
+                   00000040  A      116 X16_CLOCK_MODE			EQU	01000000B
+                   00000080  A      117 X32_CLOCK_MODE			EQU	10000000B
+                   000000C0  A      118 X64_CLOCK_MODE			EQU	11000000B
+                             A      119 
+                             A      120 ; FOR WR5
+                             A      121 
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   11
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+                   00000001  A      122 TX_CRC_ENABLE			EQU 00000001B
+                   00000002  A      123 RTS						EQU	00000010B
+                   00000004  A      124 SDLC_CRC_16				EQU	00000100B
+                   00000008  A      125 TX_ENABLE				EQU	00001000B
+                   00000010  A      126 SEND_BREAK				EQU	00010000B
+                   00000000  A      127 TX_5_BITS_PER_CHR		EQU	00000000B
+                   00000020  A      128 TX_7_BITS_PER_CHR		EQU	00100000B
+                   00000040  A      129 TX_6_BITS_PER_CHR		EQU	01000000B
+                   00000060  A      130 TX_8_BITS_PER_CHR		EQU	01100000B
+                   00000080  A      131 DTR						EQU	10000000B
+                             A      132 
+                             A      133 
+                             A      134 ; FOR WR6
+                             A      135 
+                   00000001  A      136 SYNC_BIT_0				EQU 00000001B
+                   00000002  A      137 SYNC_BIT_1				EQU 00000010B
+                   00000004  A      138 SYNC_BIT_2				EQU 00000100B
+                   00000008  A      139 SYNC_BIT_3				EQU 00001000B
+                   00000010  A      140 SYNC_BIT_4				EQU 00010000B
+                   00000020  A      141 SYNC_BIT_5				EQU 00100000B
+                   00000040  A      142 SYNC_BIT_6				EQU 01000000B
+                   00000080  A      143 SYNC_BIT_7				EQU 10000000B
+                             A      144 
+                             A      145 ; FOR WR7
+                             A      146 
+                   00000001  A      147 SYNC_BIT_8				EQU 000000001B
+                   00000002  A      148 SYNC_BIT_9				EQU 000000010B
+                   00000004  A      149 SYNC_BIT_10				EQU 000000100B
+                   00000008  A      150 SYNC_BIT_11				EQU 000001000B
+                   00000010  A      151 SYNC_BIT_12				EQU 000010000B
+                   00000020  A      152 SYNC_BIT_13				EQU 000100000B
+                   00000040  A      153 SYNC_BIT_14				EQU 001000000B
+                   00000080  A      154 SYNC_BIT_15				EQU 010000000B
+                             A      155 
+00000000                     A      156 INIT_SIO:
+                             A      157 
+                             A      158 	;PROGRAM THE SIO
+                             A      159 
+                             A      160 	STROUTXY 08H,0BH, "INITSIO", 7 
+00000000 C5                  A+     160 	PUSH BC
+00000001 D5                  A+     160 	PUSH DE
+00000002 E5                  A+     160 	PUSH HL
+00000003 DD E5               A+     160 	PUSH IX
+                             A+     160 
+                             A+     160 	XY2SCR	XPOS, YPOS
+00000005 C5                  A+     160 	PUSH BC
+                             A+     160 
+00000006 06 08               A+     160 	LD 	B,XPOS
+00000008 0E 0B               A+     160 	LD 	C,YPOS
+                             A+     160 
+0000000A CD 00 00            A+     160 	CALL	FXY2SCR
+                             A+     160 
+0000000D C1                  A+     160 	POP BC
+                             A+     160 
+                             A+     160 
+0000000E 21 1B 00            A+     160 	LD	HL,$STRSTR
+00000011 DD E5               A+     160 	PUSH	IX
+00000013 D1                  A+     160 	POP		DE
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   12
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+00000014 01 07 00            A+     160 	LD	BC,STRLEN
+                             A+     160 
+00000017 ED B0               A+     160 	LDIR
+00000019 18 07               A+     160 	JR $LEAVE
+                             A+     160 
+0000001B                     A+     160 $STRSTR
+0000001B 49 4E 49 54 53 49   A+     160 	DB STR
+00000021 4F                  A+ d   160
+00000022                     A+     160 $LEAVE
+00000022 DD E1               A+     160 	POP	IX
+00000024 E1                  A+     160 	POP HL
+00000025 D1                  A+     160 	POP DE
+00000026 C1                  A+     160 	POP BC
+                             A+     160 
+                             A      161 
+                             A      162 	; THE FOLLOWINGS ARE SETTINGS FOR CHANNEL A
+                             A      163 
+                             A      164 	;SET UP TX AND RX:
+                             A      165 	DOOUT SIOACMD, CHANNEL_RESET								;WRITE INTO WR0: CHANNEL RESET
+00000027 F5                  A+     165 	push 	AF
+00000028 C5                  A+     165 	push 	BC
+                             A+     165 
+00000029 3E 18               A+     165 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     165 	.ifdef Z84C15
+                             A+     165 	out (ADDR),A
+                             A+     165 	.else
+0000002B 01 FC 09            A+     165 	ld BC,ADDR
+0000002E ED 79               A+     165 	out (BC),A
+                             A+     165 	.endif
+                             A+     165 
+00000030 C1                  A+     165 	pop 	BC
+00000031 F1                  A+     165 	pop 	AF
+                             A+     165 	
+                             A      166 
+                             A      167 	; SET UP THE INT VECTOR	PAGE17 SIO TECH REF
+                             A      168 	; THE FOLLOWINGS ARE SETTINGS FOR CHANNEL B
+                             A      169 	
+                             A      170 	DOOUT SIOBCMD, ERROR_RESET_LATCHES							;WRITE INTO WR0: CHANNEL RESET
+00000032 F5                  A+     170 	push 	AF
+00000033 C5                  A+     170 	push 	BC
+                             A+     170 
+00000034 3E 30               A+     170 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     170 	.ifdef Z84C15
+                             A+     170 	out (ADDR),A
+                             A+     170 	.else
+00000036 01 FC 0B            A+     170 	ld BC,ADDR
+00000039 ED 79               A+     170 	out (BC),A
+                             A+     170 	.endif
+                             A+     170 
+0000003B C1                  A+     170 	pop 	BC
+0000003C F1                  A+     170 	pop 	AF
+                             A+     170 	
+                             A      171 
+                             A      172 	DOOUT SIOBCMD, CHANNEL_RESET								;WRITE INTO WR0: CHANNEL RESET
+0000003D F5                  A+     172 	push 	AF
+0000003E C5                  A+     172 	push 	BC
+                             A+     172 
+0000003F 3E 18               A+     172 	ld a,VALUE	; write into WR0: error reset, select WR0
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   13
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+                             A+     172 	.ifdef Z84C15
+                             A+     172 	out (ADDR),A
+                             A+     172 	.else
+00000041 01 FC 0B            A+     172 	ld BC,ADDR
+00000044 ED 79               A+     172 	out (BC),A
+                             A+     172 	.endif
+                             A+     172 
+00000046 C1                  A+     172 	pop 	BC
+00000047 F1                  A+     172 	pop 	AF
+                             A+     172 	
+                             A      173 
+                             A      174 	DOOUT SIOBCMD, REGISTER_4|RESET_EXT_STATUS_INTS				;WRITE INTO WR0: ERROR RESET, SELECT WR0
+00000048 F5                  A+     174 	push 	AF
+00000049 C5                  A+     174 	push 	BC
+                             A+     174 
+0000004A 3E 14               A+     174 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     174 	.ifdef Z84C15
+                             A+     174 	out (ADDR),A
+                             A+     174 	.else
+0000004C 01 FC 0B            A+     174 	ld BC,ADDR
+0000004F ED 79               A+     174 	out (BC),A
+                             A+     174 	.endif
+                             A+     174 
+00000051 C1                  A+     174 	pop 	BC
+00000052 F1                  A+     174 	pop 	AF
+                             A+     174 	
+                             A      175 	DOOUT SIOBCMD, X64_CLOCK_MODE|RT1_STOP_BIT_CHR|NO_PARITY	;44H WRITE INTO : CLKX16,1 STOP BIT, NO PARITY
+00000053 F5                  A+     175 	push 	AF
+00000054 C5                  A+     175 	push 	BC
+                             A+     175 
+00000055 3E C4               A+     175 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     175 	.ifdef Z84C15
+                             A+     175 	out (ADDR),A
+                             A+     175 	.else
+00000057 01 FC 0B            A+     175 	ld BC,ADDR
+0000005A ED 79               A+     175 	out (BC),A
+                             A+     175 	.endif
+                             A+     175 
+0000005C C1                  A+     175 	pop 	BC
+0000005D F1                  A+     175 	pop 	AF
+                             A+     175 	
+                             A      176 
+                             A      177 	DOOUT SIOBCMD, REGISTER_5									;WRITE INTO WR0: SELECT 
+0000005E F5                  A+     177 	push 	AF
+0000005F C5                  A+     177 	push 	BC
+                             A+     177 
+00000060 3E 05               A+     177 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     177 	.ifdef Z84C15
+                             A+     177 	out (ADDR),A
+                             A+     177 	.else
+00000062 01 FC 0B            A+     177 	ld BC,ADDR
+00000065 ED 79               A+     177 	out (BC),A
+                             A+     177 	.endif
+                             A+     177 
+00000067 C1                  A+     177 	pop 	BC
+00000068 F1                  A+     177 	pop 	AF
+                             A+     177 	
+                             A      178 	DOOUT SIOBCMD, TX_8_BITS_PER_CHR|TX_ENABLE					;DTR ACTIVE, TX 8BIT, BREAK OFF, TX ON, RTS INACTIVE
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   14
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+00000069 F5                  A+     178 	push 	AF
+0000006A C5                  A+     178 	push 	BC
+                             A+     178 
+0000006B 3E 68               A+     178 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     178 	.ifdef Z84C15
+                             A+     178 	out (ADDR),A
+                             A+     178 	.else
+0000006D 01 FC 0B            A+     178 	ld BC,ADDR
+00000070 ED 79               A+     178 	out (BC),A
+                             A+     178 	.endif
+                             A+     178 
+00000072 C1                  A+     178 	pop 	BC
+00000073 F1                  A+     178 	pop 	AF
+                             A+     178 	
+                             A      179 
+                             A      180 	DOOUT SIOBCMD, REGISTER_1									;WRITE INTO WR0: SELECT 
+00000074 F5                  A+     180 	push 	AF
+00000075 C5                  A+     180 	push 	BC
+                             A+     180 
+00000076 3E 01               A+     180 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     180 	.ifdef Z84C15
+                             A+     180 	out (ADDR),A
+                             A+     180 	.else
+00000078 01 FC 0B            A+     180 	ld BC,ADDR
+0000007B ED 79               A+     180 	out (BC),A
+                             A+     180 	.endif
+                             A+     180 
+0000007D C1                  A+     180 	pop 	BC
+0000007E F1                  A+     180 	pop 	AF
+                             A+     180 	
+                             A      181 	DOOUT SIOBCMD, STATUS_AFFECTS_VECTOR|INT_ON_ALL_RX_CHR|TX_INT_ENABLE|EXT_INT_ENABLE
+0000007F F5                  A+     181 	push 	AF
+00000080 C5                  A+     181 	push 	BC
+                             A+     181 
+00000081 3E 1F               A+     181 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     181 	.ifdef Z84C15
+                             A+     181 	out (ADDR),A
+                             A+     181 	.else
+00000083 01 FC 0B            A+     181 	ld BC,ADDR
+00000086 ED 79               A+     181 	out (BC),A
+                             A+     181 	.endif
+                             A+     181 
+00000088 C1                  A+     181 	pop 	BC
+00000089 F1                  A+     181 	pop 	AF
+                             A+     181 	
+                             A      182 	
+0000008A 21 00 00            A      183 	LD	HL,SIOINTTBL
+0000008D 11 00 00            A      184 	LD	DE,INTTBL
+00000090 ED 52               A      185 	SBC HL,DE
+                             A      186 
+                             A      187 	DOOUT SIOBCMD, REGISTER_2									;WRITE INTO WR0: SELECT WR2
+00000092 F5                  A+     187 	push 	AF
+00000093 C5                  A+     187 	push 	BC
+                             A+     187 
+00000094 3E 02               A+     187 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     187 	.ifdef Z84C15
+                             A+     187 	out (ADDR),A
+                             A+     187 	.else
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   15
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+00000096 01 FC 0B            A+     187 	ld BC,ADDR
+00000099 ED 79               A+     187 	out (BC),A
+                             A+     187 	.endif
+                             A+     187 
+0000009B C1                  A+     187 	pop 	BC
+0000009C F1                  A+     187 	pop 	AF
+                             A+     187 	
+                             A      188 	DOOUT SIOBCMD, L											;WRITE INTO WR2: CMD LINE INT VECT (SEE INT VEC TABLE) ;BITS D3,D2,D1 ARE CHANGED ACCORDING TO RX CONDITION
+0000009D F5                  A+     188 	push 	AF
+0000009E C5                  A+     188 	push 	BC
+                             A+     188 
+0000009F 7D                  A+     188 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     188 	.ifdef Z84C15
+                             A+     188 	out (ADDR),A
+                             A+     188 	.else
+000000A0 01 FC 0B            A+     188 	ld BC,ADDR
+000000A3 ED 79               A+     188 	out (BC),A
+                             A+     188 	.endif
+                             A+     188 
+000000A5 C1                  A+     188 	pop 	BC
+000000A6 F1                  A+     188 	pop 	AF
+                             A+     188 	
+                             A      189 
+                             A      190 	
+                             A      191 	DOOUT SIOBCMD, REGISTER_3									;WRITE INTO WR0: SELECT 
+000000A7 F5                  A+     191 	push 	AF
+000000A8 C5                  A+     191 	push 	BC
+                             A+     191 
+000000A9 3E 03               A+     191 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     191 	.ifdef Z84C15
+                             A+     191 	out (ADDR),A
+                             A+     191 	.else
+000000AB 01 FC 0B            A+     191 	ld BC,ADDR
+000000AE ED 79               A+     191 	out (BC),A
+                             A+     191 	.endif
+                             A+     191 
+000000B0 C1                  A+     191 	pop 	BC
+000000B1 F1                  A+     191 	pop 	AF
+                             A+     191 	
+                             A      192 	DOOUT SIOBCMD, RX_8_BITS_PER_CHR|RX_ENABLE					;44H WRITE INTO : CLKX16,1 STOP BIT, NO PARITY
+000000B2 F5                  A+     192 	push 	AF
+000000B3 C5                  A+     192 	push 	BC
+                             A+     192 
+000000B4 3E C1               A+     192 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     192 	.ifdef Z84C15
+                             A+     192 	out (ADDR),A
+                             A+     192 	.else
+000000B6 01 FC 0B            A+     192 	ld BC,ADDR
+000000B9 ED 79               A+     192 	out (BC),A
+                             A+     192 	.endif
+                             A+     192 
+000000BB C1                  A+     192 	pop 	BC
+000000BC F1                  A+     192 	pop 	AF
+                             A+     192 	
+                             A      193 
+                             A      194 	STROUTXY 8H,04H, "           ", 11
+000000BD C5                  A+     194 	PUSH BC
+000000BE D5                  A+     194 	PUSH DE
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   16
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+000000BF E5                  A+     194 	PUSH HL
+000000C0 DD E5               A+     194 	PUSH IX
+                             A+     194 
+                             A+     194 	XY2SCR	XPOS, YPOS
+000000C2 C5                  A+     194 	PUSH BC
+                             A+     194 
+000000C3 06 08               A+     194 	LD 	B,XPOS
+000000C5 0E 04               A+     194 	LD 	C,YPOS
+                             A+     194 
+000000C7 CD 00 00            A+     194 	CALL	FXY2SCR
+                             A+     194 
+000000CA C1                  A+     194 	POP BC
+                             A+     194 
+                             A+     194 
+000000CB 21 D8 00            A+     194 	LD	HL,$STRSTR
+000000CE DD E5               A+     194 	PUSH	IX
+000000D0 D1                  A+     194 	POP		DE
+000000D1 01 0B 00            A+     194 	LD	BC,STRLEN
+                             A+     194 
+000000D4 ED B0               A+     194 	LDIR
+000000D6 18 0B               A+     194 	JR $LEAVE
+                             A+     194 
+000000D8                     A+     194 $STRSTR
+000000D8 20 20 20 20 20 20   A+     194 	DB STR
+000000DE 20 20 20 20 20      A+ d   194
+000000E3                     A+     194 $LEAVE
+000000E3 DD E1               A+     194 	POP	IX
+000000E5 E1                  A+     194 	POP HL
+000000E6 D1                  A+     194 	POP DE
+000000E7 C1                  A+     194 	POP BC
+                             A+     194 
+                             A      195  	
+000000E8 C9                  A      196 	RET
+                             A      197 
+                             A      198 ;PORT A INT HANDLERS
+                             A      199 
+                             A      200 	.ifdef AAA
+                             A      201 SIOAINT_TBE:
+                             A      202 	PUSH AF	; BACKUP AF
+                             A      203 
+                             A      204 	CALL SIOA_TBE
+                             A      205 	STROUTXY 8H,0EH, "SIOAINT_TBE", 11 
+                             A      206 	
+                             A      207 	POP AF
+                             A      208 	EI
+                             A      209 	RETI
+                             A      210 
+                             A      211 SIOAINT_ESC
+                             A      212 	PUSH AF	; BACKUP AF
+                             A      213 
+                             A      214 	STROUTXY 8H,0EH, "SIOAINT_ESC", 11 
+                             A      215 ;EXTERNAL STATUS
+                             A      216 	DOOUT SIOACMD, REGISTER_0
+                             A      217 	DOIN  SIOACMD, H
+                             A      218 
+                             A      219 	POP AF
+                             A      220 	EI
+                             A      221 	RETI
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   17
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+                             A      222 
+                             A      223 SIOAINT_RCA:
+                             A      224 	PUSH AF	; BACKUP AF
+                             A      225 
+                             A      226 	CALL A_SEND_CHAR
+                             A      227 
+                             A      228 	STROUTXY 8H,0EH, "SIOAINT_RCA", 11 
+                             A      229 
+                             A      230 	POP AF
+                             A      231 	EI
+                             A      232 	RETI
+                             A      233 
+                             A      234 SIOAINT_SRC:
+                             A      235 	PUSH AF	; BACKUP AF
+                             A      236 
+                             A      237 ;SPECIAL RECEIVE CONDITION
+                             A      238 	STROUTXY 8H,0EH, "SIOAINT_SRC", 11 
+                             A      239 
+                             A      240 	DOOUT SIOACMD, ERROR_RESET_LATCHES
+                             A      241 
+                             A      242 	POP AF
+                             A      243 	EI
+                             A      244 	RETI
+                             A      245 
+                             A      246 A_RTS_OFF:
+                             A      247 	DOOUT SIOACMD, REGISTER_5	;WRITE INTO WR0: ERROR RESET, SELECT WR0
+                             A      248 	DOOUT SIOACMD, DTR|TX_8_BITS_PER_CHR|TX_ENABLE	;8 BITS/TX CHAR; TX ENABLE; RTS DISABLE
+                             A      249 	RET
+                             A      250 
+                             A      251 A_RTS_ON:
+                             A      252 	DOOUT SIOACMD,REGISTER_5	; 
+                             A      253 	DOOUT SIOACMD,DTR|TX_8_BITS_PER_CHR|TX_ENABLE|RTS	; 8 BITS/TX CHAR; TX ENABLE; RTS ENABLE
+                             A      254 	RET
+                             A      255 
+                             A      256 A_SEND_CHAR:
+                             A      257 	PUSH AF
+                             A      258 	PUSH HL
+                             A      259 	PUSH BC
+                             A      260 	CALL A_RTS_OFF
+                             A      261 
+                             A      262 	LD 	BC,SIOADATA
+                             A      263 	OUT (BC),A	; ECHO CHAR TO TRANSMITTER
+                             A      264 
+                             A      265 	STROUTXY 08H,0DH, "A_SEND_CHAR", 11 
+                             A      266 	LD		HL,25B4H
+                             A      267 	INC		(HL)
+                             A      268 
+                             A      269 	LD		HL,25B6H
+                             A      270 	LD		(HL),A
+                             A      271 
+                             A      272 	QUADOUT 0,13,SYSCLOCK
+                             A      273 
+                             A      274 	LD		HL,25B4H
+                             A      275 	LD		A,(SYSCLOCK)
+                             A      276 	BIT 7,A
+                             A      277 	JR NZ ,A_NORTS
+                             A      278 	CALL A_RTS_OFF
+                             A      279 	LD		(HL),'0'
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   18
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+                             A      280 	JR 		A_CARRYON
+                             A      281 A_NORTS:
+                             A      282 	LD		(HL),'1'
+                             A      283 A_CARRYON:
+                             A      284 	CALL 	A_RTS_ON
+                             A      285 
+                             A      286 	pop	BC
+                             A      287 	POP HL
+                             A      288 	POP AF
+                             A      289 	RET
+                             A      290 
+                             A      291 SIOA_TBE:
+                             A      292 	PUSH AF	; BACKUP AF
+                             A      293 	PUSH BC	; BACKUP AF
+                             A      294 	PUSH DE	; BACKUP AF
+                             A      295 	PUSH HL	; BACKUP AF
+                             A      296 	PUSH IY	; BACKUP AF
+                             A      297 
+                             A      298 ;TEST.C:16: IF (NEXTIN != NEXTOUT)
+                             A      299 	LD	A,(SIOANEXTIN)
+                             A      300 	LD	IY,SIOANEXTOUT
+                             A      301 	SUB	A,(IY)
+                             A      302 	JR	Z,SIOAINT_TBE_EXIT
+                             A      303 ;TEST.C:18: UART1_SENDDATA8(UBUFFER[NEXTOUT++]);
+                             A      304 	LD	BC, SIOATXBUFF
+                             A      305 	LD	E, (IY)
+                             A      306 	INC	(IY)
+                             A      307 	LD	L, E
+                             A      308 	LD	H, 00H
+                             A      309 	ADD	HL, BC
+                             A      310 	LD	A, (HL)
+                             A      311 
+                             A      312 	CALL A_SEND_CHAR
+                             A      313 
+                             A      314 ;TEST.C:19: NEXTOUT &= 0X1F;
+                             A      315 	LD	IY, SIOANEXTOUT
+                             A      316 	LD	A, (IY)
+                             A      317 	AND	A, 01FH
+                             A      318 	LD	(IY), A
+                             A      319 
+                             A      320 SIOAINT_TBE_EXIT:
+                             A      321 
+                             A      322 	POP IY	
+                             A      323 	POP HL	
+                             A      324 	POP DE	
+                             A      325 	POP BC	
+                             A      326 	POP AF
+                             A      327 	RET	
+                             A      328 ; ---------------------------------
+                             A      329 ; FUNCTION UARTSENDCHAR
+                             A      330 ; ---------------------------------
+                             A      331 SIOSENDCHARA: ; CHAR TO SEND IS IN A
+                             A      332 ;TEST.C:32: UBUFFER[NEXTIN++] = BYTE;
+                             A      333 	PUSH AF;
+                             A      334 	LD	A,(SIOANEXTIN)
+                             A      335 	LD	IY, SIOANEXTOUT
+                             A      336 	SUB	A,(IY+0)
+                             A      337 	JR	Z,ISEMPTYA
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   19
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+                             A      338 
+                             A      339 	LD D,0
+                             A      340 	JP FLAGSETA
+                             A      341 ISEMPTYA:
+                             A      342 	LD D,1
+                             A      343 
+                             A      344 FLAGSETA:
+                             A      345 	LD	IY, SIOANEXTIN
+                             A      346 	LD	C, (IY)
+                             A      347 	INC	(IY)
+                             A      348 	LD	HL, SIOATXBUFF
+                             A      349 	LD	B, 00H
+                             A      350 	ADD	HL, BC
+                             A      351 
+                             A      352 	POP AF
+                             A      353 	LD	(HL), A
+                             A      354 ;TEST.C:33: NEXTIN &= 0X01F;
+                             A      355 	LD	IY, SIOANEXTIN
+                             A      356 	LD	A, (IY)
+                             A      357 	AND	A, SERIALTXBUFFLEN-1
+                             A      358 	LD	(IY), A
+                             A      359 
+                             A      360 	LD	A,D
+                             A      361 	JR	NZ,EXITTHISA
+                             A      362 
+                             A      363 	CALL SIOA_TBE
+                             A      364 
+                             A      365 EXITTHISA:
+                             A      366 	RET
+                             A      367 
+                             A      368 	.else
+                             A      369 
+000000E9                     A      370 SIOAINT_TBE:
+000000E9                     A      371 SIOAINT_ESC:
+000000E9                     A      372 SIOAINT_RCA:
+000000E9                     A      373 SIOAINT_SRC:
+000000E9 ED 4D               A      374 	reti
+                             A      375 
+000000EB                     A      376 SEND_STR_A:
+000000EB C9                  A      377 	ret
+                             A      378 
+                             A      379 	.endif
+                             A      380 
+000000EC                     A      381 SIOBINT_TBE:			;Transmit Buffer Empty 
+000000EC F5                  A      382 	PUSH AF	; BACKUP AF
+                             A      383 
+                             A      384 	DOOUT 		SIOBCMD,RESET_TXINT_PENDING
+000000ED F5                  A+     384 	push 	AF
+000000EE C5                  A+     384 	push 	BC
+                             A+     384 
+000000EF 3E 28               A+     384 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     384 	.ifdef Z84C15
+                             A+     384 	out (ADDR),A
+                             A+     384 	.else
+000000F1 01 FC 0B            A+     384 	ld BC,ADDR
+000000F4 ED 79               A+     384 	out (BC),A
+                             A+     384 	.endif
+                             A+     384 
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   20
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+000000F6 C1                  A+     384 	pop 	BC
+000000F7 F1                  A+     384 	pop 	AF
+                             A+     384 	
+                             A      385 
+                             A      386 	STROUTXY 	8H,0EH, "SIOBINT_TBE", 11 
+000000F8 C5                  A+     386 	PUSH BC
+000000F9 D5                  A+     386 	PUSH DE
+000000FA E5                  A+     386 	PUSH HL
+000000FB DD E5               A+     386 	PUSH IX
+                             A+     386 
+                             A+     386 	XY2SCR	XPOS, YPOS
+000000FD C5                  A+     386 	PUSH BC
+                             A+     386 
+000000FE 06 08               A+     386 	LD 	B,XPOS
+00000100 0E 0E               A+     386 	LD 	C,YPOS
+                             A+     386 
+00000102 CD 00 00            A+     386 	CALL	FXY2SCR
+                             A+     386 
+00000105 C1                  A+     386 	POP BC
+                             A+     386 
+                             A+     386 
+00000106 21 13 01            A+     386 	LD	HL,$STRSTR
+00000109 DD E5               A+     386 	PUSH	IX
+0000010B D1                  A+     386 	POP		DE
+0000010C 01 0B 00            A+     386 	LD	BC,STRLEN
+                             A+     386 
+0000010F ED B0               A+     386 	LDIR
+00000111 18 0B               A+     386 	JR $LEAVE
+                             A+     386 
+00000113                     A+     386 $STRSTR
+00000113 53 49 4F 42 49 4E   A+     386 	DB STR
+00000119 54 5F 54 42 45      A+ d   386
+0000011E                     A+     386 $LEAVE
+0000011E DD E1               A+     386 	POP	IX
+00000120 E1                  A+     386 	POP HL
+00000121 D1                  A+     386 	POP DE
+00000122 C1                  A+     386 	POP BC
+                             A+     386 
+                             A      387 	QUADOUT 	0,0EH, SYSCLOCK
+00000123 C5                  A+     387 	PUSH BC
+00000124 E5                  A+     387 	PUSH HL
+                             A+     387 
+00000125 06 00               A+     387 	LD B,XPOS 
+00000127 0E 0E               A+     387 	LD C,YPOS
+00000129 21 6B 40            A+     387  	LD HL,PTR
+                             A+     387 
+0000012C CD 00 00            A+     387 	call FQUADOUT
+                             A+     387 
+0000012F E1                  A+     387 	POP HL
+00000130 C1                  A+     387 	POP BC
+                             A+     387 
+                             A      388 
+                             A      389 	QueueEmpty TxQBReadPos,TxQBWritePos
+                             A+     389 
+00000131 01 65 40            A+     389 	ld bc,RPosPtr
+00000134 3A 64 40            A+     389 	ld a,(WPos)
+00000137 5F                  A+     389 	ld	e,a
+                             A+     389 
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   21
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+00000138 0A                  A+     389 	ld	a,(BC)
+00000139 BB                  A+     389 	cp	e
+0000013A 20 05               A+     389 	jr	nz,QNotEmpty
+0000013C 3E 01               A+     389 	ld	a,1
+0000013E C3 43 01            A+     389 	jp Exit
+00000141                     A+     389 QNotEmpty:
+00000141 3E 00               A+     389 	ld	a,0
+00000143                     A+     389 Exit:
+                             A+     389 
+                             A      390 
+00000143 FE 01               A      391 	cp 1
+00000145 28 03               A      392 	jr	z,NOQEUE
+00000147 CD A0 05            A      393 	CALL		SIOB_TBE
+0000014A                     A      394 NOQEUE:
+                             A      395 ;;	la	a,1
+0000014A 21 66 40            A      396 	ld	HL,TxBIdle
+0000014D 36 01               A      397 	ld	(HL),1
+0000014F F1                  A      398 	POP 		AF
+00000150 FB                  A      399 	EI
+00000151 ED 4D               A      400 	RETI
+                             A      401 
+00000153                     A      402 SIOBINT_ESC:	;External/Status Change
+00000153 F5                  A      403 	PUSH 	AF	; BACKUP AF
+00000154 C5                  A      404 	PUSH 	BC	; BACKUP AF
+00000155 D5                  A      405 	PUSH 	DE	; BACKUP AF
+00000156 E5                  A      406 	PUSH 	HL	; BACKUP AF
+                             A      407 
+                             A      408 ;EXTERNAL STATUS
+                             A      409 	STROUTXY 08H,0FH, "SIOBINT_ESC", 11 
+00000157 C5                  A+     409 	PUSH BC
+00000158 D5                  A+     409 	PUSH DE
+00000159 E5                  A+     409 	PUSH HL
+0000015A DD E5               A+     409 	PUSH IX
+                             A+     409 
+                             A+     409 	XY2SCR	XPOS, YPOS
+0000015C C5                  A+     409 	PUSH BC
+                             A+     409 
+0000015D 06 08               A+     409 	LD 	B,XPOS
+0000015F 0E 0F               A+     409 	LD 	C,YPOS
+                             A+     409 
+00000161 CD 00 00            A+     409 	CALL	FXY2SCR
+                             A+     409 
+00000164 C1                  A+     409 	POP BC
+                             A+     409 
+                             A+     409 
+00000165 21 72 01            A+     409 	LD	HL,$STRSTR
+00000168 DD E5               A+     409 	PUSH	IX
+0000016A D1                  A+     409 	POP		DE
+0000016B 01 0B 00            A+     409 	LD	BC,STRLEN
+                             A+     409 
+0000016E ED B0               A+     409 	LDIR
+00000170 18 0B               A+     409 	JR $LEAVE
+                             A+     409 
+00000172                     A+     409 $STRSTR
+00000172 53 49 4F 42 49 4E   A+     409 	DB STR
+00000178 54 5F 45 53 43      A+ d   409
+0000017D                     A+     409 $LEAVE
+0000017D DD E1               A+     409 	POP	IX
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   22
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+0000017F E1                  A+     409 	POP HL
+00000180 D1                  A+     409 	POP DE
+00000181 C1                  A+     409 	POP BC
+                             A+     409 
+                             A      410 	QUADOUT 0,0FH, SYSCLOCK
+00000182 C5                  A+     410 	PUSH BC
+00000183 E5                  A+     410 	PUSH HL
+                             A+     410 
+00000184 06 00               A+     410 	LD B,XPOS 
+00000186 0E 0F               A+     410 	LD C,YPOS
+00000188 21 6B 40            A+     410  	LD HL,PTR
+                             A+     410 
+0000018B CD 00 00            A+     410 	call FQUADOUT
+                             A+     410 
+0000018E E1                  A+     410 	POP HL
+0000018F C1                  A+     410 	POP BC
+                             A+     410 
+                             A      411 
+                             A      412 	DOOUT 	SIOBCMD, REGISTER_0
+00000190 F5                  A+     412 	push 	AF
+00000191 C5                  A+     412 	push 	BC
+                             A+     412 
+00000192 3E 00               A+     412 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     412 	.ifdef Z84C15
+                             A+     412 	out (ADDR),A
+                             A+     412 	.else
+00000194 01 FC 0B            A+     412 	ld BC,ADDR
+00000197 ED 79               A+     412 	out (BC),A
+                             A+     412 	.endif
+                             A+     412 
+00000199 C1                  A+     412 	pop 	BC
+0000019A F1                  A+     412 	pop 	AF
+                             A+     412 	
+                             A      413 	DOIN  	SIOBCMD, D
+0000019B F5                  A+     413 	push 	AF
+0000019C C5                  A+     413 	push 	BC
+                             A+     413 
+                             A+     413 	.ifdef Z84C15
+                             A+     413 	in a,(ADDR)
+                             A+     413 	.else
+0000019D 01 FC 0B            A+     413 	ld BC,ADDR
+000001A0 ED 78               A+     413 	in 	a,(BC)
+                             A+     413 	.endif
+                             A+     413 
+000001A2 57                  A+     413 	ld	DEST,a
+000001A3 C1                  A+     413 	pop BC
+000001A4 F1                  A+     413 	POP	AF
+                             A+     413 	
+                             A      414 	HOUTXY 	08H,14H,D
+000001A5 C5                  A+     414 	PUSH BC
+000001A6 DD E5               A+     414 	PUSH IX
+                             A+     414 
+                             A+     414 	XY2SCR	XPOS, YPOS
+000001A8 C5                  A+     414 	PUSH BC
+                             A+     414 
+000001A9 06 08               A+     414 	LD 	B,XPOS
+000001AB 0E 14               A+     414 	LD 	C,YPOS
+                             A+     414 
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   23
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+000001AD CD 00 00            A+     414 	CALL	FXY2SCR
+                             A+     414 
+000001B0 C1                  A+     414 	POP BC
+                             A+     414 
+                             A+     414 
+000001B1 42                  A+     414 	LD	B,DIN
+000001B2 CD 00 00            A+     414 	call FHOUTA
+                             A+     414 
+000001B5 DD E1               A+     414 	POP	IX
+000001B7 C1                  A+     414 	POP BC
+                             A+     414 
+                             A      415 
+000001B8 21 F8 25            A      416 	LD		HL,25F8H
+000001BB 72                  A      417 	LD 		(HL),D
+                             A      418 
+                             A      419 	COUTXY 	08H,14H, 'X'
+000001BC DD E5               A+     419 	PUSH IX
+                             A+     419 
+                             A+     419 	XY2SCR	XPOS, YPOS
+000001BE C5                  A+     419 	PUSH BC
+                             A+     419 
+000001BF 06 08               A+     419 	LD 	B,XPOS
+000001C1 0E 14               A+     419 	LD 	C,YPOS
+                             A+     419 
+000001C3 CD 00 00            A+     419 	CALL	FXY2SCR
+                             A+     419 
+000001C6 C1                  A+     419 	POP BC
+                             A+     419 
+                             A+     419 
+000001C7 DD 36 00 58         A+     419 	LD 	(IX),CHR
+                             A+     419 
+000001CB DD E1               A+     419 	POP	IX
+                             A+     419 
+                             A      420 	COUTXY 	08H,14H, 'X'
+000001CD DD E5               A+     420 	PUSH IX
+                             A+     420 
+                             A+     420 	XY2SCR	XPOS, YPOS
+000001CF C5                  A+     420 	PUSH BC
+                             A+     420 
+000001D0 06 08               A+     420 	LD 	B,XPOS
+000001D2 0E 14               A+     420 	LD 	C,YPOS
+                             A+     420 
+000001D4 CD 00 00            A+     420 	CALL	FXY2SCR
+                             A+     420 
+000001D7 C1                  A+     420 	POP BC
+                             A+     420 
+                             A+     420 
+000001D8 DD 36 00 58         A+     420 	LD 	(IX),CHR
+                             A+     420 
+000001DC DD E1               A+     420 	POP	IX
+                             A+     420 
+                             A      421 	COUTXY 	0AH,14H, 'X'
+000001DE DD E5               A+     421 	PUSH IX
+                             A+     421 
+                             A+     421 	XY2SCR	XPOS, YPOS
+000001E0 C5                  A+     421 	PUSH BC
+                             A+     421 
+000001E1 06 0A               A+     421 	LD 	B,XPOS
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   24
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+000001E3 0E 14               A+     421 	LD 	C,YPOS
+                             A+     421 
+000001E5 CD 00 00            A+     421 	CALL	FXY2SCR
+                             A+     421 
+000001E8 C1                  A+     421 	POP BC
+                             A+     421 
+                             A+     421 
+000001E9 DD 36 00 58         A+     421 	LD 	(IX),CHR
+                             A+     421 
+000001ED DD E1               A+     421 	POP	IX
+                             A+     421 
+                             A      422 	COUTXY 	0BH,14H, 'X'
+000001EF DD E5               A+     422 	PUSH IX
+                             A+     422 
+                             A+     422 	XY2SCR	XPOS, YPOS
+000001F1 C5                  A+     422 	PUSH BC
+                             A+     422 
+000001F2 06 0B               A+     422 	LD 	B,XPOS
+000001F4 0E 14               A+     422 	LD 	C,YPOS
+                             A+     422 
+000001F6 CD 00 00            A+     422 	CALL	FXY2SCR
+                             A+     422 
+000001F9 C1                  A+     422 	POP BC
+                             A+     422 
+                             A+     422 
+000001FA DD 36 00 58         A+     422 	LD 	(IX),CHR
+                             A+     422 
+000001FE DD E1               A+     422 	POP	IX
+                             A+     422 
+                             A      423 	COUTXY 	0CH,14H, 'X'
+00000200 DD E5               A+     423 	PUSH IX
+                             A+     423 
+                             A+     423 	XY2SCR	XPOS, YPOS
+00000202 C5                  A+     423 	PUSH BC
+                             A+     423 
+00000203 06 0C               A+     423 	LD 	B,XPOS
+00000205 0E 14               A+     423 	LD 	C,YPOS
+                             A+     423 
+00000207 CD 00 00            A+     423 	CALL	FXY2SCR
+                             A+     423 
+0000020A C1                  A+     423 	POP BC
+                             A+     423 
+                             A+     423 
+0000020B DD 36 00 58         A+     423 	LD 	(IX),CHR
+                             A+     423 
+0000020F DD E1               A+     423 	POP	IX
+                             A+     423 
+                             A      424 	COUTXY 	0DH,14H, 'X'
+00000211 DD E5               A+     424 	PUSH IX
+                             A+     424 
+                             A+     424 	XY2SCR	XPOS, YPOS
+00000213 C5                  A+     424 	PUSH BC
+                             A+     424 
+00000214 06 0D               A+     424 	LD 	B,XPOS
+00000216 0E 14               A+     424 	LD 	C,YPOS
+                             A+     424 
+00000218 CD 00 00            A+     424 	CALL	FXY2SCR
+                             A+     424 
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   25
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+0000021B C1                  A+     424 	POP BC
+                             A+     424 
+                             A+     424 
+0000021C DD 36 00 58         A+     424 	LD 	(IX),CHR
+                             A+     424 
+00000220 DD E1               A+     424 	POP	IX
+                             A+     424 
+                             A      425 	COUTXY 	0EH,14H, 'X'
+00000222 DD E5               A+     425 	PUSH IX
+                             A+     425 
+                             A+     425 	XY2SCR	XPOS, YPOS
+00000224 C5                  A+     425 	PUSH BC
+                             A+     425 
+00000225 06 0E               A+     425 	LD 	B,XPOS
+00000227 0E 14               A+     425 	LD 	C,YPOS
+                             A+     425 
+00000229 CD 00 00            A+     425 	CALL	FXY2SCR
+                             A+     425 
+0000022C C1                  A+     425 	POP BC
+                             A+     425 
+                             A+     425 
+0000022D DD 36 00 58         A+     425 	LD 	(IX),CHR
+                             A+     425 
+00000231 DD E1               A+     425 	POP	IX
+                             A+     425 
+                             A      426 	COUTXY 	0FH,14H, 'X'
+00000233 DD E5               A+     426 	PUSH IX
+                             A+     426 
+                             A+     426 	XY2SCR	XPOS, YPOS
+00000235 C5                  A+     426 	PUSH BC
+                             A+     426 
+00000236 06 0F               A+     426 	LD 	B,XPOS
+00000238 0E 14               A+     426 	LD 	C,YPOS
+                             A+     426 
+0000023A CD 00 00            A+     426 	CALL	FXY2SCR
+                             A+     426 
+0000023D C1                  A+     426 	POP BC
+                             A+     426 
+                             A+     426 
+0000023E DD 36 00 58         A+     426 	LD 	(IX),CHR
+                             A+     426 
+00000242 DD E1               A+     426 	POP	IX
+                             A+     426 
+                             A      427 
+00000244 CB 42               A      428 	BIT		0,D
+00000246 28 1B               A      429 	JR		Z,BIT0R
+                             A      430 ;	Receive Character Available
+                             A      431 	DOIN 	SIOBDATA,A	;Read
+00000248 F5                  A+     431 	push 	AF
+00000249 C5                  A+     431 	push 	BC
+                             A+     431 
+                             A+     431 	.ifdef Z84C15
+                             A+     431 	in a,(ADDR)
+                             A+     431 	.else
+0000024A 01 FC 0A            A+     431 	ld BC,ADDR
+0000024D ED 78               A+     431 	in 	a,(BC)
+                             A+     431 	.endif
+                             A+     431 
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   26
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+0000024F 7F                  A+     431 	ld	DEST,a
+00000250 C1                  A+     431 	pop BC
+00000251 F1                  A+     431 	POP	AF
+                             A+     431 	
+                             A      432 	COUTXY 	08H,14H, '0'
+00000252 DD E5               A+     432 	PUSH IX
+                             A+     432 
+                             A+     432 	XY2SCR	XPOS, YPOS
+00000254 C5                  A+     432 	PUSH BC
+                             A+     432 
+00000255 06 08               A+     432 	LD 	B,XPOS
+00000257 0E 14               A+     432 	LD 	C,YPOS
+                             A+     432 
+00000259 CD 00 00            A+     432 	CALL	FXY2SCR
+                             A+     432 
+0000025C C1                  A+     432 	POP BC
+                             A+     432 
+                             A+     432 
+0000025D DD 36 00 30         A+     432 	LD 	(IX),CHR
+                             A+     432 
+00000261 DD E1               A+     432 	POP	IX
+                             A+     432 
+00000263                     A      433 BIT0R:
+00000263 CB 4A               A      434 	BIT		1,D
+00000265 28 11               A      435 	JR		Z,BIT1R
+                             A      436 ;	Interrupt Pending
+                             A      437 	COUTXY 	09H,14H, '1'
+00000267 DD E5               A+     437 	PUSH IX
+                             A+     437 
+                             A+     437 	XY2SCR	XPOS, YPOS
+00000269 C5                  A+     437 	PUSH BC
+                             A+     437 
+0000026A 06 09               A+     437 	LD 	B,XPOS
+0000026C 0E 14               A+     437 	LD 	C,YPOS
+                             A+     437 
+0000026E CD 00 00            A+     437 	CALL	FXY2SCR
+                             A+     437 
+00000271 C1                  A+     437 	POP BC
+                             A+     437 
+                             A+     437 
+00000272 DD 36 00 31         A+     437 	LD 	(IX),CHR
+                             A+     437 
+00000276 DD E1               A+     437 	POP	IX
+                             A+     437 
+00000278                     A      438 BIT1R:
+00000278 CB 52               A      439 	BIT		2,D
+0000027A 28 1C               A      440 	JR		Z,BIT2R
+                             A      441 ;	Transmit Buffer Empty
+                             A      442 	DOOUT SIOBCMD, RESET_TXINT_PENDING
+0000027C F5                  A+     442 	push 	AF
+0000027D C5                  A+     442 	push 	BC
+                             A+     442 
+0000027E 3E 28               A+     442 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     442 	.ifdef Z84C15
+                             A+     442 	out (ADDR),A
+                             A+     442 	.else
+00000280 01 FC 0B            A+     442 	ld BC,ADDR
+00000283 ED 79               A+     442 	out (BC),A
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   27
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+                             A+     442 	.endif
+                             A+     442 
+00000285 C1                  A+     442 	pop 	BC
+00000286 F1                  A+     442 	pop 	AF
+                             A+     442 	
+                             A      443 	COUTXY 	0AH,14H, '2'
+00000287 DD E5               A+     443 	PUSH IX
+                             A+     443 
+                             A+     443 	XY2SCR	XPOS, YPOS
+00000289 C5                  A+     443 	PUSH BC
+                             A+     443 
+0000028A 06 0A               A+     443 	LD 	B,XPOS
+0000028C 0E 14               A+     443 	LD 	C,YPOS
+                             A+     443 
+0000028E CD 00 00            A+     443 	CALL	FXY2SCR
+                             A+     443 
+00000291 C1                  A+     443 	POP BC
+                             A+     443 
+                             A+     443 
+00000292 DD 36 00 32         A+     443 	LD 	(IX),CHR
+                             A+     443 
+00000296 DD E1               A+     443 	POP	IX
+                             A+     443 
+00000298                     A      444 BIT2R:
+00000298 CB 5A               A      445 	BIT		3,D
+0000029A 28 11               A      446 	JR		Z,BIT3R
+                             A      447 ;	Data Carrier Detect
+                             A      448 	COUTXY 	0BH,14H, '3'
+0000029C DD E5               A+     448 	PUSH IX
+                             A+     448 
+                             A+     448 	XY2SCR	XPOS, YPOS
+0000029E C5                  A+     448 	PUSH BC
+                             A+     448 
+0000029F 06 0B               A+     448 	LD 	B,XPOS
+000002A1 0E 14               A+     448 	LD 	C,YPOS
+                             A+     448 
+000002A3 CD 00 00            A+     448 	CALL	FXY2SCR
+                             A+     448 
+000002A6 C1                  A+     448 	POP BC
+                             A+     448 
+                             A+     448 
+000002A7 DD 36 00 33         A+     448 	LD 	(IX),CHR
+                             A+     448 
+000002AB DD E1               A+     448 	POP	IX
+                             A+     448 
+000002AD                     A      449 BIT3R:
+000002AD CB 62               A      450 	BIT		4,D
+000002AF 28 11               A      451 	JR		Z,BIT4R
+                             A      452 ;	Sync/Hunt
+                             A      453 	COUTXY 	0CH,14H, '4'
+000002B1 DD E5               A+     453 	PUSH IX
+                             A+     453 
+                             A+     453 	XY2SCR	XPOS, YPOS
+000002B3 C5                  A+     453 	PUSH BC
+                             A+     453 
+000002B4 06 0C               A+     453 	LD 	B,XPOS
+000002B6 0E 14               A+     453 	LD 	C,YPOS
+                             A+     453 
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   28
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+000002B8 CD 00 00            A+     453 	CALL	FXY2SCR
+                             A+     453 
+000002BB C1                  A+     453 	POP BC
+                             A+     453 
+                             A+     453 
+000002BC DD 36 00 34         A+     453 	LD 	(IX),CHR
+                             A+     453 
+000002C0 DD E1               A+     453 	POP	IX
+                             A+     453 
+000002C2                     A      454 BIT4R:
+000002C2 CB 6A               A      455 	BIT		5,D
+000002C4 28 11               A      456 	JR		Z,BIT5R
+                             A      457 ;	CTS
+                             A      458 	COUTXY 	0DH,14H, '5'
+000002C6 DD E5               A+     458 	PUSH IX
+                             A+     458 
+                             A+     458 	XY2SCR	XPOS, YPOS
+000002C8 C5                  A+     458 	PUSH BC
+                             A+     458 
+000002C9 06 0D               A+     458 	LD 	B,XPOS
+000002CB 0E 14               A+     458 	LD 	C,YPOS
+                             A+     458 
+000002CD CD 00 00            A+     458 	CALL	FXY2SCR
+                             A+     458 
+000002D0 C1                  A+     458 	POP BC
+                             A+     458 
+                             A+     458 
+000002D1 DD 36 00 35         A+     458 	LD 	(IX),CHR
+                             A+     458 
+000002D5 DD E1               A+     458 	POP	IX
+                             A+     458 
+000002D7                     A      459 BIT5R:
+000002D7 CB 72               A      460 	BIT		6,D
+000002D9 28 11               A      461 	JR		Z,BIT6R
+                             A      462 ;	UNDERRUN EOM
+                             A      463 	COUTXY 	0EH,14H, '6'
+000002DB DD E5               A+     463 	PUSH IX
+                             A+     463 
+                             A+     463 	XY2SCR	XPOS, YPOS
+000002DD C5                  A+     463 	PUSH BC
+                             A+     463 
+000002DE 06 0E               A+     463 	LD 	B,XPOS
+000002E0 0E 14               A+     463 	LD 	C,YPOS
+                             A+     463 
+000002E2 CD 00 00            A+     463 	CALL	FXY2SCR
+                             A+     463 
+000002E5 C1                  A+     463 	POP BC
+                             A+     463 
+                             A+     463 
+000002E6 DD 36 00 36         A+     463 	LD 	(IX),CHR
+                             A+     463 
+000002EA DD E1               A+     463 	POP	IX
+                             A+     463 
+000002EC                     A      464 BIT6R:
+000002EC CB 7A               A      465 	BIT		7,D
+000002EE 28 11               A      466 	JR		Z,BIT7R
+                             A      467 ;	BREAK/ABORT
+                             A      468 	COUTXY 	0FH,14H, '7'
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   29
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+000002F0 DD E5               A+     468 	PUSH IX
+                             A+     468 
+                             A+     468 	XY2SCR	XPOS, YPOS
+000002F2 C5                  A+     468 	PUSH BC
+                             A+     468 
+000002F3 06 0F               A+     468 	LD 	B,XPOS
+000002F5 0E 14               A+     468 	LD 	C,YPOS
+                             A+     468 
+000002F7 CD 00 00            A+     468 	CALL	FXY2SCR
+                             A+     468 
+000002FA C1                  A+     468 	POP BC
+                             A+     468 
+                             A+     468 
+000002FB DD 36 00 37         A+     468 	LD 	(IX),CHR
+                             A+     468 
+000002FF DD E1               A+     468 	POP	IX
+                             A+     468 
+00000301                     A      469 BIT7R:	
+                             A      470 	DOOUT 	SIOBCMD, REGISTER_1
+00000301 F5                  A+     470 	push 	AF
+00000302 C5                  A+     470 	push 	BC
+                             A+     470 
+00000303 3E 01               A+     470 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     470 	.ifdef Z84C15
+                             A+     470 	out (ADDR),A
+                             A+     470 	.else
+00000305 01 FC 0B            A+     470 	ld BC,ADDR
+00000308 ED 79               A+     470 	out (BC),A
+                             A+     470 	.endif
+                             A+     470 
+0000030A C1                  A+     470 	pop 	BC
+0000030B F1                  A+     470 	pop 	AF
+                             A+     470 	
+                             A      471 	DOIN  	SIOBCMD, D
+0000030C F5                  A+     471 	push 	AF
+0000030D C5                  A+     471 	push 	BC
+                             A+     471 
+                             A+     471 	.ifdef Z84C15
+                             A+     471 	in a,(ADDR)
+                             A+     471 	.else
+0000030E 01 FC 0B            A+     471 	ld BC,ADDR
+00000311 ED 78               A+     471 	in 	a,(BC)
+                             A+     471 	.endif
+                             A+     471 
+00000313 57                  A+     471 	ld	DEST,a
+00000314 C1                  A+     471 	pop BC
+00000315 F1                  A+     471 	POP	AF
+                             A+     471 	
+00000316 21 F9 25            A      472 	LD		HL,25F9H
+00000319 72                  A      473 	LD 		(HL),D
+                             A      474 
+                             A      475 	DOOUT 	SIOBCMD, REGISTER_2
+0000031A F5                  A+     475 	push 	AF
+0000031B C5                  A+     475 	push 	BC
+                             A+     475 
+0000031C 3E 02               A+     475 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     475 	.ifdef Z84C15
+                             A+     475 	out (ADDR),A
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   30
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+                             A+     475 	.else
+0000031E 01 FC 0B            A+     475 	ld BC,ADDR
+00000321 ED 79               A+     475 	out (BC),A
+                             A+     475 	.endif
+                             A+     475 
+00000323 C1                  A+     475 	pop 	BC
+00000324 F1                  A+     475 	pop 	AF
+                             A+     475 	
+                             A      476 	DOIN  	SIOBCMD, D
+00000325 F5                  A+     476 	push 	AF
+00000326 C5                  A+     476 	push 	BC
+                             A+     476 
+                             A+     476 	.ifdef Z84C15
+                             A+     476 	in a,(ADDR)
+                             A+     476 	.else
+00000327 01 FC 0B            A+     476 	ld BC,ADDR
+0000032A ED 78               A+     476 	in 	a,(BC)
+                             A+     476 	.endif
+                             A+     476 
+0000032C 57                  A+     476 	ld	DEST,a
+0000032D C1                  A+     476 	pop BC
+0000032E F1                  A+     476 	POP	AF
+                             A+     476 	
+0000032F 21 FA 25            A      477 	LD		HL,25FAH
+00000332 72                  A      478 	LD 		(HL),D
+                             A      479 
+                             A      480 	DOOUT 	SIOBCMD, RESET_EXT_STATUS_INTS
+00000333 F5                  A+     480 	push 	AF
+00000334 C5                  A+     480 	push 	BC
+                             A+     480 
+00000335 3E 10               A+     480 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     480 	.ifdef Z84C15
+                             A+     480 	out (ADDR),A
+                             A+     480 	.else
+00000337 01 FC 0B            A+     480 	ld BC,ADDR
+0000033A ED 79               A+     480 	out (BC),A
+                             A+     480 	.endif
+                             A+     480 
+0000033C C1                  A+     480 	pop 	BC
+0000033D F1                  A+     480 	pop 	AF
+                             A+     480 	
+                             A      481 	DOOUT	SIOBCMD, ERROR_RESET_LATCHES
+0000033E F5                  A+     481 	push 	AF
+0000033F C5                  A+     481 	push 	BC
+                             A+     481 
+00000340 3E 30               A+     481 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     481 	.ifdef Z84C15
+                             A+     481 	out (ADDR),A
+                             A+     481 	.else
+00000342 01 FC 0B            A+     481 	ld BC,ADDR
+00000345 ED 79               A+     481 	out (BC),A
+                             A+     481 	.endif
+                             A+     481 
+00000347 C1                  A+     481 	pop 	BC
+00000348 F1                  A+     481 	pop 	AF
+                             A+     481 	
+                             A      482 
+00000349 E1                  A      483 	POP 	HL
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   31
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+0000034A D1                  A      484 	POP 	DE
+0000034B C1                  A      485 	POP		BC
+0000034C F1                  A      486 	POP 	AF
+0000034D FB                  A      487 	EI
+0000034E ED 4D               A      488 	RETI
+                             A      489 
+00000350                     A      490 SIOBINT_RCA:	;Receive Character Available
+00000350 F5                  A      491 	PUSH 	AF	; BACKUP AF
+00000351 E5                  A      492 	PUSH 	HL	; BACKUP HL
+00000352 D5                  A      493 	PUSH 	DE	; BACKUP DE
+                             A      494 
+                             A      495 	DOIN 	SIOBDATA,D
+00000353 F5                  A+     495 	push 	AF
+00000354 C5                  A+     495 	push 	BC
+                             A+     495 
+                             A+     495 	.ifdef Z84C15
+                             A+     495 	in a,(ADDR)
+                             A+     495 	.else
+00000355 01 FC 0A            A+     495 	ld BC,ADDR
+00000358 ED 78               A+     495 	in 	a,(BC)
+                             A+     495 	.endif
+                             A+     495 
+0000035A 57                  A+     495 	ld	DEST,a
+0000035B C1                  A+     495 	pop BC
+0000035C F1                  A+     495 	POP	AF
+                             A+     495 	
+                             A      496 
+                             A      497 	AddtoQueue D,RxQB,RxQBReadPos,RxQBWritePos
+0000035D C5                  A+     497 	push	bc
+0000035E D5                  A+     497 	push	de
+0000035F E5                  A+     497 	push	hl
+                             A+     497 
+00000360 42                  A+     497 	ld b,InChar
+00000361 21 30 40            A+     497 	ld hl,Queue
+00000364 3A 68 40            A+     497 	ld a,(RPosPtr)
+00000367 4F                  A+     497 	ld c,a
+00000368 11 67 40            A+     497 	ld de,WPosPtr
+                             A+     497 
+0000036B CD 00 00            A+     497 	call FAddtoQueue
+                             A+     497 
+0000036E E1                  A+     497 	pop		hl
+0000036F D1                  A+     497 	pop		de
+00000370 C1                  A+     497 	pop		bc
+                             A+     497 
+                             A      498 
+                             A      499 	HOUTXY 	14H,10H,D
+00000371 C5                  A+     499 	PUSH BC
+00000372 DD E5               A+     499 	PUSH IX
+                             A+     499 
+                             A+     499 	XY2SCR	XPOS, YPOS
+00000374 C5                  A+     499 	PUSH BC
+                             A+     499 
+00000375 06 14               A+     499 	LD 	B,XPOS
+00000377 0E 10               A+     499 	LD 	C,YPOS
+                             A+     499 
+00000379 CD 00 00            A+     499 	CALL	FXY2SCR
+                             A+     499 
+0000037C C1                  A+     499 	POP BC
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   32
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+                             A+     499 
+                             A+     499 
+0000037D 42                  A+     499 	LD	B,DIN
+0000037E CD 00 00            A+     499 	call FHOUTA
+                             A+     499 
+00000381 DD E1               A+     499 	POP	IX
+00000383 C1                  A+     499 	POP BC
+                             A+     499 
+                             A      500 
+                             A      501 	DOOUT SIOBCMD, REGISTER_0
+00000384 F5                  A+     501 	push 	AF
+00000385 C5                  A+     501 	push 	BC
+                             A+     501 
+00000386 3E 00               A+     501 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     501 	.ifdef Z84C15
+                             A+     501 	out (ADDR),A
+                             A+     501 	.else
+00000388 01 FC 0B            A+     501 	ld BC,ADDR
+0000038B ED 79               A+     501 	out (BC),A
+                             A+     501 	.endif
+                             A+     501 
+0000038D C1                  A+     501 	pop 	BC
+0000038E F1                  A+     501 	pop 	AF
+                             A+     501 	
+                             A      502 	DOIN  SIOBCMD, D
+0000038F F5                  A+     502 	push 	AF
+00000390 C5                  A+     502 	push 	BC
+                             A+     502 
+                             A+     502 	.ifdef Z84C15
+                             A+     502 	in a,(ADDR)
+                             A+     502 	.else
+00000391 01 FC 0B            A+     502 	ld BC,ADDR
+00000394 ED 78               A+     502 	in 	a,(BC)
+                             A+     502 	.endif
+                             A+     502 
+00000396 57                  A+     502 	ld	DEST,a
+00000397 C1                  A+     502 	pop BC
+00000398 F1                  A+     502 	POP	AF
+                             A+     502 	
+                             A      503 	HOUTXY 	17H,10h,D
+00000399 C5                  A+     503 	PUSH BC
+0000039A DD E5               A+     503 	PUSH IX
+                             A+     503 
+                             A+     503 	XY2SCR	XPOS, YPOS
+0000039C C5                  A+     503 	PUSH BC
+                             A+     503 
+0000039D 06 17               A+     503 	LD 	B,XPOS
+0000039F 0E 10               A+     503 	LD 	C,YPOS
+                             A+     503 
+000003A1 CD 00 00            A+     503 	CALL	FXY2SCR
+                             A+     503 
+000003A4 C1                  A+     503 	POP BC
+                             A+     503 
+                             A+     503 
+000003A5 42                  A+     503 	LD	B,DIN
+000003A6 CD 00 00            A+     503 	call FHOUTA
+                             A+     503 
+000003A9 DD E1               A+     503 	POP	IX
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   33
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+000003AB C1                  A+     503 	POP BC
+                             A+     503 
+                             A      504 
+                             A      505 	DOOUT SIOBCMD, REGISTER_1
+000003AC F5                  A+     505 	push 	AF
+000003AD C5                  A+     505 	push 	BC
+                             A+     505 
+000003AE 3E 01               A+     505 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     505 	.ifdef Z84C15
+                             A+     505 	out (ADDR),A
+                             A+     505 	.else
+000003B0 01 FC 0B            A+     505 	ld BC,ADDR
+000003B3 ED 79               A+     505 	out (BC),A
+                             A+     505 	.endif
+                             A+     505 
+000003B5 C1                  A+     505 	pop 	BC
+000003B6 F1                  A+     505 	pop 	AF
+                             A+     505 	
+                             A      506 	DOIN  SIOBCMD, D
+000003B7 F5                  A+     506 	push 	AF
+000003B8 C5                  A+     506 	push 	BC
+                             A+     506 
+                             A+     506 	.ifdef Z84C15
+                             A+     506 	in a,(ADDR)
+                             A+     506 	.else
+000003B9 01 FC 0B            A+     506 	ld BC,ADDR
+000003BC ED 78               A+     506 	in 	a,(BC)
+                             A+     506 	.endif
+                             A+     506 
+000003BE 57                  A+     506 	ld	DEST,a
+000003BF C1                  A+     506 	pop BC
+000003C0 F1                  A+     506 	POP	AF
+                             A+     506 	
+                             A      507 	HOUTXY 	1AH,10h,D
+000003C1 C5                  A+     507 	PUSH BC
+000003C2 DD E5               A+     507 	PUSH IX
+                             A+     507 
+                             A+     507 	XY2SCR	XPOS, YPOS
+000003C4 C5                  A+     507 	PUSH BC
+                             A+     507 
+000003C5 06 1A               A+     507 	LD 	B,XPOS
+000003C7 0E 10               A+     507 	LD 	C,YPOS
+                             A+     507 
+000003C9 CD 00 00            A+     507 	CALL	FXY2SCR
+                             A+     507 
+000003CC C1                  A+     507 	POP BC
+                             A+     507 
+                             A+     507 
+000003CD 42                  A+     507 	LD	B,DIN
+000003CE CD 00 00            A+     507 	call FHOUTA
+                             A+     507 
+000003D1 DD E1               A+     507 	POP	IX
+000003D3 C1                  A+     507 	POP BC
+                             A+     507 
+                             A      508 
+                             A      509 	DOOUT SIOBCMD, REGISTER_2
+000003D4 F5                  A+     509 	push 	AF
+000003D5 C5                  A+     509 	push 	BC
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   34
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+                             A+     509 
+000003D6 3E 02               A+     509 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     509 	.ifdef Z84C15
+                             A+     509 	out (ADDR),A
+                             A+     509 	.else
+000003D8 01 FC 0B            A+     509 	ld BC,ADDR
+000003DB ED 79               A+     509 	out (BC),A
+                             A+     509 	.endif
+                             A+     509 
+000003DD C1                  A+     509 	pop 	BC
+000003DE F1                  A+     509 	pop 	AF
+                             A+     509 	
+                             A      510 	DOIN  SIOBCMD,D
+000003DF F5                  A+     510 	push 	AF
+000003E0 C5                  A+     510 	push 	BC
+                             A+     510 
+                             A+     510 	.ifdef Z84C15
+                             A+     510 	in a,(ADDR)
+                             A+     510 	.else
+000003E1 01 FC 0B            A+     510 	ld BC,ADDR
+000003E4 ED 78               A+     510 	in 	a,(BC)
+                             A+     510 	.endif
+                             A+     510 
+000003E6 57                  A+     510 	ld	DEST,a
+000003E7 C1                  A+     510 	pop BC
+000003E8 F1                  A+     510 	POP	AF
+                             A+     510 	
+                             A      511 	HOUTXY 	1DH,10h,D
+000003E9 C5                  A+     511 	PUSH BC
+000003EA DD E5               A+     511 	PUSH IX
+                             A+     511 
+                             A+     511 	XY2SCR	XPOS, YPOS
+000003EC C5                  A+     511 	PUSH BC
+                             A+     511 
+000003ED 06 1D               A+     511 	LD 	B,XPOS
+000003EF 0E 10               A+     511 	LD 	C,YPOS
+                             A+     511 
+000003F1 CD 00 00            A+     511 	CALL	FXY2SCR
+                             A+     511 
+000003F4 C1                  A+     511 	POP BC
+                             A+     511 
+                             A+     511 
+000003F5 42                  A+     511 	LD	B,DIN
+000003F6 CD 00 00            A+     511 	call FHOUTA
+                             A+     511 
+000003F9 DD E1               A+     511 	POP	IX
+000003FB C1                  A+     511 	POP BC
+                             A+     511 
+                             A      512 	
+                             A      513 	STROUTXY 08H,10H,"SIOBINT_RCA", 11 
+000003FC C5                  A+     513 	PUSH BC
+000003FD D5                  A+     513 	PUSH DE
+000003FE E5                  A+     513 	PUSH HL
+000003FF DD E5               A+     513 	PUSH IX
+                             A+     513 
+                             A+     513 	XY2SCR	XPOS, YPOS
+00000401 C5                  A+     513 	PUSH BC
+                             A+     513 
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   35
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+00000402 06 08               A+     513 	LD 	B,XPOS
+00000404 0E 10               A+     513 	LD 	C,YPOS
+                             A+     513 
+00000406 CD 00 00            A+     513 	CALL	FXY2SCR
+                             A+     513 
+00000409 C1                  A+     513 	POP BC
+                             A+     513 
+                             A+     513 
+0000040A 21 17 04            A+     513 	LD	HL,$STRSTR
+0000040D DD E5               A+     513 	PUSH	IX
+0000040F D1                  A+     513 	POP		DE
+00000410 01 0B 00            A+     513 	LD	BC,STRLEN
+                             A+     513 
+00000413 ED B0               A+     513 	LDIR
+00000415 18 0B               A+     513 	JR $LEAVE
+                             A+     513 
+00000417                     A+     513 $STRSTR
+00000417 53 49 4F 42 49 4E   A+     513 	DB STR
+0000041D 54 5F 52 43 41      A+ d   513
+00000422                     A+     513 $LEAVE
+00000422 DD E1               A+     513 	POP	IX
+00000424 E1                  A+     513 	POP HL
+00000425 D1                  A+     513 	POP DE
+00000426 C1                  A+     513 	POP BC
+                             A+     513 
+                             A      514 	QUADOUT 0,10H,SYSCLOCK
+00000427 C5                  A+     514 	PUSH BC
+00000428 E5                  A+     514 	PUSH HL
+                             A+     514 
+00000429 06 00               A+     514 	LD B,XPOS 
+0000042B 0E 10               A+     514 	LD C,YPOS
+0000042D 21 6B 40            A+     514  	LD HL,PTR
+                             A+     514 
+00000430 CD 00 00            A+     514 	call FQUADOUT
+                             A+     514 
+00000433 E1                  A+     514 	POP HL
+00000434 C1                  A+     514 	POP BC
+                             A+     514 
+                             A      515 
+00000435 D1                  A      516 	POP	DE
+00000436 E1                  A      517 	POP HL
+00000437 F1                  A      518 	POP AF
+00000438 FB                  A      519 	EI
+00000439 ED 4D               A      520 	RETI
+                             A      521 
+0000043B                     A      522 SIOBINT_SRC:	;Special Receive Condition
+0000043B F5                  A      523 	PUSH AF	; BACKUP AF
+                             A      524 
+                             A      525 	STROUTXY 08H, 11H, "SIOBINT_SRC", 11
+0000043C C5                  A+     525 	PUSH BC
+0000043D D5                  A+     525 	PUSH DE
+0000043E E5                  A+     525 	PUSH HL
+0000043F DD E5               A+     525 	PUSH IX
+                             A+     525 
+                             A+     525 	XY2SCR	XPOS, YPOS
+00000441 C5                  A+     525 	PUSH BC
+                             A+     525 
+00000442 06 08               A+     525 	LD 	B,XPOS
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   36
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+00000444 0E 11               A+     525 	LD 	C,YPOS
+                             A+     525 
+00000446 CD 00 00            A+     525 	CALL	FXY2SCR
+                             A+     525 
+00000449 C1                  A+     525 	POP BC
+                             A+     525 
+                             A+     525 
+0000044A 21 57 04            A+     525 	LD	HL,$STRSTR
+0000044D DD E5               A+     525 	PUSH	IX
+0000044F D1                  A+     525 	POP		DE
+00000450 01 0B 00            A+     525 	LD	BC,STRLEN
+                             A+     525 
+00000453 ED B0               A+     525 	LDIR
+00000455 18 0B               A+     525 	JR $LEAVE
+                             A+     525 
+00000457                     A+     525 $STRSTR
+00000457 53 49 4F 42 49 4E   A+     525 	DB STR
+0000045D 54 5F 53 52 43      A+ d   525
+00000462                     A+     525 $LEAVE
+00000462 DD E1               A+     525 	POP	IX
+00000464 E1                  A+     525 	POP HL
+00000465 D1                  A+     525 	POP DE
+00000466 C1                  A+     525 	POP BC
+                             A+     525 
+                             A      526 
+                             A      527 	QUADOUT 0,11H, SYSCLOCK
+00000467 C5                  A+     527 	PUSH BC
+00000468 E5                  A+     527 	PUSH HL
+                             A+     527 
+00000469 06 00               A+     527 	LD B,XPOS 
+0000046B 0E 11               A+     527 	LD C,YPOS
+0000046D 21 6B 40            A+     527  	LD HL,PTR
+                             A+     527 
+00000470 CD 00 00            A+     527 	call FQUADOUT
+                             A+     527 
+00000473 E1                  A+     527 	POP HL
+00000474 C1                  A+     527 	POP BC
+                             A+     527 
+                             A      528 
+                             A      529 	DOOUT SIOBCMD, REGISTER_0
+00000475 F5                  A+     529 	push 	AF
+00000476 C5                  A+     529 	push 	BC
+                             A+     529 
+00000477 3E 00               A+     529 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     529 	.ifdef Z84C15
+                             A+     529 	out (ADDR),A
+                             A+     529 	.else
+00000479 01 FC 0B            A+     529 	ld BC,ADDR
+0000047C ED 79               A+     529 	out (BC),A
+                             A+     529 	.endif
+                             A+     529 
+0000047E C1                  A+     529 	pop 	BC
+0000047F F1                  A+     529 	pop 	AF
+                             A+     529 	
+                             A      530 	DOIN  SIOBCMD, H
+00000480 F5                  A+     530 	push 	AF
+00000481 C5                  A+     530 	push 	BC
+                             A+     530 
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   37
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+                             A+     530 	.ifdef Z84C15
+                             A+     530 	in a,(ADDR)
+                             A+     530 	.else
+00000482 01 FC 0B            A+     530 	ld BC,ADDR
+00000485 ED 78               A+     530 	in 	a,(BC)
+                             A+     530 	.endif
+                             A+     530 
+00000487 67                  A+     530 	ld	DEST,a
+00000488 C1                  A+     530 	pop BC
+00000489 F1                  A+     530 	POP	AF
+                             A+     530 	
+                             A      531 	HOUTXY 14H,11h,H
+0000048A C5                  A+     531 	PUSH BC
+0000048B DD E5               A+     531 	PUSH IX
+                             A+     531 
+                             A+     531 	XY2SCR	XPOS, YPOS
+0000048D C5                  A+     531 	PUSH BC
+                             A+     531 
+0000048E 06 14               A+     531 	LD 	B,XPOS
+00000490 0E 11               A+     531 	LD 	C,YPOS
+                             A+     531 
+00000492 CD 00 00            A+     531 	CALL	FXY2SCR
+                             A+     531 
+00000495 C1                  A+     531 	POP BC
+                             A+     531 
+                             A+     531 
+00000496 44                  A+     531 	LD	B,DIN
+00000497 CD 00 00            A+     531 	call FHOUTA
+                             A+     531 
+0000049A DD E1               A+     531 	POP	IX
+0000049C C1                  A+     531 	POP BC
+                             A+     531 
+                             A      532 
+0000049D 7C                  A      533 	LD	A,H
+0000049E ED 64 06            A      534 	TST	6
+000004A1 20 0B               A      535 	JR	NZ,NORESNEEDED
+                             A      536 	DOOUT 	SIOBCMD, RESET_TX_UNDERRUN
+000004A3 F5                  A+     536 	push 	AF
+000004A4 C5                  A+     536 	push 	BC
+                             A+     536 
+000004A5 3E C0               A+     536 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     536 	.ifdef Z84C15
+                             A+     536 	out (ADDR),A
+                             A+     536 	.else
+000004A7 01 FC 0B            A+     536 	ld BC,ADDR
+000004AA ED 79               A+     536 	out (BC),A
+                             A+     536 	.endif
+                             A+     536 
+000004AC C1                  A+     536 	pop 	BC
+000004AD F1                  A+     536 	pop 	AF
+                             A+     536 	
+000004AE                     A      537 NORESNEEDED:
+                             A      538 	DOOUT SIOBCMD, REGISTER_1
+000004AE F5                  A+     538 	push 	AF
+000004AF C5                  A+     538 	push 	BC
+                             A+     538 
+000004B0 3E 01               A+     538 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     538 	.ifdef Z84C15
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   38
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+                             A+     538 	out (ADDR),A
+                             A+     538 	.else
+000004B2 01 FC 0B            A+     538 	ld BC,ADDR
+000004B5 ED 79               A+     538 	out (BC),A
+                             A+     538 	.endif
+                             A+     538 
+000004B7 C1                  A+     538 	pop 	BC
+000004B8 F1                  A+     538 	pop 	AF
+                             A+     538 	
+                             A      539 	DOIN  SIOBCMD, H
+000004B9 F5                  A+     539 	push 	AF
+000004BA C5                  A+     539 	push 	BC
+                             A+     539 
+                             A+     539 	.ifdef Z84C15
+                             A+     539 	in a,(ADDR)
+                             A+     539 	.else
+000004BB 01 FC 0B            A+     539 	ld BC,ADDR
+000004BE ED 78               A+     539 	in 	a,(BC)
+                             A+     539 	.endif
+                             A+     539 
+000004C0 67                  A+     539 	ld	DEST,a
+000004C1 C1                  A+     539 	pop BC
+000004C2 F1                  A+     539 	POP	AF
+                             A+     539 	
+                             A      540 	HOUTXY 17H,11h,H
+000004C3 C5                  A+     540 	PUSH BC
+000004C4 DD E5               A+     540 	PUSH IX
+                             A+     540 
+                             A+     540 	XY2SCR	XPOS, YPOS
+000004C6 C5                  A+     540 	PUSH BC
+                             A+     540 
+000004C7 06 17               A+     540 	LD 	B,XPOS
+000004C9 0E 11               A+     540 	LD 	C,YPOS
+                             A+     540 
+000004CB CD 00 00            A+     540 	CALL	FXY2SCR
+                             A+     540 
+000004CE C1                  A+     540 	POP BC
+                             A+     540 
+                             A+     540 
+000004CF 44                  A+     540 	LD	B,DIN
+000004D0 CD 00 00            A+     540 	call FHOUTA
+                             A+     540 
+000004D3 DD E1               A+     540 	POP	IX
+000004D5 C1                  A+     540 	POP BC
+                             A+     540 
+                             A      541 	
+                             A      542 	;SPECIAL RECEIVE CONDITION
+                             A      543 
+                             A      544 	DOOUT 	SIOBCMD, RESET_EXT_STATUS_INTS
+000004D6 F5                  A+     544 	push 	AF
+000004D7 C5                  A+     544 	push 	BC
+                             A+     544 
+000004D8 3E 10               A+     544 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     544 	.ifdef Z84C15
+                             A+     544 	out (ADDR),A
+                             A+     544 	.else
+000004DA 01 FC 0B            A+     544 	ld BC,ADDR
+000004DD ED 79               A+     544 	out (BC),A
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   39
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+                             A+     544 	.endif
+                             A+     544 
+000004DF C1                  A+     544 	pop 	BC
+000004E0 F1                  A+     544 	pop 	AF
+                             A+     544 	
+                             A      545 	DOOUT	SIOBCMD, ERROR_RESET_LATCHES
+000004E1 F5                  A+     545 	push 	AF
+000004E2 C5                  A+     545 	push 	BC
+                             A+     545 
+000004E3 3E 30               A+     545 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     545 	.ifdef Z84C15
+                             A+     545 	out (ADDR),A
+                             A+     545 	.else
+000004E5 01 FC 0B            A+     545 	ld BC,ADDR
+000004E8 ED 79               A+     545 	out (BC),A
+                             A+     545 	.endif
+                             A+     545 
+000004EA C1                  A+     545 	pop 	BC
+000004EB F1                  A+     545 	pop 	AF
+                             A+     545 	
+                             A      546 	
+000004EC F1                  A      547 	POP AF
+000004ED FB                  A      548 	EI
+000004EE ED 4D               A      549 	RETI
+                             A      550 
+                             A      551 
+                             A      552 	;-------------------------------------------------------------------------------
+                             A      553 ; SERIAL MANAGEMENT
+                             A      554 
+000004F0                     A      555 B_RTS_OFF:
+                             A      556 	DOOUT SIOBCMD, REGISTER_5	;WRITE INTO WR0: ERROR RESET, SELECT WR0
+000004F0 F5                  A+     556 	push 	AF
+000004F1 C5                  A+     556 	push 	BC
+                             A+     556 
+000004F2 3E 05               A+     556 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     556 	.ifdef Z84C15
+                             A+     556 	out (ADDR),A
+                             A+     556 	.else
+000004F4 01 FC 0B            A+     556 	ld BC,ADDR
+000004F7 ED 79               A+     556 	out (BC),A
+                             A+     556 	.endif
+                             A+     556 
+000004F9 C1                  A+     556 	pop 	BC
+000004FA F1                  A+     556 	pop 	AF
+                             A+     556 	
+                             A      557 	DOOUT SIOBCMD, DTR|TX_8_BITS_PER_CHR|TX_ENABLE	;8 BITS/TX CHAR; TX ENABLE; RTS DISABLE
+000004FB F5                  A+     557 	push 	AF
+000004FC C5                  A+     557 	push 	BC
+                             A+     557 
+000004FD 3E E8               A+     557 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     557 	.ifdef Z84C15
+                             A+     557 	out (ADDR),A
+                             A+     557 	.else
+000004FF 01 FC 0B            A+     557 	ld BC,ADDR
+00000502 ED 79               A+     557 	out (BC),A
+                             A+     557 	.endif
+                             A+     557 
+00000504 C1                  A+     557 	pop 	BC
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   40
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+00000505 F1                  A+     557 	pop 	AF
+                             A+     557 	
+00000506 C9                  A      558 	RET
+                             A      559 
+00000507                     A      560 B_RTS_ON:
+                             A      561 	DOOUT SIOBCMD,REGISTER_5	; 
+00000507 F5                  A+     561 	push 	AF
+00000508 C5                  A+     561 	push 	BC
+                             A+     561 
+00000509 3E 05               A+     561 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     561 	.ifdef Z84C15
+                             A+     561 	out (ADDR),A
+                             A+     561 	.else
+0000050B 01 FC 0B            A+     561 	ld BC,ADDR
+0000050E ED 79               A+     561 	out (BC),A
+                             A+     561 	.endif
+                             A+     561 
+00000510 C1                  A+     561 	pop 	BC
+00000511 F1                  A+     561 	pop 	AF
+                             A+     561 	
+                             A      562 	DOOUT SIOBCMD,DTR|TX_8_BITS_PER_CHR|TX_ENABLE|RTS	; 8 BITS/TX CHAR; TX ENABLE; RTS ENABLE
+00000512 F5                  A+     562 	push 	AF
+00000513 C5                  A+     562 	push 	BC
+                             A+     562 
+00000514 3E EA               A+     562 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     562 	.ifdef Z84C15
+                             A+     562 	out (ADDR),A
+                             A+     562 	.else
+00000516 01 FC 0B            A+     562 	ld BC,ADDR
+00000519 ED 79               A+     562 	out (BC),A
+                             A+     562 	.endif
+                             A+     562 
+0000051B C1                  A+     562 	pop 	BC
+0000051C F1                  A+     562 	pop 	AF
+                             A+     562 	
+0000051D C9                  A      563 	RET
+                             A      564 
+0000051E                     A      565 SIO_B_DI:
+                             A      566 	;DISABLE SIO CHANNEL A RX
+                             A      567 	DOOUT SIOBCMD,REGISTER_3	; WRITE INTO WR0: SELECT 
+0000051E F5                  A+     567 	push 	AF
+0000051F C5                  A+     567 	push 	BC
+                             A+     567 
+00000520 3E 03               A+     567 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     567 	.ifdef Z84C15
+                             A+     567 	out (ADDR),A
+                             A+     567 	.else
+00000522 01 FC 0B            A+     567 	ld BC,ADDR
+00000525 ED 79               A+     567 	out (BC),A
+                             A+     567 	.endif
+                             A+     567 
+00000527 C1                  A+     567 	pop 	BC
+00000528 F1                  A+     567 	pop 	AF
+                             A+     567 	
+                             A      568 	DOOUT SIOBCMD,SYNC_CHR_LOAD_INHIBIT|RX_ENABLE	; WRITE INTO : RX DISABLE;
+00000529 F5                  A+     568 	push 	AF
+0000052A C5                  A+     568 	push 	BC
+                             A+     568 
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   41
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+0000052B 3E 03               A+     568 	ld a,VALUE	; write into WR0: error reset, select WR0
+                             A+     568 	.ifdef Z84C15
+                             A+     568 	out (ADDR),A
+                             A+     568 	.else
+0000052D 01 FC 0B            A+     568 	ld BC,ADDR
+00000530 ED 79               A+     568 	out (BC),A
+                             A+     568 	.endif
+                             A+     568 
+00000532 C1                  A+     568 	pop 	BC
+00000533 F1                  A+     568 	pop 	AF
+                             A+     568 	
+00000534 C9                  A      569 	RET
+                             A      570 
+00000535                     A      571 B_SEND_CHAR:
+00000535 F5                  A      572 	PUSH AF
+00000536 E5                  A      573 	PUSH HL
+00000537 C5                  A      574 	PUSH BC
+00000538 CD F0 04            A      575 	CALL B_RTS_OFF
+                             A      576 
+0000053B 21 66 40            A      577 	ld HL,TxBIdle
+0000053E 36 00               A      578 	ld (HL),0
+                             A      579 	
+00000540 01 FC 0A            A      580 	LD BC,SIOBDATA
+00000543 ED 79               A      581 	OUT (BC),A	
+                             A      582 
+                             A      583 	STROUTXY 08H, 0DH, "B_SEND_CHAR", 11 
+00000545 C5                  A+     583 	PUSH BC
+00000546 D5                  A+     583 	PUSH DE
+00000547 E5                  A+     583 	PUSH HL
+00000548 DD E5               A+     583 	PUSH IX
+                             A+     583 
+                             A+     583 	XY2SCR	XPOS, YPOS
+0000054A C5                  A+     583 	PUSH BC
+                             A+     583 
+0000054B 06 08               A+     583 	LD 	B,XPOS
+0000054D 0E 0D               A+     583 	LD 	C,YPOS
+                             A+     583 
+0000054F CD 00 00            A+     583 	CALL	FXY2SCR
+                             A+     583 
+00000552 C1                  A+     583 	POP BC
+                             A+     583 
+                             A+     583 
+00000553 21 60 05            A+     583 	LD	HL,$STRSTR
+00000556 DD E5               A+     583 	PUSH	IX
+00000558 D1                  A+     583 	POP		DE
+00000559 01 0B 00            A+     583 	LD	BC,STRLEN
+                             A+     583 
+0000055C ED B0               A+     583 	LDIR
+0000055E 18 0B               A+     583 	JR $LEAVE
+                             A+     583 
+00000560                     A+     583 $STRSTR
+00000560 42 5F 53 45 4E 44   A+     583 	DB STR
+00000566 5F 43 48 41 52      A+ d   583
+0000056B                     A+     583 $LEAVE
+0000056B DD E1               A+     583 	POP	IX
+0000056D E1                  A+     583 	POP HL
+0000056E D1                  A+     583 	POP DE
+0000056F C1                  A+     583 	POP BC
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   42
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+                             A+     583 
+00000570 21 B4 25            A      584 	LD		HL,25B4H
+00000573 34                  A      585 	INC		(HL)
+                             A      586 
+00000574 21 B6 25            A      587 	LD		HL,25B6H
+00000577 77                  A      588 	LD		(HL),A
+                             A      589 
+                             A      590 	QUADOUT 0,13,SYSCLOCK
+00000578 C5                  A+     590 	PUSH BC
+00000579 E5                  A+     590 	PUSH HL
+                             A+     590 
+0000057A 06 00               A+     590 	LD B,XPOS 
+0000057C 0E 0D               A+     590 	LD C,YPOS
+0000057E 21 6B 40            A+     590  	LD HL,PTR
+                             A+     590 
+00000581 CD 00 00            A+     590 	call FQUADOUT
+                             A+     590 
+00000584 E1                  A+     590 	POP HL
+00000585 C1                  A+     590 	POP BC
+                             A+     590 
+                             A      591 
+00000586 21 B4 25            A      592 	LD		HL,25B4H
+00000589 3A 6B 40            A      593 	LD		A,(SYSCLOCK)
+0000058C CB 7F               A      594 	BIT 7,A
+0000058E 20 07               A      595 	JR NZ ,B_NORTS
+00000590 CD F0 04            A      596 	CALL B_RTS_OFF
+00000593 36 30               A      597 	LD		(HL),'0'
+00000595 18 02               A      598 	JR 		B_CARRYON
+00000597                     A      599 B_NORTS:
+00000597 36 31               A      600 	LD		(HL),'1'
+00000599                     A      601 B_CARRYON:
+00000599 CD 07 05            A      602 	CALL 	B_RTS_ON
+                             A      603 
+0000059C C1                  A      604 	pop	BC
+0000059D E1                  A      605 	POP HL
+0000059E F1                  A      606 	POP AF
+0000059F C9                  A      607 	RET
+                             A      608 
+                             A      609 
+                             A      610 
+000005A0                     A      611 SIOB_TBE:	
+000005A0 C5                  A      612 	PUSH BC	; BACKUP AF
+000005A1 D5                  A      613 	PUSH DE	; BACKUP AF
+000005A2 E5                  A      614 	PUSH HL	; BACKUP AF
+000005A3 FD E5               A      615 	PUSH IY	; BACKUP AF
+                             A      616 
+                             A      617 	ReadfromQueue TxQB,TxQBReadPos,TxQBWritePos
+                             A+     617 
+000005A5 F5                  A+     617 	push	af
+000005A6 D5                  A+     617 	push	de
+000005A7 E5                  A+     617 	push	hl
+                             A+     617 
+000005A8 21 20 40            A+     617 	ld hl,Queue
+000005AB 01 65 40            A+     617 	ld bc,RPosPtr
+000005AE 3A 64 40            A+     617 	ld a,(WPosPtr)
+000005B1 5F                  A+     617 	ld	e,a
+                             A+     617 
+000005B2 CD 00 00            A+     617 	call FReadfromQueue
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   43
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+                             A+     617 
+000005B5 E1                  A+     617 	pop		hl
+000005B6 D1                  A+     617 	pop		de
+000005B7 F1                  A+     617 	pop		af
+                             A+     617 
+                             A      618 
+000005B8 78                  A      619 	LD	A,B
+000005B9 FE 00               A      620 	cp 	0
+000005BB 28 07               A      621 	jr	z,NOCHAR
+                             A      622 
+000005BD 79                  A      623 	LD		A,C
+000005BE CD 35 05            A      624 	call	B_SEND_CHAR
+                             A      625 	
+000005C1 C3 C9 05            A      626 	JP	CARRYON
+                             A      627 
+000005C4                     A      628 NOCHAR:
+                             A      629 ;	STROUTXY 0h,12H, "NCHRTBE", 7 
+000005C4 21 66 40            A      630 	ld HL,TxBIdle
+000005C7 36 01               A      631 	ld (HL),1
+                             A      632 
+000005C9                     A      633 CARRYON:
+000005C9 FD E1               A      634 	POP IY	
+000005CB E1                  A      635 	POP HL	
+000005CC D1                  A      636 	POP DE	
+000005CD C1                  A      637 	POP BC	 
+                             A      638 
+000005CE C9                  A      639 	RET	
+                             A      640 	
+                             A      641 
+                             A      642 	
+                             A      643 ; ---------------------------------
+                             A      644 ; FUNCTION UARTSENDCHAR
+                             A      645 ; ---------------------------------
+000005CF                     A      646 SIOTOTXBUFFB: ; CHAR TO SEND IS IN A
+                             A      647 ;TEST.C:32: UBUFFER[NEXTIN++] = BYTE;
+                             A      648 
+                             A      649 	AddtoQueue a,TxQB,TxQBReadPos,TxQBWritePos
+000005CF C5                  A+     649 	push	bc
+000005D0 D5                  A+     649 	push	de
+000005D1 E5                  A+     649 	push	hl
+                             A+     649 
+000005D2 47                  A+     649 	ld b,InChar
+000005D3 21 20 40            A+     649 	ld hl,Queue
+000005D6 3A 65 40            A+     649 	ld a,(RPosPtr)
+000005D9 4F                  A+     649 	ld c,a
+000005DA 11 64 40            A+     649 	ld de,WPosPtr
+                             A+     649 
+000005DD CD 00 00            A+     649 	call FAddtoQueue
+                             A+     649 
+000005E0 E1                  A+     649 	pop		hl
+000005E1 D1                  A+     649 	pop		de
+000005E2 C1                  A+     649 	pop		bc
+                             A+     649 
+000005E3 FE 00               A      650 	cp 0
+000005E5 28 49               A      651 	jr	z,THISFULL
+                             A      652 	
+                             A      653 	STROUTXY 18H, 0DH, "!QF", 3	
+000005E7 C5                  A+     653 	PUSH BC
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   44
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+000005E8 D5                  A+     653 	PUSH DE
+000005E9 E5                  A+     653 	PUSH HL
+000005EA DD E5               A+     653 	PUSH IX
+                             A+     653 
+                             A+     653 	XY2SCR	XPOS, YPOS
+000005EC C5                  A+     653 	PUSH BC
+                             A+     653 
+000005ED 06 18               A+     653 	LD 	B,XPOS
+000005EF 0E 0D               A+     653 	LD 	C,YPOS
+                             A+     653 
+000005F1 CD 00 00            A+     653 	CALL	FXY2SCR
+                             A+     653 
+000005F4 C1                  A+     653 	POP BC
+                             A+     653 
+                             A+     653 
+000005F5 21 02 06            A+     653 	LD	HL,$STRSTR
+000005F8 DD E5               A+     653 	PUSH	IX
+000005FA D1                  A+     653 	POP		DE
+000005FB 01 03 00            A+     653 	LD	BC,STRLEN
+                             A+     653 
+000005FE ED B0               A+     653 	LDIR
+00000600 18 03               A+     653 	JR $LEAVE
+                             A+     653 
+00000602                     A+     653 $STRSTR
+00000602 21 51 46            A+     653 	DB STR
+00000605                     A+     653 $LEAVE
+00000605 DD E1               A+     653 	POP	IX
+00000607 E1                  A+     653 	POP HL
+00000608 D1                  A+     653 	POP DE
+00000609 C1                  A+     653 	POP BC
+                             A+     653 
+0000060A 3A 64 40            A      654 	LD		A,(TxQBWritePos)
+                             A      655 	HOUTXY 1BH, 0DH, A
+0000060D C5                  A+     655 	PUSH BC
+0000060E DD E5               A+     655 	PUSH IX
+                             A+     655 
+                             A+     655 	XY2SCR	XPOS, YPOS
+00000610 C5                  A+     655 	PUSH BC
+                             A+     655 
+00000611 06 1B               A+     655 	LD 	B,XPOS
+00000613 0E 0D               A+     655 	LD 	C,YPOS
+                             A+     655 
+00000615 CD 00 00            A+     655 	CALL	FXY2SCR
+                             A+     655 
+00000618 C1                  A+     655 	POP BC
+                             A+     655 
+                             A+     655 
+00000619 47                  A+     655 	LD	B,DIN
+0000061A CD 00 00            A+     655 	call FHOUTA
+                             A+     655 
+0000061D DD E1               A+     655 	POP	IX
+0000061F C1                  A+     655 	POP BC
+                             A+     655 
+                             A      656 
+00000620 21 66 40            A      657 	ld HL,TxBIdle
+00000623 7E                  A      658 	ld a,(HL)
+00000624 FE 01               A      659 	cp	1
+00000626 20 2B               A      660 	jr	nz,EXITTHISB
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   45
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+00000628 F3                  A      661 	DI
+00000629 CD A0 05            A      662 	CALL SIOB_TBE
+0000062C FB                  A      663 	EI
+0000062D C3 53 06            A      664 	jp	EXITTHISB
+00000630                     A      665 THISFULL:
+                             A      666 	STROUTXY 18H, 0DH, " QF", 3	
+00000630 C5                  A+     666 	PUSH BC
+00000631 D5                  A+     666 	PUSH DE
+00000632 E5                  A+     666 	PUSH HL
+00000633 DD E5               A+     666 	PUSH IX
+                             A+     666 
+                             A+     666 	XY2SCR	XPOS, YPOS
+00000635 C5                  A+     666 	PUSH BC
+                             A+     666 
+00000636 06 18               A+     666 	LD 	B,XPOS
+00000638 0E 0D               A+     666 	LD 	C,YPOS
+                             A+     666 
+0000063A CD 00 00            A+     666 	CALL	FXY2SCR
+                             A+     666 
+0000063D C1                  A+     666 	POP BC
+                             A+     666 
+                             A+     666 
+0000063E 21 4B 06            A+     666 	LD	HL,$STRSTR
+00000641 DD E5               A+     666 	PUSH	IX
+00000643 D1                  A+     666 	POP		DE
+00000644 01 03 00            A+     666 	LD	BC,STRLEN
+                             A+     666 
+00000647 ED B0               A+     666 	LDIR
+00000649 18 03               A+     666 	JR $LEAVE
+                             A+     666 
+0000064B                     A+     666 $STRSTR
+0000064B 20 51 46            A+     666 	DB STR
+0000064E                     A+     666 $LEAVE
+0000064E DD E1               A+     666 	POP	IX
+00000650 E1                  A+     666 	POP HL
+00000651 D1                  A+     666 	POP DE
+00000652 C1                  A+     666 	POP BC
+                             A+     666 
+                             A      667 
+00000653                     A      668 EXITTHISB:
+00000653 C9                  A      669 	RET
+                             A      670 
+                             A      671 
+00000654                     A      672 CHR2BUFFB:
+00000654 C9                  A      673 	RET
+                             A      674 
+00000655                     A      675 SEND_STR_B:
+00000655 F5                  A      676 	PUSH AF
+00000656 E5                  A      677 	PUSH HL
+00000657 D5                  A      678 	PUSH DE
+00000658 C5                  A      679 	PUSH BC
+                             A      680 
+00000659                     A      681 AGAIN:
+00000659 3E 00               A      682 	LD	A,0
+0000065B BE                  A      683 	CP (HL)
+0000065C 28 06               A      684 	JR Z,LEAVE
+0000065E CD 54 06            A      685 	CALL CHR2BUFFB
+00000661 23                  A      686 	INC	HL
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   46
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+Location Object              Type  Line Source
+00000662 18 F5               A      687 	JR	AGAIN
+                             A      688 
+00000664                     A      689 LEAVE:
+00000664 C1                  A      690 	POP BC
+00000665 D1                  A      691 	POP DE
+00000666 E1                  A      692 	POP HL
+00000667 F1                  A      693 	POP AF
+                             A      694 
+00000668 C9                  A      695 	RET
+                             A      696 
+                             A      697 
+00000669                     A      698 SIORCVCHARB: ;A set valid data C = data
+                             A      699 
+                             A      700 	ReadfromQueue RxQB,RxQBReadPos,RxQBWritePos
+                             A+     700 
+00000669 F5                  A+     700 	push	af
+0000066A D5                  A+     700 	push	de
+0000066B E5                  A+     700 	push	hl
+                             A+     700 
+0000066C 21 30 40            A+     700 	ld hl,Queue
+0000066F 01 68 40            A+     700 	ld bc,RPosPtr
+00000672 3A 67 40            A+     700 	ld a,(WPosPtr)
+00000675 5F                  A+     700 	ld	e,a
+                             A+     700 
+00000676 CD 00 00            A+     700 	call FReadfromQueue
+                             A+     700 
+00000679 E1                  A+     700 	pop		hl
+0000067A D1                  A+     700 	pop		de
+0000067B F1                  A+     700 	pop		af
+                             A+     700 
+                             A      701 
+0000067C 78                  A      702 	ld	a,b
+0000067D FE 00               A      703 	cp 	0
+0000067F 28 05               A      704 	jr	z,EMPTYB
+00000681 3E 01               A      705 	LD	A,1
+00000683 C3 88 06            A      706 	jp	LEAVERCVB
+00000686                     A      707 EMPTYB:
+00000686 3E 00               A      708 	LD	A,0	; Queue Empty
+00000688                     A      709 LEAVERCVB:
+00000688 C9                  A      710 	RET
+                             A      711 
+                             A      712 
+Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:13    Page:   47
+
+
+g:\my drive\ace-2019\testrom\sio.asm
+
+
+    0 Warnings
+    0 Errors

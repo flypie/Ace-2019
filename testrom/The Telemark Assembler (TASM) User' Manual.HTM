@@ -1,0 +1,4557 @@
+<!DOCTYPE html PUBLIC "-//SQ//DTD HTML 2.0 + all extensions//EN" "hmpro3.dtd">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+
+
+  
+  <title>The Telemark Assembler (TASM) User' Manual</title>
+<!--$Revision: 1.3 $-->
+</head>
+
+<body style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);" data-new-gr-c-s-check-loaded="8.897.0" data-gr-ext-installed="" vlink="#cc33cc" link="#33ffff" alink="#ff99ff">
+<h1 align="center"><a name="Top">The Telemark Assembler (TASM) User's Manual</a></h1>
+
+
+<p align="center"><font size="+2">Version 3.1<br>
+
+February, 1998</font></p>
+
+
+<p align="center">Thomas N. Anderson
+<br>
+
+Squak Valley Software<br>
+
+837 Front Street South, <br>
+
+Issaquah, WA   98027
+<br>
+
+Compuserve: 73770,3612
+<br>
+
+Internet: andersontn@acm.org<br>
+
+www.halcyon.com/squakvly/</p>
+
+
+<p> Copyright (C) 1998 by Squak Valley Software.  All rights reserved.</p>
+
+
+<hr>
+<h1><a name="TABLE OF CONTENTS">TABLE OF CONTENTS</a></h1>
+
+
+<ul>
+
+
+  <li><a href="#INTRODUCTION">INTRODUCTION</a></li>
+
+
+  <li><a href="#SHAREWARE">SHAREWARE</a></li>
+
+
+  <li><a href="#INVOCATION">INVOCATION</a></li>
+
+
+  <li><a href="#ENVIRONMENT%20VARIABLES">ENVIRONMENT VARIABLES</a></li>
+
+
+  <li><a href="#EXIT%20CODES">EXIT CODES</a></li>
+
+
+  <li><a href="#SOURCE%20FILE%20FORMAT">SOURCE FILE FORMAT</a></li>
+
+
+  <li><a href="#EXPRESSIONS">EXPRESSIONS</a></li>
+
+
+  <li><a href="#ASSEMBLER%20DIRECTIVES">ASSEMBLER DIRECTIVES</a></li>
+
+
+  <li><a href="#OBJECT%20FILE%20FORMATS">OBJECT FILE FORMATS</a></li>
+
+
+  <li><a href="#LISTING%20FILE%20FORMAT">LISTING FILE FORMAT</a></li>
+
+
+  <li><a href="#PROM%20PROGRAMMING">PROM PROGRAMMING</a></li>
+
+
+  <li><a href="#ERROR%20MESSAGES">ERROR MESSAGES</a></li>
+
+
+  <li><a href="#LIMITATIONS">LIMITATIONS</a></li>
+
+</ul>
+
+
+<hr>
+<h1><a name="INTRODUCTION">INTRODUCTION</a></h1>
+
+
+<p>The Telemark Assembler (TASM) is a table driven cross assembler for the
+MS-DOS and LINUX environments.  Assembly source code, written in the appropriate
+dialect (generally very close to the manufacturers assembly language), can be
+assembled with TASM, and the resulting object code transferred to the target
+microprocessor system via PROM or other mechanisms.</p>
+
+
+<p>The microprocessor families supported by TASM are:</p>
+
+
+<ul>
+
+
+  <li>6502</li>
+
+
+  <li>6800/6801/68HC11</li>
+
+
+  <li>6805</li>
+
+
+  <li>8048</li>
+
+
+  <li>8051</li>
+
+
+  <li>8080/8085, Z80</li>
+
+
+  <li>TMS32010, TMS320C25</li>
+
+
+  <li>TMS7000</li>
+
+
+  <li>8096/80196</li>
+
+</ul>
+
+
+<p>The user so inclined may build tables for other microprocessors.  The
+descriptions of the various existing tables and instructions on building new
+tables are not in this document but can be found in the TASMTABS.HTM file on the
+TASM distribution disk.</p>
+
+
+<p>TASM characteristics include:</p>
+
+
+<ol>
+
+
+  <li> Powerful expression parsing (17 operators).
+  </li>
+
+
+  <li> Supports a subset of the 'C' preprocessor commands.
+  </li>
+
+
+  <li> Macro capability (through use of DEFINE directive).
+  </li>
+
+
+  <li> Multiple statements per line.
+  </li>
+
+
+  <li> Four object file formats: Intel hex, MOS Technology hex, Motorola hex,
+binary.
+  </li>
+
+
+  <li> Absolute code generation only.
+  </li>
+
+
+  <li> Source code available (in C).
+  </li>
+
+
+  <li> Uniform syntax across versions for different target machines.
+  </li>
+
+
+  <li> Features in support of PROM programming (preset memory, contiguous block).
+  </li>
+
+
+  <li> Supports extended instructions for many of the supported microprocessor
+families.
+  </li>
+
+
+  <li> Tables read at run time - single TASM executable for all table versions.
+  </li>
+
+
+  <li> Symbol table export for inclusion in subsequent assemblies.
+  </li>
+
+
+  <li> Symbol table export file for import with some simulator products.</li>
+
+</ol>
+
+
+<h1><a name="SHAREWARE">SHAREWARE</a></h1>
+
+
+<p>TASM is distributed as shareware.  TASM is not in the public domain. The
+TASM distribution files may be freely copied (excluding the source code files)
+and freely used for the purpose of evaluating the suitability of TASM for a
+given purpose. Use of TASM beyond a reasonable evaluation period requires
+registration. Prolonged use without registration is unethical.</p>
+
+
+<h1><a name="INVOCATION">INVOCATION</a></h1>
+
+
+<p>TASM can be invoked as follows (optional fields shown in brackets, symbolic
+fields in italics):</p>
+
+
+<pre>  tasm -pn [-options ...] <i>src_file</i> [<i>obj_file</i> [<i>lst_file</i> [<i>exp_file</i> [<i>sym_file</i>]]]]</pre>
+
+
+<p>Where <i>options</i> can be one or more of the following:</p>
+
+
+<table border="1">
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td valign="top" align="left"> -<i>table</i> </td>
+
+
+      <td valign="top" align="left">Specify version (<i>table</i> = table
+designation) </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">-t<i>table</i> </td>
+
+
+      <td valign="top" align="left">Table (alternate form of above) </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">-a<i>amask</i> </td>
+
+
+      <td valign="top" align="left">Assembly control (optional error checking) </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">-b </td>
+
+
+      <td valign="top" align="left">Produce object in binary (.COM) format </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">-c </td>
+
+
+      <td valign="top" align="left">Object file written as a contiguous block </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">-d<i>macro</i> </td>
+
+
+      <td valign="top" align="left">Define a macro (or just a macro label) 
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">-e  </td>
+
+
+      <td valign="top" align="left">Show source lines after macro expansion </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">-f<i>fillbyte</i> </td>
+
+
+      <td valign="top" align="left">Fill entire memory space with fillbyte (hex)
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">-g<i>objtype</i> </td>
+
+
+      <td valign="top" align="left">Object file (0=Intel Hex, 1=MOS Tech, 2=Motorola,
+3=binary,4=Intel Hex (Word)) </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">-h </td>
+
+
+      <td valign="top" align="left">Produce hex table of the assembled code (in list
+file) </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">-i  </td>
+
+
+      <td valign="top" align="left">Ignore case for labels </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">-l[al] </td>
+
+
+      <td valign="top" align="left">Produce a label table in the listing </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">-m </td>
+
+
+      <td valign="top" align="left">Produce object in MOS Technology format </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">-o<i>obytes</i> </td>
+
+
+      <td valign="top" align="left">Bytes per object record (for hex obj formats)
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">-p[<i>lines</i>] </td>
+
+
+      <td valign="top" align="left">Page the listing file (lines per page.
+default=60) </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">-q </td>
+
+
+      <td valign="top" align="left">Quiet, disable the listing file </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">-r<i>kb</i> </td>
+
+
+      <td valign="top" align="left">Set read buffer size in Kbytes (default 2 Kbytes)
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">-s  </td>
+
+
+      <td valign="top" align="left">Write a symbol table file </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">-x[<i>xmask</i>] </td>
+
+
+      <td valign="top" align="left">Enable extended instruction set (if any) </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">-y </td>
+
+
+      <td valign="top" align="left">Time the assembly  </td>
+
+    </tr>
+
+  
+  </tbody>
+</table>
+
+
+<p>The filename parameters are defined as follows:</p>
+
+
+<table border="1">
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td valign="top" align="left"><i>src_file </i></td>
+
+
+      <td valign="top" align="left">Source file name </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left"><i>obj_file </i></td>
+
+
+      <td valign="top" align="left">Object code file name </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left"><i>lst_file </i></td>
+
+
+      <td valign="top" align="left">Listing file name </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left"><i>exp_file </i></td>
+
+
+      <td valign="top" align="left">Symbol export file (only if the EXPORT directive
+is used).</td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left"><i>sym_file </i></td>
+
+
+      <td valign="top" align="left">Symbol table file (only if the <b>-s</b> option
+or the SYM/AVSYM directives are used).  </td>
+
+    </tr>
+
+  
+  </tbody>
+</table>
+
+
+<p>The source file must be specified. If not, some usage information is
+displayed. Default file names for all the other files are generated if they are
+not explicitly provided. The filename is formed by taking the source filename
+and changing the extension to one of the following:</p>
+
+
+<table border="1">
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td valign="top" align="left"><strong>Extension </strong></td>
+
+
+      <td valign="top" align="left"><strong>File type </strong></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">.OBJ </td>
+
+
+      <td valign="top" align="left">Object file </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">.LST </td>
+
+
+      <td valign="top" align="left">Listing file </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">.EXP </td>
+
+
+      <td valign="top" align="left">Symbol export file </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">.SYM </td>
+
+
+      <td valign="top" align="left">Symbol table file </td>
+
+    </tr>
+
+  
+  </tbody>
+</table>
+
+
+<p>TASM has no built-in instruction set tables.  Instruction set definition
+files are read at run time.  TASM determines which table to use based on the '-<i>table'</i>
+field shown above.  For example, to assemble the code in a file called
+<i>source.asm</i>, one would enter</p>
+
+
+<table>
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td align="left"><tt>tasm -48   source.asm </tt></td>
+
+
+      <td align="left">for an 8048 assembly  </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td align="left"><tt>tasm -65   source.asm </tt></td>
+
+
+      <td align="left">for a  6502 assembly  </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td align="left"><tt>tasm -51   source.asm </tt></td>
+
+
+      <td align="left">for an 8051 assembly. </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td align="left"><tt>tasm -85   source.asm </tt></td>
+
+
+      <td align="left">for an 8085 assembly. </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td align="left"><tt>tasm -80   source.asm </tt></td>
+
+
+      <td align="left">for a  Z80  assembly. </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td align="left"><tt>tasm -05   source.asm </tt></td>
+
+
+      <td align="left">for a  6805 assembly. </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td align="left"><tt>tasm -68   source.asm </tt></td>
+
+
+      <td align="left">for a  6800/6801/68HC11 assembly.  </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td align="left"><tt>tasm -70   source.asm </tt></td>
+
+
+      <td align="left">for a  TMS7000  assembly.  </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td align="left"><tt>tasm -3210 source.asm </tt></td>
+
+
+      <td align="left">for a  TMS32010 assembly.  </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left"><tt>tasm -3225 source.asm </tt></td>
+
+
+      <td valign="top" align="left">for a  TMS320C25 assembly.  
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td><tt>tasm -96   source.asm </tt></td>
+
+
+      <td>for a 8096/80196 assembly</td>
+
+    </tr>
+
+  
+  </tbody>
+</table>
+
+
+<p>Tables are read from a file named by taking the digits specified after the
+'-' and appending it to 'TASM' then appending the '.TAB' extension.  Thus, the
+<b>-48</b> flag would cause the tables to be read from the file 'TASM48.TAB'.</p>
+
+
+<p>It is possible to designate tables by non numeric part numbers if the <b>-t</b>
+flag is used.  For example, if a user built a table called TASMF8.TAB then TASM
+could be invoked as follows:</p>
+
+
+<pre>    tasm -tf8 source.asm</pre>
+
+
+<p>Each option flag must be preceded by a dash.  Options need not precede the
+file names.  The various options are described in the sections that follow.</p>
+
+
+<h2>a - Assembly Control</h2>
+
+
+<p>TASM can provide additional error checking by specifying the <i>-a</i>
+option at the time of execution.  If the <i>-a</i> is provided without a digit
+following, then all the available error checking is done.  If a digit follows,
+then it is used as a mask to determine the error checks to be made.  The bits of
+the mask are defined as follows:</p>
+
+
+<table border="1">
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td valign="top" align="center"><strong>Bit     </strong></td>
+
+
+      <td valign="top" align="center"><strong>Option  </strong></td>
+
+
+      <td valign="top" align="center"><strong>Default </strong></td>
+
+
+      <td valign="top" align="left"><strong>Description </strong></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">0   </td>
+
+
+      <td valign="top" align="center">-a1 </td>
+
+
+      <td valign="top" align="center">OFF </td>
+
+
+      <td valign="top" align="left">Check for apparent illegal use of indirection
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">1   </td>
+
+
+      <td valign="top" align="center">-a2 </td>
+
+
+      <td valign="top" align="center">ON  </td>
+
+
+      <td valign="top" align="left">Check for unused data in the arguments </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">2   </td>
+
+
+      <td valign="top" align="center">-a4 </td>
+
+
+      <td valign="top" align="center">ON  </td>
+
+
+      <td valign="top" align="left">Check for duplicate labels </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">3   </td>
+
+
+      <td valign="top" align="center">-a8 </td>
+
+
+      <td valign="top" align="center">OFF </td>
+
+
+      <td valign="top" align="left">Check for non-unary operators at start of
+expression.  </td>
+
+    </tr>
+
+  
+  </tbody>
+</table>
+
+
+<p>Combinations of the above bits can also be used.  For example, <i>-a5</i>
+would enable the checking for illegal indirection and duplicate labels.
+</p>
+
+
+<p>Illegal indirection applies to micros that use parenthesis around an
+argument to indicate indirection.  Since it is always legal to put an extra pair
+of parenthesis around any expression  (as far as the expression parser is
+concerned), the user may think that he/she is indicating indirection for an
+instruction that has no indirection and TASM would not complain.  Enabling this
+checking will result in an error message (warning) whenever an outer pair of
+parenthesis is used and the instruction set definition table does not explicitly
+indicate that to be a valid form of addressing.</p>
+
+
+<p>Unused data in arguments applies to cases where a single byte of data is
+needed from an argument, but the argument contains more than one byte of data. 
+If a full sixteen bit address is used in a  'Load Immediate' type instruction
+that needs only a single byte, for example, an error message would be generated.
+Here is an example (6502 code):</p>
+
+
+<pre>    0001   1234                    .org $1234<br>    test.asm line 0002: Unused data in MS byte of argument.<br>    0002   1234 A9 34       start  lda  #start</pre>
+
+
+<p>To make the above checks occur whenever you do an assembly, add a line like
+this to your AUTOEXEC.BAT file:</p>
+
+
+<pre>    SET TASMOPTS=-a</pre>
+
+
+<h2>b - Binary Object Format</h2>
+
+
+<p>This option causes the object file to be written in binary  - one byte for
+each byte of code/data.  Note that no address information is included in the
+object file in this format. The contiguous block (-c) output mode is forced when
+this option is invoked.  This flag is equivalent to <i>-g3</i>.</p>
+
+
+<h2>c - Contiguous Block Output</h2>
+
+
+<p>If this option is specified, then all bytes in the range from the lowest
+used byte to the highest will be defined in the object file. Normally, with the
+default Intel Hex object format enabled, if the Program Counter  (PC) jumps
+forward because of an  .ORG directive, the bytes skipped over will not have any
+value assigned them in the object file.  With this option enabled, no output to
+the object file occurs until the end of the assembly at which time the whole
+block is written.  This is useful when using TASM to generate code that will be
+put into a PROM so that all locations will have a known value.  This option is
+often used in conjunction with the -f option to ensure all unused bytes will
+have a known value.</p>
+
+
+<h2>d - Define a Macro</h2>
+
+
+<p>Macros are defined on the command line generally to control the assembly of
+various IFDEF's that are in the source file.   This is a convenient way to
+generate various versions of object code from a single source file.</p>
+
+
+<h2>e - Expand Source. </h2>
+
+
+<p>Normally TASM shows lines in the listing file just as they are in the source
+file. If macros are in use (via the DEFINE directive) it is sometimes desirable
+to see the source lines after expansion.  Use the '-e' flag to accomplish this.</p>
+
+
+<h2>f - Fill Memory.</h2>
+
+
+<p>This option causes the memory image that TASM maintains to be initialized to
+the value specified by the two hex characters immediately following the 'f'. 
+TASM maintains a memory image that is a full 64K bytes in size (even if the
+target processor cannot utilize that memory space).  Invocation of this option
+introduces a delay at start up of up to 2 seconds (time required to initialize
+all 64K bytes).</p>
+
+
+<h2>g - Object File Format.</h2>
+
+
+<p>TASM can generate object code in four different formats as indicated below:</p>
+
+
+<table border="1">
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td><strong>Option	</strong></td>
+
+
+      <td><strong>Description</strong></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td align="center">-g0 </td>
+
+
+      <td align="left">Intel hex (default) </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td align="center">-g1 </td>
+
+
+      <td align="left">MOS Technology hex (same as <b>-m</b>) </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td align="center">-g2 </td>
+
+
+      <td align="left">Motorola hex </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td align="center">-g3 </td>
+
+
+      <td align="left">binary (same as <b>-b</b>) </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td align="center">-g4 </td>
+
+
+      <td align="left">Intel hex with word addresses</td>
+
+    </tr>
+
+  
+  </tbody>
+</table>
+
+
+<p>The <b>-m</b> and <b>-b</b> flags may also be used, as indicated above. 
+If both are used the right-most option on the command line will be obeyed.</p>
+
+
+<p>See the section on <b>OBJECT FILE FORMATS</b> for descriptions of each of
+the above.</p>
+
+
+<h2>h - Hex Object Code Table. </h2>
+
+
+<p>This option causes a hex table of the produced object code to appear in the
+listing file.   Each line of the table shows sixteen bytes of code.</p>
+
+
+<h2>i - Ignore Case in Labels.</h2>
+
+
+<p>TASM is normally case sensitive when dealing with labels.  For those that
+prefer case insensitivity, the  '-i' command line option can be employed.</p>
+
+
+<h2>l - Label Table.</h2>
+
+
+<p>This option causes a label table to appear in the listing file.  Each label
+is shown with its corresponding value. Macro labels (as established via the
+DEFINE directives) do not appear.</p>
+
+
+<p>Two optional suffixes may follow the <b>-l</b> option:</p>
+
+
+<table border="1">
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td valign="top" align="left"><strong>Suffix </strong></td>
+
+
+      <td valign="top" align="left"><strong>Description </strong></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">l </td>
+
+
+      <td valign="top" align="left">Use long form listing </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">a </td>
+
+
+      <td valign="top" align="left">Show all labels (including local labels) </td>
+
+    </tr>
+
+  
+  </tbody>
+</table>
+
+
+<p>The suffix should immediately follow the '-l'. Here are some examples:</p>
+
+
+<table>
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td valign="top" align="left"><tt>-l </tt></td>
+
+
+      <td valign="top" align="left">to show non-local labels in the short form </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left"><tt>-la </tt></td>
+
+
+      <td valign="top" align="left">to show all labels in the short form </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left"><tt>-ll </tt></td>
+
+
+      <td valign="top" align="left">to show non-local labels in the long form </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left"><tt>-lal </tt></td>
+
+
+      <td valign="top" align="left">to show all labels in the long form </td>
+
+    </tr>
+
+  
+  </tbody>
+</table>
+
+
+<h2>m - MOS Technology Object Format.</h2>
+
+
+<p>This option causes the object file to be written in MOS Technology hex
+format rather than the default Intel hex format.  See section on OBJECT FILE
+FORMATS for a description of the format.</p>
+
+
+<h2>o - Set Number of Bytes per Object Record.</h2>
+
+
+<p>When generating object code in either the MOS Technology format or the Intel
+hex format, a default of 24 (decimal) bytes of object are defined on each
+record. This can be altered by invoking the '-o' option immediately followed by
+two hex digits defining the number of bytes per record desired. For example, if
+32 bytes per record are desired, one might invoke TASM as:</p>
+
+
+<pre>    tasm -48 -o20 source.asm</pre>
+
+
+<h2>p - Page Listing File. </h2>
+
+
+<p>This option causes the listing file to have top of page headers and form
+feeds inserted at appropriate intervals (every sixty lines of output).  To
+override the default of sixty lines per page, indicate the desired number of
+lines per page as a decimal number immediately following the '-p'.  Here is an
+example:</p>
+
+
+<pre>    tasm -48 -p56 source.asm</pre>
+
+
+<h2>q - Disable Listing File.</h2>
+
+
+<p>This option causes all output to the listing file to be suppressed, unless a
+.LIST directive is encountered in the source file (see LIST/NOLIST directives).</p>
+
+
+<h2>r - Set Read Buffer Size.</h2>
+
+
+<p>This option overrides the default read buffer size of 2 Kbytes.  The first
+hexadecimal digit immediately after the 'r' is taken as the number of K bytes to
+allocate for the read buffer  (.e.g. <b>-r8</b> indicates an 8K byte buffer,
+<b>-rf</b> indicates a 15K byte buffer).  Note that that read buffers are taken
+from the same memory pool as labels and macro storage, and that additional read
+buffers are needed if "includes" are used.  Thus, using 8K byte
+buffers may be suitable for most assemblies, but programs with large numbers of
+symbols may not allow such a value. Also, reducing the buffer size to 1 Kbyte
+can increase the memory pool available for label storage, if such is needed.</p>
+
+
+<h2>s - Enable Symbol File Generation.</h2>
+
+
+<p>If this flag is set, a symbol file is generated at the end of the assembly. 
+The format of the file is one line per label, each label starts in the first
+column and is followed by white space and then four hexadecimal digits
+representing the value of the label.  The following illustrates the format:</p>
+
+
+<pre>    label1         FFFE<br>    label2         FFFF<br>    label3         1000</pre>
+
+
+<p>The symbol file name can be provided as the fifth file name on the command
+line, or the name will be generated from the source file name with a '.SYM'
+extension.  The symbol table file can also be generated by invoking the SYM
+directive.  The AVSYM directive also generates the symbol file but in a
+different format (see section on ASSEMBLER DIRECTIVES).</p>
+
+
+<h2>t - Table Name.</h2>
+
+
+<p>As an alternative to specifying the instruction set table as two decimal
+digits, the table indication may be proceeded by the '-t' option. This is useful
+if the desired table name starts with a non-numeric. Thus, a table for an F8
+might be selected as:</p>
+
+
+<pre>    tasm -tf8 source.asm</pre>
+
+
+<p>TASM would expect to read the instruction set definition tables from a file
+named TASMF8.TAB.</p>
+
+
+<h2>x - Enable Extended Instruction Set.  </h2>
+
+
+<p>If a processor family has instructions that are valid for only certain
+members, this option can be used to enable those beyond the basic standard
+instruction set. A hex digit may follow the 'x' to indicate a mask value used in
+selecting the appropriate instruction set. Bit 0 of the mask selects the basic
+instruction set, thus a '-x1' would have no effect. A  '-x3' would enable the
+basic set plus whatever instructions have bit 1 set in their class mask. A '-x'
+without a digit following is equivalent to a '-xf' which sets all four of the
+mask bits. The following table indicates the current extended instruction sets
+available in the TASM tables:</p>
+
+
+<table border="1">
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td valign="top" align="left"><strong>Base Table  </strong></td>
+
+
+      <td valign="top" align="left"><strong>Base Family </strong></td>
+
+
+      <td valign="top" align="left"><strong>Ext 1 (-x3) </strong></td>
+
+
+      <td valign="top" align="left"><strong>Ext 2 (-x7) </strong></td>
+
+
+      <td valign="top" align="left"><strong>Ext 3 (-x5) </strong></td>
+
+
+      <td valign="top" align="left"><strong>Ext 4 (-x9) </strong></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">48 </td>
+
+
+      <td valign="top" align="left"> 8048 
+      </td>
+
+
+      <td valign="top" align="left">8041A
+      </td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left">8022
+      </td>
+
+
+      <td valign="top" align="left">8021
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">65
+      </td>
+
+
+      <td valign="top" align="left">6502
+      </td>
+
+
+      <td valign="top" align="left">R65C02
+      </td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left">R65C00/21
+      </td>
+
+
+      <td valign="top" align="left"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">05
+      </td>
+
+
+      <td valign="top" align="left">6805
+      </td>
+
+
+      <td valign="top" align="left">M146805 CMOS
+      </td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left">HC05C4
+      </td>
+
+
+      <td valign="top" align="left"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">80
+      </td>
+
+
+      <td valign="top" align="left">Z80
+      </td>
+
+
+      <td valign="top" align="left">HD64180
+      </td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">68
+      </td>
+
+
+      <td valign="top" align="left">6800
+      </td>
+
+
+      <td valign="top" align="left">6801/6803
+      </td>
+
+
+      <td valign="top" align="left">68HC11
+      </td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">51
+      </td>
+
+
+      <td valign="top" align="left">8051
+      </td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">85
+      </td>
+
+
+      <td valign="top" align="left">8080
+      </td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">3210
+      </td>
+
+
+      <td valign="top" align="left">TMS32010
+      </td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">3225
+      </td>
+
+
+      <td valign="top" align="left">TMS320C25
+      </td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left">TMS320C26
+      </td>
+
+
+      <td valign="top" align="left"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">70
+      </td>
+
+
+      <td valign="top" align="left">TMS7000
+      </td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left"></td>
+
+    </tr>
+
+  
+  </tbody>
+</table>
+
+
+<p>The above table does not attempt to show the many microprocessor family
+members that may apply under a given column.</p>
+
+
+<p>See the TASMTABS.TXT on-line document for details on each specific table.</p>
+
+
+<h2>y - Enable Assembly Timing</h2>
+
+
+<p>If this option is enabled TASM will generate a statement of elapsed time and
+assembled lines per second at the end of the assembly.</p>
+
+
+<h1><a name="ENVIRONMENT VARIABLES">ENVIRONMENT VARIABLES</a></h1>
+
+
+<p>The TASM environment can be customized by using the environment variables
+listed below:</p>
+
+
+<h2>TASMTABS</h2>
+
+
+<p>The TASMTABS variable specifies the path to be searched for TASM instruction
+set definition tables. If it is not defined then the table(s) must exist in the
+current working directory.  The following examples illustrate possible usage:</p>
+
+
+<table>
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td>For MSDOS    </td>
+
+
+      <td><tt>set TASMTABS=C:\TASM</tt></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td>For LINUX    </td>
+
+
+      <td><tt>TASMTABS=/tasm</tt></td>
+
+    </tr>
+
+  
+  </tbody>
+</table>
+
+
+<h2>TASMOPTS</h2>
+
+
+<p>This variable specifies TASM command line options that are to be invoked
+every time TASM is executed. For example, if TASM is being used for 8048
+assemblies with binary object file output desired, the following statement would
+be appropriate in the AUTOEXEC.BAT file:</p>
+
+
+<pre>    set TASMOPTS=-48 -b</pre>
+
+
+<h1><a name="EXIT CODES">EXIT CODES</a></h1>
+
+
+<p>When TASM terminates, it will return to the OS the following exit codes:</p>
+
+
+<table border="1">
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td valign="top" align="left"><strong>Exit Code </strong></td>
+
+
+      <td valign="top" align="left"><b>Definition</b></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">0 </td>
+
+
+      <td valign="top" align="left">Normal completion, no assembly errors </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">1 </td>
+
+
+      <td valign="top" align="left">Normal completion, with assembly errors </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">2 </td>
+
+
+      <td valign="top" align="left">Abnormal completion, insufficient memory </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">3 </td>
+
+
+      <td valign="top" align="left">Abnormal completion, file access error </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">4 </td>
+
+
+      <td valign="top" align="left">Abnormal completion, general error </td>
+
+    </tr>
+
+  
+  </tbody>
+</table>
+
+
+<p>Exit codes 2 and above will also be accompanied by messages to the console
+concerning the error.</p>
+
+
+<h1><a name="SOURCE FILE FORMAT">SOURCE FILE FORMAT</a></h1>
+
+
+<p>Statements in the source file must conform to a format as follows (except
+for assembler directive statements which are described in a subsequent section):</p>
+
+
+<p><i>label  operation    operand       comment</i></p>
+
+
+<p>All of the fields are optional, under appropriate circumstances. An
+arbitrary amount of white space (space and tabs) can separate each field (as
+long as the maximum line length of 255 characters is not exceeded). Each of the
+fields are described in the following sections.</p>
+
+
+<h2>Label Field.</h2>
+
+
+<p>If the first character of the line is alphabetic, it is assumed to be the
+start of a label. Subsequent characters are accepted as part of that label until
+a space, tab, or ':' is encountered. The assembler assigns a value to the label
+corresponding to the current location counter. Labels can be a maximum of 32
+characters long. Labels can contain upper and lower case letters, digits,
+underscores, and periods (the first character must be alphabetic).  Labels are
+case sensitive - the label 'START' is a different label from 'start' - unless
+the '-i' (ignore case) option is enabled.</p>
+
+
+<h2>Operation Field.</h2>
+
+
+<p>The operation field contains an instruction mnemonic which specifies the
+action to be carried out by the target processor when this instruction is
+executed. The interpretation of each mnemonic is dependent on the target
+microprocessor  (as indicated by the selected TASM table). The operation field
+may begin in any column except the first. The operation field is case
+insensitive.</p>
+
+
+<h2>Operand Field.</h2>
+
+
+<p>The operand field specifies the data to be operated on by the instruction.
+It may include expressions and/or special symbols describing the addressing mode
+to be used. The actual format and interpretation is dependent on the target
+processor. For a description of the format for currently supported processors,
+see the TASMTABS.DOC file on the TASM distribution disk.</p>
+
+
+<h2>Comment Field. </h2>
+
+
+<p>The comment field always begins with a semicolon. The rest of the line from
+the semicolon to the end of the line is ignored by TASM, but passed on to the
+listing file for annotation purposes.  The comment field must be the last field
+on a line, but it may be the only field, starting in column one, if desired.</p>
+
+
+<h2>Multiple Statement Lines.</h2>
+
+
+<p>If the backslash character is encountered on a source line, it is treated as
+a newline.  The remainder of the line following the backslash will be processed
+as an independent line of source code. This allows one to put multiple
+statements on a line. This facility is not so useful of itself, but when coupled
+with the capability of the DEFINE directive, powerful multiple statement macros
+can be constructed  (see section on <b>ASSEMBLER DIRECTIVES</b>). Note that
+when using the statement separator, the character immediately following it
+should be considered the first character of a new line, and thus must either be
+a start of a label or white space (not an instruction). As the examples show, a
+space is put between the backslash and the start of the next instruction.</p>
+
+
+<h2>Sample Source Listing.</h2>
+
+
+<p>Some examples of valid source statements follow (6502 mnemonics shown):</p>
+
+
+<pre>  lab1       lda    byte1   ;get the first byte<br>             dec    byte1<br>             jne    label1<br>  ;            <br>  lab2       sta    byte2,X<br>  ;  a multiple statement line follows<br>             lda    byte1\ sta byte1+4\ lda byte2\ sta byte2+4</pre>
+
+
+<h1><a name="EXPRESSIONS">EXPRESSIONS</a></h1>
+
+
+<p>Expressions are made up of various syntactic elements combined according to
+a set of syntactical rules.  Expressions can be comprised of the following
+elements:</p>
+
+
+<ul>
+
+
+  <li>Labels</li>
+
+
+  <li>Constants</li>
+
+
+  <li>Location Counter Symbol</li>
+
+
+  <li>Operators</li>
+
+
+  <li>Parenthesis</li>
+
+</ul>
+
+
+<h2>Labels</h2>
+
+
+<p>Labels are strings of characters that have a numeric value associated with
+them, generally representing an address.  Labels can contain upper and lower
+case letters, digits, underscores, and periods.  The first character must be a
+letter or the local label prefix  (default '_'). The value of a label is limited
+to 32 bit precision.  Labels can contain up to 32 characters, all of which are
+significant (none are ignored when looking at a label's value, as in some
+assemblers).  Case is significant unless the  '-i' command line option is
+invoked.</p>
+
+
+<p>Local labels must only be unique within the scope of the current module. 
+Modules are defined with the MODULE directive. Here is an example:</p>
+
+
+<pre>          .MODULE xxx<br>          lda regx<br>          jne _skip<br>          dec<br>   _skip  rts<br>          .MODULE yyy<br>          lda regy<br>          jne _skip<br>          dec<br>   _skip  rts<br></pre>
+
+
+<p>In the above example, the<i> _skip</i> label is reused without harm.  As a
+default, local labels are not shown in the label table listing (resulting from
+the  '-l' command line option).  See also sections on MODULE and LOCALLABELCHAR
+directives.</p>
+
+
+<h2>Numeric Constants</h2>
+
+
+<p>Numeric constants must always begin with a decimal digit (thus hexadecimal
+constants that start with a letter must be prefixed by a '0' unless the  '$'
+prefix is used). The radix is determined by a letter immediately following the
+digit string according to the following table:</p>
+
+
+<table border="1">
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td valign="top" align="left"><strong>Radix </strong></td>
+
+
+      <td valign="top" align="left"><strong>Suffix </strong></td>
+
+
+      <td valign="top" align="left"><strong>Prefix </strong></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">2 </td>
+
+
+      <td valign="top" align="left">B or b </td>
+
+
+      <td valign="top" align="center">% </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">8 </td>
+
+
+      <td valign="top" align="left">O or o </td>
+
+
+      <td valign="top" align="center">@ </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">10 </td>
+
+
+      <td valign="top" align="left">D or d (or nothing) </td>
+
+
+      <td valign="top" align="left"></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">16 </td>
+
+
+      <td valign="top" align="left">H or h </td>
+
+
+      <td valign="top" align="center">$ </td>
+
+    </tr>
+
+  
+  </tbody>
+</table>
+
+
+<p>Decimal is the default radix, so decimal constants need no suffix or prefix.</p>
+
+
+<p>The following representations are equivalent:</p>
+
+
+<pre>    1234H          or     $1234<br>    100d           or     100<br>    177400o        or     @177400<br>    01011000b      or     %01011000<br></pre>
+
+
+<p>The prefixes are provided for compatibility with some other source code
+formats but introduce a problem of ambiguity.  Both '%' and  '$' have alternate
+uses ('%' for modulo,  '$' for location counter symbol).  The ambiguity is
+resolved by examining the context. The '%' character is interpreted as the
+modulo operator only if it is in a position suitable for a binary operator.
+Similarly, if the first character following a '$' is a valid hexadecimal digit,
+it is assumed to be a radix specifier and not the location counter.</p>
+
+
+<h2>Character Constants</h2>
+
+
+<p>Character constants are single characters surrounded by single quotes. The
+ASCII value of the character in the quotes is returned.  No escape provision
+exists to represent non-printable characters within the quotes, but this is not
+necessary since these can be just as easily represented as numeric constants (or
+using the TEXT directive which does allow escapes).</p>
+
+
+<h2>String Constants.</h2>
+
+
+<p>String constants are one or more characters surrounded by double quotes. 
+Note that string constants are not allowed in expressions.  They are only
+allowable following the TITLE, BYTE, DB, and TEXT assembler directives. The
+quoted strings may also contain escape sequences to put in unprintable values. 
+The following escape sequences are supported:</p>
+
+
+<table border="1">
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td valign="top" align="left"><strong>Escape Sequence </strong></td>
+
+
+      <td valign="top" align="left"><strong>Description</strong> </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">\n </td>
+
+
+      <td valign="top" align="left">Line Feed </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">\r </td>
+
+
+      <td valign="top" align="left">Carriage return </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">\b </td>
+
+
+      <td valign="top" align="left">Backspace </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">\t </td>
+
+
+      <td valign="top" align="left">Tab </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">\f </td>
+
+
+      <td valign="top" align="left">Formfeed </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">\\ </td>
+
+
+      <td valign="top" align="left">Backslash </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">\" </td>
+
+
+      <td valign="top" align="left">Quote </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">\000 </td>
+
+
+      <td valign="top" align="left">Octal value of character </td>
+
+    </tr>
+
+  
+  </tbody>
+</table>
+
+
+<h2>Location Counter Symbol</h2>
+
+
+<p>The current value of the location counter (PC) can be used in expressions by
+placing a  '$' in the desired place.  The Location Counter Symbol is allowable
+anywhere a numeric constant is.   (Note that if the '$' is followed by a decimal
+digit then it is taken to be the hexadecimal radix indicator instead of the
+Location Counter symbol, as mentioned above).  The '*' may also be used to
+represent the location counter, but is less preferred because of its ambiguity
+with the multiplicative operator.</p>
+
+
+<h2>Operators</h2>
+
+
+<p>Expressions can optionally contain operators to perform some alterations or
+calculations on particular values.  The operators are summarized as follows:</p>
+
+
+<table border="1">
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td valign="top" align="center"><strong>Operator </strong></td>
+
+
+      <td valign="top" align="center"><strong>Type </strong></td>
+
+
+      <td valign="top" align="left"><strong>Description </strong></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">+ </td>
+
+
+      <td valign="top" align="center">Additive
+      </td>
+
+
+      <td valign="top" align="left">addition
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">-
+      </td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left">subtraction
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">*
+      </td>
+
+
+      <td valign="top" align="left">Multiplicative
+      </td>
+
+
+      <td valign="top" align="left">multiplication
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">/
+      </td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left">division
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">%
+      </td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left">modulo
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">&lt;&lt;</td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left">logical shift left
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">&gt;&gt; 
+      </td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left">logical shift right
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">~ 
+      </td>
+
+
+      <td valign="top" align="left">Unary
+      </td>
+
+
+      <td valign="top" align="left">bit inversion (one's complement)
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">-
+      </td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left">unary negation
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">=
+      </td>
+
+
+      <td valign="top" align="left">Relational
+      </td>
+
+
+      <td valign="top" align="left">equal
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">==
+      </td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left">equal
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">!=
+      </td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left">not equal
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">&lt;</td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left">less than
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">&gt;</td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left">greater than
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">&lt;= 
+      </td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left">less than or equal
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">&gt;= 
+      </td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left">greater than or equal
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">&amp;</td>
+
+
+      <td valign="top" align="left">Binary
+      </td>
+
+
+      <td valign="top" align="left"> binary 'and' </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center"> | </td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left"> binary 'or' </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center"> ^ </td>
+
+
+      <td valign="top" align="left"></td>
+
+
+      <td valign="top" align="left">binary 'exclusive or'
+      </td>
+
+    </tr>
+
+  
+  </tbody>
+</table>
+
+
+<p>The syntax is much the same as in 'C' with the following notes:</p>
+
+
+<ol>
+
+
+  <li> No operator precedence is in effect.  Evaluation is from left to right
+unless grouped by parenthesis (see example below).
+  </li>
+
+
+  <li> All evaluations are done with 32 bit signed precision.
+  </li>
+
+
+  <li> Both '=' and '==' are allowable equality checkers.  This is allowed since
+the syntax does not provide assignment capability (as  '=' would normally
+imply).
+  </li>
+
+</ol>
+
+
+<p>The relational operators return a value of 1 if the relation is true and 0
+if it is false.  Thirty-two bit signed arithmetic is used.</p>
+
+
+<p>It is always a good idea to explicitly indicate the desired order of
+evaluation with parenthesis, especially to maintain portability since TASM does
+not evaluate expressions in the same manner as many other assemblers.   To
+understand how it does arrive at the values for expressions, consider the
+following example:</p>
+
+
+<pre>    1 + 2*3 + 4</pre>
+
+
+<p>TASM would evaluate this as:</p>
+
+
+<pre>    (((1 + 2) * 3) + 4) = 13</pre>
+
+
+<p>Typical rules of precedence would cause the (2*3) to be evaluated first,
+such as:</p>
+
+
+<pre>    1 + (2*3) + 4      = 11</pre>
+
+
+<p>To make sure you get the desired order of evaluation, use parenthesis
+liberally. Here are some examples of valid expressions:</p>
+
+
+<pre>    (0f800H + tab)<br>    (label_2 &gt;&gt; 8)<br>    (label_3 &lt;&lt; 8) &amp; $f000<br>    $ + 4<br>    010010000100100b + 'a'<br>    (base + ((label_4 &gt;&gt; 5) &amp; (mask &lt;&lt; 2))<br></pre>
+
+
+<h1><a name="ASSEMBLER DIRECTIVES">ASSEMBLER DIRECTIVES</a></h1>
+
+
+<p>Most of the assembler directives have a format similar to the machine
+instruction format. However, instead of specifying operations for the processor
+to carry out, the directives cause the assembler to perform some function
+related to the assembly process. TASM has two types of assembler directives -
+those that mimic the 'C' preprocessor functions, and those that resemble the
+more traditional assembler directive functions.  Each of these will be
+discussed.</p>
+
+
+<p>The 'C' preprocessor style directives are invoked with a  '#' as the first
+character of the line followed by the appropriate directive (just as in 'C').
+Thus, these directives cannot have a label preceding them (on the same line).
+Note that in the examples directives are shown in upper case, however, either
+upper or lower case is acceptable.</p>
+
+
+<h2>ADDINSTR</h2>
+
+
+<p>The ADDINSTR directive can be used to define additional instructions for
+TASM to use in this assembly.  The format is:</p>
+
+
+<pre>    [<i>label</i>] .ADDINSTR <i>inst args opcode nbytes rule class shift binor</i></pre>
+
+
+<p>The fields are separated by white space just as they would appear in an
+instruction definition file.  See the TASMTABS.TXT file on the TASM distribution
+disk for more detail.</p>
+
+
+<h2>AVSYM</h2>
+
+
+<p>See SYM/AVSYM.</p>
+
+
+<h2>BLOCK</h2>
+
+
+<p>The BLOCK directive causes the Instruction Pointer to advance the specified
+number of bytes without assigning values to the skipped over locations.  The
+format is:</p>
+
+
+<pre>    [<i>label</i>] .BLOCK        <i>expr</i></pre>
+
+
+<p>Some valid examples are:</p>
+
+
+<pre>    word1   .BLOCK     2<br>    byte1   .block     1<br>    buffer  .block     80<br></pre>
+
+
+<h2>BSEG/CSEG/DSEG/NSEG/XSEG</h2>
+
+
+<p>These directives can be invoked to indicate the appropriate address space
+for symbols and labels defined in the subsequent code.  The invocation of these
+directives in no way affects the code generated, only provides more information
+in the symbol table file if the AVSYM directive is employed. Segment control
+directives such as these are generally supported by assemblers that generate
+relocatable object code. TASM does not generate relocatable object code and does
+not support a link phase, so these directives have no direct effect on the
+resulting object code. The segments are defined as follows:</p>
+
+
+<table border="1">
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td valign="top" align="center"><strong>Directive </strong></td>
+
+
+      <td valign="top" align="left"><strong>Segment Description </strong></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">BSEG </td>
+
+
+      <td valign="top" align="left">Bit address </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">CSEG </td>
+
+
+      <td valign="top" align="left">Code address </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">DSEG </td>
+
+
+      <td valign="top" align="left">Data address (internal RAM) </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">NSEG </td>
+
+
+      <td valign="top" align="left">Number or constant (EQU) </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center">XSEG </td>
+
+
+      <td valign="top" align="left">External data address (external RAM) </td>
+
+    </tr>
+
+  
+  </tbody>
+</table>
+
+
+<h2>BYTE</h2>
+
+
+<p>The BYTE directive allows a value assignment to the byte pointed to by the
+current Instruction Pointer.  The format is:</p>
+
+
+<pre>    [<i>label</i>] .BYTE   <i>expr</i> [, <i>expr</i> ...]</pre>
+
+
+<p>Only the lower eight bits of <i>expr</i> are used. Multiple bytes may be
+assigned by separating them with commas or (for printable strings) enclosed in
+double quotes. Here are some examples:</p>
+
+
+<pre>    label1   .BYTE     10010110B<br>             .byte     'a'<br>             .byte     0<br>             .byte     100010110b,'a',0<br>             .byte     "Hello", 10, 13, "World"<br></pre>
+
+
+<h2>CHK</h2>
+
+
+<p>The CHK directive causes a checksum to be computed and deposited at the
+current location. The starting point of the checksum calculation is indicated as
+an argument. Here is the format:</p>
+
+
+<pre>    [<i>label</i>]    .CHK    <i>starting_addr</i></pre>
+
+
+<p>Here is an example:</p>
+
+
+<pre>    start: NOP<br>           LDA #1<br>           .CHK start<br></pre>
+
+
+<p>The checksum is calculated as the simple arithmetic sum of all bytes
+starting at the <i>starting_addr</i> up to but not including the address of the
+CHK directive.  The least significant byte is all that is used.</p>
+
+
+<h2>CODES/NOCODES</h2>
+
+
+<p>The CODES/NOCODES directives can be used to alternately turn on or off the
+generation of formatted listing output with line numbers, opcodes, data, etc.
+With NOCODES in effect, the source lines are sent to the listing file untouched.
+ This is useful around blocks of comments that need a full 80 columns of width
+for clarity.</p>
+
+
+<h2>DB</h2>
+
+
+<p>This is alternate form of the BYTE directive.</p>
+
+
+<h2>DW</h2>
+
+
+<p>This is alternate form of the WORD directive.</p>
+
+
+<h2>DEFINE</h2>
+
+
+<p>The DEFINE directive is one of the most powerful of the directives and
+allows string substitution with optional arguments (macros).  The format is as
+follows:</p>
+
+
+<pre>    #DEFINE  <i>macro_label</i>[(<i>arg_list</i>)]  [<i>macro_definition</i>]</pre>
+
+
+<p>Where:</p>
+
+
+<dl>
+
+
+  <dt><i>macro_label</i></dt>
+
+
+  <dd>character string to be expanded when found in the source file</dd>
+
+
+  <dt><i>arg_list</i></dt>
+
+
+  <dd>optional argument list for variable substitution in macro expansion</dd>
+
+
+  <dt><i>macro_def</i></dt>
+
+
+  <dd>string to replace the occurrences of <i>macro_label</i> in the source
+file.</dd>
+
+</dl>
+
+
+<p>The simplest form of the DEFINE directive might look like this:</p>
+
+
+<pre>    #DEFINE         MLABEL</pre>
+
+
+<p>Notice that no substitutionary string is specified. The purpose of a
+statement like this would typically be to define a label for the purpose of
+controlling some subsequent conditional assembly (IFDEF or IFNDEF).</p>
+
+
+<p>A more complicated example, performing simple substitution, might look like
+this:</p>
+
+
+<pre>    #DEFINE         VAR1_LO         (VAR1 &amp; 255)</pre>
+
+
+<p>This statement would cause all occurrences of the string  'VAR1_LO' in the
+source to be substituted with '(VAR1 &amp; 255)'.</p>
+
+
+<p>As a more complicated example, using the argument expansion capability,
+consider this:</p>
+
+
+<pre>    #DEFINE  ADD(xx,yy)    clc\ lda xx\ adc yy\ sta xx</pre>
+
+
+<p>If the source file then contained a line like this:</p>
+
+
+<pre>    ADD(VARX,VARY)</pre>
+
+
+<p>It would be expanded to:</p>
+
+
+<pre>    clc\ lda VARX\ adc VARY\ sta VARX</pre>
+
+
+<p>The above example shows the use of the backslash ('\') character as a
+multiple instruction statement delimiter. This approach allows the definition of
+fairly powerful, multiple statement macros. The example shown generates 6502
+instructions to add one memory location to another.</p>
+
+
+<p>Some rules associated with the argument list:</p>
+
+
+<ol>
+
+
+  <li> Use a maximum of 10 arguments.
+  </li>
+
+
+  <li> Each argument should be a maximum of 15 characters.
+  </li>
+
+</ol>
+
+
+<p>Note that macros can be defined on the TASM command line, also, with the
+<strong>-d</strong> option flag.</p>
+
+
+<h2>DEFCONT</h2>
+
+
+<p>The DEFCONT directive can be used to add to the last macro started with a
+DEFINE directive.  This provides a convenient way to define long macros without
+running off the edge of the page. The ADD macro shown above could be defined as
+follows:</p>
+
+
+<pre>    #DEFINE         ADD(xx,yy)     clc<br>    #DEFCONT                     \ lda xx<br>    #DEFCONT                     \ adc yy<br>    #DEFCONT                     \ sta xx</pre>
+
+
+<h2>ECHO</h2>
+
+
+<p>The ECHO directive can be used to send output to the console (stderr). It
+can accept either a quoted text string (with the standard escape sequences
+allowed) or a valid expression.  It can accept only one or the other, however.
+Multiple instances of the directive may be used to create output that contains
+both. Consider the following example:</p>
+
+
+<pre>    .ECHO "The size of the table is "<br>    .ECHO (table_end - table_start)<br>    .ECHO " bytes long.\n"<br></pre>
+
+
+<p>This would result in a single line of output something like this:</p>
+
+
+<pre>    The size of the table is 196 bytes long.</pre>
+
+
+<h2>EJECT</h2>
+
+
+<p>The EJECT directive can be used to force a top-of-form and the generation of
+a page header on the list file.  It has no effect if the paging mode is off (see
+PAGE/NOPAGE).  The format is:</p>
+
+
+<pre>    [<i>label</i>]    .EJECT</pre>
+
+
+<h2>ELSE</h2>
+
+
+<p>The ELSE directive can optionally be used with IFDEF, IFNDEF and IF to
+delineate an alternate block of code to be assembled if the block immediately
+following the IFDEF, IFNDEF or IF is not assembled.</p>
+
+
+<p>Here are some examples of the use of IFDEF, IFNDEF, IF, ELSE, and ENDIF:</p>
+
+
+<pre>    #IFDEF   label1<br>        lda      byte1<br>        sta      byte2<br>    #ENDIF   <br><br>    #ifdef   label1<br>        lda      byte1<br>    #else    <br>        lda      byte2<br>    #endif   <br><br>    #ifndef  label1<br>        lda      byte2<br>    #else    <br>        lda      byte1<br>    #endif   <br><br>    #if ($ &gt;= 1000h)<br>    ; generate an invalid statement to cause an error<br>    ;  when we go over the 4K boundary.<br>    !!! PROM bounds exceeded.<br>    #endif<br></pre>
+
+
+<h2>END</h2>
+
+
+<p>The END directive should follow all code/data generating statements in the
+source file. It forces the last record to be written to the object file. The
+format is:</p>
+
+
+<pre>    [<i>label</i>]       .END [<i>addr</i>]</pre>
+
+
+<p>The optional <i>addr</i> will appear in the last object record (Motorola S9
+record type) if the object format is Motorola hex.  The <i>addr</i> field is
+ignored for all other object formats.</p>
+
+
+<h2>ENDIF</h2>
+
+
+<p>The ENDIF directive must always follow an IFDEF, IFNDEF, or IF directive and
+signifies the end of the conditional block.</p>
+
+
+<h2>EQU</h2>
+
+
+<p>The EQU directive can be used to assign values to labels. The labels can
+then be used in expressions in place of the literal constant.  The format is:</p>
+
+
+<pre>    <i>label</i>   .EQU   <i>expr</i></pre>
+
+
+<p>Here is an example:</p>
+
+
+<pre>    MASK   .EQU  0F0H<br>    ;<br>           lda   IN_BYTE<br>           and   MASK<br>           sta   OUT_BYTE<br></pre>
+
+
+<p>An alternate form of the EQU directive is '='.  The previous example is
+equivalent to any of the following:</p>
+
+
+<pre>    MASK    =   0F0H<br>    MASK    =0F0H<br>    MASK    =$F0<br></pre>
+
+
+<p>White space must exist after the <i>label</i>, but none is required after
+the '='.</p>
+
+
+<h2>EXPORT</h2>
+
+
+<p>The EXPORT directive can be used to define labels (symbols) that are to be
+written to the export symbol file.  The symbols are written as equates (using
+the .EQU directive) so that the resulting file can be included in a subsequent
+assembly.  This feature can help overcome some of the deficiencies of TASM due
+to its lack of a relocating linker. The format is:</p>
+
+
+<pre>    [<i>label</i>]  .EXPORT      <i>label</i> [,<i>label</i>...]</pre>
+
+
+<p>The following example illustrates the use of the EXPORT directive and the
+format of the resulting export file:</p>
+
+
+<p>Source file:</p>
+
+
+<pre>    EXPORT        read_byte<br>    EXPORT        write_byte, open_file<br></pre>
+
+
+<p>Resulting export file:</p>
+
+
+<pre>    read_byte      .EQU   $1243<br>    write_byte     .EQU   $12AF<br>    open_file      .EQU   $1301<br></pre>
+
+
+<h2>FILL</h2>
+
+
+<p>The FILL directive can be used to fill a selected number of object bytes
+with a fixed value.  Object memory is filled from the current program counter
+forward.  The format is as follows:</p>
+
+
+<pre>    [<i>label</i>]  .FILL      <i>number_of_bytes</i> [,<i>fill_value</i>]</pre>
+
+
+<p>The <i>number_of_bytes</i> value can be provided as any valid expression. 
+The optional fill_value can also be any valid expression.  If <i>fill_value</i>
+is not provided, a default value of 255 ($FF) is used.</p>
+
+
+<h2>IFDEF</h2>
+
+
+<p>The IFDEF directive can be used to optionally assemble a block of code.  It
+has the following form:</p>
+
+
+<pre>    #IFDEF  macro_label</pre>
+
+
+<p>When invoked, the list of macro labels (established via DEFINE directives)
+is searched.  If the label is found, the following lines of code are assembled. 
+If not found, the input file is skipped until an ENDIF or ELSE directive is
+found.</p>
+
+
+<p>Lines that are skipped over still appear in the listing file, but a '~' will
+appear immediately after the current PC and no object code will be generated
+(this is applicable to IFDEF, IFNDEF, and IF).</p>
+
+
+<h2>IFNDEF</h2>
+
+
+<p>The IFNDEF directive is the opposite of the IFDEF directive.  The block of
+code following is assembled only if the specified <i>macro_label</i> is
+undefined.  It has the following form:</p>
+
+
+<pre>    #IFNDEF  <i>macro_label</i></pre>
+
+
+<p>When invoked, the list of macro labels (established via DEFINE directives)
+is searched.  If the label is not found, the following lines of code are
+assembled. If it is found, the input file is skipped until an ENDIF or  ELSE
+directive is found.</p>
+
+
+<h2>IF</h2>
+
+
+<p>The IF directive can be used to optionally assemble a block of code
+dependent on the value of a given expression.  The format is as follows:</p>
+
+
+<pre>    #IF     <i>expr</i></pre>
+
+
+<p>If the expression <i>expr</i> evaluates to non-zero, the following block of
+code is assembled (until an ENDIF or ELSE is encountered).</p>
+
+
+<h2>INCLUDE</h2>
+
+
+<p>The INCLUDE directive reads in and assembles the indicated source file.
+INCLUDEs can be nested up to six levels.   This allows a convenient means to
+keep common definitions, declarations, or subroutines in files to be included as
+needed.  The format is as follows:</p>
+
+
+<pre>#INCLUDE        <i>filename</i></pre>
+
+
+<p>The <i>filename</i> must be enclosed in double quotes.  Here are some
+examples:</p>
+
+
+<pre>    #INCLUDE       "macros.h"<br>    #include       "equates"<br>    #include       "subs.asm"<br></pre>
+
+
+<h2>LIST/NOLIST</h2>
+
+
+<p>The LIST and NOLIST directives can be used to alternately turn the output to
+the list file on (LIST) or off (NOLIST).  The formats are:</p>
+
+
+<pre>    .LIST<br>    .NOLIST<br></pre>
+
+
+<h2>LOCALLABELCHAR</h2>
+
+
+<p>The LOCALLABELCHAR directive can be used to override the default "_"
+as the label prefix indicating a local label.  For example, to change the prefix
+to "?" do this:</p>
+
+
+<pre>    [<i>label</i>]   .LOCALLABELCHAR "?"</pre>
+
+
+<p>Be careful to use only characters that are not operators for expression
+evaluation. To do so causes ambiguity for the expression evaluator.  Some safe
+characters are "?", "{", and "}".</p>
+
+
+<h2>LSFIRST/MSFIRST</h2>
+
+
+<p>The LSFIRST and MSFIRST directives determine the byte order rule to be
+employed for the WORD directive.  The default (whether correct or not) for all
+TASM versions is the least significant byte first (LSFIRST).  The following
+illustrates its effect:</p>
+
+
+<pre>    0000  34 12    .word $1234<br>    0002           .msfirst<br>    0002  12 34    .word $1234<br>    0004           .lsfirst<br>    0004  34 12    .word $1234<br></pre>
+
+
+<h2>MODULE</h2>
+
+
+<p>The MODULE directive defines the scope of local labels.  The format is:</p>
+
+
+<pre>    [<i>label</i>]   .MODULE <i>label</i></pre>
+
+
+<p>Here is an example:</p>
+
+
+<pre>          .MODULE module_x<br>          lda regx<br>          jne _skip<br>          dec<br>   _skip  rts<br>          .MODULE module_y<br>          lda regy<br>          jne _skip<br>          dec<br>   _skip  rts<br></pre>
+
+
+<p>In the above example, the local label<i> _skip</i> is reused without harm
+since the two usages are in separate modules.   See also section LOCALLABELCHAR
+directive.</p>
+
+
+<h2>ORG</h2>
+
+
+<p>The ORG directive provides the means to set the Instruction Pointer (a.k.a.
+Program Counter) to the desired value.  The format is:</p>
+
+
+<pre>    [<i>label</i>] .ORG    <i>expr</i></pre>
+
+
+<p>The <i>label</i> is optional.  The Instruction pointer is assigned the
+value of the <i>expr</i>.  For example, to generate code starting at address
+1000H, the following could be done:</p>
+
+
+<pre>    start   .ORG    1000H</pre>
+
+
+<p>The expression (<i>expr</i>) may contain references to the current
+Instruction Pointer, thus allowing various manipulations to be done.  For
+example, to align the Instruction Pointer on the next 256 byte boundary, the
+following could be done:</p>
+
+
+<pre>    .ORG  (($ + 0FFH) &amp; 0FF00H)</pre>
+
+
+<p>ORG can also be used to reserve space without assigning values:</p>
+
+
+<pre>    .ORG    $+8</pre>
+
+
+<p>An alternate form of ORG is '*=' or '$='. Thus the following two examples
+are exactly equivalent to the previous example:</p>
+
+
+<pre>    *=*+8<br>    $=$+8<br></pre>
+
+
+<h2>PAGE/NOPAGE</h2>
+
+
+<p>The PAGE/NOPAGE directives can be used to alternately turn the paging mode
+on (PAGE) or off (NOPAGE).  If paging is in effect, then every sixty lines of
+output will be followed by a Top of Form character and a two line header
+containing page number, filename, and the title.  The format is:</p>
+
+
+<pre>    <br>    .PAGE<br>    .NOPAGE</pre>
+
+
+<p>The number of lines per page can be set with the '-p' command line option.</p>
+
+
+<h2>SET</h2>
+
+
+<p>The SET directive allows the value of an existing label to be changed. The
+format is:</p>
+
+
+<pre>    <i>label</i>   .SET    <i>expr</i></pre>
+
+
+<p>The use of the SET directive should be avoided since changing the value of a
+label can sometimes cause phase errors between pass 1 and pass 2 of the
+assembly.</p>
+
+
+<h2>SYM/AVSYM</h2>
+
+
+<p>These directives can be used to cause a symbol table file to be generated. 
+The format is:</p>
+
+
+<pre>    .SYM    ["symbol_filename"]<br>    .AVSYM  ["symbol_filename"]<br></pre>
+
+
+<p>For example:</p>
+
+
+<pre>    .SYM       "symbol.map"<br>    .SYM       <br>    .AVSYM     "prog.sym"<br>    .AVSYM<br></pre>
+
+
+<p>The two directives are similar, but result in a different format of the
+symbol table file. The format of the SYM file is one line per symbol, each
+symbol starts in the first column and is followed by white space and then four
+hexadecimal digits representing the value of the symbol. The following
+illustrates the format:</p>
+
+
+<pre>    label1         FFFE<br>    label2         FFFF<br>    label3         1000<br></pre>
+
+
+<p>The AVSYM directive is provided to generate symbol tables compatible with
+the Avocet 8051 simulator.  The format is similar, but each line is prefixed by
+an 'AS' and each symbol value is prefixed by a segment indicator:</p>
+
+
+<pre>    AS     start          C:1000<br>    AS     read_byte      C:1245<br>    AS     write_byte     C:1280<br>    AS     low_nib_mask   N:000F<br>    AS     buffer         X:0080<br></pre>
+
+
+<p>The segment prefixes are determined by the most recent segment directive
+invoked (see BSEG/CSEG/DSEG/NSEG/XSEG directives).</p>
+
+
+<h2>TEXT</h2>
+
+
+<p>This directive allows an ASCII string to be used to assign values to a
+sequence of locations starting at the current Instruction Pointer.  The format
+is:</p>
+
+
+<pre>    [<i>label</i>] .TEXT   "string"<br></pre>
+
+
+<p>The ASCII value of each character in string is taken and assigned to the
+next sequential location.  Some escape sequences are supported as follows:</p>
+
+
+<table border="1">
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td valign="top" align="center"><strong>Escape Sequence </strong></td>
+
+
+      <td valign="top" align="left"><strong>Description </strong></td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center"><tt>\n </tt></td>
+
+
+      <td valign="top" align="left">Line Feed </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center"><tt>\r </tt></td>
+
+
+      <td valign="top" align="left">Carriage return </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center"><tt>\b </tt></td>
+
+
+      <td valign="top" align="left">Backspace </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center"><tt>\t </tt></td>
+
+
+      <td valign="top" align="left">Tab </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center"><tt>\f </tt></td>
+
+
+      <td valign="top" align="left">Formfeed </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center"><tt>\\ </tt></td>
+
+
+      <td valign="top" align="left">Backslash </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center"><tt>\" </tt></td>
+
+
+      <td valign="top" align="left">Quote </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="center"><tt>\000 </tt></td>
+
+
+      <td valign="top" align="left">Octal value of character </td>
+
+    </tr>
+
+  
+  </tbody>
+</table>
+
+
+<p>Here are some examples:</p>
+
+
+<pre>    message1   .TEXT   "Disk I/O error"<br>    message2   .text   "Enter file name "<br>               .text   "abcdefg\n\r"<br>               .text   "I said \"NO\""<br></pre>
+
+
+<h2>TITLE</h2>
+
+
+<p>The TITLE directive allows the user to define a title string that appears at
+the top of each page of the list file (assuming the PAGE mode is on).  The
+format is:</p>
+
+
+<pre>    [<i>label</i>]    .TITLE  "<i>string</i>"</pre>
+
+
+<p>The <i>string</i> should not exceed 80 characters. Here are some examples:</p>
+
+
+<pre>    .TITLE  "Controller version 1.1"<br>    .title  "This is the title of the assembly"<br>    .title  ""<br></pre>
+
+
+<h2>WORD</h2>
+
+
+<p>The WORD directive allows a value assignment to the next two bytes pointed
+to by the current Instruction Pointer. The format is:</p>
+
+
+<pre>    [<i>label</i>] .WORD <i>expr</i> [,<i>expr</i>...]</pre>
+
+
+<p>The least significant byte of expr is put at the current Instruction 
+Pointer with the most significant byte at the next sequential location (unless
+the MSFIRST directive has been invoked).  Here are some examples:</p>
+
+
+<pre>    data_table     .WORD   (data_table + 1)<br>                   .word   $1234<br>                   .Word   (('x' - 'a')  &lt;&lt; 2)<br>                   .Word  12, 55, 32<br></pre>
+
+
+<hr>
+<h1><a name="OBJECT FILE FORMATS">OBJECT FILE FORMATS</a></h1>
+
+
+<h2>Intel Hex Object Format</h2>
+
+
+<p>This is the default object file format.  This format is line oriented and
+uses only printable ASCII characters except for the carriage return/line feed at
+the end of each line.  The format is symbolically represented as:</p>
+
+
+<p>:<i>NN AAAA RR HH CC CRLF</i></p>
+
+
+<p>Where:</p>
+
+
+<table>
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td valign="top" align="left">
+      
+      <p><b><i>:</i></b></p>
+
+ 
+      </td>
+
+
+      <td valign="top" align="left">
+      
+      <p>Record Start Character (colon)</p>
+
+
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">
+      
+      <p><b><i>NN</i></b></p>
+
+
+      </td>
+
+
+      <td valign="top" align="left">
+      
+      <p>Byte Count (2 hex digits)</p>
+
+
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">
+      
+      <p><b><i>AAAA</i></b></p>
+
+
+      </td>
+
+
+      <td valign="top" align="left">
+      
+      <p>Address of first byte (4 hex digits)</p>
+
+
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">
+      
+      <p><b><i>RR</i></b></p>
+
+
+      </td>
+
+
+      <td valign="top" align="left">
+      
+      <p>Record Type (<b>00</b> except for last record which is <b>01</b>)</p>
+
+
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">
+      
+      <p><b><i>HH</i></b></p>
+
+
+      </td>
+
+
+      <td valign="top" align="left">
+      
+      <p>Data Bytes (a pair of hex digits for each byte of data in the record)</p>
+
+
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">
+      
+      <p><b><i>CC</i></b></p>
+
+
+      </td>
+
+
+      <td valign="top" align="left">
+      
+      <p>Check Sum (2 hex digits)</p>
+
+
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">
+      
+      <p><b><i>CRLF</i></b></p>
+
+
+      </td>
+
+
+      <td valign="top" align="left">
+      
+      <p>Line Terminator (CR/LF for DOS, LF for LINUX)</p>
+
+
+      </td>
+
+    </tr>
+
+  
+  </tbody>
+</table>
+
+
+<p>The last line of the file will be a record conforming to the above format
+with a byte count of zero.</p>
+
+
+<p>The checksum is defined as:</p>
+
+
+<p><i>  sum = byte_count+address_hi+address_lo+record_type+(sum of all data
+bytes)</i>
+<br>
+
+<i>  checksum =  ((-sum) &amp; ffh)</i></p>
+
+
+<p>Here is a sample listing file followed by the resulting object file:</p>
+
+
+<pre>0001   0000             <br>0002   1000             	.org   $1000<br>0003   1000 010203040506	.byte  1, 2, 3, 4, 5, 6, 7, 8<br>0003   1006 0708<br>0004   1008 090A0B0C0D0E	.byte  9,10,11,12,13,14,15,16<br>0004   100E 0F10<br>0005   1010 111213141516	.byte 17,18,19,20,21,22,23,24,25,26<br>0005   1016 1718191A<br>0006   101A             	.end<br></pre>
+
+
+<pre>    :181000000102030405060708090A0B0C0D0E0F101112131415161718AC<br>    :02101800191AA3<br>    :00000001FF<br></pre>
+
+
+<h2>Intel Hex Word Address Object Format</h2>
+
+
+<p>This format is identical to the <b>Intel Hex Object Format</b> except that
+the address for each line of object code is divided by two thus converting it to
+a word  address (16 bit word).  All other fields are identical.  </p>
+
+
+<p>Here is an example:</p>
+
+
+<pre> :180800000102030405060708090A0B0C0D0E0F101112131415161718AC<br>:02080C00191AA3<br>:00000001FF<br></pre>
+
+
+<h2>MOS Technology Hex Object Format</h2>
+
+
+<p>This format is line oriented and uses only printable ASCII characters except
+for the carriage return/line feed at the end of each line.  Each line in the
+file is of the following format:</p>
+
+
+<p>:<i>NN AAAA HH CC CRLF</i></p>
+
+
+<p>Where:</p>
+
+
+<table>
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td valign="top" align="left">
+      
+      <p><b><i>;</i></b></p>
+
+ 
+      </td>
+
+
+      <td valign="top" align="left">
+      
+      <p>Record Start Character (semicolon)</p>
+
+
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">
+      
+      <p><b><i>NN</i></b></p>
+
+
+      </td>
+
+
+      <td valign="top" align="left">
+      
+      <p>Byte Count (2 hex digits)</p>
+
+
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">
+      
+      <p><b><i>AAAA</i></b></p>
+
+
+      </td>
+
+
+      <td valign="top" align="left">
+      
+      <p>Address of first byte (4 hex digits)</p>
+
+
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">
+      
+      <p><b><i>HH</i></b></p>
+
+
+      </td>
+
+
+      <td valign="top" align="left">
+      
+      <p>Data Bytes (a pair of hex digits for each byte of data in the record)</p>
+
+
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">
+      
+      <p><b><i>CCCC</i></b></p>
+
+
+      </td>
+
+
+      <td valign="top" align="left">
+      
+      <p>Check Sum (4 hex digits)</p>
+
+
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">
+      
+      <p><b><i>CRLF</i></b></p>
+
+
+      </td>
+
+
+      <td valign="top" align="left">
+      
+      <p>Line Terminator (CR/LF for DOS, LF for LINUX)</p>
+
+
+      </td>
+
+    </tr>
+
+  
+  </tbody>
+</table>
+
+
+<p>The last line of the file will be a record conforming to the above format
+with a byte count of zero.</p>
+
+
+<p>The checksum is defined as:</p>
+
+
+<p><i>  sum =byte_count+address_hi+address_lo+record_type+(sum of all data
+bytes)<br>
+
+   checksum =  (sum &amp; ffffh)</i></p>
+
+
+<p>Here is a sample object file:</p>
+
+
+<pre>;1810000102030405060708090A0B0C0D0E0F1011121314151617180154<br>;021018191A005D<br>;00<br></pre>
+
+
+<h2>Motorola Hex Object Format</h2>
+
+
+<p>This format is line oriented and uses only printable ASCII characters except
+for the carriage return/line feed at the end of each line.  The format is
+symbolically represented as:</p>
+
+
+<p><i>S1 NN AAAA HH CCCC CRLF</i></p>
+
+
+<p>Where:</p>
+
+
+<table>
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td valign="top" align="left">
+      
+      <p><b><i>S1</i></b></p>
+
+ 
+      </td>
+
+
+      <td valign="top" align="left">
+      
+      <p>Record Start tag </p>
+
+
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">
+      
+      <p><b><i>NN</i></b></p>
+
+
+      </td>
+
+
+      <td valign="top" align="left">
+      
+      <p>Byte Count (2 hex digits) (data byte count + 3)</p>
+
+
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">
+      
+      <p><b><i>AAAA</i></b></p>
+
+
+      </td>
+
+
+      <td valign="top" align="left">
+      
+      <p>Address of first byte (4 hex digits)</p>
+
+
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">
+      
+      <p><b><i>HH</i></b></p>
+
+
+      </td>
+
+
+      <td valign="top" align="left">
+      
+      <p>Data Bytes (a pair of hex digits for each byte of data in the record)</p>
+
+
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">
+      
+      <p><b><i>CC</i></b></p>
+
+
+      </td>
+
+
+      <td valign="top" align="left">
+      
+      <p>Check Sum (2 hex digits)</p>
+
+
+      </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">
+      
+      <p><b><i>CRLF</i></b></p>
+
+
+      </td>
+
+
+      <td valign="top" align="left">
+      
+      <p>Line Terminator (CR/LF for DOS, LF for LINUX)</p>
+
+
+      </td>
+
+    </tr>
+
+  
+  </tbody>
+</table>
+
+
+<p>The checksum is defined as:</p>
+
+
+<p><i>  sum = byte_count+address_hi+address_lo+(sum of all data bytes)</i>
+<br>
+
+<i>  checksum =  ((~sum) &amp; ffh)</i></p>
+
+
+<p>Here is a sample file:</p>
+
+
+<pre>S11B10000102030405060708090A0B0C0D0E0F101112131415161718A8<br>S1051018191A9F<br>S9030000FC<br></pre>
+
+
+<p>The last line of the file will be a record with a byte count of zero and a
+tag of S9.  The address field will be 0000 unless and address was provided with
+the END directive in which case it will appear in the address field.</p>
+
+
+<h2>Binary Object Format.</h2>
+
+
+<p>This file format is essentially a memory image of the object code without
+address, checksum or format description information.</p>
+
+
+<p>Note that when this object format is selected (-b option),  the -c option is
+forced. This is done so that no ambiguity results from the lack of address
+information in the file. Without the -c option, discontinuous blocks of object
+code would appear contiguous.</p>
+
+
+<hr>
+<h1><a name="LISTING FILE FORMAT">LISTING FILE FORMAT</a></h1>
+
+
+<p>Each line of source code generates one  (or more) lines of output in the
+listing file.  The fields of the output line are as follows:</p>
+
+
+<ol>
+
+
+  <li> Current source file line number (4 decimal digits).
+  </li>
+
+
+  <li>  An optional '+' appears if this is an 'INCLUDE' file. (One '+' for each
+level of INCLUDE invoked).
+  </li>
+
+
+  <li> Current Instruction Pointer (4 hex digits).  An optional '~' follows the
+Instruction Pointer if the line of source code is not being assembled because of
+an IFDEF, IFNDEF, or IF directive.
+  </li>
+
+
+  <li> Resulting code/data generated from this source line (two hex digits per
+byte, each byte separated by a space, up to six bytes per line).
+  </li>
+
+
+  <li> The source line exactly as it appears in the source file.
+  </li>
+
+</ol>
+
+
+<p>If paging is enabled (by either the '-p' option flag or the .PAGE directive)
+some additional fields will be inserted into the listing file every 60 lines. 
+These fields are:</p>
+
+
+<ol>
+
+
+  <li>  Top of Form (form feed).
+  </li>
+
+
+  <li>  Assembler identifier (e.g. "TASM 6502 Assembler").
+  </li>
+
+
+  <li>  Initial source file name.
+  </li>
+
+
+  <li>  Page number.
+  </li>
+
+
+  <li>  Title.
+  </li>
+
+</ol>
+
+
+<p>If errors are encountered, then error messages will be interspersed in the
+listing.  TASM  outputs error messages proceeding the offending  line.  The
+following example illustrates the format:</p>
+
+
+<pre>    0001   0000             label1  .equ  40h<br>    0002   0000             label2  .equ  44h<br>    0003   0000 <br>    0004   1000             start:  .org  1000h<br>    0005   1000 E6 40               inc   label1<br>    0006   1002 E6 44               inc   label2<br>    tt.asm line 0007: Label not found: (label3)<br>    0007   1004 EE 00 00            inc   label3<br>    0008   1007 4C 00 10            jmp   start<br>    0009   100A                     .end  <br>    0010   100A                            <br>    tasm: Number of errors = 1<br></pre>
+
+
+<hr>
+<h1><a name="PROM PROGRAMMING">PROM PROGRAMMING</a></h1>
+
+
+<p>A wide variety of PROM programming equipment is available that can use
+object code in one or more of the formats supported by TASM.  Here are some
+notes concerning the generation of code to be programmed into PROMs:</p>
+
+
+<h2>PRESET MEMORY</h2>
+
+
+<p>It is often desirable to have all bytes in the PROM programmed even if not
+explicitly assigned a value in the source code (e.g. the bytes are skipped over
+with a .ORG statement).  This can be accomplished by using the <i>-c</i>
+(contiguous block) and the <i>-f</i> (fill) command line option flags.  The
+<i>-c</i> will ensure that every byte from the lowest byte assigned a value to
+the highest byte assigned a value will be in the object file with no gaps. The
+<i>-f</i> flag will assign the specified value to all bytes before the assembly
+begins so that when the object file is written, all bytes not assigned a value
+in the source code will have a known value.  As an example, the following
+command line will generate object code in the default Intel Hex format with all
+bytes not assigned a value in the source set to EA (hex, 6502 NOP instruction):</p>
+
+
+<pre>    tasm -65 -c -fEA test.asm</pre>
+
+
+<h2>CONTIGUOUS BLOCKS</h2>
+
+
+<p>To ensure that TASM generates object code to cover the full address range of
+the target PROM, put a .ORG statement at the end of the source file set to the
+last address desired.  For example, to generate code to be put in a 2716 EPROM
+(2 Kbytes) from hex address $1000 to $17ff, do something like this in the source
+file:</p>
+
+
+<pre>    ;start of the file<br>        .ORG    $1000<br>    ;rest of the source code follows<br>    source code<br>    ;end of the source code<br>        .ORG    $17ff<br>        .BYTE   0<br>        .END<br></pre>
+
+
+<p>Now, to invoke TASM to generate the code in the binary format with all
+unassigned bytes set to 00 (6502 BRK instruction), do the following:</p>
+
+
+<pre>tasm -65 -b -f00 test.asm</pre>
+
+
+<p>Note that -b forces the -c option.</p>
+
+
+<hr>
+<h1><a name="ERROR MESSAGES">ERROR MESSAGES</a></h1>
+
+
+<h2>Error Message Format</h2>
+
+
+<p>TASM error messages take the following general form:</p>
+
+
+<pre>    <i>filename </i>line<i> line_number</i>: <i>error_message</i></pre>
+
+
+<p>For example:</p>
+
+
+<pre>    main.asm line 0032: Duplicate label (start)</pre>
+
+
+<p>This format is compatible with the Brief editor (from Borland
+International).  Brief provides the ability to run assemblies from within the
+editor.  Upon completion of the assembly, Brief will parse the error messages
+and jump to each offending line in the source file allowing the user to make
+corrective edits.</p>
+
+
+<p>To use this feature, it is necessary to configure a Brief environment
+variable to specify the assembly command associated with source files that end
+in .asm:</p>
+
+
+<pre>    SET BCASM = "tasm %s.asm"</pre>
+
+
+<p>TASM also needs to know the proper table to use.  It can be added above, or
+the TASMOPTS environment variable can be used separately:</p>
+
+
+<pre>    SET TASMOPTS=-65</pre>
+
+
+<h2>ERROR MESSAGE DESCRIPTIONS</h2>
+
+
+<dl>
+
+
+  <dt><strong><font size="+1">Binary operator where value expected</font></strong></dt>
+
+
+  <dd>Two binary operators in a row indicate a missing value.</dd>
+
+
+  <dt><strong><font size="+1">Branch off of current 2K page</font></strong></dt>
+
+
+  <dd>An instruction is attempting to branch to a location not within the current
+2K byte page.</dd>
+
+
+  <dt><strong><font size="+1">Branch off of current page</font></strong></dt>
+
+
+  <dd>An instruction is attempting to branch to a location not within the current
+256 byte page.</dd>
+
+
+  <dt><strong><font size="+1">Cannot malloc for label storage</font></strong></dt>
+
+
+  <dd>Insufficient memory to store more labels.  See <strong>LIMITATIONS</strong>.</dd>
+
+
+  <dt><strong><font size="+1">Duplicate label</font></strong></dt>
+
+
+  <dd>The label for the current line has already been assigned a value. 
+Duplicate label checks are optionally enabled by the <i>-a</i> option.</dd>
+
+
+  <dt><strong><font size="+1">File name too short</font></strong></dt>
+
+
+  <dd>A file name on the command line is fewer than 3 characters.  A two
+character file name may be valid, of course, but it is detected as an error to
+prevent a garbled option flag from being taken as a source file, which in turn
+can result in the true source file being taken as the object file.  Since the
+object file is truncated at startup time, the source file could be clobbered.</dd>
+
+
+  <dt><strong><font size="+1">Forward reference in equate</font></strong></dt>
+
+
+  <dd>An EQU directive  is using a  label on the right hand side that has not yet
+been defined.</dd>
+
+
+  <dt><strong><font size="+1">Heap overflow on label definition</font></strong></dt>
+
+
+  <dd>TASM was unable to allocate memory to store the label.</dd>
+
+
+  <dt><strong><font size="+1">Imbalanced conditional.</font></strong></dt>
+
+
+  <dd>An end-of-file was encountered at which time the level of descent in
+conditional directives was different from when the file was entered. 
+Conditional directives include IF, IFDEF, and IFNDEF.</dd>
+
+
+  <dt><strong><font size="+1">Invalid Object file type.</font></strong></dt>
+
+
+  <dd>An object file type was requested by the -g command line option that is not
+valid. See section on Option g - Object File Format.</dd>
+
+
+  <dt><strong><font size="+1">Invalid operand.</font></strong></dt>
+
+
+  <dd>No indirection for this instruction.  The first character of an operand was
+a left parenthesis for an instruction that does not explicitly specify that as
+the format.  Some micros use the parenthesis as an indicator of indirection, but
+putting a layer of parenthesis around an expression is always a valid thing to
+do (as far as the expression evaluator is concerned).  The test for this case is
+only done if the <i>-a4</i> option is selected.  See section on <b>ASSEMBLY
+CONTROL</b>.</dd>
+
+
+  <dt><strong><font size="+1">Invalid token where value expected.</font></strong></dt>
+
+
+  <dd>Two binary operators in a row are not allowed.</dd>
+
+
+  <dt><strong><font size="+1">Label too long.</font></strong></dt>
+
+
+  <dd>Labels are limited to 31 characters.</dd>
+
+
+  <dt><strong><font size="+1">Label value misaligned</font></strong></dt>
+
+
+  <dd>The value of a label appears to have a different value on the second pass
+then it was computed to have on the first pass.  This is generally due to Zero
+Page Addressing mode problems with the 6502 version of TASM.  Labels that are
+used in operands for statements that could utilize Zero Page addressing mode
+should always be defined before used as an operand.</dd>
+
+
+  <dt><strong><font size="+1">Label not found</font></strong></dt>
+
+
+  <dd>A label used in an expression was not found in the current label table.</dd>
+
+
+  <dt><strong><font size="+1">Label must pre-exist for SET.</font></strong></dt>
+
+
+  <dd>The SET directive can only be applied to an existing label.</dd>
+
+
+  <dt><strong><font size="+1">Label table overflow</font></strong></dt>
+
+
+  <dd>To many labels have been encountered.</dd>
+
+
+  <dt><strong><font size="+1">List file open error                      </font></strong></dt>
+
+
+  <dd>TASM was not able to open the specified list file.</dd>
+
+
+  <dt><strong><font size="+1">Macro expansion too long.                 </font></strong></dt>
+
+
+  <dd>The expansion of a macro resulted in a line that exceeded the maximum
+length.</dd>
+
+
+  <dt><strong><font size="+1">Max number of nested conditionals exceeded</font></strong></dt>
+
+
+  <dd>Too many levels of IF, IFDEF, or IFNDEF.</dd>
+
+
+  <dt><strong><font size="+1">Maximum number of args exceeded</font></strong></dt>
+
+
+  <dd>Too many macro arguments.</dd>
+
+
+  <dt><strong><font size="+1">Maximum number of macros exceeded         </font></strong></dt>
+
+
+  <dd>Too many macros (DEFINEs) have been encountered.</dd>
+
+
+  <dt><strong><font size="+1">No END directive before EOF</font></strong></dt>
+
+
+  <dd>The source file did not have an END directive in it. This is not fatal, but
+may cause the last object file record to be lost.</dd>
+
+
+  <dt><strong><font size="+1">No files specified</font></strong></dt>
+
+
+  <dd>TASM was invoked with no source file specified.</dd>
+
+
+  <dt><strong><font size="+1">No such label</font></strong></dt>
+
+
+  <dd>A SET directive was encountered for a label not yet defined.  The value of
+labels that are modified by the SET directive must already exist.</dd>
+
+
+  <dt><strong><font size="+1">No terminating quote</font></strong></dt>
+
+
+  <dd>A double quote was used at the start of a a text string but was not used at
+the end of the string.</dd>
+
+
+  <dt><strong><font size="+1">No indirection for this instruction.      </font></strong></dt>
+
+
+  <dd>A parenthesis was found around the operand expression.  This may indicate
+an attempt to use indirection  where it  is inappropriate.</dd>
+
+
+  <dt><strong><font size="+1">Non-unary operator at start of expression </font></strong></dt>
+
+
+  <dd>A binary operator (such as '*') was found at the beginning of an
+expression. Some micros use '*' as an indirection operator. Since it is also a
+legitimate operator in an expression, some ambiguity can arise. If a particular
+instruction/addressing mode does not allow indirection, and a '*' is placed in
+front of the associated expression, the assembler will assume this error.  See
+the  <i>-a8</i> option of ASSEMBLY CONTROL.</dd>
+
+
+  <dt><strong><font size="+1">Object file open error</font></strong></dt>
+
+
+  <dd>TASM was not able to open the specified object file.</dd>
+
+
+  <dt><strong><font size="+1">Range of argument exceeded</font></strong></dt>
+
+
+  <dd>The value of an argument exceeds the valid range for the current
+instruction and addressing mode.</dd>
+
+
+  <dt><strong><font size="+1">Range of relative branch exceeded</font></strong></dt>
+
+
+  <dd>A branch instruction exceeds the maximum range.</dd>
+
+
+  <dt><strong><font size="+1">Source file open error</font></strong></dt>
+
+
+  <dd>TASM was not able to open the specified source file.</dd>
+
+
+  <dt><strong><font size="+1">Unrecognized directive</font></strong></dt>
+
+
+  <dd>A statement starting with a '.' or '#' has a mnemonic that is not defined
+as a directive.</dd>
+
+
+  <dt><strong><font size="+1">Unrecognized instruction                 </font></strong></dt>
+
+
+  <dd>A statement has an opcode mnemonic that is not defined.</dd>
+
+
+  <dt><strong><font size="+1">Unrecognized argument</font></strong></dt>
+
+
+  <dd>A statement has an operand format that is not defined.</dd>
+
+
+  <dt><strong><font size="+1">Unknown token</font></strong></dt>
+
+
+  <dd>Unexpected characters were encountered while parsing an expression.</dd>
+
+
+  <dt><strong><font size="+1">Unused data in MS byte of argument</font></strong></dt>
+
+
+  <dd>An instruction or directive used the least significant byte of an argument
+and left the most significant byte unused, but it was non-zero.</dd>
+
+
+  <dt><strong><font size="+1">Unknown option Flag.</font></strong></dt>
+
+
+  <dd>Invalid option flag has been specified on the command line. invoke TASM
+with nothing on the command line to see a list of valid options.</dd>
+
+</dl>
+
+
+<h1><a name="LIMITATIONS">LIMITATIONS</a></h1>
+
+
+<table border="1">
+
+
+  <tbody>
+
+    <tr>
+
+
+      <td valign="top" align="left">Maximum number of labels </td>
+
+
+      <td valign="top" align="left">15000 </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">Maximum length of labels </td>
+
+
+      <td valign="top" align="left">32 characters </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">Maximum address space </td>
+
+
+      <td valign="top" align="left">64 Kbytes (65536 bytes) </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">Maximum number of nested INCLUDES</td>
+
+
+      <td valign="top" align="left">4 </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">Maximum length of TITLE string </td>
+
+
+      <td valign="top" align="left">79 characters </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">Maximum source line length </td>
+
+
+      <td valign="top" align="left">255 characters </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">Maximum length after macro expansion </td>
+
+
+      <td valign="top" align="left">255 characters </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">Maximum length of expressions </td>
+
+
+      <td valign="top" align="left">255 characters </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">Maximum length of pathnames </td>
+
+
+      <td valign="top" align="left">79 characters </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">Maximum length of command line </td>
+
+
+      <td valign="top" align="left">127 characters </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">Maximum number of instructions (per table) </td>
+
+
+      <td valign="top" align="left">1200 </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">Maximum number of macros </td>
+
+
+      <td valign="top" align="left">1000 </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">Maximum number of macro arguments </td>
+
+
+      <td valign="top" align="left">10 </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">Maximum length of macro argument </td>
+
+
+      <td valign="top" align="left">16 characters </td>
+
+    </tr>
+
+
+    <tr>
+
+
+      <td valign="top" align="left">Memory requirements </td>
+
+
+      <td valign="top" align="left">512K </td>
+
+    </tr>
+
+  
+  </tbody>
+</table>
+
+
+<h2>Other Limitations</h2>
+
+
+<ol>
+
+
+  <li> The 8048 version of TASM does not check for use of memory beyond any
+reasonable bounds (e.g. an 8048 has a maximum address space of 4 Kbytes but TASM
+will let you pretend that you have 64 Kbytes).
+  </li>
+
+
+  <li> Expression evaluation has no operator precedence in effect which can make
+for unexpected results if not explicitly grouped with parenthesis.
+  </li>
+
+
+  <li> First page of listing file will not show a user defined title  (defined
+via TITLE directive).</li>
+  <li>
+    <hr style="width: 100%; height: 2px;">
+    <table style="text-align: left; width: 100px;" cellspacing="2" cellpadding="2" border="1">
+      <tbody>
+        <tr>
+          <td>
+          <script language="Javascript" src="The%20Telemark%20Assembler%20(TASM)%20User'%20Manual_files/compteur0.htm"></script></td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+  </li>
+
+</ol>
+
+
+<hr>
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

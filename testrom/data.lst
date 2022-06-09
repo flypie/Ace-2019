@@ -1,0 +1,26 @@
+Zilog Macro Assembler.  Version K2.14    03-Jun-122    14:14:05    Page:    1
+
+
+g:\my drive\ace-2019\testrom\data.asm
+
+Location Object              Type  Line Source
+                             A        1 
+                             A        2 	PUBLIC SEND_VIA_A
+                             A        3 	PUBLIC SEND_VIA_B
+                             A        4 
+00000000                     A        5 SEND_VIA_A:
+00000000 53 45 4E 44 20 56   A        6 	DB "SEND VIA A",0
+00000006 49 41 20 41 00      A  d     6
+                             A        7 
+0000000B                     A        8 SEND_VIA_B:
+0000000B 53 45 4E 44 20 56   A        9 	DB "SEND VIA B",0
+00000011 49 41 20 42 00      A  d     9
+                             A       10  
+Zilog Macro Assembler.  Version K2.14    03-Jun-122    14:14:05    Page:    2
+
+
+g:\my drive\ace-2019\testrom\data.asm
+
+
+    0 Warnings
+    0 Errors

@@ -1,0 +1,102 @@
+<?
+// Documentation dans le ficher install.txt
+
+header("Expires: Thu, 01 Apr 2003 01:00:00 GMT");                // Date du passé
+header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");   // Toujours modifié
+header("Cache-Control: no-cache, must-revalidate");              // HTTP/1.1
+header("Pragma: no-cache");                                      // HTTP/1.0
+
+// MODIFIER LES INFORMATIONS CI-DESSOUS :
+
+$dossier="quiestla";                           // Dossier contenant les fichiers ip.txt, compteur.txt et record.txt
+
+// NE PAS MODIFIER TOUT CE QUI SUIT :
+// ---------------------------------
+
+$temporisation=600;                                              // 600 secondes soit 10 minutes
+$tempsactuel=time();                                             // Temps actuel en secondes
+
+//ne fonctionne pas
+$fichier="$dossier/$REMOTE_ADDR.txt";                            // Fichier ip.txt du visiteur
+
+// Incrémenter le nombre total de pages
+	CountAv("quiestla/countPages.txt","quiestla/countPagesBak.txt");
+/*
+	$countPages="quiestla/countPages.txt";	// nombre total de pages
+	$nbpages ="";
+	$fdPages=@fopen("$countPages","r+");
+	$nbpages = fgets($fdPages,1024); 
+	$nbpages += 1; 
+	rewind($fdPages); 
+	fputs($fdPages,"$nbpages",1024);
+	fclose($fdPages);              
+*/
+
+/*--------------------------------------------------------------------
+--- NE FONCTIONNE PAS ---
+// Supprimer les vieux fichiers ip.txt
+$handle1=opendir("$dossier");
+while ($tmp1 = readdir($handle1))
+	{
+	if($tmp1!="." && $tmp1!=".." && $tmp1!="compteur.txt" && $tmp1!="record.txt" && (filemtime("$dossier/$tmp1")+$temporisation<$tempsactuel))  
+		{ @unlink("$dossier/$tmp1"); }
+	}
+closedir($handle1);
+
+// Incrémenter le nombre total de visiteurs$nbvisiteurs ="";$fd2=@fopen("$dossier/compteur.txt","r+");   if(!$fd2)      {echo "document.write(\"?\");";}     else		{		if (!file_exists($fichier)) 		  {		  $nbvisiteurs = fgets($fd2,1024); 		  $nbvisiteurs += 1; 		  rewind($fd2); 		  fputs($fd2,"$nbvisiteurs",1024);		  }         		fclose($fd2);        		}
+
+// Créer le fichier ip.txt du visiteur
+$fd3=@fopen("$fichier","w");
+     if(!$fd3) {echo "document.write(\"?\");";}
+     else {fputs($fd3,""); fclose($fd3);}
+	
+// Compter le nombre de fichiers ip.txt valides
+$nbfv=0;
+$handle4=opendir("$dossier");
+while ($tmp4 = readdir($handle4))
+	{
+	if($tmp4!="." && $tmp4!=".." && $tmp4!="compteur.txt" && $tmp4!="record.txt") 
+		{ $nbfv++; }
+	}
+closedir($handle4);
+
+// Calculer le record de visiteurs simultanés
+$fd5=@fopen("$dossier/record.txt","r+");
+	if(!$fd5) {echo "document.write(\"?\");";}
+	else { list($nbretemp, $datetemp)=split('\|',fgets($fd5, 1024));
+	     if($nbretemp<=$nbfv) 
+		   { rewind($fd5); 
+			 fputs($fd5,"$nbfv|$tempsactuel",1024);
+		   } 
+		 fclose ($fd5);
+         }
+
+--------------------------------------------------------------------*/
+
+function CountAv($file1,$file2){//----- GESTION COMPTEUR ----
+	if (file_exists($file1)){
+		$fdPages=@fopen($file1,"r+");
+		$nbpages = fgets($fdPages,1024); 
+		rewind($fdPages); 
+		fputs($fdPages,++$nbpages,1024);
+		fclose($fdPages);              
+		//enregistrer toutes les 100 pages
+		if (substr($nbpages,-2)=="00"){FileWrite($file2,$nbpages);}
+	}else{
+		$fdPages=@fopen($file2,"r+");
+		$nbpages = fgets($fdPages,1024); 
+		//5420>7000
+		if ($nbpages<10){$nbpages="0010";}//correction si fichier corrompu		
+		fclose($fdPages);              
+		FileWrite($file1,++$nbpages);
+	}
+	return $nbpages;
+}
+
+function FileWrite($FileName,$text){
+$fd=@fopen("$FileName","w+");
+fputs($fd,"$text",0x21000);
+fclose($fd);
+}
+	 
+?>
