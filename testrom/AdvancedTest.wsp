@@ -658,7 +658,7 @@ ptn_Child1=MainFrame
 ptn_Child2=ChildFrames
 [WorkState_v1_1.Frames.MainFrame]
 WindowPlacement=MCAAAAAACAAAAAAADAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPLLPPPPPPGFAAAAAALFFAAAAANEDAAAAA
-Title=ZiLOG Developer Studio - [exp.asm]
+Title=ZiLOG Developer Studio - exp.asm
 [WorkState_v1_1.Frames.ChildFrames]
 ptn_Child1=Document-0
 ptn_Child2=Document-1
@@ -705,7 +705,7 @@ ptn_Child1=ViewFrame-0
 DocPathName=g:\my drive\ace-2019\testrom\exp.asm
 DocumentString=ZDS Document
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAACAAAAAAADAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPFOPPPPPPGLAAAAAAGLAAAAAACJGAAAAAELCAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPFOPPPPPPGLAAAAAAGLAAAAAACJGAAAAAELCAAAAA
 IsActiveChildFrame=True
 [WorkState_v1_1.Frames.ChildFrames.Document-5]
 ptn_Child1=ViewFrame-0

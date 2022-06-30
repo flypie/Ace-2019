@@ -8,7 +8,6 @@
 fp-info-cache
 gui_defaults.par
 *.sch-bak
-*.pdf
 *.gbr
 *.drl
 *.bck
