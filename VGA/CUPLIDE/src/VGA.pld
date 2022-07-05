@@ -1,0 +1,32 @@
+Name     XLOGIC ;
+PartNo   22V10B ;
+Date     30/06/2022 ;
+Revision 01 ;
+Designer Engineer ;
+Company  Ontobus ;
+Assembly None ;
+Location  ;
+Device   p22v10;
+
+/* *************** INPUT PINS *********************/
+PIN	1 = SCREENX1				; /*                                 */ 
+PIN	2 = SCREENX2				; /*                                 */ 
+PIN	3 = SCREENX3				; /*                                 */ 
+PIN	4 = SCREENX4				; /*                                 */ 
+PIN	5 = SCREENX5				; /*                                 */ 
+PIN	6 = SCREENX6				; /*                                 */ 
+PIN	7 = SCREENX2p1			; /*                                 */ 
+PIN	8 = SCREENX5p1			; /*                                 */ 
+PIN	9 = SCREENX6p1			; /*                                 */ 
+
+/* *************** OUTPUT PINS *********************/
+PIN	19 = IN_HBI				; /*                                 */ 
+PIN	20 = HSync 				; /*                                 */ 
+PIN	21 = XRESET 				; /*                                 */ 
+PIN	22 = XRESETp1				; /*                                 */ 
+/* *************** PINNODES    *********************/
+
+IN_HBI  = (SCREENX4 # SCREENX5) & SCREENX6;	/*                                 */ 
+HSync = !((SCREENX4 & !SCREENX5 & SCREENX6) & (SCREENX1 # SCREENX2 # SCREENX3) & (SCREENX1 & SCREENX2 & SCREENX3));
+XRESET = SCREENX2 & SCREENX5 & SCREENX6;
+XRESETp1 = SCREENX2p1 & SCREENX5p1 & SCREENX6p1;
