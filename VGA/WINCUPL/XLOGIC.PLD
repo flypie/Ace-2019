@@ -18,14 +18,26 @@ PIN	6 = SCREENX6				; /*                                 */
 PIN	7 = SCREENX2p1			; /*                                 */ 
 PIN	8 = SCREENX5p1			; /*                                 */ 
 PIN	9 = SCREENX6p1			; /*                                 */ 
+PIN    10 = IN_VBI				;
+PIN	11 = FONTCHARX1_1			;
+PIN	13 = FONTCHARX2_1			;
+PIN	14 = SAVED_INVERT			;
+PIN	15 = PIXEL				;
 
 /* *************** OUTPUT PINS *********************/
+
+PIN	17 = PSTATE				;
+PIN	18 = LOADVIDCACHE			;
+PIN	19 = IN_VBI_OR_HBI			;
 PIN	20 = IN_HBI				; /*                                 */ 
 PIN	21 = HSync 				; /*                                 */ 
 PIN	22 = XRESET 				; /*                                 */ 
 PIN	23 = XRESETp1				; /*                                 */ 
 /* *************** PINNODES    *********************/
 
+PSTATE = SAVED_INVERT $ PIXEL;
+LOADVIDCACHE = FONTCHARX1_1 # FONTCHARX2_1;
+IN_VBI_OR_HBI = !(IN_VBI # IN_HBI);
 IN_HBI  = (SCREENX4 # SCREENX5) & SCREENX6;	/*                                 */ 
 HSync = (SCREENX4 & !SCREENX5 & SCREENX6) & (SCREENX1 # SCREENX2 # SCREENX3) & !(SCREENX1 & SCREENX2 & SCREENX3);
 XRESET = SCREENX2 & SCREENX5 & SCREENX6;

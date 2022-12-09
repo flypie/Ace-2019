@@ -1,0 +1,166 @@
+Zilog Macro Assembler.  Version K2.14    09-May-120    02:06:27    Page:    1
+
+
+c:\users\john bradley\dropbox\ace-2019\newrom\inttable.asm
+
+Location Object              Type  Line Source
+                             A        1 	INCLUDE "iodefs.inc"
+                   00003C00  B        1 RAMSTARTLOC equ  03C00h
+                             B        2 
+                             B        3 	CPU = Z180
+                             B        4 
+                   00001F00  B        5 INTTABLEBASE	equ	01F00h
+                             B        6 
+                             B        7 
+                   000000FC  B        8 KIOBASE	equ	0FCh
+                             B        9 
+                   00000000  B       10 PIOIOBASE	equ	00B
+                   00000001  B       11 CTCIOBASE	equ	01B
+                   00000002  B       12 SIOIOBASE	equ	10B
+                   00000003  B       13 PIAIOBASE	equ	11B
+                   00000003  B       14 KIOIOBASE	equ	11B
+                             B       15 
+                   00000000  B       16 PIOPORTADATA	equ	00b
+                   00000001  B       17 PIOPORTACMD		equ	01b
+                   00000000  B       18 PIOPORTBDATA	equ	00b
+                   00000001  B       19 PIOPORTBCMD		equ	01b
+                             B       20 
+                   00000000  B       21 CTCCHANNEL0		equ	00b
+                   00000001  B       22 CTCCHANNEL1		equ	01b
+                   00000002  B       23 CTCCHANNEL2		equ	10b
+                   00000003  B       24 CTCCHANNEL3		equ	11b
+                             B       25 
+                   00000000  B       26 SIOPORTADATA	equ	00b
+                   00000001  B       27 SIOPORTACMD		equ	01b
+                   00000000  B       28 SIOPORTBDATA	equ	00b
+                   00000001  B       29 SIOPORTBCMD		equ	01b
+                             B       30 
+                   00000000  B       31 PIAPORTCDATA	equ	00b
+                   00000001  B       32 PIAPORTCCMD		equ	01b
+                             B       33 
+                   00000002  B       34 KIOCOMMANDA		equ	10b
+                   00000003  B       35 KIOCOMMANDB		equ	11b
+                             B       36 
+                             B       37 MAKEPORT	MACRO	Name,Base,Device,Register
+                             B       38 Name equ Base|(Device<<8)|(Register<<10)
+                             B       39 	endmac 
+                             B       40 
+                             B       41 
+                             B       42 	MAKEPORT PIOADATA,KIOBASE,PIOIOBASE,PIOPORTADATA
+                   000000FC  B+      42 Name equ Base|(Device<<8)|(Register<<10)
+                             B       43 	MAKEPORT PIOACMD,KIOBASE,PIOIOBASE,PIOPORTACMD
+                   000004FC  B+      43 Name equ Base|(Device<<8)|(Register<<10)
+                             B       44 	MAKEPORT PIOBDATA,KIOBASE,PIOIOBASE,PIOPORTBDATA
+                   000000FC  B+      44 Name equ Base|(Device<<8)|(Register<<10)
+                             B       45 	MAKEPORT PIOBCMD,KIOBASE,PIOIOBASE,PIOPORTBCMD
+                   000004FC  B+      45 Name equ Base|(Device<<8)|(Register<<10)
+                             B       46 
+                             B       47 	MAKEPORT CTCCH0,KIOBASE,CTCIOBASE,CTCCHANNEL0
+                   000001FC  B+      47 Name equ Base|(Device<<8)|(Register<<10)
+                             B       48 	MAKEPORT CTCCH1,KIOBASE,CTCIOBASE,CTCCHANNEL1
+                   000005FC  B+      48 Name equ Base|(Device<<8)|(Register<<10)
+                             B       49 	MAKEPORT CTCCH2,KIOBASE,CTCIOBASE,CTCCHANNEL2
+                   000009FC  B+      49 Name equ Base|(Device<<8)|(Register<<10)
+                             B       50 	MAKEPORT CTCCH3,KIOBASE,CTCIOBASE,CTCCHANNEL3
+Zilog Macro Assembler.  Version K2.14    09-May-120    02:06:27    Page:    2
+
+
+iodefs.inc
+
+Location Object              Type  Line Source
+                   00000DFC  B+      50 Name equ Base|(Device<<8)|(Register<<10)
+                             B       51 
+                             B       52 	MAKEPORT SIOADATA,KIOBASE,SIOIOBASE,SIOPORTADATA
+                   000002FC  B+      52 Name equ Base|(Device<<8)|(Register<<10)
+                             B       53 	MAKEPORT SIOACMD,KIOBASE,SIOIOBASE,SIOPORTACMD
+                   000006FC  B+      53 Name equ Base|(Device<<8)|(Register<<10)
+                             B       54 	MAKEPORT SIOBDATA,KIOBASE,SIOIOBASE,SIOPORTBDATA
+                   000002FC  B+      54 Name equ Base|(Device<<8)|(Register<<10)
+                             B       55 	MAKEPORT SIOBCMD,KIOBASE,SIOIOBASE,SIOPORTBCMD
+                   000006FC  B+      55 Name equ Base|(Device<<8)|(Register<<10)
+                             B       56 
+                             B       57 	MAKEPORT PIOCDATA,KIOBASE,PIAIOBASE,PIAPORTCDATA
+                   000003FC  B+      57 Name equ Base|(Device<<8)|(Register<<10)
+                             B       58 	MAKEPORT PIOCCMD,KIOBASE,PIAIOBASE,PIAPORTCCMD
+                   000007FC  B+      58 Name equ Base|(Device<<8)|(Register<<10)
+                             B       59 
+                             B       60 	MAKEPORT KIOCMDA,KIOBASE,KIOIOBASE,KIOCOMMANDA
+                   00000BFC  B+      60 Name equ Base|(Device<<8)|(Register<<10)
+                             B       61 	MAKEPORT KIOCMDB,KIOBASE,KIOIOBASE,KIOCOMMANDB
+                   00000FFC  B+      61 Name equ Base|(Device<<8)|(Register<<10)
+                             B       62 
+                             B       63 	
+                   000000F0  B       64 WDTMT	equ	0F0h
+                   000000F1  B       65 WDTCR	equ	0F1h
+                             B       66 
+                   000000F4  B       67 IPR		equ	0F4h
+                             B       68 
+                   000000EE  B       69 SCRP	equ	0EEh
+                   000000EF  B       70 SCDP	equ	0EFh
+                             B       71 
+                   00000020  B       72 SERIALTXBUFFLEN	equ	020h	;must be power of 2
+                             B       73 
+                             B       74 DEFB MACRO P1
+                             B       75 	DB P1
+                             B       76 	MACEND
+                             B       77 
+                             B       78 DEFW MACRO P1
+                             B       79 	DW P1
+                             B       80 	MACEND
+                             B       81 
+                             B       82 DEFM MACRO P1
+                             B       83 	DB P1
+                             B       84 	MACEND
+                             B       85 
+                             B       86 
+                             A        2 
+                             A        3 	PUBLIC SIOINTTBL,PIOINTCTC,INTTBL
+                             A        4 
+                             A        5 	.EXTERN CTC0INT,CTC1INT,CTC2INT,CTC3INT,INIT_CTC
+                             A        6 	.EXTERN INIT_SIO
+                             A        7 	.EXTERN SIOAINT_TBE,SIOAINT_ESC,SIOAINT_RCA,SIOAINT_SRC,SIOBINT_TBE,SIOBINT_ESC,SIOBINT_RCA,SIOBINT_SRC
+                             A        8 
+                             A        9 	.EXTERN PIOAINT,PIOBINT,PIACINT,INIT_PIO
+                             A       10 
+                             A       11 	.DEFINE INTTABLE
+                             A       12 	.SECTION INTTABLE
+                             A       13 
+                             A       14 	org	INTTABLEBASE
+Zilog Macro Assembler.  Version K2.14    09-May-120    02:06:27    Page:    3
+
+
+c:\users\john bradley\dropbox\ace-2019\newrom\inttable.asm
+
+Location Object              Type  Line Source
+                             A       15 
+00001F00                     A       16 INTTBL:
+                             A       17 ;PIOINTTBL:
+00001F00 00 00               A       18 	DW  PIOAINT ;int 0
+                             A       19 
+                             A       20 ;	org	01000H
+00001F02                     A       21 PIOINTCTC:
+00001F02 00 00               A       22 	DW  CTC0INT
+00001F04 00 00               A       23 	DW  CTC1INT
+00001F06 00 00               A       24 	DW  CTC2INT
+00001F08 00 00               A       25 	DW  CTC3INT
+                             A       26 
+                             A       27 ;	org	01010H
+00001F0A                     A       28 SIOINTTBL:
+00001F0A 00 00               A       29 	DW  SIOBINT_TBE
+00001F0C 00 00               A       30 	DW  SIOBINT_ESC
+00001F0E 00 00               A       31 	DW  SIOBINT_RCA
+00001F10 00 00               A       32 	DW  SIOBINT_SRC
+00001F12 00 00               A       33 	DW  SIOAINT_TBE
+00001F14 00 00               A       34 	DW  SIOAINT_ESC
+00001F16 00 00               A       35 	DW  SIOAINT_RCA
+00001F18 00 00               A       36 	DW  SIOAINT_SRC
+                             A       37 	
+                             A       38 
+Zilog Macro Assembler.  Version K2.14    09-May-120    02:06:27    Page:    4
+
+
+c:\users\john bradley\dropbox\ace-2019\newrom\inttable.asm
+
+
+    0 Warnings
+    0 Errors

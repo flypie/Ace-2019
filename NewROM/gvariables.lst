@@ -1,0 +1,301 @@
+Zilog Macro Assembler.  Version K2.14    09-May-120    02:06:27    Page:    1
+
+
+c:\users\john bradley\dropbox\ace-2019\newrom\gvariables.asm
+
+Location Object              Type  Line Source
+                             A        1 	INCLUDE "iodefs.inc"
+                   00003C00  B        1 RAMSTARTLOC equ  03C00h
+                             B        2 
+                             B        3 	CPU = Z180
+                             B        4 
+                   00001F00  B        5 INTTABLEBASE	equ	01F00h
+                             B        6 
+                             B        7 
+                   000000FC  B        8 KIOBASE	equ	0FCh
+                             B        9 
+                   00000000  B       10 PIOIOBASE	equ	00B
+                   00000001  B       11 CTCIOBASE	equ	01B
+                   00000002  B       12 SIOIOBASE	equ	10B
+                   00000003  B       13 PIAIOBASE	equ	11B
+                   00000003  B       14 KIOIOBASE	equ	11B
+                             B       15 
+                   00000000  B       16 PIOPORTADATA	equ	00b
+                   00000001  B       17 PIOPORTACMD		equ	01b
+                   00000000  B       18 PIOPORTBDATA	equ	00b
+                   00000001  B       19 PIOPORTBCMD		equ	01b
+                             B       20 
+                   00000000  B       21 CTCCHANNEL0		equ	00b
+                   00000001  B       22 CTCCHANNEL1		equ	01b
+                   00000002  B       23 CTCCHANNEL2		equ	10b
+                   00000003  B       24 CTCCHANNEL3		equ	11b
+                             B       25 
+                   00000000  B       26 SIOPORTADATA	equ	00b
+                   00000001  B       27 SIOPORTACMD		equ	01b
+                   00000000  B       28 SIOPORTBDATA	equ	00b
+                   00000001  B       29 SIOPORTBCMD		equ	01b
+                             B       30 
+                   00000000  B       31 PIAPORTCDATA	equ	00b
+                   00000001  B       32 PIAPORTCCMD		equ	01b
+                             B       33 
+                   00000002  B       34 KIOCOMMANDA		equ	10b
+                   00000003  B       35 KIOCOMMANDB		equ	11b
+                             B       36 
+                             B       37 MAKEPORT	MACRO	Name,Base,Device,Register
+                             B       38 Name equ Base|(Device<<8)|(Register<<10)
+                             B       39 	endmac 
+                             B       40 
+                             B       41 
+                             B       42 	MAKEPORT PIOADATA,KIOBASE,PIOIOBASE,PIOPORTADATA
+                   000000FC  B+      42 Name equ Base|(Device<<8)|(Register<<10)
+                             B       43 	MAKEPORT PIOACMD,KIOBASE,PIOIOBASE,PIOPORTACMD
+                   000004FC  B+      43 Name equ Base|(Device<<8)|(Register<<10)
+                             B       44 	MAKEPORT PIOBDATA,KIOBASE,PIOIOBASE,PIOPORTBDATA
+                   000000FC  B+      44 Name equ Base|(Device<<8)|(Register<<10)
+                             B       45 	MAKEPORT PIOBCMD,KIOBASE,PIOIOBASE,PIOPORTBCMD
+                   000004FC  B+      45 Name equ Base|(Device<<8)|(Register<<10)
+                             B       46 
+                             B       47 	MAKEPORT CTCCH0,KIOBASE,CTCIOBASE,CTCCHANNEL0
+                   000001FC  B+      47 Name equ Base|(Device<<8)|(Register<<10)
+                             B       48 	MAKEPORT CTCCH1,KIOBASE,CTCIOBASE,CTCCHANNEL1
+                   000005FC  B+      48 Name equ Base|(Device<<8)|(Register<<10)
+                             B       49 	MAKEPORT CTCCH2,KIOBASE,CTCIOBASE,CTCCHANNEL2
+                   000009FC  B+      49 Name equ Base|(Device<<8)|(Register<<10)
+                             B       50 	MAKEPORT CTCCH3,KIOBASE,CTCIOBASE,CTCCHANNEL3
+Zilog Macro Assembler.  Version K2.14    09-May-120    02:06:27    Page:    2
+
+
+iodefs.inc
+
+Location Object              Type  Line Source
+                   00000DFC  B+      50 Name equ Base|(Device<<8)|(Register<<10)
+                             B       51 
+                             B       52 	MAKEPORT SIOADATA,KIOBASE,SIOIOBASE,SIOPORTADATA
+                   000002FC  B+      52 Name equ Base|(Device<<8)|(Register<<10)
+                             B       53 	MAKEPORT SIOACMD,KIOBASE,SIOIOBASE,SIOPORTACMD
+                   000006FC  B+      53 Name equ Base|(Device<<8)|(Register<<10)
+                             B       54 	MAKEPORT SIOBDATA,KIOBASE,SIOIOBASE,SIOPORTBDATA
+                   000002FC  B+      54 Name equ Base|(Device<<8)|(Register<<10)
+                             B       55 	MAKEPORT SIOBCMD,KIOBASE,SIOIOBASE,SIOPORTBCMD
+                   000006FC  B+      55 Name equ Base|(Device<<8)|(Register<<10)
+                             B       56 
+                             B       57 	MAKEPORT PIOCDATA,KIOBASE,PIAIOBASE,PIAPORTCDATA
+                   000003FC  B+      57 Name equ Base|(Device<<8)|(Register<<10)
+                             B       58 	MAKEPORT PIOCCMD,KIOBASE,PIAIOBASE,PIAPORTCCMD
+                   000007FC  B+      58 Name equ Base|(Device<<8)|(Register<<10)
+                             B       59 
+                             B       60 	MAKEPORT KIOCMDA,KIOBASE,KIOIOBASE,KIOCOMMANDA
+                   00000BFC  B+      60 Name equ Base|(Device<<8)|(Register<<10)
+                             B       61 	MAKEPORT KIOCMDB,KIOBASE,KIOIOBASE,KIOCOMMANDB
+                   00000FFC  B+      61 Name equ Base|(Device<<8)|(Register<<10)
+                             B       62 
+                             B       63 	
+                   000000F0  B       64 WDTMT	equ	0F0h
+                   000000F1  B       65 WDTCR	equ	0F1h
+                             B       66 
+                   000000F4  B       67 IPR		equ	0F4h
+                             B       68 
+                   000000EE  B       69 SCRP	equ	0EEh
+                   000000EF  B       70 SCDP	equ	0EFh
+                             B       71 
+                   00000020  B       72 SERIALTXBUFFLEN	equ	020h	;must be power of 2
+                             B       73 
+                             B       74 DEFB MACRO P1
+                             B       75 	DB P1
+                             B       76 	MACEND
+                             B       77 
+                             B       78 DEFW MACRO P1
+                             B       79 	DW P1
+                             B       80 	MACEND
+                             B       81 
+                             B       82 DEFM MACRO P1
+                             B       83 	DB P1
+                             B       84 	MACEND
+                             B       85 
+                             B       86 
+                             A        2 
+                             A        3 	org RAMSTARTLOC
+                             A        4 
+                             A        5 	PUBLIC	FRAMES
+                             A        6 	PUBLIC	RAMSTART
+                             A        7 	PUBLIC 	RAMTOP
+                             A        8 	PUBLIC 	L_HALF
+                             A        9 	PUBLIC 	FP_WS
+                             A       10 	PUBLIC	STATIN
+                             A       11 	PUBLIC 	XCOORD
+                             A       12 	PUBLIC 	SCRPOS
+                             A       13 
+                             A       14 
+Zilog Macro Assembler.  Version K2.14    09-May-120    02:06:27    Page:    3
+
+
+c:\users\john bradley\dropbox\ace-2019\newrom\gvariables.asm
+
+Location Object              Type  Line Source
+                             A       15 ; gap for vide ram
+                             A       16 	.DEFINE ACERAM
+                             A       17 	.SECTION ACERAM
+                             A       18 
+                             A       19 	org RAMSTARTLOC
+                             A       20 
+                             A       21 
+00003C00                     A       22 RAMSTART:
+                             A       23 
+                             A       24 ; -----------
+                             A       25 ;
+                             A       26 ; -----------
+                             A       27 ; ----------------------
+                             A       28 ; THE 'SYSTEM VARIABLES'
+                             A       29 ; ----------------------
+                             A       30 ; "Here is a list of system variables. We have given them all names, but that
+                             A       31 ; is just for ease of reference. The Ace will not recognize these names,
+                             A       32 ; except for a few, like 'BASE', that are FORTH words. I've written these
+                             A       33 ; FORTH words in bold type in the usual way."
+                             A       34 ;
+                             A       35 ;
+                             A       36 ; FP_WS			RAMSTART+000h (15360)   19 bytes used as work space for floating point
+                             A       37 ;								arithmetic.
+00003C00                     A       38 FP_WS: DS 19
+                             A       39 ;
+                             A       40 ; LISTWS		RAMSTART+013h (15379)   5 bytes used as workspace by 'LIST' and 'EDIT'.
+                             A       41 ;
+00003C13                     A       42 LISTWS: DS	5
+                             A       43 ;
+                             A       44 ; RAMTOP		RAMSTART+018h (15384)   2 bytes - the first address past the last
+                             A       45 ;								address in RAM.
+                             A       46 ;
+00003C18                     A       47 RAMTOP:	DS	2
+                             A       48 ;
+                             A       49 ; HLD			RAMSTART+01Ah (15386)   2 bytes. The address of the latest character
+                             A       50 ;								held in the pad by formatted output.
+                             A       51 ;								('#', 'HOLD' and so on).
+00003C1A                     A       52 HLD:	DS	2
+                             A       53 ;
+                             A       54 ; SCRPOS		RAMSTART+01Ch (15388)   2 bytes. The address of the place in video RAM
+                             A       55 ;								where the next character is to be printed
+                             A       56 ;								(i.e. the 'print position').
+00003C1C                     A       57 SCRPOS:	DS	2
+                             A       58 ;
+                             A       59 ; INSCRN		RAMSTART+01Eh (15390)   2 bytes. The address of the start of the
+                             A       60 ;								current 'logical line' in the input buffer.
+00003C1E                     A       61 INSCRN:	DS	2
+                             A       62 ;
+                             A       63 ; CURSOR		RAMSTART+020h (15392)   2 bytes. The address of the cursor in the
+                             A       64 ;								input buffer.
+00003C20                     A       65 CURSOR:	DS	2
+                             A       66 ;
+                             A       67 ; ENDSUF		RAMSTART+022h (15394)   2 bytes. The address of the end of the current
+                             A       68 ;								logical line in the input buffer.
+00003C22                     A       69 ENDSUF:	DS	2
+                             A       70 ;
+                             A       71 ; L_HALF		RAMSTART+024h (15396)   2 bytes. The address of the start of the the
+                             A       72 ;								input buffer. The input buffer itself is stored
+Zilog Macro Assembler.  Version K2.14    09-May-120    02:06:27    Page:    4
+
+
+c:\users\john bradley\dropbox\ace-2019\newrom\gvariables.asm
+
+Location Object              Type  Line Source
+                             A       73 ;								in the video RAM, where you see it.
+00003C24                     A       74 L_HALF:	DS	2
+                             A       75 ; KEYCOD		RAMSTART+026h (15398)   1 byte. The ASCII code of the last key pressed.
+00003C26                     A       76 KEYCOD:	DS	1
+                             A       77 ;
+                             A       78 ; KEYCNT		RAMSTART+027h (15399)   1 byte. Used by the routine that reads the
+                             A       79 ;								keyboard.
+00003C27                     A       80 KEYCNT:	DS	1
+                             A       81 ; STATIN		RAMSTART+028h (15400)   1 byte. Used by the routine that reads the
+                             A       82 ;								keyboard.
+00003C28                     A       83 STATIN:	DS	1
+                             A       84 ;
+                             A       85 ; EXWRCH		RAMSTART+029h (15401)   2 bytes. This is normally 0 but it can be
+                             A       86 ;								changed to allow printing to be sent to some
+                             A       87 ;								device other than the screen.
+00003C29                     A       88 EXWRCH:	DS	2
+                             A       89 ; FRAMES		RAMSTART+02Bh (15403)   4 bytes. These four bytes form a double length
+                             A       90 ;								integer that counts the time since the Ace was
+                             A       91 ;								switched on in 50ths of a second.
+00003C2B                     A       92 FRAMES:	DS	4
+                             A       93 ; XCOORD		RAMSTART+02Fh (15407)   1 byte. The x-coordinate last used by 'PLOT'.
+00003C2F                     A       94 XCOORD:	DS	1
+                             A       95 ;
+                             A       96 ; YCOORD		RAMSTART+030h (15408)   1 byte. The y-coordinate last used by 'PLOT'.
+00003C30                     A       97 YCOORD:	DS	1
+                             A       98 ;
+                             A       99 ; CURRENT		RAMSTART+031h (15409)   2 bytes. The parameter field address for the
+                             A      100 ;								vocabulary word of the current vocabulary.
+00003C31                     A      101 CURRENT:	DS	2
+                             A      102 ;
+                             A      103 ; CONTEXT		RAMSTART+033h (15411)   2 bytes. The parameter field address for the
+                             A      104 ;								vocabulary word of the context vocabulary.
+00003C33                     A      105 CONTEXT:	DS	2
+                             A      106 ;
+                             A      107 ; VOCLNK		RAMSTART+035h (15413)   2 bytes. The address of the fourth byte in the
+                             A      108 ;								parameter field - the vocabulary linkage - of
+                             A      109 ;								the vocabulary word of the most recently
+                             A      110 ;								defined vocabulary.
+00003C35                     A      111 VOCLNK:	DS	2
+                             A      112 ;
+                             A      113 ; STKBOT		RAMSTART+037h (15415)   2 bytes. The address of the next byte into
+                             A      114 ;								which anything will be enclosed in the
+                             A      115 ;								dictionary, i.e. one byte past the present end
+                             A      116 ;								of the dictionary.
+                             A      117 ;								'HERE' is equivalent to 15415 @.
+00003C37                     A      118 STKBOT:	DS	2
+                             A      119 
+                             A      120 ; DICT			RAMSTART+039h (15417)   2 bytes. The address of the length field in the
+                             A      121 ;								newest word in the dictionary. If that length
+                             A      122 ;								field is correctly filled in then DICT may
+                             A      123 ;								be 0.
+00003C39                     A      124 DICT:	DS	2
+                             A      125 ; SPARE			RAMSTART+03Bh (15419)   2 bytes. The address of the first byte past the
+                             A      126 ;								top of the stack.
+00003C3B                     A      127 SPARE:	DS	2
+                             A      128 ;
+                             A      129 ; ERR_NO		RAMSTART+03Dh (15421)   1 byte. This is usually 255, meaning "no error".
+                             A      130 ;								If 'ABORT' is used, and ERR_NO is between 0 and
+Zilog Macro Assembler.  Version K2.14    09-May-120    02:06:27    Page:    5
+
+
+c:\users\john bradley\dropbox\ace-2019\newrom\gvariables.asm
+
+Location Object              Type  Line Source
+                             A      131 ;								127, then "ERROR" will be printed out, followed
+                             A      132 ;								by the error number ERR_NO.
+00003C3D                     A      133 ERR_NO:	DS	1
+                             A      134 ;
+                             A      135 ; FLAGS			RAMSTART+03Eh (15422)   1 byte. Shows the state of various parts of the
+                             A      136 ;								system, each bit showing whether something
+                             A      137 ;								particular is happening or not. Some of these
+                             A      138 ;								may be useful.
+                             A      139 ;
+                             A      140 ;								Bit 2, when 1, shows that there is an incomplete
+                             A      141 ;								definition at the end of the dictionary.
+                             A      142 ;
+                             A      143 ;								Bit 3, when 1, shows that output is to fed into
+                             A      144 ;								the input buffer.
+                             A      145 ;
+                             A      146 ;								Bit 4, when 1, shows that the Ace is in
+                             A      147 ;								invisible mode.
+                             A      148 ;
+                             A      149 ;								Bit 6, when 1, shows that the Ace is in compile
+                             A      150 ;								mode.
+00003C3E                     A      151 FLAGS:	DS	1
+                             A      152 ;
+                             A      153 ; BASE			RAMSTART+03Fh (15423)   1 byte. The system number base.
+00003C3F                     A      154 BASE:	DS	1
+                             A      155 
+                             A      156 ;;Deuce Vars
+                             A      157 	PUBLIC SIOANEXTIN,SIOANEXTOUT,SIOATXBUFF
+                             A      158 
+00003C40                     A      159 	SIOANEXTIN:		DS	1
+00003C41                     A      160 	SIOANEXTOUT:	DS	1
+00003C42                     A      161 	SIOATXBUFF:		DS	SERIALTXBUFFLEN
+Zilog Macro Assembler.  Version K2.14    09-May-120    02:06:27    Page:    6
+
+
+c:\users\john bradley\dropbox\ace-2019\newrom\gvariables.asm
+
+
+    0 Warnings
+    0 Errors

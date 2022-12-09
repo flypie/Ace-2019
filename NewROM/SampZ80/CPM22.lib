@@ -1,0 +1,91 @@
+_ConIN	equ	1	;Console input
+_ConOUT	equ	2	;Console output
+_RdrIN	equ	3	;Reader input
+_PunOUT	equ	4	;Punch output
+_LstOUT	equ	5	;list output
+_ConDIO	equ	6	;Direct Console IO
+_GetIOB	equ	7	;Get IO byte
+_SetIOB	equ	8	;Set IO byte
+_PrtSTR	equ	9	;print string $ 
+_ConBUF	equ	10	;read console buffer
+_ConSTAT	equ	11	;Get console Status
+_Version	equ	12	;Get version number
+
+CR	equ	0DH
+LF	equ	0AH
+
+_BDOS	equ	5	;BDOS ENTRY POINT
+_Drive	equ	4	;Last Logged Drive
+
+; Invoke BDOS by function number
+
+BDOS	MACRO	?Function
+	mvi	c,?Function
+	call	_BDOS
+	ENDM
+
+; Print a string terminated by $
+
+Print$ 	MACRO	?Str
+	LOCAL	~cont,~msgSTR
+	jmp	~cont
+~msgSTR:	db	?Str,'$'
+~cont:	lxi	D,~msgSTR
+	ifdef	CPM22ASI
+	call	PrintString
+	else
+	mvi	C,_PrtSTR
+	call	_BDOS
+	endm
+	ENDM
+
+; Print a string terminated by $
+
+Print 	MACRO	?Ptr
+	lxi	D,?Ptr
+	ifdef	CPM22ASI
+	call	PrintString
+	else
+	mvi	C,_PrtSTR
+	call	_BDOS
+	endif
+	ENDM
+
+; Set up globals
+
+Globals	MACRO
+gDrive	db       0        ;Saved Current Drive
+gStack	dw       0        ;Saved CP/M Stack
+	ENDM
+
+; Set up Stack
+Stack	MACRO	?Size
+	ds	?Size
+~Stack:	equ	$
+	ENDM
+
+; Startup program
+
+Startup	MACRO	
+~Startup: 
+	sspd	gStack		;save stack
+	lxi	sp,~Stack	;new stack
+	lda	_Drive		;save drive
+	sta	gDrive
+	ENDM
+
+; Exit program
+
+Exit	MACRO
+~Exit	lda      gDrive		;restore drive
+	sta      _Drive
+	lspd     gStack		;restore stack
+	ret
+	ENDM
+
+; Entry point from CPM
+
+Entry	MACRO	?Saddr
+	org	?Saddr
+~Entry	jmp	~Startup
+	ENDM

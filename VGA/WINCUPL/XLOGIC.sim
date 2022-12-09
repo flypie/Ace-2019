@@ -1,6 +1,14 @@
 %SIGNAL
+PIN  11 =  FONTCHARX1_1 
+PIN  13 =  FONTCHARX2_1 
 PIN  21 =  HSync 
 PIN  20 =  IN_HBI 
+PIN  10 =  IN_VBI 
+PIN  19 =  IN_VBI_OR_HBI 
+PIN  18 =  LOADVIDCACHE 
+PIN  15 =  PIXEL 
+PIN  17 =  PSTATE 
+PIN  14 =  SAVED_INVERT 
 PIN   1 =  SCREENX1 
 PIN   2 =  SCREENX2 
 PIN   3 =  SCREENX3 
@@ -30,6 +38,18 @@ IN_HBI =>
     SCREENX4 & SCREENX6
   # SCREENX5 & SCREENX6
 
+IN_VBI_OR_HBI =>
+    IN_VBI
+  # IN_HBI
+
+LOADVIDCACHE =>
+    FONTCHARX1_1
+  # FONTCHARX2_1
+
+PSTATE =>
+    !PIXEL & SAVED_INVERT
+  # PIXEL & !SAVED_INVERT
+
 XRESET =>
     SCREENX2 & SCREENX5 & SCREENX6
 
@@ -41,6 +61,21 @@ HSync.oe  =>
 
 IN_HBI.oe  =>
     1 
+
+IN_VBI_OR_HBI.oe  =>
+    1 
+
+LOADVIDCACHE.oe  =>
+    1 
+
+PIXEL.oe  =>
+    0 
+
+PSTATE.oe  =>
+    1 
+
+SAVED_INVERT.oe  =>
+    0 
 
 XRESET.oe  =>
     1 

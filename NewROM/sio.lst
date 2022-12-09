@@ -1,0 +1,422 @@
+Zilog Macro Assembler.  Version K2.14    09-May-120    02:06:27    Page:    1
+
+
+c:\users\john bradley\dropbox\ace-2019\newrom\sio.asm
+
+Location Object              Type  Line Source
+                             A        1 	INCLUDE "iodefs.inc"
+                   00003C00  B        1 RAMSTARTLOC equ  03C00h
+                             B        2 
+                             B        3 	CPU = Z180
+                             B        4 
+                   00001F00  B        5 INTTABLEBASE	equ	01F00h
+                             B        6 
+                             B        7 
+                   000000FC  B        8 KIOBASE	equ	0FCh
+                             B        9 
+                   00000000  B       10 PIOIOBASE	equ	00B
+                   00000001  B       11 CTCIOBASE	equ	01B
+                   00000002  B       12 SIOIOBASE	equ	10B
+                   00000003  B       13 PIAIOBASE	equ	11B
+                   00000003  B       14 KIOIOBASE	equ	11B
+                             B       15 
+                   00000000  B       16 PIOPORTADATA	equ	00b
+                   00000001  B       17 PIOPORTACMD		equ	01b
+                   00000000  B       18 PIOPORTBDATA	equ	00b
+                   00000001  B       19 PIOPORTBCMD		equ	01b
+                             B       20 
+                   00000000  B       21 CTCCHANNEL0		equ	00b
+                   00000001  B       22 CTCCHANNEL1		equ	01b
+                   00000002  B       23 CTCCHANNEL2		equ	10b
+                   00000003  B       24 CTCCHANNEL3		equ	11b
+                             B       25 
+                   00000000  B       26 SIOPORTADATA	equ	00b
+                   00000001  B       27 SIOPORTACMD		equ	01b
+                   00000000  B       28 SIOPORTBDATA	equ	00b
+                   00000001  B       29 SIOPORTBCMD		equ	01b
+                             B       30 
+                   00000000  B       31 PIAPORTCDATA	equ	00b
+                   00000001  B       32 PIAPORTCCMD		equ	01b
+                             B       33 
+                   00000002  B       34 KIOCOMMANDA		equ	10b
+                   00000003  B       35 KIOCOMMANDB		equ	11b
+                             B       36 
+                             B       37 MAKEPORT	MACRO	Name,Base,Device,Register
+                             B       38 Name equ Base|(Device<<8)|(Register<<10)
+                             B       39 	endmac 
+                             B       40 
+                             B       41 
+                             B       42 	MAKEPORT PIOADATA,KIOBASE,PIOIOBASE,PIOPORTADATA
+                   000000FC  B+      42 Name equ Base|(Device<<8)|(Register<<10)
+                             B       43 	MAKEPORT PIOACMD,KIOBASE,PIOIOBASE,PIOPORTACMD
+                   000004FC  B+      43 Name equ Base|(Device<<8)|(Register<<10)
+                             B       44 	MAKEPORT PIOBDATA,KIOBASE,PIOIOBASE,PIOPORTBDATA
+                   000000FC  B+      44 Name equ Base|(Device<<8)|(Register<<10)
+                             B       45 	MAKEPORT PIOBCMD,KIOBASE,PIOIOBASE,PIOPORTBCMD
+                   000004FC  B+      45 Name equ Base|(Device<<8)|(Register<<10)
+                             B       46 
+                             B       47 	MAKEPORT CTCCH0,KIOBASE,CTCIOBASE,CTCCHANNEL0
+                   000001FC  B+      47 Name equ Base|(Device<<8)|(Register<<10)
+                             B       48 	MAKEPORT CTCCH1,KIOBASE,CTCIOBASE,CTCCHANNEL1
+                   000005FC  B+      48 Name equ Base|(Device<<8)|(Register<<10)
+                             B       49 	MAKEPORT CTCCH2,KIOBASE,CTCIOBASE,CTCCHANNEL2
+                   000009FC  B+      49 Name equ Base|(Device<<8)|(Register<<10)
+                             B       50 	MAKEPORT CTCCH3,KIOBASE,CTCIOBASE,CTCCHANNEL3
+Zilog Macro Assembler.  Version K2.14    09-May-120    02:06:27    Page:    2
+
+
+iodefs.inc
+
+Location Object              Type  Line Source
+                   00000DFC  B+      50 Name equ Base|(Device<<8)|(Register<<10)
+                             B       51 
+                             B       52 	MAKEPORT SIOADATA,KIOBASE,SIOIOBASE,SIOPORTADATA
+                   000002FC  B+      52 Name equ Base|(Device<<8)|(Register<<10)
+                             B       53 	MAKEPORT SIOACMD,KIOBASE,SIOIOBASE,SIOPORTACMD
+                   000006FC  B+      53 Name equ Base|(Device<<8)|(Register<<10)
+                             B       54 	MAKEPORT SIOBDATA,KIOBASE,SIOIOBASE,SIOPORTBDATA
+                   000002FC  B+      54 Name equ Base|(Device<<8)|(Register<<10)
+                             B       55 	MAKEPORT SIOBCMD,KIOBASE,SIOIOBASE,SIOPORTBCMD
+                   000006FC  B+      55 Name equ Base|(Device<<8)|(Register<<10)
+                             B       56 
+                             B       57 	MAKEPORT PIOCDATA,KIOBASE,PIAIOBASE,PIAPORTCDATA
+                   000003FC  B+      57 Name equ Base|(Device<<8)|(Register<<10)
+                             B       58 	MAKEPORT PIOCCMD,KIOBASE,PIAIOBASE,PIAPORTCCMD
+                   000007FC  B+      58 Name equ Base|(Device<<8)|(Register<<10)
+                             B       59 
+                             B       60 	MAKEPORT KIOCMDA,KIOBASE,KIOIOBASE,KIOCOMMANDA
+                   00000BFC  B+      60 Name equ Base|(Device<<8)|(Register<<10)
+                             B       61 	MAKEPORT KIOCMDB,KIOBASE,KIOIOBASE,KIOCOMMANDB
+                   00000FFC  B+      61 Name equ Base|(Device<<8)|(Register<<10)
+                             B       62 
+                             B       63 	
+                   000000F0  B       64 WDTMT	equ	0F0h
+                   000000F1  B       65 WDTCR	equ	0F1h
+                             B       66 
+                   000000F4  B       67 IPR		equ	0F4h
+                             B       68 
+                   000000EE  B       69 SCRP	equ	0EEh
+                   000000EF  B       70 SCDP	equ	0EFh
+                             B       71 
+                   00000020  B       72 SERIALTXBUFFLEN	equ	020h	;must be power of 2
+                             B       73 
+                             B       74 DEFB MACRO P1
+                             B       75 	DB P1
+                             B       76 	MACEND
+                             B       77 
+                             B       78 DEFW MACRO P1
+                             B       79 	DW P1
+                             B       80 	MACEND
+                             B       81 
+                             B       82 DEFM MACRO P1
+                             B       83 	DB P1
+                             B       84 	MACEND
+                             B       85 
+                             B       86 
+                             A        2 
+                             A        3 	.DEFINE DEUCEROM
+                             A        4 	.SECTION DEUCEROM
+                             A        5 
+                             A        6 ;--------------------------
+                             A        7 
+                             A        8 
+                             A        9 	PUBLIC INIT_SIO, SIOASendChar
+                             A       10 	PUBLIC SIOAINT_TBE,SIOAINT_ESC,SIOAINT_RCA,SIOAINT_SRC,SIOBINT_TBE,SIOBINT_ESC,SIOBINT_RCA,SIOBINT_SRC
+                             A       11 
+                             A       12 	EXTERN SIOINTTBL
+                             A       13 	EXTERN SIOATXQ, SIOANEXTIN, SIOANEXTOUT,SIOATXBUFF
+                             A       14 
+Zilog Macro Assembler.  Version K2.14    09-May-120    02:06:27    Page:    3
+
+
+c:\users\john bradley\dropbox\ace-2019\newrom\sio.asm
+
+Location Object              Type  Line Source
+00000000                     A       15 INIT_SIO:
+00000000 3E 00               A       16 	ld	a,0
+00000002 32 00 00            A       17 	ld (SIOANEXTIN),a
+00000005 32 00 00            A       18 	ld (SIOANEXTOUT),a
+00000008 C9                  A       19 	ret
+                             A       20 
+                             A       21 ;-------------------------------------------------------------------------------
+00000009                     A       22 setSIO:
+                             A       23 ;program the SIO
+                             A       24 	;set up TX and RX:
+                             A       25 	; the followings are settings for channel A
+00000009 3E 30               A       26 	ld a,00110000b	; write into WR0: error reset, select WR0
+0000000B 01 FC 06            A       27 	ld BC,SIOACMD
+0000000E ED 79               A       28 	out (BC),A
+00000010 3E 18               A       29 	ld a,00011000b	; write into WR0: channel reset
+00000012 ED 79               A       30 	out (BC),A
+                             A       31 
+00000014 3E 04               A       32 	ld a,00000100b	; write into WR0: select WR4
+00000016 ED 79               A       33 	out (BC),A
+00000018 3E 44               A       34 	ld a,01000100b	; write into WR4: presc. 16x, 1 stop bit, no parity ; IF Crsta; 1.8432 MHZ this is 115200 baud
+0000001A ED 79               A       35 	out (BC),A
+                             A       36 
+0000001C 3E 05               A       37 	ld a,00000101b	; write into WR0: select WR5
+0000001E ED 79               A       38 	out (BC),A
+00000020 3E E8               A       39 	ld a,11101000b	; write into WR5: DTR on, TX 8 bits, BREAK off, TX on, RTS off
+00000022 ED 79               A       40 	out (BC),A
+                             A       41 
+                             A       42 	; the following are settings for channel B
+00000024 3E 01               A       43 	ld a,00000001b	; write into WR0: select WR1
+00000026 01 FC 06            A       44 	ld BC,SIOBCMD
+00000029 ED 79               A       45 	out (BC),A
+0000002B 3E 04               A       46 	ld a,00000100b	; write into WR0: status affects interrupt vectors
+0000002D ED 79               A       47 	out (BC),A
+                             A       48 
+0000002F 3E 02               A       49 	ld a,00000010b	; write into WR0: select WR2
+00000031 ED 79               A       50 	out (BC),A
+00000033 3E 00               A       51 	ld a,SIOINTTBL	; write into WR2: set interrupt vector, but bits D3/D2/D1 of this vector
+                             A       52 	; will be affected by the channel & condition that raised the interrupt
+                             A       53 	; (see datasheet): in our example, 00Ch for Ch.A receiving a char, 0x0E
+                             A       54 	; for special conditions
+00000035 ED 79               A       55 	out (BC),A
+                             A       56 
+                             A       57 	; the following are settings for channel A
+00000037 3E 01               A       58 	ld a,01h	; write into WR0: select WR1
+00000039 01 FC 06            A       59 	ld BC,SIOACMD
+0000003C ED 79               A       60 	out (BC),A
+0000003E 3E 18               A       61 	ld a,00011000b	; interrupts on every RX char; parity is no special condition;
+                             A       62 	; buffer overrun is special condition
+00000040 ED 79               A       63 	out (BC),A
+                             A       64 
+                             A       65 	;enable SIO channel A RX
+00000042 3E 03               A       66 	ld a,00000011b	; write into WR0: select WR3
+00000044 01 FC 06            A       67 	ld BC,SIOACMD
+00000047 ED 79               A       68 	out (BC),A
+00000049 3E C1               A       69 	ld a,11000001b	; 8 bits/RX char; auto enable OFF; RX enable
+0000004B 01 FC 06            A       70 	ld BC,SIOACMD
+0000004E ED 79               A       71 	out (BC),A
+00000050 C9                  A       72 	ret
+Zilog Macro Assembler.  Version K2.14    09-May-120    02:06:27    Page:    4
+
+
+c:\users\john bradley\dropbox\ace-2019\newrom\sio.asm
+
+Location Object              Type  Line Source
+                             A       73 
+                             A       74 ;Port A Int handlers
+                             A       75 
+00000051                     A       76 SIOAINT_TBE:
+00000051 F3                  A       77 	di
+00000052 CD BC 00            A       78 	call SIOA_TBE
+00000055 FB                  A       79 	ei
+00000056 ED 4D               A       80 	reti
+                             A       81 
+00000058                     A       82 SIOAINT_ESC:
+00000058 F5                  A       83 	push af	; backup AF
+                             A       84 
+                             A       85 ;External status
+                             A       86 
+00000059 F1                  A       87 	pop af
+0000005A FB                  A       88 	ei
+0000005B ED 4D               A       89 	reti
+                             A       90 
+0000005D                     A       91 SIOAINT_RCA:
+0000005D F5                  A       92 	push af	; backup AF
+                             A       93 
+0000005E CD B0 00            A       94 	call A_SEND_CHAR
+                             A       95 
+00000061 F1                  A       96 	pop af
+00000062 FB                  A       97 	ei
+00000063 ED 4D               A       98 	reti
+                             A       99 
+00000065                     A      100 SIOAINT_SRC:
+00000065 F5                  A      101 	push af	; backup AF
+                             A      102 
+                             A      103 ;Special Receive Condition
+                             A      104 
+00000066 F1                  A      105 	pop af
+00000067 FB                  A      106 	ei
+00000068 ED 4D               A      107 	reti
+                             A      108 
+                             A      109 ;Port B int handlers
+                             A      110 
+0000006A                     A      111 SIOBINT_TBE:
+0000006A F5                  A      112 	push af	; backup AF
+                             A      113 
+                             A      114 ;Transmitt buffer empty
+                             A      115 
+0000006B F1                  A      116 	pop af
+0000006C FB                  A      117 	ei
+0000006D ED 4D               A      118 	reti
+                             A      119 
+0000006F                     A      120 SIOBINT_ESC:
+0000006F F5                  A      121 	push af	; backup AF
+                             A      122 
+                             A      123 ;External status
+                             A      124 
+00000070 F1                  A      125 	pop af
+00000071 FB                  A      126 	ei
+00000072 ED 4D               A      127 	reti
+                             A      128 
+00000074                     A      129 SIOBINT_RCA:
+00000074 F5                  A      130 	push af	; backup AF
+Zilog Macro Assembler.  Version K2.14    09-May-120    02:06:27    Page:    5
+
+
+c:\users\john bradley\dropbox\ace-2019\newrom\sio.asm
+
+Location Object              Type  Line Source
+                             A      131 
+00000075 01 FC 02            A      132 	ld BC,SIOBDATA
+00000078 ED 79               A      133 	out (BC),A	; echo char to transmitter
+                             A      134 
+0000007A F1                  A      135 	pop af
+0000007B FB                  A      136 	ei
+0000007C ED 4D               A      137 	reti
+                             A      138 
+0000007E                     A      139 SIOBINT_SRC:
+0000007E F5                  A      140 	push af	; backup AF
+                             A      141 
+                             A      142 ;Special Receive Condition
+                             A      143 
+0000007F F1                  A      144 	pop af
+00000080 FB                  A      145 	ei
+00000081 ED 4D               A      146 	reti
+                             A      147 
+                             A      148 
+                             A      149 	;-------------------------------------------------------------------------------
+                             A      150 ; serial management
+                             A      151 
+00000083                     A      152 A_RTS_OFF:
+00000083 3E 05               A      153 	ld a,00000101b	; write into WR0: select WR5
+00000085 01 FC 06            A      154 	ld BC,SIOACMD
+00000088 ED 79               A      155 	out (BC),A
+0000008A 3E E8               A      156 	ld a,11101000b	; 8 bits/TX char; TX enable; RTS disable
+0000008C 01 FC 06            A      157 	ld BC,SIOACMD
+0000008F ED 79               A      158 	out (BC),A
+00000091 C9                  A      159 	ret
+                             A      160 
+00000092                     A      161 A_RTS_ON:
+00000092 3E 05               A      162 	ld a,00000101b	; write into WR0: select WR5
+00000094 01 FC 06            A      163 	ld BC,SIOACMD
+00000097 ED 79               A      164 	out (BC),A
+00000099 3E EA               A      165 	ld a,11101010b	; 8 bits/TX char; TX enable; RTS enable
+0000009B 01 FC 06            A      166 	ld BC,SIOACMD
+0000009E ED 79               A      167 	out (BC),A
+000000A0 C9                  A      168 	ret
+                             A      169 
+000000A1                     A      170 SIO_A_DI:
+                             A      171 	;disable SIO channel A RX
+000000A1 3E 03               A      172 	ld a,00000011b	; write into WR0: select WR3
+000000A3 01 FC 06            A      173 	ld BC,SIOACMD
+000000A6 ED 79               A      174 	out (BC),A
+000000A8 3E 0C               A      175 	ld a,00001100b	; write into WR3: RX disable;
+000000AA 01 FC 06            A      176 	ld BC,SIOACMD
+000000AD ED 79               A      177 	out (BC),A
+000000AF C9                  A      178 	ret
+                             A      179 
+000000B0                     A      180 A_SEND_CHAR:
+000000B0 CD 83 00            A      181 	call A_RTS_OFF
+                             A      182 
+000000B3 01 FC 02            A      183 	ld BC,SIOADATA
+000000B6 ED 79               A      184 	out (BC),A	; echo char to transmitter
+                             A      185 
+000000B8 CD 92 00            A      186 	call A_RTS_ON
+000000BB C9                  A      187 	ret
+                             A      188 
+Zilog Macro Assembler.  Version K2.14    09-May-120    02:06:27    Page:    6
+
+
+c:\users\john bradley\dropbox\ace-2019\newrom\sio.asm
+
+Location Object              Type  Line Source
+                             A      189 
+                             A      190 	
+                             A      191 
+                             A      192 
+000000BC                     A      193 SIOA_TBE:
+000000BC F5                  A      194 	push af	; backup AF
+000000BD C5                  A      195 	push bc	; backup AF
+000000BE D5                  A      196 	push de	; backup AF
+000000BF E5                  A      197 	push hl	; backup AF
+000000C0 FD E5               A      198 	push iy	; backup AF
+                             A      199 
+                             A      200 ;test.c:16: if (NextIn != NextOut)
+000000C2 3A 00 00            A      201 	ld	a,(SIOANEXTIN)
+000000C5 FD 21 00 00         A      202 	ld	iy,SIOANEXTOUT
+000000C9 FD 96 00            A      203 	sub	a,(iy)
+000000CC 28 1D               A      204 	jr	Z,SIOAINT_TBE_EXIT
+                             A      205 ;test.c:18: UART1_SendData8(UBuffer[NextOut++]);
+000000CE 01 00 00            A      206 	ld	bc, SIOATXBUFF
+000000D1 FD 5E 00            A      207 	ld	e, (iy)
+000000D4 FD 34 00            A      208 	inc	(iy)
+000000D7 6B                  A      209 	ld	l, e
+000000D8 26 00               A      210 	ld	h, 00h
+000000DA 09                  A      211 	add	hl, bc
+000000DB 7E                  A      212 	ld	a, (hl)
+                             A      213 
+000000DC CD B0 00            A      214 	call A_SEND_CHAR
+                             A      215 
+                             A      216 ;test.c:19: NextOut &= 0x1F;
+000000DF FD 21 00 00         A      217 	ld	iy, SIOANEXTOUT
+000000E3 FD 7E 00            A      218 	ld	a, (iy)
+000000E6 E6 1F               A      219 	and	a, 01fh
+000000E8 FD 77 00            A      220 	ld	(iy), a
+                             A      221 
+000000EB                     A      222 SIOAINT_TBE_EXIT:
+                             A      223 
+000000EB FD E1               A      224 	pop iy	
+000000ED E1                  A      225 	pop hl	
+000000EE D1                  A      226 	pop de	
+000000EF C1                  A      227 	pop bc	
+000000F0 F1                  A      228 	pop af
+000000F1 C9                  A      229 	ret	
+                             A      230 ;	---------------------------------
+                             A      231 ; Function UARTSendChar
+                             A      232 ; ---------------------------------
+000000F2                     A      233 SIOASendChar: ; Char to send is in A
+                             A      234 ;test.c:32: UBuffer[NextIn++] = Byte;
+000000F2 F5                  A      235 	push af;
+000000F3 3A 00 00            A      236 	ld	a,(SIOANEXTIN)
+000000F6 FD 21 00 00         A      237 	ld	iy, SIOANEXTOUT
+000000FA FD 96 00            A      238 	sub	a,(iy+0)
+000000FD 28 05               A      239 	jr	Z,ISEMPTY
+                             A      240 
+000000FF 16 00               A      241 	ld d,0
+00000101 C3 06 01            A      242 	jp FLAGSET
+00000104                     A      243 ISEMPTY:
+00000104 16 01               A      244 	ld d,1
+                             A      245 
+00000106                     A      246 FLAGSET:
+Zilog Macro Assembler.  Version K2.14    09-May-120    02:06:27    Page:    7
+
+
+c:\users\john bradley\dropbox\ace-2019\newrom\sio.asm
+
+Location Object              Type  Line Source
+00000106 FD 21 00 00         A      247 	ld	iy, SIOANEXTIN
+0000010A FD 4E 00            A      248 	ld	c, (iy)
+0000010D FD 34 00            A      249 	inc	(iy)
+00000110 21 00 00            A      250 	ld	hl, SIOATXBUFF
+00000113 06 00               A      251 	ld	b, 00h
+00000115 09                  A      252 	add	hl, bc
+                             A      253 
+00000116 F1                  A      254 	pop af
+00000117 77                  A      255 	ld	(hl), a
+                             A      256 ;test.c:33: NextIn &= 0x01F;
+00000118 FD 21 00 00         A      257 	ld	iy, SIOANEXTIN
+0000011C FD 7E 00            A      258 	ld	a, (iy)
+0000011F E6 1F               A      259 	and	a, SERIALTXBUFFLEN-1
+00000121 FD 77 00            A      260 	ld	(iy), a
+                             A      261 
+00000124 7A                  A      262 	ld	a,d
+00000125 20 03               A      263 	jr	NZ,EXITTHIS
+                             A      264 
+00000127 CD 51 00            A      265 	call SIOAINT_TBE
+                             A      266 
+0000012A                     A      267 EXITTHIS:
+0000012A C9                  A      268 	ret
+                             A      269 
+                             A      270 
+Zilog Macro Assembler.  Version K2.14    09-May-120    02:06:27    Page:    8
+
+
+c:\users\john bradley\dropbox\ace-2019\newrom\sio.asm
+
+
+    0 Warnings
+    0 Errors

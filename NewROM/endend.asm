@@ -1,0 +1,11 @@
+	INCLUDE "iodefs.inc"
+	
+;	.DEFINE ENDROMS
+;	.SECTION ENDROMS
+
+	org	01fffh
+
+ENDEND:
+	DB	'X'
+
+;	ENDSECTION

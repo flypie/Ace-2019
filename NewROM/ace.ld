@@ -1,0 +1,1 @@
+-o fred bin/ctc.o

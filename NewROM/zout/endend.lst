@@ -1,0 +1,205 @@
+   1:					INCLUDE "iodefs.inc"
+**** iodefs.inc ****
+   1:     -	0000          		CPU  Z180
+F Syntax error
+   2:				
+   3:     -	3C00          	RAMSTARTLOC equ 03C00h
+   4:				
+   5:     -	1F00          	INTTABLEBASE	equ	01F00h
+   6:				
+   7:				
+   8:     -	00FC          	KIOBASE	equ	0FCh
+   9:				
+  10:     -	0000          	PIOIOBASE	equ	00B
+  11:     -	0001          	CTCIOBASE	equ	01B
+  12:     -	0002          	SIOIOBASE	equ	10B
+  13:     -	0003          	PIAIOBASE	equ	11B
+  14:     -	0003          	KIOIOBASE	equ	11B
+  15:				
+  16:     -	0000          	PIOPORTADATA	equ	00b
+  17:     -	0001          	PIOPORTACMD		equ	01b
+  18:     -	0000          	PIOPORTBDATA	equ	00b
+  19:     -	0001          	PIOPORTBCMD		equ	01b
+  20:				
+  21:     -	0000          	CTCCHANNEL0		equ	00b
+  22:     -	0001          	CTCCHANNEL1		equ	01b
+  23:     -	0002          	CTCCHANNEL2		equ	10b
+  24:     -	0003          	CTCCHANNEL3		equ	11b
+  25:				
+  26:     -	0000          	SIOPORTADATA	equ	00b
+  27:     -	0001          	SIOPORTACMD		equ	01b
+  28:     -	0000          	SIOPORTBDATA	equ	00b
+  29:     -	0001          	SIOPORTBCMD		equ	01b
+  30:				
+  31:     -	0000          	PIAPORTCDATA	equ	00b
+  32:     -	0001          	PIAPORTCCMD		equ	01b
+  33:				
+  34:     -	0002          	KIOCOMMANDA		equ	10b
+  35:     -	0003          	KIOCOMMANDB		equ	11b
+  36:				
+  37:				MAKEPORT	MACRO	Name,Base,Device,Register
+  38:				Name equ Base|(Device<<8)|(Register<<10)
+  39:					ENDM 
+  40:				
+  41:				
+  42:     -	00FC          	PIOADATA equ KIOBASE|(PIOIOBASE<<8)|(PIOPORTADATA<<10)
+  42:     -	0000          		ENDM
+  42:     -	        		MAKEPORT PIOADATA,KIOBASE,PIOIOBASE,PIOPORTADATA
+  43:     -	04FC          	PIOACMD equ KIOBASE|(PIOIOBASE<<8)|(PIOPORTACMD<<10)
+  43:     -	0000          		ENDM
+  43:     -	        		MAKEPORT PIOACMD,KIOBASE,PIOIOBASE,PIOPORTACMD
+  44:     -	00FC          	PIOBDATA equ KIOBASE|(PIOIOBASE<<8)|(PIOPORTBDATA<<10)
+  44:     -	0000          		ENDM
+  44:     -	        		MAKEPORT PIOBDATA,KIOBASE,PIOIOBASE,PIOPORTBDATA
+  45:     -	04FC          	PIOBCMD equ KIOBASE|(PIOIOBASE<<8)|(PIOPORTBCMD<<10)
+  45:     -	0000          		ENDM
+  45:     -	        		MAKEPORT PIOBCMD,KIOBASE,PIOIOBASE,PIOPORTBCMD
+  46:				
+  47:     -	01FC          	CTCCH0 equ KIOBASE|(CTCIOBASE<<8)|(CTCCHANNEL0<<10)
+  47:     -	0000          		ENDM
+  47:     -	        		MAKEPORT CTCCH0,KIOBASE,CTCIOBASE,CTCCHANNEL0
+  48:     -	05FC          	CTCCH1 equ KIOBASE|(CTCIOBASE<<8)|(CTCCHANNEL1<<10)
+  48:     -	0000          		ENDM
+  48:     -	        		MAKEPORT CTCCH1,KIOBASE,CTCIOBASE,CTCCHANNEL1
+  49:     -	09FC          	CTCCH2 equ KIOBASE|(CTCIOBASE<<8)|(CTCCHANNEL2<<10)
+  49:     -	0000          		ENDM
+  49:     -	        		MAKEPORT CTCCH2,KIOBASE,CTCIOBASE,CTCCHANNEL2
+  50:     -	0DFC          	CTCCH3 equ KIOBASE|(CTCIOBASE<<8)|(CTCCHANNEL3<<10)
+  50:     -	0000          		ENDM
+  50:     -	        		MAKEPORT CTCCH3,KIOBASE,CTCIOBASE,CTCCHANNEL3
+  51:				
+  52:     -	02FC          	SIOADATA equ KIOBASE|(SIOIOBASE<<8)|(SIOPORTADATA<<10)
+  52:     -	0000          		ENDM
+  52:     -	        		MAKEPORT SIOADATA,KIOBASE,SIOIOBASE,SIOPORTADATA
+  53:     -	06FC          	SIOACMD equ KIOBASE|(SIOIOBASE<<8)|(SIOPORTACMD<<10)
+  53:     -	0000          		ENDM
+  53:     -	        		MAKEPORT SIOACMD,KIOBASE,SIOIOBASE,SIOPORTACMD
+  54:     -	02FC          	SIOBDATA equ KIOBASE|(SIOIOBASE<<8)|(SIOPORTBDATA<<10)
+  54:     -	0000          		ENDM
+  54:     -	        		MAKEPORT SIOBDATA,KIOBASE,SIOIOBASE,SIOPORTBDATA
+  55:     -	06FC          	SIOBCMD equ KIOBASE|(SIOIOBASE<<8)|(SIOPORTBCMD<<10)
+  55:     -	0000          		ENDM
+  55:     -	        		MAKEPORT SIOBCMD,KIOBASE,SIOIOBASE,SIOPORTBCMD
+  56:				
+  57:     -	03FC          	PIOCDATA equ KIOBASE|(PIAIOBASE<<8)|(PIAPORTCDATA<<10)
+  57:     -	0000          		ENDM
+  57:     -	        		MAKEPORT PIOCDATA,KIOBASE,PIAIOBASE,PIAPORTCDATA
+  58:     -	07FC          	PIOCCMD equ KIOBASE|(PIAIOBASE<<8)|(PIAPORTCCMD<<10)
+  58:     -	0000          		ENDM
+  58:     -	        		MAKEPORT PIOCCMD,KIOBASE,PIAIOBASE,PIAPORTCCMD
+  59:				
+  60:     -	0BFC          	KIOCMDA equ KIOBASE|(KIOIOBASE<<8)|(KIOCOMMANDA<<10)
+  60:     -	0000          		ENDM
+  60:     -	        		MAKEPORT KIOCMDA,KIOBASE,KIOIOBASE,KIOCOMMANDA
+  61:     -	0FFC          	KIOCMDB equ KIOBASE|(KIOIOBASE<<8)|(KIOCOMMANDB<<10)
+  61:     -	0000          		ENDM
+  61:     -	        		MAKEPORT KIOCMDB,KIOBASE,KIOIOBASE,KIOCOMMANDB
+  62:				
+  63:					
+  64:     -	00F0          	WDTMT	equ	0F0h
+  65:     -	00F1          	WDTCR	equ	0F1h
+  66:				
+  67:     -	00F4          	IPR		equ	0F4h
+  68:				
+  69:     -	00EE          	SCRP	equ	0EEh
+  70:     -	00EF          	SCDP	equ	0EFh
+  71:				
+  72:     -	0020          	SERIALTXBUFFLEN	equ	020h	;must be power of 2
+  73:				
+  74:				;DEFB MACRO P1
+  75:				;	DB P1
+  76:				;	ENDM
+  77:				
+  78:				;DEFW MACRO P1
+  79:				;	DW P1
+  80:				;	ENDM
+  81:				
+  82:				;DEFM MACRO P1
+  83:				;	DB P1
+  84:				;	ENDM
+  85:				
+  86:				
+**** endend.asm ****
+   2:					
+   3:     -	0000          		.SECTION ENDROMS
+F Syntax error
+   4:				
+   5:     -	1FFF          		org	01fffh
+   6:				
+   7:     -	1FFF          	ENDEND:
+   8:     -	1FFF  58      		DB	'X'
+   9:				
+**** endend.asm ****
+  10:     -	2000          		ENDSECTION
+
+
+
+Error + Warning report:
+
+     2 errors
+     0 warnings
+     2 F -- Syntax error
+
+     2	passes
+     0	jr promotions
+    50	symbols
+     1	bytes
+
+    16	macro calls
+    34	macro bytes
+     0	invented symbols
+
+
+
+Symbol Table:
+
+.section           0     
+cpu                0     
+ctcch0         = 1fc     
+ctcch1         = 5fc     
+ctcch2         = 9fc     
+ctcch3         = dfc     
+ctcchannel0    =   0     
+ctcchannel1    =   1     
+ctcchannel2    =   2     
+ctcchannel3    =   3     
+ctciobase      =   1     
+endend          1fff     
+endsection      2000     
+inttablebase   =1f00     
+ipr            =  f4     
+kiobase        =  fc     
+kiocmda        = bfc     
+kiocmdb        = ffc     
+kiocommanda    =   2     
+kiocommandb    =   3     
+kioiobase      =   3     
+piaiobase      =   3     
+piaportccmd    =   1     
+piaportcdata   =   0     
+pioacmd        = 4fc     
+pioadata       =  fc     
+piobcmd        = 4fc     
+piobdata       =  fc     
+pioccmd        = 7fc     
+piocdata       = 3fc     
+pioiobase      =   0     
+pioportacmd    =   1     
+pioportadata   =   0     
+pioportbcmd    =   1     
+pioportbdata   =   0     
+ramstartloc    =3c00     
+scdp           =  ef     
+scrp           =  ee     
+serialtxbufflen=  20     
+sioacmd        = 6fc     
+sioadata       = 2fc     
+siobcmd        = 6fc     
+siobdata       = 2fc     
+sioiobase      =   2     
+sioportacmd    =   1     
+sioportadata   =   0     
+sioportbcmd    =   1     
+sioportbdata   =   0     
+wdtcr          =  f1     
+wdtmt          =  f0     

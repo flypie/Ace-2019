@@ -1,0 +1,238 @@
+ZiLOG Developer Studio Workspace File
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+[PRJ VERSION]
+#begin
+VERSION = 365
+#end
+
+[ZDS VERSION]
+#begin
+VERSION = 3.68
+#end
+
+[PRJ NAME]
+#begin
+NAME = all.zws
+TYPE = APP
+APPTYPE = DEFAULT
+#end
+
+[MCU TARGET]
+#begin
+NAME = Z80182
+#end
+
+[EMULATOR]
+#begin
+NAME = Not Available
+#end
+
+[PRJ PATH]
+#begin
+PATH = g:\my drive\ace-2019\newrom\
+#end
+
+[FILES]
+#begin
+SOURCE = all.s
+#end
+
+[WEB FILES]
+#begin
+#end
+
+[DEPENDENCIES]
+#begin
+DEP = ace3nokb.asm
+DEP = ctc.asm
+DEP = extended.asm
+DEP = inttable.asm
+DEP = pio.asm
+DEP = sio.asm
+DEP = endend.asm
+DEP = gvariables.asm
+DEP = iodefs.inc
+#end
+
+[C SETTINGS]
+#begin
+C = -g
+C = -O0
+C = -W
+#end
+
+[ASM SETTINGS]
+#begin
+ASM =  -l -g -j -q
+#end
+
+[LNK SETTINGS]
+#begin
+LNK =  -Z -g -m -q
+LNK =  -R .bss %4000 , %400
+LNK =  -r EXTIO %0 , %100000
+LNK =  -r INTIO %0 , %100
+LNK =  -r ROM %0 , %100000
+#end
+
+[REALOS LIBRARIES]
+#begin
+#end
+
+[DEVICE DRIVERS LIBRARIES]
+#begin
+#end
+
+[LIB SETTINGS]
+#begin
+LIB = -q
+#end
+
+[DEBUG SETTINGS]
+#begin
+VALUE = 0
+PAD = 0
+#end
+
+[COM SETTINGS]
+#begin
+PORT = COM1
+BR = 57600
+#end
+
+[WND STATUS]
+#begin
+ID = 0
+OPEN = 0
+ID = 1
+OPEN = 0
+ID = 2
+OPEN = 0
+ID = 3
+OPEN = 0
+ID = 4
+OPEN = 0
+ID = 5
+OPEN = 0
+ID = 6
+OPEN = 0
+ID = 7
+OPEN = 0
+ID = 8
+OPEN = 0
+ID = 9
+OPEN = 0
+ID = 10
+OPEN = 0
+ID = 11
+OPEN = 0
+ID = 12
+OPEN = 0
+ID = 13
+OPEN = 0
+ID = 14
+OPEN = 0
+ID = 15
+OPEN = 0
+ID = 16
+OPEN = 0
+ID = 17
+OPEN = 0
+ID = 18
+OPEN = 0
+ID = 19
+OPEN = 0
+ID = 20
+OPEN = 0
+ID = 21
+OPEN = 0
+ID = 22
+OPEN = 0
+ID = 23
+OPEN = 0
+ID = 24
+OPEN = 0
+ID = 25
+OPEN = 0
+ID = 26
+OPEN = 0
+ID = 27
+OPEN = 0
+ID = 28
+OPEN = 0
+ID = 29
+OPEN = 0
+ID = 30
+OPEN = 0
+ID = 31
+OPEN = 0
+ID = 32
+OPEN = 0
+ID = 33
+OPEN = 0
+ID = 34
+OPEN = 0
+ID = 35
+OPEN = 0
+ID = 36
+OPEN = 0
+ID = 37
+OPEN = 0
+ID = 38
+OPEN = 0
+ID = 39
+OPEN = 0
+ID = 40
+OPEN = 0
+ID = 41
+OPEN = 0
+ID = 42
+OPEN = 0
+ID = 43
+OPEN = 0
+ID = 44
+OPEN = 0
+ID = 45
+OPEN = 0
+ID = 46
+OPEN = 0
+#end
+
+[OTP SETTINGS]
+#begin
+DEVICE = 
+TOPMARK = 
+TYPE = 0
+OPTIONS = 0
+METHOD = 0
+SIZE = 1
+ADDRESS = 4294967295
+SERIALNUMBER = 4294967295
+REP = 0
+#end
+
+[WATCH SETTINGS]
+#begin
+
+#end
+
+[C WATCH SETTINGS]
+#begin
+TabId = 0
+TabId = 1
+TabId = 2
+TabId = 3
+#end
+
+[OVERRIDE SETTINGS]
+#begin
+STATUS = 0
+SIZE = 1048576
+
+#end
+
+[BREAKPOINT SETTINGS]
+#begin
+#end
+
