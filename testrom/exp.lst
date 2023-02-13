@@ -1,4 +1,4 @@
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:    1
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    1
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -62,7 +62,7 @@ Location Object              Type  Line Source
                              B       55 SIOPORTADATA	equ	00b
                              B       56 SIOPORTACMD		equ	01b
                              B       57 SIOPORTBDATA	equ	10b
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:    2
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    2
 
 
 IODEFS.H
@@ -126,7 +126,7 @@ Location Object              Type  Line Source
                    000005FC  B+     107 Name equ Base|(Device<<10)|(Register<<8)
                              B      108 	MAKEPORT CTCCH2,KIOBASE,CTCIOBASE,CTCCHANNEL2
                    000006FC  B+     108 Name equ Base|(Device<<10)|(Register<<8)
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:    3
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    3
 
 
 IODEFS.H
@@ -190,7 +190,7 @@ Location Object              Type  Line Source
                              B      155 	ld BC,ADDR
                              B      156 	out (BC),A
                              B      157 	.endif
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:    4
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    4
 
 
 IODEFS.H
@@ -254,7 +254,7 @@ Location Object              Type  Line Source
                              B       29 
                    0000406B  B       30 SYSCLOCK equ KeyBReadPos + 1
                              B       31 
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:    5
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    5
 
 
 SYSVARS.H
@@ -318,7 +318,7 @@ Location Object              Type  Line Source
                              B       43 
                              B       44 	CALL FAOUT
                              B       45 
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:    6
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    6
 
 
 DEBUGMACROS.H
@@ -382,7 +382,7 @@ Location Object              Type  Line Source
                              B      101 	POP	IX
                              B      102 	POP BC
                              B      103 
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:    7
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    7
 
 
 DEBUGMACROS.H
@@ -446,7 +446,7 @@ Location Object              Type  Line Source
                              B      159 	ENDMAC
                              B      160 
                              A        6 
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:    8
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    8
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -510,7 +510,7 @@ Location Object              Type  Line Source
 00000009 BC                  A       62 	CP		H
 0000000A 28 06               A       63 	JR		Z,RAMTOPLOOPEXIT		; LOOP BACK WHILE RAM IS POPULATED.
 0000000C 3E FC               A       64 	LD		A,0FCH					; A TEST BYTE AND 1K MASKING BYTE.
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:    9
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    9
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -574,7 +574,7 @@ Location Object              Type  Line Source
 0000004A 21 00 00            A+      95 	LD HL,0
 0000004D 39                  A+      95 	ADD HL,SP
 0000004E 7C                  A+      95 	LD A,H
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   10
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   10
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -638,7 +638,7 @@ Location Object              Type  Line Source
 00000092 39                  A+      96 	ADD HL,SP
 00000093 7C                  A+      96 	LD A,H
                              A+      96 
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   11
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   11
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -702,7 +702,7 @@ Location Object              Type  Line Source
 000000D8 7C                  A+      97 	LD A,H
                              A+      97 
 000000D9 E6 0F               A+      97 	AND 0FH
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   12
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   12
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -766,7 +766,7 @@ Location Object              Type  Line Source
 0000011F                     A+      99 $LEAVE
 0000011F DD E1               A+      99 	POP	IX
 00000121 E1                  A+      99 	POP HL
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   13
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   13
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -830,7 +830,7 @@ Location Object              Type  Line Source
 0000015A DD E5               A+     102 	PUSH	IX
 0000015C D1                  A+     102 	POP		DE
 0000015D 01 05 00            A+     102 	LD	BC,STRLEN
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   14
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   14
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -894,7 +894,7 @@ Location Object              Type  Line Source
 0000019B 0E 04               A+     104 	LD 	C,YPOS
                              A+     104 
 0000019D CD 00 00            A+     104 	CALL	FXY2SCR
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   15
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   15
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -958,7 +958,7 @@ Location Object              Type  Line Source
 000001DE D5                  A+     106 	PUSH DE
 000001DF E5                  A+     106 	PUSH HL
 000001E0 DD E5               A+     106 	PUSH IX
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   16
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   16
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -1022,7 +1022,7 @@ Location Object              Type  Line Source
 00000222                     A+     107 $LEAVE
 00000222 DD E1               A+     107 	POP	IX
 00000224 E1                  A+     107 	POP HL
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   17
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   17
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -1086,7 +1086,7 @@ Location Object              Type  Line Source
 0000025D DD E5               A+     110 	PUSH	IX
 0000025F D1                  A+     110 	POP		DE
 00000260 01 05 00            A+     110 	LD	BC,STRLEN
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   18
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   18
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -1150,7 +1150,7 @@ Location Object              Type  Line Source
                              A      121 	HOUT 2550H,H 
 0000029F C5                  A+     121 	PUSH BC
 000002A0 DD E5               A+     121 	PUSH IX
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   19
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   19
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -1214,7 +1214,7 @@ Location Object              Type  Line Source
 000002E8 C2 F5 03            A      169 	JR NZ,SKIP
                              A      170 
 000002EB 21 00 24            A      171 	LD HL,VIDSTARTLOC
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   20
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   20
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -1278,7 +1278,7 @@ Location Object              Type  Line Source
 00000337 7E                  A      206 	LD	A,(HL)
                              A      207 
                              A      208 	HOUT 	25BEH, (HL)
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   21
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   21
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -1342,7 +1342,7 @@ Location Object              Type  Line Source
 00000383 41                  A+     249 	LD	B,DIN
 00000384 CD 00 00            A+     249 	call FHOUTA
                              A+     249 
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   22
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   22
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -1406,7 +1406,7 @@ Location Object              Type  Line Source
                              A      260 	STROUTXY 02h,03H, "NOK", 3 
 000003C8 C5                  A+     260 	PUSH BC
 000003C9 D5                  A+     260 	PUSH DE
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   23
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   23
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -1470,7 +1470,7 @@ Location Object              Type  Line Source
                              A+     278 
 00000407 06 10               A+     278 	LD 	B,XPOS
 00000409 0E 0C               A+     278 	LD 	C,YPOS
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   24
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   24
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -1534,7 +1534,7 @@ Location Object              Type  Line Source
 00000446 21 53 04            A+     294 	LD	HL,$STRSTR
 00000449 DD E5               A+     294 	PUSH	IX
 0000044B D1                  A+     294 	POP		DE
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   25
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   25
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -1598,7 +1598,7 @@ Location Object              Type  Line Source
 0000048A 55 4E 44 45 46 49   A+     310 	DB STR
 00000490 4E 54 32            A+ d   310
 00000493                     A+     310 $LEAVE
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   26
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   26
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -1662,7 +1662,7 @@ Location Object              Type  Line Source
 000004D0 F1                  A      328 	POP	AF
 000004D1 FB                  A      329 	EI
 000004D2 ED 4D               A      330 	RETI
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   27
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   27
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -1726,7 +1726,7 @@ Location Object              Type  Line Source
 00000512 AE                  A      353 	XOR (HL)
 00000513 77                  A      354 	LD (HL),A
                              A      355 
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   28
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   28
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -1790,7 +1790,7 @@ Location Object              Type  Line Source
 00000550 C5                  A+     371 	PUSH BC
                              A+     371 
 00000551 06 10               A+     371 	LD 	B,XPOS
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   29
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   29
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -1854,7 +1854,7 @@ Location Object              Type  Line Source
                              A+     387 
 00000590 21 9D 05            A+     387 	LD	HL,$STRSTR
 00000593 DD E5               A+     387 	PUSH	IX
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   30
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   30
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -1918,7 +1918,7 @@ Location Object              Type  Line Source
                              A+     403 
                              A+     403 	XY2SCR	XPOS, YPOS
 000005D8 C5                  A+     403 	PUSH BC
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   31
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   31
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -1982,7 +1982,7 @@ Location Object              Type  Line Source
 00000618 E5                  A      414 	PUSH HL
 00000619 21 50 24            A      415 	LD HL,VIDSTARTLOC+50H
 0000061C 34                  A      416 	INC (HL)
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   32
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   32
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -2046,7 +2046,7 @@ Location Object              Type  Line Source
 00000657 DD 21 7D 24         A+     426 	LD	IX,POS
 0000065B 41                  A+     426 	LD	B,DIN
 0000065C CD 00 00            A+     426 	call FHOUTA
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   33
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   33
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -2110,7 +2110,7 @@ Location Object              Type  Line Source
                              A+     439 
 0000069B DD E1               A+     439 	POP	IX
 0000069D C1                  A+     439 	POP BC
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   34
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   34
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -2174,7 +2174,7 @@ Location Object              Type  Line Source
                              A      452 
                              A      453 	HOUT VIDSTARTLOC+0BBH,B 
 000006DA C5                  A+     453 	PUSH BC
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   35
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   35
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -2238,7 +2238,7 @@ Location Object              Type  Line Source
 0000071F C1                  A+     459 	POP BC
                              A+     459 
 00000720 E1                  A      460 	POP HL
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   36
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   36
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -2302,7 +2302,7 @@ Location Object              Type  Line Source
 0000075E 18 05               A+     473 	JR $LEAVE
                              A+     473 
 00000760                     A+     473 $STRSTR
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   37
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   37
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -2366,7 +2366,7 @@ Location Object              Type  Line Source
 0000079F CB 3F               A+     481 	SRL A
                              A+     481 
 000007A1 DD 23               A+     481 	INC		IX
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   38
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   38
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -2430,7 +2430,7 @@ Location Object              Type  Line Source
 000007E1 C1                  A+     490 	POP BC
                              A+     490 
                              A+     490 
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   39
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   39
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -2494,7 +2494,7 @@ Location Object              Type  Line Source
 00000820 E5                  A+     507 	PUSH HL
 00000821 DD E5               A+     507 	PUSH IX
                              A+     507 
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   40
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   40
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -2558,7 +2558,7 @@ Location Object              Type  Line Source
                              A      536 
 00000000                     A      537 RST28:
                              A      538 ;	...	INTERRUPT	ROUTINE
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   41
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   41
 
 
 g:\my drive\ace-2019\testrom\exp.asm
@@ -2585,7 +2585,7 @@ Location Object              Type  Line Source
 00000000 C3 FB 07            A      557 	JP RST66HANDLER
 00000003                     A      558 .END
                              A      559 
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:27:26    Page:   42
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   42
 
 
 g:\my drive\ace-2019\testrom\exp.asm

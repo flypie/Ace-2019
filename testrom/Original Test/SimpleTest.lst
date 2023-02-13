@@ -1,4 +1,4 @@
-Zilog Macro Assembler.  Version K2.14    25-Apr-122    13:13:17    Page:    1
+Zilog Macro Assembler.  Version K2.14    05-Feb-123    20:46:58    Page:    1
 
 
 g:\my drive\ace-2019\testrom\original test\simpletest.asm
@@ -7,44 +7,54 @@ Location Object              Type  Line Source
                              A        1 	CPU = Z180
                              A        2 
 00000000 F3                  A        3 	di
-00000001 21 00 2C            A        4 	ld hl,02C00h
-00000004 3E 00               A        5 	ld a,0
-00000006                     A        6 char2:
-00000006 06 08               A        7 	ld b,8
-00000008                     A        8 char1:
-00000008 77                  A        9 	ld (hl),a
-00000009 23                  A       10 	inc hl
-0000000A 10 FC               A       11 	djnz char1
-0000000C 3C                  A       12 	inc a
-0000000D FE 80               A       13 	cp 080h
-0000000F 20 F5               A       14 	jr nz,char2
-                             A       15 
-00000011 21 00 24            A       16 	ld hl,2400h
-00000014 0E 18               A       17 	ld c,24
-00000016                     A       18 scry:
-00000016 06 20               A       19 	ld b,32
-00000018                     A       20 scrx:
-00000018 75                  A       21 	ld (hl),l
-00000019 23                  A       22 	inc hl
-0000001A 10 FC               A       23 	djnz scrx
-0000001C 0D                  A       24 	dec c
-0000001D 20 F7               A       25 	jr nz,scry
-                             A       26 
-0000001F 01 0A 00            A       27 	ld	bc,10
-00000022 21 00 24            A       28 	ld hl,2400h
-00000025                     A       29 noper:
-00000025 03                  A       30 	inc bc
-00000026 3E 00               A       31 	ld  a,0
-00000028 B8                  A       32 	cp b
-00000029 20 04               A       33 	jr nz,skip
-0000002B B9                  A       34 	cp c
-0000002C 20 01               A       35 	jr nz,skip
-0000002E 34                  A       36 	inc (hl)
-0000002F                     A       37 skip:
-0000002F 00                  A       38 	nop
-00000030 18 F3               A       39 	jr noper
-                             A       40 
-Zilog Macro Assembler.  Version K2.14    25-Apr-122    13:13:17    Page:    2
+00000001 21 00 28            A        4 	ld hl,02800h	;Font
+                             A        5 ;	ld hl,02C00h
+00000004 3E 00               A        6 	ld a,0
+                             A        7 ;	ld a,55h
+00000006                     A        8 char2:
+00000006 06 08               A        9 	ld b,8
+00000008                     A       10 char1:
+00000008 77                  A       11 	ld (hl),a
+                             A       12 ;	xor 0FFh
+00000009 23                  A       13 	inc hl
+0000000A 10 FC               A       14 	djnz char1
+0000000C 3C                  A       15 	inc a
+0000000D FE 80               A       16 	cp 080h
+0000000F 20 F5               A       17 	jr nz,char2
+                             A       18 
+00000011 21 00 20            A       19 	ld hl,2000h
+                             A       20 ;	ld hl,2400h		;VIDRAM
+00000014 0E 18               A       21 	ld c,24
+00000016                     A       22 scry:
+00000016 06 20               A       23 	ld b,32
+00000018                     A       24 scrx:
+                             A       25 ;	ld (hl),0
+00000018 75                  A       26 	ld (hl),l
+00000019 23                  A       27 	inc hl
+0000001A 10 FC               A       28 	djnz scrx
+0000001C 0D                  A       29 	dec c
+0000001D 20 F7               A       30 	jr nz,scry
+                             A       31 
+0000001F 01 0A 00            A       32 	ld	bc,10
+00000022 21 00 20            A       33 	ld hl,2000h
+                             A       34 ;	ld hl,2400h		;VIDRAM
+00000025                     A       35 noper:
+00000025 03                  A       36 	inc bc
+00000026 3E 00               A       37 	ld  a,0
+00000028 B8                  A       38 	cp b
+00000029 20 08               A       39 	jr nz,skip
+0000002B B9                  A       40 	cp c
+0000002C 20 05               A       41 	jr nz,skip
+0000002E 7E                  A       42 	ld	a,(hl)
+0000002F EE 41               A       43 	xor 41h
+00000031 77                  A       44 	ld	(hl),a
+                             A       45 
+00000032 34                  A       46 	inc (hl)
+00000033                     A       47 skip:
+00000033 00                  A       48 	nop
+00000034 18 EF               A       49 	jr noper
+                             A       50 
+Zilog Macro Assembler.  Version K2.14    05-Feb-123    20:46:58    Page:    2
 
 
 g:\my drive\ace-2019\testrom\original test\simpletest.asm

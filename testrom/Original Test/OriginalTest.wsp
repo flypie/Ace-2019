@@ -185,7 +185,7 @@ MRUDockID=0
 MRUDockLeftPos=0
 MRUDockTopPos=-2
 MRUDockRightPos=272
-MRUDockBottomPos=809
+MRUDockBottomPos=801
 MRUFloatStyle=4
 MRUFloatXPos=-2147483648
 MRUFloatYPos=0
@@ -199,7 +199,7 @@ MRUFloatCY=180
 MRUHorzDockCX=300
 MRUHorzDockCY=180
 MRUVertDockCX=272
-MRUVertDockCY=811
+MRUVertDockCY=803
 MRUDockingState=0
 DockingStyle=61440
 TypeID=0
@@ -593,5 +593,15 @@ LargeButtons=False
 ptn_Child1=MainFrame
 ptn_Child2=ChildFrames
 [WorkState_v1_1.Frames.MainFrame]
-WindowPlacement=MCAAAAAACAAAAAAADAAAAAAAAADIPPPPAADIPPPPPPPPPPPPPPPPPPPPOEAAAAAAOEAAAAAAOOFAAAAAFEDAAAAA
-Title=ZiLOG Developer Studio
+WindowPlacement=MCAAAAAACAAAAAAADAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPHAAAAAALJAAAAAAPBGAAAAACJDAAAAA
+Title=ZiLOG Developer Studio - simpletest.asm
+[WorkState_v1_1.Frames.ChildFrames]
+ptn_Child1=Document-0
+[WorkState_v1_1.Frames.ChildFrames.Document-0]
+ptn_Child1=ViewFrame-0
+[WorkState_v1_1.Frames.ChildFrames.Document-0.ViewFrame-0]
+DocPathName=g:\my drive\ace-2019\testrom\original test\simpletest.asm
+DocumentString=ZDS Document
+DocTemplateIndex=0
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPKBAAAAAAKBAAAAAAHLFAAAAANPCAAAAA
+IsActiveChildFrame=True

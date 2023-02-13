@@ -1,11 +1,15 @@
 #!/bin/bash
 
+ln -s '/home/johnb/Insync/flytart@gmail.com/Google Drive' GDrive
+
 for (( ; ; ))
 do
-    	echo "infinite loops [ hit CTRL+C to stop]"
-    	make
-	date +"%T"    
-	sleep 1m
+    echo "infinite loops [ hit CTRL+C to stop]"
+    make
+    date +"%T"
+    sleep 1m
 done
+
+rm GDrive
 
 

@@ -4,9 +4,10 @@ FREEROUTING := C:\ProgramFiles\Java\jdk-11.0.4\bin\java.exe -jar C:\home\JohnB\s
 XCDIR := "G:\My Drive/Ace-2019/KiCad"
 
 else
-
-FREEROUTING = java -jar $(HOME)/freeRoutingProj/dist/freeRouting.jar -s -asx -moi 20 -fan -de
-XCDIR = $(HOME)/Google_Drive/Ace-2019/KiCad
+#FREEROUTING = java -jar $(HOME)/Dropbox/freeRouting.jar -s -asx -moi 20 -fan -de
+#XCDIR = $(HOME)/Dropbox/Ace-2019/KiCad
+FREEROUTING = java -jar GDrive/route/freeRouting.jar -s -asx -moi 20 -fan -de
+XCDIR = GDrive/Ace-2019/KiCad
 
 endif
 

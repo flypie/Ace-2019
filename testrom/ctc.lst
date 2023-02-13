@@ -1,4 +1,4 @@
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:    1
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    1
 
 
 g:\my drive\ace-2019\testrom\ctc.asm
@@ -62,7 +62,7 @@ Location Object              Type  Line Source
                              B       55 SIOPORTADATA	equ	00b
                              B       56 SIOPORTACMD		equ	01b
                              B       57 SIOPORTBDATA	equ	10b
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:    2
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    2
 
 
 IODEFS.H
@@ -126,7 +126,7 @@ Location Object              Type  Line Source
                    000005FC  B+     107 Name equ Base|(Device<<10)|(Register<<8)
                              B      108 	MAKEPORT CTCCH2,KIOBASE,CTCIOBASE,CTCCHANNEL2
                    000006FC  B+     108 Name equ Base|(Device<<10)|(Register<<8)
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:    3
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    3
 
 
 IODEFS.H
@@ -190,7 +190,7 @@ Location Object              Type  Line Source
                              B      155 	ld BC,ADDR
                              B      156 	out (BC),A
                              B      157 	.endif
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:    4
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    4
 
 
 IODEFS.H
@@ -254,7 +254,7 @@ Location Object              Type  Line Source
                              B       30 SP2SCR	MACRO XPOS, YPOS
                              B       31 	PUSH	HL
                              B       32 
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:    5
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    5
 
 
 DEBUGMACROS.H
@@ -318,7 +318,7 @@ Location Object              Type  Line Source
                              B       88 	POP BC
                              B       89 
                              B       90 	ENDMAC
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:    6
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    6
 
 
 DEBUGMACROS.H
@@ -382,7 +382,7 @@ Location Object              Type  Line Source
                              B      146 	LD	BC,STRLEN
                              B      147 
                              B      148 	LDIR
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:    7
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    7
 
 
 DEBUGMACROS.H
@@ -446,7 +446,7 @@ Location Object              Type  Line Source
                              B       42 
                              A        5 
                              A        6 	SEGMENT CODE ; MAKE IT THE CURRENT SECTION
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:    8
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    8
 
 
 g:\my drive\ace-2019\testrom\ctc.asm
@@ -510,7 +510,7 @@ Location Object              Type  Line Source
                              A       48 	DOOUT CTCCH0, 0FFH	;TIME CONSTOUT. APPARENTLY CHANNEL WILL NOT WORK WITHOUT ONE
 0000000F F5                  A+      48 	push 	AF
 00000010 C5                  A+      48 	push 	BC
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:    9
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    9
 
 
 g:\my drive\ace-2019\testrom\ctc.asm
@@ -574,7 +574,7 @@ Location Object              Type  Line Source
 00000037 ED 79               A+      55 	out (BC),A
                              A+      55 	.endif
                              A+      55 
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   10
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   10
 
 
 g:\my drive\ace-2019\testrom\ctc.asm
@@ -638,7 +638,7 @@ Location Object              Type  Line Source
 0000005A C1                  A+      68 	pop 	BC
 0000005B F1                  A+      68 	pop 	AF
                              A+      68 	
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   11
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   11
 
 
 g:\my drive\ace-2019\testrom\ctc.asm
@@ -702,7 +702,7 @@ Location Object              Type  Line Source
                              A      110 
 0000008B                     A      111 CTC0INT:
 0000008B F5                  A      112 	PUSH AF
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   12
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   12
 
 
 g:\my drive\ace-2019\testrom\ctc.asm
@@ -766,14 +766,14 @@ Location Object              Type  Line Source
 000000C3 FB                  A      168 	EI
 000000C4 ED 4D               A      169 	RETI
                              A      170 
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   13
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   13
 
 
 g:\my drive\ace-2019\testrom\ctc.asm
 
 Location Object              Type  Line Source
                              A      171 
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   14
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   14
 
 
 g:\my drive\ace-2019\testrom\ctc.asm

@@ -1,4 +1,4 @@
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:    1
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    1
 
 
 g:\my drive\ace-2019\testrom\chardata.asm
@@ -62,7 +62,7 @@ Location Object              Type  Line Source
                              B       55 SIOPORTADATA	equ	00b
                              B       56 SIOPORTACMD		equ	01b
                              B       57 SIOPORTBDATA	equ	10b
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:    2
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    2
 
 
 IODEFS.H
@@ -126,7 +126,7 @@ Location Object              Type  Line Source
                    000005FC  B+     107 Name equ Base|(Device<<10)|(Register<<8)
                              B      108 	MAKEPORT CTCCH2,KIOBASE,CTCIOBASE,CTCCHANNEL2
                    000006FC  B+     108 Name equ Base|(Device<<10)|(Register<<8)
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:    3
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    3
 
 
 IODEFS.H
@@ -190,7 +190,7 @@ Location Object              Type  Line Source
                              B      155 	ld BC,ADDR
                              B      156 	out (BC),A
                              B      157 	.endif
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:    4
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    4
 
 
 IODEFS.H
@@ -254,7 +254,7 @@ Location Object              Type  Line Source
                    0000406B  B       30 SYSCLOCK equ KeyBReadPos + 1
                              B       31 
                    0000406F  B       32 FLASHCOUNT equ SYSCLOCK+4
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:    5
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    5
 
 
 SYSVARS.H
@@ -318,7 +318,7 @@ Location Object              Type  Line Source
 0000001D 2C                  A       48 	INC		L						; INCREMENT LOW BYTE OF ADDRESS
 0000001E 20 E7               A       49 	JR		NZ,L0055				; LOOP BACK UNTIL THE FIRST 256 BYTES
                              A       50 					; HAVE BEEN FILLED WITH 32 REPEATING
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:    6
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    6
 
 
 g:\my drive\ace-2019\testrom\chardata.asm
@@ -382,7 +382,7 @@ Location Object              Type  Line Source
                              A      106 ; THE 'CHARACTER SET'
                              A      107 ; -------------------
                              A      108 ; THE 96 ASCII CHARACTER BITMAPS ARE COPIED TO RAM DURING INITIALIZATION AND
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:    7
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    7
 
 
 g:\my drive\ace-2019\testrom\chardata.asm
@@ -446,7 +446,7 @@ Location Object              Type  Line Source
 00000058 00                  A+     144 	DB P1
                              A      145 	DEFB	00000000B
 00000059 00                  A+     145 	DB P1
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:    8
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    8
 
 
 g:\my drive\ace-2019\testrom\chardata.asm
@@ -510,7 +510,7 @@ Location Object              Type  Line Source
 0000006F 10                  A+     179 	DB P1
                              A      180 	DEFB	00101000B
 00000070 28                  A+     180 	DB P1
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:    9
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    9
 
 
 g:\my drive\ace-2019\testrom\chardata.asm
@@ -574,7 +574,7 @@ Location Object              Type  Line Source
                              A      213 	DEFB	00010000B
 00000088 10                  A+     213 	DB P1
                              A      214 	DEFB	00100000B
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   10
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   10
 
 
 g:\my drive\ace-2019\testrom\chardata.asm
@@ -638,7 +638,7 @@ Location Object              Type  Line Source
                              A      247 ; 02DH - CHARACTER: '-'			CHR0H(45)
                              A      248 
                              A      249 	DEFB	00000000B
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   11
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   11
 
 
 g:\my drive\ace-2019\testrom\chardata.asm
@@ -702,7 +702,7 @@ Location Object              Type  Line Source
 000000B7 4A                  A+     281 	DB P1
                              A      282 	DEFB	01010010B
 000000B8 52                  A+     282 	DB P1
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   12
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   12
 
 
 g:\my drive\ace-2019\testrom\chardata.asm
@@ -766,7 +766,7 @@ Location Object              Type  Line Source
                              A      315 	DEFB	00000000B
 000000D0 00                  A+     315 	DB P1
                              A      316 
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   13
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   13
 
 
 g:\my drive\ace-2019\testrom\chardata.asm
@@ -830,7 +830,7 @@ Location Object              Type  Line Source
                              A      350 	DEFB	00000010B
 000000E7 02                  A+     350 	DB P1
                              A      351 	DEFB	00000100B
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   14
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   14
 
 
 g:\my drive\ace-2019\testrom\chardata.asm
@@ -894,7 +894,7 @@ Location Object              Type  Line Source
 000000FF 00                  A+     383 	DB P1
                              A      384 	DEFB	00010000B
 00000100 10                  A+     384 	DB P1
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   15
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   15
 
 
 g:\my drive\ace-2019\testrom\chardata.asm
@@ -958,7 +958,7 @@ Location Object              Type  Line Source
                              A      418 
                              A      419 	DEFB	00000000B
 00000117 00                  A+     419 	DB P1
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   16
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   16
 
 
 g:\my drive\ace-2019\testrom\chardata.asm
@@ -1022,7 +1022,7 @@ Location Object              Type  Line Source
                              A      452 	DEFB	01000010B
 0000012F 42                  A+     452 	DB P1
                              A      453 
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   17
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   17
 
 
 g:\my drive\ace-2019\testrom\chardata.asm
@@ -1086,7 +1086,7 @@ Location Object              Type  Line Source
                              A      487 	DEFB	01000000B
 00000146 40                  A+     487 	DB P1
                              A      488 	DEFB	01111110B
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   18
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   18
 
 
 g:\my drive\ace-2019\testrom\chardata.asm
@@ -1150,7 +1150,7 @@ Location Object              Type  Line Source
                              A      522 	DEFB	00001000B
 0000015D 08                  A+     522 	DB P1
                              A      523 	DEFB	00001000B
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   19
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   19
 
 
 g:\my drive\ace-2019\testrom\chardata.asm
@@ -1214,7 +1214,7 @@ Location Object              Type  Line Source
                              A      557 	DEFB	01011010B
 00000174 5A                  A+     557 	DB P1
                              A      558 	DEFB	01000010B
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   20
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   20
 
 
 g:\my drive\ace-2019\testrom\chardata.asm
@@ -1278,7 +1278,7 @@ Location Object              Type  Line Source
                              A      592 	DEFB	01000010B
 0000018B 42                  A+     592 	DB P1
                              A      593 	DEFB	01000010B
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   21
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   21
 
 
 g:\my drive\ace-2019\testrom\chardata.asm
@@ -1342,7 +1342,7 @@ Location Object              Type  Line Source
                              A      627 	DEFB	01000010B
 000001A2 42                  A+     627 	DB P1
                              A      628 	DEFB	01000010B
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   22
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   22
 
 
 g:\my drive\ace-2019\testrom\chardata.asm
@@ -1406,7 +1406,7 @@ Location Object              Type  Line Source
                              A      661 ; 059H - CHARACTER: 'Y'			CHR0H(89)
                              A      662 
                              A      663 	DEFB	10000010B
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   23
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   23
 
 
 g:\my drive\ace-2019\testrom\chardata.asm
@@ -1470,7 +1470,7 @@ Location Object              Type  Line Source
 000001D1 04                  A+     695 	DB P1
                              A      696 
                              A      697 ; 05DH - CHARACTER: ']'			CHR0H(93)
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   24
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   24
 
 
 g:\my drive\ace-2019\testrom\chardata.asm
@@ -1534,7 +1534,7 @@ Location Object              Type  Line Source
 000001E8 20                  A+     730 	DB P1
                              A      731 	DEFB	00100000B
 000001E9 20                  A+     731 	DB P1
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   25
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   25
 
 
 g:\my drive\ace-2019\testrom\chardata.asm
@@ -1598,7 +1598,7 @@ Location Object              Type  Line Source
                              A      764 
                              A      765 ; 064H - CHARACTER: 'D'			CHR0H(100)
                              A      766 
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   26
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   26
 
 
 g:\my drive\ace-2019\testrom\chardata.asm
@@ -1662,7 +1662,7 @@ Location Object              Type  Line Source
                              A      799 	DEFB	01000100B
 00000218 44                  A+     799 	DB P1
                              A      800 	DEFB	01000100B
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   27
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   27
 
 
 g:\my drive\ace-2019\testrom\chardata.asm
@@ -1726,7 +1726,7 @@ Location Object              Type  Line Source
 00000230 24                  A+     832 	DB P1
                              A      833 	DEFB	00011000B
 00000231 18                  A+     833 	DB P1
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   28
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   28
 
 
 g:\my drive\ace-2019\testrom\chardata.asm
@@ -1790,7 +1790,7 @@ Location Object              Type  Line Source
 00000247 00                  A+     867 	DB P1
                              A      868 	DEFB	01111000B
 00000248 78                  A+     868 	DB P1
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   29
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   29
 
 
 g:\my drive\ace-2019\testrom\chardata.asm
@@ -1854,7 +1854,7 @@ Location Object              Type  Line Source
                              A      901 	DEFB	00111100B
 00000260 3C                  A+     901 	DB P1
                              A      902 	DEFB	00000100B
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   30
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   30
 
 
 g:\my drive\ace-2019\testrom\chardata.asm
@@ -1918,7 +1918,7 @@ Location Object              Type  Line Source
                              A      935 ; 075H - CHARACTER: 'U'			CHR0H(117)
                              A      936 
                              A      937 	DEFB	00000000B
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   31
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   31
 
 
 g:\my drive\ace-2019\testrom\chardata.asm
@@ -1982,7 +1982,7 @@ Location Object              Type  Line Source
 0000028F 28                  A+     969 	DB P1
                              A      970 	DEFB	00010000B
 00000290 10                  A+     970 	DB P1
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   32
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   32
 
 
 g:\my drive\ace-2019\testrom\chardata.asm
@@ -2046,7 +2046,7 @@ Location Object              Type  Line Source
                              A     1003 	DEFB	00000000B
 000002A8 00                  A+    1003 	DB P1
                              A     1004 
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   33
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   33
 
 
 g:\my drive\ace-2019\testrom\chardata.asm
@@ -2110,7 +2110,7 @@ Location Object              Type  Line Source
                              A     1038 	DEFB	01000010B
 000002BF 42                  A+    1038 	DB P1
                              A     1039 	DEFB	10011001B
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   34
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   34
 
 
 g:\my drive\ace-2019\testrom\chardata.asm
@@ -2131,7 +2131,7 @@ Location Object              Type  Line Source
 000002C5 3C                  A+    1046 	DB P1
                              A     1047 
                              A     1048 
-Zilog Macro Assembler.  Version K2.14    08-Jun-122    01:00:14    Page:   35
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:   35
 
 
 g:\my drive\ace-2019\testrom\chardata.asm

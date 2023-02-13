@@ -1,12 +1,13 @@
 ifeq  ($(OS),Windows_NT)
 
-FREEROUTING := C:\ProgramFiles\Java\jdk-11.0.4\bin\java.exe -jar C:\home\JohnB\source\freeRoutingProj\dist\freeRouting.jar -s -asx -fan -de 
-XCDIR := C:/home/JohnB/Dropbox/Ace-2019/KiCad
+FREEROUTING := C:\ProgramFiles\Java\jdk-11.0.4\bin\java.exe -jar C:\home\JohnB\source\freeRoutingProj\dist\freeRouting.jar -s -asx -moi 20 -fan -de
+XCDIR := "G:\My Drive/Ace-2019/KiCad"
 
 else
-
-FREEROUTING = java -jar $(HOME)/freeRoutingProj/dist/freeRouting.jar -s -asx -fan -de 
-XCDIR = $(HOME)/Dropbox/Ace-2019/KiCad
+#FREEROUTING = java -jar $(HOME)/Dropbox/freeRouting.jar -s -asx -moi 20 -fan -de
+#XCDIR = $(HOME)/Dropbox/Ace-2019/KiCad
+FREEROUTING = java -jar GDrive/route/freeRouting.jar -s -asx -fan -de
+XCDIR = GDrive/Ace-2019/KiCad
 
 endif
 
@@ -19,7 +20,7 @@ csrc = $(wildcard $(XCDIR)/ACE1/*.dsn) \
 		$(wildcard $(XCDIR)/ACE4NOKB/*.dsn) \
 		$(wildcard $(XCDIR)/ACE5/*.dsn) \
 		$(wildcard $(XCDIR)/ACEZ180/*.dsn) \
-		$(wildcard $(XCDIR)/ACEZ382/*.dsn) \
+		$(wildcard $(XCDIR)/ACEZ380/*.dsn) \
 		$(wildcard $(XCDIR)/ACEeZ80/*.dsn) \
 		$(wildcard $(XCDIR)/Edgeboard/*.dsn) \
 		$(wildcard $(XCDIR)/eBigRam/*.dsn) \

@@ -1,4 +1,4 @@
-Zilog Macro Assembler.  Version K2.14    06-Jun-122    01:05:26    Page:    1
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    1
 
 
 g:\my drive\ace-2019\testrom\inttable.asm
@@ -62,7 +62,7 @@ Location Object              Type  Line Source
                              B       55 SIOPORTADATA	equ	00b
                              B       56 SIOPORTACMD		equ	01b
                              B       57 SIOPORTBDATA	equ	10b
-Zilog Macro Assembler.  Version K2.14    06-Jun-122    01:05:26    Page:    2
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    2
 
 
 IODEFS.H
@@ -126,7 +126,7 @@ Location Object              Type  Line Source
                    000005FC  B+     107 Name equ Base|(Device<<10)|(Register<<8)
                              B      108 	MAKEPORT CTCCH2,KIOBASE,CTCIOBASE,CTCCHANNEL2
                    000006FC  B+     108 Name equ Base|(Device<<10)|(Register<<8)
-Zilog Macro Assembler.  Version K2.14    06-Jun-122    01:05:26    Page:    3
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    3
 
 
 IODEFS.H
@@ -190,7 +190,7 @@ Location Object              Type  Line Source
                              B      155 	ld BC,ADDR
                              B      156 	out (BC),A
                              B      157 	.endif
-Zilog Macro Assembler.  Version K2.14    06-Jun-122    01:05:26    Page:    4
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    4
 
 
 IODEFS.H
@@ -254,7 +254,7 @@ Location Object              Type  Line Source
 0000000C 00 00               A       26 	DW  SIOAINT_RCA
 0000000E 00 00               A       27 	DW  SIOAINT_SRC
                              A       28 
-Zilog Macro Assembler.  Version K2.14    06-Jun-122    01:05:26    Page:    5
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    5
 
 
 g:\my drive\ace-2019\testrom\inttable.asm
@@ -318,7 +318,7 @@ Location Object              Type  Line Source
 0000006E 00 00               A       84 	DW 	UNDEFINT3
 00000070 00 00               A       85 	DW 	UNDEFINT3
 00000072 00 00               A       86 	DW 	UNDEFINT3
-Zilog Macro Assembler.  Version K2.14    06-Jun-122    01:05:26    Page:    6
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    6
 
 
 g:\my drive\ace-2019\testrom\inttable.asm
@@ -382,7 +382,7 @@ Location Object              Type  Line Source
 000000E0 00 00               A      142 	DW 	UNDEFINT7
 000000E2 00 00               A      143 	DW 	UNDEFINT7
 000000E4 00 00               A      144 	DW 	UNDEFINT7
-Zilog Macro Assembler.  Version K2.14    06-Jun-122    01:05:26    Page:    7
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    7
 
 
 g:\my drive\ace-2019\testrom\inttable.asm
@@ -406,7 +406,7 @@ Location Object              Type  Line Source
                              A      160 
                              A      161 
                              A      162 
-Zilog Macro Assembler.  Version K2.14    06-Jun-122    01:05:26    Page:    8
+Zilog Macro Assembler.  Version K2.14    13-Jan-123    00:25:22    Page:    8
 
 
 g:\my drive\ace-2019\testrom\inttable.asm

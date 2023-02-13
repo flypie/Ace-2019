@@ -33,9 +33,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 2.5,
-          "height": 2.5,
-          "width": 2.5
+          "drill": 3.5,
+          "height": 3.5,
+          "width": 3.5
         },
         "silk_line_width": 0.12,
         "silk_text_italic": false,
@@ -48,7 +48,13 @@
           "min_clearance": 0.508
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "filename": "board_design_settings.json",
@@ -153,8 +159,15 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
-      "via_dimensions": [],
+      "track_widths": [
+        0.0
+      ],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false,
       "zones_use_no_outline": true
     },
@@ -408,10 +421,9 @@
         "microvia_drill": 0.1,
         "name": "Power",
         "nets": [
-          "+5V",
-          "+9V",
           "+9Vsm",
-          "GND"
+          "GND",
+          "VDGCLK"
         ],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
@@ -438,7 +450,7 @@
     "page_layout_descr_file": ""
   },
   "schematic": {
-    "annotate_start_num": 0,
+    "annotate_start_num": 400,
     "drawing": {
       "dashed_lines_dash_length_ratio": 12.0,
       "dashed_lines_gap_length_ratio": 3.0,
@@ -460,7 +472,7 @@
     "meta": {
       "version": 1
     },
-    "net_format_name": "Pcbnew",
+    "net_format_name": "",
     "ngspice": {
       "fix_include_paths": true,
       "fix_passive_vals": false,
@@ -479,37 +491,39 @@
   },
   "sheets": [
     [
-      "b5cea0b5-192f-476b-a3c8-0c26e2231699",
+      "a647641f-bf16-4177-91ee-b01f347ff91c",
       ""
     ],
     [
-      "00000000-0000-0000-0000-000060462d93",
-      "IO&Speaker"
-    ],
-    [
-      "00000000-0000-0000-0000-00005d919407",
+      "00000000-0000-0000-0000-00005e14ef55",
       "KIO"
     ],
     [
-      "00000000-0000-0000-0000-0000601b15fc",
-      "STM8SUBSYS"
+      "00000000-0000-0000-0000-00005fbb02d5",
+      "IO&Speaker"
     ],
     [
-      "00000000-0000-0000-0000-00005e2f9a69",
-      "VDG"
+      "00000000-0000-0000-0000-00005ee121bd",
+      "Cascade"
     ],
     [
-      "00000000-0000-0000-0000-00005f75316f",
-      "Cascade4040"
-    ],
-    [
-      "00000000-0000-0000-0000-00005e5ad6b1",
+      "00000000-0000-0000-0000-00006046f35a",
       "PSU"
     ],
     [
-      "00000000-0000-0000-0000-00006242b13b",
+      "00000000-0000-0000-0000-0000606b9078",
       "ADDRDECODE"
+    ],
+    [
+      "00000000-0000-0000-0000-000061905b33",
+      "VDG"
+    ],
+    [
+      "4eb5c172-5b29-40d7-bbd6-934c86b8c222",
+      "STM8SUBSYS"
     ]
   ],
-  "text_variables": {}
+  "text_variables": {
+    "REVNUM": "0.1"
+  }
 }

@@ -6,14 +6,6 @@ DocumentString=ZDS Document
 DocTemplateIndex=0
 WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPFOPPPPPPIGAAAAAAIGAAAAAAOFGAAAAAMDCAAAAA
 IsActiveChildFrame=False
-[WorkState_v1_1.Frames.ChildFrames.Document-7]
-ptn_Child1=ViewFrame-0
-[WorkState_v1_1.Frames.ChildFrames.Document-7.ViewFrame-0]
-DocPathName=g:\my drive\ace-2019\testrom\CTC.asm
-DocumentString=ZDS Document
-DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPKOAAAAAAKOAAAAAACMGAAAAAEOCAAAAA
-IsActiveChildFrame=False
 [WorkState_v1_1.Frames.ChildFrames.Document-8]
 ptn_Child1=ViewFrame-0
 [WorkState_v1_1.Frames.ChildFrames.Document-8.ViewFrame-0]
@@ -247,7 +239,7 @@ MRUDockID=59420
 MRUDockLeftPos=0
 MRUDockTopPos=-2
 MRUDockRightPos=180
-MRUDockBottomPos=744
+MRUDockBottomPos=736
 MRUFloatStyle=4
 MRUFloatXPos=-2147483648
 MRUFloatYPos=0
@@ -261,7 +253,7 @@ MRUFloatCY=180
 MRUHorzDockCX=300
 MRUHorzDockCY=180
 MRUVertDockCX=180
-MRUVertDockCY=746
+MRUVertDockCY=738
 MRUDockingState=0
 DockingStyle=61440
 TypeID=0
@@ -667,13 +659,14 @@ ptn_Child4=Document-3
 ptn_Child5=Document-4
 ptn_Child6=Document-5
 ptn_Child7=Document-6
+ptn_Child8=Document-7
 [WorkState_v1_1.Frames.ChildFrames.Document-0]
 ptn_Child1=ViewFrame-0
 [WorkState_v1_1.Frames.ChildFrames.Document-0.ViewFrame-0]
 DocPathName=g:\my drive\ace-2019\testrom\sio.asm
 DocumentString=ZDS Document
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPFOPPPPPPOEAAAAAAOEAAAAAAGCGAAAAAIECAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPANAAAAAAANAAAAAAIKGAAAAACMCAAAAA
 IsActiveChildFrame=False
 [WorkState_v1_1.Frames.ChildFrames.Document-1]
 ptn_Child1=ViewFrame-0
@@ -681,7 +674,7 @@ ptn_Child1=ViewFrame-0
 DocPathName=g:\my drive\ace-2019\testrom\sysvars.h
 DocumentString=ZDS Document
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPFOPPPPPPIGAAAAAAIGAAAAAAEEGAAAAAGGCAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPKOAAAAAAKOAAAAAACMGAAAAAMNCAAAAA
 IsActiveChildFrame=False
 [WorkState_v1_1.Frames.ChildFrames.Document-2]
 ptn_Child1=ViewFrame-0
@@ -689,7 +682,7 @@ ptn_Child1=ViewFrame-0
 DocPathName=g:\my drive\ace-2019\testrom\queues.asm
 DocumentString=ZDS Document
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPFOPPPPPPCIAAAAAACIAAAAAAOFGAAAAAAICAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPAAAAAAAAAAAAAAAAINFAAAAACPBAAAAA
 IsActiveChildFrame=False
 [WorkState_v1_1.Frames.ChildFrames.Document-3]
 ptn_Child1=ViewFrame-0
@@ -697,7 +690,7 @@ ptn_Child1=ViewFrame-0
 DocPathName=g:\my drive\ace-2019\testrom\QueueMacro.h
 DocumentString=ZDS Document
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPFOPPPPPPMJAAAAAAMJAAAAAAIHGAAAAAKJCAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPKBAAAAAAKBAAAAAACPFAAAAAMACAAAAA
 IsActiveChildFrame=False
 [WorkState_v1_1.Frames.ChildFrames.Document-4]
 ptn_Child1=ViewFrame-0
@@ -705,7 +698,7 @@ ptn_Child1=ViewFrame-0
 DocPathName=g:\my drive\ace-2019\testrom\exp.asm
 DocumentString=ZDS Document
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPFOPPPPPPGLAAAAAAGLAAAAAACJGAAAAAELCAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPEDAAAAAAEDAAAAAAMAGAAAAAGCCAAAAA
 IsActiveChildFrame=True
 [WorkState_v1_1.Frames.ChildFrames.Document-5]
 ptn_Child1=ViewFrame-0
@@ -713,7 +706,7 @@ ptn_Child1=ViewFrame-0
 DocPathName=g:\my drive\ace-2019\testrom\chardata.asm
 DocumentString=ZDS Document
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPFOPPPPPPANAAAAAAANAAAAAAMKGAAAAAOMCAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPOEAAAAAAOEAAAAAAGCGAAAAAAECAAAAA
 IsActiveChildFrame=False
 [WorkState_v1_1.Frames.ChildFrames.Document-6]
 ptn_Child1=ViewFrame-0
@@ -721,5 +714,13 @@ ptn_Child1=ViewFrame-0
 DocPathName=g:\my drive\ace-2019\testrom\debugmacros.h
 DocumentString=ZDS Document
 DocTemplateIndex=0
-WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPFOPPPPPPMJAAAAAAMJAAAAAAIHGAAAAAKJCAAAAA
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPIGAAAAAAIGAAAAAAAEGAAAAAKFCAAAAA
+IsActiveChildFrame=False
+[WorkState_v1_1.Frames.ChildFrames.Document-7]
+ptn_Child1=ViewFrame-0
+[WorkState_v1_1.Frames.ChildFrames.Document-7.ViewFrame-0]
+DocPathName=g:\my drive\ace-2019\testrom\charout.asm
+DocumentString=ZDS Document
+DocTemplateIndex=0
+WindowPlacement=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPCIAAAAAACIAAAAAAKFGAAAAAEHCAAAAA
 IsActiveChildFrame=False
