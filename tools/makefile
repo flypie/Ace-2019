@@ -17,7 +17,6 @@ csrc = $(wildcard $(XCDIR)/ACE1/*.dsn) \
 		$(wildcard $(XCDIR)/ACE2NOKBV2/*.dsn) \
 		$(wildcard $(XCDIR)/ACE2NOKBV2MK2/*.dsn) \
 		$(wildcard $(XCDIR)/ACE3NOKB/*.dsn) \
-		$(wildcard $(XCDIR)/ACE3NOKBSMD/*.dsn) \
 		$(wildcard $(XCDIR)/ACE4NOKB/*.dsn) \
 		$(wildcard $(XCDIR)/ACE5/*.dsn) \
 		$(wildcard $(XCDIR)/ACEZ180/*.dsn) \
