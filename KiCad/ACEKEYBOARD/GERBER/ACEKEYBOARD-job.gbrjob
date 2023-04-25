@@ -3,15 +3,15 @@
     "GenerationSoftware": {
       "Vendor": "KiCad",
       "Application": "Pcbnew",
-      "Version": "7.0.1"
+      "Version": "7.0.2"
     },
-    "CreationDate": "2023-03-22T21:01:22+00:00"
+    "CreationDate": "2023-04-25T23:22:30+01:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "ACEKEYBOARD",
       "GUID": "4143454b-4559-4424-9f41-52442e6b6963",
-      "Revision": "rev?"
+      "Revision": "Beta 1"
     },
     "Size": {
       "X": 241.4,
