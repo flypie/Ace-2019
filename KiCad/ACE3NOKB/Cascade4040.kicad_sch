@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "b14c35da-dd14-4b8d-93a9-00f219a92f41")
 	(paper "A4")
 	(title_block
@@ -47,7 +47,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT4040.pdf"
+			(property "Datasheet" "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4020bms-24bms-40bms.pdf"
 				(at 0 0 0)
 				(effects
 					(font
@@ -65,6 +65,14 @@
 					(hide yes)
 				)
 			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
 			(property "ki_keywords" "CMOS CNT CNT12"
 				(at 0 0 0)
 				(effects
@@ -74,7 +82,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "DIP?16* SO* TSSOP* DHVQFN*"
+			(property "ki_fp_filters" "DIP?16*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -84,24 +92,6 @@
 				)
 			)
 			(symbol "4040_1_0"
-				(pin output line
-					(at 12.7 -15.24 180)
-					(length 5.08)
-					(name "Q11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin input inverted_clock
 					(at -12.7 12.7 0)
 					(length 5.08)
@@ -138,78 +128,6 @@
 						)
 					)
 				)
-				(pin output line
-					(at 12.7 -7.62 180)
-					(length 5.08)
-					(name "Q8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 12.7 -5.08 180)
-					(length 5.08)
-					(name "Q7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 12.7 -10.16 180)
-					(length 5.08)
-					(name "Q9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 12.7 -12.7 180)
-					(length 5.08)
-					(name "Q10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin power_in line
 					(at 0 20.32 270)
 					(length 5.08)
@@ -221,114 +139,6 @@
 						)
 					)
 					(number "16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 12.7 0 180)
-					(length 5.08)
-					(name "Q5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 12.7 2.54 180)
-					(length 5.08)
-					(name "Q4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 12.7 -2.54 180)
-					(length 5.08)
-					(name "Q6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 12.7 5.08 180)
-					(length 5.08)
-					(name "Q3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 12.7 7.62 180)
-					(length 5.08)
-					(name "Q2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 12.7 10.16 180)
-					(length 5.08)
-					(name "Q1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -372,6 +182,204 @@
 						)
 					)
 				)
+				(pin output line
+					(at 12.7 10.16 180)
+					(length 5.08)
+					(name "Q1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 12.7 7.62 180)
+					(length 5.08)
+					(name "Q2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 12.7 5.08 180)
+					(length 5.08)
+					(name "Q3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 12.7 2.54 180)
+					(length 5.08)
+					(name "Q4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 12.7 0 180)
+					(length 5.08)
+					(name "Q5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 12.7 -2.54 180)
+					(length 5.08)
+					(name "Q6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 12.7 -5.08 180)
+					(length 5.08)
+					(name "Q7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 12.7 -7.62 180)
+					(length 5.08)
+					(name "Q8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 12.7 -10.16 180)
+					(length 5.08)
+					(name "Q9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 12.7 -12.7 180)
+					(length 5.08)
+					(name "Q10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 12.7 -15.24 180)
+					(length 5.08)
+					(name "Q11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
 			(symbol "4040_1_1"
 				(rectangle
@@ -386,11 +394,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -465,8 +478,8 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0) hide
-					(name "GND"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -482,11 +495,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:VCC"
 			(power)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -501,7 +519,7 @@
 				)
 			)
 			(property "Value" "VCC"
-				(at 0 3.81 0)
+				(at 0 3.556 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -559,7 +577,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -571,7 +589,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -585,8 +603,8 @@
 			(symbol "VCC_1_1"
 				(pin power_in line
 					(at 0 0 90)
-					(length 0) hide
-					(name "VCC"
+					(length 0)
+					(name "~"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -602,6 +620,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 	)
 	(no_connect
@@ -970,7 +989,7 @@
 		)
 		(uuid "0849918a-e5b6-4153-a522-1b85a39ddf3d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 103.5613 60.8806 0)
+			(at 103.568 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -991,7 +1010,7 @@
 		)
 		(uuid "15e723d4-4f74-4838-9429-d5b0de49e2e6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 103.5613 65.9606 0)
+			(at 103.568 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1012,7 +1031,7 @@
 		)
 		(uuid "1721c59d-7306-4aad-bfab-0a8ec7022ef5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 105.8594 50.7206 0)
+			(at 105.8663 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1033,7 +1052,7 @@
 		)
 		(uuid "1a34bb81-c61c-42c5-b8ec-d7cc0c06de6e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 103.5613 71.0406 0)
+			(at 103.568 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1054,7 +1073,7 @@
 		)
 		(uuid "291cc86e-d7a1-4f14-983b-0e47c854bfea")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 52.951 58.3406 0)
+			(at 52.9444 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1075,7 +1094,7 @@
 		)
 		(uuid "37dbfc0d-4f68-4147-92e0-aefd92d7ff8e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 105.8594 53.2606 0)
+			(at 105.8663 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1096,7 +1115,7 @@
 		)
 		(uuid "39bd5ac2-c25a-4b67-8cda-d6e27f329fb3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 103.5613 68.5006 0)
+			(at 103.568 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1117,7 +1136,7 @@
 		)
 		(uuid "400cb115-4f4b-4032-a1ae-8e3973567146")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 51.2093 50.8 0)
+			(at 51.1299 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1138,7 +1157,7 @@
 		)
 		(uuid "5356313d-c6c9-4e43-8779-7f5954c39660")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 104.4685 114.2206 0)
+			(at 104.4754 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1159,7 +1178,7 @@
 		)
 		(uuid "57be4481-578e-480a-b137-dcb8fd95babf")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 102.1704 121.8406 0)
+			(at 102.1771 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1180,7 +1199,7 @@
 		)
 		(uuid "61ff2979-66d3-4816-9890-15d75671e915")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 105.8594 55.8006 0)
+			(at 105.8663 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1201,7 +1220,7 @@
 		)
 		(uuid "64e6a835-bbfc-4b09-8517-d568709292da")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 103.5613 63.4206 0)
+			(at 103.568 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1222,7 +1241,7 @@
 		)
 		(uuid "8020425b-e9f3-495c-818a-7f5fd22a8d70")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 46.4196 114.2206 0)
+			(at 50.102 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1243,7 +1262,7 @@
 		)
 		(uuid "88d47af8-f385-41c3-a158-4c2020d5a72a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 102.1704 126.9206 0)
+			(at 102.1771 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1264,7 +1283,7 @@
 		)
 		(uuid "8baf31fa-31f2-4e84-ad86-348df774f617")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 102.1704 129.4606 0)
+			(at 102.1771 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1285,7 +1304,7 @@
 		)
 		(uuid "a8d0f58f-0f06-444b-8a1a-c732d79b81a2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 53.072 121.8406 0)
+			(at 53.0653 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1306,7 +1325,7 @@
 		)
 		(uuid "be9bd86b-4cd5-4bd2-a31b-b062107d2a54")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 104.4685 116.7606 0)
+			(at 104.4754 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1327,7 +1346,7 @@
 		)
 		(uuid "d4a14347-f106-4fab-9c3e-cd8a875c683c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 102.1704 134.5406 0)
+			(at 102.1771 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1348,7 +1367,7 @@
 		)
 		(uuid "d6359131-a990-459a-850e-6c100e2b0fca")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 102.1704 124.3806 0)
+			(at 102.1771 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1369,7 +1388,7 @@
 		)
 		(uuid "f4f98a61-37e4-46b2-b456-3ee0fde672e0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 103.5613 58.3406 0)
+			(at 103.568 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1390,7 +1409,7 @@
 		)
 		(uuid "f9bc0e2e-b866-4474-96af-9520a16e439e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 104.4685 119.3006 0)
+			(at 104.4754 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1411,7 +1430,7 @@
 		)
 		(uuid "fad34361-5673-4b6b-8616-ccc33cd00c24")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 102.1704 132.0006 0)
+			(at 102.1771 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1430,8 +1449,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "00000000-0000-0000-0000-00006c382008")
-		(property "Reference" "Z315"
-			(at 78.2194 43.18 0)
+		(property "Reference" "Z312"
+			(at 78.3941 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1440,7 +1459,7 @@
 			)
 		)
 		(property "Value" "74HCT4040"
-			(at 78.2194 45.72 0)
+			(at 78.3941 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1458,7 +1477,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT4040.pdf"
+		(property "Datasheet" "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4020bms-24bms-40bms.pdf"
 			(at 107.95 69.85 0)
 			(effects
 				(font
@@ -1468,7 +1487,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "CD74HCT4040E, 12-stage Binary Counter, Up Counter 5V, 16-Pin PDIP"
+		(property "Description" "Binary Counter 12 stages (Asynchronous)"
 			(at 107.95 72.39 0)
 			(effects
 				(font
@@ -1599,7 +1618,7 @@
 		(instances
 			(project "ACE3NOKB"
 				(path "/a647641f-bf16-4177-91ee-b01f347ff91c/00000000-0000-0000-0000-00005ee121bd"
-					(reference "Z315")
+					(reference "Z312")
 					(unit 1)
 				)
 			)
@@ -1615,8 +1634,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "00000000-0000-0000-0000-00006c38201c")
-		(property "Reference" "Z316"
-			(at 78.2194 106.68 0)
+		(property "Reference" "Z313"
+			(at 78.3941 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1625,7 +1644,7 @@
 			)
 		)
 		(property "Value" "74HCT4040"
-			(at 78.2194 109.22 0)
+			(at 78.3941 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1643,7 +1662,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT4040.pdf"
+		(property "Datasheet" "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4020bms-24bms-40bms.pdf"
 			(at 107.95 133.35 0)
 			(effects
 				(font
@@ -1653,7 +1672,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "CD74HCT4040E, 12-stage Binary Counter, Up Counter 5V, 16-Pin PDIP"
+		(property "Description" "Binary Counter 12 stages (Asynchronous)"
 			(at 107.95 135.89 0)
 			(effects
 				(font
@@ -1784,7 +1803,7 @@
 		(instances
 			(project "ACE3NOKB"
 				(path "/a647641f-bf16-4177-91ee-b01f347ff91c/00000000-0000-0000-0000-00005ee121bd"
-					(reference "Z316")
+					(reference "Z313")
 					(unit 1)
 				)
 			)
@@ -1800,7 +1819,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "00000000-0000-0000-0000-00006c382034")
-		(property "Reference" "#0316"
+		(property "Reference" "#0311"
 			(at 77.47 40.64 0)
 			(effects
 				(font
@@ -1810,12 +1829,11 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 69.85 40.6399 90)
+			(at 72.39 38.1 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -1836,7 +1854,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
 			(at 73.66 40.64 0)
 			(effects
 				(font
@@ -1851,7 +1869,7 @@
 		(instances
 			(project "ACE3NOKB"
 				(path "/a647641f-bf16-4177-91ee-b01f347ff91c/00000000-0000-0000-0000-00005ee121bd"
-					(reference "#0316")
+					(reference "#0311")
 					(unit 1)
 				)
 			)
@@ -1867,7 +1885,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "00000000-0000-0000-0000-00006c38203b")
-		(property "Reference" "#0318"
+		(property "Reference" "#0313"
 			(at 77.47 104.14 0)
 			(effects
 				(font
@@ -1877,12 +1895,11 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 69.85 104.1399 90)
+			(at 72.39 101.6 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""
@@ -1903,7 +1920,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
 			(at 73.66 104.14 0)
 			(effects
 				(font
@@ -1918,7 +1935,7 @@
 		(instances
 			(project "ACE3NOKB"
 				(path "/a647641f-bf16-4177-91ee-b01f347ff91c/00000000-0000-0000-0000-00005ee121bd"
-					(reference "#0318")
+					(reference "#0313")
 					(unit 1)
 				)
 			)
@@ -1934,7 +1951,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "00000000-0000-0000-0000-00006c382041")
-		(property "Reference" "#0319"
+		(property "Reference" "#0314"
 			(at 67.31 152.4 0)
 			(effects
 				(font
@@ -1970,7 +1987,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 73.66 152.4 0)
 			(effects
 				(font
@@ -1985,7 +2002,7 @@
 		(instances
 			(project "ACE3NOKB"
 				(path "/a647641f-bf16-4177-91ee-b01f347ff91c/00000000-0000-0000-0000-00005ee121bd"
-					(reference "#0319")
+					(reference "#0314")
 					(unit 1)
 				)
 			)
@@ -2001,7 +2018,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "00000000-0000-0000-0000-00006c382048")
-		(property "Reference" "#0317"
+		(property "Reference" "#0312"
 			(at 67.31 88.9 0)
 			(effects
 				(font
@@ -2037,7 +2054,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 73.66 88.9 0)
 			(effects
 				(font
@@ -2052,7 +2069,7 @@
 		(instances
 			(project "ACE3NOKB"
 				(path "/a647641f-bf16-4177-91ee-b01f347ff91c/00000000-0000-0000-0000-00005ee121bd"
-					(reference "#0317")
+					(reference "#0312")
 					(unit 1)
 				)
 			)
